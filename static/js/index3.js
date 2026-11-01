@@ -64,8 +64,30 @@ function adminDeleteUser() {
 	setTimeout(()=>{msg.textContent='';},3000);
 }
 // ユーザー情報・チャット履歴・メモは Neon のデータベースに保存（画面表示用に localStorage へキャッシュ）
-// ADMIN_NAME は「管理者(自動応答)」として表示する名前です。パスワードはもう使いません
-const ADMIN_NAME = "ともひこです";
+// 管理者の発言は sender = ADMIN_SENDER で保存し、表示名は管理者の「表記名」(初期値: ともひこ)を使う
+const ADMIN_SENDER = '__admin__';
+let adminLabel = 'ともひこ';
+
+async function loadAdminLabel() {
+	try { adminLabel = await Study.adminName(); } catch (e) { /* 既定値のまま */ }
+	const t = document.getElementById('typing-indicator');
+	if (t) t.textContent = adminLabel + ' が入力中...';
+	const inp = document.getElementById('admin-display-name');
+	if (inp) inp.value = adminLabel;
+}
+
+async function saveAdminName() {
+	const inp = document.getElementById('admin-display-name');
+	const out = document.getElementById('admin-name-msg');
+	try {
+		adminLabel = await Study.setAdminName(inp.value);
+		out.textContent = '✓ 表記名を変更しました';
+		showAdminChat();
+	} catch (err) {
+		out.textContent = '変更に失敗しました: ' + Study.friendly(err);
+	}
+	setTimeout(() => { out.textContent = ''; }, 2500);
+}
 
 function togglePw(id, el) {
 	const input = document.getElementById(id);
@@ -101,7 +123,7 @@ async function registerUser() {
 	if (!u || !p) { msg.textContent = '⚠️ ユーザ名とパスワードを入力してください'; return; }
 	const bad = Study.validateUsername(u);
 	if (bad) { msg.textContent = '⚠️ ' + bad; return; }
-	if (u === ADMIN_NAME || u.toLowerCase() === 'admin' || u.toLowerCase() === 'administrator') {
+	if (u.toLowerCase() === 'admin' || u.toLowerCase() === 'administrator') {
 		msg.textContent = '⚠️ このユーザ名は使用できません（管理者専用）';
 		return;
 	}
@@ -138,6 +160,7 @@ function enterApp(profile) {
 }
 
 async function showChat(username) {
+	loadAdminLabel().then(() => loadChat(true));
 	localStorage.setItem('currentUser', username);
 	document.getElementById('login-area').classList.add('hidden');
 	document.getElementById('register-area').classList.add('hidden');
@@ -175,6 +198,7 @@ async function loadUserMemo() {
 }
 
 async function showAdmin() {
+	await loadAdminLabel();
 	document.getElementById('login-area').classList.add('hidden');
 	document.getElementById('register-area').classList.add('hidden');
 	document.getElementById('admin-area').classList.remove('hidden');
@@ -266,7 +290,7 @@ function loadChat(skipSync) {
 	let chats = JSON.parse(localStorage.getItem('chats')||'{}');
 	let html = '';
 	(chats[user]||[]).forEach(m => {
-		const displayName = m.from === ADMIN_NAME ? '管理者' : m.from;
+		const displayName = m.from === ADMIN_SENDER ? adminLabel : m.from;
 		if (!m.read) m.read = true;   // 画面に表示した時点で既読にする
 		html += `<div class="msg ${m.from===user?'user':'admin'}"><b>${escHtml(displayName)}:</b> ${escHtml(m.text)} <span class="msg-time">${escHtml(m.time)}</span>${m.read ? ' <span class="msg-read">既読</span>' : ''}</div>`;
 	});
@@ -279,7 +303,7 @@ function loadChat(skipSync) {
 function updateSuggestions() {
 	const userInput = document.getElementById('chat-input').value.trim().toLowerCase();
 	const inappropriateKeywords = ["馬鹿", "バカ", "アホ", "死ね", "殺す", "クソ", "くたばれ", "使えない", "役立たず", "最低", "ゴミ", "糞", "畜生", "テメエ", "お前", "ファック", "shit", "fuck", "damn", "bitch", "asshole", "bastard", "crap", "dumb", "idiot", "stupid"];
-	fetch('/static/QA.json')
+	fetch('static/QA.json')
 		.then(res => res.json())
 		.then(data => {
 			let candidates = [];
@@ -362,8 +386,8 @@ async function showAdminChat() {
 	let rows = [];
 	try { rows = await Study.adminLoadChats(id); } catch (err) { box.textContent = '読み込みに失敗しました'; return; }
 	box.innerHTML = rows.map(m => {
-		const isAdmin = m.sender === ADMIN_NAME;
-		return `<div class="msg ${isAdmin?'admin':'user'}"><b>${escHtml(isAdmin ? '管理者' : m.sender)}:</b> ${escHtml(m.body)} <span class="msg-time">${escHtml(new Date(m.created_at).toLocaleString())}</span></div>`;
+		const isAdmin = m.sender === ADMIN_SENDER;
+		return `<div class="msg ${isAdmin?'admin':'user'}"><b>${escHtml(isAdmin ? adminLabel : m.sender)}:</b> ${escHtml(m.body)} <span class="msg-time">${escHtml(new Date(m.created_at).toLocaleString())}</span></div>`;
 	}).join('');
 	box.scrollTop = 9999;
 }
@@ -374,7 +398,7 @@ async function sendAdminMessage() {
 	const msg = input.value.trim();
 	if (!id || !msg) return;
 	try {
-		await Study.adminSendMessage(id, ADMIN_NAME, msg);
+		await Study.adminSendMessage(id, ADMIN_SENDER, msg);
 	} catch (err) { alert('送信に失敗しました: ' + Study.friendly(err)); return; }
 	input.value = '';
 	showAdminChat();
@@ -411,7 +435,7 @@ function autoReply(userMsg) {
 		if (data.answer) {
 			let chats = JSON.parse(localStorage.getItem('chats')||'{}');
 			if (!chats[user]) chats[user] = [];
-			chats[user].push({ from: ADMIN_NAME, text: data.answer, time: new Date().toLocaleString(), read: true });
+			chats[user].push({ from: ADMIN_SENDER, text: data.answer, time: new Date().toLocaleString(), read: true });
 			localStorage.setItem('chats', JSON.stringify(chats));
 			loadChat();
 		} else {
@@ -427,7 +451,7 @@ function autoReply(userMsg) {
 }
 
 function fallbackToQA(userMsg, user) {
-	fetch('/static/QA.json')
+	fetch('static/QA.json')
 		.then(res => res.json())
 		.then(data => {
 			let found = false;
@@ -441,7 +465,7 @@ function fallbackToQA(userMsg, user) {
 						// 1つだけの場合、直接追加
 						let chats = JSON.parse(localStorage.getItem('chats')||'{}');
 						if (!chats[user]) chats[user] = [];
-						chats[user].push({ from: ADMIN_NAME, text: item.answers ? item.answers[0] : item.answer, time: new Date().toLocaleString(), read: true });
+						chats[user].push({ from: ADMIN_SENDER, text: item.answers ? item.answers[0] : item.answer, time: new Date().toLocaleString(), read: true });
 						localStorage.setItem('chats', JSON.stringify(chats));
 						loadChat();
 					}
@@ -452,7 +476,7 @@ function fallbackToQA(userMsg, user) {
 				// QAにもマッチしなければ、デフォルトメッセージ
 				let chats = JSON.parse(localStorage.getItem('chats')||'{}');
 				if (!chats[user]) chats[user] = [];
-				chats[user].push({ from: ADMIN_NAME, text: 'すいません、よくわかりません', time: new Date().toLocaleString(), read: true });
+				chats[user].push({ from: ADMIN_SENDER, text: 'すいません、よくわかりません', time: new Date().toLocaleString(), read: true });
 				localStorage.setItem('chats', JSON.stringify(chats));
 				loadChat();
 			}
@@ -464,7 +488,7 @@ function selectAnswer(answer) {
 	const user = localStorage.getItem('currentUser');
 	let chats = JSON.parse(localStorage.getItem('chats')||'{}');
 	if (!chats[user]) chats[user] = [];
-	chats[user].push({ from: ADMIN_NAME, text: answer, time: new Date().toLocaleString(), read: true });
+	chats[user].push({ from: ADMIN_SENDER, text: answer, time: new Date().toLocaleString(), read: true });
 	localStorage.setItem('chats', JSON.stringify(chats));
 	document.getElementById('answer-options').innerHTML = '';
 	loadChat();

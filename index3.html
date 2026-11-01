@@ -86,7 +86,7 @@
 	<div id="chat-area" class="hidden">
 		<h2>チャット</h2>
 		<div class="chat-box" id="chat-box"></div>
-		<div id="typing-indicator" class="u-3">管理者 が入力中...</div>
+		<div id="typing-indicator" class="u-3">ともひこ が入力中...</div>
 		<div id="answer-options" class="u-4"></div>
 		<div class="input-row">
 			<textarea id="chat-input" placeholder="メッセージを入力" rows="1" data-ev="7" class="u-5"></textarea>
@@ -117,6 +117,12 @@
 	<!-- 管理者画面 -->
 	<div id="admin-area" class="hidden">
 		<h2>管理者チャット</h2>
+		<div class="input-row">
+			<label for="admin-display-name">表記名：</label>
+			<input id="admin-display-name" type="text" maxlength="40" placeholder="ともひこ">
+			<button data-ev="21">表記名を変更</button>
+			<span id="admin-name-msg"></span>
+		</div>
 		<div>
 			<label>ユーザー選択：</label>
 			<select id="admin-user-list" data-ev="15"></select>

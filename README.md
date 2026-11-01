@@ -1,6 +1,6 @@
 # study
 
-GitHub Pages で公開する静的サイト。ユーザー管理・ポイント・チャット保存・天気/電車の自動取得は **Neon**（Postgres + Neon Auth + Data API + Functions）で動きます。サーバー（Flask 等）は不要です。
+GitHub Pages で公開する静的サイト。ユーザー管理・ポイント・チャット保存・天気/電車の自動取得は **Neon**（Postgres + Neon Auth + Data API + Functions）で動きます。サーバー（Flask 等）は不要です。DB・自動取得の設定は Neon 側に適用済みです。
 
 ## 構成
 
@@ -13,45 +13,42 @@ GitHub Pages で公開する静的サイト。ユーザー管理・ポイント�
 | `static/js/study-api.js` | `window.Study`（登録・ログイン・ポイント・チャット・メモ等） |
 | `static/points.js` | ポイント処理（金額はサーバー側ルールで固定） |
 | `static/data/glossary.json` | プログラミング用語辞典（1ファイルに統合） |
-| `game/` | ゲーム（gameserver を統合） |
+| `game/` | ゲーム |
 | `tools/` | `スケジュール.py` / `毎日の日誌.py`（名前・年月を変えて誰でも作成可） |
-| `sql/schema.sql` | DB 定義（テーブル・RLS・関数） |
-| `neon/functions/scraper/` | 天気・電車を取得して DB に保存する Neon Function |
 | `sw.js` | Service Worker（同一オリジンの GET のみキャッシュ） |
 
-## セットアップ
+## 公開
 
-1. Neon プロジェクトを作成し、`sql/schema.sql` を実行
-2. Neon Auth と Data API を有効化し、`static/js/study-config.js` の URL を設定
-3. Neon Auth の **Trusted domains** に公開 URL（例 `https://<user>.github.io`）を追加
-4. GitHub Pages を有効化（ルートを公開）
-5. テーブルを追加・変更したら Data API のスキーマキャッシュを更新（Neon コンソールの Data API で設定を保存し直す。`NOTIFY pgrst, 'reload schema'` だけでは反映されないことがあります）
+GitHub Pages を有効化（ルートを公開）。Neon Auth の **Trusted domains** に公開 URL（例 `https://<user>.github.io`）が登録されている必要があります。
 
 ## ログイン
 
 - ユーザー名 + パスワード（**8文字以上**）。内部では `u<sha256(小文字ユーザー名)の先頭40桁>@study.local` のメールとして Neon Auth に登録します。
-- 管理者にするには SQL で: `update profiles set is_admin = true where username = '...';`
+- **管理者は1人だけ**（ユーザー名「ともひこ」）。DB の制約で2人目はなれません。管理者はクライアントから変更できません。
+- 管理者の表記名は初期値「ともひこ」。管理画面の「表記名を変更」で本人だけが変更できます（チャットの発言者名に反映）。
 
-## ポイント
+## ポイント（初期 20,000）
 
-`point_rules` テーブルが唯一のルールです。クライアントは `apply_points(action, ref)` を呼ぶだけで、金額変更や直接更新はできません（RLS + GRANT）。1日1回の判定は日本時間の日付基準です。
+| 行動 | 増減 | 制限 |
+|------|------|------|
+| クイズ回答 / チャット送信 | −100 | なし |
+| 用語検索 | −50 | なし |
+| eラーニング | +2,000 | 1日1回 |
+| アンケート回答 / 物語閲覧 / 動画視聴 | +1,000 | それぞれ1回限り |
+| デイリーログイン / 天気確認 / 電車確認 | +500 | 1日1回 |
+| マニュアル閲覧 | +300 | 1日1回 |
+| 物語リンククリック | +200 | リンクごと1回 |
+
+金額と制限はサーバー側で固定です。クライアントからの直接更新はできません（1日の区切りは日本時間）。
 
 ## 天気・電車の自動取得
 
-`neon/functions/scraper` が気象庁・ウェザーニュース・Yahoo!路線情報を取得し、`site_data` テーブル（`weather` / `train`）へ保存します。スケジュールは日本時間 0・6・12・18 時（UTC `0 3,9,15,21 * * *`）。画面（`weather.html` / `train.html`）はログイン後に `site_data` を読みます。
-
-再ビルド・再デプロイ:
-
-```bash
-cd neon/functions/scraper
-npm install && npm run build   # function.zip が生成される
-# function.zip を Neon Function (slug: scraper, nodejs24) にデプロイ
-```
+Neon Function が気象庁・ウェザーニュース・Yahoo!路線情報を日本時間 0・6・12・18 時に取得して DB に保存し、`weather.html` / `train.html` はログイン後にそれを読みます。
 
 ## ローカル確認
 
 ```bash
-python3 -m http.server 8000     # http://localhost:8000/ （Trusted domains に追加が必要）
+python3 -m http.server 8000     # http://localhost:8000/
 ```
 
 ## ツール（Python）
@@ -61,5 +58,3 @@ pip install openpyxl
 python3 tools/スケジュール.py --help
 python3 tools/毎日の日誌.py --help
 ```
-
-引数なしで実行すると対話形式で名前・年月などを聞かれます。

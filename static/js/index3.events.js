@@ -71,4 +71,7 @@
   bind(20, 'click', function (event) {
       logout()
   });
+  bind(21, 'click', function (event) {
+      saveAdminName()
+  });
 })();

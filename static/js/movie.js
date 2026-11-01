@@ -17,18 +17,21 @@
 
             // 動画視聴完了を検知してポイント付与
             const videos = document.querySelectorAll('.video-card iframe, .audio-card iframe');
-            const watchedVideos = JSON.parse(localStorage.getItem('watchedVideos') || '{}');
+            const watchedVideos = {};
+            if (typeof Study !== 'undefined') {
+                Study.watchedVideos().then(ids => ids.forEach(id => { watchedVideos[id] = true; })).catch(() => {});
+            }
 
             videos.forEach((iframe, index) => {
                 const videoId = `video_${index}`;
-                
+
                 // iframeの読み込み完了を監視
                 iframe.addEventListener('load', () => {
                     // 動画が再生された後、一定時間経過したらポイント付与
                     setTimeout(() => {
                         if (!watchedVideos[videoId] && typeof pointsManager !== 'undefined') {
                             watchedVideos[videoId] = true;
-                            localStorage.setItem('watchedVideos', JSON.stringify(watchedVideos));
+                            if (typeof Study !== 'undefined') Study.markVideoWatched(videoId).catch(() => {});
                             pointsManager.onVideoWatch(videoId);
                         }
                     }, 30000); // 30秒視聴でポイント付与
