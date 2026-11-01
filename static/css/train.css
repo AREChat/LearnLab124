@@ -1,0 +1,260 @@
+        /* --- 基本スタイルと背景 --- */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto Mono', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 40%, #1a2980 70%, #00f2fe 100%);
+            background-attachment: fixed;
+            color: #f2f8ff;
+            letter-spacing: 0.03em;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 80% 10%, #00f2fe55 0%, transparent 60%),
+                        radial-gradient(circle at 20% 90%, #ae00ff44 0%, transparent 60%),
+                        linear-gradient(120deg, #0f2027cc 0%, #2c5364cc 100%);
+            filter: blur(8px) brightness(1.1);
+            animation: bgmove 18s linear infinite alternate;
+        }
+        @keyframes bgmove {
+            0% { filter: blur(8px) brightness(1.1); }
+            100% { filter: blur(16px) brightness(1.2); }
+        }
+
+		/* ハンバーガーメニューボタン */
+		#hamburger-menu-btn {
+			display: none;
+			position: fixed;
+			top: 15px;
+			left: 15px;
+			z-index: 3000;
+			background: linear-gradient(135deg, #00e0ff, #ae00ff);
+			border: none;
+			border-radius: 8px;
+			padding: 12px 15px;
+			font-size: 1.5em;
+			color: #fff;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(0, 224, 255, 0.4);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		#hamburger-menu-btn:hover {
+			transform: scale(1.05);
+			box-shadow: 0 6px 15px rgba(0, 224, 255, 0.6);
+		}
+
+		/* PC用ナビゲーション */
+		.responsive-nav {
+			display: none;
+			background: rgba(20,30,60,0.8);
+			backdrop-filter: blur(2px);
+			color: #fff;
+			padding: 0.7em 0;
+			text-align: center;
+			font-size: 1.1em;
+			letter-spacing: 1px;
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+		.responsive-nav a {
+			color: #00e0ff;
+			margin: 0 1em;
+			text-decoration: underline;
+		}
+
+		/* サイドバーメニュー */
+		#table-of-contents {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 280px;
+			height: 100vh;
+			background: rgba(20, 30, 60, 0.95);
+			backdrop-filter: blur(10px);
+			color: #f2f8ff;
+			padding: 20px;
+			box-shadow: 4px 0 20px rgba(0, 224, 255, 0.3);
+			z-index: 2000;
+			overflow-y: auto;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+		}
+		#table-of-contents.open {
+			transform: translateX(0);
+		}
+		#table-of-contents h2 {
+			color: #00e0ff;
+			text-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+			margin-top: 0;
+		}
+		#table-of-contents ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#table-of-contents li {
+			margin: 0.8em 0;
+		}
+		#table-of-contents a {
+			color: #f2f8ff;
+			text-decoration: none;
+			font-size: 1.05em;
+			transition: color 0.3s ease, text-shadow 0.3s ease;
+		}
+		#table-of-contents a:hover {
+			color: #00e0ff;
+			text-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+		}
+
+		/* レスポンシブ対応 */
+		@media (max-width: 768px) {
+			#hamburger-menu-btn {
+				display: block;
+			}
+			.responsive-nav {
+				display: none !important;
+			}
+		}
+		@media (min-width: 769px) {
+			.responsive-nav {
+				display: block;
+			}
+			#table-of-contents {
+				display: none;
+			}
+		}
+
+        /* --- コンテナ --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(20,30,60,0.92);
+            padding: 24px 36px;
+            border-radius: 18px;
+            box-shadow: 0 0 32px #00f2fe44, 0 2px 24px #ae00ff22;
+            backdrop-filter: blur(2px);
+        }
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #00f2fe33;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        h1 { margin: 0; color: #f2f8ff; text-shadow: 0 0 8px #00f2fe99; }
+        .meta-info { font-size: 0.9em; color: #a0b0c0; text-align: right; }
+        
+        /* --- 運行情報スタイル --- */
+        #result-container { margin-top: 20px; }
+        .train-info {
+            border: 1px solid #ae00ff55;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(174,0,255,0.1);
+        }
+        .line-name { font-weight: 600; font-size: 1.2em; color: #f2f8ff; margin-bottom: 5px; }
+        .status { font-weight: bold; color: #ff8a80; }
+        .toggle-details-btn {
+            background: linear-gradient(90deg, #ae00ff 0%, #00f2fe 100%);
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 0.85em;
+            cursor: pointer;
+            margin-top: 10px;
+            color: #fff;
+            font-weight: bold;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 8px #ae00ff44;
+        }
+        .toggle-details-btn:hover {
+            background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%);
+            box-shadow: 0 0 16px #00f2fe66;
+        }
+        .details { display: none; }
+        .details.open { display: block; }
+        .details {
+            margin-top: 12px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 4px;
+            color: #f2f8ff;
+            border-left: 3px solid #ae00ff;
+        }
+        
+        /* --- メッセージボックス --- */
+        .message-box { text-align: center; color: #a0b0c0; padding: 30px; border: 1px dashed #00f2fe55; border-radius: 8px; background-color: transparent; }
+        .message-box.success { color: #a7ffeb; border-color: #a7ffeb; }
+        .message-box.error { color: #ff8a80; border-color: #ff8a80; }
+
+        @media (max-width: 600px) {
+            .container { padding: 6vw 2vw; border-radius: 0; margin: 0; }
+            .nav a { margin: 0 0.5em; font-size: 0.9em; }
+            h1 { font-size: 1.2em; }
+        }
+        
+        #hamburger-menu-btn {
+            display: block !important;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 9999;
+            background: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* ハンバーガーアイコンの3本線 */
+        #hamburger-menu-btn::before,
+        #hamburger-menu-btn::after,
+        .hamburger-line {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #00e0ff;
+            border-radius: 2px;
+            margin: 0 auto 6px;
+            box-shadow: 0 0 10px rgba(0, 224, 255, 0.8), 0 0 20px rgba(0, 224, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        #hamburger-menu-btn::before {
+            margin-top: 8px;
+        }
+        
+        #hamburger-menu-btn::after {
+            margin-bottom: 0;
+        }
+        
+        #hamburger-menu-btn:hover::before,
+        #hamburger-menu-btn:hover::after,
+        #hamburger-menu-btn:hover .hamburger-line {
+            background: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 0.7);
+            transform: scaleX(1.1);
+        }
+    
+
+/* ---- inline style="" から移した定義 ---- */
+html body .u-1.u-1,
+html.u-1.u-1,
+body.u-1.u-1 {
+  font-weight: bold;
+}

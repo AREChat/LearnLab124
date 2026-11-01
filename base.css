@@ -1,0 +1,95 @@
+/* --- ナビゲーションメニューの基本スタイル（主にPC向け） --- */
+.responsive-nav {
+    background: #222;
+    color: #fff;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+
+    /* Flexboxを使用してリンクを中央に横並びにする */
+    display: flex;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center;     /* 垂直方向の中央揃え */
+    flex-wrap: wrap;         /* リンクが収まらない場合に折り返す設定 */
+}
+
+.responsive-nav a {
+    color: #00e0ff;
+    margin: 0.5em 1em; /* 上下にも少し余白を持たせる */
+    text-decoration: underline;
+
+    /* 文字列を折り返さない設定 */
+    white-space: nowrap;
+}
+
+/* 強調表示したいリンク用のスタイル */
+.responsive-nav a.highlight {
+    font-weight: bold;
+}
+
+/* --- ハンバーガーメニュー用のスタイル --- */
+
+/* ハンバーガーメニューボタン (初期状態は非表示) */
+#hamburger-menu-btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1002;
+    background-color: #00e0ff;
+    color: #121212;
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* --- 画面サイズに応じた表示切り替え --- */
+
+/* タブレット・スマホ表示 (画面幅が768px以下の場合) */
+@media screen and (max-width: 768px) {
+
+    /* 1. 元のヘッダーナビゲーションを非表示にする */
+    .responsive-nav {
+        display: none;
+    }
+
+    /* 2. ハンバーガーメニューボタンを表示する */
+    #hamburger-menu-btn {
+        display: block;
+    }
+
+    /* 3. 元の「非表示」ボタンは使わないので隠す */
+    #toggle-toc {
+        display: none;
+    }
+
+    /* 4. サイドメニューの位置とアニメーションを調整 */
+    #table-of-contents {
+        position: fixed; /* 画面に固定 */
+        height: 100%;
+        margin-left: 0; /* JSで制御していたmarginをリセット */
+        transform: translateX(-100%); /* 初期状態では画面の左外に隠す */
+        transition: transform 0.3s ease; /* スライドアニメーションを設定 */
+    }
+
+    /* 5. メニューが表示されるとき（hiddenクラスがない時）のスタイル */
+    #table-of-contents:not(.hidden) {
+        transform: translateX(0); /* 画面内にスライドイン */
+    }
+
+    /* 6. メインコンテンツのズレを調整 */
+    .main-container {
+        transition: margin-left 0.3s ease;
+    }
+    
+    /* 7. メニュー表示時にメインコンテンツを右にずらす */
+    .main-container.menu-open {
+        margin-left: 280px; /* サイドバーの幅に合わせて調整 */
+    }
+}

@@ -1,0 +1,88 @@
+// ========================================
+// セキュリティ対策スクリプト
+// 全HTMLファイルで読み込んで使用
+// ========================================
+(function() {
+    'use strict';
+    const siteRoot = document.currentScript ? new URL('../', document.currentScript.src) : new URL('./', location.href);
+    
+    // F12キー、開発者ツール、ソース表示無効化
+    document.addEventListener('keydown', function(e) {
+        // F12キー
+        if (e.key === 'F12' || 
+            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (開発者ツール)
+            (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+            // Cmd+Option+I, Cmd+Option+J, Cmd+Option+C (Mac)
+            (e.metaKey && e.altKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+            // Ctrl+U, Cmd+U (ソース表示)
+            (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+            (e.metaKey && e.key.toLowerCase() === 'u')) {
+            e.preventDefault();
+            alert('⚠️ 開発者ツールの使用は禁止されています。利用規約違反です。');
+            return false;
+        }
+    });
+
+    // 右クリック無効化
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('⚠️ 右クリックは無効化されています。');
+        return false;
+    });
+
+    // コピー・切り取り防止
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    document.addEventListener('cut', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // 選択防止（オプション：必要に応じてコメント解除）
+    /*
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    */
+
+    // デバッグ検出（開発者ツールが開かれているかチェック）
+    const detectDevTools = function() {
+        const threshold = 160;
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        
+        if (widthThreshold || heightThreshold) {
+            alert('⚠️ 開発者ツールの使用を検出しました。利用規約違反です。');
+            // 必要に応じて、ページをリロードまたは別ページへリダイレクト
+            // window.location.href = 'about:blank';
+        }
+    };
+
+    // 定期的に開発者ツールの使用をチェック
+    setInterval(detectDevTools, 1000);
+
+    console.log('%c⛔ 警告', 'color: red; font-size: 50px; font-weight: bold;');
+    console.log('%c開発者ツールの使用は禁止されています。', 'color: red; font-size: 20px;');
+    console.log('%cこのサイトのソースコードの閲覧・改変・複製は利用規約違反です。', 'color: red; font-size: 16px;');
+    console.log('%c違反者は法的措置の対象となります。', 'color: red; font-size: 16px;');
+
+    // ========================================
+    // ログイン制御 (index.html, login.html, logout.html以外)
+    // ========================================
+    const currentPath = window.location.pathname;
+    const publicPages = ['index.html', 'login.html', 'logout.html', 'loading.html', 'thanks.html'];
+    const isPublicPage = publicPages.some(page => currentPath.includes(page));
+    
+    if (!isPublicPage) {
+        const currentUser = localStorage.getItem('currentUser');
+        if (!currentUser) {
+            alert('⚠️ ログインが必要です。ログイン画面に移動します。');
+            window.location.href = new URL('index.html', siteRoot).href;
+        }
+    }
+
+})();

@@ -1,0 +1,9 @@
+{
+  "name": "scraper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild index.js --bundle --minify --platform=node --target=node24 --format=esm --outfile=dist/index.mjs && cd dist && zip -j ../function.zip index.mjs"
+  },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}

@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>チャット</title>
+		<script src="static/js/study-config.js"></script>
+		<script src="static/js/neon-client.js"></script>
+		<script src="static/js/study-api.js"></script>
+		<script src="static/points.js"></script>
+		<script src="static/points-header.js"></script>
+		<link rel="stylesheet" href="static/responsive-header.css">
+		<link rel="stylesheet" href="static/css/index3.css">
+		
+		<!-- レスポンシブナビゲーション用CSS -->
+		
+	</head>
+	<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	
+	<!-- PC用トップナビゲーション -->
+	<nav class="responsive-nav">
+		<a href="home.html">ホーム</a>
+		<a href="index2.html">クイズ</a>
+		<a href="index5.html">マニュアル</a>
+        <a href="https://arechat.github.io/ARE">ARE チャットアプリ</a>
+        <a href="https://arechat.github.io/ARE/game5">ゲーム</a>
+		<a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+	</nav>
+
+	<!-- サイドメニュー -->
+	<aside id="table-of-contents">
+		<h2>全リンク集</h2>
+		<ul>
+			<li><a href="home.html">🏠 ホーム</a></li>
+			<li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+			<li><a href="index5.html">📖 マニュアル</a></li>
+			<li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+			<li><a href="logout.html">🔒 ログアウト</a></li>
+			<li><a href="link.html">📑 全リンク集</a></li>
+			<li><a href="hate.html">🎯 苦手克服</a></li>
+			<li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+			<li><a href="https://docs.python.org/ja/3/" target="_blank">� Python公式ドキュメント</a></li>
+			<li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+			<li><a href="pythonexam.html">📝 Python試験情報</a></li>
+			<li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://arechat.github.io/ARE" target="_blank">💬 ARE チャットアプリ</a></li>
+            <li><a href="https://arechat.github.io/ARE/game5" target="_blank">🎮 ゲーム</a></li>
+			<li><a href="weather.html">🌤️ 天気情報</a></li>
+			<li><a href="train.html">� 電車情報</a></li>
+			<li><a href="other.html">🔗 その他</a></li>
+			<li><a href="index3.html">� チャット</a></li>
+			<li><a href="index4.html">🔗 便利リンク</a></li>
+			<li><a href="story.html">📖 物語</a></li>
+
+		</ul>
+	</aside>
+
+<div class="container">
+	<!-- 新規登録画面 -->
+	<div id="register-area">
+		<h2>新規登録</h2>
+		<input id="reg-username" type="text" placeholder="ユーザ名"><br>
+		<input id="reg-password" type="password" placeholder="パスワード">
+		<span data-ev="1" class="toggle-pw">表示</span><br>
+		<button data-ev="2">登録</button>
+		<p>既に登録済み？ <a href="#" data-ev="3">ログイン</a></p>
+		<div id="reg-msg" class="u-1"></div>
+	</div>
+
+	<!-- ログイン画面 -->
+	<div id="login-area" class="hidden">
+		<h2>ログイン</h2>
+		<input id="login-username" type="text" placeholder="ユーザ名"><br>
+		<input id="login-password" type="password" placeholder="パスワード">
+		<span data-ev="4" class="toggle-pw">表示</span><br>
+		<button data-ev="5">ログイン</button>
+		<p>未登録？ <a href="#" data-ev="6">新規登録</a></p>
+		<div id="login-msg" class="u-2"></div>
+	</div>
+
+	<!-- チャット画面（利用者用） -->
+	<div id="chat-area" class="hidden">
+		<h2>チャット</h2>
+		<div class="chat-box" id="chat-box"></div>
+		<div id="typing-indicator" class="u-3">管理者 が入力中...</div>
+		<div id="answer-options" class="u-4"></div>
+		<div class="input-row">
+			<textarea id="chat-input" placeholder="メッセージを入力" rows="1" data-ev="7" class="u-5"></textarea>
+			<button data-ev="8">送信</button>
+		</div>
+		<div id="suggestions" class="u-6">
+			<!-- 提案質問ボタン -->
+		</div>
+		<div class="u-7">
+			<label>自分のメモ：</label><br>
+			<textarea id="user-memo" rows="2" class="u-8"></textarea>
+			<button data-ev="9">メモ保存</button>
+			<span id="memo-msg" class="u-9"></span>
+		</div>
+		<div class="u-7">
+			<button data-ev="10" class="u-10">会話履歴リセット</button>
+			<button data-ev="11" class="u-11">履歴保存 (TXT)</button>
+			<button data-ev="12" class="u-11">履歴保存 (CSV)</button>
+		</div>
+		<div class="u-12">
+			<button data-ev="13" class="u-13">
+				そういう時はAREだ
+			</button>
+		</div>
+		<button data-ev="14">ログアウト</button>
+	</div>
+
+	<!-- 管理者画面 -->
+	<div id="admin-area" class="hidden">
+		<h2>管理者チャット</h2>
+		<div>
+			<label>ユーザー選択：</label>
+			<select id="admin-user-list" data-ev="15"></select>
+		</div>
+		<div class="chat-box" id="admin-chat-box"></div>
+		<div class="input-row">
+			<input id="admin-chat-input" type="text" placeholder="返信メッセージ">
+			<button data-ev="16">返信</button>
+		</div>
+		<div class="u-14">
+			<h3>ユーザー一覧</h3>
+			<ul id="admin-user-list-view" class="u-15"></ul>
+			<div class="u-16">
+				<input id="admin-add-username" type="text" placeholder="新規ユーザー名" class="u-17">
+				<input id="admin-add-password" type="password" placeholder="パスワード" class="u-18">
+				<button data-ev="17">追加</button>
+			</div>
+			<div class="u-19">
+				<button data-ev="18" class="u-20">選択ユーザー削除</button>
+				<span id="admin-user-msg" class="u-21"></span>
+			</div>
+			<h3>選択ユーザーのメモ</h3>
+			<div id="admin-user-memo" class="u-22"></div>
+		</div>
+				<div class="u-12">
+			<button data-ev="19" class="u-13">
+				そういう時はAREだ
+			</button>
+		</div>
+		<button data-ev="20">ログアウト</button>
+	</div>
+</div>
+
+<script src="static/js/index3.js"></script>
+<script src="static/security.js"></script>
+    <script src="static/js/index3.events.js"></script>
+</body>
+</html>

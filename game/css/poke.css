@@ -1,0 +1,478 @@
+/* 基本スタイルとフォント */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+:root {
+    --bg-color: #111;
+    --text-color: #fff;
+    --border-color: #888;
+    --button-bg: #f0f0f0;
+    --button-text: #222;
+    --button-hover-bg: #ddd;
+    --hp-high: #32CD32;
+    --hp-mid: #FFD700;
+    --hp-low: #FF4500;
+    --exp-color: #00FFFF;
+    --mega-button-bg: #8A2BE2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'DotGothic16', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    font-family: 'DotGothic16', sans-serif;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* タイトル画面 */
+#title-screen {
+    background-image: url('../assets/title_screen.png');
+}
+
+.title-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.title-menu button {
+    width: 300px;
+}
+
+/* 選択画面 */
+#selection-screen, #slot-selection-screen {
+    background-image: url('../assets/zukan_bg.png');
+}
+
+.selection-box, .slot-box, .info-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.error-text {
+    color: var(--hp-low);
+    font-weight: bold;
+}
+
+#slot-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slot-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.slot-row button {
+    flex-grow: 1;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #ccc;
+}
+.delete-button:hover {
+    color: var(--hp-low);
+}
+
+
+/* 戦闘画面 */
+#battle-screen {
+    background-image: url('../assets/background.png');
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.battle-arena {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.player-side, .opponent-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    max-width: 500px;
+}
+
+.player-side {
+    align-self: flex-end;
+}
+
+.opponent-side {
+    align-self: flex-start;
+    margin-top: 2%;
+}
+
+.pokemon-info-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.player-side .pokemon-info-container {
+    transform: translateX(-20%);
+}
+
+.opponent-side .pokemon-info-container {
+    transform: translateX(20%);
+}
+
+
+.trainer-info {
+    position: absolute;
+    bottom: 0;
+}
+
+.player-side .trainer-info { left: -10%; }
+.opponent-side .trainer-info { right: -10%; }
+
+
+.trainer-info img {
+    height: 150px;
+    opacity: 0.8;
+}
+
+#player-pokemon-image, #opponent-pokemon-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.status-box {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 3px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 10px;
+    width: 280px;
+    color: white;
+}
+
+.player-side .status-box {
+    bottom: -30px;
+    right: 0;
+}
+
+.opponent-side .status-box {
+    top: 0;
+    left: 0;
+}
+
+.name-level { font-size: 1.4rem; font-weight: bold; margin-bottom: 5px; }
+.hp-text, .exp-text { font-size: 1rem; text-align: right; }
+.hp-bar-container, .exp-bar-container {
+    width: 100%;
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.hp-bar, .exp-bar {
+    height: 15px;
+    width: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-out, background-color 0.5s ease;
+}
+.hp-bar { background-color: var(--hp-high); }
+.exp-bar { background-color: var(--exp-color); }
+
+/* 下部パネル */
+.bottom-panel {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.message-window {
+    width: 100%;
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+#message-text { font-size: 1.5rem; }
+
+.command-area { width: 100%; }
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+#mega-evolve-button {
+    background-color: var(--mega-button-bg);
+    color: white;
+}
+
+/* 図鑑・情報画面 */
+#dex-screen, #info-screen {
+    background-image: url('../assets/zukan_bg.png');
+}
+
+.dex-container, .info-box {
+    width: 90%;
+    max-width: 1100px;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.dex-nav { display: flex; justify-content: center; gap: 10px; }
+.dex-nav button.active { background-color: #888; color: white; }
+.dex-content { display: flex; gap: 15px; flex-grow: 1; overflow: hidden; }
+.dex-list {
+    width: 250px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.dex-list button, .dex-list select {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 8px;
+    border-radius: 5px;
+}
+.dex-list button:hover { background-color: rgba(255, 255, 255, 0.2); }
+.dex-details {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+#info-content { overflow-y: auto; }
+#info-content h2 { margin-top: 20px; }
+#info-content p { margin-top: 10px; line-height: 1.6; }
+
+/* モーダル */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modal-content {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid var(--border-color);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+#move-forget-options { display: flex; flex-direction: column; gap: 10px; }
+#move-forget-options label { font-size: 1.1rem; }
+
+#shop-item-list {
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.shop-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+/* アニメーション */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+    20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+@keyframes flash-red {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.5) sepia(1) hue-rotate(-50deg) saturate(5); }
+}
+@keyframes player-attack {
+    0% { transform: translate(-20%, 0); }
+    50% { transform: translate(-10%, -10px); }
+    100% { transform: translate(-20%, 0); }
+}
+@keyframes opponent-attack {
+    0% { transform: translate(20%, 0); }
+    50% { transform: translate(10%, 10px); }
+    100% { transform: translate(20%, 0); }
+}
+@keyframes faint {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(50px); opacity: 0; }
+}
+@keyframes level-up-glow {
+    0%, 100% { filter: drop-shadow(0 0 0 #fff); }
+    50% { filter: drop-shadow(0 0 15px #00FFFF); }
+}
+
+.is-attacking-player { animation: player-attack 0.5s ease-in-out; }
+.is-attacking-opponent { animation: opponent-attack 0.5s ease-in-out; }
+.is-taking-damage { animation: shake 0.5s, flash-red 0.5s; }
+.is-fainted { animation: faint 1s forwards; }
+.is-leveling-up { animation: level-up-glow 1s infinite; }
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    button { font-size: 1rem; padding: 10px 16px; }
+    .title-menu button { width: 250px; }
+    .battle-arena { flex-direction: column; align-items: center; justify-content: flex-start; gap: 20px; }
+    .player-side, .opponent-side { width: 100%; max-width: 400px; }
+    .player-side { order: 2; align-self: center; }
+    .opponent-side { order: 1; align-self: center; }
+    .player-side .pokemon-info-container, .opponent-side .pokemon-info-container { transform: translateX(0); }
+    #player-pokemon-image, #opponent-pokemon-image { width: 180px; height: 180px; }
+    .status-box { width: 220px; padding: 8px; }
+    .name-level { font-size: 1.1rem; }
+    .hp-bar { height: 12px; }
+    .trainer-info img { height: 100px; }
+    .message-window { min-height: 80px; }
+    #message-text { font-size: 1.2rem; }
+    .command-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .dex-content { flex-direction: column; }
+    .dex-list { width: 100%; height: 150px; flex-shrink: 0; }
+}
+    
+
+/* ---- inline style="" から移した定義 ---- */
+#back-to-title-button.u-1 {
+  display: none;
+}
+#mega-evolve-button.u-2 {
+  display: none;
+}
+#moves-commands.u-3 {
+  display: none;
+}
+#items-commands.u-4 {
+  display: none;
+}
+#end-game-commands.u-5 {
+  display: none;
+}
+#modal-overlay.u-6 {
+  display: none;
+}
