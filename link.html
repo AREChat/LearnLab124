@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>全リンク集</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+
+    <link rel="stylesheet" href="static/css/link.css">
+</head>
+<body>
+    <button id="hamburger-menu-btn">
+        <span class="hamburger-line"></span>
+    </button>
+    
+    <nav class="responsive-nav">
+        <a href="home.html">ホーム</a>
+        <a href="index2.html">クイズ</a>
+        <a href="index5.html">マニュアル</a>
+        <a href="https://arechat.github.io/ARE">ARE チャットアプリ</a>
+        <a href="https://arechat.github.io/ARE/game5">ゲーム</a>
+        <a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+    </nav>
+
+        <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://arechat.github.io/ARE" target="_blank">💬 ARE チャットアプリ</a></li>
+            <li><a href="https://arechat.github.io/ARE/game5" target="_blank">🎮 ゲーム</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="https://sakai-tomohiko124.github.io/tmhk-chat-server/index.html" target="_blank">🕵️ 謎解きサイト</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+            <li><a href="Bingo.html"> 🎉 ビンゴ</a></li>
+            <li><a href="list_mobile/index.html">📱 見るものリスト</a></li>
+        </ul>
+    </aside>
+    
+    <div class="background-effect" aria-hidden="true"></div>
+
+    <header class="futuristic-header">
+        <div class="header-content">
+            <h1 class="neon-text">全リンク集</h1>
+            <p class="tagline">プログラミング学習に役立つリンクをまとめました</p>
+        </div>
+    </header>
+
+    <main class="main-content" role="main">
+        <section class="control-panel" aria-labelledby="panel-title">
+            <div class="u-1">
+                <h2 id="panel-title" class="u-2">カテゴリ</h2>
+                <p class="u-3">下のアイコンから目的のページに移動できます。外部リンクは新しいタブで開きます。</p>
+            </div>
+            <div class="u-4">
+                <div class="u-5">
+                    <input type="text" id="search-input" placeholder="キーワード検索..." list="link-suggestions" class="u-6">
+                    <button id="clear-search" class="u-7">クリア</button>
+                    <datalist id="link-suggestions">
+                        <option value="Python">
+                        <option value="SQL">
+                        <option value="JavaScript">
+                        <option value="ホーム">
+                        <option value="クイズ">
+                        <option value="謎解き">
+                        <option value="マニュアル">
+                        <option value="ログイン">
+                        <option value="ログアウト">
+                        <option value="アンケート">
+                    </datalist>
+                </div>
+                <select id="category-filter" class="u-8">
+                    <option value="all">すべてのカテゴリ</option>
+                    <option value="programming">プログラミング学習</option>
+                    <option value="internal">サイト内</option>
+                    <option value="external">外部サイト</option>
+                </select>
+            </div>
+        </section>
+
+        </section>
+
+        <section class="glossary-section" aria-label="全リンク集">
+            <h2 class="u-9">よく見るサイト <button id="clear-history" class="u-10">履歴削除</button></h2>
+            <div class="card-grid" role="list" id="frequent-grid">
+                <!-- よく見るサイトがここに動的に追加されます -->
+            </div>
+
+            <h2 class="u-11">すべてのリンク</h2>
+            <div class="card-grid" role="list" id="link-grid">
+                <!-- Python公式ドキュメント -->
+                <article class="card" role="listitem" data-category="programming">
+                    <a href="https://docs.python.org/ja/3/" target="_blank" title="Python公式ドキュメント">
+                        <div class="icon" aria-hidden="true">🐍</div>
+                        <span class="label">Python公式ドキュメント</span>
+                    </a>
+                </article>
+
+                <!-- SQLチュートリアル -->
+                <article class="card" role="listitem" data-category="programming">
+                    <a href="https://www.w3schools.com/sql/" target="_blank" title="SQLチュートリアル (W3Schools)">
+                        <div class="icon" aria-hidden="true">🗄️</div>
+                        <span class="label">SQLチュートリアル</span>
+                    </a>
+                </article>
+
+                <!-- JavaScript (MDN) -->
+                <article class="card" role="listitem" data-category="programming">
+                    <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank" title="JavaScript (MDN)">
+                        <div class="icon" aria-hidden="true">🟨</div>
+                        <span class="label">JavaScript (MDN)</span>
+                    </a>
+                </article>
+
+                <!-- JavaScript (MDN) -->
+                <article class="card" role="listitem" data-category="programming">
+                    <a href="感想.html" target="_blank" title="JavaScript (MDN)">
+                        <div class="icon" aria-hidden="true">🟨</div>
+                        <span class="label">Python認定基礎試験の感想</span>
+                    </a>
+                </article>
+
+                <!-- マニュアル -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="index5.html" target="_blank" title="マニュアル">
+                        <div class="icon" aria-hidden="true">📖</div>
+                        <span class="label">マニュアル</span>
+                    </a>
+                </article>
+
+                <!-- Python試験情報 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="pythonexam.html" target="_blank" title="Python試験情報">
+                        <div class="icon" aria-hidden="true">📝</div>
+                        <span class="label">Python試験情報</span>
+                    </a>
+                </article>
+
+
+                <!-- 謎解きサイト (GitHub) -->
+                <article class="card" role="listitem" data-category="external">
+                    <a href="https://sakai-tomohiko124.github.io/tmhk-chat-server/index.html" target="_blank" title="謎解きサイト (tmhk-chat-server)">
+                        <div class="icon" aria-hidden="true">🕵️</div>
+                        <span class="label">謎解きサイト</span>
+                    </a>
+                </article>
+
+                <!-- プログラミング言語用語集 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="hate/base.html" target="_blank" title="プログラミング言語用語集">
+                        <div class="icon" aria-hidden="true">📚</div>
+                        <span class="label">プログラミング言語用語集</span>
+                    </a>
+                </article>
+
+                <!-- プログラミングクイズ -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="index2.html" target="_blank" title="プログラミングクイズ">
+                        <div class="icon" aria-hidden="true">🧠</div>
+                        <span class="label">プログラミングクイズ</span>
+                    </a>
+                </article>
+                
+                <!-- 苦手克服 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="hate.html" target="_blank" title="苦手克服">
+                        <div class="icon" aria-hidden="true">🎯</div>
+                        <span class="label">苦手克服</span>
+                    </a>
+                </article>
+
+                <!-- 初期 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="index.html" target="_blank" title="初期">
+                        <div class="icon" aria-hidden="true">🏠</div>
+                        <span class="label">初期</span>
+                    </a>
+                </article>
+
+                <!-- ホーム -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="home.html" target="_blank" title="ホーム">
+                        <div class="icon" aria-hidden="true">🏠</div>
+                        <span class="label">ホーム</span>
+                    </a>
+                </article>
+
+
+
+                <!-- 読み込み中... -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="loading.html" target="_blank" title="読み込み中...">
+                        <div class="icon" aria-hidden="true">⏳</div>
+                        <span class="label">読み込み中...</span>
+                    </a>
+                </article>
+
+                <!-- ログイン -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="login.html" target="_blank" title="ログイン">
+                        <div class="icon" aria-hidden="true">🔐</div>
+                        <span class="label">ログイン</span>
+                    </a>
+                </article>
+
+                <!-- ログアウト -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="logout.html" target="_blank" title="ログアウト">
+                        <div class="icon" aria-hidden="true">🚪</div>
+                        <span class="label">ログアウト</span>
+                    </a>
+                </article>
+
+
+                <!-- アンケート画面へ -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="アンケート.html" target="_blank" title="アンケート画面へ">
+                        <div class="icon" aria-hidden="true">📊</div>
+                        <span class="label">アンケート画面へ</span>
+                    </a>
+                </article>
+
+                <!-- 便利リンク -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="index4.html" target="_blank" title="便利リンク">
+                        <div class="icon" aria-hidden="true">🔗</div>
+                        <span class="label">便利リンク</span>
+                    </a>
+                </article>
+
+                <!-- その他 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="other.html" target="_blank" title="その他">
+                        <div class="icon" aria-hidden="true">🔗</div>
+                        <span class="label">その他</span>
+                    </a>
+                </article>
+
+
+
+                <!-- 動画 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="movie.html" target="_blank" title="動画">
+                        <div class="icon" aria-hidden="true">🎬</div>
+                        <span class="label">動画</span>
+                    </a>
+                </article>
+
+                <!-- 天気情報 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="weather.html" target="_blank" title="天気情報">
+                        <div class="icon" aria-hidden="true">🌤️</div>
+                        <span class="label">天気情報</span>
+                    </a>
+                </article>
+
+                <!-- 電車情報 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="train.html" target="_blank" title="電車情報">
+                        <div class="icon" aria-hidden="true">🚃</div>
+                        <span class="label">電車情報</span>
+                    </a>
+                </article>
+
+                <!-- 4択クイズ -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="クイズ.html" target="_blank" title="4択クイズ">
+                        <div class="icon" aria-hidden="true">❓</div>
+                        <span class="label">4択クイズ</span>
+                    </a>
+                </article>
+
+                <!-- 物語 -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="story.html" target="_blank" title="物語">
+                        <div class="icon" aria-hidden="true">📖</div>
+                        <span class="label">物語</span>
+                    </a>
+                </article>
+
+
+                <!-- チャット -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="index3.html" target="_blank" title="チャット">
+                        <div class="icon" aria-hidden="true">💬</div>
+                        <span class="label">チャット</span>
+                    </a>
+                </article>
+
+                <!-- ビンゴ -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="Bingo.html" target="_blank" title="ビンゴゲーム">
+                        <div class="icon" aria-hidden="true">🎉</div>
+                        <span class="label">ビンゴ</span>
+                    </a>
+                </article>
+
+                <!-- 見るものリスト -->
+                <article class="card" role="listitem" data-category="internal">
+                    <a href="list_mobile/index.html" target="_blank" title="見るものリスト - スマホ版">
+                        <div class="icon" aria-hidden="true">📱</div>
+                        <span class="label">見るものリスト</span>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="futuristic-footer">
+        <div>© よく使うリンク集</div>
+        <div class="footer-note">すべてのリンクは新しいタブで開きます。存在しないローカルページに遷移する場合はファイル名を確認してください。</div>
+    </footer>
+
+    <script src="static/js/link.js"></script>
+    <script src="static/security.js"></script>
+</body>
+</html>

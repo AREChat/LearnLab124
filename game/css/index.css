@@ -1,0 +1,31 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .loading {
+            text-align: center;
+        }
+        .loading img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            animation: floatUp 4s ease-out forwards;
+            transform: translateY(100vh); /* 初期位置を下に */
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    

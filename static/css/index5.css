@@ -1,0 +1,102 @@
+        /* マニュアルページ固有のスタイル */
+        body {
+            font-size: 16px; /* 最小14px以上 */
+        }
+        .manual-section {
+            background-color: var(--bg-medium);
+            border-radius: 15px;
+            padding: 2em;
+            margin-bottom: 2em;
+            border-left: 4px solid var(--neon-blue);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .manual-section h2 {
+            color: var(--neon-blue);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8em;
+            margin-bottom: 1em;
+            text-shadow: 0 0 8px rgba(0, 224, 255, 0.4);
+        }
+        .manual-section p, .manual-section ul, .manual-section li {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .manual-section ul {
+            padding-left: 1.5em;
+        }
+        .manual-section li {
+            margin-bottom: 0.5em;
+        }
+        .highlight {
+            background-color: rgba(0, 224, 255, 0.1);
+            padding: 0.2em 0.5em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        /* レスポンシブナビゲーション */
+        #hamburger-menu-btn {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 3000;
+            background: linear-gradient(135deg, #00e0ff, #ae00ff);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 1.5em;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 224, 255, 0.3);
+        }
+        #hamburger-menu-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(174, 0, 255, 0.4);
+        }
+
+        .responsive-nav {
+            background: #222; color: #fff; padding: 0.7em 0; text-align: center;
+            font-size: 1.1em; letter-spacing: 1px; display: none;
+        }
+        .responsive-nav a { color: #00e0ff; margin: 0 1em; text-decoration: underline; }
+        .responsive-nav a.highlight { font-weight: bold; }
+
+        #table-of-contents {
+            width: 280px; background-color: #1a1a1a; color: #e0e0e0; padding: 20px;
+            height: 100vh; position: fixed; top: 0; left: 0; overflow-y: auto;
+            transition: transform 0.3s ease; z-index: 2000;
+            border-right: 1px solid #00e0ff; transform: translateX(-100%);
+        }
+        #table-of-contents.open { transform: translateX(0); }
+        #table-of-contents h2 {
+            color: #00e0ff; font-family: 'Roboto Mono', monospace;
+            margin-top: 0; font-size: 1.5em;
+        }
+        #table-of-contents ul { list-style: none; padding: 0; margin: 0; }
+        #table-of-contents li a {
+            display: block; color: #b0b0b0; text-decoration: none;
+            padding: 10px 15px; border-radius: 5px; transition: all 0.2s; font-size: 0.95em;
+        }
+        #table-of-contents li a:hover {
+            background-color: rgba(0, 224, 255, 0.1); color: #ffffff;
+        }
+
+        @media (min-width: 769px) {
+            .responsive-nav { display: block; }
+        }
+
+        @media (max-width: 768px) {
+            #hamburger-menu-btn { display: block; }
+            .responsive-nav { display: none; }
+        }
+    
+
+/* ---- inline style="" から移した定義 ---- */
+html body .u-1.u-1,
+html.u-1.u-1,
+body.u-1.u-1 {
+  color: var(--neon-blue) !important;
+  text-decoration: underline !important;
+}

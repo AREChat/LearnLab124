@@ -1,0 +1,95 @@
+<!--static/ARE.jsonとstatic/story.jsonの中から30問出題-->
+<!--ARE.jsonは、AREクイズという名前　story.jsonは、物語クイズという名前-->
+<!--どちらも4択クイズとする-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>クイズ — 4択クイズ</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <link rel="stylesheet" href="static/css/quiz.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	<nav class="responsive-nav">
+		<a href="home.html">ホーム</a>
+		<a href="index2.html">クイズ</a>
+		<a href="index5.html">マニュアル</a>
+		<a href="アンケート.html" target="_blank" class="u-1">アンケート画面へ</a>
+	</nav>
+	    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://www.rakuten.co.jp/kbsanhe/" target="_blank">🛒 楽天サイト</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+    <div class="background-effect" aria-hidden="true"></div>
+
+    <header class="futuristic-header">
+        <div class="header-content">
+            <h1 class="neon-text">クイズ</h1>
+            <p class="tagline">40問出題 — 4択クイズ</p>
+        </div>
+    </header>
+
+    <main class="main-content" role="main">
+        <section id="quiz-selection" class="quiz-selection">
+            <button data-ev="1" class="quiz-btn">AREクイズ</button>
+            <button data-ev="2" class="quiz-btn">物語クイズ</button>
+            <button data-ev="3" class="quiz-btn">管理者クイズ</button>
+        </section>
+
+        <section id="quiz-area" class="u-2">
+            <div id="quiz-progress" class="quiz-progress"></div>
+            <div id="quiz-question" class="quiz-question"></div>
+            <div class="quiz-buttons">
+                <button id="next-btn" data-ev="4" class="quiz-next u-3">次へ</button>
+                <button data-ev="5" class="quiz-btn">リタイア</button>
+            </div>
+        </section>
+
+        <section id="quiz-result" class="quiz-result u-4">
+            <h2>結果</h2>
+            <p id="result-text"></p>
+            <button data-ev="6" class="quiz-btn">もう一度</button>
+            <button data-ev="7" class="quiz-btn">クイズ選択に戻る</button>
+        </section>
+    </main>
+
+    <footer class="futuristic-footer">
+        <div>© サイト — クイズ</div>
+                <div class="footer-note">JSONファイルからランダムに40問出題します。</div>
+    </footer>
+
+    <script src="static/js/quiz.js"></script>
+    <script src="static/security.js"></script>
+    <script src="static/js/quiz.events.js"></script>
+</body>
+</html>
+

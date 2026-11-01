@@ -1,0 +1,120 @@
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 24px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .splash-content {
+            text-align: center;
+            color: var(--neon-blue);
+            text-shadow: 0 0 20px var(--neon-blue);
+            animation: fadeIn 1s ease-in;
+        }
+        .splash-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .splash-subtitle {
+            font-size: 1.5em;
+            opacity: 0.8;
+        }
+        .terms-content {
+            text-align: center;
+            color: var(--text-primary);
+            background: rgba(20,30,60,0.92);
+            padding: 2em;
+            border-radius: 18px;
+            box-shadow: 0 0 32px #00f2fe44, 0 2px 24px #ae00ff22;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .terms-content h1 {
+            color: var(--neon-blue);
+            margin-bottom: 1em;
+        }
+        .terms-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 2em;
+        }
+        .terms-content button {
+            background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%);
+            color: #fff;
+            border: none;
+            padding: 1em 2em;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 0 1em;
+            transition: background 0.2s;
+        }
+        .terms-content button:hover {
+            background: linear-gradient(90deg, #ae00ff 0%, #00f2fe 100%);
+        }
+        #message {
+            color: #ff4d4d;
+            margin-top: 1em;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    
+
+/* ---- inline style="" から移した定義 ---- */
+#terms.u-1 {
+  display: none;
+}
+html body .u-2.u-2,
+html.u-2.u-2,
+body.u-2.u-2 {
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1em;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+}
+html body .u-3.u-3,
+html.u-3.u-3,
+body.u-3.u-3 {
+  color: #00f2fe;
+}
+html body .u-4.u-4,
+html.u-4.u-4,
+body.u-4.u-4 {
+  line-height: 1.8;
+}
+html body .u-5.u-5,
+html.u-5.u-5,
+body.u-5.u-5 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #00f2fe;
+}
+html body .u-6.u-6,
+html.u-6.u-6,
+body.u-6.u-6 {
+  margin: 1.5em 0;
+}
+#agree.u-7 {
+  background: linear-gradient(90deg, #00f2fe 0%, #00c851 100%);
+}
+#disagree.u-8 {
+  background: linear-gradient(90deg, #ff4444 0%, #cc0000 100%);
+}
+#message.u-9 {
+  display: none;
+  font-size: 1.1em;
+}
+#disagree-counter.u-10 {
+  margin-top: 1em;
+  color: #ffaa00;
+  font-weight: bold;
+}

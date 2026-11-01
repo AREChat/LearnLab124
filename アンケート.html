@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アプリのアンケート</title>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/survey.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	<nav class="responsive-nav">
+		<a href="home.html">ホーム</a>
+		<a href="index2.html">クイズ</a>
+		<a href="index5.html">マニュアル</a>
+		<a href="アンケート.html" class="u-1">アンケート</a>
+	</nav>
+	<aside id="table-of-contents">
+		<h2>全リンク集</h2>
+		<ul>
+			<li><a href="home.html">🏠 ホーム</a></li>
+			<li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+			<li><a href="index5.html">� マニュアル</a></li>
+			<li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+			<li><a href="logout.html">🔒 ログアウト</a></li>
+			<li><a href="link.html">� 全リンク集</a></li>
+			<li><a href="hate.html">🎯 苦手克服</a></li>
+			<li><a href="hate/base.html">� プログラミング言語用語集</a></li>
+			<li><a href="https://docs.python.org/ja/3/" target="_blank">� Python公式ドキュメント</a></li>
+			<li><a href="https://www.w3schools.com/sql/" target="_blank">�️ SQLチュートリアル</a></li>
+			<li><a href="pythonexam.html">📝 Python試験情報</a></li>
+			<li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+			<li><a href="https://www.rakuten.co.jp/kbsanhe/" target="_blank">🛒 楽天サイト</a></li>
+			<li><a href="weather.html">🌤️ 天気情報</a></li>
+			<li><a href="train.html">🚃 電車情報</a></li>
+			<li><a href="other.html">� その他</a></li>
+			<li><a href="index3.html">� チャット</a></li>
+			<li><a href="index4.html">� 便利リンク</a></li>
+			<li><a href="story.html">� 物語</a></li>
+		</ul>
+	</aside>
+    <div class="background-effect"></div>
+    </style>
+</head>
+<body>
+    <div class="background-effect"></div>
+
+    <header class="futuristic-header">
+        <div class="header-content">
+            <h1>アプリのアンケート</h1>
+            <p class="tagline">サービス向上のため、皆様のご意見をお聞かせください。</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSc-uN6sF3aBcVdY7o7tJgH9xR5qZ-fP4kL7wJ1aC9bO8iU0vQ/formResponse" method="POST" target="hidden_iframe" data-ev="1" class="survey-form-container">
+            
+            <!-- Q1: お名前 (必須) -->
+            <div class="form-group">
+                <label for="name" class="form-label">お名前</label>
+                <input type="text" id="name" name="entry.2005620554" class="futuristic-input" required>
+            </div>
+
+            <!-- Q2: メールアドレス (任意) -->
+            <div class="form-group">
+                <label for="email" class="form-label">メールアドレス <span class="optional-badge">任意</span></label>
+                <input type="email" id="email" name="entry.1045781291" class="futuristic-input">
+            </div>
+
+            <!-- Q3: プログラミング学習歴 -->
+            <div class="form-group">
+                <label class="form-label">あなたのプログラミング学習歴に最も近いものを教えてください。</label>
+                <div class="choice-group">
+                    <label><input type="radio" name="entry.1065026978" value="学習したことがない" required><span class="custom-choice"></span>学習したことがない</label>
+                    <label><input type="radio" name="entry.1065026978" value="学習を始めたばかり（1年未満）"><span class="custom-choice"></span>学習を始めたばかり（1年未満）</label>
+                    <label><input type="radio" name="entry.1065026978" value="1年〜3年程度"><span class="custom-choice"></span>1年〜3年程度</label>
+                    <label><input type="radio" name="entry.1065026978" value="3年〜5年程度"><span class="custom-choice"></span>3年〜5年程度</label>
+                    <label><input type="radio" name="entry.1065026978" value="5年以上"><span class="custom-choice"></span>5年以上</label>
+                </div>
+            </div>
+
+            <!-- Q4: サイトの使いやすさ (5段階評価) -->
+            <div class="form-group">
+                <label class="form-label">このサイトの使いやすさを5段階で評価してください。</label>
+                <div class="linear-scale-group">
+                    <label class="scale-label"><input type="radio" name="entry.1166989899" value="1" required><span class="custom-choice"></span>1</label>
+                    <label class="scale-label"><input type="radio" name="entry.1166989899" value="2"><span class="custom-choice"></span>2</label>
+                    <label class="scale-label"><input type="radio" name="entry.1166989899" value="3"><span class="custom-choice"></span>3</label>
+                    <label class="scale-label"><input type="radio" name="entry.1166989899" value="4"><span class="custom-choice"></span>4</label>
+                    <label class="scale-label"><input type="radio" name="entry.1166989899" value="5"><span class="custom-choice"></span>5</label>
+                </div>
+                <div class="linear-scale-labels">
+                    <span>非常に使いにくい</span>
+                    <span>非常に使いやすい</span>
+                </div>
+            </div>
+
+            <!-- Q5: 用語解説の役立ち度 (必須) -->
+            <div class="form-group">
+                <label class="form-label">当サイトの用語解説は、あなたの学習や問題解決に役立ちましたか？</label>
+                <div class="choice-group">
+                    <label><input type="radio" name="entry.834420923" value="非常に役立った" required><span class="custom-choice"></span>非常に役立った</label>
+                    <label><input type="radio" name="entry.834420923" value="役立った"><span class="custom-choice"></span>役立った</label>
+                    <label><input type="radio" name="entry.834420923" value="どちらともいえない"><span class="custom-choice"></span>どちらともいえない</label>
+                    <label><input type="radio" name="entry.834420923" value="あまり役立たなかった"><span class="custom-choice"></span>あまり役立たなかった</label>
+                    <label><input type="radio" name="entry.834420923" value="全く役立たなかった"><span class="custom-choice"></span>全く役立たなかった</label>
+                </div>
+            </div>
+
+            <!-- Q6: 追加機能の要望 (複数選択可, 必須) -->
+            <div class="form-group">
+                <label class="form-label">今後、このサイトにどのような機能やコンテンツを追加してほしいですか？（複数選択可）</label>
+                <div class="choice-group">
+                    <label><input type="checkbox" name="entry.1704231902" value="チャット機能を拡張してほしい"><span class="custom-choice"></span>チャット機能を拡張してほしい</label>
+                    <label><input type="checkbox" name="entry.1704231902" value="プログラミング言語を増やしてほしい"><span class="custom-choice"></span>プログラミング言語を増やしてほしい</label>
+                    <label><input type="checkbox" name="entry.1704231902" value="オフィス(Word、Excel、PowerPoint、Access)も取り入れてほしい"><span class="custom-choice"></span>オフィス(Word、Excel、PowerPoint、Access)も取り入れてほしい</label>
+                    <label><input type="checkbox" name="entry.1704231902" value="__other_option__"><span class="custom-choice"></span>その他:
+                        <input type="text" name="entry.1704231902.other_option_response" class="futuristic-input u-2">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Q7: 自由記述 -->
+            <div class="form-group">
+                <label for="impression" class="form-label">サイトに関する感想などがあれば自由にお書きください。</label>
+                <textarea id="impression" name="entry.1643444033" class="futuristic-textarea"></textarea>
+                <p class="note">※誹謗中傷やクレームはやめてくださいねー　できる限りは時間を見つけて改善します。</p>
+            </div>
+
+            <hr class="u-3">
+
+            <!-- Q8: 推奨度 (提案) -->
+            <div class="form-group">
+                <label class="form-label">このアプリを友人や同僚に勧める可能性は、0〜10点でどのくらいですか？</label>
+                <div class="linear-scale-group">
+                    <script src="static/js/survey.js"></script>
+                </div>
+                <div class="linear-scale-labels">
+                    <span>可能性は低い</span>
+                    <span>可能性は高い</span>
+                </div>
+            </div>
+            
+            <!-- Q9: 利用頻度 (提案) -->
+            <div class="form-group">
+                <label class="form-label">このアプリをどのくらいの頻度で利用しますか？</label>
+                <div class="choice-group">
+                    <label><input type="radio" name="entry.1549149795" value="ほぼ毎日" required><span class="custom-choice"></span>ほぼ毎日</label>
+                    <label><input type="radio" name="entry.1549149795" value="週に2〜3回"><span class="custom-choice"></span>週に2〜3回</label>
+                    <label><input type="radio" name="entry.1549149795" value="週に1回程度"><span class="custom-choice"></span>週に1回程度</label>
+                    <label><input type="radio" name="entry.1549149795" value="月に数回"><span class="custom-choice"></span>月に数回</label>
+                    <label><input type="radio" name="entry.1549149795" value="ほとんど利用しない"><span class="custom-choice"></span>ほとんど利用しない</label>
+                </div>
+            </div>
+            
+            <!-- Q10: 代替手段 (提案) -->
+            <div class="form-group">
+                <label for="alternative" class="form-label">このアプリが解決しようとしている課題について、他に利用しているサービスやツールがあれば教えてください。</label>
+                <textarea id="alternative" name="entry.1451079568" class="futuristic-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">アンケートを送信する</button>
+        </form>
+    </main>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" data-ev="2" class="u-4"></iframe>
+    <script src="static/js/survey.2.js"></script>
+
+    <footer class="futuristic-footer">
+        <p>&copy; 2035年までに開発予定～そういう時はAREだ～</p>
+    </footer>
+	<script src="static/js/survey.3.js"></script>
+    <script src="static/security.js"></script>
+    <script src="static/js/survey.events.js"></script>
+</body>
+</html>

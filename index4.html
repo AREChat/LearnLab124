@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <script src="static/js/study-config.js"></script>
+        <script src="static/js/neon-client.js"></script>
+        <script src="static/js/study-api.js"></script>
+        <script src="static/points.js"></script>
+        <script src="static/points-header.js"></script>
+        <link rel="stylesheet" href="static/responsive-header.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>便利リンク</title>
+        <link rel="stylesheet" href="static/css/index4.css">
+        
+        <!-- レスポンシブナビゲーション用CSS -->
+        
+    </head>
+    <body>
+    <button id="hamburger-menu-btn">
+        <span class="hamburger-line"></span>
+    </button>
+    
+    <nav class="responsive-nav">
+        <a href="home.html">ホーム</a>
+        <a href="index2.html">クイズ</a>
+        <a href="index5.html">マニュアル</a>
+        <a href="https://arechat.github.io/ARE">ARE チャットアプリ</a>
+        <a href="https://arechat.github.io/ARE/game5">ゲーム</a>
+        <a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+    </nav>
+
+        <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://arechat.github.io/ARE" target="_blank">💬 ARE チャットアプリ</a></li>
+            <li><a href="https://arechat.github.io/ARE/game5" target="_blank">🎮 ゲーム</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+    
+    <div class="container">
+        <h2 class="u-1">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="u-2">
+                <circle cx="12" cy="12" r="10" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                <path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Webスクレイピングで情報取得
+        </h2>
+        <div class="info-block">
+            <b>天気予報：</b>
+            <span id="weather-result">取得中...</span><br>
+            <a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank">気象庁 東京の天気</a>
+        </div>
+        <h2 class="u-1">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="u-2">
+                <rect x="3" y="6" width="18" height="12" rx="3" fill="#ae00ff" stroke="#00f2fe" stroke-width="1.5"/>
+                <path d="M7 10h10M7 14h6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            便利リンク
+        </h2>
+        <div class="btns">
+            <a href="https://www.youtube.com/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <rect x="2" y="6" width="20" height="12" rx="4" fill="#FF0000"/>
+                    <polygon points="10,9 16,12 10,15" fill="#fff"/>
+                </svg>
+                <span>YouTube</span>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <circle cx="12" cy="12" r="10" fill="#fff"/>
+                    <path d="M12 7v5l4 2" stroke="#4285F4" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M21 12a9 9 0 1 1-2.64-6.36" stroke="#34A853" stroke-width="1.5"/>
+                    <path d="M3.6 7.05A9 9 0 0 1 12 3" stroke="#EA4335" stroke-width="1.5"/>
+                    <path d="M12 21a9 9 0 0 0 6.36-2.64" stroke="#FBBC05" stroke-width="1.5"/>
+                </svg>
+                <span>Google</span>
+            </a>
+            <a href="https://mail.google.com/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <rect x="3" y="5" width="18" height="14" rx="3" fill="#fff" stroke="#EA4335" stroke-width="1.5"/>
+                    <polyline points="3,5 12,13 21,5" fill="none" stroke="#EA4335" stroke-width="1.5"/>
+                </svg>
+                <span>Gmail</span>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <rect x="3" y="3" width="18" height="18" rx="5" fill="#fff" stroke="#C13584" stroke-width="1.5"/>
+                    <circle cx="12" cy="12" r="5" stroke="#C13584" stroke-width="1.5"/>
+                    <circle cx="17" cy="7" r="1.2" fill="#C13584"/>
+                </svg>
+                <span>インスタ</span>
+            </a>
+            <a href="https://www.tiktok.com/ja-JP/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <path d="M16 3v7.5a4.5 4.5 0 1 1-4.5-4.5" stroke="#fff" stroke-width="1.5"/>
+                    <path d="M16 3c.5 2 2.5 4 5 4" stroke="#25F4EE" stroke-width="1.5"/>
+                </svg>
+                <span>TikTok</span>
+            </a>
+            <a href="other.html" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="u-2">
+                    <circle cx="12" cy="12" r="10" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                    <text x="12" y="17" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">?</text>
+                </svg>
+                <span>その他</span>
+            </a>
+            <a href="weather.html" title="天気予報" class="u-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="u-2">
+                    <ellipse cx="12" cy="16" rx="7" ry="4" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                    <circle cx="12" cy="10" r="4" fill="#fff" stroke="#00f2fe" stroke-width="1.2"/>
+                    <path d="M16 4l1.5-1.5M8 4L6.5 2.5M20 10h2M2 10h2M18.5 7.5l1-1M5.5 7.5l-1-1" stroke="#ae00ff" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span class="u-4">天気予報</span>
+            </a>
+            <a href="train.html" title="交通機関" class="u-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="u-2">
+                    <rect x="4" y="3" width="16" height="13" rx="4" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                    <rect x="7" y="6" width="10" height="5" rx="2" fill="#fff"/>
+                    <circle cx="8" cy="18" r="1.5" fill="#ae00ff"/>
+                    <circle cx="16" cy="18" r="1.5" fill="#ae00ff"/>
+                    <rect x="7" y="16" width="10" height="1.5" rx="0.7" fill="#00f2fe"/>
+                </svg>
+                <span class="u-4">交通機関</span>
+            </a>
+            <a href="https://qiita.com/SollaUmiyama/items/e57c2cc044b266ee2b8d" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#fff" stroke-width="1.5"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#00f2fe" stroke-width="1.5"/>
+                </svg>
+                <span>Qiita記事</span>
+            </a>
+            <a href="https://codic.jp/engine" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <polyline points="16,18 22,12 16,6" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                    <polyline points="8,6 2,12 8,18" stroke="#fff" stroke-width="1.5"/>
+                </svg>
+                <span>Codic</span>
+            </a>
+            <a href="https://tonokokko.com/tkinter-messagebox/" target="_blank" class="u-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="u-2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#00f2fe" stroke="#ae00ff" stroke-width="1.5"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.5"/>
+                </svg>
+                <span>Tkinter MessageBox</span>
+            </a>
+        </div>
+        </div>
+            <script src="static/js/index4.js"></script>
+            <script src="static/security.js"></script>
+</body>
+</html>

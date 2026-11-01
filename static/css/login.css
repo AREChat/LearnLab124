@@ -1,0 +1,245 @@
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 2em 1em;
+        }
+        
+        .control-panel {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .eye-icon:hover {
+            opacity: 0.7;
+        }
+
+		/* ハンバーガーメニューボタン */
+		#hamburger-menu-btn {
+			display: block !important;
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			z-index: 9999;
+			background: linear-gradient(135deg, #ff00ff, #00e0ff);
+			border: 3px solid #ffffff;
+			border-radius: 12px;
+			padding: 15px 18px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+			box-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 40px rgba(0, 224, 255, 0.6);
+			transition: all 0.3s ease;
+			animation: pulse 2s infinite;
+		}
+		#hamburger-menu-btn:hover {
+			transform: scale(1.2) rotate(90deg);
+			box-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 60px rgba(0, 224, 255, 1);
+			background: linear-gradient(135deg, #00e0ff, #ff00ff);
+		}
+		
+		@keyframes pulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+
+		/* PC用ナビゲーション */
+		.responsive-nav {
+			display: none;
+			background: #222;
+			color: #fff;
+			padding: 0.7em 0;
+			text-align: center;
+			font-size: 1.1em;
+			letter-spacing: 1px;
+		}
+		.responsive-nav a {
+			color: #00e0ff;
+			margin: 0 1em;
+			text-decoration: underline;
+		}
+
+		/* サイドバーメニュー */
+		#table-of-contents {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 280px;
+			height: 100vh;
+			background: rgba(20, 30, 60, 0.95);
+			backdrop-filter: blur(10px);
+			color: #f2f8ff;
+			padding: 20px;
+			box-shadow: 4px 0 20px rgba(0, 224, 255, 0.3);
+			z-index: 2000;
+			overflow-y: auto;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+		}
+		#table-of-contents.open {
+			transform: translateX(0);
+		}
+		#table-of-contents h2 {
+			color: #00e0ff;
+			text-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+			margin-top: 0;
+		}
+		#table-of-contents ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#table-of-contents li {
+			margin: 0.8em 0;
+		}
+		#table-of-contents a {
+			color: #f2f8ff;
+			text-decoration: none;
+			font-size: 1.05em;
+			transition: color 0.3s ease, text-shadow 0.3s ease;
+		}
+		#table-of-contents a:hover {
+			color: #00e0ff;
+			text-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+		}
+
+		#hamburger-menu-btn {
+			display: block !important;
+			position: fixed;
+			top: 15px;
+			left: 15px;
+			z-index: 9999;
+			background: transparent;
+			border: none;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			padding: 0;
+			transition: all 0.3s ease;
+		}
+		
+		/* ハンバーガーアイコンの3本線 */
+		#hamburger-menu-btn::before,
+		#hamburger-menu-btn::after,
+		.hamburger-line {
+			content: '';
+			display: block;
+			width: 32px;
+			height: 4px;
+			background: #00e0ff;
+			border-radius: 2px;
+			margin: 0 auto 6px;
+			box-shadow: 0 0 10px rgba(0, 224, 255, 0.8), 0 0 20px rgba(0, 224, 255, 0.5);
+			transition: all 0.3s ease;
+		}
+		
+		#hamburger-menu-btn::before {
+			margin-top: 8px;
+		}
+		
+		#hamburger-menu-btn::after {
+			margin-bottom: 0;
+		}
+		
+		#hamburger-menu-btn:hover::before,
+		#hamburger-menu-btn:hover::after,
+		#hamburger-menu-btn:hover .hamburger-line {
+			background: #ff00ff;
+			box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 0.7);
+			transform: scaleX(1.1);
+		}
+
+		/* レスポンシブ対応 */
+		@media (max-width: 768px) {
+			#hamburger-menu-btn {
+				display: block !important;
+			}
+			.responsive-nav {
+				display: none !important;
+			}
+		}
+		@media (min-width: 769px) {
+			#hamburger-menu-btn {
+				display: block !important;
+			}
+			.responsive-nav {
+				display: block;
+			}
+		}
+    
+
+/* ---- inline style="" から移した定義 ---- */
+html body .u-1.u-1,
+html.u-1.u-1,
+body.u-1.u-1 {
+  font-weight: bold;
+}
+html body .u-2.u-2,
+html.u-2.u-2,
+body.u-2.u-2 {
+  color: var(--neon-blue);
+  text-align: center;
+}
+html body .u-3.u-3,
+html.u-3.u-3,
+body.u-3.u-3 {
+  position: relative;
+}
+html body .u-4.u-4,
+html.u-4.u-4,
+body.u-4.u-4 {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--neon-blue);
+}
+html body .u-5.u-5,
+html.u-5.u-5,
+body.u-5.u-5 {
+  text-align: left;
+}
+#auto-login.u-6 {
+  margin-right: 8px;
+}
+html body .u-7.u-7,
+html.u-7.u-7,
+body.u-7.u-7 {
+  width: 100%;
+  padding: 1em;
+  background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+html body .u-8.u-8,
+html.u-8.u-8,
+body.u-8.u-8 {
+  text-align: center;
+  margin-top: 1em;
+}
+html body .u-9.u-9,
+html.u-9.u-9,
+body.u-9.u-9 {
+  color: var(--neon-blue);
+}
+#register-form.u-10 {
+  display: none;
+}
+#message.u-11 {
+  text-align: center;
+  margin-top: 1em;
+  color: #ff4d4d;
+}
