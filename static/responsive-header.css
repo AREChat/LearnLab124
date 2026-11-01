@@ -1,0 +1,301 @@
+/* レスポンシブヘッダー - ポイント表示とナビゲーション */
+
+/* ポイントメニューボタン(右上) */
+.points-menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 3000;
+    background: linear-gradient(135deg, #00e0ff, #ae00ff);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 224, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.points-menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.6);
+}
+
+/* ポイントパネル(右側スライドイン) */
+.points-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: rgba(20, 30, 60, 0.95);
+    backdrop-filter: blur(10px);
+    color: #f2f8ff;
+    padding: 20px;
+    box-shadow: -4px 0 20px rgba(0, 224, 255, 0.3);
+    z-index: 2000;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.points-panel.open {
+    transform: translateX(0);
+}
+
+.points-panel-header {
+    border-bottom: 2px solid #00e0ff;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.points-panel-header h3 {
+    color: #00e0ff;
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+.points-panel-balance {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #00e0ff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+}
+
+.points-panel .points-label {
+    color: #00e0ff;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.points-panel .points-display {
+    color: #00ff88;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px 0;
+}
+
+.points-panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.points-detail-btn,
+.points-history-btn {
+    background: linear-gradient(90deg, #00e0ff, #00a8cc);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 224, 255, 0.3);
+}
+
+.points-detail-btn:hover,
+.points-history-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.5);
+}
+
+.points-history-btn {
+    background: linear-gradient(90deg, #ae00ff, #8800cc);
+    box-shadow: 0 4px 10px rgba(174, 0, 255, 0.3);
+}
+
+.points-history-btn:hover {
+    box-shadow: 0 6px 15px rgba(174, 0, 255, 0.5);
+}
+
+/* ランクバッジ */
+.rank-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* レスポンシブナビゲーション - PC */
+.responsive-nav {
+    background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 0.7em 0;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #00e0ff;
+    box-shadow: 0 4px 20px rgba(0, 224, 255, 0.3);
+}
+
+.responsive-nav a {
+    color: #00e0ff;
+    margin: 0.5em 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.responsive-nav a:hover {
+    background: rgba(0, 224, 255, 0.1);
+    border-color: #00e0ff;
+}
+
+.responsive-nav a.highlight {
+    font-weight: bold;
+    background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%);
+    color: #fff;
+    border: none;
+}
+
+/* タブレット・スマホ表示 (768px以下) - 縦並び */
+@media screen and (max-width: 768px) {
+    .responsive-nav {
+        display: none; /* スマホでは非表示 */
+    }
+
+    /* ポイントパネルをスマホ用に調整 */
+    .points-panel {
+        width: 280px;
+        padding: 15px;
+    }
+
+    .points-panel-balance {
+        padding: 15px;
+    }
+
+    .points-panel .points-display {
+        font-size: 1.6em;
+    }
+
+    /* ハンバーガーメニューボタンの位置調整 */
+    #hamburger-menu-btn {
+        top: 10px;
+        left: 10px;
+    }
+
+    .points-menu-btn {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* 超小型スマホ (480px以下) */
+@media screen and (max-width: 480px) {
+    .points-panel {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .points-panel-balance {
+        padding: 12px;
+    }
+
+    .points-panel .points-display {
+        font-size: 1.4em;
+    }
+
+    .points-menu-btn {
+        padding: 10px 13px;
+        font-size: 1.3em;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* PC表示 (769px以上) */
+@media screen and (min-width: 769px) {
+    .responsive-nav {
+        display: flex;
+    }
+}
+
+/* ポイント詳細モーダル */
+.points-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10001;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.points-modal.active {
+    display: flex;
+}
+
+.points-modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #00e0ff;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 50px rgba(0, 224, 255, 0.8);
+}
+
+.points-modal h2 {
+    color: #00e0ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.points-modal-close {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.points-info-item {
+    background: rgba(0, 224, 255, 0.1);
+    border: 1px solid #00e0ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+.points-info-item strong {
+    color: #00e0ff;
+}
+
+.points-gain {
+    color: #00ff88;
+}
+
+.points-loss {
+    color: #ff4444;
+}

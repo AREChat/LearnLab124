@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#667eea">
+    <title>📱 見るものリスト</title>
+    
+    <!-- SheetJS for Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    
+    <!-- Chart.js for statistics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- ウェルカムガイド（初回のみ表示） -->
+    <div id="welcomeGuide" class="story-overlay hidden">
+        <div class="story-content">
+            <div class="story-scene" id="scene1">
+                <div class="story-icon">🎉</div>
+                <h2 class="story-title">ようこそ！<br>見るものリストへ</h2>
+                <p class="story-text">
+                    このアプリは、スマホで使える<br>
+                    「見たもの」記録アプリです
+                </p>
+                <p class="story-text">
+                    データはあなたのスマホに保存されるので、<br>
+                    アプリを閉じても消えません
+                </p>
+                <button data-ev="1" class="btn btn-primary btn-large">つぎへ →</button>
+            </div>
+            
+            <div class="story-scene hidden" id="scene2">
+                <div class="story-icon">📝</div>
+                <h2 class="story-title">ステップ1<br>リストを追加しましょう</h2>
+                <p class="story-text">
+                    「📝 入力」タブをタップして、<br>
+                    見たものを入力します
+                </p>
+                <p class="story-text">
+                    必須項目を入力して、<br>
+                    「💾 保存する」ボタンをタップ
+                </p>
+                <button data-ev="2" class="btn btn-secondary">← もどる</button>
+                <button data-ev="3" class="btn btn-primary btn-large">つぎへ →</button>
+            </div>
+            
+            <div class="story-scene hidden" id="scene3">
+                <div class="story-icon">✅</div>
+                <h2 class="story-title">ステップ2<br>見終わったら完了ボタン</h2>
+                <p class="story-text">
+                    見終わったら、「達成度」を<br>
+                    <strong class="u-1">「完了」</strong>にしてください
+                </p>
+                <p class="story-text">
+                    自動で完了日時が記録されます！
+                </p>
+                <button data-ev="4" class="btn btn-secondary">← もどる</button>
+                <button data-ev="5" class="btn btn-primary btn-large">つぎへ →</button>
+            </div>
+            
+            <div class="story-scene hidden" id="scene4">
+                <div class="story-icon">🎊</div>
+                <h2 class="story-title">おめでとうございます！</h2>
+                <p class="story-text">
+                    これで使い方はバッチリです
+                </p>
+                <p class="highlight">
+                    【依頼1】を達成しました！<br>
+                    すばらしいです！
+                </p>
+                <button data-ev="6" class="btn btn-secondary">← もどる</button>
+                <button data-ev="7" class="btn btn-success btn-large">はじめる！</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 今日のリストポップアップ -->
+    <div id="todayPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>📅 今日見るもの</h2>
+                <button data-ev="8" class="popup-close">×</button>
+            </div>
+            <div class="popup-body" id="todayList">
+                <div class="spinner"></div>
+                <p>読み込み中...</p>
+            </div>
+            <div class="popup-footer">
+                <button data-ev="9" class="btn btn-primary">わかりました！</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 完了おめでとうポップアップ -->
+    <div id="congratsPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <div class="popup-header success">
+                <h2>🎉 おめでとう！</h2>
+            </div>
+            <div class="popup-body">
+                <div class="congrats-icon">✨🎊✨</div>
+                <p class="congrats-text" id="congratsText"></p>
+                <p class="congrats-subtext">すばらしいです！<br>この調子でがんばりましょう！</p>
+            </div>
+            <div class="popup-footer">
+                <button data-ev="10" class="btn btn-success btn-large">ありがとう！</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- エクスポート確認ポップアップ -->
+    <div id="exportPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>📊 Excel出力</h2>
+            </div>
+            <div class="popup-body">
+                <p class="story-text">
+                    すべてのデータをExcelファイル<br>
+                    (.xlsx)としてダウンロードします
+                </p>
+                <p class="story-text">
+                    よろしいですか？
+                </p>
+            </div>
+            <div class="popup-footer">
+                <button data-ev="11" class="btn btn-secondary">キャンセル</button>
+                <button data-ev="12" class="btn btn-primary">ダウンロード</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PWAインストールバナー -->
+    <div id="installBanner" class="install-banner">
+        <div class="install-text">
+            📱 ホーム画面に追加して<br>アプリのように使えます
+        </div>
+        <button class="install-btn" id="installBtn">追加</button>
+        <button data-ev="13" class="install-close">×</button>
+    </div>
+
+    <!-- ヘッダー -->
+    <div class="app-header">
+        <h1>📱 見るものリスト</h1>
+        <p>オフライン対応</p>
+        <div class="header-controls">
+            <button data-ev="14" class="btn btn-small btn-secondary">
+                <span id="furiganaBtn">ふりがな</span>
+            </button>
+            <button data-ev="15" class="btn btn-small btn-secondary">
+                ❓ 使い方
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- タブナビゲーション -->
+        <div class="tab-nav">
+            <button data-ev="16" class="tab-btn active">
+                📝<br><span class="tab-text">入力</span>
+            </button>
+            <button data-ev="17" class="tab-btn">
+                📋<br><span class="tab-text">リスト</span>
+            </button>
+            <button data-ev="18" class="tab-btn">
+                📊<br><span class="tab-text">統計</span>
+            </button>
+            <button data-ev="19" class="tab-btn">
+                📜<br><span class="tab-text">履歴</span>
+            </button>
+            <button data-ev="20" class="tab-btn">
+                ⚙️<br><span class="tab-text">設定</span>
+            </button>
+        </div>
+
+        <!-- タブ: 入力 -->
+        <div class="tab-content active" id="input-tab">
+            <h2>📝 新規入力</h2>
+            <div class="guide-box">
+                <p><span class="required-mark">*</span> がついている項目は必ず入力してください</p>
+            </div>
+            <form id="entryForm" data-ev="21">
+                <div class="form-group">
+                    <label class="form-label">
+                        日付 <span class="required-mark">*</span>
+                    </label>
+                    <input type="date" class="form-input" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        開始時間 <span class="required-mark">*</span>
+                    </label>
+                    <input type="time" class="form-input" id="startTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        終了時間 <span class="required-mark">*</span>
+                    </label>
+                    <input type="time" class="form-input" id="endTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        分類 <span class="required-mark">*</span>
+                    </label>
+                    <select class="form-select" id="category" required>
+                        <option value="">選んでください</option>
+                        <option value="動画">動画</option>
+                        <option value="写真">写真</option>
+                        <option value="サイト">サイト</option>
+                        <option value="物語">物語</option>
+                        <option value="AI">AI</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="マニュアル作成">マニュアル作成</option>
+                        <option value="資料作成">資料作成</option>
+                        <option value="ディズニー待ち時間">ディズニー待ち時間</option>
+                        <option value="調べ学習">調べ学習</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        予定の内容 <span class="required-mark">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="plannedContent" required placeholder="例: YouTubeで料理動画を見る">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        実際の内容 <span class="required-mark">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="actualContent" required placeholder="例: カレーの作り方動画を見た">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">感想</label>
+                    <textarea class="form-textarea" id="impression" placeholder="どう思いましたか？"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">内容メモ</label>
+                    <textarea class="form-textarea" id="contentMemo" placeholder="どんな話でしたか？"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">質問事項</label>
+                    <textarea class="form-textarea" id="questions" placeholder="わからないことは？"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">理解度</label>
+                    <select class="form-select" id="understanding">
+                        <option value="">選んでください</option>
+                        <option value="◎">◎ 完全に理解</option>
+                        <option value="○">○ だいたい理解</option>
+                        <option value="△">△ 少し理解</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        達成度 <span class="required-mark">*</span>
+                    </label>
+                    <select class="form-select" id="achievement" required>
+                        <option value="">選んでください</option>
+                        <option value="完了">✅ 完了（見終わった）</option>
+                        <option value="未完了">📋 未完了（まだ）</option>
+                        <option value="途中">⏳ 途中（見ている）</option>
+                    </select>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success btn-large">💾 保存する</button>
+                    <button type="button" data-ev="22" class="btn btn-secondary">🗑️ クリア</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- タブ: リスト -->
+        <div class="tab-content" id="list-tab">
+            <h2>📋 リスト</h2>
+            <div class="list-controls">
+                <input type="text" id="searchInput" placeholder="🔍 検索..." data-ev="23" class="form-input">
+                <select id="filterCategory" data-ev="24" class="form-select">
+                    <option value="">すべての分類</option>
+                    <option value="動画">動画</option>
+                    <option value="写真">写真</option>
+                    <option value="サイト">サイト</option>
+                    <option value="物語">物語</option>
+                    <option value="AI">AI</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="マニュアル作成">マニュアル作成</option>
+                    <option value="資料作成">資料作成</option>
+                    <option value="ディズニー待ち時間">ディズニー待ち時間</option>
+                    <option value="調べ学習">調べ学習</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+            <div id="entriesList">
+                <div class="spinner"></div>
+                <p class="loading-text">読み込み中...</p>
+            </div>
+        </div>
+
+        <!-- タブ: 統計 -->
+        <div class="tab-content" id="stats-tab">
+            <h2>📊 統計情報</h2>
+            <div class="stats-grid">
+                <div class="stat-card blue">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-label">全部の数</div>
+                    <div class="stat-value" id="totalEntries">0</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-label">完了数</div>
+                    <div class="stat-value" id="completedEntries">0</div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-label">合計時間</div>
+                    <div class="stat-value" id="totalTime">0分</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-label">達成率</div>
+                    <div class="stat-value" id="completionRate">0%</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </div>
+
+        <!-- タブ: 履歴 -->
+        <div class="tab-content" id="history-tab">
+            <h2>📜 履歴</h2>
+            <div class="guide-box">
+                <p>いつ何をしたかの記録です</p>
+            </div>
+            <div id="historyList">
+                <div class="spinner"></div>
+                <p class="loading-text">読み込み中...</p>
+            </div>
+        </div>
+
+        <!-- タブ: 設定 -->
+        <div class="tab-content" id="settings-tab">
+            <h2>⚙️ 設定</h2>
+            
+            <div class="settings-section">
+                <h3>📤 データ出力</h3>
+                <p>データをExcelファイルとして<br>ダウンロードできます</p>
+                <button data-ev="25" class="btn btn-primary btn-large">📊 Excelにエクスポート</button>
+            </div>
+            
+            <div class="settings-section">
+                <h3>🔄 データ更新</h3>
+                <p>データを最新の状態に<br>更新します</p>
+                <button data-ev="26" class="btn btn-secondary">🔄 更新</button>
+            </div>
+            
+            <div class="settings-section">
+                <h3>🗑️ データ削除</h3>
+                <p>すべてのデータを削除します<br>（元に戻せません）</p>
+                <button data-ev="27" class="btn btn-danger">🗑️ 全削除</button>
+            </div>
+            
+            <div class="settings-section">
+                <h3>ℹ️ アプリ情報</h3>
+                <p><strong>データ件数:</strong> <span id="dataCount">0</span>件</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知 -->
+    <div id="notification" class="notification"></div>
+
+    <script src="js/index.js"></script>
+    <script src="app.js"></script>
+    <script src="js/index.events.js"></script>
+</body>
+</html>

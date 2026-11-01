@@ -1,0 +1,114 @@
+        /* PC用トップナビゲーション */
+        .responsive-nav {
+            background: #222; color: #fff; padding: 0.7em 0; font-size: 1.1em;
+            letter-spacing: 1px; display: none; /* スマホでは非表示 */
+            justify-content: center; align-items: center; flex-wrap: wrap;
+        }
+        .responsive-nav a { color: #00e0ff; margin: 0.5em 1em; text-decoration: underline; white-space: nowrap; }
+        .responsive-nav a.highlight { font-weight: bold; }
+
+        /* サイドメニュー（全リンク集） */
+        #table-of-contents {
+            width: 280px; background-color: #1a1a1a; color: #e0e0e0; padding: 20px;
+            height: 100vh; position: fixed; top: 0; left: 0; overflow-y: auto; transition: transform 0.3s ease;
+            z-index: 2000; border-right: 1px solid #00e0ff; transform: translateX(-100%);
+        }
+        #table-of-contents.open { transform: translateX(0); }
+        #table-of-contents h2 { color: #00e0ff; font-family: 'Roboto Mono', monospace; margin-top: 0; font-size: 1.5em; }
+        #table-of-contents ul { list-style: none; padding: 0; margin: 0; }
+        #table-of-contents li a { display: block; color: #b0b0b0; text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: all 0.2s; font-size: 0.95em; }
+        #table-of-contents li a:hover { background-color: rgba(0, 224, 255, 0.1); color: #ffffff; }
+
+        /* メインコンテンツのコンテナ */
+        .main-container { flex-grow: 1; }
+        
+        /* script2.jsが生成するボタンのスタイル */
+        .futuristic-button {
+            background-color: #00e0ff; color: #121212; border: 1px solid #00e0ff; padding: 10px 20px;
+            font-family: 'Noto Sans JP', sans-serif; font-size: 1em; font-weight: bold; cursor: pointer;
+            border-radius: 5px; transition: all 0.3s; box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+        }
+        .futuristic-button:hover {
+            background-color: #121212; color: #00e0ff; box-shadow: 0 0 15px rgba(0, 224, 255, 0.8);
+        }
+
+        /* --- レスポンシブ切り替え --- */
+        /* PC表示 (画面幅769px以上) */
+        @media (min-width: 769px) {
+            .responsive-nav { display: flex; } /* PCではトップナビを表示 */
+        }
+        
+        /* タブレット・スマホ (画面幅768px以下) */
+        @media (max-width: 768px) {
+            .responsive-nav { display: none; } /* タブレット・スマホではトップナビ非表示 */
+        }
+    
+
+        #hamburger-menu-btn {
+            display: block !important;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 9999;
+            background: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* ハンバーガーアイコンの3本線 */
+        #hamburger-menu-btn::before,
+        #hamburger-menu-btn::after,
+        .hamburger-line {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #00e0ff;
+            border-radius: 2px;
+            margin: 0 auto 6px;
+            box-shadow: 0 0 10px rgba(0, 224, 255, 0.8), 0 0 20px rgba(0, 224, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        #hamburger-menu-btn::before {
+            margin-top: 8px;
+        }
+        
+        #hamburger-menu-btn::after {
+            margin-bottom: 0;
+        }
+        
+        #hamburger-menu-btn:hover::before,
+        #hamburger-menu-btn:hover::after,
+        #hamburger-menu-btn:hover .hamburger-line {
+            background: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 0.7);
+            transform: scaleX(1.1);
+        }
+
+        /* タブレット・スマホ（768px以下）でハンバーガーボタンを表示 */
+        @media (max-width: 768px) {
+            #hamburger-menu-btn {
+                display: block !important;
+            }
+        }
+        @media (min-width: 769px) {
+            #hamburger-menu-btn {
+                display: block !important;
+            }
+        }
+    
+
+/* ---- inline style="" から移した定義 ---- */
+#displayCountInput.u-1 {
+  width: 80px;
+  padding: 8px;
+}
+#pagination-container.u-2 {
+  text-align: center;
+  margin: 20px 0;
+}

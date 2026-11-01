@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラミングでGO！！</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <link rel="stylesheet" href="static/css/index2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- レスポンシブナビゲーション用CSS -->
+    
+</head>
+<body>
+    <button id="hamburger-menu-btn">
+        <span class="hamburger-line"></span>
+    </button>
+    
+    <!-- PC用トップナビゲーション -->
+    <nav class="responsive-nav">
+        <a href="home.html">ホーム</a>
+        <a href="index2.html">クイズ</a>
+        <a href="index5.html">マニュアル</a>
+        <a href="https://arechat.github.io/ARE">ARE チャットアプリ</a>
+        <a href="https://arechat.github.io/ARE/game5">ゲーム</a>
+        <a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+    </nav>
+
+    <!-- サイドメニュー（全リンク集） -->
+        <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://arechat.github.io/ARE" target="_blank">💬 ARE チャットアプリ</a></li>
+            <li><a href="https://arechat.github.io/ARE/game5" target="_blank">🎮 ゲーム</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+
+
+    <!-- 🌟 トップ画面（開始画面） -->
+    <section id="top-screen" class="screen active">
+        <div class="container">
+            <h1 class="main-title">
+                <span class="title-kanji">P</span>
+                <span class="title-kanji">C</span>
+                <span class="title-particle">で</span>
+                <span class="title-go">GO！！</span>
+            </h1>
+            <p class="subtitle">プログラミング総合クイズアプリ</p>
+            <div class="description">
+                <p>Python・SQL・HTML・CSS・JavaScript</p>
+                <p>全1500問からランダム出題！</p>
+            </div>
+            
+            <div class="name-input-section">
+                <label for="playerName">プレイヤー名</label>
+                <input type="text" id="playerName" placeholder="名前を入力してください" maxlength="20">
+            </div>
+            
+            <button id="startButton" class="btn btn-primary">
+                <span class="btn-text">スタート</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 🎯 モード選択画面 -->
+    <section id="mode-screen" class="screen">
+        <div class="container">
+            <h2 class="section-title">モード選択</h2>
+            
+            <div class="selection-section">
+                <h3>出題範囲を選択</h3>
+                <div class="selection-grid">
+                    <label class="selectable-option">
+                        <input type="radio" name="quizMode" value="all" checked>
+                        <span class="selectable-card type-all">
+                            <span class="title">全分野</span>
+                            <span class="desc">全1500問から40問出題<br>Python・SQL・HTML・CSS・JS</span>
+                        </span>
+                    </label>
+                    <label class="selectable-option">
+                        <input type="radio" name="quizMode" value="python">
+                        <span class="selectable-card type-python">
+                            <span class="title">Python基礎</span>
+                            <span class="desc">Python100問から40問出題<br>基本文法・メソッド・関数<br>すべて4択式</span>
+                        </span>
+                    </label>                    
+                    <label class="selectable-option">
+                        <input type="radio" name="quizMode" value="python">
+                        <span class="selectable-card type-python">
+                            <span class="title">Python特化</span>
+                            <span class="desc">Python500問から40問出題<br>応用文法・データ分析・DB連携</span>
+                        </span>
+                    </label>
+                    
+                    <label class="selectable-option">
+                        <input type="radio" name="quizMode" value="sql">
+                        <span class="selectable-card type-sql">
+                            <span class="title">SQL特化</span>
+                            <span class="desc">SQL500問から40問出題<br>SELECT・JOIN・関数</span>
+                        </span>
+                    </label>
+                    
+                    <label class="selectable-option">
+                        <input type="radio" name="quizMode" value="html_css">
+                        <span class="selectable-card type-html-css">
+                            <span class="title">Web技術特化</span>
+                            <span class="desc">HTML・CSS・JS 500問から40問出題<br>マークアップ・スタイル・DOM</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="selection-section">
+        <h3>難易度を選択</h3>
+        <div class="selection-grid">
+          <label class="selectable-option">
+            <input type="radio" name="difficulty" value="easy" checked>
+            <span class="selectable-card type-easy">
+              <span class="title">初級</span>
+              <span class="desc">YES/NOクイズ<br>基本的な概念や用語</span>
+            </span>
+          </label>
+                    
+          <label class="selectable-option">
+            <input type="radio" name="difficulty" value="basic">
+            <span class="selectable-card type-basic">
+              <span class="title">中級</span>
+              <span class="desc">選択式<br>実践的な知識や応用</span>
+            </span>
+          </label>
+                    
+          <label class="selectable-option">
+            <input type="radio" name="difficulty" value="hard">
+            <span class="selectable-card type-hard">
+              <span class="title">上級</span>
+              <span class="desc">記述式<br>コードの記述や詳細</span>
+            </span>
+          </label>
+
+          <label class="selectable-option">
+            <input type="radio" name="difficulty" value="random">
+            <span class="selectable-card type-random">
+              <span class="title">ランダム</span>
+              <span class="desc">全難易度<br>腕試しに挑戦！</span>
+            </span>
+          </label>
+        </div>
+            </div>
+
+            <div class="button-group">
+                <button id="backToTopButton" class="btn btn-secondary">戻る</button>
+                <button id="startQuizButton" class="btn btn-primary">クイズ開始</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📝 クイズ画面 -->
+    <section id="quiz-screen" class="screen">
+        <div class="container quiz-container">
+            <!-- ヘッダー情報 -->
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span id="quiz-mode-display">全分野モード</span>
+                    <span id="quiz-difficulty-display">初級</span>
+                </div>
+                <div class="progress-info">
+                    <span id="quiz-progress">1 / 40</span>
+                </div>
+            </div>
+            
+            <!-- 進捗バー -->
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            
+            <!-- 問題表示エリア -->
+            <div class="question-area">
+                <div class="question-number">第 <span id="current-question-num">1</span> 問</div>
+                <div class="question-text" id="question-text">
+                    ここに問題文が表示されます。
+                </div>
+            </div>
+            
+            <!-- 選択肢エリア（○×・多択用） -->
+            <div id="choices-area" class="choices-area">
+                <!-- JavaScriptによって動的に生成されます -->
+            </div>
+            
+            <!-- 記述入力エリア（記述式用） -->
+            <div id="input-area" class="input-area u-1">
+                <label for="answer-input">答えを入力してください</label>
+                <input type="text" id="answer-input" placeholder="ここに答えを入力..." maxlength="100" autocomplete="off">
+            </div>
+            
+            <!-- 解説エリア -->
+            <div id="explanation-area" class="explanation-area u-2">
+                <div id="explanation-text"></div>
+            </div>
+            
+            <!-- ボタンエリア -->
+            <div class="quiz-buttons">
+                <button id="retire-btn" class="btn btn-danger">リタイア</button>
+                <button id="submit-answer-btn" class="btn btn-success" disabled>回答する</button>
+                <button id="next-question-btn" class="btn btn-primary u-3">次の問題</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 結果画面 -->
+    <section id="result-screen" class="screen">
+        <div class="container result-container">
+            <h2 class="section-title">結果発表</h2>
+            
+            <div class="result-info">
+                <div class="player-name">
+                    <span id="result-player-name">プレイヤー</span>さん
+                </div>
+                
+                <div class="score-display">
+                    <div class="score-main">
+                        <span id="correct-count">0</span> / <span id="total-count">40</span>
+                    </div>
+                    <div class="score-percentage">
+                        正解率：<span id="accuracy-rate">0</span>%
+                    </div>
+                </div>
+                
+                <div class="result-message">
+                    <p id="result-comment">お疲れ様でした！</p>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-item">
+                        <span class="detail-label">出題範囲</span>
+                        <span id="result-mode" class="detail-value">全分野</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">難易度</span>
+                        <span id="result-difficulty" class="detail-value">初級</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">所要時間</span>
+                        <span id="result-time" class="detail-value">--:--</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="retry-button" class="btn btn-primary">もう一度挑戦</button>
+                <button id="change-mode-button" class="btn btn-secondary">モード変更</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading画面 -->
+    <div id="loading-screen" class="loading-screen u-4">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>問題を読み込み中...</p>
+        </div>
+    </div>
+
+<script src="static/js/index2.js"></script> 
+    <script src="static/security.js"></script>
+</body>
+</html>

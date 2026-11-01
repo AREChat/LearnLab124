@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>小説詳細ページ</title>
+	<link rel="stylesheet" href="static/responsive-header.css">
+	<script src="static/js/study-config.js"></script>
+	<script src="static/js/neon-client.js"></script>
+	<script src="static/js/study-api.js"></script>
+	<script src="static/points.js"></script>
+	<script src="static/points-header.js"></script>
+	<link rel="stylesheet" href="static/css/story.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	
+	<nav class="responsive-nav">
+		<a href="home.html">ホーム</a>
+		<a href="index2.html">クイズ</a>
+		<a href="index5.html">マニュアル</a>
+		<a href="https://www.rakuten.co.jp/kbsanhe/">楽天サイト</a>
+		<a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+	</nav>
+
+	    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://www.rakuten.co.jp/kbsanhe/" target="_blank">🛒 楽天サイト</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+	
+	<div class="container">
+		<h1 class="u-1">小説リンク集</h1>
+		<div class="desc u-2">
+			作品タイトル・説明・リンクをまとめています。<br>
+			下記の表から各作品やエピソードにアクセスできます。
+		</div>
+		<table class="u-3">
+			<thead>
+				<tr class="u-4">
+					<th class="u-5">タイトル名</th>
+					<th class="u-5">説明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/author/detail/31484585" target="_blank" class="u-6">自己紹介</a></td>
+					<td>作者プロフィール</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757" target="_blank" class="u-7">実はこれ実話なんですよ</a></td>
+					<td>実話を元にした物語</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/394882309" target="_blank" class="u-7">もしもこんなことが起きたらどうする？</a></td>
+					<td>もしもの世界を描く</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/52964906" target="_blank" class="u-7">AIが作成した物語</a></td>
+					<td>AIによる創作</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/573927442" target="_blank" class="u-7">不可思議物語</a></td>
+					<td>不思議な物語</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">＜伝説の話題＞</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10172624" target="_blank" class="u-7">ギネス世界記録？あだなの数</a></td>
+					<td>あだなの数がギネス級？</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10260832" target="_blank" class="u-7">伝説のチャットアプリ</a></td>
+					<td>伝説のチャット体験</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">伝説の物語50話</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/9662890" target="_blank" class="u-7">あらすじ</a></td>
+					<td>物語の概要</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">やりすぎヒーロー伝説＆ドリームストーリー</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/9774791" target="_blank" class="u-7">自己紹介</a></td>
+					<td>ヒーロー伝説の自己紹介</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">やりすぎヒーロー伝説＆ドリームストーリー「SP」</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/9955398" target="_blank" class="u-7">自己紹介</a></td>
+					<td>スペシャル版の自己紹介</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">寝不足の5日間</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10044324" target="_blank" class="u-7">真夏の夜の罰</a></td>
+					<td>寝不足のエピソード</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">コイヌネランド</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10208789" target="_blank" class="u-7">１話</a></td>
+					<td>コイヌネランドの物語</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">人生鬼ハードモード</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10228929" target="_blank" class="u-7">１話</a></td>
+					<td>鬼ハードな人生の物語</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="u-8">噓つきは嘘治の始まり</h2>
+		<table class="u-9">
+			<tbody>
+				<tr>
+					<td><a href="https://www.alphapolis.co.jp/novel/31484585/380882757/episode/10289104" target="_blank" class="u-7">１話</a></td>
+					<td>嘘治の始まりの物語</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="static/js/story.js"></script>
+	<script src="static/security.js"></script>
+</body>
+</html>

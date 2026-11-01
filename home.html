@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラミング用語集</title>
+    
+    <!-- メインコンテンツの装飾用CSS -->
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="stylesheet" href="static/responsive-header.css">
+    
+    <!-- ポイント管理システム -->
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    
+    <!-- Google FontsとFavicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzNGRUU5MSIgZD0iTTE2IDguNjZjLjI0LS4wNi41LS4xMS43Ni0uMTZjLjctLjEzIDEuMzQtLjIgMi4xLS4yQTQuMDQgNC4wNCAwIDAgMSA1LjUgMTkuNGMyLS4xNSA0LjItLjMgNi4zNi0uNWMuNDUtLjAzLjg4LS4xIDEuMzMtLjE5QTE1Ljg1IDE1Ljg1IDAgMCAwIDkuMiAxMi41MWMtLjI3LjI1LS41Mi40Ny0uNzMuNzgtLjA3LjEtLjE0LjI0LS4xNS4zN2ExLjYzIDEuNjMgMCAwIDAtLjUgMS4xODVjMS4wNy42IDIuMDggMS4xNyAzLjA2IDEuNzMuNS4yOC45LjQ5IDEuMzcuN2MtLjEuMDYtLjIuMTMtLjMuMTgtLjk0LjY0LTIuMSAxLjA2LTMuMzUgMS4yNC00LjQ1LjY2LTkuMDMtLjI2LTEzLjEtMS40MUEyNi41MyAyNi41MyAwIDAgMSA3LjcgNWMtLjg0LS4wMy0xLjYtLjE1LTIuMy0uMy0uNTctLjEzLTEuMTMtLjI4LTEuNy0uNDJhMS43MiAxLjcyIDAgMCAwLS42OC0uMjJjLS4zLjEtLjUuNC0uNS43Ni0uMTEuOTUtLjE2IDIuMDYtLjIgMy4xMS0uMDYuOTctLjExIDIuMDctLjExIDMuMTVzLjA0LjYuMiAxLjAyYy4wNS4xMy4xLjI0LjE4LjMyLjEuMS4yLjE4LjM3LjI1LS4zNi4zMi0uNzUuNjUtMS4xMy45NS0uNzEuNTQtMS40MiAxLjA1LTI4uMDggMS41NS0uMS4wNy0uMi4xMy0uMy4xOC0xLjExLjgtMS41OCAyLjEtMS41OCAzLjU3IDAgLjY4LjExIDEuMzQuMzMgMS44NmwuMDcuMTZhLjQ0LjQ0IDAgMCAwIC4zLjIuNjcuNjcgMCAwIDAgLjQ4LS4yYy40LSy4yLjgyLS40MiAxLjItLjY1LjE0LS4xLjI4LS4yLjQyLS4yOC44LS40OCAxLjY1LS45NyAyLjQ0LTEuNTEuMS0uMDYuMi4xMy4zLS4xNy42Ny0uMzggMS40MS0uNjUgMi4xMi0uODguNTItLjE3IDEuMDctLjM1IDEuNTktLjUyTDE2IDguNjZabS03LjUtNS43NmEuNDQuNDQgMCAwIDAtLjMtLjJjLS40LjAzLS43Ni4xMi0xLjEyLjItLjY3LjE4LTEuMzYuNC0yLjA1LjU0YTMuMiAzLjIgMCAwIDAtLjkuMzRjLS4zNy4xNC0uNy4zMi0xLjA2LjUyLjUzLS4zLjk5LS42IDEuNDEtLjk0LjQzLS4zNS44NC0uNyAxLjIzLTEuMDIuMS0uMDguMi0uMTUuMy0uMjNjLjE0LS4xMS4yOS0uMi40Ni0uMjZjLjEtLjA2LjItLjEyLjMtLjE4YS43My43MyAwIDAgMSAuNC0uMjMgMS4xNSAxLjE1IDAgMCAxLS4wMi0uNzFjLS4wMS0uNS0uMDMtLjkzLS4wNS0xLjMzLS4wNy0uMS0uMTUtLjItLjI0LS4zLjIuNDEuNDYuODUuNzIgMS4zLjEyLjIzLjI3LjQzLjQzLjY1LjM3LjUxLjc3IDEuMDIgMS4xMyAxLjUxLjYyLjgyIDEuMTcgMS42NiAxLjYzIDIuNDcuMjMuNC40LjgyLjUzIDEuMjZhLjc1LjczIDAgMCAxLS42OC44NyAxLjA3IDEuOTcgMCAwIDEtMS41Ni0uMTZ6bTUuNTcgMTQuNTNjLTIuMTItLjExLTMuNi0uMzYtNC43Mi0uNjdhMiAyIDAgMCAwLS45NS0uMTYgMS4zNiAxLjM2IDAgMCAwLS45My40MmMyLjEuOTQgNC4yMiAxLjUgNi4yNyAxLjQ3LjQuMi44NC4zIDEuMjguMzYtLjUxLS43LS45LTEuMzUtMS4xOS0xLjjk2em0zLjI5LTIuMzZjLS4zMS4yMy0uNzUuNDUtMS4yNC42NS0uNjEuMjUtMS4xOS41LTEuNzkuNzEtLjIuMDYtLjM4LjEyLS41NS4yLS4xNy4wNy0uMzUuMTQtLjUxLjIyYTMuMzcgMy4zNyAwIDAgMC0uODguNDdjLjguNDYgMS41NS43OCAyLjIzIDEuMDEuNzguMjYgMS41NC40NCAyLjI4LjUuNDMuMDMgLjc5LjA0IDEuMTQuMDZsLjA3LS41YTEuNDUgMS40NSAwIDAgMC0uMTktLjQ4Yy0uMTctLjIyLS4zNS0uNDItLjUzLS42YS41My41MyAwIDAgMC0uMTktLjI1bC0uMTgtLjEyek07LjMzIDQuMDZjLS40LjI1LS43OC40NS0xLjEzLjY4LS4yNi4xNy0uNS4zNS0uNzMuNTZhMy42IDMuNiAwIDAgMC0uODcuNThjLS40LjI1LS44LjUtMS4xOC43NGEuNjUuNjUgMCAwIDAtLjQ3LjMgMS4wMiAxLjAyIDAgMCAwLS41Mi43MyAyLjM2IDIuMzYgMCAwIDAgLjMyLjggMi43NyAyLjc3IDAgMCAwIC43Ny41MSAxLjMgMS4zIDAgMCAwIC43OC4wNyAyLjc1IDIuNzUgMCAwIDAgMS4xNi0uNjFjLjUtLjM0Ljk3LS43MiAxLjQ0LTEuMS4yLS4xNS40LS4zLjUtLjQ1LjI1LS4yLjUtLjQuNzItLjU3YTIuMTIgMi4xMiAwIDAgMCAuMy0uMzZjLjQtLjQ2Ljc5LS45MiAxLjE1LTEuNC4yNi0uMy41NC0uNi44Mi0uOTBhMi4yNyAyLjcgMCAwIDAgLjUtLjQxYy41LS40Ljk3LS43OSAxLjQzLTEuMTMuMTctLjEzLjM0LS4yNS41MS0uMzVjLjYtLjQ3IDEuMi0uOSAxLjc4LTEuMjcuNTgtLjM4IDEuMTUtLjc3IDEsLjY4LTEuMTFsLjA3LS4wOWEuNDYuNDYgMCAwIDAgLjMtLjIuNjcuNjcgMCAwIDAgLjQ1LS4yLjU4LjU4IDAgMCAwLS4xOC0uNDZjLS4yLS4yNS0uNDItLjQ3LS42NC0uNjctLjE0LS4xMy0uMjgtLjI2LS40Mi0uMzgtLjY0LS41My0xLjMyLTEuMDQtMS45Ny0xLjQ3LS42NS0uNDMtMS4zLS44My0xLjktLjk4LS4zLS4xNS0uNi0uMy0uOS0uNDRhLjQ0LjQ0IDAgMCAwLS4zLS4yYy0uNC4wMy0uOC4xMi0xLjE3LjJhMy4yNyAzLjI3IDAgMCAwLTEuNzQuNmMtLjQuMTQtLjc4LjMtMS4xLjQ1bC0uMTcuMDh6TTIxLjQ5IDEyLjg3Yy0uNDUtLjA3LS44Ni0uMTgtMS4yNC0uMjdhMi41MSAyLjUxIDAgMCAwLTIuMjMtLjUxYzEuMDYuNjEgMi4wNyAxLjE4IDMuMDcgMS43NC4xMy4wNy4yNi4xNC4zOC4yMS4xOC4xLjMxLjEuNDkuMS4wNS0uMTEuMDktLjI0LjExLS40MWExLjQ3IDEuNDcgMCAwIDAtLjQ4LTEuNDd6IiBwYXRoIGZpbGw9InVybCgjYmxlb24tZ3JhZGllbnQpIi8+PC9zdmc+">
+    
+    <!-- ナビゲーションとレイアウトの全CSSをHTMLに直接記述 -->
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/glossary.css">
+</head>
+<body>
+    
+    <!-- ハンバーガーボタンのスタイル -->
+    
+    <button id="hamburger-menu-btn">
+        <span class="hamburger-line"></span>
+    </button>
+
+    <!-- PC用トップナビゲーション -->
+    <nav class="responsive-nav">
+        <a href="index.html">ホーム</a>
+        <a href="index2.html">クイズ</a>
+        <a href="index5.html">マニュアル</a>
+        <a href="https://arechat.github.io/ARE">ARE チャットアプリ</a>
+        <a href="https://arechat.github.io/ARE/game5">ゲーム</a>
+        <a href="アンケート.html" class="highlight" target="_blank">アンケート画面へ</a>
+    </nav>
+
+    <!-- サイドメニュー（全リンク集） -->
+    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html"> マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html"> 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html"> プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank"> Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank"> SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://arechat.github.io/ARE" target="_blank">💬 ARE チャットアプリ</a></li>
+            <li><a href="https://arechat.github.io/ARE/game5" target="_blank">🎮 ゲーム</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html"> その他</a></li>
+            <li><a href="index3.html"> チャット</a></li>
+            <li><a href="index4.html"> 便利リンク</a></li>
+            <li><a href="story.html"> 物語</a></li>
+            <li><a href="list_mobile/index.html">📱 見るものリスト</a></li>
+        </ul>
+    </aside>
+    
+    <!-- メインコンテンツ -->
+    <div class="main-container">
+        <div class="background-effect"></div>
+        <header class="gl-header">
+            <h1><span class="neon-text">プログラミング用語集</span></h1>
+            <p class="tagline">Python・SQL・HTML/CSS・Excel VBA の用語を、キーワードで探せます</p>
+        </header>
+
+        <main class="gl-wrap">
+            <div id="gl-tabs" class="gl-tabs" role="tablist" aria-label="言語"></div>
+
+            <section class="gl-toolbar" aria-label="検索と並び替え">
+                <div class="gl-search">
+                    <input type="search" id="searchInput" class="futuristic-input" placeholder="キーワード（用語・説明・コード）" autocomplete="off">
+                    <button type="button" id="gl-clear" class="gl-clear" aria-label="検索をクリア" hidden>×</button>
+                </div>
+                <select id="sortOrder" class="futuristic-select" aria-label="並び替え">
+                    <option value="term-asc">用語 A→Z・あ→ん</option>
+                    <option value="term-desc">用語 Z→A</option>
+                    <option value="len-asc">説明が短い順</option>
+                    <option value="len-desc">説明が長い順</option>
+                </select>
+                <label class="gl-toggle"><input type="checkbox" id="onlyCode"> コード例あり</label>
+            </section>
+
+            <div class="gl-meta"><span id="gl-count" aria-live="polite"></span></div>
+            <div id="gl-cats" class="gl-cats" aria-label="カテゴリ"></div>
+
+            <section id="gl-list" class="gl-list"></section>
+            <div class="gl-more-wrap"><button type="button" id="gl-more" class="futuristic-button" hidden>さらに表示</button></div>
+        </main>
+
+        <footer class="futuristic-footer">
+            <p>&copy; プログラム言語集</p>
+            <p class="footer-note">初心者でもわかりやすく解説もあり！</p>
+        </footer>
+    </div>
+
+    <script src="static/js/glossary.js"></script>
+    <script src="static/js/home.js"></script>
+    <script src="static/security.js"></script>
+</body>
+</html>
