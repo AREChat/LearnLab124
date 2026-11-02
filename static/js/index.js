@@ -35,14 +35,14 @@
             document.getElementById('terms').style.display = 'block';
             document.getElementById('splash').style.display = 'none';
         } else {
-            window.location.href = 'login.html';
+            window.location.href = 'home.html';
         }
 
         // 同意するボタン
         document.getElementById('agree').onclick = function() {
             localStorage.setItem('agreed', 'true');
             localStorage.removeItem('disagreeCount'); // カウンターリセット
-            window.location.href = 'login.html';
+            window.location.href = 'home.html';
         };
 
         // 同意しないボタン（5回で強制終了）

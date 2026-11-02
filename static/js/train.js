@@ -1,4 +1,5 @@
-const UPDATE_INTERVAL_MS = 60 * 1000;
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+        const UPDATE_INTERVAL_MS = 60 * 1000;
         let countdownSeconds = UPDATE_INTERVAL_MS / 1000;
 
         const resultContainer = document.getElementById('result-container');
@@ -41,10 +42,10 @@ const UPDATE_INTERVAL_MS = 60 * 1000;
                             infoDiv.className = 'train-info';
                             
                             infoDiv.innerHTML = `
-                                <div class="line-name">${item.name || '情報なし'}</div>
-                                <div class="status">状況: ${item.status || '情報なし'}</div>
+                                <div class="line-name">${esc(item.name || '情報なし')}</div>
+                                <div class="status">状況: ${esc(item.status || '情報なし')}</div>
                                 <button class="toggle-details-btn">詳細表示</button>
-                                <div class="details" style="display: none;">${item.detail || '情報なし'}</div>
+                                <div class="details" style="display: none;">${esc(item.detail || '情報なし')}</div>
                             `;
 
                             resultContainer.appendChild(infoDiv);
@@ -61,7 +62,13 @@ const UPDATE_INTERVAL_MS = 60 * 1000;
                 }
 
             } catch (error) {
-                resultContainer.innerHTML = `<div class="message-box error"><p><strong>情報の取得に失敗しました。</strong></p><p>ネットワーク接続を確認するか、しばらくしてから再試行してください。</p><p><small>エラー: ${error.message}</small></p></div>`;
+                if (/ログインが必要/.test(error.message || '')) {
+                    // ログイン画面をなくしたため、ログインなしでは読めない（取得のしくみを作り直し中）
+                    resultContainer.innerHTML = `<div class="message-box"><p><strong>電車情報は、いま準備中です。</strong></p><p>しばらくしてからもう一度ひらいてください。</p></div>`;
+                    lastUpdatedElem.textContent = '準備中';
+                } else {
+                    resultContainer.innerHTML = `<div class="message-box error"><p><strong>情報の取得に失敗しました。</strong></p><p>ネットワーク接続を確認するか、しばらくしてから再試行してください。</p><p><small>エラー: ${esc(error.message)}</small></p></div>`;
+                }
             } finally {
                 countdownSeconds = UPDATE_INTERVAL_MS / 1000;
             }

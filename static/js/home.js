@@ -37,7 +37,7 @@
 
         // Service Worker登録
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('sw.js')
                 .then(reg => console.log('Service Worker: Registered'))
                 .catch(err => console.error('Service Worker: Registration Failed', err));
         }

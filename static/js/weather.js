@@ -1,4 +1,5 @@
-const UPDATE_INTERVAL_MS = 30 * 60 * 1000;
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+        const UPDATE_INTERVAL_MS = 30 * 60 * 1000;
         
         const forecastContainer = document.getElementById('forecast-container');
         const hourlyContainer = document.getElementById('hourly-forecast-container');
@@ -53,7 +54,7 @@ const UPDATE_INTERVAL_MS = 30 * 60 * 1000;
 
                 card.innerHTML = `
                     <h2>${dateLabel}</h2>
-                    <div class="weather">${forecast.weather}</div>
+                    <div class="weather">${esc(forecast.weather)}</div>
                     <div class="temps">
                         <span class="temp-max">${forecast.temp_max}°C</span> / <span class="temp-min">${forecast.temp_min}°C</span>
                     </div>
@@ -92,7 +93,7 @@ const UPDATE_INTERVAL_MS = 30 * 60 * 1000;
 
                 card.innerHTML = `
                     <div class="hourly-time">${hour.time}</div>
-                    <div class="hourly-weather">${hour.weather}</div>
+                    <div class="hourly-weather">${esc(hour.weather)}</div>
                     <div class="hourly-temp">${hour.temp}°C</div>
                     <div class="hourly-precip">${hour.precip}mm</div>
                 `;
@@ -116,7 +117,10 @@ const UPDATE_INTERVAL_MS = 30 * 60 * 1000;
                 renderHourlyForecast(data.hourly_forecast);
 
             } catch (error) {
-                const errorMessage = `<div class="message-box error" style="width: 100%;"><p><strong>天気情報の取得に失敗しました。</strong></p><p><small>${error.message}</small></p></div>`;
+                const needLogin = /ログインが必要/.test(error.message || '');   // ログイン画面をなくしたため、ログインなしでは読めない（取得のしくみを作り直し中）
+                const errorMessage = needLogin
+                    ? `<div class="message-box" style="width: 100%;"><p><strong>天気情報は、いま準備中です。</strong></p><p>しばらくしてからもう一度ひらいてください。</p></div>`
+                    : `<div class="message-box error" style="width: 100%;"><p><strong>天気情報の取得に失敗しました。</strong></p><p><small>${esc(error.message)}</small></p></div>`;
                 forecastContainer.innerHTML = errorMessage;
                 hourlyContainer.innerHTML = errorMessage;
             }

@@ -71,16 +71,18 @@
     console.log('%c違反者は法的措置の対象となります。', 'color: red; font-size: 16px;');
 
     // ========================================
-    // ログイン制御 (index.html, login.html, logout.html以外)
+    // 利用規約の同意確認 (index.html, logout.html, loading.html, thanks.html以外)
+    // ※ ログイン画面は無くなりました。最初の画面（index.html）で利用規約に同意した端末だけが、ほかのページを開けます。
     // ========================================
     const currentPath = window.location.pathname;
-    const publicPages = ['index.html', 'login.html', 'logout.html', 'loading.html', 'thanks.html'];
+    const publicPages = ['index.html', 'logout.html', 'loading.html', 'thanks.html'];
     const isPublicPage = publicPages.some(page => currentPath.includes(page));
-    
+
     if (!isPublicPage) {
-        const currentUser = localStorage.getItem('currentUser');
-        if (!currentUser) {
-            alert('⚠️ ログインが必要です。ログイン画面に移動します。');
+        let agreed = null;
+        try { agreed = localStorage.getItem('agreed'); } catch (e) { /* 読めないときは同意なしとみなす */ }
+        if (agreed !== 'true') {
+            alert('⚠️ 利用規約への同意が必要です。最初の画面に移動します。');
             window.location.href = new URL('index.html', siteRoot).href;
         }
     }
