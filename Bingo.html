@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビンゴゲーム - 主催者版</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <link rel="stylesheet" href="static/css/Bingo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 ビンゴゲーム 🎉</h1>
+        
+        <div class="mode-selector">
+            <button class="mode-btn host active" onclick="switchMode('host')">主催者版</button>
+            <button class="mode-btn player" onclick="switchMode('player')">参加者版</button>
+        </div>
+
+        <!-- 主催者版 -->
+        <div id="hostMode" style="display: block;">
+            <div style="margin-bottom: 1.5rem;">
+                <label for="maxNumber" style="font-size: 1.1rem; color: #667eea; font-weight: bold; margin-right: 0.5rem;">
+                    最大番号:
+                </label>
+                <input type="number" id="maxNumber" min="10" max="100" value="75" 
+                       style="padding: 0.5rem 1rem; font-size: 1.1rem; border: 2px solid #667eea; border-radius: 10px; width: 100px; text-align: center;"
+                       onchange="updateMaxNumber()">
+                <span style="color: #666; font-size: 0.9rem; margin-left: 0.5rem;">(10～100)</span>
+            </div>
+
+            <div class="main-layout">
+                <!-- 左側：まだ出てない数字 -->
+                <div class="side-panel">
+                    <h3>残り番号</h3>
+                    <div class="number-grid" id="remainingNumbers"></div>
+                </div>
+
+                <!-- 中央：メインコンテンツ -->
+                <div class="center-content">
+                    <div class="number-display" id="currentNumber">-</div>
+                    <button class="draw-btn" id="drawBtn" onclick="drawNumber()">🎲 回す</button>
+                    <div>
+                        <button class="reset-btn" onclick="resetGame()">🔄 リセット</button>
+                        <button class="replay-btn" id="replayBtn" onclick="replayDrawnNumbers()" disabled>🔊 出た数字読み上げ</button>
+                    </div>
+                    
+                    <div class="info" style="margin-top: 1rem;">
+                        出た番号: <span id="drawnCount">0</span>/<span id="maxCount">75</span>
+                    </div>
+                </div>
+
+                <!-- 右側：出た数字 -->
+                <div class="side-panel">
+                    <h3>出た番号</h3>
+                    <div class="number-grid" id="drawnNumbersGrid"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 参加者版 -->
+        <div id="playerMode">
+            <div style="margin-bottom: 1.5rem;">
+                <label for="maxNumberPlayer" style="font-size: 1.1rem; color: #667eea; font-weight: bold; margin-right: 0.5rem;">
+                    最大番号:
+                </label>
+                <input type="number" id="maxNumberPlayer" min="10" max="100" value="75" 
+                       style="padding: 0.5rem 1rem; font-size: 1.1rem; border: 2px solid #667eea; border-radius: 10px; width: 100px; text-align: center;"
+                       onchange="updateMaxNumberPlayer()">
+                <span style="color: #666; font-size: 0.9rem; margin-left: 0.5rem;">(10～100)</span>
+            </div>
+            
+            <div class="bingo-card" id="bingoCard"></div>
+            <button class="draw-btn" onclick="drawNumberPlayer()">🎲 回す</button>
+            <button class="reset-btn" onclick="generateNewCard()">🔄 新しいカード</button>
+            <div class="number-display" id="currentNumberPlayer" style="font-size: 4rem; min-height: 80px;">-</div>
+            
+            <div class="info">
+                ビンゴカードの番号をクリックしてマークできます
+            </div>
+        </div>
+    </div>
+    <script src="static/js/Bingo.js"></script>
+    <script src="static/js/Bingo.events.js"></script>
+</body>
+</html>

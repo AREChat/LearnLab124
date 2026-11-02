@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python試験 受験レポート</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/feedback.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	<nav class="responsive-nav">
+		<a href="home.html">ホーム</a>
+		<a href="index2.html">クイズ</a>
+		<a href="index5.html">マニュアル</a>
+		<a href="アンケート.html" style="font-weight: bold;" target="_blank">アンケート画面へ</a>
+	</nav>
+	    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://www.rakuten.co.jp/kbsanhe/" target="_blank">🛒 楽天サイト</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+    <div class="background-effect"></div>
+
+    <header class="futuristic-header">
+        <div class="header-content">
+            <h1>Python 試験 受験レポート</h1>
+            <p class="tagline">2025年8月23日(土) 船橋</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+
+            <section class="content-section">
+                <h2>はじめに</h2>
+                <p>勉強のやる気を起こすために、無理やり試験日程を近日にし、ハードルを上げていました。みなさんからの応援がプレッシャーとなるか、やる気になるかは別として、本番は緊張しながら試験に挑んでいました。</p>
+                <p class="note">以下の問題はうろ覚えなので、許してください！参考程度によろしくお願いいたします。</p>
+            </section>
+
+            <section class="content-section">
+                <h2>試験概要と準備</h2>
+                <ul>
+                    <li><strong>試験日時:</strong> 2025年8月23日(土) 18時30分 (試験時間50分)</li>
+                    <li><strong>所感:</strong> 見直しが怖かったので、開始20分で試験終了・印刷しました。</li>
+                    <li><strong>事前準備:</strong> 身分証明書の確認、前日の朝9時までに振込 <br><span class="note">振込先の名義を間違えないようにしましょう！！</span></li>
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h2>勉強方法</h2>
+                <ol>
+                    <li>自作のメソッド一覧表を一通り眺める。</li>
+                    <li>YouTubeで2時間26分くらいの「完全入門永久保存版」で、自分の苦手なところを復習。(サイトはJupiterlabに似ていました)</li>
+                    <li>緑色の「Python完全入門」の本のPythonの概要(p16～p34)を読む。</li>
+                </ol>
+            </section>
+            
+            <section class="content-section">
+                <h2>出題内容の記憶（参考）</h2>
+                <ul>
+                    <li><strong>無名関数とは何か:</strong> → <code>ラムダ式</code></li>
+                    <li><strong>クラスの基本構文:</strong> (P286の<code>init3.py</code>に似てる) 「Suzuki,Taro」が答えになる問題。</li>
+                    <li><strong>内包表記:</strong> <code>for</code>文を内包表記する問題。</li>
+                    <li><strong>defの意味:</strong> → 関数を定義する。</li>
+                    <li><strong>print関数の結果:</strong> 実行結果が選択肢と同じになるものを選ぶ。</li>
+                    <li><strong>import文:</strong> <code>from 【urllib】 import request</code> のような【】を答える問題。</li>
+                    <li><strong>if文:</strong> <code>if-elif</code>に続く【<code>else</code>】が答えになる問題。</li>
+                    <li><strong>printのend引数:</strong> <code>end=','</code>の役割を問うチェックボックス問題（2つ選択）。答えは「改行せずに実行」と「区切り文字を指定」。<br>
+                        <pre><code># 通常のprint
+for i in range(3):
+    print(i)
+# 実行結果:
+# 0
+# 1
+# 2
+
+# endを使用
+for i in range(3):
+    print(i, end=',')
+# 実行結果: 0,1,2,</code></pre>
+                    </li>
+                    <li><strong>in演算子:</strong> 「A < B > C」のような条件式で、どちらも満たさない場合にどうなるか → 【何も表示されなかった】</li>
+                    <li><strong>pass文の意味:</strong> → 【何もしない】</li>
+                    <li><strong>forの基本構文:</strong> <code>for A in range(): print(len(A), A)</code> のような基本を問う問題。</li>
+                    <li><strong>.python_historyの意味:</strong> → 今までの実行履歴のこと。</li>
+                    <li><strong>キーワード引数:</strong> 関数の<code>**keyword</code>引数について。辞書になっているものを答える。</li>
+                    <li><strong>タプルになるもの:</strong> 実行結果がタプルになるものを選ぶ。</li>
+                    <li><strong>集合の役割:</strong> 集合の役割として誤っているものを答える。</li>
+                    <li><strong>入出力:</strong> （ご本人コメント：０％だったので、ノーコメントです）</li>
+                    <li><strong>例外処理:</strong> <code>try, except, else, finally</code>の意味をしっかり理解していればOK。<code>Exception as e</code>のエラー表示もポイント。</li>
+                    <li><strong>globモジュール:</strong> <code>glob.glob("*.txt")</code> のように、拡張子が.txtのファイル名リストを取得する問題。</li>
+                    <li><strong>書式指定子:</strong> 円周率piの<code>.8f</code>での実行結果。<code>0.0000000314</code>か<code>0.000000314</code>かで悩んだとのこと。</li>
+                    <li><strong>random.randint:</strong> 非常に桁数の多い数字が表示され、その中から結果を選ぶ問題。冷静に考えれば解ける。</li>
+                    <li><strong>zip関数:</strong> <code>zip</code>関数に関するチャンス問題が出た。</li>
+                    <li><strong>エスケープ文字:</strong> <code>"It's"</code> の中の <code>'</code> の役割 → 【クウォート文字扱い】</li>
+                    <li><strong>リストのスライス:</strong> 簡単なスライスの問題。</li>
+                    <li><strong>スタック:</strong> 後入れ先出し（LIFO）の概念を問う問題。</li>
+                    <li><strong>break文:</strong> ループを途中で停止させるための【<code>break</code>】を答える問題。
+                        <pre><code>for A in range(1, 6):
+    if A == 3:
+        【break】
+print(A)</code></pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>参考リンク</h2>
+                <ul>
+                    <li><a href="https://qiita.com/SollaUmiyama/items/e57c2cc044b266ee2b8d" target="_blank">Qiita記事</a></li>
+                    <li><a href="https://codic.jp/engine" target="_blank">Codic</a></li>
+                    <li><a href="https://tonokokko.com/tkinter-messagebox/" target="_blank">Tkinter MessageBox</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="futuristic-footer">
+        <p>&copy; 2025 Python Exam Report</p>
+    </footer>
+    <script src="static/js/feedback.js"></script>
+    <script src="static/security.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラミング言語検索ツール</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <link rel="stylesheet" href="static/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+    <div class="background-effect"></div>
+    <div id="terms" style="display:none;">
+        <div class="terms-content">
+            <h1>⚠️ 利用規約・重要事項 ⚠️</h1>
+            <div style="text-align: left; max-height: 400px; overflow-y: auto; padding: 1em; background: rgba(0,0,0,0.3); border-radius: 8px; margin-bottom: 1.5em;">
+                <h3 style="color: #00f2fe;">【必ずお読みください】</h3>
+                <ul style="line-height: 1.8;">
+                    <li>本サイトは学習目的専用です。</li>
+                    <li><strong>誹謗中傷、クレーム、不適切な発言は禁止です。</strong>健全な利用をお願いします。</li>
+                    <li><strong>サイトコンテンツは参考情報であり、正確性を100%保証しません。</strong></li>
+                    <li><strong>アカウント情報は適切に管理してください。</strong>このサイトを色々な方へ共有すること</li>
+                    <li><strong>不正アクセス、攻撃行為は即座に通報されます。</strong></li>
+                    <li><strong>利用規約に違反した場合、アクセス禁止措置を取ります。</strong></li>
+                </ul>
+            </div>
+            <p style="font-size: 1.3em; font-weight: bold; color: #00f2fe;">上記すべての規約に同意いただけますか？</p>
+            <div style="margin: 1.5em 0;">
+                <button id="agree" style="background: linear-gradient(90deg, #00f2fe 0%, #00c851 100%);">✓ すべて同意する</button>
+                <button id="disagree" style="background: linear-gradient(90deg, #ff4444 0%, #cc0000 100%);">✗ 同意しない</button>
+            </div>
+            <div id="message" style="display:none; font-size: 1.1em;">⚠️ すべての規約に同意してください</div>
+            <div id="disagree-counter" style="margin-top: 1em; color: #ffaa00; font-weight: bold;"></div>
+        </div>
+    </div>
+    <div id="splash" class="splash-content">
+        <div class="splash-title">プログラミング検索&クイズツール起動</div>
+    </div>
+    <script src="static/js/index.js"></script>
+</body>
+</html>

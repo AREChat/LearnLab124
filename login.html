@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <script src="static/js/study-config.js"></script>
+    <script src="static/js/neon-client.js"></script>
+    <script src="static/js/study-api.js"></script>
+    <script src="static/points.js"></script>
+    <script src="static/points-header.js"></script>
+    <link rel="stylesheet" href="static/responsive-header.css">
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	<nav class="responsive-nav">
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLScIxMze7zXyO4OfyMyBTXrIbZP7Ak1Jm_FT3rvvmw01jYgOtA/viewform?usp=header" style="font-weight: bold;" target="_blank">アンケート画面へ</a>
+	</nav>
+	    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="home.html">🏠 ホーム</a></li>
+            <li><a href="index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="index5.html">📖 マニュアル</a></li>
+            <li><a href="アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="logout.html">🔒 ログアウト</a></li>
+            <li><a href="link.html">📑 全リンク集</a></li>
+            <li><a href="hate.html">🎯 苦手克服</a></li>
+            <li><a href="hate/base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://nazohiko.booth.pm/" target="_blank">🛒 なぞひこショップ</a></li>
+            <li><a href="weather.html">🌤️ 天気情報</a></li>
+            <li><a href="train.html">🚃 電車情報</a></li>
+            <li><a href="other.html">🔗 その他</a></li>
+            <li><a href="index3.html">💬 チャット</a></li>
+            <li><a href="index4.html">🔗 便利リンク</a></li>
+            <li><a href="story.html">📖 物語</a></li>
+        </ul>
+    </aside>
+    <div class="background-effect"></div>
+
+    <header class="futuristic-header">
+        <div class="header-content">
+            <h1><span class="neon-text">ログイン</span></h1>
+            <p class="tagline">アカウントでログインまたは新規登録してください</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="control-panel glass-effect">
+            <div id="login-form">
+                <h2 style="color: var(--neon-blue); text-align: center;">ログイン</h2>
+                <div class="control-group">
+                    <label for="login-username" class="control-label">ユーザ名</label>
+                    <input type="text" id="login-username" class="futuristic-input" placeholder="ユーザ名を入力" onkeydown="if(event.key==='Enter') login()">
+                </div>
+                <div class="control-group">
+                    <label for="login-password" class="control-label">パスワード</label>
+                    <div style="position: relative;">
+                        <input type="password" id="login-password" class="futuristic-input" placeholder="パスワードを入力" onkeydown="if(event.key==='Enter') login()">
+                        <span class="eye-icon" onclick="togglePw('login-password')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--neon-blue);">👁️</span>
+                    </div>
+                </div>
+                <button onclick="login()" style="width: 100%; padding: 1em; background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%); color: #fff; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer;">ログイン</button>
+                <p style="text-align: center; margin-top: 1em;"><a href="#" onclick="showRegister()" style="color: var(--neon-blue);">新規登録はこちら</a></p>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <h2 style="color: var(--neon-blue); text-align: center;">新規登録</h2>
+                <div class="control-group">
+                    <label for="reg-username" class="control-label">ユーザ名</label>
+                    <input type="text" id="reg-username" class="futuristic-input" placeholder="ユーザ名（3〜20文字、英数字・ひらがな・カタカナ・漢字・_）" onkeydown="if(event.key==='Enter') register()">
+                </div>
+                <div class="control-group">
+                    <label for="reg-password" class="control-label">パスワード</label>
+                    <div style="position: relative;">
+                        <input type="password" id="reg-password" class="futuristic-input" placeholder="パスワード（8文字以上）" onkeydown="if(event.key==='Enter') register()">
+                        <span class="eye-icon" onclick="togglePw('reg-password')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--neon-blue);">👁️</span>
+                    </div>
+                </div>
+                <button onclick="register()" style="width: 100%; padding: 1em; background: linear-gradient(90deg, #00f2fe 0%, #ae00ff 100%); color: #fff; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer;">登録</button>
+                <p style="text-align: center; margin-top: 1em;"><a href="#" onclick="showLogin()" style="color: var(--neon-blue);">ログインはこちら</a></p>
+            </div>
+
+            <div id="message" style="text-align: center; margin-top: 1em; color: #ff4d4d;"></div>
+        </section>
+    </main>
+
+    <footer class="futuristic-footer">
+        <p>&copy; プログラム言語集</p>
+        <p class="footer-note">ログインして機能を活用してください</p>
+    </footer>
+    <script src="static/js/login.js"></script>
+</body>
+</html>
+

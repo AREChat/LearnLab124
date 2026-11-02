@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高機能 プログラミング言語用語集</title>
+    <script src="../static/js/study-config.js"></script>
+    <script src="../static/js/neon-client.js"></script>
+    <script src="../static/js/study-api.js"></script>
+    <script src="../static/points.js"></script>
+    <script src="../static/points-header.js"></script>
+    <link rel="stylesheet" href="../static/responsive-header.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+    <link rel="stylesheet" href="../static/css/hate-base.css">
+</head>
+<body>
+	<button id="hamburger-menu-btn">
+		<span class="hamburger-line"></span>
+	</button>
+	<nav class="responsive-nav">
+		<a href="../home.html">ホーム</a>
+		<a href="../index2.html">クイズ</a>
+		<a href="../index5.html">マニュアル</a>
+		<a href="../アンケート.html" style="font-weight: bold;" target="_blank">アンケート画面へ</a>
+	</nav>
+	    <aside id="table-of-contents">
+        <h2>全リンク集</h2>
+        <ul>
+            <li><a href="../home.html">🏠 ホーム</a></li>
+            <li><a href="../index2.html">🧠 プログラミングクイズ</a></li>
+            <li><a href="../index5.html">📖 マニュアル</a></li>
+            <li><a href="../アンケート.html">📊 アンケート画面へ</a></li>
+            <li><a href="../logout.html">🔒 ログアウト</a></li>
+            <li><a href="../link.html">📑 全リンク集</a></li>
+            <li><a href="../hate.html">🎯 苦手克服</a></li>
+            <li><a href="base.html">📚 プログラミング言語用語集</a></li>
+            <li><a href="https://docs.python.org/ja/3/" target="_blank">🐍 Python公式ドキュメント</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">🗄️ SQLチュートリアル</a></li>
+            <li><a href="../pythonexam.html">📝 Python試験情報</a></li>
+            <li><a href="../感想.html">✍️ Python認定基礎試験の感想</a></li>
+            <li><a href="https://www.rakuten.co.jp/kbsanhe/" target="_blank">🛒 楽天サイト</a></li>
+            <li><a href="../weather.html">🌤️ 天気情報</a></li>
+            <li><a href="../train.html">🚃 電車情報</a></li>
+            <li><a href="../other.html">🔗 その他</a></li>
+            <li><a href="../index3.html">💬 チャット</a></li>
+            <li><a href="../index4.html">🔗 便利リンク</a></li>
+            <li><a href="../story.html">📖 物語</a></li>
+            <li><a href="../list_mobile/index.html">📱 見るものリスト</a></li>
+        </ul>
+    </aside>
+    <main>
+        <header>
+            <h1>高機能 プログラミング言語用語集</h1>
+            <div class="header-controls">
+                <div class="progress-container">
+                    <label for="progress-bar">学習進捗:</label>
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div>所持金: <span id="points-display">0円</span></div>
+                <div class="theme-selector">
+                    <label for="theme-select">テーマ:</label>
+                    <select id="theme-select">
+                        <option value="light">ライト</option>
+                        <option value="dark">ダーク</option>
+                        <option value="synthwave">シンセウェーブ</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div id="search-wrapper">
+            <div id="search-container">
+                <select id="categorySelect">
+                    <option value="all">全てのカテゴリ</option>
+                    <option value="favorites">お気に入りのみ</option>
+                    <option value="python">Python</option>
+                    <option value="sql">SQL</option>
+                    <option value="web">Web</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="[/]を押して検索..." list="searchSuggestions">
+                <button id="searchButton" class="search-button">検索</button>
+            </div>
+            <div id="controls-container" style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+                 <button id="sort-az" class="control-button">A-Z順</button>
+                 <button id="sort-za" class="control-button">Z-A順</button>
+                 <button id="random-term-button" class="control-button">ランダム表示</button>
+                 <button id="export-favorites-button" class="control-button">お気に入りエクスポート</button>
+                 <button id="clear-history-button" class="control-button secondary-button">履歴削除</button>
+            </div>
+             <datalist id="searchSuggestions"></datalist>
+        </div>
+
+        <div id="container"></div>
+        <div id="favorites-section"><h2>お気に入り</h2><div id="favorites-container"></div></div>
+        <div id="popular-searches"><h2>よく検索される用語</h2><div id="popular-container" class="popular-list"></div></div>
+        
+        <div id="admin-section">
+            <h2>管理者モード</h2>
+            <form id="add-term-form">
+                <input type="text" id="term-name-input" placeholder="用語名" required>
+                <textarea id="term-meaning-input" placeholder="意味" required rows="3"></textarea>
+                <textarea id="term-code-input" placeholder="サンプルコード（任意）" rows="4"></textarea>
+                <button type="submit" class="search-button">新しい用語を追加</button>
+            </form>
+            <h3>カスタム用語一覧</h3>
+            <div id="custom-terms-list"></div>
+        </div>
+    </main>
+
+    <div id="toast"></div>
+
+    <div id="random-term-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>今日のランダム用語</h2>
+        <div id="random-term-content"></div>
+      </div>
+    </div>
+    <script src="js/base.js"></script>
+    <script src="../static/security.js"></script>
+
+</body>
+</html>
