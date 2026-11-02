@@ -16,7 +16,9 @@
             (e.metaKey && e.altKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
             // Ctrl+U, Cmd+U (ソース表示)
             (e.ctrlKey && e.key.toLowerCase() === 'u') ||
-            (e.metaKey && e.key.toLowerCase() === 'u')) {
+            (e.metaKey && e.key.toLowerCase() === 'u') ||
+            // Ctrl+S, Cmd+S (ページ保存)
+            ((e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === 's')) {
             e.preventDefault();
             alert('⚠️ 開発者ツールの使用は禁止されています。利用規約違反です。');
             return false;
@@ -40,6 +42,12 @@
         e.preventDefault();
         return false;
     });
+
+    // 画像・動画のドラッグ保存を止める
+    document.addEventListener('dragstart', function(e) {
+        const t = e.target;
+        if (t && (t.tagName === 'IMG' || t.tagName === 'VIDEO' || t.tagName === 'CANVAS')) e.preventDefault();
+    }, true);
 
     // 選択防止（オプション：必要に応じてコメント解除）
     /*
@@ -71,11 +79,11 @@
     console.log('%c違反者は法的措置の対象となります。', 'color: red; font-size: 16px;');
 
     // ========================================
-    // 利用規約の同意確認 (index.html, logout.html, loading.html, thanks.html以外)
+    // 利用規約の同意確認 (index.html, loading.html, thanks.html以外)
     // ※ ログイン画面は無くなりました。最初の画面（index.html）で利用規約に同意した端末だけが、ほかのページを開けます。
     // ========================================
     const currentPath = window.location.pathname;
-    const publicPages = ['index.html', 'logout.html', 'loading.html', 'thanks.html'];
+    const publicPages = ['index.html', 'loading.html', 'thanks.html'];
     const isPublicPage = publicPages.some(page => currentPath.includes(page));
 
     if (!isPublicPage) {
