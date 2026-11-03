@@ -4,12 +4,12 @@
 const CACHE_NAME = 'study-cache-v8';
 const PRECACHE = [
   './',
-  'about.html', 'home.html', 'index.html', 'index3.html', 'index4.html', 'index5.html',
+  'about.html', 'home.html', 'index.html', 'index4.html', 'index5.html',
   'loading.html', 'thanks.html',
   'static/css/home.css', 'static/css/glossary.css', 'static/style2.css', 'static/responsive-header.css',
   'static/js/glossary.js', 'static/js/home.js', 'static/js/study-api.js', 'static/js/study-config.js',
   'static/security.js', 'static/points.js', 'static/points-header.js',
-  'static/QA.json', 'static/data/glossary.json',
+  'static/data/glossary.json',
   'hate/base.html',
 ];
 
