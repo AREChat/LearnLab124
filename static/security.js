@@ -20,7 +20,7 @@
             // Ctrl+S, Cmd+S (ページ保存)
             ((e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === 's')) {
             e.preventDefault();
-            alert('⚠️ 開発者ツールの使用は禁止されています。利用規約違反です。');
+            (window.__secAlert=window.__secAlert||function(m){var n=Date.now();if(n-(window.__secAlertAt||0)<1500)return;window.__secAlertAt=n;alert(m);})('⚠️ 開発者ツールの使用は禁止されています。利用規約違反です。');
             return false;
         }
     });
@@ -28,7 +28,7 @@
     // 右クリック無効化
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
-        alert('⚠️ 右クリックは無効化されています。');
+        (window.__secAlert=window.__secAlert||function(m){var n=Date.now();if(n-(window.__secAlertAt||0)<1500)return;window.__secAlertAt=n;alert(m);})('⚠️ 右クリックは無効化されています。');
         return false;
     });
 
