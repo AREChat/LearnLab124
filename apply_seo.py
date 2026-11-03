@@ -3,7 +3,7 @@
 import os,re,json,urllib.parse
 import sys
 R=sys.argv[1] if len(sys.argv)>1 else '.'; os.chdir(R)
-BASE='https://arechat.github.io/study124/'
+BASE='https://arechat.github.io/LearnLab124/'
 M={ # file:(title,desc,noindex)
 'index.html':('study124｜登録なしで遊べる無料ブラウザアプリ・プログラミング学習','登録なしで使える無料のブラウザアプリ。プログラミング用語の検索やクイズで学べて、暇つぶしにもなります。はじめての方は紹介ページからどうぞ。',0),
 'home.html':('プログラミング用語集｜無料で調べられる用語辞典 - study124','プログラミングの言葉を無料で検索できる用語集。ブラウザだけで使えて、初心者の調べものや復習に役立ちます。',0),
