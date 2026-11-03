@@ -1,10 +1,10 @@
 // Service Worker（オフライン対応）
 // GitHub Pages のプロジェクトサイト（https://ユーザー名.github.io/リポジトリ名/）でも動くよう、
 // すべて相対パスで書いています。
-const CACHE_NAME = 'study-cache-v7';
+const CACHE_NAME = 'study-cache-v8';
 const PRECACHE = [
   './',
-  'home.html', 'index.html', 'index3.html', 'index4.html', 'index5.html',
+  'about.html', 'home.html', 'index.html', 'index3.html', 'index4.html', 'index5.html',
   'loading.html', 'thanks.html',
   'static/css/home.css', 'static/css/glossary.css', 'static/style2.css', 'static/responsive-header.css',
   'static/js/glossary.js', 'static/js/home.js', 'static/js/study-api.js', 'static/js/study-config.js',
