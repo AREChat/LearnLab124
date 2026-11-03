@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arechat.github.io/study124/sitemap.xml
+Sitemap: https://arechat.github.io/LearnLab124/sitemap.xml
