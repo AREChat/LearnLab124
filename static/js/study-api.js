@@ -243,10 +243,10 @@
       return next;
     },
 
-    /** 管理者の表記名（初期値「ともひこ」。管理者本人だけが変更できる） */
+    /** 管理者の表記名（初期値「主人公」。管理者本人だけが変更できる） */
     async adminName() {
       const { data, error } = await call(() => client.rpc('admin_display_name'));
-      if (error || !data) return 'ともひこ';
+      if (error || !data) return '主人公';
       return data;
     },
     async setAdminName(name) {

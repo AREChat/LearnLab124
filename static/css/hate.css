@@ -174,10 +174,7 @@ body{font-family:'Noto Sans JP',sans-serif;line-height:1.8;margin:0;padding:0;ba
 	.responsive-nav {
 		display: block;
 	}
-	#table-of-contents {
-		display: none;
 	}
-}
     
 
 /* ---- inline style="" から移した定義 ---- */

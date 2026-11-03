@@ -232,10 +232,7 @@
 			.responsive-nav {
 				display: block;
 			}
-			#table-of-contents {
-				display: none;
 			}
-		}
     
 
 /* ---- inline style="" から移した定義 ---- */

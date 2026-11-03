@@ -64,9 +64,9 @@ function adminDeleteUser() {
 	setTimeout(()=>{msg.textContent='';},3000);
 }
 // ユーザー情報・チャット履歴・メモは Neon のデータベースに保存（画面表示用に localStorage へキャッシュ）
-// 管理者の発言は sender = ADMIN_SENDER で保存し、表示名は管理者の「表記名」(初期値: ともひこ)を使う
+// 管理者の発言は sender = ADMIN_SENDER で保存し、表示名は管理者の「表記名」(初期値: 主人公)を使う
 const ADMIN_SENDER = '__admin__';
-let adminLabel = 'ともひこ';
+let adminLabel = '主人公';
 
 async function loadAdminLabel() {
 	try { adminLabel = await Study.adminName(); } catch (e) { /* 既定値のまま */ }
