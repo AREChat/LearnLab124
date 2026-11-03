@@ -134,3 +134,12 @@
             box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 0.7);
             transform: scaleX(1.1);
         }
+
+/* 講座ページ：文字の間隔など */
+.price-info p.u-1 { font-size: 1.15em; margin: 0.4em 0; }
+.price-info p.u-2 { margin: 0.4em 0; }
+.price-info p.u-3 { margin: 0.4em 0; opacity: 0.85; }
+p.course-info.u-4 { margin-bottom: 0.8em; }
+ul.course-info.u-5 { list-style: none; padding-left: 0; line-height: 2; }
+div.u-6 { text-align: center; margin-top: 1.2em; }
+button.u-7 { padding: 0.8em 2em; font-size: 1.05em; cursor: pointer; }

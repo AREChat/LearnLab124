@@ -100,3 +100,6 @@ body.u-1.u-1 {
   color: var(--neon-blue) !important;
   text-decoration: underline !important;
 }
+
+/* 全リンク集：スマホで最後の項目までスクロールできるようにする */
+#table-of-contents { height: 100vh; height: 100dvh; max-height: 100dvh; box-sizing: border-box; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: 90px; }

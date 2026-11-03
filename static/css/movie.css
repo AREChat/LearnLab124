@@ -118,3 +118,5 @@ body{font-family:'Noto Sans JP',sans-serif;line-height:1.8;margin:0;padding:0;ba
     #hamburger-menu-btn { display: block; }
     .responsive-nav { display: none; }
 }
+
+h2.u-1 { margin: 1em 0 0.6em; }

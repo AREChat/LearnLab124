@@ -299,3 +299,18 @@
 .points-loss {
     color: #ff4444;
 }
+
+/* 全リンク集（ハンバーガーのメニュー）：スマホで下の項目まで必ずスクロールして見えるようにする */
+#table-of-contents {
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding-bottom: 90px;
+}
+#table-of-contents h2 {
+    padding-top: 40px; /* 左上のハンバーガーボタンと重ならないようにする */
+}

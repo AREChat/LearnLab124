@@ -1009,3 +1009,11 @@ body::before {
             #hamburger-menu-btn { display: block; } /* タブレット・スマホでハンバーガー表示 */
             .responsive-nav { display: none; } /* タブレット・スマホではトップナビ非表示 */
         }
+
+/* 初期表示で隠すもの（JSが display を切り替える）。これが無いと「読み込み中」の画面が消えない */
+.input-area.u-1,
+.explanation-area.u-2,
+.btn.u-3,
+.loading-screen.u-4 {
+  display: none;
+}

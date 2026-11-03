@@ -78,22 +78,6 @@
     console.log('%cこのサイトのソースコードの閲覧・改変・複製は利用規約違反です。', 'color: red; font-size: 16px;');
     console.log('%c違反者は法的措置の対象となります。', 'color: red; font-size: 16px;');
 
-    // ========================================
-    // 利用規約の同意確認 (index.html, loading.html, thanks.html, about.html, guide-○○.html以外)
-    // ※ サイト紹介（about.html）と解説ページ（guide-で始まるページ）は、初めて来た人にも読めるように、同意の確認をしません。
-    // ※ ログイン画面は無くなりました。最初の画面（index.html）で利用規約に同意した端末だけが、ほかのページを開けます。
-    // ========================================
-    const currentPath = window.location.pathname;
-    const publicPages = ['index.html', 'loading.html', 'thanks.html', 'about.html'];
-    const isPublicPage = publicPages.some(page => currentPath.includes(page)) || /\/guide-[^\/]+\.html$/.test(currentPath);
-
-    if (!isPublicPage) {
-        let agreed = null;
-        try { agreed = localStorage.getItem('agreed'); } catch (e) { /* 読めないときは同意なしとみなす */ }
-        if (agreed !== 'true') {
-            alert('⚠️ 利用規約への同意が必要です。最初の画面に移動します。');
-            window.location.href = new URL('index.html', siteRoot).href;
-        }
-    }
+    // 利用規約の同意ゲートは廃止しました（最初の画面は home.html に統一）。
 
 })();

@@ -144,3 +144,8 @@ html, body {
                 #hamburger-menu-btn { display: block; }
                 .responsive-nav { display: none; }
             }
+
+/* 便利リンク：見出しとアイコンの並び */
+h2.u-1 { display: flex; align-items: center; gap: 0.5rem; }
+svg.u-2 { flex-shrink: 0; vertical-align: middle; }
+.btns a.u-3 { display: inline-flex; align-items: center; gap: 0.5rem; }
