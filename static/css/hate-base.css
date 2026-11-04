@@ -254,3 +254,7 @@
 				display: block;
 			}
 			}
+
+/* スマホで長いcode行が横にはみ出さないようにする */
+code, pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+html, body { overflow-x: hidden; }
