@@ -9,7 +9,9 @@
     // F12キー、開発者ツール、ソース表示無効化
     document.addEventListener('keydown', function(e) {
         // F12キー
-        if (e.key === 'F12' || 
+        if (e.key === 'F12' || e.key === 'F7' ||
+            // Ctrl+Shift+S (名前をつけて保存の別の形)
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 's') ||
             // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (開発者ツール)
             (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
             // Cmd+Option+I, Cmd+Option+J, Cmd+Option+C (Mac)
@@ -23,6 +25,17 @@
             (window.__secAlert=window.__secAlert||function(m){var n=Date.now();if(n-(window.__secAlertAt||0)<1500)return;window.__secAlertAt=n;alert(m);})('⚠️ 開発者ツールの使用は禁止されています。利用規約違反です。');
             return false;
         }
+    });
+
+    // ファイルのドロップ（ページが別のファイルに切りかわるのを防ぐ）
+    ['dragover', 'drop'].forEach(function(t) {
+        window.addEventListener(t, function(e) {
+            var dt = e.dataTransfer;
+            if (dt && dt.types && Array.prototype.indexOf.call(dt.types, 'Files') >= 0) {
+                e.preventDefault();
+                try { dt.dropEffect = 'none'; } catch (_e) {}
+            }
+        }, true);
     });
 
     // 右クリック無効化
