@@ -9,7 +9,11 @@
     // F12キー、開発者ツール、ソース表示無効化
     document.addEventListener('keydown', function(e) {
         // F12キー
-        if (e.key === 'F12' || 
+        if (e.key === 'F12' ||
+            // F7（キャレットブラウズ）
+            e.key === 'F7' ||
+            // Ctrl+Shift+S, Cmd+Shift+S（スクリーンショット保存）
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 's') ||
             // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (開発者ツール)
             (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
             // Cmd+Option+I, Cmd+Option+J, Cmd+Option+C (Mac)
