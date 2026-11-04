@@ -13,7 +13,6 @@ GitHub Pages で公開する静的サイト。ユーザー管理・ポイント�
 | `static/js/study-api.js` | `window.Study`（登録・ログイン・ポイント・チャット・メモ等） |
 | `static/points.js` | ポイント処理（金額はサーバー側ルールで固定） |
 | `static/data/glossary.json` | プログラミング用語辞典（1ファイルに統合） |
-| `game/` | ゲーム |
 | `tools/` | `スケジュール.py` / `毎日の日誌.py`（名前・年月を変えて誰でも作成可） |
 | `sw.js` | Service Worker（同一オリジンの GET のみキャッシュ） |
 
