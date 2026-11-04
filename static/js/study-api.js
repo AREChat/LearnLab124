@@ -33,6 +33,22 @@
     return res;
   }
 
+  // 匿名トークン（メモリにだけ置き、保存しない。期限の1分前に取り直す）
+  let anonCache = null;
+  async function anonToken() {
+    const now = Date.now() / 1000;
+    if (anonCache && anonCache.expires_at - 60 > now) return anonCache.token;
+    let res;
+    try {
+      res = await fetch(cfg.authUrl + '/token/anonymous', { method: 'GET', credentials: 'omit' });
+    } catch (e) { throw new Error('通信エラーです。ネットワークを確認してください'); }
+    if (!res.ok) throw new Error('データを読み込めませんでした（' + res.status + '）');
+    const body = await res.json();
+    if (!body || !body.token) throw new Error('データを読み込めませんでした');
+    anonCache = { token: body.token, expires_at: Number(body.expires_at) || now + 300 };
+    return anonCache.token;
+  }
+
   function fail(error) {
     const msg = (error && (error.message || error.error_description)) || '不明なエラー';
     const e = new Error(msg);
@@ -139,10 +155,17 @@
 
     /** Neon Function が定期取得したデータ(天気・電車)を読む。key: 'weather' | 'train' */
     async siteData(key) {
-      const session = await this.getSession();
-      if (!session) throw new Error('ログインが必要です');
-      const { data, error } = await call(() => client.from('site_data').select('payload,updated_at').eq('key', key).limit(1));
-      if (error) fail(error);
+      // ログインなしでも読めるように「匿名トークン」で Data API を直接呼ぶ。
+      // DB 側のポリシーで、匿名は site_data の train / weather だけ読める（書き込み不可）。
+      const token = await anonToken();
+      const url = cfg.dataApiUrl + '/site_data?select=payload,updated_at&key=eq.' + encodeURIComponent(key) + '&limit=1';
+      let res;
+      try {
+        res = await fetch(url, { headers: { Authorization: 'Bearer ' + token, Accept: 'application/json' } });
+      } catch (e) { throw new Error('通信エラーです。ネットワークを確認してください'); }
+      if (res.status === 401 || res.status === 403) { anonCache = null; }
+      if (!res.ok) throw new Error('データを読み込めませんでした（' + res.status + '）');
+      const data = await res.json();
       if (!data || !data[0]) throw new Error('データを準備中です。しばらくしてから再読み込みしてください');
       return data[0];
     },
