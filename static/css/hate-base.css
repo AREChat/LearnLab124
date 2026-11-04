@@ -92,6 +92,7 @@
         .control-icon-button:hover { transform: scale(1.2); opacity: 0.8; }
         .favorite-button.favorited { opacity: 1; color: #ffdd57; }
         .attention-button.is-attention { opacity: 1; color: var(--attention-color); }
+        .term-card { max-width: 100%; overflow-x: auto; }
         pre { background-color: var(--pre-bg-color); color: var(--pre-text-color); padding: 15px; border-radius: 5px; overflow-x: auto; font-family: 'Fira Code', 'Courier New', monospace; font-size: 0.95em; }
 
         /* --- その他UI --- */
