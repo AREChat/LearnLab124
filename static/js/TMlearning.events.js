@@ -11,4 +11,7 @@
   bind(1, 'click', function (event) {
       showPointsModal()
   });
+  bind(2, 'click', function () {
+      location.href = 'index2.html';
+  });
 })();
