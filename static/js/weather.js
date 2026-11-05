@@ -65,6 +65,10 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&am
             });
         }
 
+        // 取得元の天気コードが「コード650」のまま入ってきたときは、読める言葉に直して表示する
+        const WX_FIX = { 'コード500': '晴れ', 'コード650': '小雨' };
+        function fixWx(w) { const t = String(w == null ? '' : w); return WX_FIX[t] || (/^コード\d+$/.test(t) ? '--' : t); }
+
         function renderHourlyForecast(hourlyForecasts) {
             hourlyContainer.innerHTML = '';
             const now = new Date();
@@ -93,7 +97,7 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&am
 
                 card.innerHTML = `
                     <div class="hourly-time">${hour.time}</div>
-                    <div class="hourly-weather">${esc(hour.weather)}</div>
+                    <div class="hourly-weather">${esc(fixWx(hour.weather))}</div>
                     <div class="hourly-temp">${hour.temp}°C</div>
                     <div class="hourly-precip">${hour.precip}mm</div>
                 `;
