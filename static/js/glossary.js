@@ -1,5 +1,5 @@
 /* プログラミング用語集：言語タブ・カテゴリ・検索・並び替え・コピー
- * データ: static/data/glossary.json（Python / SQL / HTML・CSS / Excel VBA / その他を1ファイルに統合）
+ * データ: static/data/glossary.json（Python / SQL / HTML・CSS ほか）＋ 言語ごとの gl-*.json（タブを開いたときに読み込む）
  */
 (function () {
   'use strict';
@@ -29,6 +29,27 @@
     try {
       return safe.replace(new RegExp('(' + escRe(esc(q)) + ')', 'gi'), '<mark>$1</mark>');
     } catch (e) { return safe; }
+  }
+
+  // 言語ごとに別ファイルになっているデータ（languages[].files）を、タブを開いたときにだけ読み込む
+  var loaded = {};
+  function ensureLang(id) {
+    var l = state.data.languages.filter(function (x) { return x.id === id; })[0];
+    if (!l || !l.files || loaded[id]) return Promise.resolve();
+    loaded[id] = true;
+    return Promise.all(l.files.map(function (f) {
+      return fetch(f).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(function (d) {
+        d.entries.forEach(function (x) { state.data.entries.push(x); });
+      });
+    })).catch(function (err) {
+      loaded[id] = false;
+      el.list.innerHTML = '<p class="gl-error">この言語の用語データを読み込めませんでした（' + esc(err.message) + '）。もう一度タブを押してください。</p>';
+      throw err;
+    });
+  }
+  function showLang() {
+    el.list.innerHTML = '<p class="gl-empty">読み込み中…</p>';
+    ensureLang(state.lang).then(function () { apply(true); }, function () { /* 表示ずみ */ });
   }
 
   function readHash() {
@@ -125,7 +146,7 @@
   function bind() {
     el.tabs.addEventListener('click', function (ev) {
       var b = ev.target.closest('.gl-tab'); if (!b) return;
-      state.lang = b.dataset.lang; state.cat = 'all'; renderTabs(); apply(true);
+      state.lang = b.dataset.lang; state.cat = 'all'; renderTabs(); showLang();
     });
     el.cats.addEventListener('click', function (ev) {
       var b = ev.target.closest('.gl-chip'); if (!b) return;
@@ -143,7 +164,7 @@
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, function () { b.textContent = '失敗'; });
       else b.textContent = '未対応';
     });
-    window.addEventListener('hashchange', function () { readHash(); syncInputs(); renderTabs(); apply(true); });
+    window.addEventListener('hashchange', function () { readHash(); syncInputs(); renderTabs(); showLang(); });
   }
 
   function syncInputs() { el.search.value = state.q; el.clear.hidden = !state.q; }
@@ -157,7 +178,7 @@
     readHash();
     if (!data.languages.some(function (l) { return l.id === state.lang; })) state.lang = data.languages[0].id;
     syncInputs();
-    renderTabs(); bind(); apply(true);
+    renderTabs(); bind(); showLang();
   }).catch(function (err) {
     el.list.innerHTML = '<p class="gl-error">用語データを読み込めませんでした（' + esc(err.message) + '）。<br>ファイルを直接開かず、GitHub Pages か <code>python3 -m http.server</code> 経由で開いてください。</p>';
   });
