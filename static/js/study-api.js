@@ -12,6 +12,17 @@
     dataApi: { url: cfg.dataApiUrl },
   });
 
+  let anonClient = null;
+  function getAnonClient() {
+    if (!anonClient) {
+      anonClient = window.NeonJS.createClient({
+        auth: { url: cfg.authUrl, allowAnonymous: true },
+        dataApi: { url: cfg.dataApiUrl },
+      });
+    }
+    return anonClient;
+  }
+
   const USERNAME_RE = /^[a-zA-Z0-9_぀-ゟ゠-ヿ一-鿿]{3,20}$/;
   const MIN_PASSWORD = 8;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -139,9 +150,11 @@
 
     /** Neon Function が定期取得したデータ(天気・電車)を読む。key: 'weather' | 'train' */
     async siteData(key) {
+      // ログインしていなくても読める（天気・電車だけ。DB側の anonymous 用の読み取りルールで key を制限ずみ）。
+      // 匿名トークンはメモリにだけ置き、保存しない。ログイン中ならふだんの client を使う。
       const session = await this.getSession();
-      if (!session) throw new Error('ログインが必要です');
-      const { data, error } = await call(() => client.from('site_data').select('payload,updated_at').eq('key', key).limit(1));
+      const c = session ? client : getAnonClient();
+      const { data, error } = await call(() => c.from('site_data').select('payload,updated_at').eq('key', key).limit(1));
       if (error) fail(error);
       if (!data || !data[0]) throw new Error('データを準備中です。しばらくしてから再読み込みしてください');
       return data[0];

@@ -13,6 +13,7 @@
         let quizType = '';
 
         function getResultComment(score, total) {
+            if (!(total > 0)) return resultComments[0];
             const percentage = (score / total) * 100;
             if (percentage >= 100) return resultComments[100];
             if (percentage >= 90) return resultComments[90];
@@ -108,8 +109,10 @@
         function retireQuiz() {
             document.getElementById('quiz-area').style.display = 'none';
             document.getElementById('quiz-result').style.display = 'block';
-            const comment = getResultComment(score, currentQuestionIndex);
-            document.getElementById('result-text').innerHTML = `リタイアしました。正解数: ${score} / ${currentQuestionIndex}<br>${comment}`;
+            // 今の問題に答えたあと「次へ」を押さずにリタイアしても、答えた数に数える
+            const answered = currentQuestionIndex + (selectedAnswer !== null ? 1 : 0);
+            const comment = getResultComment(score, answered);
+            document.getElementById('result-text').innerHTML = `リタイアしました。正解数: ${score} / ${answered}<br>${comment}`;
         }
 
         function restartQuiz() {
