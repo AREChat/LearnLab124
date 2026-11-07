@@ -5,6 +5,7 @@
  *  3. 表示されない画像を前提にしていた問題を、問題文だけで解ける形に書きかえる
  *  4. 選択肢がかけていた問題を作り直す
  *  5. 答えが「YES」「いいえ」などの文字になっていて、選んでも必ず不正解になっていた問題（約300問）を、選択肢の記号（a／b）に直す
+ *  6. 文字を入力する問題で、答えが「継承 (Inheritance)」のようにかっこで言い換えを併記した形のもの（約60問）を、片方だけでも正解にする
  */
 (function () {
   'use strict';
@@ -112,4 +113,41 @@
     var arr = window[n];
     if (Array.isArray(arr)) arr.forEach(fix);
   });
+
+  // 6：文字を入力する問題の答え合わせを、少しだけ ゆるくする。
+  //   答えが「継承 (Inheritance)」「ラムダ関数 (or 無名関数)」のように、言い換えをかっこで併記した形のとき、
+  //   「継承」だけ・「Inheritance」だけ でも正解にする（そのままだと、全部を同じ形で打たないと不正解だった）。
+  //   全角半角・大文字小文字・空白・引用符の違いも許す。コードの形の答え（; や = を含む）と、かっこが2組以上ある答えは、これまでどおり。
+  function normAns(s) {
+    s = String(s == null ? '' : s);
+    try { s = s.normalize('NFKC'); } catch (_e) {}
+    return s.toLowerCase().replace(/[\s'"`\u2018\u2019\u201c\u201d]/g, '');
+  }
+  function answerCandidates(ans) {
+    var a = String(ans == null ? '' : ans).trim(), out = [a], m;
+    if (/[;=]/.test(a)) return out;
+    m = a.match(/^(.+?)\s+[（(]\s*(?:or|OR|または|もしくは)?\s*(.+?)\s*[）)]\s*$/) ||
+        a.match(/^(.+?)[（(]\s*(?:or|OR|または|もしくは)\s*(.+?)\s*[）)]\s*$/) ||
+        a.match(/^(.+?)（\s*(.+?)\s*）\s*$/);
+    if (m && m[1].trim() && m[2].trim() && !/[（(]/.test(m[1])) out.push(m[1].trim(), m[2].trim());
+    return out;
+  }
+  try {
+    if (typeof QuizApp !== 'undefined' && QuizApp && QuizApp.quiz && typeof QuizApp.quiz.checkAnswer === 'function' && !QuizApp.quiz.__lenientText) {
+      var origCheck = QuizApp.quiz.checkAnswer;
+      QuizApp.quiz.checkAnswer = function (userAnswer, question) {
+        try {
+          if (this.isTextInputQuestion(question)) {
+            var u = normAns(userAnswer);
+            if (u) {
+              var cs = answerCandidates(question.correct_answer || question.answer);
+              for (var i = 0; i < cs.length; i++) { var c = normAns(cs[i]); if (c && u === c) return true; }
+            }
+          }
+        } catch (_e) {}
+        return origCheck.apply(this, arguments);
+      };
+      QuizApp.quiz.__lenientText = true;
+    }
+  } catch (_e) {}
 })();
