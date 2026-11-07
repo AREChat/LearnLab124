@@ -14,9 +14,13 @@
   // 3・4：問題文（先頭がこの文字列で始まるもの）→ 書きかえる項目
   var REWRITE = [
     // 5：選択肢が2つ同じ「含まれ」で、他の選択肢も「…ます」につながらなかった問題を、問いの形に直す（SQL・SQL_hard の2か所）
-    { start: 'SQLでは、`NULL` 値は `COUNT(*)` の集計に「[ ]」ます', set: {
+    // kind: 'mc' は選択肢がある問題だけ、'text' は文字を入力する問題（選択肢が空）だけに当てはめる（同じ書き出しの問題が両方ある）
+    { start: 'SQLでは、`NULL` 値は `COUNT(*)` の集計に「[ ]」ます', kind: 'mc', set: {
       question_text: 'SQLでは、`NULL` 値は `COUNT(*)` の集計でどのように扱われますか？',
       choice_a: '含まれる', choice_b: '除外される', choice_c: '場合による', choice_d: 'エラーになる' } },
+    // 入力式の同じ問題：答えは「含まれ」のまま。ヒントの「（含まれ/含まれ）」が同じ語のくり返しだったので直す
+    { start: 'SQLでは、`NULL` 値は `COUNT(*)` の集計に「[ ]」ます', kind: 'text', set: {
+      question_text: 'SQLでは、`NULL` 値は `COUNT(*)` の集計に「[ ]」ます。（「含まれ」か「除外され」のどちらか）' } },
     { start: 'コマンドプロンプトを起動するために、検索ボックスに入力する3文字の言葉は何ですか', set: {
       explanation: 'コマンドプロンプトを起動するための命令は「cmd」です。スタートメニューの検索ボックスに「cmd」と入力して開きます。' } },
     { start: 'ファイルをダブルクリックしたときに、自動で開くアプリのことを何と呼びますか', set: {
@@ -86,6 +90,9 @@
     var text = String(q.question_text || '');
     // 3・4：書きかえ
     for (var i = 0; i < REWRITE.length; i++) {
+      var hasChoices = q.choice_a !== undefined && String(q.choice_a).trim() !== '';
+      if (REWRITE[i].kind === 'mc' && !hasChoices) continue;
+      if (REWRITE[i].kind === 'text' && hasChoices) continue;
       if (text.indexOf(REWRITE[i].start) === 0) {
         for (var k in REWRITE[i].set) q[k] = REWRITE[i].set[k];
         text = String(q.question_text);
