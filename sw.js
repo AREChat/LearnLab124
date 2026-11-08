@@ -1,53 +1,10 @@
-// Service Worker（オフライン対応）
-// GitHub Pages のプロジェクトサイト（https://ユーザー名.github.io/リポジトリ名/）でも動くよう、
-// すべて相対パスで書いています。
-const CACHE_NAME = 'study-cache-v18';
-const PRECACHE = [
-  './',
-  'about.html', 'home.html', 'index.html', 'index4.html', 'index5.html',
-  'loading.html', 'thanks.html',
-  'static/css/home.css', 'static/css/glossary.css', 'static/style2.css', 'static/responsive-header.css',
-  'static/js/glossary.js', 'static/js/home.js', 'static/js/study-api.js', 'static/js/study-config.js',
-  'static/security.js', 'static/points.js', 'static/points-header.js',
-  'static/data/glossary.json',
-  'hate/base.html',
-];
-
-self.addEventListener('install', (event) => {
-  self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) =>
-      // 1つ見つからなくても、全体のインストールは失敗させない
-      Promise.allSettled(PRECACHE.map((url) => cache.add(url)))
-    )
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  const req = event.request;
-  const url = new URL(req.url);
-  // GET かつ同じサイト内のファイルだけを扱う。
-  // Neon（認証・DB）への通信や POST、動画/音声の Range リクエストは触らない。
-  if (req.method !== 'GET' || url.origin !== self.location.origin || req.headers.has('range')) return;
-
-  event.respondWith(
-    caches.open(CACHE_NAME).then(async (cache) => {
-      const cached = await cache.match(req);
-      const network = fetch(req)
-        .then((res) => {
-          if (res && res.ok) cache.put(req, res.clone());
-          return res;
-        })
-        .catch(() => cached || Response.error());
-      return cached || network;
-    })
-  );
-});
-
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((names) =>
-      Promise.all(names.filter((n) => n !== CACHE_NAME).map((n) => caches.delete(n)))
-    ).then(() => self.clients.claim())
-  );
-});
+"use strict";
+// ===== LearnLab124 サービスワーカー（オフライン対応）=====
+// ・インストール時に、全ページ・JS・CSS・データ・画像・音を まとめて保存（約12MB）→ ネットが なくても 学習できる
+// ・画面（html）はネット優先（4秒まって だめなら 控え）。JS/CSS/データは 控え先・裏で更新（2回目から速い）
+// ・GET 以外／ほかのサイト（Neon など）には さわらない
+// ・ファイルを足す・消す・変えたら  node tools/gen-precache.js  を実行し、下の CACHE の数字を上げる
+importScripts("precache-manifest.js", "sw-core.js");
+const CACHE = "study-cache-v19-" + (self.ARE_MANIFEST ? self.ARE_MANIFEST.v : "0");
+const core = self.areCore({shell: CACHE, root: "./", precache: true, swr: true, owns: (k) => k.indexOf("study-cache-") === 0});
+self.addEventListener("install", () => { self.skipWaiting(); });
