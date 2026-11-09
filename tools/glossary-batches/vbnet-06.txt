@@ -1,0 +1,84 @@
+# カテゴリ || 用語 || 説明 || コード例
+実用レシピ || 合計と平均を求める || 配列の合計・平均を LINQ で求める。 || arr.Sum() / arr.Average()
+実用レシピ || 最大値と最小値を求める || 配列から最大・最小を取る。 || arr.Max()
+実用レシピ || 奇数・偶数の判定 || Mod で余りを調べる。 || If n Mod 2 = 0 Then
+実用レシピ || うるう年の判定 || DateTime.IsLeapYear を使う。 || DateTime.IsLeapYear(2028)
+実用レシピ || 素数の判定 || 2から平方根まで割り切れるか調べる。 || For i = 2 To Math.Sqrt(n)
+実用レシピ || 階乗の計算 || 再帰やループで計算する。 || Function Fact(n As Integer) As Long
+実用レシピ || フィボナッチ数列 || 前の2つの数を足していく。 || a, b = b, a + b
+実用レシピ || 文字列の反転 || 文字を逆順にする。 || StrReverse("abc")
+実用レシピ || 回文の判定 || 反転しても同じかを調べる。 || s = StrReverse(s)
+実用レシピ || 文字の出現回数を数える || 文字ごとの数を辞書に入れる。 || dic(c) += 1
+実用レシピ || 単語を数える || 区切って辞書に数える。 || text.Split(" "c)
+実用レシピ || 配列の並べ替え (バブルソート) || 隣同士を比べて入れ替える。 || If a(i) > a(i + 1) Then
+実用レシピ || 二分探索 || 並んだ配列から半分ずつ探す。 || Array.BinarySearch(arr, x)
+実用レシピ || FizzBuzz || 3の倍数と5の倍数で表示を変える練習問題。 || If i Mod 15 = 0 Then
+実用レシピ || じゃんけんゲーム || 乱数で手を決めて勝敗を判定する。 || rnd.Next(3)
+実用レシピ || 数当てゲーム || 乱数の数を当てる。 || rnd.Next(1, 101)
+実用レシピ || 九九の表 || 二重ループで表を作る。 || For i = 1 To 9
+実用レシピ || 消費税の計算 || 切り捨てなどの端数処理を決める。 || Math.Floor(price * 1.1)
+実用レシピ || 年齢の計算 || 生年月日から今日の年齢を求める。 || today.Year - birth.Year
+実用レシピ || 曜日を日本語で表示 || 曜日の日本語を取得する。 || d.ToString("dddd", New CultureInfo("ja-JP"))
+実用レシピ || 月末日の取得 || 月の最終日を求める。 || New DateTime(y, m, DateTime.DaysInMonth(y, m))
+実用レシピ || 経過日数の計算 || 2つの日付の差を日数で求める。 || (b - a).Days
+実用レシピ || 数値の3桁区切り || カンマ区切りの文字列にする。 || n.ToString("#,##0")
+実用レシピ || ゼロ埋め || 0 で桁をそろえる。 || n.ToString("D5")
+実用レシピ || 全角を半角にする || 全角英数字を半角にする。 || StrConv(s, VbStrConv.Narrow)
+実用レシピ || ひらがなをカタカナにする || かなを変換する。 || StrConv(s, VbStrConv.Katakana)
+実用レシピ || 郵便番号の形式チェック || 正規表現で判定する。 || Regex.IsMatch(s, "^\d{3}-\d{4}$")
+実用レシピ || メールアドレスの形式チェック || 簡易的に形式を調べる。 || Regex.IsMatch(s, "^\S+@\S+$")
+実用レシピ || CSV を読み込む || 1行ずつ区切って配列にする。 || line.Split(","c)
+実用レシピ || CSV を書き出す || 項目をカンマでつないで書く。 || String.Join(",", items)
+実用レシピ || ログファイルへの追記 || 日時つきで1行追記する。 || File.AppendAllText(p, Now & " " & msg & vbCrLf)
+実用レシピ || フォルダ内のファイルを一括処理 || ファイル一覧を回して処理する。 || For Each f In Directory.GetFiles(dir)
+実用レシピ || ファイルのバックアップ || 日時をつけたコピーを作る。 || File.Copy(p, p & ".bak")
+実用レシピ || ランダムな文字列の生成 || 乱数で文字を選んでつなぐ。 || chars(rnd.Next(chars.Length))
+実用レシピ || ストップウォッチ画面 || Timer と TimeSpan で経過時間を表示する。 || sw.Elapsed.ToString()
+実用レシピ || 電卓アプリ || ボタンで数字を入力して計算する。 || Button.Click
+実用レシピ || TODO リスト || リストボックスに追加・削除する。 || lst.Items.Add(txt.Text)
+実用レシピ || 画像ビューア || PictureBox に画像を表示する。 || pic.Image = Image.FromFile(p)
+実用レシピ || メモ帳アプリ || TextBox と ファイルの読み書き。 || File.WriteAllText(p, txt.Text)
+実用レシピ || 設定の保存と復元 || My.Settings に保存する。 || My.Settings.Save()
+実用レシピ || 多重起動の防止 || 同じアプリが2つ起動しないようにする。 || New Mutex(True, "MyApp")
+実用レシピ || Web ページの取得 || HttpClient で内容を取得する。 || Await client.GetStringAsync(url)
+実用レシピ || JSON の読み書き || オブジェクトを JSON にして保存する。 || JsonSerializer.Serialize(obj)
+実用レシピ || 天気 API の呼び出し || Web API から JSON を取得して表示する。 || client.GetStringAsync(url)
+実用レシピ || QR コードの生成 || ライブラリで画像を作る。 || QRCoder
+実用レシピ || メール送信 (SmtpClient) || メールを送る。 || New SmtpClient("smtp.example.com")
+実用レシピ || 音を鳴らす || ビープ音や WAV を再生する。 || Beep()
+実用レシピ || WAV の再生 || SoundPlayer で再生する。 || New SoundPlayer(p).Play()
+実用レシピ || スクリーンショット || 画面を画像として保存する。 || CopyFromScreen
+実用レシピ || 常に手前に表示 || ウィンドウを最前面にする。 || Me.TopMost = True
+実用レシピ || フォームの透過 || 画面を半透明にする。 || Me.Opacity = 0.8
+実用レシピ || ドラッグ&ドロップ || ファイルを画面にドロップして受け取る。 || AllowDrop = True
+実用レシピ || キー入力の制限 || 数字だけを入力できるようにする。 || e.Handled = Not Char.IsDigit(e.KeyChar)
+実用レシピ || ショートカットキー || Ctrl+S などの操作を割り当てる。 || ShortcutKeys = Keys.Control Or Keys.S
+実用レシピ || 確認ダイアログ || はい・いいえを選ばせる。 || MessageBox.Show("削除しますか", "確認", MessageBoxButtons.YesNo)
+実用レシピ || 入力チェック (Validating) || 入力の正しさを確かめる。 || Private Sub txt_Validating(...)
+実用レシピ || エラー表示 (ErrorProvider) || 入力の間違いを部品の横に出す。 || ep.SetError(txt, "必須です")
+実用レシピ || 画面の遷移 || 別のフォームを開いて閉じる。 || New Form2().Show()
+実用レシピ || タイマーでの自動更新 || 一定間隔で画面を更新する。 || Timer1.Interval = 1000
+実用レシピ || グラフの描画 (Chart) || データをグラフで表示する。 || Chart1.Series(0).Points.AddXY(x, y)
+実用レシピ || DataGridView の並べ替え || 列の見出しで並べ替える。 || dgv.Sort(dgv.Columns(0), ListSortDirection.Ascending)
+実用レシピ || DataGridView から CSV へ || 表の内容を CSV に書き出す。 || For Each r As DataGridViewRow In dgv.Rows
+例外クラス || Exception || すべての例外の元になるクラス。 || Catch ex As Exception
+例外クラス || ArgumentException || 引数が不正なときの例外。 || Throw New ArgumentException("x")
+例外クラス || ArgumentNullException || 引数が Nothing のときの例外。 || Throw New ArgumentNullException("x")
+例外クラス || InvalidOperationException || 今の状態では実行できないときの例外。 || Throw New InvalidOperationException()
+例外クラス || NullReferenceException || Nothing のオブジェクトを使ったときの例外。 || obj.Method()
+例外クラス || IndexOutOfRangeException || 配列の範囲を超えたときの例外。 || arr(10)
+例外クラス || KeyNotFoundException || 辞書にキーがなかったときの例外。 || dic("x")
+例外クラス || FormatException || 文字列の形式が不正なときの例外。 || Integer.Parse("abc")
+例外クラス || OverflowException || 値が型の範囲を超えたときの例外。 || CInt(3000000000.0)
+例外クラス || DivideByZeroException || 整数を0で割ったときの例外。 || 1 \ 0
+例外クラス || FileNotFoundException || ファイルが見つからないときの例外。 || File.ReadAllText("none.txt")
+例外クラス || IOException || 入出力のエラー。 || File.Open
+例外クラス || UnauthorizedAccessException || アクセス権がないときの例外。 || File.Delete(p)
+例外クラス || NotImplementedException || 未実装の処理で投げる。 || Throw New NotImplementedException()
+例外クラス || TimeoutException || 時間切れの例外。 || Throw New TimeoutException()
+例外クラス || OperationCanceledException || 処理が中止されたときの例外。 || ct.ThrowIfCancellationRequested()
+例外クラス || 独自の例外クラス || Exception を継承して自作する。 || Class MyEx : Inherits Exception
+例外クラス || 例外のフィルター || 種類ごとに処理を分ける。 || Catch ex As IOException
+例外クラス || 例外を握りつぶさない || 空の Catch は避け、ログを残す。 || Catch ex : Log(ex)
+例外クラス || Throw と Throw ex の違い || Throw だけだと元の発生場所が残る。 || Throw
+例外クラス || AggregateException || 複数の例外をまとめた例外。 || Task.WaitAll
