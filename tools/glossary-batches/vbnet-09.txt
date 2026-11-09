@@ -1,0 +1,73 @@
+# カテゴリ || 用語 || 説明 || コード例
+文字列処理 || 文字列の連結 (&) || 文字列をつなげる。+ より & が安全。 || "a" & "b"
+文字列処理 || 文字列の比較 (Option Compare) || 比較の既定を決める。 || Option Compare Text
+文字列処理 || 文字列の中の文字を数える || 文字ごとにカウントする。 || s.Count(Function(c) c = "a"c)
+文字列処理 || 文字列の置換 (大文字小文字無視) || 大文字小文字を無視して置き換える。 || Regex.Replace(s, "abc", "x", RegexOptions.IgnoreCase)
+文字列処理 || 文字列の切り出し (範囲) || 範囲で一部を取り出す。 || s.Substring(2, 3)
+文字列処理 || 文字列を1文字ずつ処理 || For Each で文字を取り出す。 || For Each c As Char In s
+文字列処理 || 文字列の並べ替え || 文字を並べ替える。 || New String(s.OrderBy(Function(c) c).ToArray())
+文字列処理 || 単語の先頭を大文字にする || 英単語の先頭を大文字にする。 || StrConv(s, VbStrConv.ProperCase)
+文字列処理 || 日本語の文字種判定 || ひらがな・カタカナ・漢字を見分ける。 || Regex.IsMatch(s, "\p{IsHiragana}")
+文字列処理 || 全角数字を半角数字に || 数字の全角を半角にする。 || StrConv(s, VbStrConv.Narrow)
+文字列処理 || 改行コードの統一 || CR/LF を揃える。 || s.Replace(vbCrLf, vbLf)
+文字列処理 || 文字列の暗号化・ハッシュ || 文字列を安全な形にする。 || SHA256
+文字列処理 || Base64 の変換 || 文字列と Base64 を相互変換する。 || Convert.ToBase64String(Encoding.UTF8.GetBytes(s))
+文字列処理 || URL エンコード || 特殊文字を %xx にする。 || Uri.EscapeDataString(s)
+文字列処理 || HTML エンコード || < > & を安全な形にする。 || WebUtility.HtmlEncode(s)
+文字列処理 || エスケープ (\") || 文字列の中の引用符を書く。 || "He said ""hi"""
+文字列処理 || 空白で単語に分割 || 連続する空白もまとめて分ける。 || s.Split(New Char() {" "c}, StringSplitOptions.RemoveEmptyEntries)
+文字列処理 || 行ごとの処理 || 改行で分けて1行ずつ処理する。 || s.Split({vbCrLf}, StringSplitOptions.None)
+文字列処理 || テンプレート文字列 || 値を埋め込んだ文章を作る。 || String.Format("{0}さん", name)
+文字列処理 || 文字列の長さ(バイト) || バイト数を数える。 || Encoding.UTF8.GetByteCount(s)
+文字列処理 || 文字コードの変換 || Shift_JIS と UTF-8 を変換する。 || Encoding.GetEncoding("shift_jis")
+文字列処理 || Unicode の正規化 || 表記ゆれをそろえる。 || s.Normalize()
+文字列処理 || サロゲートペア || 絵文字など2つで1文字の文字。 || StringInfo
+文字列処理 || StringInfo (書記素) || 見た目の1文字を数える。 || New StringInfo(s).LengthInTextElements
+文字列処理 || 文字列の補間と書式 || $ と書式指定を組み合わせる。 || $"{d:yyyy/MM/dd}"
+文字列処理 || String.Create / Span || 高速に文字列を作る。 || String.Create
+文字列処理 || StringBuilder の Append || 文字列をつなぐ。大量の連結が速い。 || sb.Append("a")
+文字列処理 || StringBuilder の AppendLine || 改行つきで追加する。 || sb.AppendLine("a")
+文字列処理 || StringBuilder.Insert / Remove || 途中に挿入・削除する。 || sb.Insert(0, "x")
+文字列処理 || StringBuilder.ToString || 文字列に変換する。 || sb.ToString()
+文字列処理 || TextInfo.ToTitleCase || 英単語の先頭を大文字にする。 || CultureInfo.CurrentCulture.TextInfo.ToTitleCase(s)
+正規表現 || Regex のパターン (\d \w \s) || 数字・単語文字・空白を表す。 || \d+
+正規表現 || アンカー (^ $) || 先頭・末尾を表す。 || ^abc$
+正規表現 || 量指定子 (* + ? {n,m}) || 繰り返しの回数を決める。 || \d{3}
+正規表現 || グループ化と後方参照 || かっこでまとめて取り出す。 || (\d+)-(\d+)
+正規表現 || 名前付きグループ || グループに名前を付ける。 || (?<year>\d{4})
+正規表現 || 先読み・後読み || 条件だけ確かめて消費しない。 || (?=abc)
+正規表現 || RegexOptions || 大文字小文字の無視などの設定。 || RegexOptions.IgnoreCase
+正規表現 || Match.Groups || 取り出した部分にアクセスする。 || m.Groups(1).Value
+正規表現 || Regex.Split || 正規表現で分割する。 || Regex.Split(s, "\s+")
+正規表現 || MatchEvaluator || 置換内容を関数で決める。 || Regex.Replace(s, "\d+", Function(m) ...)
+正規表現 || 貪欲と非貪欲 || できるだけ長く・短く一致させる。 || .*?
+正規表現 || 日本語の正規表現 || ひらがな・カタカナなどのパターン。 || [ぁ-ん]+
+正規表現 || 電話番号の検証 || ハイフン付きの電話番号を調べる。 || ^0\d{1,4}-\d{1,4}-\d{4}$
+正規表現 || 正規表現のタイムアウト || 重い検索を打ち切る。 || New Regex(p, opts, TimeSpan.FromSeconds(1))
+正規表現 || ReDoS 対策 || 処理が止まらなくなるパターンを避ける。 || タイムアウトを設定
+日付と時刻 || 日付の比較 || 大小で比較する。 || If d1 < d2 Then
+日付と時刻 || 日付の差 (TimeSpan) || 差を日数・時間で取る。 || (d2 - d1).TotalDays
+日付と時刻 || 時刻だけを取り出す || 時刻の部分を取る。 || d.TimeOfDay
+日付と時刻 || 日付だけを取り出す || 時刻を除く。 || d.Date
+日付と時刻 || 月初・月末の日付 || 月の最初・最後の日を求める。 || New DateTime(d.Year, d.Month, 1)
+日付と時刻 || 週の始まり (月曜) || 週の最初の日を求める。 || d.AddDays(-(CInt(d.DayOfWeek) + 6) Mod 7)
+日付と時刻 || 年度の計算 || 4月始まりの年度。 || If d.Month >= 4 Then d.Year Else d.Year - 1
+日付と時刻 || 和暦の表示 || 令和などで表示する。 || d.ToString("gg y年", New CultureInfo("ja-JP") With {...})
+日付と時刻 || JapaneseCalendar || 和暦を扱うカレンダー。 || New JapaneseCalendar()
+日付と時刻 || 祝日の判定 || 祝日は自前のデータで判断する。 || HashSet(Of Date)
+日付と時刻 || 営業日の計算 || 土日と祝日を除いて数える。 || d.DayOfWeek = DayOfWeek.Saturday
+日付と時刻 || 日付の書式 (カスタム) || yyyy MM dd HH mm ss などで書式を決める。 || d.ToString("yyyy-MM-dd HH:mm:ss")
+日付と時刻 || ISO 8601 形式 || 世界共通の日時の書き方。 || d.ToString("o")
+日付と時刻 || UTC と ローカル時刻 || 世界標準時と地域の時刻。 || d.ToUniversalTime()
+日付と時刻 || DateTimeKind || ローカル・UTC の区別。 || DateTimeKind.Utc
+日付と時刻 || 夏時間 || サマータイムの影響。 || TimeZoneInfo.IsDaylightSavingTime
+日付と時刻 || DateOnly / TimeOnly || 日付だけ・時刻だけの型。 || Dim d As DateOnly
+日付と時刻 || 経過時間の表示 || 「3日前」のように表す。 || (Now - d).TotalHours
+日付と時刻 || タイマー精度 || Timer の精度は約15ms。 || Stopwatch を使う
+日付と時刻 || Timer.Tick || 一定間隔で呼ばれる。 || Private Sub Timer1_Tick(...)
+日付と時刻 || 日付の入力検証 || 日付として正しいか確認する。 || Date.TryParse(s, d)
+日付と時刻 || 年齢計算 (うるう年考慮) || 誕生日を迎えたか考えて年齢を出す。 || If today < birth.AddYears(age) Then age -= 1
+日付と時刻 || 週番号 (ISO) || 週の番号を求める。 || ISOWeek.GetWeekOfYear(d)
+日付と時刻 || 干支・星座の計算 || 年や日付から計算する。 || (year - 4) Mod 12
+日付と時刻 || カレンダー表示 || 月のカレンダーを作る。 || MonthCalendar
+日付と時刻 || スケジュールの重なり判定 || 期間が重なるかを調べる。 || a.Start < b.End And b.Start < a.End

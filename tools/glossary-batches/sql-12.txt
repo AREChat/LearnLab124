@@ -1,0 +1,79 @@
+# カテゴリ || 用語 || 説明 || コード例
+サンプル問題 || 社員表から給与の高い順に取得 || ORDER BY で並べる基本の問題。 || SELECT name, salary FROM emp ORDER BY salary DESC;
+サンプル問題 || 部署ごとの平均給与 || GROUP BY で集計する問題。 || SELECT dept, AVG(salary) FROM emp GROUP BY dept;
+サンプル問題 || 平均より高い給与の社員 || サブクエリで平均と比べる。 || SELECT * FROM emp WHERE salary > (SELECT AVG(salary) FROM emp);
+サンプル問題 || 部署ごとの最高給与の社員 || 相関サブクエリで最高を求める。 || SELECT * FROM emp e WHERE salary = (SELECT MAX(salary) FROM emp WHERE dept = e.dept);
+サンプル問題 || 2番目に高い給与 || OFFSET で2番目を取る。 || SELECT DISTINCT salary FROM emp ORDER BY salary DESC OFFSET 1 LIMIT 1;
+サンプル問題 || 注文のない顧客 || LEFT JOIN と IS NULL で探す。 || SELECT c.* FROM customers c LEFT JOIN orders o ON o.cid = c.id WHERE o.id IS NULL;
+サンプル問題 || 月別の売上合計 || 月ごとにグループ化する。 || SELECT DATE_TRUNC('month', d), SUM(v) FROM sales GROUP BY 1;
+サンプル問題 || 売上上位3商品 || 集計して上位を取る。 || SELECT item, SUM(v) FROM sales GROUP BY item ORDER BY 2 DESC LIMIT 3;
+サンプル問題 || 重複したメールアドレス || HAVING で重複を見つける。 || SELECT email FROM users GROUP BY email HAVING COUNT(*) > 1;
+サンプル問題 || 連続ログイン日数 || 日付の連続を見つける。 || d - ROW_NUMBER() OVER (ORDER BY d)
+サンプル問題 || 在庫が少ない商品 || 条件で絞る基本の問題。 || SELECT * FROM items WHERE stock < 10;
+サンプル問題 || 今月登録した会員 || 日付の範囲で絞る。 || WHERE created_at >= DATE_TRUNC('month', NOW())
+サンプル問題 || 年齢層ごとの人数 || CASE で区分する。 || CASE WHEN age < 20 THEN '10代' ... END
+サンプル問題 || 男女別の人数 || 性別ごとに数える。 || SELECT sex, COUNT(*) FROM t GROUP BY sex;
+サンプル問題 || 氏名の連結 || 姓と名をつなぐ。 || SELECT last || first FROM t;
+サンプル問題 || 前の行との差 || LAG で差を出す。 || v - LAG(v) OVER (ORDER BY d)
+サンプル問題 || 累計売上 || 日ごとの累計を出す。 || SUM(v) OVER (ORDER BY d)
+サンプル問題 || 順位をつける || RANK で順位を出す。 || RANK() OVER (ORDER BY score DESC)
+サンプル問題 || 部署ごとの順位 || PARTITION BY で部署ごとに順位。 || RANK() OVER (PARTITION BY dept ORDER BY salary DESC)
+サンプル問題 || 欠番を探す || 連番の抜けを見つける。 || WHERE id + 1 NOT IN (SELECT id FROM t)
+サンプル問題 || 最新の注文だけ取得 || 顧客ごとに最新の1件。 || DISTINCT ON (cid) ... ORDER BY cid, d DESC
+サンプル問題 || 在庫と注文の突き合わせ || 2つの表を結合して比べる。 || JOIN stock s ON s.item = o.item
+サンプル問題 || 親子の階層を表示 || 再帰 CTE で階層を展開。 || WITH RECURSIVE
+サンプル問題 || カンマ区切りの展開 || 区切り文字を行にする。 || unnest(string_to_array(s, ','))
+サンプル問題 || 行を列に変換 || ピボットの問題。 || MAX(CASE WHEN ...)
+サンプル問題 || 期間の重なりを調べる || 予約の重複を検出する。 || a.s < b.e AND b.s < a.e
+サンプル問題 || データのコピーと移行 || INSERT SELECT で移す。 || INSERT INTO t2 SELECT * FROM t1;
+サンプル問題 || 条件付き更新 || CASE で更新値を変える。 || UPDATE t SET v = CASE WHEN a THEN 1 ELSE 2 END;
+サンプル問題 || 集計結果の絞り込み || HAVING で絞る。 || HAVING COUNT(*) >= 3
+サンプル問題 || 全件の中での割合 || 全体に対する割合。 || v * 1.0 / SUM(v) OVER ()
+サンプル問題 || 前月比 || 前の月と比べる。 || LAG(v) OVER (ORDER BY m)
+サンプル問題 || 移動平均 || 直近の平均。 || AVG(v) OVER (ORDER BY d ROWS 6 PRECEDING)
+資格試験向け || SQL 検定 || 基本的な SQL の知識を問う試験。 || OSS-DB, ORACLE MASTER など
+資格試験向け || 基本情報技術者試験 (SQL) || データベース分野で SQL が出題される。 || SELECT, JOIN, GROUP BY
+資格試験向け || データベーススペシャリスト試験 || 高度なデータベースの試験。 || 正規化、設計
+資格試験向け || OSS-DB 資格 || PostgreSQL に関する認定資格。 || Silver / Gold
+資格試験向け || ORACLE MASTER || Oracle の認定資格。 || Bronze / Silver / Gold
+資格試験向け || 正規化の問題 || 表を第3正規形まで分ける問題。 || 部分従属・推移従属
+資格試験向け || ER 図の読み方 || 関連の多重度を読む。 || 1対多
+資格試験向け || 関数従属 || ある項目が決まると別の項目が決まる関係。 || 社員番号 → 氏名
+資格試験向け || 部分関数従属 || 主キーの一部で決まる関係。 || 第2正規形で解消
+資格試験向け || 推移的関数従属 || A→B→C のように間接的に決まる関係。 || 第3正規形で解消
+資格試験向け || デッドロックの問題 || 2つのトランザクションが待ち合う状況。 || ロックの順番
+資格試験向け || 分離レベルの問題 || ダーティリードなどの現象と対応。 || READ COMMITTED
+資格試験向け || インデックスの問題 || どのインデックスが効くかを問う。 || 複合インデックスの順番
+資格試験向け || ビューの問題 || ビューの更新可否。 || 集計ビューは更新不可
+資格試験向け || 結合の結果行数 || 内部結合・外部結合の件数を求める。 || LEFT JOIN は左の全行
+資格試験向け || NULL の扱いの問題 || 比較・集計での NULL。 || COUNT(列) は NULL を数えない
+資格試験向け || 副問い合わせの結果 || 副問い合わせの結果を答える。 || IN と EXISTS
+資格試験向け || 集合演算の問題 || UNION・INTERSECT・EXCEPT の結果。 || UNION は重複を除く
+資格試験向け || トランザクションの問題 || COMMIT と ROLLBACK の結果。 || SAVEPOINT
+資格試験向け || 権限の問題 || GRANT・REVOKE の結果。 || WITH GRANT OPTION
+資格試験向け || 実行計画の読み方 || 実行計画からボトルネックを探す。 || Seq Scan
+資格試験向け || バックアップ方式の問題 || フル・差分・増分の違い。 || 復旧に必要なもの
+資格試験向け || ログ先行書き込み (WAL) || 障害からの復旧の仕組み。 || REDO / UNDO
+資格試験向け || チェックポイント || 障害時の復旧を速くする仕組み。 || CHECKPOINT
+資格試験向け || ACID 特性の説明 || 原子性・一貫性・独立性・耐久性。 || ACID
+資格試験向け || 排他制御 || 同時更新の衝突を防ぐ。 || 共有ロック・占有ロック
+資格試験向け || 共有ロックと専有ロック || 読み取り用・書き込み用のロック。 || FOR SHARE / FOR UPDATE
+資格試験向け || 2相ロッキング || ロックの獲得と解放を2段階にする方式。 || 直列化可能性
+資格試験向け || 直列化可能性 || 順番に実行したのと同じ結果になる性質。 || SERIALIZABLE
+データ型の補足 || 日付型の範囲 || 型ごとの扱える日付の範囲。 || DATE
+データ型の補足 || 文字型の長さ || VARCHAR の上限。 || VARCHAR(255)
+データ型の補足 || 整数型の範囲 || SMALLINT, INTEGER, BIGINT の範囲。 || INTEGER: 約±21億
+データ型の補足 || 浮動小数点と固定小数点 || 近似値と正確な値。 || FLOAT / NUMERIC
+データ型の補足 || バイナリ型 || 画像などのバイナリデータ。 || BYTEA / BLOB
+データ型の補足 || 大規模オブジェクト (LOB) || 大きなデータを扱う型。 || CLOB / BLOB
+データ型の補足 || 配列型 || 複数の値を持つ型。 || INT[]
+データ型の補足 || ネットワーク型 || IP アドレスなど。 || INET
+データ型の補足 || 幾何型 || 点・線・図形。 || POINT
+データ型の補足 || ビット列型 || 0 と 1 の並び。 || BIT(8)
+データ型の補足 || 通貨型 || 金額用の型。 || MONEY
+データ型の補足 || 列挙型 || 決まった値だけを持つ型。 || ENUM
+データ型の補足 || 型の変換関数 || CAST や ::。 || CAST(a AS INT)
+データ型の補足 || NULL 許容 || 値が空でもよいか。 || NOT NULL
+データ型の補足 || 既定値 (DEFAULT) || 値を省略したときの値。 || DEFAULT 0
+データ型の補足 || 生成列 || 他の列から計算される列。 || GENERATED ALWAYS AS
+データ型の補足 || ドメイン || 制約付きの独自の型。 || CREATE DOMAIN
