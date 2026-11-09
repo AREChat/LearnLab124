@@ -1,0 +1,233 @@
+ADO.NET || SqlConnection || SQL Server への接続。 || Using cn As New SqlConnection(cs)
+ADO.NET || SqlCommand || SQL を実行するコマンド。 || Dim cmd As New SqlCommand(sql, cn)
+ADO.NET || SqlDataReader || 結果を前から順に読む。 || While rd.Read()
+ADO.NET || SqlDataAdapter || DataSet と DB の橋渡し。 || da.Fill(ds)
+ADO.NET || SqlParameter || パラメータ。 || cmd.Parameters.AddWithValue("@id", 1)
+ADO.NET || SqlTransaction || トランザクション。 || cn.BeginTransaction()
+ADO.NET || SqlBulkCopy || 一括で書き込む。 || bulk.WriteToServer(dt)
+ADO.NET || SqlConnectionStringBuilder || 接続文字列を組み立てる。 || New SqlConnectionStringBuilder()
+ADO.NET || ConnectionString || 接続文字列。 || "Server=.;Database=db;Trusted_Connection=True"
+ADO.NET || ConnectionState || 接続の状態。 || cn.State = ConnectionState.Open
+ADO.NET || ExecuteReader || 結果を読む実行。 || cmd.ExecuteReader()
+ADO.NET || ExecuteNonQuery || 更新系を実行して件数を返す。 || cmd.ExecuteNonQuery()
+ADO.NET || ExecuteScalar || 1つの値を返す。 || cmd.ExecuteScalar()
+ADO.NET || CommandType || コマンドの種類。 || CommandType.StoredProcedure
+ADO.NET || CommandTimeout || 実行の制限時間。 || cmd.CommandTimeout = 30
+ADO.NET || DataTable || 表のデータ。 || Dim dt As New DataTable()
+ADO.NET || DataRow || 表の1行。 || dt.Rows(0)("name")
+ADO.NET || DataColumn || 表の列。 || dt.Columns.Add("id", GetType(Integer))
+ADO.NET || DataSet || 複数の表の入れ物。 || Dim ds As New DataSet()
+ADO.NET || DataView || 並べ替え・絞り込みのビュー。 || dt.DefaultView.RowFilter = "age > 20"
+ADO.NET || DataRelation || 表同士の関連。 || ds.Relations.Add(...)
+ADO.NET || RowState || 行の変更状態。 || row.RowState = DataRowState.Modified
+ADO.NET || AcceptChanges || 変更を確定する。 || dt.AcceptChanges()
+ADO.NET || DbProviderFactory || DB の種類に依存しない生成元。 || DbProviderFactories.GetFactory("...")
+ADO.NET || OleDbConnection || OLE DB で接続する。 || New OleDbConnection(cs)
+ADO.NET || OdbcConnection || ODBC で接続する。 || New OdbcConnection(cs)
+ADO.NET || SQLite 接続 || SQLite への接続。 || New SQLiteConnection("Data Source=a.db")
+ADO.NET || Npgsql || PostgreSQL 用ドライバー。 || New NpgsqlConnection(cs)
+ADO.NET || MySqlConnector || MySQL 用ドライバー。 || New MySqlConnection(cs)
+ADO.NET || 接続プール || 接続を使い回す仕組み。 || Max Pool Size=100
+ADO.NET || SqlException || SQL Server の例外。 || Catch ex As SqlException
+ADO.NET || Using と接続 || 使い終えたら確実に閉じる。 || Using cn As New SqlConnection(cs)
+ADO.NET || ExecuteReaderAsync || 非同期で読む。 || Await cmd.ExecuteReaderAsync()
+ADO.NET || IsDBNull || DB の NULL かどうか。 || rd.IsDBNull(0)
+ADO.NET || DBNull.Value || DB の NULL 値。 || cmd.Parameters.AddWithValue("@x", DBNull.Value)
+ADO.NET || GetOrdinal || 列名から位置を取る。 || rd.GetOrdinal("name")
+ADO.NET || GetString / GetInt32 || 型を指定して値を取る。 || rd.GetString(0)
+ADO.NET || HasRows || 行があるか。 || rd.HasRows
+ADO.NET || NextResult || 次の結果セットへ進む。 || rd.NextResult()
+ADO.NET || MultipleActiveResultSets || 複数の読み取りを同時に開く設定。 || MultipleActiveResultSets=True
+ADO.NET || TableAdapter || 型付き DataSet のアダプター。 || New CustomersTableAdapter()
+ADO.NET || 型付き DataSet || 型のついた DataSet。 || Dim ds As New NorthwindDataSet()
+ADO.NET || BindingSource || 画面とデータを結ぶ。 || bs.DataSource = dt
+ADO.NET || DataGridView と DataTable || 表を画面に表示する。 || dgv.DataSource = dt
+ADO.NET || パラメータ化クエリ || SQL インジェクション対策。 || WHERE id = @id
+EntityFramework || DbContext || DB へのアクセス窓口。 || Inherits DbContext
+EntityFramework || DbSet || 表に対応する集合。 || Public Property Users As DbSet(Of User)
+EntityFramework || OnModelCreating || モデルの詳細設定。 || modelBuilder.Entity(Of User)()
+EntityFramework || SaveChanges || 変更を保存する。 || ctx.SaveChanges()
+EntityFramework || SaveChangesAsync || 非同期で保存する。 || Await ctx.SaveChangesAsync()
+EntityFramework || Add / Remove || 追加・削除する。 || ctx.Users.Add(u)
+EntityFramework || Find || 主キーで探す。 || ctx.Users.Find(1)
+EntityFramework || Include || 関連データも読み込む。 || ctx.Orders.Include(Function(o) o.Items)
+EntityFramework || ThenInclude || 関連の関連を読み込む。 || .ThenInclude(...)
+EntityFramework || AsNoTracking || 追跡せず速く読む。 || ctx.Users.AsNoTracking()
+EntityFramework || Change Tracker || 変更の追跡。 || ctx.ChangeTracker.Entries()
+EntityFramework || EntityState || エンティティの状態。 || EntityState.Modified
+EntityFramework || Migration || スキーマの移行。 || dotnet ef migrations add Init
+EntityFramework || Database.Migrate || 移行を適用する。 || ctx.Database.Migrate()
+EntityFramework || Code First || コードから DB を作る。 || DbContext から生成
+EntityFramework || Database First || DB からモデルを作る。 || Scaffold-DbContext
+EntityFramework || Fluent API || コードでモデルを設定する。 || HasKey, Property
+EntityFramework || データ注釈 || 属性でモデルを設定する。 || <Key>, <Required>
+EntityFramework || Key 属性 || 主キーを指定する。 || <Key>
+EntityFramework || Required 属性 || 必須にする。 || <Required>
+EntityFramework || MaxLength 属性 || 最大長を指定する。 || <MaxLength(50)>
+EntityFramework || Table 属性 || テーブル名を指定する。 || <Table("users")>
+EntityFramework || Column 属性 || 列名を指定する。 || <Column("user_name")>
+EntityFramework || ForeignKey 属性 || 外部キーを指定する。 || <ForeignKey("UserId")>
+EntityFramework || NotMapped 属性 || 保存対象にしない。 || <NotMapped>
+EntityFramework || Timestamp 属性 || 同時実行の版を持つ列。 || <Timestamp>
+EntityFramework || DbUpdateConcurrencyException || 同時更新の競合の例外。 || Catch ex As DbUpdateConcurrencyException
+EntityFramework || 遅延読み込み || 必要になった時に読む。 || UseLazyLoadingProxies
+EntityFramework || 明示的読み込み || コードで関連を読む。 || ctx.Entry(o).Collection(...).Load()
+EntityFramework || FromSqlRaw || 生の SQL で取得する。 || ctx.Users.FromSqlRaw("SELECT ...")
+EntityFramework || ExecuteSqlRaw || 生の SQL を実行する。 || ctx.Database.ExecuteSqlRaw("...")
+EntityFramework || ExecuteUpdate || 一括更新を発行する。 || .ExecuteUpdate(...)
+EntityFramework || ExecuteDelete || 一括削除を発行する。 || .ExecuteDelete()
+EntityFramework || HasData || 初期データを設定する。 || .HasData(New User With {...})
+EntityFramework || グローバルクエリフィルター || 常に適用する条件。 || HasQueryFilter(Function(u) Not u.IsDeleted)
+EntityFramework || ValueConverter || 保存時に値を変換する。 || HasConversion(...)
+EntityFramework || Owned 型 || 値オブジェクトを同じ表に持つ。 || OwnsOne(...)
+EntityFramework || 多対多 || 中間表で多対多を扱う。 || HasMany().WithMany()
+EntityFramework || 1対多 || 親と子の関係。 || HasMany().WithOne()
+EntityFramework || DbContext の寿命 || 短く使い捨てる。 || Using ctx As New AppDbContext()
+EntityFramework || DbContextOptions || 接続などの設定。 || UseSqlServer(cs)
+EntityFramework || ログ出力 || 発行された SQL を見る。 || LogTo(Console.WriteLine)
+EntityFramework || コンパイル済みクエリ || 毎回の変換を省く。 || EF.CompileQuery(...)
+EntityFramework || トランザクション (EF) || 複数の保存をまとめる。 || ctx.Database.BeginTransaction()
+EntityFramework || 変更前の値 || 元の値を取る。 || entry.OriginalValues
+EntityFramework || Dapper || 軽量な O/R マッパー。 || cn.Query(Of User)("SELECT ...")
+EntityFramework || Dapper の Query || 結果を型に詰めて返す。 || cn.Query(Of User)(sql, New With {.Id = 1})
+EntityFramework || Dapper の Execute || 更新系を実行する。 || cn.Execute(sql, param)
+EntityFramework || QuerySingle || 1件だけ取る。 || cn.QuerySingle(Of User)(sql)
+EntityFramework || マルチマッピング || 結合結果を複数の型に分ける。 || cn.Query(Of A, B, A)(...)
+ASP.NET || Web アプリ (VB) || VB.NET で作る Web。 || ASP.NET Web Forms
+ASP.NET || Web Forms || ページ型の Web 開発。 || .aspx
+ASP.NET || コードビハインド || ページの裏のコード。 || Default.aspx.vb
+ASP.NET || Page_Load || ページ読み込み時の処理。 || Protected Sub Page_Load(...)
+ASP.NET || IsPostBack || 再送信かどうか。 || If Not IsPostBack Then
+ASP.NET || ViewState || ページの状態を保持する。 || ViewState("n") = 1
+ASP.NET || Session || 利用者ごとの状態。 || Session("user") = "a"
+ASP.NET || Application 状態 || 全体で共有する状態。 || Application("count")
+ASP.NET || Request / Response || 要求と応答。 || Response.Redirect("a.aspx")
+ASP.NET || QueryString || URL の引数。 || Request.QueryString("id")
+ASP.NET || Cookie || 利用者側に保存する情報。 || Response.Cookies("a").Value = "1"
+ASP.NET || Server.Transfer || サーバー内でページを移す。 || Server.Transfer("b.aspx")
+ASP.NET || Global.asax || アプリ全体のイベント。 || Application_Start
+ASP.NET || Web.config || Web の設定ファイル。 || <appSettings>
+ASP.NET || マスターページ || 共通の外枠。 || Site.Master
+ASP.NET || ユーザーコントロール || 再利用できる部品。 || .ascx
+ASP.NET || GridView || 表の表示コントロール。 || <asp:GridView>
+ASP.NET || Repeater || 繰り返し表示。 || <asp:Repeater>
+ASP.NET || バリデーションコントロール || 入力の検証。 || <asp:RequiredFieldValidator>
+ASP.NET || ASP.NET Core || 新しいクロスプラットフォームの Web 基盤。 || Microsoft.AspNetCore
+ASP.NET || Minimal API || 少ない記述で API を作る。 || app.MapGet("/", ...)
+ASP.NET || Controller || 要求を受けるクラス。 || Inherits Controller
+ASP.NET || Action メソッド || コントローラーの処理。 || Function Index() As IActionResult
+ASP.NET || Razor || HTML に VB/C# を埋め込む。 || .cshtml
+ASP.NET || ルーティング || URL と処理の対応。 || <Route("api/[controller]")>
+ASP.NET || ModelState || 入力検証の結果。 || ModelState.IsValid
+ASP.NET || モデルバインディング || 要求を型に詰める。 || Function Post(m As Model)
+ASP.NET || 依存関係の注入 || 部品を外から渡す。 || builder.Services.AddScoped(...)
+ASP.NET || ミドルウェア || 要求を順に処理する層。 || app.Use(...)
+ASP.NET || ActionResult || 応答の種類。 || Return Ok(data)
+ASP.NET || IActionResult || 応答の共通型。 || IActionResult
+ASP.NET || HttpGet / HttpPost || HTTP の種類を指定する。 || <HttpGet>
+ASP.NET || FromBody || 本文から受け取る。 || <FromBody>
+ASP.NET || ApiController || API 用の既定動作。 || <ApiController>
+ASP.NET || 認証 || 誰かを確かめる。 || AddAuthentication()
+ASP.NET || 認可 || 許可を判断する。 || <Authorize>
+ASP.NET || JWT || トークンによる認証。 || JwtBearer
+ASP.NET || CORS || 別のサイトからの利用を許可する。 || AddCors()
+ASP.NET || HttpContext || 現在の要求の情報。 || HttpContext.User
+ASP.NET || 設定の読み込み || 設定ファイルから値を取る。 || builder.Configuration("Key")
+ASP.NET || appsettings.json || 設定ファイル。 || appsettings.json
+ASP.NET || ILogger || ログの書き出し。 || logger.LogInformation("...")
+ASP.NET || HttpClientFactory || HttpClient を安全に作る。 || AddHttpClient()
+ASP.NET || SignalR || リアルタイム通信。 || Hub
+ASP.NET || Blazor || C# で作る Web UI。 || @page
+ASP.NET || Swagger || API の仕様書を作る。 || AddSwaggerGen()
+ASP.NET || 出力キャッシュ || 応答を保存して使い回す。 || [OutputCache]
+ASP.NET || Kestrel || 組み込みの Web サーバー。 || Kestrel
+ASP.NET || IIS || Windows の Web サーバー。 || Internet Information Services
+ASP.NET || 発行 (Publish) || 配置用に出力する。 || dotnet publish
+ASP.NET || ヘルスチェック || 稼働状況を返す。 || MapHealthChecks("/health")
+リフレクションと属性 || Type 取得 || 型の情報を取る。 || GetType(String)
+リフレクションと属性 || GetType メソッド || 値から型を取る。 || x.GetType()
+リフレクションと属性 || TypeOf ... Is || 型の判定。 || If TypeOf x Is String Then
+リフレクションと属性 || GetProperties || プロパティの一覧。 || t.GetProperties()
+リフレクションと属性 || GetMethods || メソッドの一覧。 || t.GetMethods()
+リフレクションと属性 || GetFields || フィールドの一覧。 || t.GetFields()
+リフレクションと属性 || GetValue / SetValue || 値を読み書きする。 || p.GetValue(obj)
+リフレクションと属性 || Invoke || メソッドを実行する。 || m.Invoke(obj, args)
+リフレクションと属性 || Activator.CreateInstance || 型からインスタンスを作る。 || Activator.CreateInstance(t)
+リフレクションと属性 || Assembly.Load || アセンブリを読み込む。 || Assembly.Load("a")
+リフレクションと属性 || Assembly.GetExecutingAssembly || 実行中のアセンブリ。 || Assembly.GetExecutingAssembly()
+リフレクションと属性 || BindingFlags || 検索の条件。 || BindingFlags.Public Or BindingFlags.Instance
+リフレクションと属性 || CustomAttribute || 独自の属性。 || Inherits Attribute
+リフレクションと属性 || AttributeUsage || 属性の使える範囲。 || <AttributeUsage(AttributeTargets.Class)>
+リフレクションと属性 || GetCustomAttributes || 属性を取得する。 || t.GetCustomAttributes(True)
+リフレクションと属性 || Obsolete 属性 || 非推奨の印。 || <Obsolete("使わない")>
+リフレクションと属性 || Serializable 属性 || シリアライズ可能の印。 || <Serializable>
+リフレクションと属性 || DllImport 属性 || ネイティブ DLL を呼ぶ。 || <DllImport("user32.dll")>
+リフレクションと属性 || Conditional 属性 || 条件付きで呼ぶ。 || <Conditional("DEBUG")>
+リフレクションと属性 || CallerMemberName || 呼び出し元の名前を受け取る。 || <CallerMemberName> name As String = Nothing
+リフレクションと属性 || DebuggerDisplay || デバッガの表示を指定する。 || <DebuggerDisplay("{Name}")>
+リフレクションと属性 || Description 属性 || 説明を付ける。 || <Description("説明")>
+リフレクションと属性 || Browsable 属性 || プロパティウィンドウへの表示。 || <Browsable(False)>
+リフレクションと属性 || DefaultValue 属性 || 既定値の印。 || <DefaultValue(0)>
+リフレクションと属性 || Flags 属性 || ビットフラグの列挙。 || <Flags>
+リフレクションと属性 || Extension 属性 || 拡張メソッドの印。 || <Extension>
+リフレクションと属性 || DynamicInvoke || デリゲートを動的に呼ぶ。 || d.DynamicInvoke(args)
+リフレクションと属性 || CallByName || 名前で呼び出す（VB）。 || CallByName(obj, "M", CallType.Method)
+リフレクションと属性 || Late Binding || 実行時に結びつける。 || Dim o As Object
+リフレクションと属性 || Option Strict || 暗黙の型変換を禁じる。 || Option Strict On
+リフレクションと属性 || Expression Tree || 式をデータとして扱う。 || Expression(Of Func(Of Integer))
+リフレクションと属性 || Emit || 実行時にコードを生成する。 || System.Reflection.Emit
+リフレクションと属性 || CodeDom || コード生成の仕組み。 || CodeDom
+リフレクションと属性 || Roslyn || コンパイラの API。 || Microsoft.CodeAnalysis
+リフレクションと属性 || Source Generator || コンパイル時にコードを生成する。 || IIncrementalGenerator
+リフレクションと属性 || Assembly Version || アセンブリの版。 || <Assembly: AssemblyVersion("1.0.0.0")>
+リフレクションと属性 || AssemblyInfo.vb || アセンブリの属性を書くファイル。 || AssemblyInfo.vb
+リフレクションと属性 || アプリ名の取得 || 実行ファイルの名前を取る。 || Application.ProductName
+リフレクションと属性 || バージョンの取得 || アプリの版を取る。 || Application.ProductVersion
+リフレクションと属性 || GAC || 共有アセンブリの置き場。 || Global Assembly Cache
+リフレクションと属性 || 強い名前 || 署名つきのアセンブリ名。 || sn.exe
+リフレクションと属性 || AssemblyLoadContext || 読み込みの分離。 || AssemblyLoadContext
+リフレクションと属性 || プラグイン方式 || DLL を動的に読み込む設計。 || Assembly.LoadFrom
+リフレクションと属性 || 型のメンバー検索 || 名前でメンバーを探す。 || t.GetMember("Name")
+リフレクションと属性 || ジェネリック型の作成 || 実行時に型引数を与える。 || t.MakeGenericType(...)
+リフレクションと属性 || nameof 相当 || 名前を文字列で得る。 || NameOf(x)
+リフレクションと属性 || CompilerServices || コンパイラ補助の名前空間。 || System.Runtime.CompilerServices
+リフレクションと属性 || ObjectDumper 風 || オブジェクトを文字列にして確認する。 || JsonSerializer.Serialize(o)
+デリゲートとイベント || Delegate || メソッドを指す型。 || Delegate Sub Notify(s As String)
+デリゲートとイベント || AddressOf || メソッドへの参照。 || New Notify(AddressOf Show)
+デリゲートとイベント || Func(Of T) || 戻り値のあるデリゲート。 || Dim f As Func(Of Integer, Integer)
+デリゲートとイベント || Action(Of T) || 戻り値のないデリゲート。 || Dim a As Action(Of String)
+デリゲートとイベント || Predicate(Of T) || 真偽を返すデリゲート。 || Predicate(Of Integer)
+デリゲートとイベント || Comparison(Of T) || 比較のデリゲート。 || list.Sort(Function(a, b) a - b)
+デリゲートとイベント || ラムダ式 || 名前のない関数。 || Function(x) x * 2
+デリゲートとイベント || 複数行ラムダ || 複数の文を持つラムダ。 || Sub() ... End Sub
+デリゲートとイベント || マルチキャスト || 複数のメソッドを登録する。 || d = [Delegate].Combine(d1, d2)
+デリゲートとイベント || Event || イベントの宣言。 || Public Event Changed As EventHandler
+デリゲートとイベント || RaiseEvent || イベントを発生させる。 || RaiseEvent Changed(Me, EventArgs.Empty)
+デリゲートとイベント || WithEvents || イベントを受け取る変数。 || Private WithEvents btn As Button
+デリゲートとイベント || Handles || イベントと処理を結ぶ。 || Sub A() Handles btn.Click
+デリゲートとイベント || AddHandler || 実行時にイベントを結ぶ。 || AddHandler btn.Click, AddressOf A
+デリゲートとイベント || RemoveHandler || イベントの結びを解く。 || RemoveHandler btn.Click, AddressOf A
+デリゲートとイベント || EventHandler || 標準のイベントの型。 || EventHandler
+デリゲートとイベント || EventHandler(Of T) || 型付きのイベント引数。 || EventHandler(Of MyArgs)
+デリゲートとイベント || EventArgs || イベントの引数。 || Inherits EventArgs
+デリゲートとイベント || カスタムイベント || 追加・削除を自分で書く。 || Public Custom Event
+デリゲートとイベント || sender 引数 || イベントの発生元。 || sender As Object
+デリゲートとイベント || コールバック || 後から呼ばれる処理。 || callback
+デリゲートとイベント || 匿名メソッド風 || その場で処理を渡す。 || Sub() Console.WriteLine()
+デリゲートとイベント || 閉包 (クロージャ) || 外の変数を取り込む。 || Dim n = 1 : Function() n
+デリゲートとイベント || イベントの解除忘れ || メモリリークの原因。 || RemoveHandler
+デリゲートとイベント || WeakEvent || 弱参照のイベント。 || WeakEventManager
+デリゲートとイベント || INotifyPropertyChanged || 値の変更を通知する。 || PropertyChanged
+デリゲートとイベント || ICommand || 画面操作をコマンドにする。 || Execute, CanExecute
+デリゲートとイベント || ObservableCollection || 変更を通知する集まり。 || New ObservableCollection(Of T)
+デリゲートとイベント || CollectionChanged || 集まりの変更の通知。 || AddHandler c.CollectionChanged
+デリゲートとイベント || BeginInvoke || 非同期でデリゲートを呼ぶ。 || d.BeginInvoke(...)
+デリゲートとイベント || Invoke (UI) || UI スレッドで実行する。 || Me.Invoke(Sub() ...)
+デリゲートとイベント || InvokeRequired || UI スレッドかの確認。 || If Me.InvokeRequired Then
+デリゲートとイベント || SynchronizationContext || 元のスレッドに戻す。 || SynchronizationContext.Current
+デリゲートとイベント || Timer.Elapsed || タイマーの発火イベント。 || AddHandler t.Elapsed, ...
+デリゲートとイベント || Observer パターン || 通知を購読する設計。 || IObservable(Of T)
+デリゲートとイベント || IObservable / IObserver || 観察可能な流れ。 || Subscribe(observer)
+デリゲートとイベント || Reactive Extensions || イベントを LINQ で扱う。 || System.Reactive
+デリゲートとイベント || Mediator パターン || 仲介者で通信を整理する。 || IMediator
+デリゲートとイベント || Messenger || 部品間のメッセージ送受信。 || WeakReferenceMessenger

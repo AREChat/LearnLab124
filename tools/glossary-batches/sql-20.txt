@@ -1,0 +1,62 @@
+補足 || SQL コメント (--) || 行末までのコメント。 || -- メモ
+補足 || SQL コメント (/* */) || 範囲のコメント。 || /* メモ */
+補足 || 文字列連結 (||) || 文字をつなぐ。 || 'a' || 'b'
+補足 || CONCAT() || 文字をつなぐ関数。 || CONCAT('a', 'b')
+補足 || 識別子の引用 || 予約語や記号を名前に使う。 || "Order"
+補足 || バッククォート || MySQL の識別子引用。 || `order`
+補足 || 角括弧 || SQL Server の識別子引用。 || [order]
+補足 || 予約語 || 名前に使えない語。 || SELECT, FROM
+補足 || 大文字小文字の区別 || 名前の比較の違い。 || DB により異なる
+補足 || ワイルドカード || パターンの代用文字。 || %, _
+補足 || ESCAPE 句 || ワイルドカードを文字として扱う。 || LIKE '%\%%' ESCAPE '\'
+補足 || NULL の比較 || IS NULL で調べる。 || WHERE x IS NULL
+補足 || 三値論理 || 真・偽・不明の3値。 || UNKNOWN
+補足 || NOT IN と NULL || NULL を含むと結果が空になる。 || NOT EXISTS で代替
+補足 || COUNT(*) と COUNT(列) || 後者は NULL を数えない。 || COUNT(col)
+補足 || HAVING と WHERE || 集計前と後の絞り込み。 || HAVING COUNT(*) > 1
+補足 || DISTINCT ON || 先頭の1行だけ残す。 || SELECT DISTINCT ON (a) ...
+補足 || 相関サブクエリ || 外側の値を参照する。 || WHERE x > (SELECT AVG(...) WHERE ...)
+補足 || LATERAL || 左の行を参照できる結合。 || JOIN LATERAL (...) ON true
+補足 || CROSS APPLY || 左の行ごとに右を評価する。 || CROSS APPLY fn(t.id)
+補足 || OUTER APPLY || 右が空でも左を残す。 || OUTER APPLY fn(t.id)
+補足 || 集合の等価 || 同じ集合かを調べる。 || EXCEPT の両方向
+補足 || ORDER BY NULLS FIRST || NULL を先に並べる。 || ORDER BY x NULLS FIRST
+補足 || 並び順の安定性 || ORDER BY がなければ順序は保証されない。 || ORDER BY を必ず書く
+補足 || 結合の書き方 || ON と USING。 || JOIN b USING (id)
+補足 || 自己結合 || 同じ表を結合する。 || FROM t a JOIN t b ON ...
+補足 || 非等価結合 || 等号以外の条件で結合する。 || ON a.x < b.y
+補足 || 暗黙のキャスト || 自動で型が変わる。 || '1' + 1
+補足 || 日付の範囲検索 || 終端を含めない書き方が安全。 || d >= :a AND d < :b
+補足 || 月末の求め方 || 月の最終日を得る。 || date_trunc('month', d) + interval '1 month - 1 day'
+補足 || 年齢の計算 || 生年月日から求める。 || age(birth)
+補足 || 連番の欠番探し || 抜けた番号を見つける。 || generate_series と LEFT JOIN
+補足 || ランダムに1件取る || 無作為に取り出す。 || ORDER BY random() LIMIT 1
+補足 || TABLESAMPLE || 表から標本を取る。 || TABLESAMPLE BERNOULLI (10)
+補足 || 重複行の削除 || 同じ内容の行を1つにする。 || DELETE ... USING
+補足 || 行の複製 || 既存の行を元に追加する。 || INSERT INTO t SELECT ...
+補足 || 他表を使った更新 || 結合して更新する。 || UPDATE a SET ... FROM b
+補足 || 他表を使った削除 || 結合して削除する。 || DELETE FROM a USING b
+補足 || CREATE TABLE AS || 結果から表を作る。 || CREATE TABLE t2 AS SELECT ...
+補足 || SELECT INTO || 結果を新しい表に入れる。 || SELECT * INTO t2 FROM t
+補足 || 一時表 || 接続の間だけ使う表。 || CREATE TEMP TABLE
+補足 || UNLOGGED TABLE || ログを書かない高速な表。 || CREATE UNLOGGED TABLE
+補足 || COPY || ファイルと表の入出力。 || COPY t TO STDOUT
+補足 || LOAD DATA || ファイルの取り込み（MySQL）。 || LOAD DATA INFILE
+補足 || BULK INSERT || ファイルの取り込み（SQL Server）。 || BULK INSERT t FROM 'a.csv'
+補足 || SQL*Loader || ファイルの取り込み（Oracle）。 || sqlldr
+補足 || 外部表 || ファイルを表として読む。 || EXTERNAL TABLE
+補足 || DUAL || ダミーの表（Oracle）。 || SELECT 1 FROM DUAL
+補足 || ROWNUM || 行番号（Oracle）。 || WHERE ROWNUM <= 10
+補足 || CONNECT BY || 階層問い合わせ（Oracle）。 || CONNECT BY PRIOR id = parent_id
+補足 || NVL() || NULL を置き換える（Oracle）。 || NVL(x, 0)
+補足 || DECODE() || 値による分岐（Oracle）。 || DECODE(x, 1, 'a', 'b')
+補足 || ISNULL() || NULL を置き換える（SQL Server）。 || ISNULL(x, 0)
+補足 || IIF() || 条件式（SQL Server）。 || IIF(x > 0, 'a', 'b')
+補足 || TOP || 件数を限る（SQL Server）。 || SELECT TOP 5 * FROM t
+補足 || STRING_SPLIT() || 文字列を分割する（SQL Server）。 || STRING_SPLIT('a,b', ',')
+補足 || FORMAT() || 値を書式化する（SQL Server）。 || FORMAT(d, 'yyyy-MM-dd')
+補足 || DATEADD() || 日時を加算する（SQL Server）。 || DATEADD(day, 7, d)
+補足 || DATEDIFF() || 日時の差を求める。 || DATEDIFF(day, a, b)
+補足 || IFNULL() || NULL を置き換える（MySQL）。 || IFNULL(x, 0)
+補足 || DATE_FORMAT() || 日時を書式化する（MySQL）。 || DATE_FORMAT(d, '%Y-%m-%d')
+補足 || STR_TO_DATE() || 文字を日付にする（MySQL）。 || STR_TO_DATE('2026-11-09', '%Y-%m-%d')

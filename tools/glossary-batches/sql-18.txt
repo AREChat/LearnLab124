@@ -1,0 +1,188 @@
+実行計画 || Seq Scan || 全行を順に読む。 || EXPLAIN SELECT * FROM t;
+実行計画 || Index Scan || インデックスで探して表を読む。 || Index Scan using idx
+実行計画 || Index Only Scan || インデックスだけで答える。 || Index Only Scan
+実行計画 || Bitmap Heap Scan || ビットマップで該当ページをまとめて読む。 || Bitmap Heap Scan
+実行計画 || Nested Loop || 外側の行ごとに内側を探す結合。 || Nested Loop
+実行計画 || Hash Join || ハッシュ表で結合する。 || Hash Join
+実行計画 || Merge Join || 並べ替えて突き合わせる結合。 || Merge Join
+実行計画 || Sort || 並べ替えの処理。 || Sort Method: quicksort
+実行計画 || HashAggregate || ハッシュで集計する。 || HashAggregate
+実行計画 || GroupAggregate || 並べてから集計する。 || GroupAggregate
+実行計画 || Materialize || 結果を一時保持する。 || Materialize
+実行計画 || Gather || 並列処理の結果を集める。 || Gather
+実行計画 || cost || 見積りの処理コスト。 || cost=0.00..10.50
+実行計画 || rows (見積り) || 見積りの行数。 || rows=100
+実行計画 || actual time || 実測の所要時間。 || actual time=0.1..0.5
+実行計画 || loops || ノードを実行した回数。 || loops=1
+実行計画 || Buffers || バッファの読み書き量。 || EXPLAIN (ANALYZE, BUFFERS)
+実行計画 || EXPLAIN ANALYZE || 実際に実行して計画を見る。 || EXPLAIN ANALYZE SELECT ...
+実行計画 || EXPLAIN FORMAT JSON || 計画を JSON で出す。 || EXPLAIN (FORMAT JSON) SELECT ...
+実行計画 || 統計情報 || 計画の見積りに使う分布情報。 || ANALYZE t;
+実行計画 || pg_stats || 列ごとの統計を見るビュー。 || SELECT * FROM pg_stats WHERE tablename='t';
+実行計画 || 選択率 || 条件に合う行の割合。 || selectivity
+実行計画 || カーディナリティ推定 || 結果行数の見積り。 || cardinality estimate
+実行計画 || プランナ || 最適な計画を選ぶ仕組み。 || query planner
+実行計画 || ヒント句 || 計画を指示する書き方（Oracle等）。 || SELECT /*+ INDEX(t idx) */ ...
+実行計画 || プランキャッシュ || 計画を再利用する。 || plan cache
+実行計画 || パラメータスニッフィング || 最初の値で計画が決まる問題。 || parameter sniffing
+実行計画 || SARGable || インデックスを使える条件の形。 || WHERE d >= '2026-01-01'
+実行計画 || カバリングインデックス || 必要な列を全て含むインデックス。 || INCLUDE (col)
+実行計画 || 複合インデックスの順序 || 先頭列から効く。 || INDEX (a, b)
+実行計画 || 部分インデックス || 条件つきのインデックス。 || CREATE INDEX ON t(a) WHERE flag;
+実行計画 || 式インデックス || 式の結果に作る。 || CREATE INDEX ON t(lower(name));
+実行計画 || BRIN || 範囲の要約を持つ軽いインデックス。 || USING brin
+実行計画 || GIN || 配列や JSON、全文検索向け。 || USING gin
+実行計画 || GiST || 空間や範囲向けの汎用インデックス。 || USING gist
+実行計画 || SP-GiST || 分割型の空間インデックス。 || USING spgist
+実行計画 || ハッシュインデックス || 等価比較向け。 || USING hash
+実行計画 || N+1 問題 || 1回の取得に加え行ごとに追加の問い合わせが走る。 || JOIN や IN でまとめる
+実行計画 || OFFSET の遅さ || 大きな OFFSET は読み飛ばしで遅い。 || キーセットページングで代替
+実行計画 || キーセットページング || 前回の最後の値から続きを取る。 || WHERE id > :last ORDER BY id LIMIT 20
+実行計画 || SELECT * の回避 || 必要な列だけ取る。 || SELECT id, name
+実行計画 || EXISTS と IN || 存在確認は EXISTS が速いことが多い。 || WHERE EXISTS (SELECT 1 ...)
+実行計画 || UNION ALL の利点 || 重複排除をしないので速い。 || UNION ALL
+実行計画 || バッチ処理 || 件数を区切って更新する。 || UPDATE ... LIMIT
+ストアド・トリガー || CREATE FUNCTION || 関数を作る。 || CREATE FUNCTION f() RETURNS int AS $$ ... $$ LANGUAGE sql;
+ストアド・トリガー || CREATE PROCEDURE || プロシージャを作る。 || CREATE PROCEDURE p() ...
+ストアド・トリガー || CALL || プロシージャを呼ぶ。 || CALL p();
+ストアド・トリガー || RETURNS TABLE || 表を返す関数。 || RETURNS TABLE(id int)
+ストアド・トリガー || RETURNS SETOF || 複数行を返す関数。 || RETURNS SETOF t
+ストアド・トリガー || RETURN QUERY || クエリの結果を返す（PL/pgSQL）。 || RETURN QUERY SELECT ...
+ストアド・トリガー || DECLARE (変数) || 変数を宣言する。 || DECLARE n int;
+ストアド・トリガー || FOUND || 直前の文が行を処理したか。 || IF NOT FOUND THEN ...
+ストアド・トリガー || GET DIAGNOSTICS || 処理行数などを取得する。 || GET DIAGNOSTICS n = ROW_COUNT;
+ストアド・トリガー || EXCEPTION WHEN || 例外を捕まえる。 || EXCEPTION WHEN unique_violation THEN ...
+ストアド・トリガー || RAISE NOTICE || メッセージを出す。 || RAISE NOTICE 'x=%', x;
+ストアド・トリガー || FOR ... LOOP || 結果を1行ずつ処理する。 || FOR r IN SELECT ... LOOP ... END LOOP;
+ストアド・トリガー || EXECUTE (動的SQL) || 文字列の SQL を実行する。 || EXECUTE format('...')
+ストアド・トリガー || SECURITY DEFINER || 作成者の権限で実行する。 || SECURITY DEFINER
+ストアド・トリガー || SECURITY INVOKER || 呼んだ人の権限で実行する。 || SECURITY INVOKER
+ストアド・トリガー || IMMUTABLE || 同じ入力なら常に同じ結果。 || IMMUTABLE
+ストアド・トリガー || STABLE || 1文の中では結果が変わらない。 || STABLE
+ストアド・トリガー || VOLATILE || 呼ぶたび結果が変わりうる。 || VOLATILE
+ストアド・トリガー || TRIGGER 関数 || トリガーから呼ばれる関数。 || RETURNS trigger
+ストアド・トリガー || NEW / OLD || 変更後・変更前の行。 || NEW.updated_at := now();
+ストアド・トリガー || TG_OP || 起動した操作の種類。 || IF TG_OP = 'INSERT' THEN
+ストアド・トリガー || BEFORE トリガー || 変更の前に動く。 || BEFORE UPDATE
+ストアド・トリガー || AFTER トリガー || 変更の後に動く。 || AFTER INSERT
+ストアド・トリガー || INSTEAD OF トリガー || ビューへの操作の代わりに動く。 || INSTEAD OF INSERT
+ストアド・トリガー || FOR EACH ROW || 行ごとに動く。 || FOR EACH ROW
+ストアド・トリガー || FOR EACH STATEMENT || 文ごとに1回動く。 || FOR EACH STATEMENT
+ストアド・トリガー || イベントトリガー || DDL に反応するトリガー。 || CREATE EVENT TRIGGER
+ストアド・トリガー || ルール (RULE) || 書き換え規則。 || CREATE RULE
+ストアド・トリガー || DO ブロック || 無名のコードブロックを実行する。 || DO $$ BEGIN ... END $$;
+ストアド・トリガー || DELIMITER || 区切り文字を変える（MySQL）。 || DELIMITER //
+ストアド・トリガー || DEFINER (MySQL) || 実行権限を持つユーザー。 || DEFINER = 'u'@'h'
+ストアド・トリガー || SIGNAL || 例外を発生させる（MySQL）。 || SIGNAL SQLSTATE '45000'
+ストアド・トリガー || CURSOR (宣言) || カーソルを宣言する。 || DECLARE c CURSOR FOR SELECT ...
+ストアド・トリガー || FETCH || カーソルから行を取る。 || FETCH NEXT FROM c;
+ストアド・トリガー || OPEN / CLOSE || カーソルを開く・閉じる。 || OPEN c; CLOSE c;
+ストアド・トリガー || PRAGMA AUTONOMOUS_TRANSACTION || 独立したトランザクション（Oracle）。 || PRAGMA AUTONOMOUS_TRANSACTION;
+ストアド・トリガー || PACKAGE || 関連する処理の集まり（Oracle）。 || CREATE PACKAGE p AS ... END;
+ストアド・トリガー || BULK COLLECT || まとめて配列に取る（Oracle）。 || SELECT ... BULK COLLECT INTO arr
+ストアド・トリガー || FORALL || まとめて実行する（Oracle）。 || FORALL i IN 1..n
+ストアド・トリガー || TRY...CATCH (T-SQL) || 例外処理（SQL Server）。 || BEGIN TRY ... END TRY
+ストアド・トリガー || THROW (T-SQL) || 例外を投げる。 || THROW 50000, 'msg', 1;
+ストアド・トリガー || @@ROWCOUNT || 直前の処理行数（SQL Server）。 || SELECT @@ROWCOUNT;
+ストアド・トリガー || @@IDENTITY || 直近の採番値（SQL Server）。 || SELECT @@IDENTITY;
+ストアド・トリガー || SCOPE_IDENTITY() || 同じスコープの採番値。 || SELECT SCOPE_IDENTITY();
+ストアド・トリガー || テーブル変数 || 表の形をした変数（SQL Server）。 || DECLARE @t TABLE (id int);
+ストアド・トリガー || OUTPUT 句 || 変更した行を返す。 || INSERT ... OUTPUT inserted.id
+ストアド・トリガー || RETURNING 句 || 変更した行を返す。 || INSERT ... RETURNING id
+権限・運用 || GRANT ALL PRIVILEGES || すべての権限を与える。 || GRANT ALL ON t TO u;
+権限・運用 || REVOKE || 権限を取り消す。 || REVOKE SELECT ON t FROM u;
+権限・運用 || WITH GRANT OPTION || 他人へ権限を渡せる。 || GRANT ... WITH GRANT OPTION
+権限・運用 || ALTER DEFAULT PRIVILEGES || 今後作る物の既定の権限。 || ALTER DEFAULT PRIVILEGES ...
+権限・運用 || CREATE ROLE || ロールを作る。 || CREATE ROLE r;
+権限・運用 || ALTER ROLE || ロールを変更する。 || ALTER ROLE r PASSWORD 'x';
+権限・運用 || SET ROLE || ロールを切り替える。 || SET ROLE r;
+権限・運用 || pg_hba.conf || 接続の認証規則の設定ファイル。 || host all all 0.0.0.0/0 scram-sha-256
+権限・運用 || RLS ポリシー || 行ごとのアクセス制御。 || CREATE POLICY p ON t USING (owner = current_user);
+権限・運用 || FORCE ROW LEVEL SECURITY || 所有者にも行の制御を適用する。 || ALTER TABLE t FORCE ROW LEVEL SECURITY;
+権限・運用 || 列レベル権限 || 列ごとの権限。 || GRANT SELECT (name) ON t TO u;
+権限・運用 || 最小権限の原則 || 必要最小限の権限だけ与える。 || least privilege
+権限・運用 || SQL インジェクション || 入力から不正な SQL を実行される攻撃。 || プレースホルダで防ぐ
+権限・運用 || プレースホルダ || 値を後から安全に埋め込む。 || WHERE id = $1
+権限・運用 || プリペアドステートメント || 解析済みの文を使い回す。 || PREPARE p AS SELECT ...
+権限・運用 || EXECUTE (prepared) || 準備した文を実行する。 || EXECUTE p(1);
+権限・運用 || DEALLOCATE || 準備した文を破棄する。 || DEALLOCATE p;
+権限・運用 || 透過的データ暗号化 || ディスク上のデータを暗号化する。 || TDE
+権限・運用 || 列暗号化 || 列の値を暗号化する。 || pgp_sym_encrypt()
+権限・運用 || pgcrypto || 暗号関数の拡張。 || CREATE EXTENSION pgcrypto;
+権限・運用 || 監査ログ || 操作の記録。 || pgaudit
+権限・運用 || マスキング || 値を隠して見せる。 || data masking
+権限・運用 || バックアップ (論理) || SQL として書き出す。 || pg_dump
+権限・運用 || バックアップ (物理) || ファイルを丸ごとコピーする。 || pg_basebackup
+権限・運用 || PITR || 任意の時点に戻す。 || point-in-time recovery
+権限・運用 || WAL アーカイブ || WAL を保存する。 || archive_command
+権限・運用 || レプリケーション (物理) || 変更をそのまま複製する。 || streaming replication
+権限・運用 || 論理レプリケーション || 表単位で行の変更を複製する。 || CREATE PUBLICATION
+権限・運用 || PUBLICATION || 配信側の定義。 || CREATE PUBLICATION p FOR TABLE t;
+権限・運用 || SUBSCRIPTION || 受信側の定義。 || CREATE SUBSCRIPTION s CONNECTION '...' PUBLICATION p;
+権限・運用 || フェイルオーバー || 障害時に予備へ切り替える。 || failover
+権限・運用 || スイッチオーバー || 計画して主系を切り替える。 || switchover
+権限・運用 || リードレプリカ || 読み取り専用の複製。 || read replica
+権限・運用 || レプリケーション遅延 || 複製の遅れ。 || replication lag
+権限・運用 || パーティション (範囲) || 範囲で表を分ける。 || PARTITION BY RANGE (d)
+権限・運用 || パーティション (リスト) || 値の一覧で分ける。 || PARTITION BY LIST (region)
+権限・運用 || パーティション (ハッシュ) || ハッシュで均等に分ける。 || PARTITION BY HASH (id)
+権限・運用 || パーティションプルーニング || 不要なパーティションを読まない。 || partition pruning
+権限・運用 || シャーディング || 複数のサーバーに分散する。 || sharding
+権限・運用 || コネクションプール || 接続を使い回す。 || pgbouncer
+権限・運用 || pgbouncer || 軽量な接続プーラー。 || pgbouncer.ini
+権限・運用 || pg_stat_activity || 実行中の接続の状況。 || SELECT * FROM pg_stat_activity;
+権限・運用 || pg_stat_statements || SQL ごとの統計。 || SELECT * FROM pg_stat_statements;
+権限・運用 || pg_locks || 現在のロックの一覧。 || SELECT * FROM pg_locks;
+権限・運用 || pg_cancel_backend() || 実行中の問い合わせを中止する。 || SELECT pg_cancel_backend(123);
+権限・運用 || bloat || 不要領域が増えて膨らむこと。 || VACUUM FULL
+権限・運用 || pg_repack || 止めずに表を詰め直す拡張。 || pg_repack -t t
+権限・運用 || REINDEX || インデックスを作り直す。 || REINDEX INDEX idx;
+権限・運用 || CREATE INDEX CONCURRENTLY || 書き込みを止めずに作る。 || CREATE INDEX CONCURRENTLY ...
+権限・運用 || ALTER TABLE の注意 || ロックが長引く変更に注意する。 || lock_timeout を設定
+権限・運用 || マイグレーション || スキーマ変更を版管理して適用する。 || migration
+権限・運用 || ロールバック計画 || 戻す手順を用意しておく。 || down migration
+権限・運用 || ゼロダウンタイム変更 || 止めずにスキーマを変える手順。 || expand and contract
+権限・運用 || 監視指標 || 接続数・遅延・ロック待ち等を見る。 || monitoring
+権限・運用 || ログローテーション || ログを一定で入れ替える。 || log_rotation_age
+拡張・周辺 || pg_trgm || 類似検索の拡張。 || CREATE EXTENSION pg_trgm;
+拡張・周辺 || similarity() || 文字列の類似度。 || SELECT similarity('a', 'b');
+拡張・周辺 || unaccent || アクセントを除く拡張。 || CREATE EXTENSION unaccent;
+拡張・周辺 || uuid-ossp || UUID 生成の拡張。 || uuid_generate_v4()
+拡張・周辺 || hstore || キーと値の型。 || hstore
+拡張・周辺 || ltree || 階層パスの型。 || ltree
+拡張・周辺 || citext || 大文字小文字を区別しない文字列。 || citext
+拡張・周辺 || PostGIS || 地理空間の拡張。 || CREATE EXTENSION postgis;
+拡張・周辺 || pgvector || ベクトル検索の拡張。 || CREATE EXTENSION vector;
+拡張・周辺 || pg_cron || ジョブ予約の拡張。 || SELECT cron.schedule(...);
+拡張・周辺 || postgres_fdw || 他の Postgres に接続する。 || CREATE EXTENSION postgres_fdw;
+拡張・周辺 || FOREIGN TABLE || 外部のデータを表として扱う。 || CREATE FOREIGN TABLE ...
+拡張・周辺 || TimescaleDB || 時系列向けの拡張。 || create_hypertable()
+拡張・周辺 || Citus || 分散処理の拡張。 || create_distributed_table()
+拡張・周辺 || 全文検索 || 文書から語を検索する。 || to_tsvector @@ to_tsquery
+拡張・周辺 || @@ 演算子 || 全文検索の一致。 || WHERE doc @@ query
+拡張・周辺 || ts_rank() || 全文検索の順位づけ。 || ts_rank(doc, q)
+拡張・周辺 || ts_headline() || 一致箇所を強調表示する。 || ts_headline(body, q)
+拡張・周辺 || 辞書 (全文検索) || 語の正規化規則。 || english, simple
+拡張・周辺 || ベクトル距離 || 埋め込みの近さ。 || <=> (コサイン距離)
+拡張・周辺 || HNSW || 近似最近傍の索引。 || USING hnsw
+拡張・周辺 || IVFFlat || 分割型の近似最近傍の索引。 || USING ivfflat
+NoSQL比較 || ドキュメント DB || JSON 文書を保存する DB。 || MongoDB
+NoSQL比較 || キーバリュー DB || キーと値の組を保存する DB。 || Redis
+NoSQL比較 || 列指向 DB || 列ごとにまとめて保存する DB。 || ClickHouse
+NoSQL比較 || ワイドカラム DB || 柔軟な列を持つ DB。 || Cassandra
+NoSQL比較 || グラフ DB || 関係を辿るのが得意な DB。 || Neo4j
+NoSQL比較 || 時系列 DB || 時間順のデータ向け。 || InfluxDB
+NoSQL比較 || NewSQL || SQL と分散を両立する DB。 || CockroachDB
+NoSQL比較 || OLTP || 短い更新を大量に処理する。 || 注文処理
+NoSQL比較 || OLAP || 大量データの集計分析。 || 売上分析
+NoSQL比較 || データウェアハウス || 分析用に集約したデータ置き場。 || BigQuery
+NoSQL比較 || ETL || 取り出し・変換・書き込み。 || Extract Transform Load
+NoSQL比較 || ELT || 先に書き込み後で変換する。 || Extract Load Transform
+NoSQL比較 || スタースキーマ || 事実表と次元表の構成。 || fact / dimension
+NoSQL比較 || スノーフレークスキーマ || 次元を正規化した構成。 || snowflake schema
+NoSQL比較 || 事実表 || 測定値を持つ表。 || fact table
+NoSQL比較 || 次元表 || 分析の切り口を持つ表。 || dimension table
+NoSQL比較 || SCD (緩やかに変化する次元) || 次元の履歴の持ち方。 || SCD Type 2
+NoSQL比較 || データレイク || 生のデータをそのまま置く場所。 || data lake
+NoSQL比較 || CDC || 変更を捕まえて伝える。 || change data capture
+NoSQL比較 || マテリアライズドビュー更新 || 集計結果を定期的に更新する。 || REFRESH MATERIALIZED VIEW

@@ -1,0 +1,91 @@
+設定とログ || IConfiguration || 設定の読み取り口。 || config("Key")
+設定とログ || IOptions || 設定を型に割り当てる。 || IOptions(Of MySettings)
+設定とログ || ConfigurationBuilder || 設定の取得元を組み合わせる。 || New ConfigurationBuilder()
+設定とログ || AddJsonFile || JSON から設定を読む。 || .AddJsonFile("appsettings.json")
+設定とログ || AddEnvironmentVariables || 環境変数から設定を読む。 || .AddEnvironmentVariables()
+設定とログ || app.config || 従来の設定ファイル。 || ConfigurationManager.AppSettings("k")
+設定とログ || ConfigurationManager || 従来の設定の取得。 || ConfigurationManager.ConnectionStrings
+設定とログ || Serilog || 構造化ログのライブラリ。 || Log.Information("x")
+設定とログ || NLog || ログのライブラリ。 || LogManager.GetCurrentClassLogger()
+設定とログ || log4net || 古くからあるログライブラリ。 || LogManager.GetLogger(...)
+設定とログ || LogLevel || ログの重要度。 || LogLevel.Warning
+設定とログ || Trace / Debug / Information || ログの段階。 || logger.LogDebug
+設定とログ || Warning / Error / Critical || 重いログの段階。 || logger.LogError(ex, "x")
+設定とログ || ILoggerFactory || ログ生成の元。 || factory.CreateLogger(Of T)()
+設定とログ || 構造化ログ || 項目つきで記録する。 || logger.LogInformation("{Id}", id)
+設定とログ || ログスコープ || 関連ログをまとめる。 || logger.BeginScope(...)
+設定とログ || Trace.WriteLine || トレース出力。 || Trace.WriteLine("x")
+設定とログ || TraceListener || 出力先を決める。 || TextWriterTraceListener
+設定とログ || Debug.WriteLine || デバッグ時のみ出力。 || Debug.WriteLine("x")
+設定とログ || Debug.Assert || 前提を確かめる。 || Debug.Assert(x > 0)
+設定とログ || Debugger.Break || デバッガで止める。 || Debugger.Break()
+設定とログ || Debugger.IsAttached || デバッガ接続中か。 || Debugger.IsAttached
+設定とログ || StackTrace || 呼び出しの履歴。 || New StackTrace(True)
+設定とログ || Exception.StackTrace || 例外の発生経路。 || ex.StackTrace
+設定とログ || Exception.InnerException || 原因の例外。 || ex.InnerException
+設定とログ || Exception.Data || 例外に情報を添える。 || ex.Data("id") = 1
+設定とログ || AppDomain.UnhandledException || 未処理の例外を受ける。 || AddHandler AppDomain.CurrentDomain.UnhandledException
+設定とログ || Application.ThreadException || UI の未処理例外。 || AddHandler Application.ThreadException
+設定とログ || TaskScheduler.UnobservedTaskException || 見逃された例外。 || UnobservedTaskException
+設定とログ || ExceptionDispatchInfo || 例外を保持して再スローする。 || ExceptionDispatchInfo.Capture(ex)
+設定とログ || Throw と Throw ex || 前者は経路を保つ。 || Throw
+設定とログ || 例外フィルタ || When で条件を絞る。 || Catch ex As Exception When ex.Message = "x"
+設定とログ || Finally || 必ず実行する後始末。 || Finally
+設定とログ || Using 宣言 || スコープ終了で解放する。 || Using f = File.OpenRead(p)
+設定とログ || Application Insights || 利用状況の監視。 || TelemetryClient
+設定とログ || OpenTelemetry || 計測の標準仕様。 || ActivitySource
+設定とログ || Activity || 処理の追跡単位。 || Activity.Current
+設定とログ || Metrics || 数値の計測。 || Meter
+設定とログ || ヘルスチェック (VB) || 稼働確認。 || IHealthCheck
+言語の新機能 || 文字列補間 || 文字列に式を埋め込む。 || $"こんにちは{name}"
+言語の新機能 || Null 条件演算子 || Nothing なら評価を止める。 || x?.Name
+言語の新機能 || If 演算子 || 条件式を1行で書く。 || If(a, b, c)
+言語の新機能 || 合体演算子 || Nothing なら代わりの値。 || If(x, "既定")
+言語の新機能 || NameOf || 名前を文字列で得る。 || NameOf(x)
+言語の新機能 || Tuple (値のタプル) || 複数の値をまとめる。 || (1, "a")
+言語の新機能 || 名前付きタプル || 要素に名前をつける。 || (Id:=1, Name:="a")
+言語の新機能 || タプルの分解 || 要素を変数に分ける。 || Dim (a, b) = t
+言語の新機能 || ローカル関数風 || 内側の処理を定義する。 || Dim f = Function(x) x
+言語の新機能 || Iterator 関数 || Yield で順次返す。 || Iterator Function
+言語の新機能 || Yield || 要素を1つ返す。 || Yield i
+言語の新機能 || Async / Await || 非同期処理。 || Await Task.Delay(100)
+言語の新機能 || Async Iterator || 非同期の順次返し。 || IAsyncEnumerable
+言語の新機能 || Await Using || 非同期で解放する。 || Await Using
+言語の新機能 || 読み取り専用の自動プロパティ || 設定できないプロパティ。 || ReadOnly Property X As Integer = 1
+言語の新機能 || 自動プロパティの初期化 || 宣言と同時に初期値。 || Property X As Integer = 1
+言語の新機能 || 数値リテラルの区切り || 桁を見やすくする。 || 1_000_000
+言語の新機能 || 2進リテラル || 2進数を書く。 || &B1010
+言語の新機能 || 型推論 || 変数の型を自動で決める。 || Dim x = 1
+言語の新機能 || 匿名型 || 名前のない型。 || New With {.A = 1}
+言語の新機能 || オブジェクト初期化子 || 作成と同時に値を設定する。 || New P With {.Name = "a"}
+言語の新機能 || コレクション初期化子 || 作成と同時に要素を入れる。 || New List(Of Integer) From {1, 2}
+言語の新機能 || 拡張メソッド || 既存の型に機能を足す。 || <Extension()>
+言語の新機能 || 部分クラス || クラスを分割して書く。 || Partial Class
+言語の新機能 || 部分メソッド || 実装を別の場所に持てる。 || Partial Private Sub
+言語の新機能 || Is / IsNot || 参照の同一性を調べる。 || x IsNot Nothing
+言語の新機能 || TryCast || 失敗しても例外にならない変換。 || TryCast(x, String)
+言語の新機能 || DirectCast || 厳密な型変換。 || DirectCast(x, String)
+言語の新機能 || CType || 汎用の型変換。 || CType(x, Integer)
+言語の新機能 || Select Case Is || 条件つきの分岐。 || Case Is > 10
+言語の新機能 || Select Case To || 範囲の分岐。 || Case 1 To 5
+言語の新機能 || Continue For || 次の繰り返しへ。 || Continue For
+言語の新機能 || Exit For || ループを抜ける。 || Exit For
+言語の新機能 || Static (ローカル) || 呼び出し間で値を保つ。 || Static n As Integer
+言語の新機能 || Shared || 型全体で共有する。 || Shared Count As Integer
+言語の新機能 || Module || 共有メンバーの入れ物。 || Module Util
+言語の新機能 || Namespace || 名前の整理。 || Namespace App.Data
+言語の新機能 || Imports エイリアス || 別名をつける。 || Imports S = System.String
+言語の新機能 || Option Infer || 型推論の可否。 || Option Infer On
+言語の新機能 || Option Explicit || 宣言を必須にする。 || Option Explicit On
+言語の新機能 || Option Compare || 文字列比較の方法。 || Option Compare Text
+言語の新機能 || Of 句 || ジェネリックの型引数。 || List(Of String)
+言語の新機能 || 共変・反変 || ジェネリックの代入の柔軟さ。 || Out T / In T
+言語の新機能 || Interface 既定実装 || インターフェースに実装を持つ。 || DIM
+言語の新機能 || Record 相当 || 値で等しい不変型を作る工夫。 || Structure + IEquatable
+言語の新機能 || Span(Of T) || 連続した領域の参照。 || Span(Of Byte)
+言語の新機能 || ReadOnlySpan || 読み取り専用の領域参照。 || ReadOnlySpan(Of Char)
+言語の新機能 || ArrayPool || 配列を使い回す。 || ArrayPool(Of Byte).Shared
+言語の新機能 || ValueTask || 割り当てを抑える Task。 || ValueTask(Of T)
+言語の新機能 || StringBuilder || 文字列を効率よく組む。 || New StringBuilder()
+言語の新機能 || String.Create || 文字列を直接作る。 || String.Create(...)
+言語の新機能 || ConfigureAwait || 元の文脈に戻るか指定。 || Await t.ConfigureAwait(False)

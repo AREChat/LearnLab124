@@ -1,0 +1,284 @@
+JSONとXML || JsonSerializer.Serialize || オブジェクトを JSON にする。 || JsonSerializer.Serialize(obj)
+JSONとXML || JsonSerializer.Deserialize || JSON をオブジェクトにする。 || JsonSerializer.Deserialize(Of T)(s)
+JSONとXML || JsonSerializerOptions || JSON の動作設定。 || New JsonSerializerOptions With {.WriteIndented = True}
+JSONとXML || JsonPropertyName || JSON のキー名を指定する。 || <JsonPropertyName("id")>
+JSONとXML || JsonIgnore || JSON に含めない。 || <JsonIgnore>
+JSONとXML || JsonDocument || JSON を読み取り専用で扱う。 || JsonDocument.Parse(s)
+JSONとXML || JsonNode || JSON を木として編集する。 || JsonNode.Parse(s)
+JSONとXML || Utf8JsonReader || JSON を高速に順読みする。 || New Utf8JsonReader(bytes)
+JSONとXML || Newtonsoft.Json || 広く使われる JSON ライブラリ。 || JsonConvert.SerializeObject(o)
+JSONとXML || JsonConvert || Newtonsoft の変換クラス。 || JsonConvert.DeserializeObject(Of T)(s)
+JSONとXML || JObject || Newtonsoft の JSON オブジェクト。 || JObject.Parse(s)
+JSONとXML || JToken || JSON の要素。 || jo("name")
+JSONとXML || JsonConverter || 独自の変換規則。 || Inherits JsonConverter(Of T)
+JSONとXML || camelCase 変換 || キーを小文字始まりにする。 || JsonNamingPolicy.CamelCase
+JSONとXML || XmlSerializer || XML への変換。 || New XmlSerializer(GetType(T))
+JSONとXML || XmlRoot 属性 || ルート要素名を指定する。 || <XmlRoot("root")>
+JSONとXML || XmlElement 属性 || 要素名を指定する。 || <XmlElement("n")>
+JSONとXML || XmlAttribute 属性 || 属性として出力する。 || <XmlAttribute>
+JSONとXML || XmlIgnore || XML に含めない。 || <XmlIgnore>
+JSONとXML || XmlArray / XmlArrayItem || 配列の出力形式。 || <XmlArray("items")>
+JSONとXML || XmlDocument || DOM で XML を扱う。 || Dim doc As New XmlDocument()
+JSONとXML || XmlNode || XML のノード。 || doc.SelectSingleNode("//a")
+JSONとXML || SelectNodes || XPath で複数取得する。 || doc.SelectNodes("//item")
+JSONとXML || XPath || XML の位置指定言語。 || //item[@id='1']
+JSONとXML || XDocument || LINQ to XML の文書。 || XDocument.Load("a.xml")
+JSONとXML || XElement || LINQ to XML の要素。 || New XElement("a", 1)
+JSONとXML || XAttribute || LINQ to XML の属性。 || New XAttribute("id", 1)
+JSONとXML || XML リテラル || VB の XML 直接記述。 || Dim x = <a><b>1</b></a>
+JSONとXML || XML 埋め込み式 || XML リテラルに式を埋め込む。 || <a><%= value %></a>
+JSONとXML || XML 軸プロパティ || 子要素や属性を . で辿る。 || x.<b>.Value
+JSONとXML || XmlReader || XML を順読みする。 || XmlReader.Create("a.xml")
+JSONとXML || XmlWriter || XML を順書きする。 || XmlWriter.Create("a.xml")
+JSONとXML || XmlWriterSettings || XML 出力の設定。 || .Indent = True
+JSONとXML || XSLT || XML を変換する言語。 || XslCompiledTransform
+JSONとXML || XmlSchema || XML の構造定義。 || .xsd
+JSONとXML || DataContractSerializer || WCF 系のシリアライザー。 || DataContractSerializer
+JSONとXML || DataContract / DataMember || 対象とメンバーの印。 || <DataContract>
+JSONとXML || BinaryFormatter || 古いバイナリ変換（非推奨）。 || 使用しない
+JSONとXML || MessagePack || 高速な二進形式。 || MessagePackSerializer
+JSONとXML || Protobuf || 効率のよい二進形式。 || protobuf-net
+JSONとXML || YAML || 設定でよく使う形式。 || YamlDotNet
+JSONとXML || CSV 読み込み || CSV を取り込む。 || TextFieldParser
+JSONとXML || TextFieldParser || 区切り文字のファイルを読む。 || New TextFieldParser(path)
+JSONとXML || CsvHelper || CSV の読み書きライブラリ。 || csv.GetRecords(Of T)()
+JSONとXML || ini ファイル || 設定を書く古い形式。 || GetPrivateProfileString
+JSONとXML || Base64 変換 || バイナリを文字にする。 || Convert.ToBase64String(b)
+JSONとXML || HTML エンコード || 特殊文字を変換する。 || WebUtility.HtmlEncode(s)
+JSONとXML || URL エンコード || URL 用に変換する。 || Uri.EscapeDataString(s)
+JSONとXML || Uri クラス || URL を扱う。 || New Uri("https://a")
+JSONとXML || UriBuilder || URL を組み立てる。 || New UriBuilder()
+JSONとXML || HttpUtility || Web 用の変換補助。 || HttpUtility.ParseQueryString(q)
+暗号とセキュリティ || SHA256 || SHA-256 のハッシュ。 || SHA256.HashData(bytes)
+暗号とセキュリティ || MD5 || 古いハッシュ（用途注意）。 || MD5.HashData(bytes)
+暗号とセキュリティ || HMAC || 鍵つきのハッシュ。 || New HMACSHA256(key)
+暗号とセキュリティ || Aes || 共通鍵暗号 AES。 || Aes.Create()
+暗号とセキュリティ || RSA || 公開鍵暗号 RSA。 || RSA.Create()
+暗号とセキュリティ || ECDsa || 楕円曲線の署名。 || ECDsa.Create()
+暗号とセキュリティ || RandomNumberGenerator || 安全な乱数。 || RandomNumberGenerator.GetBytes(16)
+暗号とセキュリティ || Rfc2898DeriveBytes || パスワードから鍵を作る。 || Rfc2898DeriveBytes.Pbkdf2(...)
+暗号とセキュリティ || PBKDF2 || パスワードのハッシュ方式。 || iterations を大きくする
+暗号とセキュリティ || bcrypt || パスワード向けハッシュ。 || BCrypt.Net
+暗号とセキュリティ || ソルト || ハッシュに足す乱数。 || salt
+暗号とセキュリティ || CryptoStream || 暗号化しながら入出力する。 || New CryptoStream(...)
+暗号とセキュリティ || ProtectedData || Windows の保護機能。 || ProtectedData.Protect(...)
+暗号とセキュリティ || DPAPI || Windows のデータ保護 API。 || DataProtectionScope.CurrentUser
+暗号とセキュリティ || SecureString || メモリ上で保護した文字列。 || New SecureString()
+暗号とセキュリティ || X509Certificate2 || 証明書。 || New X509Certificate2(path)
+暗号とセキュリティ || SslStream || SSL で通信する。 || New SslStream(ns)
+暗号とセキュリティ || TLS 設定 || 通信の暗号の版。 || SslProtocols.Tls12
+暗号とセキュリティ || ユーザーシークレット || 開発時の秘密情報の保管。 || dotnet user-secrets
+暗号とセキュリティ || 環境変数 || 秘密を設定に直書きしない。 || Environment.GetEnvironmentVariable
+暗号とセキュリティ || WindowsIdentity || Windows のユーザー。 || WindowsIdentity.GetCurrent()
+暗号とセキュリティ || WindowsPrincipal || 権限の確認。 || .IsInRole(...)
+暗号とセキュリティ || 管理者として実行 || 昇格した権限で動かす。 || requireAdministrator
+暗号とセキュリティ || アプリケーションマニフェスト || 権限などの宣言。 || app.manifest
+暗号とセキュリティ || ACL || アクセス制御リスト。 || FileSecurity
+暗号とセキュリティ || コード署名 || 配布物に署名する。 || signtool
+暗号とセキュリティ || 難読化 || 解析されにくくする。 || Obfuscar
+暗号とセキュリティ || 入力検証 || 受け取る値を確かめる。 || Regex.IsMatch
+暗号とセキュリティ || パストラバーサル対策 || 意図しないフォルダを防ぐ。 || Path.GetFullPath
+暗号とセキュリティ || SQL インジェクション対策 || パラメータ化する。 || cmd.Parameters
+暗号とセキュリティ || XSS 対策 || 出力をエンコードする。 || HtmlEncode
+暗号とセキュリティ || CSRF 対策 || 偽造要求を防ぐ。 || AntiForgeryToken
+暗号とセキュリティ || ログに秘密を出さない || 機密を記録しない。 || マスクする
+暗号とセキュリティ || 定数時間比較 || 時間差攻撃を防ぐ。 || CryptographicOperations.FixedTimeEquals
+暗号とセキュリティ || 乱数 (Random) || 暗号用途には不向き。 || New Random()
+暗号とセキュリティ || Random.Shared || 共有の乱数生成。 || Random.Shared.Next(10)
+暗号とセキュリティ || GUID || 一意の識別子。 || Guid.NewGuid()
+プロセスとシステム || Process.Start || 外部プログラムを起動する。 || Process.Start("notepad")
+プロセスとシステム || ProcessStartInfo || 起動の詳細設定。 || New ProcessStartInfo("a.exe")
+プロセスとシステム || UseShellExecute || シェル経由で起動する。 || .UseShellExecute = True
+プロセスとシステム || RedirectStandardOutput || 出力を取り込む。 || .RedirectStandardOutput = True
+プロセスとシステム || WaitForExit || 終了を待つ。 || p.WaitForExit()
+プロセスとシステム || ExitCode || 終了コード。 || p.ExitCode
+プロセスとシステム || Process.GetProcesses || 動作中のプロセス一覧。 || Process.GetProcesses()
+プロセスとシステム || Process.Kill || プロセスを終了する。 || p.Kill()
+プロセスとシステム || MainWindowTitle || メインウィンドウの題名。 || p.MainWindowTitle
+プロセスとシステム || Environment.CommandLine || 起動時のコマンド。 || Environment.CommandLine
+プロセスとシステム || Environment.GetCommandLineArgs || 起動引数。 || Environment.GetCommandLineArgs()
+プロセスとシステム || Environment.MachineName || コンピューター名。 || Environment.MachineName
+プロセスとシステム || Environment.UserName || ユーザー名。 || Environment.UserName
+プロセスとシステム || Environment.OSVersion || OS の版。 || Environment.OSVersion
+プロセスとシステム || Environment.Is64BitProcess || 64 ビットかどうか。 || Environment.Is64BitProcess
+プロセスとシステム || Environment.ProcessorCount || CPU の論理数。 || Environment.ProcessorCount
+プロセスとシステム || Environment.NewLine || 改行文字。 || Environment.NewLine
+プロセスとシステム || Environment.SpecialFolder || 特別なフォルダ。 || Environment.SpecialFolder.MyDocuments
+プロセスとシステム || Environment.Exit || アプリを終了する。 || Environment.Exit(0)
+プロセスとシステム || Application.Exit || アプリを終了する（WinForms）。 || Application.Exit()
+プロセスとシステム || Application.StartupPath || 実行フォルダ。 || Application.StartupPath
+プロセスとシステム || AppContext.BaseDirectory || 実行フォルダ。 || AppContext.BaseDirectory
+プロセスとシステム || Mutex || 多重起動の防止。 || New Mutex(True, "name", created)
+プロセスとシステム || Semaphore || 同時実行数の制限。 || New SemaphoreSlim(3)
+プロセスとシステム || Registry || レジストリの操作。 || Registry.CurrentUser
+プロセスとシステム || RegistryKey || レジストリのキー。 || OpenSubKey("Software")
+プロセスとシステム || ServiceController || Windows サービスの操作。 || New ServiceController("name")
+プロセスとシステム || ServiceBase || Windows サービスを作る。 || Inherits ServiceBase
+プロセスとシステム || Worker Service || 常駐処理のひな形。 || BackgroundService
+プロセスとシステム || BackgroundService || 常駐のバックグラウンド処理。 || ExecuteAsync
+プロセスとシステム || タスクスケジューラ || 定期実行の仕組み。 || schtasks
+プロセスとシステム || EventLog || Windows のイベントログ。 || EventLog.WriteEntry("app", "msg")
+プロセスとシステム || PerformanceCounter || 性能カウンタ。 || New PerformanceCounter(...)
+プロセスとシステム || WMI || Windows の管理情報。 || ManagementObjectSearcher
+プロセスとシステム || DriveInfo || ドライブの情報。 || DriveInfo.GetDrives()
+プロセスとシステム || SystemEvents || OS のイベントを受ける。 || SystemEvents.PowerModeChanged
+プロセスとシステム || Clipboard || クリップボード。 || Clipboard.SetText("a")
+プロセスとシステム || Console.ReadKey || キー入力を待つ。 || Console.ReadKey()
+プロセスとシステム || Console.Out / Error || 標準出力・標準エラー。 || Console.Error.WriteLine("x")
+プロセスとシステム || CancelKeyPress || Ctrl+C を受ける。 || AddHandler Console.CancelKeyPress
+プロセスとシステム || 終了コードを返す || Main が整数を返す。 || Function Main() As Integer
+プロセスとシステム || コマンドライン解析 || 引数を解析する。 || System.CommandLine
+プロセスとシステム || GC.Collect || ごみ集めを実行する。 || GC.Collect()
+プロセスとシステム || GC.GetTotalMemory || 使用メモリを調べる。 || GC.GetTotalMemory(False)
+プロセスとシステム || WeakReference || 弱い参照。 || New WeakReference(obj)
+プロセスとシステム || IDisposable パターン || 後始末の約束。 || Implements IDisposable
+プロセスとシステム || Finalize || 破棄時の最後の処理。 || Protected Overrides Sub Finalize()
+プロセスとシステム || GC.SuppressFinalize || 破棄処理を省く。 || GC.SuppressFinalize(Me)
+プロセスとシステム || Stopwatch || 経過時間を測る。 || Stopwatch.StartNew()
+プロセスとシステム || BenchmarkDotNet || 性能測定ライブラリ。 || <Benchmark>
+設計と原則 || SOLID || 設計の5つの原則。 || S O L I D
+設計と原則 || 単一責任の原則 || クラスの役割は1つ。 || SRP
+設計と原則 || 開放閉鎖の原則 || 拡張に開き修正に閉じる。 || OCP
+設計と原則 || リスコフの置換原則 || 派生型は基底型として使える。 || LSP
+設計と原則 || インターフェース分離の原則 || 不要な機能を強いない。 || ISP
+設計と原則 || 依存性逆転の原則 || 抽象に依存する。 || DIP
+設計と原則 || DRY || 繰り返しを避ける。 || Don't Repeat Yourself
+設計と原則 || KISS || 単純に保つ。 || Keep It Simple
+設計と原則 || YAGNI || 必要になるまで作らない。 || You Aren't Gonna Need It
+設計と原則 || 凝集度 || 部品内のまとまり。 || cohesion
+設計と原則 || 結合度 || 部品間のつながり。 || coupling
+設計と原則 || デメテルの法則 || 知り合いにだけ話しかける。 || a.b.c を避ける
+設計と原則 || Singleton || インスタンスを1つに限る。 || Shared ReadOnly Instance
+設計と原則 || Factory || 生成を専用の仕組みに任せる。 || Create()
+設計と原則 || Abstract Factory || 関連する生成をまとめる。 || IFactory
+設計と原則 || Builder || 段階的に組み立てる。 || .WithName().Build()
+設計と原則 || Prototype || 複製して作る。 || Clone()
+設計と原則 || Adapter || 互換のない型をつなぐ。 || Adapter
+設計と原則 || Decorator || 機能を重ねて足す。 || Decorator
+設計と原則 || Facade || 複雑さを窓口で隠す。 || Facade
+設計と原則 || Proxy || 代理で処理を挟む。 || Proxy
+設計と原則 || Composite || 木構造を同じに扱う。 || Composite
+設計と原則 || Bridge || 抽象と実装を分ける。 || Bridge
+設計と原則 || Flyweight || 共有して節約する。 || Flyweight
+設計と原則 || Strategy || アルゴリズムを差し替える。 || IStrategy
+設計と原則 || Observer || 変化を通知する。 || Event
+設計と原則 || Command || 操作をオブジェクトにする。 || ICommand
+設計と原則 || State || 状態ごとに振る舞いを変える。 || IState
+設計と原則 || Template Method || 手順を骨組みで決める。 || MustOverride
+設計と原則 || Iterator || 順に取り出す。 || IEnumerator
+設計と原則 || Visitor || 構造と処理を分ける。 || Accept(visitor)
+設計と原則 || Chain of Responsibility || 処理を順に渡す。 || Next
+設計と原則 || Memento || 状態を保存して戻す。 || Memento
+設計と原則 || Repository パターン || データ取得の窓口。 || IUserRepository
+設計と原則 || Unit of Work || 変更をまとめて確定する。 || UnitOfWork
+設計と原則 || Service 層 || 業務の処理をまとめる層。 || UserService
+設計と原則 || DTO || データ受け渡し用のクラス。 || UserDto
+設計と原則 || Value Object || 値で等しさを決める型。 || Structure Money
+設計と原則 || Entity || 識別子で区別する型。 || Class User
+設計と原則 || Aggregate || 一貫性の単位。 || Order と OrderItem
+設計と原則 || DDD || ドメイン中心の設計。 || Domain-Driven Design
+設計と原則 || MVC || 画面・処理・データを分ける。 || Model View Controller
+設計と原則 || MVP || Presenter を介する構成。 || Presenter
+設計と原則 || MVVM || ViewModel でつなぐ構成。 || ViewModel
+設計と原則 || クリーンアーキテクチャ || 依存を内側へ向ける。 || Domain, Application
+設計と原則 || レイヤードアーキテクチャ || 層に分ける。 || UI / BLL / DAL
+設計と原則 || DAL || データアクセス層。 || Data Access Layer
+設計と原則 || BLL || 業務ロジック層。 || Business Logic Layer
+設計と原則 || DI コンテナ || 依存を組み立てる。 || ServiceCollection
+設計と原則 || コンストラクタ注入 || 生成時に渡す。 || Sub New(repo As IRepo)
+設計と原則 || サービスの寿命 || Singleton・Scoped・Transient。 || AddScoped
+設計と原則 || モック || テスト用の代役。 || Mock(Of IRepo)
+設計と原則 || スタブ || 決まった値を返す代役。 || Stub
+設計と原則 || 契約による設計 || 事前条件と事後条件を明確にする。 || Debug.Assert
+設計と原則 || ガード句 || 先に不正を弾く。 || If x Is Nothing Then Throw
+設計と原則 || Null Object || 空の代役を返す。 || NullLogger
+設計と原則 || Result 型 || 成功か失敗かを値で返す。 || Result(Of T)
+設計と原則 || 不変オブジェクト || 作ったら変わらない。 || ReadOnly
+設計と原則 || ファサードの利用 || 複雑なライブラリを隠す。 || Facade
+設計と原則 || リファクタリング || 動作を変えず構造を直す。 || Extract Method
+設計と原則 || コードの臭い || 設計の問題の兆候。 || Long Method
+設計と原則 || 技術的負債 || 後回しにした修正のつけ。 || technical debt
+設計と原則 || 循環的複雑度 || 分岐の複雑さの指標。 || cyclomatic complexity
+ビルドと配布 || NuGet || パッケージ管理。 || Install-Package
+ビルドと配布 || PackageReference || 参照するパッケージ。 || <PackageReference Include="..." />
+ビルドと配布 || .vbproj || VB のプロジェクトファイル。 || MyApp.vbproj
+ビルドと配布 || .sln || ソリューションファイル。 || MyApp.sln
+ビルドと配布 || TargetFramework || 対象のフレームワーク。 || <TargetFramework>net8.0</TargetFramework>
+ビルドと配布 || RootNamespace || 既定の名前空間。 || <RootNamespace>
+ビルドと配布 || OptionStrict プロジェクト設定 || プロジェクト全体で厳密にする。 || <OptionStrict>On</OptionStrict>
+ビルドと配布 || ImplicitUsings || 暗黙の Imports。 || <ImplicitUsings>
+ビルドと配布 || Nullable 参照型 || null を許す型を区別する。 || <Nullable>
+ビルドと配布 || LangVersion || 言語の版。 || <LangVersion>latest</LangVersion>
+ビルドと配布 || dotnet build || ビルドする。 || dotnet build
+ビルドと配布 || dotnet run || 実行する。 || dotnet run
+ビルドと配布 || dotnet test || テストを実行する。 || dotnet test
+ビルドと配布 || dotnet publish (単一ファイル) || 1つのファイルに出力する。 || -p:PublishSingleFile=true
+ビルドと配布 || 自己完結型 || ランタイムを同梱する。 || --self-contained
+ビルドと配布 || フレームワーク依存 || ランタイムは別に入れる。 || --no-self-contained
+ビルドと配布 || ReadyToRun || 起動を速める事前変換。 || PublishReadyToRun
+ビルドと配布 || トリミング || 使わないコードを削る。 || PublishTrimmed
+ビルドと配布 || Native AOT || ネイティブに事前変換する。 || PublishAot
+ビルドと配布 || ClickOnce || 簡易な配布と更新。 || ClickOnce
+ビルドと配布 || MSIX || 新しいパッケージ形式。 || MSIX
+ビルドと配布 || Installer (WiX) || インストーラー作成。 || WiX Toolset
+ビルドと配布 || Inno Setup || 簡単なインストーラー作成。 || Inno Setup
+ビルドと配布 || ビルド構成 || Debug と Release。 || Configuration=Release
+ビルドと配布 || 条件付きコンパイル || 条件でコードを含める。 || #If DEBUG Then
+ビルドと配布 || #Region || コードを折りたたむ。 || #Region "名前"
+ビルドと配布 || #Const || 定数を定義する。 || #Const A = 1
+ビルドと配布 || XML ドキュメントコメント || ''' で説明を書く。 || ''' <summary>
+ビルドと配布 || アナライザー || コードの問題を検出する。 || Roslyn Analyzers
+ビルドと配布 || .editorconfig || 書式規則を共有する。 || .editorconfig
+ビルドと配布 || Directory.Build.props || 共通設定。 || Directory.Build.props
+ビルドと配布 || GitHub Actions || 自動のビルドとテスト。 || .github/workflows
+ビルドと配布 || 自動テスト (CI) || 変更のたび検証する。 || CI
+ビルドと配布 || セマンティックバージョニング || 版番号の付け方。 || 1.2.3
+ビルドと配布 || ClassLibrary || DLL を作る種類。 || OutputType=Library
+ビルドと配布 || WinExe || ウィンドウアプリの出力種別。 || OutputType=WinExe
+ビルドと配布 || アイコンの設定 || exe のアイコン。 || <ApplicationIcon>
+ビルドと配布 || 設定 (My.Settings) || ユーザー設定の保存。 || My.Settings.Name
+ビルドと配布 || My.Settings.Save || 設定を保存する。 || My.Settings.Save()
+ビルドと配布 || My.Resources || 埋め込みリソース。 || My.Resources.Logo
+ビルドと配布 || 埋め込みリソース || ファイルを exe に含める。 || EmbeddedResource
+ビルドと配布 || サテライトアセンブリ || 言語ごとのリソース。 || .resx
+ビルドと配布 || ローカライズ || 多言語に対応する。 || CultureInfo
+ビルドと配布 || CultureInfo || 文化圏の設定。 || New CultureInfo("ja-JP")
+ビルドと配布 || ResourceManager || リソースを取得する。 || New ResourceManager(...)
+Office連携 || Excel Interop || Excel を操作する。 || Microsoft.Office.Interop.Excel
+Office連携 || Excel.Application || Excel 本体。 || New Excel.Application()
+Office連携 || Workbook || ブック。 || app.Workbooks.Open(path)
+Office連携 || Worksheet || シート。 || wb.Worksheets(1)
+Office連携 || Range || セル範囲。 || ws.Range("A1:B2")
+Office連携 || Cells || セルを行列で指定。 || ws.Cells(1, 1).Value = "a"
+Office連携 || Visible プロパティ || Excel を見えるようにする。 || app.Visible = True
+Office連携 || DisplayAlerts || 確認メッセージの表示。 || app.DisplayAlerts = False
+Office連携 || SaveAs || 名前をつけて保存する。 || wb.SaveAs(path)
+Office連携 || Marshal.ReleaseComObject || COM を解放する。 || Marshal.ReleaseComObject(ws)
+Office連携 || COM の後始末 || Excel プロセスが残らないようにする。 || Quit と解放
+Office連携 || Word Interop || Word を操作する。 || Microsoft.Office.Interop.Word
+Office連携 || Word.Document || Word の文書。 || app.Documents.Add()
+Office連携 || Selection (Word) || 選択範囲への入力。 || app.Selection.TypeText("a")
+Office連携 || Outlook Interop || Outlook を操作する。 || Microsoft.Office.Interop.Outlook
+Office連携 || MailItem || メール。 || app.CreateItem(OlItemType.olMailItem)
+Office連携 || PowerPoint Interop || PowerPoint を操作する。 || Microsoft.Office.Interop.PowerPoint
+Office連携 || Slides.AddSlide || スライドを追加する。 || pres.Slides.AddSlide(1, layout)
+Office連携 || ClosedXML || Excel なしで xlsx を扱う。 || New XLWorkbook()
+Office連携 || EPPlus || xlsx の読み書き。 || New ExcelPackage()
+Office連携 || NPOI || Office 形式を扱う。 || NPOI
+Office連携 || OpenXML SDK || Office ファイルの標準的な操作。 || DocumentFormat.OpenXml
+Office連携 || PDF 生成 || PDF を作る。 || QuestPDF, iText
+Office連携 || QuestPDF || PDF 作成ライブラリ。 || Document.Create(...)
+Office連携 || ReportViewer || 帳票を表示する。 || ReportViewer
+Office連携 || CrystalReports || 帳票ツール。 || CrystalReports
+Office連携 || 印刷 (PrintDocument) || 印刷処理。 || New PrintDocument()
+Office連携 || PrintPage イベント || 印刷内容を描く。 || AddHandler pd.PrintPage, ...
+Office連携 || PrintPreviewDialog || 印刷プレビュー。 || New PrintPreviewDialog()
+Office連携 || CSV 出力 || Excel で開ける形式で出力。 || File.WriteAllText(path, csv, Encoding.UTF8)
+Office連携 || BOM つき UTF-8 || Excel で文字化けを防ぐ。 || New UTF8Encoding(True)
+Office連携 || Shift_JIS 変換 || 日本語の旧文字コード。 || Encoding.GetEncoding(932)
+Office連携 || CodePagesEncodingProvider || 追加の文字コードを使う。 || Encoding.RegisterProvider(...)
+Office連携 || VBA との連携 || VBA から VB.NET を呼ぶ。 || COM 公開
+Office連携 || ComVisible || COM に公開する。 || <ComVisible(True)>
+Office連携 || VSTO || Office アドインの開発。 || Visual Studio Tools for Office
+Office連携 || Office Add-in || Office の拡張機能。 || Add-in
+Office連携 || Power Automate 連携 || 業務自動化との連携。 || Webhook
