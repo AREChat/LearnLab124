@@ -1,0 +1,82 @@
+# カテゴリ || 用語 || 説明 || コード例
+SQL英単語 || SELECT (選ぶ) || 取り出す列を選ぶ。 || SELECT name
+SQL英単語 || FROM (〜から) || どの表から取るか。 || FROM users
+SQL英単語 || WHERE (どこで) || 条件で行を絞る。 || WHERE age > 20
+SQL英単語 || GROUP (まとめる) || 同じ値の行をグループにする。 || GROUP BY dept
+SQL英単語 || HAVING (持つ) || グループに条件を付ける。 || HAVING COUNT(*) > 1
+SQL英単語 || ORDER (順序) || 並び順を決める。 || ORDER BY id
+SQL英単語 || ASC / DESC || 昇順 (ascending)・降順 (descending)。 || ORDER BY v DESC
+SQL英単語 || INSERT (挿入) || 行を追加する。 || INSERT INTO t
+SQL英単語 || UPDATE (更新) || 値を更新する。 || UPDATE t SET
+SQL英単語 || DELETE (削除) || 行を削除する。 || DELETE FROM t
+SQL英単語 || CREATE (作る) || オブジェクトを作る。 || CREATE TABLE
+SQL英単語 || ALTER (変更) || 構造を変える。 || ALTER TABLE
+SQL英単語 || DROP (落とす) || オブジェクトを削除する。 || DROP TABLE
+SQL英単語 || TRUNCATE (切り詰める) || 全行を高速に消す。 || TRUNCATE TABLE
+SQL英単語 || JOIN (結合) || 表をつなぐ。 || JOIN b ON
+SQL英単語 || UNION (合併) || 結果を縦につなぐ。 || UNION
+SQL英単語 || DISTINCT (異なる) || 重複を除く。 || SELECT DISTINCT
+SQL英単語 || LIMIT (制限) || 件数を制限する。 || LIMIT 10
+SQL英単語 || OFFSET (ずらす) || 先頭から飛ばす。 || OFFSET 20
+SQL英単語 || LIKE (似た) || パターン検索。 || LIKE 'a%'
+SQL英単語 || BETWEEN (間) || 範囲を指定する。 || BETWEEN 1 AND 5
+SQL英単語 || EXISTS (存在する) || 結果があるか調べる。 || EXISTS (SELECT 1)
+SQL英単語 || CASE (場合) || 条件分岐。 || CASE WHEN
+SQL英単語 || COALESCE (合体する) || 最初の NULL でない値。 || COALESCE(a, 0)
+SQL英単語 || CONSTRAINT (制約) || 値の決まり。 || CONSTRAINT pk
+SQL英単語 || PRIMARY (主な) || 主キー。 || PRIMARY KEY
+SQL英単語 || FOREIGN (外の) || 外部キー。 || FOREIGN KEY
+SQL英単語 || REFERENCES (参照) || 外部キーの参照先。 || REFERENCES t(id)
+SQL英単語 || CASCADE (連鎖) || 関連する行にも波及する。 || ON DELETE CASCADE
+SQL英単語 || TRANSACTION (取引) || 一連の処理のまとまり。 || BEGIN TRANSACTION
+SQL英単語 || COMMIT (確定) || 変更を確定する。 || COMMIT
+SQL英単語 || ROLLBACK (巻き戻す) || 変更を取り消す。 || ROLLBACK
+SQL英単語 || GRANT (許可する) || 権限を与える。 || GRANT SELECT
+SQL英単語 || REVOKE (取り消す) || 権限を取り消す。 || REVOKE
+SQL英単語 || INDEX (索引) || 検索を速くする仕組み。 || CREATE INDEX
+SQL英単語 || VIEW (見え方) || 保存した問い合わせ。 || CREATE VIEW
+SQL英単語 || TRIGGER (引き金) || 変更で自動実行。 || CREATE TRIGGER
+SQL英単語 || PROCEDURE (手続き) || 処理をまとめたもの。 || CREATE PROCEDURE
+SQL英単語 || FUNCTION (関数) || 値を返す処理。 || CREATE FUNCTION
+SQL英単語 || SEQUENCE (連続) || 連番の発行元。 || CREATE SEQUENCE
+SQL英単語 || SCHEMA (構成) || 表をまとめる単位。 || CREATE SCHEMA
+SQL英単語 || DEFAULT (既定) || 既定値。 || DEFAULT 0
+SQL英単語 || NULL (空) || 値がない状態。 || IS NULL
+SQL英単語 || UNIQUE (一意) || 重複を許さない。 || UNIQUE
+SQL英単語 || CHECK (検査) || 値を検査する制約。 || CHECK (a > 0)
+SQL英単語 || RETURNING (返す) || 更新結果を返す。 || RETURNING id
+SQL英単語 || WITH (〜を伴って) || 共通テーブル式。 || WITH t AS (...)
+SQL英単語 || RECURSIVE (再帰) || 自分自身を呼ぶ。 || WITH RECURSIVE
+SQL英単語 || PARTITION (分割) || 区分けする。 || PARTITION BY
+SQL英単語 || WINDOW (窓) || 窓関数の範囲。 || WINDOW w AS (...)
+SQL英単語 || OVER (〜にわたって) || 窓関数の指定。 || OVER (ORDER BY d)
+SQL英単語 || ROWS (行) || 行数で範囲を決める。 || ROWS BETWEEN
+SQL英単語 || PRECEDING / FOLLOWING || 前・後。 || 1 PRECEDING
+SQL英単語 || UNBOUNDED (無制限) || 先頭・末尾まで。 || UNBOUNDED PRECEDING
+SQL英単語 || LATERAL (横の) || 左の行を参照する結合。 || LATERAL
+SQL英単語 || EXPLAIN (説明) || 実行計画を表示。 || EXPLAIN
+SQL英単語 || ANALYZE (分析) || 統計や実測を取る。 || ANALYZE
+SQL英単語 || VACUUM (掃除) || 不要領域の整理。 || VACUUM
+SQL英単語 || TEMPORARY (一時的) || 一時的な表。 || TEMPORARY TABLE
+SQL英単語 || MATERIALIZED (実体化) || 結果を保存するビュー。 || MATERIALIZED VIEW
+SQL英単語 || CONFLICT (衝突) || 重複時の処理。 || ON CONFLICT
+SQL英単語 || EXCLUDED (除外された) || 追加しようとした値。 || EXCLUDED.v
+SQL英単語 || SAVEPOINT (保存点) || 途中に戻れる目印。 || SAVEPOINT s
+SQL英単語 || ISOLATION (分離) || 他の処理との分離。 || ISOLATION LEVEL
+SQL英単語 || SERIALIZABLE (直列化可能) || 順番に実行したのと同じ。 || SERIALIZABLE
+SQL英単語 || DEFERRABLE (延期可能) || 検査を遅らせられる。 || DEFERRABLE
+SQL英単語 || COLLATE (照合) || 並び順の規則。 || COLLATE "C"
+SQL英単語 || ESCAPE (逃がす) || 特殊文字を普通の文字に。 || ESCAPE '\'
+SQL英単語 || INTERSECT (交差) || 共通する行。 || INTERSECT
+SQL英単語 || EXCEPT (除く) || 差を取る。 || EXCEPT
+SQL英単語 || NATURAL (自然な) || 同名の列で結合。 || NATURAL JOIN
+SQL英単語 || CROSS (交差) || 全組み合わせ。 || CROSS JOIN
+SQL英単語 || OUTER (外側の) || 外部結合。 || LEFT OUTER JOIN
+SQL英単語 || INNER (内側の) || 内部結合。 || INNER JOIN
+SQL英単語 || USING (〜を使って) || 結合の列指定。 || USING (id)
+SQL英単語 || ON (〜の上で) || 結合条件。 || ON a.id = b.id
+SQL英単語 || AS (として) || 別名を付ける。 || AS total
+SQL英単語 || IN (〜の中に) || 値のどれかに一致。 || IN (1, 2)
+SQL英単語 || ANY / SOME / ALL || どれか・すべてと比べる。 || > ALL (...)
+SQL英単語 || FETCH (取ってくる) || カーソルから取る・件数制限。 || FETCH FIRST 5 ROWS ONLY
+SQL英単語 || TOP (上位) || 先頭から取る（SQL Server）。 || TOP 10

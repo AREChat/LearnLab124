@@ -1,0 +1,91 @@
+# カテゴリ || 用語 || 説明 || コード例
+WPFとXAML || Window / Page / UserControl || 画面・ページ・部品の種類。 || <UserControl>
+WPFとXAML || Grid || 行と列で配置するレイアウト。 || <Grid.RowDefinitions>
+WPFとXAML || StackPanel || 縦または横に並べる。 || <StackPanel Orientation="Horizontal">
+WPFとXAML || DockPanel / WrapPanel || 端に寄せる・折り返して並べる。 || <DockPanel>
+WPFとXAML || Canvas || 座標で自由に置く。 || Canvas.Left="10"
+WPFとXAML || TextBlock / TextBox || 表示用・入力用の文字。 || <TextBlock Text="hi"/>
+WPFとXAML || Button の Click と Command || ボタン操作の受け取り方。 || Command="{Binding SaveCommand}"
+WPFとXAML || Binding (データバインディング) || 画面とデータを結び付ける。 || Text="{Binding Name}"
+WPFとXAML || DataContext || バインド元のオブジェクト。 || Me.DataContext = vm
+WPFとXAML || Binding Mode (TwoWay) || 双方向の更新。 || Mode=TwoWay
+WPFとXAML || UpdateSourceTrigger || 入力が反映されるタイミング。 || UpdateSourceTrigger=PropertyChanged
+WPFとXAML || StringFormat (Binding) || バインドの値に書式を付ける。 || StringFormat={}{0:N0}
+WPFとXAML || IValueConverter || 値の形を変換する。 || Implements IValueConverter
+WPFとXAML || ObservableCollection と ItemsSource || 一覧を画面と同期させる。 || ItemsSource="{Binding Items}"
+WPFとXAML || ListBox / ListView / DataGrid || 一覧を表示する部品。 || <DataGrid ItemsSource="{Binding Rows}"/>
+WPFとXAML || DataTemplate || 一覧の1行の見た目を決める。 || <DataTemplate>
+WPFとXAML || ControlTemplate || 部品の見た目を作り替える。 || <ControlTemplate>
+WPFとXAML || Style と Setter || 見た目をまとめて指定する。 || <Style TargetType="Button">
+WPFとXAML || Trigger / DataTrigger || 条件に応じて見た目を変える。 || <Trigger Property="IsMouseOver" Value="True">
+WPFとXAML || Resources (リソース辞書) || 色やスタイルを共有する。 || <Window.Resources>
+WPFとXAML || StaticResource / DynamicResource || リソースの参照方法。 || {StaticResource Brush1}
+WPFとXAML || Storyboard (アニメーション) || 動きを付ける。 || <Storyboard>
+WPFとXAML || RoutedEvent || 親へ伝わるイベント。 || Bubbling
+WPFとXAML || Dispatcher || UI スレッドで処理する。 || Dispatcher.Invoke
+WPFとXAML || ICommand と RelayCommand || ボタン処理をクラスで表す。 || New RelayCommand(AddressOf Save)
+WPFとXAML || Prism / CommunityToolkit.Mvvm || MVVM を助けるライブラリ。 || ObservableObject
+WPFとXAML || Visibility || 表示・非表示。 || Visibility="Collapsed"
+WPFとXAML || Margin / Padding || 外側・内側の余白。 || Margin="10"
+WPFとXAML || HorizontalAlignment / VerticalAlignment || 配置の位置。 || HorizontalAlignment="Center"
+WPFとXAML || Image と Source || 画像を表示する。 || <Image Source="a.png"/>
+WPFとXAML || MediaElement || 音や動画を再生する。 || <MediaElement Source="a.mp4"/>
+WPFとXAML || Viewbox || 大きさに合わせて拡大縮小する。 || <Viewbox>
+WPFとXAML || ScrollViewer || スクロールできるようにする。 || <ScrollViewer>
+WPFとXAML || TabControl / Expander || タブ・折りたたみ。 || <Expander Header="詳細">
+WPFとXAML || Popup / ToolTip || ポップアップ・ヒント表示。 || ToolTip="説明"
+WPFとXAML || MessageBox (WPF) || メッセージを表示する。 || MessageBox.Show("hi")
+WPFとXAML || OpenFileDialog (WPF) || ファイル選択。 || Microsoft.Win32.OpenFileDialog
+WPFとXAML || ナビゲーション (Frame) || ページを切り替える。 || Frame.Navigate(New Page1())
+WPFとXAML || デザイン時データ || 設計時にダミーデータを表示する。 || d:DataContext
+WPFとXAML || XAML のエラー (BAML) || XAML の書き間違いによる実行時のエラー。 || XamlParseException
+WPFとXAML || MAUI / WinUI 3 || 新しい UI の技術。 || .NET MAUI
+テストと品質 || ユニットテストの AAA || 準備・実行・検証の3段階。 || Arrange, Act, Assert
+テストと品質 || テストメソッド属性 || テストとして実行するメソッド。 || <TestMethod>
+テストと品質 || TestInitialize / TestCleanup || テスト前後の処理。 || <TestInitialize>
+テストと品質 || DataRow (データ駆動テスト) || 複数の値で同じテストをする。 || <DataRow(1, 2)>
+テストと品質 || Assert.IsTrue / IsNull || 条件や Null を検証する。 || Assert.IsNull(x)
+テストと品質 || Assert.ThrowsException || 例外が起きることを検証する。 || Assert.ThrowsException(Of ArgumentException)(...)
+テストと品質 || モック (Moq) || 偽物のオブジェクトでテストする。 || New Mock(Of IRepo)
+テストと品質 || スタブとスパイ || 決まった値を返す・呼び出しを記録する。 || mock.Setup(...)
+テストと品質 || テストカバレッジ || テストが通った行の割合。 || コードカバレッジ
+テストと品質 || 結合テスト || 複数の部品をつなげたテスト。 || 統合テスト
+テストと品質 || UI テスト || 画面の操作をテストする。 || WinAppDriver
+テストと品質 || 回帰テスト || 変更で壊れていないか確認する。 || 自動実行
+テストと品質 || CI (継続的インテグレーション) || 変更のたびに自動でビルド・テスト。 || GitHub Actions
+テストと品質 || GitHub Actions のビルド || ワークフローで自動ビルド。 || dotnet build
+テストと品質 || 静的解析 || コードを実行せずに問題を探す。 || Roslyn アナライザー
+テストと品質 || コードスタイル (.editorconfig) || 書き方のルールを共有する。 || indent_size = 4
+テストと品質 || コードメトリクス || 複雑さなどを数値で見る。 || 循環的複雑度
+テストと品質 || 循環的複雑度 || 分岐の多さの指標。 || 10 以下が目安
+テストと品質 || テスト容易性 || テストしやすい設計。 || DI
+テストと品質 || TDD (テスト駆動開発) || テストを先に書く。 || Red-Green-Refactor
+テストと品質 || ログの設計 || 原因調査に役立つログを残す。 || レベル（Info/Warn/Error）
+テストと品質 || 構造化ログ || 検索しやすい形式のログ。 || Serilog
+テストと品質 || 例外の握りつぶし禁止 || 空の Catch は避ける。 || ログを残す
+テストと品質 || 性能テスト || 速度を測る。 || Stopwatch / BenchmarkDotNet
+テストと品質 || メモリリーク || 解放されないメモリが増える。 || イベントの解除
+テストと品質 || IDisposable の確認 || 後始末を忘れていないか確認する。 || Using
+テストと品質 || セキュリティの基本 || 入力検証・パラメータ化・秘密情報の保護。 || 最小権限
+テストと品質 || 依存パッケージの更新 || ライブラリを新しく保つ。 || NuGet の更新
+テストと品質 || 脆弱性の確認 || 古いライブラリの危険を調べる。 || dotnet list package --vulnerable
+VB6からの移行 || Variant から Object へ || 型の扱いが変わる。 || Dim o As Object
+VB6からの移行 || Integer のサイズ変更 || VB6 の Integer は16ビット。VB.NET は32ビット。 || Short が16ビット
+VB6からの移行 || コントロール配列がない || 部品の配列は使えない。 || Controls コレクションで代用
+VB6からの移行 || Form.Show の変更 || 画面はオブジェクトとして作る。 || New Form2().Show()
+VB6からの移行 || 既定のプロパティの廃止 || Text などを省略できない。 || txt.Text
+VB6からの移行 || Set の廃止 || オブジェクト代入に Set は不要。 || Dim o = New Obj()
+VB6からの移行 || ByVal が既定 || 引数の既定が値渡し。 || ByRef を明記
+VB6からの移行 || AndAlso と OrElse || 短絡評価の演算子が追加。 || a AndAlso b
+VB6からの移行 || Sub Main の扱い || 起動方法の設定。 || スタートアップオブジェクト
+VB6からの移行 || Type から Structure へ || ユーザー定義型は Structure。 || Structure P
+VB6からの移行 || GoSub の廃止 || サブルーチン呼び出しは Sub にする。 || Sub を使う
+VB6からの移行 || アップグレードウィザード || 自動変換の機能（使えない場合が多い）。 || 手作業で書き直す
+VB6からの移行 || DAO / ADO から ADO.NET へ || DB のアクセス方法の変更。 || SqlConnection
+VB6からの移行 || ActiveX から .NET コンポーネントへ || 部品の置き換え。 || COM 相互運用
+VB6からの移行 || Randomize と Rnd の置き換え || Random クラスを使う。 || New Random()
+VB6からの移行 || 配列の下限の変更 || 添字が 0 始まりになる。 || Dim a(2)
+VB6からの移行 || String の固定長の廃止 || 固定長文字列は使えない。 || PadRight
+VB6からの移行 || ファイル入出力の置き換え || Open ステートメントから StreamReader へ。 || File.ReadAllText
+VB6からの移行 || DoEvents の置き換え || 非同期処理を使う。 || Await
+VB6からの移行 || 段階的な移行計画 || 少しずつ置き換える。 || 部品ごとに移行
