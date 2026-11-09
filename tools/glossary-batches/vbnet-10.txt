@@ -1,0 +1,91 @@
+# カテゴリ || 用語 || 説明 || コード例
+描画と画像 || Graphics || 画面に図形や文字を描く窓口。 || Dim g = e.Graphics
+描画と画像 || Pen / Brush || 線を描くペン・塗りつぶすブラシ。 || New Pen(Color.Red, 2)
+描画と画像 || DrawLine / DrawRectangle / DrawEllipse || 線・四角・楕円を描く。 || g.DrawEllipse(pen, 10, 10, 50, 50)
+描画と画像 || FillRectangle / FillEllipse || 塗りつぶした図形を描く。 || g.FillRectangle(Brushes.Blue, r)
+描画と画像 || DrawString || 文字を描く。 || g.DrawString("hi", font, Brushes.Black, 10, 10)
+描画と画像 || DrawImage || 画像を描く。 || g.DrawImage(img, 0, 0)
+描画と画像 || Bitmap || 画像をメモリ上で扱う。 || New Bitmap(100, 100)
+描画と画像 || Bitmap.GetPixel / SetPixel || 1ピクセルの色を取得・設定する。 || bmp.SetPixel(0, 0, Color.Red)
+描画と画像 || LockBits || 画像を高速に処理する。 || bmp.LockBits(...)
+描画と画像 || Image.Save || 画像を保存する。 || bmp.Save("a.png", ImageFormat.Png)
+描画と画像 || Image.FromFile / FromStream || 画像を読み込む。 || Image.FromFile(p)
+描画と画像 || 画像の拡大縮小 || 大きさを変えて描く。 || New Bitmap(img, w, h)
+描画と画像 || 画像の回転・反転 || 向きを変える。 || img.RotateFlip(RotateFlipType.Rotate90FlipNone)
+描画と画像 || グレースケール変換 || 白黒の画像にする。 || ColorMatrix
+描画と画像 || SmoothingMode || 描画の滑らかさ。 || g.SmoothingMode = SmoothingMode.AntiAlias
+描画と画像 || ダブルバッファ || ちらつきを防ぐ。 || Me.DoubleBuffered = True
+描画と画像 || Invalidate / Refresh || 画面の再描画を要求する。 || Me.Invalidate()
+描画と画像 || Color.FromArgb || 色を作る。 || Color.FromArgb(255, 0, 0)
+描画と画像 || ColorDialog || 色を選ばせる。 || New ColorDialog()
+描画と画像 || FontDialog || 書体を選ばせる。 || New FontDialog()
+描画と画像 || Font の作成 || 書体と大きさを指定する。 || New Font("Meiryo", 12)
+描画と画像 || Rectangle / Point / Size || 位置と大きさの型。 || New Rectangle(0, 0, 10, 10)
+描画と画像 || GraphicsPath || 複雑な図形を作る。 || New GraphicsPath()
+描画と画像 || Region (領域) || 描画する領域。 || Me.Region = New Region(path)
+描画と画像 || 当たり判定 || 図形の重なりを調べる。 || r1.IntersectsWith(r2)
+描画と画像 || ゲームループ (Timer) || 一定間隔で更新と描画をくり返す。 || Timer1.Interval = 16
+描画と画像 || キー入力でキャラを動かす || KeyDown で座標を変える。 || x += 5
+描画と画像 || スプライトの描画 || 画像の一部を切り出して描く。 || g.DrawImage(img, dest, src, GraphicsUnit.Pixel)
+描画と画像 || 効果音の再生 || SoundPlayer で再生する。 || New SoundPlayer(p).Play()
+描画と画像 || グラフの自作 || 値を図形で描く。 || g.FillRectangle(...)
+描画と画像 || 印刷プレビュー || 印刷前に確認する。 || PrintPreviewDialog
+描画と画像 || QR コード / バーコード || ライブラリで画像にする。 || ZXing
+描画と画像 || OCR || 画像から文字を読み取る。 || Tesseract
+描画と画像 || 画像のしきい値処理 || 明るさで白黒に分ける。 || If c.GetBrightness() > 0.5
+描画と画像 || 画像の合成 || 画像を重ねる。 || g.DrawImage(a, 0, 0) : g.DrawImage(b, 10, 10)
+描画と画像 || 透過色 (MakeTransparent) || 特定の色を透明にする。 || bmp.MakeTransparent(Color.White)
+描画と画像 || アイコンの作成 || 画像からアイコンを作る。 || Icon.FromHandle(bmp.GetHicon())
+描画と画像 || SVG の描画 || ライブラリで扱う。 || Svg.SvgDocument
+描画と画像 || 動画の再生 || 外部のコントロールで再生する。 || WindowsMediaPlayer
+描画と画像 || Webカメラの利用 || ライブラリでカメラを使う。 || AForge / OpenCvSharp
+描画と画像 || 画面のキャプチャ || 画面を画像にする。 || g.CopyFromScreen(0, 0, 0, 0, size)
+Webとネットワーク || HttpClient の GET || 内容を取得する。 || Await client.GetStringAsync(url)
+Webとネットワーク || HttpClient の POST || データを送る。 || Await client.PostAsync(url, content)
+Webとネットワーク || StringContent / FormUrlEncodedContent || 送る内容を作る。 || New StringContent(json, Encoding.UTF8, "application/json")
+Webとネットワーク || HTTP ヘッダー || 追加の情報を付ける。 || client.DefaultRequestHeaders.Add("Authorization", t)
+Webとネットワーク || ステータスコード || 200 は成功、404 は見つからない。 || res.StatusCode
+Webとネットワーク || EnsureSuccessStatusCode || 失敗なら例外にする。 || res.EnsureSuccessStatusCode()
+Webとネットワーク || HttpClient の使い回し || 1つを使い回すのが基本。 || Shared ReadOnly client As New HttpClient
+Webとネットワーク || タイムアウトの設定 || 待つ時間を決める。 || client.Timeout = TimeSpan.FromSeconds(10)
+Webとネットワーク || ファイルのダウンロード || ストリームで保存する。 || Await client.GetStreamAsync(url)
+Webとネットワーク || WebBrowser / WebView2 || 画面に Web ページを表示する。 || WebView2.Source = New Uri(url)
+Webとネットワーク || HTML の解析 || ライブラリで読む。 || HtmlAgilityPack
+Webとネットワーク || REST API || HTTP で操作する仕組み。 || GET / POST / PUT / DELETE
+Webとネットワーク || JSON の解析 || JsonDocument で読む。 || JsonDocument.Parse(json)
+Webとネットワーク || JSON のクラス変換 || クラスに変換する。 || JsonSerializer.Deserialize(Of P)(json)
+Webとネットワーク || OAuth 認証 || 外部サービスのログイン方式。 || アクセストークン
+Webとネットワーク || API キーの管理 || コードに直接書かない。 || 環境変数や設定ファイル
+Webとネットワーク || SMTP メール送信 || メールを送る。 || SmtpClient
+Webとネットワーク || FTP の利用 || ファイルを転送する。 || FtpWebRequest
+Webとネットワーク || WebSocket || 双方向でリアルタイムに通信する。 || ClientWebSocket
+Webとネットワーク || SignalR || リアルタイム通信のライブラリ。 || HubConnectionBuilder
+Webとネットワーク || gRPC || 高速な通信の方式。 || Grpc.Net.Client
+Webとネットワーク || ネットワークの切断検知 || 接続の変化を知る。 || NetworkChange.NetworkAvailabilityChanged
+Webとネットワーク || プロキシ設定 || プロキシ経由で通信する。 || HttpClientHandler.Proxy
+Webとネットワーク || SSL/TLS 証明書 || 通信の暗号化に使う。 || ServerCertificateCustomValidationCallback
+Webとネットワーク || リトライ処理 || 失敗したらやり直す。 || For i = 1 To 3
+Webとネットワーク || ページ取得の礼儀 || アクセスの間隔をあける。 || Await Task.Delay(1000)
+Webとネットワーク || robots.txt の確認 || 取得してよいか確認する。 || /robots.txt
+Webとネットワーク || ログイン画面の自動操作 || Web 自動化はサイトの規約を守る。 || Selenium
+Webとネットワーク || LAN 内の通信 || UDP や TCP で端末間通信。 || UdpClient
+Webとネットワーク || ポート番号 || 通信の窓口の番号。 || 80, 443
+データ構造とアルゴリズム || 配列と連結リスト || 並び方の違いによる特徴。 || Array / LinkedList
+データ構造とアルゴリズム || スタックとキュー || 後入れ先出し・先入れ先出し。 || Stack / Queue
+データ構造とアルゴリズム || 木構造 || 親子関係を持つデータ。 || TreeNode
+データ構造とアルゴリズム || 二分探索木 || 小さい値は左、大きい値は右。 || Class Node
+データ構造とアルゴリズム || グラフ || 点と線でつながるデータ。 || Dictionary(Of Integer, List(Of Integer))
+データ構造とアルゴリズム || ハッシュ表 || キーから素早く値を探す。 || Dictionary
+データ構造とアルゴリズム || 優先度付きキュー || 優先度の高いものから取り出す。 || PriorityQueue(Of T, P)
+データ構造とアルゴリズム || 並べ替え (クイックソート) || 基準を決めて分ける速い並べ替え。 || Array.Sort
+データ構造とアルゴリズム || 並べ替え (マージソート) || 分けて、並べて、合わせる。 || 安定な並べ替え
+データ構造とアルゴリズム || 計算量 (O記法) || 処理の増え方の目安。 || O(n log n)
+データ構造とアルゴリズム || 線形探索と二分探索 || 順に探す・半分ずつ探す。 || O(n) / O(log n)
+データ構造とアルゴリズム || 幅優先探索 (BFS) || 近いところから順に探す。 || Queue を使う
+データ構造とアルゴリズム || 深さ優先探索 (DFS) || 行けるところまで深く探す。 || Stack や再帰
+データ構造とアルゴリズム || 動的計画法 || 小さな問題の答えを使い回す。 || メモ化
+データ構造とアルゴリズム || メモ化 || 計算結果を覚えておく。 || Dictionary にキャッシュ
+データ構造とアルゴリズム || 最大公約数 (ユークリッド) || 互除法で求める。 || While b <> 0
+データ構造とアルゴリズム || 素数の列挙 (エラトステネス) || ふるいで素数を見つける。 || Dim sieve(n) As Boolean
+データ構造とアルゴリズム || 順列と組み合わせ || 並べ方・選び方の数。 || Permutations
+データ構造とアルゴリズム || 文字列の検索アルゴリズム || 効率的に文字列を探す。 || IndexOf

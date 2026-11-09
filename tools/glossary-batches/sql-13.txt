@@ -1,0 +1,81 @@
+# カテゴリ || 用語 || 説明 || コード例
+SQLite || SQLite の型 (型親和性) || 列の型は目安で、実際の値で型が決まる。 || INTEGER, TEXT, REAL, BLOB, NUMERIC
+SQLite || INTEGER PRIMARY KEY || 自動で連番になる主キー。 || id INTEGER PRIMARY KEY
+SQLite || AUTOINCREMENT || 番号を再利用しない自動採番。 || id INTEGER PRIMARY KEY AUTOINCREMENT
+SQLite || .tables / .schema || sqlite3 コマンドの一覧・構造表示。 || .schema users
+SQLite || .mode / .headers || 出力の形式を決める。 || .mode column
+SQLite || .import || CSV を取り込む。 || .import a.csv t
+SQLite || .dump || データベースを SQL として書き出す。 || .dump
+SQLite || PRAGMA || 設定や情報の取得を行う命令。 || PRAGMA table_info(t);
+SQLite || PRAGMA foreign_keys || 外部キー制約を有効にする。 || PRAGMA foreign_keys = ON;
+SQLite || PRAGMA journal_mode (WAL) || 書き込み方式を変える。 || PRAGMA journal_mode = WAL;
+SQLite || VACUUM (SQLite) || ファイルを整理して小さくする。 || VACUUM;
+SQLite || strftime || 日付を書式で取り出す。 || strftime('%Y-%m', d)
+SQLite || datetime('now') || 現在の日時。 || SELECT datetime('now', 'localtime');
+SQLite || date() 修飾子 || 日付を加減する。 || date('now', '+7 days')
+SQLite || GLOB || 大文字小文字を区別するパターン検索。 || WHERE name GLOB 'A*'
+SQLite || INSERT OR REPLACE || 重複したら置き換える。 || INSERT OR REPLACE INTO t VALUES (1, 'a');
+SQLite || INSERT OR IGNORE || 重複したら無視する。 || INSERT OR IGNORE INTO t VALUES (1, 'a');
+SQLite || ATTACH DATABASE || 別のファイルを同時に使う。 || ATTACH 'b.db' AS b;
+SQLite || FTS5 || 全文検索の機能。 || CREATE VIRTUAL TABLE t USING fts5(body);
+SQLite || json_extract || JSON から値を取り出す。 || json_extract(j, '$.a')
+SQLite || ALTER TABLE の制限 || 列の変更・削除に制限がある（新しい版は一部可能）。 || ALTER TABLE t DROP COLUMN a;
+SQLite || 同時書き込みの制限 || 書き込みは1つずつ。 || ロック待ち
+SQLite || モバイルアプリでの利用 || スマホアプリの保存に広く使われる。 || Android / iOS
+SQLite || :memory: || メモリ上だけのデータベース。 || sqlite3 :memory:
+クラウドDB || BigQuery || Google のクラウドのデータ分析サービス。 || SELECT * FROM `proj.ds.t`
+クラウドDB || Snowflake || クラウドのデータウェアハウス。 || SELECT * FROM t QUALIFY ...
+クラウドDB || Amazon Redshift || AWS のデータウェアハウス。 || DISTKEY / SORTKEY
+クラウドDB || Amazon RDS / Aurora || AWS のマネージドなデータベース。 || Aurora PostgreSQL
+クラウドDB || Cloud SQL / AlloyDB || Google のマネージドなデータベース。 || Cloud SQL for MySQL
+クラウドDB || Azure SQL Database || Azure のマネージドな SQL Server。 || Azure SQL
+クラウドDB || Neon || サーバーレスの PostgreSQL サービス。 || ブランチ機能
+クラウドDB || PlanetScale / TiDB || 分散型の MySQL 互換データベース。 || シャーディング
+クラウドDB || CockroachDB || 分散型の PostgreSQL 互換データベース。 || 高可用性
+クラウドDB || サーバーレス DB || 使った分だけ課金される DB。 || 自動スケール
+クラウドDB || マネージドサービス || 運用をサービス側に任せる。 || 自動バックアップ
+クラウドDB || 読み取りレプリカ || 読み取り専用の複製。 || Read Replica
+クラウドDB || 接続数の制限 || サーバーレスでは接続数が課題になる。 || コネクションプーラー
+クラウドDB || リージョン || データを置く地域。 || ap-northeast-1 (東京)
+クラウドDB || 無料枠 || 無料で使える範囲の制限。 || 容量・転送量
+クラウドDB || QUALIFY 句 || 窓関数の結果で絞り込む（Snowflake・BigQuery）。 || QUALIFY ROW_NUMBER() OVER (...) = 1
+クラウドDB || ARRAY_AGG (BigQuery) || 配列にまとめる。 || ARRAY_AGG(x)
+クラウドDB || UNNEST (BigQuery) || 配列を行に展開する。 || FROM t, UNNEST(arr)
+クラウドDB || パーティションとクラスタリング || 検索コストを減らす分け方。 || PARTITION BY DATE(ts)
+クラウドDB || スキャン量課金 || 読み込んだ量で料金が決まる。 || SELECT * は避ける
+クラウドDB || ステージ (COPY INTO) || ファイルからの取り込み。 || COPY INTO t FROM @stage
+クラウドDB || タイムトラベル || 過去の状態に戻す機能。 || AT (OFFSET => -60)
+クラウドDB || ゼロコピークローン || データを複製せず即座に複製する。 || CREATE TABLE t2 CLONE t
+クラウドDB || VARIANT 型 || 半構造データを持つ型（Snowflake）。 || data:name::string
+クラウドDB || FLATTEN || 入れ子のデータを行に展開する。 || LATERAL FLATTEN(input => j)
+データモデリング || 概念モデル || 業務の「もの」と関係を表すモデル。 || ER 図
+データモデリング || 論理モデル || 表と列の設計。 || 正規化済みの表
+データモデリング || 物理モデル || 型・索引など実装に近い設計。 || DDL
+データモデリング || エンティティの識別 || 管理する「もの」を見つける。 || 顧客、商品
+データモデリング || 属性 || エンティティが持つ項目。 || 氏名、電話
+データモデリング || リレーションシップ || エンティティ間の関係。 || 注文は顧客に属する
+データモデリング || カーディナリティ || 関連の多重度（1対1、1対多など）。 || 1:N
+データモデリング || 参加制約 || 関連が必須か任意か。 || 必須 / 任意
+データモデリング || 弱エンティティ || 親がないと存在できないエンティティ。 || 注文明細
+データモデリング || スーパータイプとサブタイプ || 共通部分と固有部分を分ける。 || 人 → 社員・顧客
+データモデリング || 再帰的な関連 || 同じエンティティどうしの関連。 || 社員と上司
+データモデリング || 履歴の持ち方 || 変更の履歴を保つ設計。 || 有効開始日・終了日
+データモデリング || 論理削除の設計 || 削除フラグで管理する。 || deleted_at
+データモデリング || 監査項目 || 作成日時・更新日時・更新者。 || created_at, updated_by
+データモデリング || コード表 || 区分や種類を表す表。 || status_codes
+データモデリング || 多言語対応の設計 || 文言を別表に持つ。 || name_translations
+データモデリング || タグ付けの設計 || 多対多でタグを持つ。 || item_tags
+データモデリング || 階層データの設計 || 親IDや閉包テーブルで表す。 || parent_id
+データモデリング || 隣接リストと入れ子集合 || 階層の表し方。 || nested set
+データモデリング || EAV モデル || 項目を行として持つ柔軟な設計（注意が必要）。 || entity, attribute, value
+データモデリング || JSON 列の活用 || 変わりやすい項目を JSON で持つ。 || JSONB
+データモデリング || 集計テーブルの設計 || 速度のため集計結果を保存する。 || daily_summary
+データモデリング || 命名規則の統一 || 複数形・単数形、記号のルールを決める。 || snake_case
+データモデリング || 主キーの選び方 || 連番・UUID・自然キーの比較。 || BIGINT / UUID
+データモデリング || 外部キーを付けるか || 整合性を守るために基本は付ける。 || REFERENCES
+データモデリング || インデックス設計の方針 || 検索条件と結合に使う列に付ける。 || WHERE / JOIN の列
+データモデリング || 過剰な正規化の弊害 || 結合が増えて遅くなる。 || 非正規化の検討
+データモデリング || データ品質 || 正確さ・一貫性・完全性。 || 制約で守る
+データモデリング || マスターデータ管理 || 基本データを一元管理する。 || MDM
+データモデリング || データリネージ || データの出どころと流れの記録。 || 依存関係
+データモデリング || データカタログ || データの説明書の集まり。 || 用語集
