@@ -1,0 +1,293 @@
+基本構文 || public static void main || プログラムの開始点。 || public static void main(String[] args) {}
+基本構文 || パッケージ宣言 || クラスの所属を示す。 || package com.example;
+基本構文 || import 文 || 他のクラスを使えるようにする。 || import java.util.List;
+基本構文 || static import || static メンバーを直接使う。 || import static java.lang.Math.PI;
+基本構文 || 識別子 || 名前の付け方の規則。 || int count;
+基本構文 || 予約語 || 名前に使えない語。 || class, public
+基本構文 || コメント || 説明文。 || // 1行コメント
+基本構文 || Javadoc || ドキュメント用コメント。 || /** 説明 */
+基本構文 || セミコロン || 文の終わり。 || int a = 1;
+基本構文 || ブロック || { } で囲む範囲。 || { int x = 0; }
+基本構文 || スコープ || 変数が有効な範囲。 || for (int i = 0; ; ) {}
+基本構文 || 変数宣言 || 型と名前を指定する。 || int n = 10;
+基本構文 || var || 型推論の変数宣言。 || var list = new ArrayList<String>();
+基本構文 || final 変数 || 再代入できない変数。 || final int MAX = 10;
+基本構文 || 定数 || static final で表す。 || static final int SIZE = 5;
+基本構文 || リテラル || ソースに直接書く値。 || 42, 3.14, "a"
+基本構文 || テキストブロック || 複数行文字列。 || String s = """ ... """;
+基本構文 || エスケープシーケンス || 特殊文字の表記。 || "\n", "\t"
+基本構文 || Unicode エスケープ || 文字コードで書く。 || 'あ'
+基本構文 || 数値区切り || アンダースコアで読みやすく。 || 1_000_000
+基本構文 || 2進数リテラル || 0b で始める。 || 0b1010
+基本構文 || 16進数リテラル || 0x で始める。 || 0xFF
+基本構文 || 8進数リテラル || 0 で始める。 || 017
+基本構文 || long リテラル || 末尾に L。 || 100L
+基本構文 || float リテラル || 末尾に f。 || 1.5f
+基本構文 || 命名規約 || キャメルケースなど。 || myVariable, MyClass
+基本構文 || System.out.println || 標準出力に改行付きで出す。 || System.out.println("hi");
+基本構文 || System.out.printf || 書式付き出力。 || System.out.printf("%d%n", 5);
+基本構文 || System.err || 標準エラー出力。 || System.err.println("err");
+基本構文 || System.in || 標準入力。 || new Scanner(System.in)
+基本構文 || コマンドライン引数 || 起動時に渡す値。 || args[0]
+基本構文 || System.exit || プログラムを終了する。 || System.exit(0);
+基本構文 || System.currentTimeMillis || 現在のミリ秒。 || long t = System.currentTimeMillis();
+基本構文 || System.nanoTime || 計測用の高精度時間。 || System.nanoTime()
+基本構文 || System.getProperty || システムプロパティ取得。 || System.getProperty("os.name")
+基本構文 || System.getenv || 環境変数の取得。 || System.getenv("PATH")
+基本構文 || System.lineSeparator || 改行文字列。 || System.lineSeparator()
+基本構文 || System.arraycopy || 配列のコピー。 || System.arraycopy(a, 0, b, 0, 3);
+基本構文 || System.identityHashCode || 識別用ハッシュ値。 || System.identityHashCode(o)
+基本構文 || Runtime || 実行環境の情報。 || Runtime.getRuntime()
+基本構文 || availableProcessors || 利用可能な CPU 数。 || Runtime.getRuntime().availableProcessors()
+基本構文 || totalMemory / freeMemory || メモリ量の確認。 || Runtime.getRuntime().freeMemory()
+データ型 || byte || 8 ビット整数。 || byte b = 10;
+データ型 || short || 16 ビット整数。 || short s = 100;
+データ型 || int || 32 ビット整数。 || int i = 1;
+データ型 || long || 64 ビット整数。 || long l = 1L;
+データ型 || float || 32 ビット浮動小数点。 || float f = 1.0f;
+データ型 || double || 64 ビット浮動小数点。 || double d = 1.0;
+データ型 || char || 1 文字を表す型。 || char c = 'a';
+データ型 || boolean || 真偽値。 || boolean ok = true;
+データ型 || プリミティブ型 || 基本の 8 種類の型。 || int, double
+データ型 || 参照型 || オブジェクトを指す型。 || String s;
+データ型 || ラッパークラス || 基本型を包むクラス。 || Integer, Double
+データ型 || オートボクシング || 基本型から自動変換。 || Integer a = 5;
+データ型 || アンボクシング || ラッパーから自動変換。 || int b = a;
+データ型 || Integer.MAX_VALUE || int の最大値。 || 2147483647
+データ型 || Integer.MIN_VALUE || int の最小値。 || -2147483648
+データ型 || Long.MAX_VALUE || long の最大値。 || Long.MAX_VALUE
+データ型 || Double.NaN || 非数。 || Double.isNaN(x)
+データ型 || Double.POSITIVE_INFINITY || 正の無限大。 || 1.0 / 0
+データ型 || Integer.parseInt || 文字列を int に。 || Integer.parseInt("12")
+データ型 || Integer.valueOf || ラッパーを得る。 || Integer.valueOf(12)
+データ型 || Integer.toString || 文字列に変換。 || Integer.toString(12)
+データ型 || Integer.toBinaryString || 2進数の文字列。 || Integer.toBinaryString(5)
+データ型 || Integer.toHexString || 16進数の文字列。 || Integer.toHexString(255)
+データ型 || Integer.compare || 比較して -1,0,1。 || Integer.compare(a, b)
+データ型 || Integer.bitCount || 1 のビット数。 || Integer.bitCount(7)
+データ型 || Integer.reverse || ビット反転並べ替え。 || Integer.reverse(1)
+データ型 || Integer.signum || 符号を返す。 || Integer.signum(-5)
+データ型 || Integer キャッシュ || -128〜127 は同一の参照。 || Integer.valueOf(100)
+データ型 || Double.parseDouble || 文字列を double に。 || Double.parseDouble("1.5")
+データ型 || Double.compare || 浮動小数点の比較。 || Double.compare(a, b)
+データ型 || Boolean.parseBoolean || 文字列を真偽値に。 || Boolean.parseBoolean("true")
+データ型 || Character.isDigit || 数字か判定。 || Character.isDigit('5')
+データ型 || Character.isLetter || 文字か判定。 || Character.isLetter('a')
+データ型 || Character.isUpperCase || 大文字か判定。 || Character.isUpperCase('A')
+データ型 || Character.toUpperCase || 大文字に変換。 || Character.toUpperCase('a')
+データ型 || Character.getNumericValue || 数字の値。 || Character.getNumericValue('7')
+データ型 || 型キャスト || 型を明示的に変換する。 || (int) 3.7
+データ型 || 拡大変換 || 小さい型から大きい型へ。 || long l = i;
+データ型 || 縮小変換 || 大きい型から小さい型へ。 || int i = (int) l;
+データ型 || 数値の昇格 || 演算時の型の自動拡大。 || byte + byte は int
+データ型 || オーバーフロー || 範囲を超えて回る。 || Integer.MAX_VALUE + 1
+データ型 || 浮動小数点誤差 || 2進数表現による誤差。 || 0.1 + 0.2
+データ型 || BigDecimal || 精度の高い 10進数。 || new BigDecimal("0.1")
+データ型 || BigInteger || 桁数無制限の整数。 || new BigInteger("123")
+データ型 || BigDecimal.add || 加算。 || a.add(b)
+データ型 || BigDecimal.setScale || 小数桁と丸め。 || x.setScale(2, RoundingMode.HALF_UP)
+データ型 || RoundingMode || 丸めの方式。 || RoundingMode.HALF_EVEN
+データ型 || MathContext || 精度と丸めの指定。 || new MathContext(10)
+データ型 || BigInteger.pow || べき乗。 || n.pow(10)
+データ型 || BigInteger.mod || 剰余。 || n.mod(m)
+データ型 || BigInteger.isProbablePrime || 素数判定。 || n.isProbablePrime(10)
+データ型 || null || 何も指さない参照。 || String s = null;
+データ型 || ヌルポインタ || null への操作でエラー。 || NullPointerException
+演算子 || 算術演算子 || 四則演算など。 || + - * / %
+演算子 || 整数の除算 || 小数点以下が切り捨てられる。 || 7 / 2 は 3
+演算子 || 剰余演算子 || 余りを求める。 || 7 % 3
+演算子 || 複合代入演算子 || 計算して代入。 || a += 5;
+演算子 || インクリメント || 1 増やす。 || i++
+演算子 || デクリメント || 1 減らす。 || i--
+演算子 || 前置と後置 || 評価のタイミングが違う。 || ++i と i++
+演算子 || 比較演算子 || 大小・等しさの判定。 || == != < >
+演算子 || 論理演算子 || かつ・または・否定。 || && || !
+演算子 || 短絡評価 || 結果が決まれば右辺を評価しない。 || a != null && a.x
+演算子 || ビット演算子 || ビット単位の演算。 || & ^ ~
+演算子 || 左シフト || ビットを左へ。 || 1 << 3
+演算子 || 右シフト || 符号付きで右へ。 || n >> 1
+演算子 || 符号なし右シフト || 0 を埋めて右へ。 || n >>> 1
+演算子 || 三項演算子 || 条件で値を選ぶ。 || x > 0 ? 1 : -1
+演算子 || instanceof || 型の判定。 || o instanceof String
+演算子 || パターンマッチング instanceof || 判定と変数宣言を同時に。 || if (o instanceof String s)
+演算子 || 演算子の優先順位 || 計算の順番。 || a + b * c
+演算子 || 文字列連結 || + で文字列を連結。 || "a" + 1
+演算子 || == と equals || 参照比較と内容比較。 || s1.equals(s2)
+制御構文 || if 文 || 条件分岐。 || if (a > 0) {}
+制御構文 || else if || 複数の条件分岐。 || else if (a == 0)
+制御構文 || switch 文 || 値による分岐。 || switch (x) { case 1: }
+制御構文 || switch 式 || 値を返す switch。 || int n = switch (d) { case MON -> 1; default -> 0; };
+制御構文 || アロー形式 case || break 不要の case。 || case 1 -> "one";
+制御構文 || yield || switch 式で値を返す。 || yield 5;
+制御構文 || for 文 || 回数が決まった繰り返し。 || for (int i = 0; i < 5; i++)
+制御構文 || 拡張 for 文 || 要素を順に取り出す。 || for (String s : list)
+制御構文 || while 文 || 条件が真の間繰り返す。 || while (x < 10)
+制御構文 || do-while 文 || 先に実行してから判定。 || do { } while (x < 10);
+制御構文 || break || ループを抜ける。 || break;
+制御構文 || continue || 次の周回へ進む。 || continue;
+制御構文 || ラベル付き break || 外側のループを抜ける。 || outer: break outer;
+制御構文 || return || メソッドから戻る。 || return x;
+制御構文 || 無限ループ || 終わらない繰り返し。 || while (true) {}
+制御構文 || 多重ループ || ループの入れ子。 || for (...) for (...)
+制御構文 || ガード節 || 早期 return で入れ子を減らす。 || if (x == null) return;
+制御構文 || パターンマッチング switch || 型で分岐する。 || case String s -> s
+制御構文 || レコードパターン || レコードを分解して判定。 || case Point(int x, int y)
+制御構文 || when ガード || パターンに条件を付ける。 || case Integer i when i > 0
+配列 || 配列の宣言 || 同じ型を並べる。 || int[] a = new int[5];
+配列 || 配列の初期化 || 値を並べて作る。 || int[] a = {1, 2, 3};
+配列 || length || 配列の長さ。 || a.length
+配列 || 多次元配列 || 配列の配列。 || int[][] m = new int[3][3];
+配列 || ジャグ配列 || 行ごとに長さが違う配列。 || new int[3][]
+配列 || ArrayIndexOutOfBoundsException || 範囲外アクセス。 || a[10]
+配列 || Arrays.toString || 配列を文字列に。 || Arrays.toString(a)
+配列 || Arrays.deepToString || 多次元配列を文字列に。 || Arrays.deepToString(m)
+配列 || Arrays.sort || 並べ替え。 || Arrays.sort(a);
+配列 || Arrays.fill || 同じ値で埋める。 || Arrays.fill(a, 0);
+配列 || Arrays.copyOf || 長さを指定してコピー。 || Arrays.copyOf(a, 10)
+配列 || Arrays.copyOfRange || 範囲をコピー。 || Arrays.copyOfRange(a, 1, 3)
+配列 || Arrays.equals || 内容の比較。 || Arrays.equals(a, b)
+配列 || Arrays.asList || 配列をリストに。 || Arrays.asList(1, 2)
+配列 || Arrays.binarySearch || 二分探索。 || Arrays.binarySearch(a, 5)
+配列 || Arrays.stream || 配列から Stream。 || Arrays.stream(a)
+配列 || Arrays.hashCode || 内容のハッシュ。 || Arrays.hashCode(a)
+配列 || Arrays.setAll || 添字から値を設定。 || Arrays.setAll(a, i -> i * 2)
+配列 || 配列の複製 || clone で浅いコピー。 || a.clone()
+配列 || 可変長引数 || 引数の個数が可変。 || void f(int... a)
+配列 || 配列の逆順 || 手作業で反転する。 || Collections.reverse(list)
+配列 || 配列の最大値 || 走査して求める。 || Arrays.stream(a).max()
+配列 || 配列の合計 || stream で合計。 || Arrays.stream(a).sum()
+配列 || 2次元配列の走査 || 二重ループで処理。 || for (int[] r : m)
+クラスと継承 || クラス定義 || オブジェクトの設計図。 || class Dog {}
+クラスと継承 || インスタンス || クラスから作った実体。 || new Dog()
+クラスと継承 || フィールド || クラスが持つ変数。 || private int age;
+クラスと継承 || メソッド || クラスが持つ処理。 || void bark() {}
+クラスと継承 || コンストラクタ || 初期化処理。 || Dog(String n) {}
+クラスと継承 || デフォルトコンストラクタ || 引数なしの自動生成。 || new Dog()
+クラスと継承 || コンストラクタのオーバーロード || 引数違いで複数定義。 || Dog(), Dog(int a)
+クラスと継承 || this || 自分自身の参照。 || this.age = age;
+クラスと継承 || this() || 別のコンストラクタ呼び出し。 || this(0);
+クラスと継承 || super || 親クラスの参照。 || super.speak()
+クラスと継承 || super() || 親のコンストラクタ呼び出し。 || super(name);
+クラスと継承 || extends || クラスを継承する。 || class Dog extends Animal
+クラスと継承 || implements || インターフェースを実装。 || class A implements B
+クラスと継承 || オーバーライド || 親のメソッドを上書き。 || @Override
+クラスと継承 || オーバーロード || 同名で引数違いのメソッド。 || add(int), add(double)
+クラスと継承 || @Override || 上書きを明示する注釈。 || @Override public String toString()
+クラスと継承 || 多態性 || 親型で子の振る舞いを呼ぶ。 || Animal a = new Dog();
+クラスと継承 || 抽象クラス || 直接生成できない親。 || abstract class Shape {}
+クラスと継承 || 抽象メソッド || 本体を持たない宣言。 || abstract double area();
+クラスと継承 || インターフェース || 実装すべき約束事。 || interface Flyable {}
+クラスと継承 || default メソッド || インターフェースの既定実装。 || default void f() {}
+クラスと継承 || static メソッド (IF) || インターフェース内の static。 || static int g() {}
+クラスと継承 || private メソッド (IF) || インターフェース内の補助。 || private void h() {}
+クラスと継承 || 関数型インターフェース || 抽象メソッドが 1 つ。 || @FunctionalInterface
+クラスと継承 || マーカーインターフェース || メソッドを持たない目印。 || Serializable
+クラスと継承 || sealed クラス || 継承先を限定する。 || sealed class A permits B, C
+クラスと継承 || permits || 許可するサブクラスの指定。 || permits B
+クラスと継承 || non-sealed || 封印を解く。 || non-sealed class B
+クラスと継承 || record || 不変データクラス。 || record Point(int x, int y) {}
+クラスと継承 || コンパクトコンストラクタ || record の検証用。 || Point { if (x < 0) throw ...; }
+クラスと継承 || enum || 列挙型。 || enum Color { RED, GREEN }
+クラスと継承 || enum のフィールド || 値に情報を持たせる。 || RED("赤")
+クラスと継承 || enum.values || 全要素の配列。 || Color.values()
+クラスと継承 || enum.valueOf || 名前から要素を得る。 || Color.valueOf("RED")
+クラスと継承 || enum.ordinal || 定義順の番号。 || RED.ordinal()
+クラスと継承 || EnumMap || enum をキーにした Map。 || new EnumMap<>(Color.class)
+クラスと継承 || EnumSet || enum 用の Set。 || EnumSet.of(RED)
+クラスと継承 || static フィールド || クラスで共有する変数。 || static int count;
+クラスと継承 || static メソッド || インスタンス不要のメソッド。 || Math.abs(-1)
+クラスと継承 || static 初期化ブロック || クラス読み込み時の処理。 || static { }
+クラスと継承 || インスタンス初期化ブロック || 生成時の共通処理。 || { }
+クラスと継承 || final クラス || 継承できないクラス。 || final class A {}
+クラスと継承 || final メソッド || 上書きできないメソッド。 || final void f() {}
+クラスと継承 || アクセス修飾子 || 公開範囲の指定。 || public private protected
+クラスと継承 || パッケージプライベート || 修飾子なしの範囲。 || class A {}
+クラスと継承 || カプセル化 || 内部を隠して公開を絞る。 || private + getter
+クラスと継承 || getter / setter || 値の取得・設定メソッド。 || getName(), setName()
+クラスと継承 || 不変オブジェクト || 生成後に変化しない。 || final フィールド
+クラスと継承 || 内部クラス || クラス内のクラス。 || class Outer { class Inner {} }
+クラスと継承 || static ネストクラス || 外側に依存しない内部クラス。 || static class N {}
+クラスと継承 || ローカルクラス || メソッド内のクラス。 || void f() { class L {} }
+クラスと継承 || 匿名クラス || 名前のないクラス。 || new Runnable() { ... }
+クラスと継承 || Object クラス || 全クラスの親。 || Object o;
+クラスと継承 || toString || 文字列表現。 || o.toString()
+クラスと継承 || equals || 同値判定。 || a.equals(b)
+クラスと継承 || hashCode || ハッシュ値。 || o.hashCode()
+クラスと継承 || equals と hashCode の約束 || 同値なら同じハッシュ。 || Objects.hash(a, b)
+クラスと継承 || clone || 複製メソッド。 || o.clone()
+クラスと継承 || getClass || 実行時のクラス情報。 || o.getClass()
+クラスと継承 || finalize || 廃止予定の終了処理。 || deprecated
+クラスと継承 || Objects.equals || null 安全な比較。 || Objects.equals(a, b)
+クラスと継承 || Objects.requireNonNull || null を拒否する。 || Objects.requireNonNull(x)
+クラスと継承 || Objects.toString || null 安全な文字列化。 || Objects.toString(o, "")
+クラスと継承 || Objects.hash || 複数値のハッシュ。 || Objects.hash(a, b)
+クラスと継承 || Comparable || 自然順序を定義。 || compareTo(T o)
+クラスと継承 || Comparator || 比較方法を外から指定。 || Comparator.comparing(...)
+クラスと継承 || Cloneable || 複製可能の目印。 || implements Cloneable
+クラスと継承 || ジェネリクス || 型をパラメータ化。 || List<String>
+クラスと継承 || 型パラメータ || 総称型の名前。 || class Box<T>
+クラスと継承 || 境界型パラメータ || 型の上限を指定。 || <T extends Number>
+クラスと継承 || ワイルドカード || 不明な型。 || List<?>
+クラスと継承 || 上限ワイルドカード || 型の上限を指定。 || List<? extends Number>
+クラスと継承 || 下限ワイルドカード || 型の下限を指定。 || List<? super Integer>
+クラスと継承 || PECS 原則 || 読むなら extends 書くなら super。 || Producer Extends
+クラスと継承 || 型消去 || 実行時には型情報がない。 || type erasure
+クラスと継承 || ダイヤモンド演算子 || 型引数を省略する。 || new ArrayList<>()
+クラスと継承 || ジェネリックメソッド || メソッド単位の型引数。 || <T> void f(T t)
+クラスと継承 || 再帰的型境界 || 自分自身を型境界に。 || <T extends Comparable<T>>
+クラスと継承 || アノテーション || メタデータの注釈。 || @Deprecated
+クラスと継承 || @interface || 独自注釈の定義。 || @interface MyAnno {}
+クラスと継承 || @Retention || 注釈の保持期間。 || RetentionPolicy.RUNTIME
+クラスと継承 || @Target || 注釈の付与先。 || ElementType.METHOD
+クラスと継承 || @SuppressWarnings || 警告の抑制。 || @SuppressWarnings("unchecked")
+クラスと継承 || @SafeVarargs || 可変長引数の警告抑制。 || @SafeVarargs
+クラスと継承 || @FunctionalInterface || 関数型の明示。 || @FunctionalInterface
+クラスと継承 || リフレクション || 実行時にクラスを調べる。 || Class.forName("A")
+クラスと継承 || Class.getMethods || メソッド一覧。 || cls.getMethods()
+クラスと継承 || Method.invoke || メソッドを動的に呼ぶ。 || m.invoke(obj)
+クラスと継承 || Field.setAccessible || private へのアクセス許可。 || f.setAccessible(true)
+クラスと継承 || 動的プロキシ || 実行時にプロキシ生成。 || Proxy.newProxyInstance
+例外処理 || try-catch || 例外を捕捉する。 || try { } catch (Exception e) { }
+例外処理 || finally || 必ず実行する処理。 || finally { close(); }
+例外処理 || try-with-resources || 自動でクローズする。 || try (var r = open()) { }
+例外処理 || AutoCloseable || 自動クローズ対象。 || implements AutoCloseable
+例外処理 || throw || 例外を投げる。 || throw new IOException();
+例外処理 || throws || メソッドが投げる例外の宣言。 || void f() throws IOException
+例外処理 || 検査例外 || 捕捉か宣言が必須。 || IOException
+例外処理 || 非検査例外 || 捕捉が必須でない。 || RuntimeException
+例外処理 || Throwable || 例外とエラーの親。 || Throwable
+例外処理 || Exception || 例外の親クラス。 || Exception
+例外処理 || Error || 回復困難な異常。 || OutOfMemoryError
+例外処理 || RuntimeException || 実行時例外の親。 || RuntimeException
+例外処理 || NullPointerException || null への操作。 || s.length()
+例外処理 || IllegalArgumentException || 不正な引数。 || throw new IllegalArgumentException()
+例外処理 || IllegalStateException || 不正な状態。 || throw new IllegalStateException()
+例外処理 || ClassCastException || 不正なキャスト。 || (String) obj
+例外処理 || NumberFormatException || 数値変換の失敗。 || Integer.parseInt("a")
+例外処理 || ArithmeticException || 0 での整数除算など。 || 1 / 0
+例外処理 || IndexOutOfBoundsException || 範囲外の添字。 || list.get(5)
+例外処理 || ConcurrentModificationException || 走査中の変更。 || for 内で remove
+例外処理 || UnsupportedOperationException || 未対応の操作。 || List.of().add(1)
+例外処理 || StackOverflowError || 再帰が深すぎる。 || 無限再帰
+例外処理 || OutOfMemoryError || メモリ不足。 || new byte[Integer.MAX_VALUE]
+例外処理 || IOException || 入出力の失敗。 || IOException
+例外処理 || FileNotFoundException || ファイルがない。 || new FileReader("x")
+例外処理 || InterruptedException || 割り込みを受けた。 || Thread.sleep(100)
+例外処理 || ClassNotFoundException || クラスが見つからない。 || Class.forName
+例外処理 || NoSuchElementException || 要素がない。 || iterator.next()
+例外処理 || DateTimeException || 日時の異常。 || LocalDate.of(2024, 2, 30)
+例外処理 || カスタム例外 || 独自の例外クラス。 || class MyEx extends Exception
+例外処理 || 例外の連鎖 || 原因を保持する。 || new MyEx("x", cause)
+例外処理 || getCause || 原因の例外。 || e.getCause()
+例外処理 || getMessage || メッセージ取得。 || e.getMessage()
+例外処理 || printStackTrace || スタックトレース表示。 || e.printStackTrace()
+例外処理 || getStackTrace || スタック情報の取得。 || e.getStackTrace()
+例外処理 || addSuppressed || 抑制例外の追加。 || e.addSuppressed(t)
+例外処理 || マルチキャッチ || 複数の例外を 1 つで捕捉。 || catch (A e)
+例外処理 || 例外の握りつぶし || 何もしない catch は避ける。 || catch (Exception e) {}
+例外処理 || アサーション || 開発時の前提確認。 || assert x > 0;
+例外処理 || -ea オプション || アサーションを有効化。 || java -ea Main
+例外処理 || UncaughtExceptionHandler || 捕捉されない例外の処理。 || Thread.setDefaultUncaughtExceptionHandler
+例外処理 || 例外の再スロー || 捕捉して再度投げる。 || throw e;
+例外処理 || 早期失敗 || 不正を早く検出する。 || fail fast
+例外処理 || Optional による回避 || null の代わりに使う。 || Optional.empty()

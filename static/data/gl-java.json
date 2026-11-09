@@ -1,1 +1,9299 @@
-{"version":1,"entries":[{"lang":"java","category":"基本","term":"public static void main","summary":"Java プログラムの開始地点となるメソッドです。","examples":[{"code":"public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello\");\n  }\n}","note":"ファイル名は public クラス名（Main.java）と同じにします。"}],"pages":[],"id":"java-0001"},{"lang":"java","category":"基本","term":"System.out.println","summary":"標準出力へ1行表示します。print は改行なし、printf は書式付き。","examples":[{"code":"System.out.println(\"こんにちは\");","note":""}],"pages":[],"id":"java-0002"},{"lang":"java","category":"基本","term":"コメント","summary":"// は1行、/* */ は複数行、/** */ は Javadoc（説明書き）です。","examples":[{"code":"// メモ","note":""}],"pages":[],"id":"java-0003"},{"lang":"java","category":"基本","term":"パッケージ","summary":"クラスを整理するための名前空間です。ファイルの先頭に書きます。","examples":[{"code":"package com.example.app;","note":""}],"pages":[],"id":"java-0004"},{"lang":"java","category":"基本","term":"import","summary":"別のパッケージのクラスを使えるようにします。","examples":[{"code":"import java.util.List;","note":""}],"pages":[],"id":"java-0005"},{"lang":"java","category":"基本","term":"var","summary":"右辺から型を推測させるローカル変数宣言です（Java 10以降）。","examples":[{"code":"var list = new ArrayList<String>();","note":""}],"pages":[],"id":"java-0006"},{"lang":"java","category":"基本","term":"final","summary":"変数なら再代入禁止、メソッドなら上書き禁止、クラスなら継承禁止にします。","examples":[{"code":"final int MAX = 10;","note":""}],"pages":[],"id":"java-0007"},{"lang":"java","category":"基本","term":"static","summary":"インスタンスではなくクラスに属することを表します。","examples":[{"code":"static int count = 0;","note":""}],"pages":[],"id":"java-0008"},{"lang":"java","category":"基本","term":"Scanner","summary":"キーボードやファイルから入力を読む標準クラスです。","examples":[{"code":"Scanner sc = new Scanner(System.in);\nint n = sc.nextInt();","note":""}],"pages":[],"id":"java-0009"},{"lang":"java","category":"データ型","term":"int / long","summary":"整数型。int は約±21億、long はそれより大きな値も扱えます（数値の末尾に L）。","examples":[{"code":"long big = 3000000000L;","note":""}],"pages":[],"id":"java-0010"},{"lang":"java","category":"データ型","term":"double / float","summary":"小数型。double が標準で、float は数値の末尾に f を付けます。","examples":[{"code":"double d = 3.14;","note":""}],"pages":[],"id":"java-0011"},{"lang":"java","category":"データ型","term":"boolean","summary":"true か false を持つ型です。","examples":[{"code":"boolean ok = true;","note":""}],"pages":[],"id":"java-0012"},{"lang":"java","category":"データ型","term":"char","summary":"文字1つを表す型。シングルクォートで囲みます。","examples":[{"code":"char c = 'A';","note":""}],"pages":[],"id":"java-0013"},{"lang":"java","category":"データ型","term":"String","summary":"文字列を表すクラス。一度作ると中身は変えられません。","examples":[{"code":"String s = \"abc\";","note":""}],"pages":[],"id":"java-0014"},{"lang":"java","category":"データ型","term":"byte / short","summary":"小さな整数型（8ビット／16ビット）。","examples":[{"code":"byte b = 127;","note":""}],"pages":[],"id":"java-0015"},{"lang":"java","category":"データ型","term":"ラッパークラス","summary":"基本型を包んだクラス（Integer, Double など）。コレクションには基本型を直接入れられません。","examples":[{"code":"Integer n = 5;","note":""}],"pages":[],"id":"java-0016"},{"lang":"java","category":"データ型","term":"オートボクシング","summary":"基本型とラッパークラスを自動で変換する仕組みです。","examples":[{"code":"Integer n = 5;\nint m = n;","note":""}],"pages":[],"id":"java-0017"},{"lang":"java","category":"データ型","term":"キャスト","summary":"型を明示的に変換します。小数→整数では小数部が切り捨てられます。","examples":[{"code":"int i = (int) 3.9; // 3","note":""}],"pages":[],"id":"java-0018"},{"lang":"java","category":"データ型","term":"BigDecimal","summary":"誤差が出ない小数計算（お金など）に使うクラスです。","examples":[{"code":"new BigDecimal(\"0.1\").add(new BigDecimal(\"0.2\"));","note":""}],"pages":[],"id":"java-0019"},{"lang":"java","category":"データ型","term":"配列","summary":"同じ型の値を並べたもの。長さは作ったあと変えられません。","examples":[{"code":"int[] a = {1, 2, 3};\nSystem.out.println(a.length);","note":""}],"pages":[],"id":"java-0020"},{"lang":"java","category":"演算子","term":"==  と equals","summary":"== は参照が同じか、equals は中身が同じかを調べます。文字列の比較は equals を使います。","examples":[{"code":"\"a\".equals(s)","note":""}],"pages":[],"id":"java-0021"},{"lang":"java","category":"演算子","term":"三項演算子","summary":"条件 ? 値1 : 値2 の形で分岐します。","examples":[{"code":"String r = x > 0 ? \"正\" : \"負\";","note":""}],"pages":[],"id":"java-0022"},{"lang":"java","category":"演算子","term":"instanceof","summary":"オブジェクトがそのクラス（型）かを調べます。","examples":[{"code":"if (o instanceof String s) { ... }","note":""}],"pages":[],"id":"java-0023"},{"lang":"java","category":"演算子","term":"%（剰余）","summary":"割り算のあまりを求めます。","examples":[{"code":"7 % 3; // 1","note":""}],"pages":[],"id":"java-0024"},{"lang":"java","category":"制御構文","term":"if / else","summary":"条件で処理を分けます。","examples":[{"code":"if (n > 0) { ... } else { ... }","note":""}],"pages":[],"id":"java-0025"},{"lang":"java","category":"制御構文","term":"switch 式","summary":"値に応じて結果を返せる新しい switch。-> を使い、break が不要です。","examples":[{"code":"String s = switch (d) {\n  case 1 -> \"月\";\n  default -> \"他\";\n};","note":""}],"pages":[],"id":"java-0026"},{"lang":"java","category":"制御構文","term":"for","summary":"回数を決めた繰り返し。","examples":[{"code":"for (int i = 0; i < 3; i++) { }","note":""}],"pages":[],"id":"java-0027"},{"lang":"java","category":"制御構文","term":"拡張for文","summary":"配列やコレクションの要素を順に取り出します。","examples":[{"code":"for (String s : list) { }","note":""}],"pages":[],"id":"java-0028"},{"lang":"java","category":"制御構文","term":"while / do-while","summary":"条件が真の間、繰り返します。do-while は先に1回実行します。","examples":[{"code":"while (n > 0) { n--; }","note":""}],"pages":[],"id":"java-0029"},{"lang":"java","category":"制御構文","term":"break / continue","summary":"ループを抜ける／次の周回へ進みます。","examples":[{"code":"if (x == 0) continue;","note":""}],"pages":[],"id":"java-0030"},{"lang":"java","category":"制御構文","term":"例外処理 try-catch-finally","summary":"エラーを捕まえて処理を続けます。finally は必ず実行されます。","examples":[{"code":"try {\n  Integer.parseInt(\"abc\");\n} catch (NumberFormatException e) {\n  System.out.println(\"数字ではありません\");\n}","note":""}],"pages":[],"id":"java-0031"},{"lang":"java","category":"制御構文","term":"try-with-resources","summary":"使い終わったファイルなどを自動で閉じる構文です。","examples":[{"code":"try (var r = new BufferedReader(new FileReader(\"a.txt\"))) {\n  r.readLine();\n}","note":""}],"pages":[],"id":"java-0032"},{"lang":"java","category":"制御構文","term":"throw / throws","summary":"throw は例外を投げ、throws はメソッドが投げうる例外を宣言します。","examples":[{"code":"void f() throws IOException { }","note":""}],"pages":[],"id":"java-0033"},{"lang":"java","category":"クラスと継承","term":"クラス","summary":"データ（フィールド）と処理（メソッド）をまとめた設計図です。","examples":[{"code":"class Dog { String name; void bark() { } }","note":""}],"pages":[],"id":"java-0034"},{"lang":"java","category":"クラスと継承","term":"コンストラクタ","summary":"インスタンスを作るときに実行される初期化処理。クラス名と同じ名前です。","examples":[{"code":"Dog(String name) { this.name = name; }","note":""}],"pages":[],"id":"java-0035"},{"lang":"java","category":"クラスと継承","term":"this","summary":"自分自身のインスタンスを指します。","examples":[{"code":"this.name = name;","note":""}],"pages":[],"id":"java-0036"},{"lang":"java","category":"クラスと継承","term":"継承 extends","summary":"既存のクラスを引き継いで新しいクラスを作ります。","examples":[{"code":"class Puppy extends Dog { }","note":""}],"pages":[],"id":"java-0037"},{"lang":"java","category":"クラスと継承","term":"super","summary":"親クラスのコンストラクタやメソッドを呼びます。","examples":[{"code":"super(name);","note":""}],"pages":[],"id":"java-0038"},{"lang":"java","category":"クラスと継承","term":"オーバーライド","summary":"親のメソッドを子で書き換えます。@Override を付けると間違いに気づけます。","examples":[{"code":"@Override\npublic String toString() { return name; }","note":""}],"pages":[],"id":"java-0039"},{"lang":"java","category":"クラスと継承","term":"オーバーロード","summary":"同じ名前で引数の違うメソッドを複数定義します。","examples":[{"code":"int add(int a, int b)\ndouble add(double a, double b)","note":""}],"pages":[],"id":"java-0040"},{"lang":"java","category":"クラスと継承","term":"abstract","summary":"未完成の部分を持つクラスやメソッド。単独ではインスタンス化できません。","examples":[{"code":"abstract class Shape { abstract double area(); }","note":""}],"pages":[],"id":"java-0041"},{"lang":"java","category":"クラスと継承","term":"interface","summary":"「できること」だけを約束する仕組み。クラスは複数実装できます。","examples":[{"code":"interface Flyable { void fly(); }\nclass Bird implements Flyable { public void fly() { } }","note":""}],"pages":[],"id":"java-0042"},{"lang":"java","category":"クラスと継承","term":"default メソッド","summary":"interface の中で、実装をもつメソッドです。","examples":[{"code":"interface A { default void hi() { } }","note":""}],"pages":[],"id":"java-0043"},{"lang":"java","category":"クラスと継承","term":"ポリモーフィズム","summary":"同じ呼び出しでも、実際のクラスによって動作が変わる性質です。","examples":[{"code":"Animal a = new Dog();\na.cry();","note":""}],"pages":[],"id":"java-0044"},{"lang":"java","category":"クラスと継承","term":"アクセス修飾子","summary":"public（どこからでも）、protected（同パッケージ＋子）、無印（同パッケージ）、private（同クラスのみ）。","examples":[{"code":"private int age;","note":""}],"pages":[],"id":"java-0045"},{"lang":"java","category":"クラスと継承","term":"getter / setter","summary":"private なフィールドを読み書きするメソッド。","examples":[{"code":"public int getAge() { return age; }","note":""}],"pages":[],"id":"java-0046"},{"lang":"java","category":"クラスと継承","term":"内部クラス","summary":"クラスの中に定義するクラス。","examples":[{"code":"class Outer { class Inner { } }","note":""}],"pages":[],"id":"java-0047"},{"lang":"java","category":"クラスと継承","term":"匿名クラス","summary":"名前を付けずにその場で作るクラスです。","examples":[{"code":"new Runnable() { public void run() { } };","note":""}],"pages":[],"id":"java-0048"},{"lang":"java","category":"クラスと継承","term":"enum","summary":"決まった値だけを持つ列挙型です。","examples":[{"code":"enum Color { RED, BLUE }","note":""}],"pages":[],"id":"java-0049"},{"lang":"java","category":"クラスと継承","term":"record","summary":"データを持つだけのクラスを短く書ける型（Java 16以降）。getter や equals が自動で作られます。","examples":[{"code":"record Point(int x, int y) { }","note":""}],"pages":[],"id":"java-0050"},{"lang":"java","category":"クラスと継承","term":"sealed","summary":"継承できるクラスを限定します。","examples":[{"code":"sealed interface S permits A, B { }","note":""}],"pages":[],"id":"java-0051"},{"lang":"java","category":"クラスと継承","term":"Object","summary":"すべてのクラスの親。toString, equals, hashCode を持ちます。","examples":[],"pages":[],"id":"java-0052"},{"lang":"java","category":"String","term":"length / charAt","summary":"文字数／指定位置の文字を返します。","examples":[{"code":"\"abc\".charAt(1); // 'b'","note":""}],"pages":[],"id":"java-0053"},{"lang":"java","category":"String","term":"substring","summary":"指定範囲の文字列を切り出します。","examples":[{"code":"\"abcdef\".substring(1, 3); // \"bc\"","note":""}],"pages":[],"id":"java-0054"},{"lang":"java","category":"String","term":"indexOf","summary":"文字列が最初に見つかる位置を返します。なければ -1。","examples":[{"code":"\"hello\".indexOf(\"l\"); // 2","note":""}],"pages":[],"id":"java-0055"},{"lang":"java","category":"String","term":"split","summary":"区切りで分割して配列にします。","examples":[{"code":"\"a,b\".split(\",\");","note":""}],"pages":[],"id":"java-0056"},{"lang":"java","category":"String","term":"replace","summary":"文字列を置き換えます。","examples":[{"code":"\"a-b\".replace(\"-\", \"+\");","note":""}],"pages":[],"id":"java-0057"},{"lang":"java","category":"String","term":"trim / strip","summary":"前後の空白を取り除きます。strip は全角空白にも対応します。","examples":[{"code":"\" a \".strip();","note":""}],"pages":[],"id":"java-0058"},{"lang":"java","category":"String","term":"String.format","summary":"書式を指定して文字列を作ります。","examples":[{"code":"String.format(\"%05d\", 42); // \"00042\"","note":""}],"pages":[],"id":"java-0059"},{"lang":"java","category":"String","term":"String.join","summary":"要素を区切り文字でつなぎます。","examples":[{"code":"String.join(\",\", list);","note":""}],"pages":[],"id":"java-0060"},{"lang":"java","category":"String","term":"StringBuilder","summary":"文字列を効率よく連結するクラスです。繰り返しの連結に使います。","examples":[{"code":"var sb = new StringBuilder();\nsb.append(\"a\").append(\"b\");","note":""}],"pages":[],"id":"java-0061"},{"lang":"java","category":"String","term":"テキストブロック","summary":"\"\"\" で囲んだ複数行の文字列（Java 15以降）。","examples":[{"code":"String s = \"\"\"\n  行1\n  行2\n  \"\"\";","note":""}],"pages":[],"id":"java-0062"},{"lang":"java","category":"String","term":"isEmpty / isBlank","summary":"空か／空白だけか、を調べます。","examples":[{"code":"\" \".isBlank(); // true","note":""}],"pages":[],"id":"java-0063"},{"lang":"java","category":"コレクション","term":"ArrayList","summary":"大きさを変えられる配列のようなリスト。","examples":[{"code":"List<String> l = new ArrayList<>();\nl.add(\"a\");","note":""}],"pages":[],"id":"java-0064"},{"lang":"java","category":"コレクション","term":"List.of","summary":"変更できないリストを手早く作ります。","examples":[{"code":"List<Integer> l = List.of(1, 2, 3);","note":""}],"pages":[],"id":"java-0065"},{"lang":"java","category":"コレクション","term":"HashMap","summary":"キーと値の組を保持します。順序は保証されません。","examples":[{"code":"Map<String,Integer> m = new HashMap<>();\nm.put(\"a\", 1);","note":""}],"pages":[],"id":"java-0066"},{"lang":"java","category":"コレクション","term":"TreeMap","summary":"キーの順に並んで保持されるマップです。","examples":[{"code":"new TreeMap<String,Integer>();","note":""}],"pages":[],"id":"java-0067"},{"lang":"java","category":"コレクション","term":"LinkedHashMap","summary":"入れた順序を保つマップです。","examples":[{"code":"new LinkedHashMap<>();","note":""}],"pages":[],"id":"java-0068"},{"lang":"java","category":"コレクション","term":"HashSet","summary":"重複を許さない集合です。","examples":[{"code":"Set<String> s = new HashSet<>();","note":""}],"pages":[],"id":"java-0069"},{"lang":"java","category":"コレクション","term":"Deque / ArrayDeque","summary":"両端から出し入れできる。スタックやキューとして使います。","examples":[{"code":"Deque<Integer> d = new ArrayDeque<>();\nd.push(1);","note":""}],"pages":[],"id":"java-0070"},{"lang":"java","category":"コレクション","term":"Iterator","summary":"要素を1つずつたどる仕組みです。ループ中に安全に削除できます。","examples":[{"code":"Iterator<String> it = l.iterator();","note":""}],"pages":[],"id":"java-0071"},{"lang":"java","category":"コレクション","term":"Collections.sort","summary":"リストを並べ替えます。","examples":[{"code":"Collections.sort(list);","note":""}],"pages":[],"id":"java-0072"},{"lang":"java","category":"コレクション","term":"Comparator","summary":"並べ替えの基準を表します。","examples":[{"code":"list.sort(Comparator.comparing(User::getAge));","note":""}],"pages":[],"id":"java-0073"},{"lang":"java","category":"コレクション","term":"getOrDefault","summary":"キーがなければ既定値を返します。","examples":[{"code":"m.getOrDefault(\"x\", 0);","note":""}],"pages":[],"id":"java-0074"},{"lang":"java","category":"コレクション","term":"computeIfAbsent","summary":"キーがなければ値を作って入れます。","examples":[{"code":"m.computeIfAbsent(\"k\", k -> new ArrayList<>());","note":""}],"pages":[],"id":"java-0075"},{"lang":"java","category":"コレクション","term":"ジェネリクス","summary":"<T> で型を引数のように扱い、型の安全性を高めます。","examples":[{"code":"List<String> l;","note":""}],"pages":[],"id":"java-0076"},{"lang":"java","category":"ラムダとStream","term":"ラムダ式","summary":"(引数) -> 処理 の形で書く、短い関数です。","examples":[{"code":"Runnable r = () -> System.out.println(\"hi\");","note":""}],"pages":[],"id":"java-0077"},{"lang":"java","category":"ラムダとStream","term":"関数型インターフェース","summary":"抽象メソッドを1つだけ持つインターフェース。ラムダの型になります。","examples":[{"code":"@FunctionalInterface interface F { int f(int x); }","note":""}],"pages":[],"id":"java-0078"},{"lang":"java","category":"ラムダとStream","term":"メソッド参照","summary":"既存のメソッドを :: で渡す書き方です。","examples":[{"code":"list.forEach(System.out::println);","note":""}],"pages":[],"id":"java-0079"},{"lang":"java","category":"ラムダとStream","term":"Stream","summary":"コレクションの要素に対する処理を連ねて書くAPIです。","examples":[{"code":"list.stream().filter(n -> n > 1).map(n -> n * 2).toList();","note":""}],"pages":[],"id":"java-0080"},{"lang":"java","category":"ラムダとStream","term":"collect","summary":"Stream の結果をリストやマップなどにまとめます。","examples":[{"code":".collect(Collectors.groupingBy(String::length))","note":""}],"pages":[],"id":"java-0081"},{"lang":"java","category":"ラムダとStream","term":"Optional","summary":"値があるかないかを安全に表す入れ物です。null の代わりに使います。","examples":[{"code":"Optional.ofNullable(s).orElse(\"既定\");","note":""}],"pages":[],"id":"java-0082"},{"lang":"java","category":"ラムダとStream","term":"reduce","summary":"要素を1つの値にまとめます。","examples":[{"code":"IntStream.rangeClosed(1, 4).sum();","note":""}],"pages":[],"id":"java-0083"},{"lang":"java","category":"入出力","term":"Files.readAllLines","summary":"ファイルを行のリストとして読みます。","examples":[{"code":"List<String> l = Files.readAllLines(Path.of(\"a.txt\"));","note":""}],"pages":[],"id":"java-0084"},{"lang":"java","category":"入出力","term":"Files.writeString","summary":"文字列をファイルへ書き込みます。","examples":[{"code":"Files.writeString(Path.of(\"a.txt\"), \"内容\");","note":""}],"pages":[],"id":"java-0085"},{"lang":"java","category":"入出力","term":"BufferedReader","summary":"文字を効率よく1行ずつ読みます。","examples":[{"code":"br.readLine();","note":""}],"pages":[],"id":"java-0086"},{"lang":"java","category":"入出力","term":"Path / Paths","summary":"ファイルの場所を表します。","examples":[{"code":"Path p = Path.of(\"dir\", \"a.txt\");","note":""}],"pages":[],"id":"java-0087"},{"lang":"java","category":"入出力","term":"文字コード UTF-8","summary":"入出力では文字コードを明示すると文字化けを防げます。","examples":[{"code":"StandardCharsets.UTF_8","note":""}],"pages":[],"id":"java-0088"},{"lang":"java","category":"並行処理","term":"Thread","summary":"処理を並行に実行する単位です。","examples":[{"code":"new Thread(() -> work()).start();","note":""}],"pages":[],"id":"java-0089"},{"lang":"java","category":"並行処理","term":"ExecutorService","summary":"スレッドプールを使って、処理をまとめて管理します。","examples":[{"code":"var ex = Executors.newFixedThreadPool(4);","note":""}],"pages":[],"id":"java-0090"},{"lang":"java","category":"並行処理","term":"synchronized","summary":"同時に1つのスレッドしか入れない排他制御です。","examples":[{"code":"synchronized void inc() { count++; }","note":""}],"pages":[],"id":"java-0091"},{"lang":"java","category":"並行処理","term":"volatile","summary":"変数の最新値が各スレッドから見えるようにします。","examples":[{"code":"volatile boolean running;","note":""}],"pages":[],"id":"java-0092"},{"lang":"java","category":"並行処理","term":"AtomicInteger","summary":"ロックなしで安全に数を増減できるクラス。","examples":[{"code":"counter.incrementAndGet();","note":""}],"pages":[],"id":"java-0093"},{"lang":"java","category":"並行処理","term":"CompletableFuture","summary":"非同期処理をつなげて書ける仕組みです。","examples":[{"code":"CompletableFuture.supplyAsync(() -> 1).thenApply(n -> n + 1);","note":""}],"pages":[],"id":"java-0094"},{"lang":"java","category":"並行処理","term":"仮想スレッド","summary":"軽量なスレッド（Java 21以降）。大量の待ち処理を扱いやすくします。","examples":[{"code":"Thread.startVirtualThread(() -> work());","note":""}],"pages":[],"id":"java-0095"},{"lang":"java","category":"日付と時刻","term":"LocalDate / LocalDateTime","summary":"日付／日付と時刻を表す不変のクラス。","examples":[{"code":"LocalDate.now();","note":""}],"pages":[],"id":"java-0096"},{"lang":"java","category":"日付と時刻","term":"DateTimeFormatter","summary":"日付を文字列にしたり、文字列から読み取ったりします。","examples":[{"code":"LocalDate.now().format(DateTimeFormatter.ofPattern(\"yyyy/MM/dd\"));","note":""}],"pages":[],"id":"java-0097"},{"lang":"java","category":"日付と時刻","term":"Duration / Period","summary":"時間の長さ／日付の差を表します。","examples":[{"code":"Duration.between(a, b).toMinutes();","note":""}],"pages":[],"id":"java-0098"},{"lang":"java","category":"日付と時刻","term":"ZonedDateTime","summary":"タイムゾーン付きの日時。","examples":[{"code":"ZonedDateTime.now(ZoneId.of(\"Asia/Tokyo\"));","note":""}],"pages":[],"id":"java-0099"},{"lang":"java","category":"日付と時刻","term":"plusDays","summary":"日数を足した新しい日付を返します。","examples":[{"code":"date.plusDays(7);","note":""}],"pages":[],"id":"java-0100"},{"lang":"java","category":"ビルドと開発","term":"Maven","summary":"pom.xml で依存関係やビルドを管理するツール。","examples":[{"code":"mvn package","note":""}],"pages":[],"id":"java-0101"},{"lang":"java","category":"ビルドと開発","term":"Gradle","summary":"build.gradle で書くビルドツール。Android 開発でも使われます。","examples":[{"code":"./gradlew build","note":""}],"pages":[],"id":"java-0102"},{"lang":"java","category":"ビルドと開発","term":"JUnit","summary":"テストを書くための標準的なライブラリです。","examples":[{"code":"@Test void add() { assertEquals(2, 1 + 1); }","note":""}],"pages":[],"id":"java-0103"},{"lang":"java","category":"ビルドと開発","term":"JVM","summary":"Java のバイトコードを実行する仮想マシン。OS に依存せず動かせます。","examples":[],"pages":[],"id":"java-0104"},{"lang":"java","category":"ビルドと開発","term":"JDK / JRE","summary":"JDK は開発キット、JRE は実行環境です。","examples":[],"pages":[],"id":"java-0105"},{"lang":"java","category":"ビルドと開発","term":"ガベージコレクション","summary":"使われなくなったメモリを自動で回収する仕組みです。","examples":[],"pages":[],"id":"java-0106"},{"lang":"java","category":"ビルドと開発","term":"javac / java","summary":"javac でコンパイルし、java で実行します。","examples":[{"code":"javac Main.java\njava Main","note":""}],"pages":[],"id":"java-0107"},{"lang":"java","category":"フレームワーク","term":"Spring Boot","summary":"Web アプリを手早く作れる代表的なフレームワーク。","examples":[{"code":"@SpringBootApplication","note":""}],"pages":[],"id":"java-0108"},{"lang":"java","category":"フレームワーク","term":"@RestController","summary":"Spring で JSON を返す Web API のクラスを示します。","examples":[{"code":"@RestController class Api { @GetMapping(\"/hi\") String hi() { return \"hi\"; } }","note":""}],"pages":[],"id":"java-0109"},{"lang":"java","category":"フレームワーク","term":"@Autowired","summary":"Spring が必要なオブジェクトを自動で渡す（依存性注入）。","examples":[{"code":"@Autowired private Service s;","note":""}],"pages":[],"id":"java-0110"},{"lang":"java","category":"Android","term":"Activity","summary":"Android アプリの1画面に当たる部品です。","examples":[{"code":"public class MainActivity extends AppCompatActivity { }","note":""}],"pages":[],"id":"java-0111"},{"lang":"java","category":"Android","term":"Intent","summary":"画面の移動や他アプリの呼び出しに使う、動作の依頼メッセージです。","examples":[{"code":"startActivity(new Intent(this, Next.class));","note":""}],"pages":[],"id":"java-0112"},{"lang":"java","category":"Android","term":"Manifest","summary":"アプリ名や権限などを宣言する AndroidManifest.xml。","examples":[],"pages":[],"id":"java-0113"},{"lang":"java","category":"Android","term":"Gradle（Android）","summary":"Android プロジェクトで依存ライブラリやバージョンを設定します。","examples":[],"pages":[],"id":"java-0114"}]}
+{
+ "version": 1,
+ "entries": [
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "public static void main",
+   "summary": "Java プログラムの開始地点となるメソッドです。",
+   "examples": [
+    {
+     "code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello\");\n  }\n}",
+     "note": "ファイル名は public クラス名（Main.java）と同じにします。"
+    }
+   ],
+   "pages": [],
+   "id": "java-0001"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "System.out.println",
+   "summary": "標準出力へ1行表示します。print は改行なし、printf は書式付き。",
+   "examples": [
+    {
+     "code": "System.out.println(\"こんにちは\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0002"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "コメント",
+   "summary": "// は1行、/* */ は複数行、/** */ は Javadoc（説明書き）です。",
+   "examples": [
+    {
+     "code": "// メモ",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0003"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "パッケージ",
+   "summary": "クラスを整理するための名前空間です。ファイルの先頭に書きます。",
+   "examples": [
+    {
+     "code": "package com.example.app;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0004"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "import",
+   "summary": "別のパッケージのクラスを使えるようにします。",
+   "examples": [
+    {
+     "code": "import java.util.List;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0005"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "var",
+   "summary": "右辺から型を推測させるローカル変数宣言です（Java 10以降）。",
+   "examples": [
+    {
+     "code": "var list = new ArrayList<String>();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0006"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "final",
+   "summary": "変数なら再代入禁止、メソッドなら上書き禁止、クラスなら継承禁止にします。",
+   "examples": [
+    {
+     "code": "final int MAX = 10;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0007"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "static",
+   "summary": "インスタンスではなくクラスに属することを表します。",
+   "examples": [
+    {
+     "code": "static int count = 0;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0008"
+  },
+  {
+   "lang": "java",
+   "category": "基本",
+   "term": "Scanner",
+   "summary": "キーボードやファイルから入力を読む標準クラスです。",
+   "examples": [
+    {
+     "code": "Scanner sc = new Scanner(System.in);\nint n = sc.nextInt();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0009"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "int / long",
+   "summary": "整数型。int は約±21億、long はそれより大きな値も扱えます（数値の末尾に L）。",
+   "examples": [
+    {
+     "code": "long big = 3000000000L;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0010"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "double / float",
+   "summary": "小数型。double が標準で、float は数値の末尾に f を付けます。",
+   "examples": [
+    {
+     "code": "double d = 3.14;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0011"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "boolean",
+   "summary": "true か false を持つ型です。",
+   "examples": [
+    {
+     "code": "boolean ok = true;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0012"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "char",
+   "summary": "文字1つを表す型。シングルクォートで囲みます。",
+   "examples": [
+    {
+     "code": "char c = 'A';",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0013"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "String",
+   "summary": "文字列を表すクラス。一度作ると中身は変えられません。",
+   "examples": [
+    {
+     "code": "String s = \"abc\";",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0014"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "byte / short",
+   "summary": "小さな整数型（8ビット／16ビット）。",
+   "examples": [
+    {
+     "code": "byte b = 127;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0015"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "ラッパークラス",
+   "summary": "基本型を包んだクラス（Integer, Double など）。コレクションには基本型を直接入れられません。",
+   "examples": [
+    {
+     "code": "Integer n = 5;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0016"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "オートボクシング",
+   "summary": "基本型とラッパークラスを自動で変換する仕組みです。",
+   "examples": [
+    {
+     "code": "Integer n = 5;\nint m = n;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0017"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "キャスト",
+   "summary": "型を明示的に変換します。小数→整数では小数部が切り捨てられます。",
+   "examples": [
+    {
+     "code": "int i = (int) 3.9; // 3",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0018"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigDecimal",
+   "summary": "誤差が出ない小数計算（お金など）に使うクラスです。",
+   "examples": [
+    {
+     "code": "new BigDecimal(\"0.1\").add(new BigDecimal(\"0.2\"));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0019"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "配列",
+   "summary": "同じ型の値を並べたもの。長さは作ったあと変えられません。",
+   "examples": [
+    {
+     "code": "int[] a = {1, 2, 3};\nSystem.out.println(a.length);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0020"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "==  と equals",
+   "summary": "== は参照が同じか、equals は中身が同じかを調べます。文字列の比較は equals を使います。",
+   "examples": [
+    {
+     "code": "\"a\".equals(s)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0021"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "三項演算子",
+   "summary": "条件 ? 値1 : 値2 の形で分岐します。",
+   "examples": [
+    {
+     "code": "String r = x > 0 ? \"正\" : \"負\";",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0022"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "instanceof",
+   "summary": "オブジェクトがそのクラス（型）かを調べます。",
+   "examples": [
+    {
+     "code": "if (o instanceof String s) { ... }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0023"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "%（剰余）",
+   "summary": "割り算のあまりを求めます。",
+   "examples": [
+    {
+     "code": "7 % 3; // 1",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0024"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "if / else",
+   "summary": "条件で処理を分けます。",
+   "examples": [
+    {
+     "code": "if (n > 0) { ... } else { ... }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0025"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "switch 式",
+   "summary": "値に応じて結果を返せる新しい switch。-> を使い、break が不要です。",
+   "examples": [
+    {
+     "code": "String s = switch (d) {\n  case 1 -> \"月\";\n  default -> \"他\";\n};",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0026"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "for",
+   "summary": "回数を決めた繰り返し。",
+   "examples": [
+    {
+     "code": "for (int i = 0; i < 3; i++) { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0027"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "拡張for文",
+   "summary": "配列やコレクションの要素を順に取り出します。",
+   "examples": [
+    {
+     "code": "for (String s : list) { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0028"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "while / do-while",
+   "summary": "条件が真の間、繰り返します。do-while は先に1回実行します。",
+   "examples": [
+    {
+     "code": "while (n > 0) { n--; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0029"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "break / continue",
+   "summary": "ループを抜ける／次の周回へ進みます。",
+   "examples": [
+    {
+     "code": "if (x == 0) continue;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0030"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "例外処理 try-catch-finally",
+   "summary": "エラーを捕まえて処理を続けます。finally は必ず実行されます。",
+   "examples": [
+    {
+     "code": "try {\n  Integer.parseInt(\"abc\");\n} catch (NumberFormatException e) {\n  System.out.println(\"数字ではありません\");\n}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0031"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "try-with-resources",
+   "summary": "使い終わったファイルなどを自動で閉じる構文です。",
+   "examples": [
+    {
+     "code": "try (var r = new BufferedReader(new FileReader(\"a.txt\"))) {\n  r.readLine();\n}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0032"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "throw / throws",
+   "summary": "throw は例外を投げ、throws はメソッドが投げうる例外を宣言します。",
+   "examples": [
+    {
+     "code": "void f() throws IOException { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0033"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "クラス",
+   "summary": "データ（フィールド）と処理（メソッド）をまとめた設計図です。",
+   "examples": [
+    {
+     "code": "class Dog { String name; void bark() { } }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0034"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "コンストラクタ",
+   "summary": "インスタンスを作るときに実行される初期化処理。クラス名と同じ名前です。",
+   "examples": [
+    {
+     "code": "Dog(String name) { this.name = name; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0035"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "this",
+   "summary": "自分自身のインスタンスを指します。",
+   "examples": [
+    {
+     "code": "this.name = name;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0036"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "継承 extends",
+   "summary": "既存のクラスを引き継いで新しいクラスを作ります。",
+   "examples": [
+    {
+     "code": "class Puppy extends Dog { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0037"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "super",
+   "summary": "親クラスのコンストラクタやメソッドを呼びます。",
+   "examples": [
+    {
+     "code": "super(name);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0038"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "オーバーライド",
+   "summary": "親のメソッドを子で書き換えます。@Override を付けると間違いに気づけます。",
+   "examples": [
+    {
+     "code": "@Override\npublic String toString() { return name; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0039"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "オーバーロード",
+   "summary": "同じ名前で引数の違うメソッドを複数定義します。",
+   "examples": [
+    {
+     "code": "int add(int a, int b)\ndouble add(double a, double b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0040"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "abstract",
+   "summary": "未完成の部分を持つクラスやメソッド。単独ではインスタンス化できません。",
+   "examples": [
+    {
+     "code": "abstract class Shape { abstract double area(); }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0041"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "interface",
+   "summary": "「できること」だけを約束する仕組み。クラスは複数実装できます。",
+   "examples": [
+    {
+     "code": "interface Flyable { void fly(); }\nclass Bird implements Flyable { public void fly() { } }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0042"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "default メソッド",
+   "summary": "interface の中で、実装をもつメソッドです。",
+   "examples": [
+    {
+     "code": "interface A { default void hi() { } }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0043"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "ポリモーフィズム",
+   "summary": "同じ呼び出しでも、実際のクラスによって動作が変わる性質です。",
+   "examples": [
+    {
+     "code": "Animal a = new Dog();\na.cry();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0044"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "アクセス修飾子",
+   "summary": "public（どこからでも）、protected（同パッケージ＋子）、無印（同パッケージ）、private（同クラスのみ）。",
+   "examples": [
+    {
+     "code": "private int age;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0045"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "getter / setter",
+   "summary": "private なフィールドを読み書きするメソッド。",
+   "examples": [
+    {
+     "code": "public int getAge() { return age; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0046"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "内部クラス",
+   "summary": "クラスの中に定義するクラス。",
+   "examples": [
+    {
+     "code": "class Outer { class Inner { } }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0047"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "匿名クラス",
+   "summary": "名前を付けずにその場で作るクラスです。",
+   "examples": [
+    {
+     "code": "new Runnable() { public void run() { } };",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0048"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "enum",
+   "summary": "決まった値だけを持つ列挙型です。",
+   "examples": [
+    {
+     "code": "enum Color { RED, BLUE }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0049"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "record",
+   "summary": "データを持つだけのクラスを短く書ける型（Java 16以降）。getter や equals が自動で作られます。",
+   "examples": [
+    {
+     "code": "record Point(int x, int y) { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0050"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "sealed",
+   "summary": "継承できるクラスを限定します。",
+   "examples": [
+    {
+     "code": "sealed interface S permits A, B { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0051"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Object",
+   "summary": "すべてのクラスの親。toString, equals, hashCode を持ちます。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0052"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "length / charAt",
+   "summary": "文字数／指定位置の文字を返します。",
+   "examples": [
+    {
+     "code": "\"abc\".charAt(1); // 'b'",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0053"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "substring",
+   "summary": "指定範囲の文字列を切り出します。",
+   "examples": [
+    {
+     "code": "\"abcdef\".substring(1, 3); // \"bc\"",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0054"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "indexOf",
+   "summary": "文字列が最初に見つかる位置を返します。なければ -1。",
+   "examples": [
+    {
+     "code": "\"hello\".indexOf(\"l\"); // 2",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0055"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "split",
+   "summary": "区切りで分割して配列にします。",
+   "examples": [
+    {
+     "code": "\"a,b\".split(\",\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0056"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "replace",
+   "summary": "文字列を置き換えます。",
+   "examples": [
+    {
+     "code": "\"a-b\".replace(\"-\", \"+\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0057"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "trim / strip",
+   "summary": "前後の空白を取り除きます。strip は全角空白にも対応します。",
+   "examples": [
+    {
+     "code": "\" a \".strip();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0058"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.format",
+   "summary": "書式を指定して文字列を作ります。",
+   "examples": [
+    {
+     "code": "String.format(\"%05d\", 42); // \"00042\"",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0059"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.join",
+   "summary": "要素を区切り文字でつなぎます。",
+   "examples": [
+    {
+     "code": "String.join(\",\", list);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0060"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder",
+   "summary": "文字列を効率よく連結するクラスです。繰り返しの連結に使います。",
+   "examples": [
+    {
+     "code": "var sb = new StringBuilder();\nsb.append(\"a\").append(\"b\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0061"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "テキストブロック",
+   "summary": "\"\"\" で囲んだ複数行の文字列（Java 15以降）。",
+   "examples": [
+    {
+     "code": "String s = \"\"\"\n  行1\n  行2\n  \"\"\";",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0062"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "isEmpty / isBlank",
+   "summary": "空か／空白だけか、を調べます。",
+   "examples": [
+    {
+     "code": "\" \".isBlank(); // true",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0063"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ArrayList",
+   "summary": "大きさを変えられる配列のようなリスト。",
+   "examples": [
+    {
+     "code": "List<String> l = new ArrayList<>();\nl.add(\"a\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0064"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.of",
+   "summary": "変更できないリストを手早く作ります。",
+   "examples": [
+    {
+     "code": "List<Integer> l = List.of(1, 2, 3);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0065"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "HashMap",
+   "summary": "キーと値の組を保持します。順序は保証されません。",
+   "examples": [
+    {
+     "code": "Map<String,Integer> m = new HashMap<>();\nm.put(\"a\", 1);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0066"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeMap",
+   "summary": "キーの順に並んで保持されるマップです。",
+   "examples": [
+    {
+     "code": "new TreeMap<String,Integer>();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0067"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "LinkedHashMap",
+   "summary": "入れた順序を保つマップです。",
+   "examples": [
+    {
+     "code": "new LinkedHashMap<>();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0068"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "HashSet",
+   "summary": "重複を許さない集合です。",
+   "examples": [
+    {
+     "code": "Set<String> s = new HashSet<>();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0069"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Deque / ArrayDeque",
+   "summary": "両端から出し入れできる。スタックやキューとして使います。",
+   "examples": [
+    {
+     "code": "Deque<Integer> d = new ArrayDeque<>();\nd.push(1);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0070"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Iterator",
+   "summary": "要素を1つずつたどる仕組みです。ループ中に安全に削除できます。",
+   "examples": [
+    {
+     "code": "Iterator<String> it = l.iterator();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0071"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.sort",
+   "summary": "リストを並べ替えます。",
+   "examples": [
+    {
+     "code": "Collections.sort(list);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0072"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Comparator",
+   "summary": "並べ替えの基準を表します。",
+   "examples": [
+    {
+     "code": "list.sort(Comparator.comparing(User::getAge));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0073"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "getOrDefault",
+   "summary": "キーがなければ既定値を返します。",
+   "examples": [
+    {
+     "code": "m.getOrDefault(\"x\", 0);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0074"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "computeIfAbsent",
+   "summary": "キーがなければ値を作って入れます。",
+   "examples": [
+    {
+     "code": "m.computeIfAbsent(\"k\", k -> new ArrayList<>());",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0075"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ジェネリクス",
+   "summary": "<T> で型を引数のように扱い、型の安全性を高めます。",
+   "examples": [
+    {
+     "code": "List<String> l;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0076"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "ラムダ式",
+   "summary": "(引数) -> 処理 の形で書く、短い関数です。",
+   "examples": [
+    {
+     "code": "Runnable r = () -> System.out.println(\"hi\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0077"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "関数型インターフェース",
+   "summary": "抽象メソッドを1つだけ持つインターフェース。ラムダの型になります。",
+   "examples": [
+    {
+     "code": "@FunctionalInterface interface F { int f(int x); }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0078"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "メソッド参照",
+   "summary": "既存のメソッドを :: で渡す書き方です。",
+   "examples": [
+    {
+     "code": "list.forEach(System.out::println);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0079"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Stream",
+   "summary": "コレクションの要素に対する処理を連ねて書くAPIです。",
+   "examples": [
+    {
+     "code": "list.stream().filter(n -> n > 1).map(n -> n * 2).toList();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0080"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "collect",
+   "summary": "Stream の結果をリストやマップなどにまとめます。",
+   "examples": [
+    {
+     "code": ".collect(Collectors.groupingBy(String::length))",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0081"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Optional",
+   "summary": "値があるかないかを安全に表す入れ物です。null の代わりに使います。",
+   "examples": [
+    {
+     "code": "Optional.ofNullable(s).orElse(\"既定\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0082"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "reduce",
+   "summary": "要素を1つの値にまとめます。",
+   "examples": [
+    {
+     "code": "IntStream.rangeClosed(1, 4).sum();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0083"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.readAllLines",
+   "summary": "ファイルを行のリストとして読みます。",
+   "examples": [
+    {
+     "code": "List<String> l = Files.readAllLines(Path.of(\"a.txt\"));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0084"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.writeString",
+   "summary": "文字列をファイルへ書き込みます。",
+   "examples": [
+    {
+     "code": "Files.writeString(Path.of(\"a.txt\"), \"内容\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0085"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "BufferedReader",
+   "summary": "文字を効率よく1行ずつ読みます。",
+   "examples": [
+    {
+     "code": "br.readLine();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0086"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Path / Paths",
+   "summary": "ファイルの場所を表します。",
+   "examples": [
+    {
+     "code": "Path p = Path.of(\"dir\", \"a.txt\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0087"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "文字コード UTF-8",
+   "summary": "入出力では文字コードを明示すると文字化けを防げます。",
+   "examples": [
+    {
+     "code": "StandardCharsets.UTF_8",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0088"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "Thread",
+   "summary": "処理を並行に実行する単位です。",
+   "examples": [
+    {
+     "code": "new Thread(() -> work()).start();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0089"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "ExecutorService",
+   "summary": "スレッドプールを使って、処理をまとめて管理します。",
+   "examples": [
+    {
+     "code": "var ex = Executors.newFixedThreadPool(4);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0090"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "synchronized",
+   "summary": "同時に1つのスレッドしか入れない排他制御です。",
+   "examples": [
+    {
+     "code": "synchronized void inc() { count++; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0091"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "volatile",
+   "summary": "変数の最新値が各スレッドから見えるようにします。",
+   "examples": [
+    {
+     "code": "volatile boolean running;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0092"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "AtomicInteger",
+   "summary": "ロックなしで安全に数を増減できるクラス。",
+   "examples": [
+    {
+     "code": "counter.incrementAndGet();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0093"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "CompletableFuture",
+   "summary": "非同期処理をつなげて書ける仕組みです。",
+   "examples": [
+    {
+     "code": "CompletableFuture.supplyAsync(() -> 1).thenApply(n -> n + 1);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0094"
+  },
+  {
+   "lang": "java",
+   "category": "並行処理",
+   "term": "仮想スレッド",
+   "summary": "軽量なスレッド（Java 21以降）。大量の待ち処理を扱いやすくします。",
+   "examples": [
+    {
+     "code": "Thread.startVirtualThread(() -> work());",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0095"
+  },
+  {
+   "lang": "java",
+   "category": "日付と時刻",
+   "term": "LocalDate / LocalDateTime",
+   "summary": "日付／日付と時刻を表す不変のクラス。",
+   "examples": [
+    {
+     "code": "LocalDate.now();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0096"
+  },
+  {
+   "lang": "java",
+   "category": "日付と時刻",
+   "term": "DateTimeFormatter",
+   "summary": "日付を文字列にしたり、文字列から読み取ったりします。",
+   "examples": [
+    {
+     "code": "LocalDate.now().format(DateTimeFormatter.ofPattern(\"yyyy/MM/dd\"));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0097"
+  },
+  {
+   "lang": "java",
+   "category": "日付と時刻",
+   "term": "Duration / Period",
+   "summary": "時間の長さ／日付の差を表します。",
+   "examples": [
+    {
+     "code": "Duration.between(a, b).toMinutes();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0098"
+  },
+  {
+   "lang": "java",
+   "category": "日付と時刻",
+   "term": "ZonedDateTime",
+   "summary": "タイムゾーン付きの日時。",
+   "examples": [
+    {
+     "code": "ZonedDateTime.now(ZoneId.of(\"Asia/Tokyo\"));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0099"
+  },
+  {
+   "lang": "java",
+   "category": "日付と時刻",
+   "term": "plusDays",
+   "summary": "日数を足した新しい日付を返します。",
+   "examples": [
+    {
+     "code": "date.plusDays(7);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0100"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "Maven",
+   "summary": "pom.xml で依存関係やビルドを管理するツール。",
+   "examples": [
+    {
+     "code": "mvn package",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0101"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "Gradle",
+   "summary": "build.gradle で書くビルドツール。Android 開発でも使われます。",
+   "examples": [
+    {
+     "code": "./gradlew build",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0102"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "JUnit",
+   "summary": "テストを書くための標準的なライブラリです。",
+   "examples": [
+    {
+     "code": "@Test void add() { assertEquals(2, 1 + 1); }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0103"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "JVM",
+   "summary": "Java のバイトコードを実行する仮想マシン。OS に依存せず動かせます。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0104"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "JDK / JRE",
+   "summary": "JDK は開発キット、JRE は実行環境です。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0105"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "ガベージコレクション",
+   "summary": "使われなくなったメモリを自動で回収する仕組みです。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0106"
+  },
+  {
+   "lang": "java",
+   "category": "ビルドと開発",
+   "term": "javac / java",
+   "summary": "javac でコンパイルし、java で実行します。",
+   "examples": [
+    {
+     "code": "javac Main.java\njava Main",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0107"
+  },
+  {
+   "lang": "java",
+   "category": "フレームワーク",
+   "term": "Spring Boot",
+   "summary": "Web アプリを手早く作れる代表的なフレームワーク。",
+   "examples": [
+    {
+     "code": "@SpringBootApplication",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0108"
+  },
+  {
+   "lang": "java",
+   "category": "フレームワーク",
+   "term": "@RestController",
+   "summary": "Spring で JSON を返す Web API のクラスを示します。",
+   "examples": [
+    {
+     "code": "@RestController class Api { @GetMapping(\"/hi\") String hi() { return \"hi\"; } }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0109"
+  },
+  {
+   "lang": "java",
+   "category": "フレームワーク",
+   "term": "@Autowired",
+   "summary": "Spring が必要なオブジェクトを自動で渡す（依存性注入）。",
+   "examples": [
+    {
+     "code": "@Autowired private Service s;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0110"
+  },
+  {
+   "lang": "java",
+   "category": "Android",
+   "term": "Activity",
+   "summary": "Android アプリの1画面に当たる部品です。",
+   "examples": [
+    {
+     "code": "public class MainActivity extends AppCompatActivity { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0111"
+  },
+  {
+   "lang": "java",
+   "category": "Android",
+   "term": "Intent",
+   "summary": "画面の移動や他アプリの呼び出しに使う、動作の依頼メッセージです。",
+   "examples": [
+    {
+     "code": "startActivity(new Intent(this, Next.class));",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0112"
+  },
+  {
+   "lang": "java",
+   "category": "Android",
+   "term": "Manifest",
+   "summary": "アプリ名や権限などを宣言する AndroidManifest.xml。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0113"
+  },
+  {
+   "lang": "java",
+   "category": "Android",
+   "term": "Gradle（Android）",
+   "summary": "Android プロジェクトで依存ライブラリやバージョンを設定します。",
+   "examples": [],
+   "pages": [],
+   "id": "java-0114"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "パッケージ宣言",
+   "summary": "クラスの所属を示す。",
+   "examples": [
+    {
+     "code": "package com.example;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0115"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "import 文",
+   "summary": "他のクラスを使えるようにする。",
+   "examples": [
+    {
+     "code": "import java.util.List;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0116"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "static import",
+   "summary": "static メンバーを直接使う。",
+   "examples": [
+    {
+     "code": "import static java.lang.Math.PI;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0117"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "識別子",
+   "summary": "名前の付け方の規則。",
+   "examples": [
+    {
+     "code": "int count;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0118"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "予約語",
+   "summary": "名前に使えない語。",
+   "examples": [
+    {
+     "code": "class, public",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0119"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "Javadoc",
+   "summary": "ドキュメント用コメント。",
+   "examples": [
+    {
+     "code": "/** 説明 */",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0120"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "セミコロン",
+   "summary": "文の終わり。",
+   "examples": [
+    {
+     "code": "int a = 1;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0121"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "ブロック",
+   "summary": "{ } で囲む範囲。",
+   "examples": [
+    {
+     "code": "{ int x = 0; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0122"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "スコープ",
+   "summary": "変数が有効な範囲。",
+   "examples": [
+    {
+     "code": "for (int i = 0; ; ) {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0123"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "変数宣言",
+   "summary": "型と名前を指定する。",
+   "examples": [
+    {
+     "code": "int n = 10;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0124"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "final 変数",
+   "summary": "再代入できない変数。",
+   "examples": [
+    {
+     "code": "final int MAX = 10;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0125"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "定数",
+   "summary": "static final で表す。",
+   "examples": [
+    {
+     "code": "static final int SIZE = 5;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0126"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "リテラル",
+   "summary": "ソースに直接書く値。",
+   "examples": [
+    {
+     "code": "42, 3.14, \"a\"",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0127"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "エスケープシーケンス",
+   "summary": "特殊文字の表記。",
+   "examples": [
+    {
+     "code": "\"\n\", \"\\t\"",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0128"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "Unicode エスケープ",
+   "summary": "文字コードで書く。",
+   "examples": [
+    {
+     "code": "'あ'",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0129"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "数値区切り",
+   "summary": "アンダースコアで読みやすく。",
+   "examples": [
+    {
+     "code": "1_000_000",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0130"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "2進数リテラル",
+   "summary": "0b で始める。",
+   "examples": [
+    {
+     "code": "0b1010",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0131"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "16進数リテラル",
+   "summary": "0x で始める。",
+   "examples": [
+    {
+     "code": "0xFF",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0132"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "8進数リテラル",
+   "summary": "0 で始める。",
+   "examples": [
+    {
+     "code": "017",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0133"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "long リテラル",
+   "summary": "末尾に L。",
+   "examples": [
+    {
+     "code": "100L",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0134"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "float リテラル",
+   "summary": "末尾に f。",
+   "examples": [
+    {
+     "code": "1.5f",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0135"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "命名規約",
+   "summary": "キャメルケースなど。",
+   "examples": [
+    {
+     "code": "myVariable, MyClass",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0136"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.out.printf",
+   "summary": "書式付き出力。",
+   "examples": [
+    {
+     "code": "System.out.printf(\"%d%n\", 5);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0137"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.err",
+   "summary": "標準エラー出力。",
+   "examples": [
+    {
+     "code": "System.err.println(\"err\");",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0138"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.in",
+   "summary": "標準入力。",
+   "examples": [
+    {
+     "code": "new Scanner(System.in)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0139"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "コマンドライン引数",
+   "summary": "起動時に渡す値。",
+   "examples": [
+    {
+     "code": "args[0]",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0140"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.exit",
+   "summary": "プログラムを終了する。",
+   "examples": [
+    {
+     "code": "System.exit(0);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0141"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.currentTimeMillis",
+   "summary": "現在のミリ秒。",
+   "examples": [
+    {
+     "code": "long t = System.currentTimeMillis();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0142"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.nanoTime",
+   "summary": "計測用の高精度時間。",
+   "examples": [
+    {
+     "code": "System.nanoTime()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0143"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.getProperty",
+   "summary": "システムプロパティ取得。",
+   "examples": [
+    {
+     "code": "System.getProperty(\"os.name\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0144"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.getenv",
+   "summary": "環境変数の取得。",
+   "examples": [
+    {
+     "code": "System.getenv(\"PATH\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0145"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.lineSeparator",
+   "summary": "改行文字列。",
+   "examples": [
+    {
+     "code": "System.lineSeparator()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0146"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.arraycopy",
+   "summary": "配列のコピー。",
+   "examples": [
+    {
+     "code": "System.arraycopy(a, 0, b, 0, 3);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0147"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "System.identityHashCode",
+   "summary": "識別用ハッシュ値。",
+   "examples": [
+    {
+     "code": "System.identityHashCode(o)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0148"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "Runtime",
+   "summary": "実行環境の情報。",
+   "examples": [
+    {
+     "code": "Runtime.getRuntime()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0149"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "availableProcessors",
+   "summary": "利用可能な CPU 数。",
+   "examples": [
+    {
+     "code": "Runtime.getRuntime().availableProcessors()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0150"
+  },
+  {
+   "lang": "java",
+   "category": "基本構文",
+   "term": "totalMemory / freeMemory",
+   "summary": "メモリ量の確認。",
+   "examples": [
+    {
+     "code": "Runtime.getRuntime().freeMemory()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0151"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "byte",
+   "summary": "8 ビット整数。",
+   "examples": [
+    {
+     "code": "byte b = 10;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0152"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "short",
+   "summary": "16 ビット整数。",
+   "examples": [
+    {
+     "code": "short s = 100;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0153"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "int",
+   "summary": "32 ビット整数。",
+   "examples": [
+    {
+     "code": "int i = 1;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0154"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "long",
+   "summary": "64 ビット整数。",
+   "examples": [
+    {
+     "code": "long l = 1L;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0155"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "float",
+   "summary": "32 ビット浮動小数点。",
+   "examples": [
+    {
+     "code": "float f = 1.0f;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0156"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "double",
+   "summary": "64 ビット浮動小数点。",
+   "examples": [
+    {
+     "code": "double d = 1.0;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0157"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "プリミティブ型",
+   "summary": "基本の 8 種類の型。",
+   "examples": [
+    {
+     "code": "int, double",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0158"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "参照型",
+   "summary": "オブジェクトを指す型。",
+   "examples": [
+    {
+     "code": "String s;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0159"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "アンボクシング",
+   "summary": "ラッパーから自動変換。",
+   "examples": [
+    {
+     "code": "int b = a;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0160"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.MAX_VALUE",
+   "summary": "int の最大値。",
+   "examples": [
+    {
+     "code": "2147483647",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0161"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.MIN_VALUE",
+   "summary": "int の最小値。",
+   "examples": [
+    {
+     "code": "-2147483648",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0162"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Long.MAX_VALUE",
+   "summary": "long の最大値。",
+   "examples": [
+    {
+     "code": "Long.MAX_VALUE",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0163"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Double.NaN",
+   "summary": "非数。",
+   "examples": [
+    {
+     "code": "Double.isNaN(x)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0164"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Double.POSITIVE_INFINITY",
+   "summary": "正の無限大。",
+   "examples": [
+    {
+     "code": "1.0 / 0",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0165"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.parseInt",
+   "summary": "文字列を int に。",
+   "examples": [
+    {
+     "code": "Integer.parseInt(\"12\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0166"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.valueOf",
+   "summary": "ラッパーを得る。",
+   "examples": [
+    {
+     "code": "Integer.valueOf(12)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0167"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.toString",
+   "summary": "文字列に変換。",
+   "examples": [
+    {
+     "code": "Integer.toString(12)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0168"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.toBinaryString",
+   "summary": "2進数の文字列。",
+   "examples": [
+    {
+     "code": "Integer.toBinaryString(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0169"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.toHexString",
+   "summary": "16進数の文字列。",
+   "examples": [
+    {
+     "code": "Integer.toHexString(255)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0170"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.compare",
+   "summary": "比較して -1,0,1。",
+   "examples": [
+    {
+     "code": "Integer.compare(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0171"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.bitCount",
+   "summary": "1 のビット数。",
+   "examples": [
+    {
+     "code": "Integer.bitCount(7)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0172"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.reverse",
+   "summary": "ビット反転並べ替え。",
+   "examples": [
+    {
+     "code": "Integer.reverse(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0173"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer.signum",
+   "summary": "符号を返す。",
+   "examples": [
+    {
+     "code": "Integer.signum(-5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0174"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Integer キャッシュ",
+   "summary": "-128〜127 は同一の参照。",
+   "examples": [
+    {
+     "code": "Integer.valueOf(100)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0175"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Double.parseDouble",
+   "summary": "文字列を double に。",
+   "examples": [
+    {
+     "code": "Double.parseDouble(\"1.5\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0176"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Double.compare",
+   "summary": "浮動小数点の比較。",
+   "examples": [
+    {
+     "code": "Double.compare(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0177"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Boolean.parseBoolean",
+   "summary": "文字列を真偽値に。",
+   "examples": [
+    {
+     "code": "Boolean.parseBoolean(\"true\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0178"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Character.isDigit",
+   "summary": "数字か判定。",
+   "examples": [
+    {
+     "code": "Character.isDigit('5')",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0179"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Character.isLetter",
+   "summary": "文字か判定。",
+   "examples": [
+    {
+     "code": "Character.isLetter('a')",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0180"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Character.isUpperCase",
+   "summary": "大文字か判定。",
+   "examples": [
+    {
+     "code": "Character.isUpperCase('A')",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0181"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Character.toUpperCase",
+   "summary": "大文字に変換。",
+   "examples": [
+    {
+     "code": "Character.toUpperCase('a')",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0182"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "Character.getNumericValue",
+   "summary": "数字の値。",
+   "examples": [
+    {
+     "code": "Character.getNumericValue('7')",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0183"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "型キャスト",
+   "summary": "型を明示的に変換する。",
+   "examples": [
+    {
+     "code": "(int) 3.7",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0184"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "拡大変換",
+   "summary": "小さい型から大きい型へ。",
+   "examples": [
+    {
+     "code": "long l = i;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0185"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "縮小変換",
+   "summary": "大きい型から小さい型へ。",
+   "examples": [
+    {
+     "code": "int i = (int) l;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0186"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "数値の昇格",
+   "summary": "演算時の型の自動拡大。",
+   "examples": [
+    {
+     "code": "byte + byte は int",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0187"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "オーバーフロー",
+   "summary": "範囲を超えて回る。",
+   "examples": [
+    {
+     "code": "Integer.MAX_VALUE + 1",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0188"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "浮動小数点誤差",
+   "summary": "2進数表現による誤差。",
+   "examples": [
+    {
+     "code": "0.1 + 0.2",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0189"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigInteger",
+   "summary": "桁数無制限の整数。",
+   "examples": [
+    {
+     "code": "new BigInteger(\"123\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0190"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigDecimal.add",
+   "summary": "加算。",
+   "examples": [
+    {
+     "code": "a.add(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0191"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigDecimal.setScale",
+   "summary": "小数桁と丸め。",
+   "examples": [
+    {
+     "code": "x.setScale(2, RoundingMode.HALF_UP)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0192"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "RoundingMode",
+   "summary": "丸めの方式。",
+   "examples": [
+    {
+     "code": "RoundingMode.HALF_EVEN",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0193"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "MathContext",
+   "summary": "精度と丸めの指定。",
+   "examples": [
+    {
+     "code": "new MathContext(10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0194"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigInteger.pow",
+   "summary": "べき乗。",
+   "examples": [
+    {
+     "code": "n.pow(10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0195"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigInteger.mod",
+   "summary": "剰余。",
+   "examples": [
+    {
+     "code": "n.mod(m)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0196"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "BigInteger.isProbablePrime",
+   "summary": "素数判定。",
+   "examples": [
+    {
+     "code": "n.isProbablePrime(10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0197"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "null",
+   "summary": "何も指さない参照。",
+   "examples": [
+    {
+     "code": "String s = null;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0198"
+  },
+  {
+   "lang": "java",
+   "category": "データ型",
+   "term": "ヌルポインタ",
+   "summary": "null への操作でエラー。",
+   "examples": [
+    {
+     "code": "NullPointerException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0199"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "算術演算子",
+   "summary": "四則演算など。",
+   "examples": [
+    {
+     "code": "+ - * / %",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0200"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "整数の除算",
+   "summary": "小数点以下が切り捨てられる。",
+   "examples": [
+    {
+     "code": "7 / 2 は 3",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0201"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "剰余演算子",
+   "summary": "余りを求める。",
+   "examples": [
+    {
+     "code": "7 % 3",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0202"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "複合代入演算子",
+   "summary": "計算して代入。",
+   "examples": [
+    {
+     "code": "a += 5;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0203"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "インクリメント",
+   "summary": "1 増やす。",
+   "examples": [
+    {
+     "code": "i++",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0204"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "デクリメント",
+   "summary": "1 減らす。",
+   "examples": [
+    {
+     "code": "i--",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0205"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "前置と後置",
+   "summary": "評価のタイミングが違う。",
+   "examples": [
+    {
+     "code": "++i と i++",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0206"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "比較演算子",
+   "summary": "大小・等しさの判定。",
+   "examples": [
+    {
+     "code": "== != < >",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0207"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "論理演算子",
+   "summary": "かつ・または・否定。",
+   "examples": [
+    {
+     "code": "a && b   a と b の両方が真\n!a          否定（真偽を反転）",
+     "note": "「または」は縦線を2本並べる演算子"
+    }
+   ],
+   "pages": [],
+   "id": "java-0208"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "短絡評価",
+   "summary": "結果が決まれば右辺を評価しない。",
+   "examples": [
+    {
+     "code": "a != null && a.x",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0209"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "ビット演算子",
+   "summary": "ビット単位の演算。",
+   "examples": [
+    {
+     "code": "& ^ ~",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0210"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "左シフト",
+   "summary": "ビットを左へ。",
+   "examples": [
+    {
+     "code": "1 << 3",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0211"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "右シフト",
+   "summary": "符号付きで右へ。",
+   "examples": [
+    {
+     "code": "n >> 1",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0212"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "符号なし右シフト",
+   "summary": "0 を埋めて右へ。",
+   "examples": [
+    {
+     "code": "n >>> 1",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0213"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "パターンマッチング instanceof",
+   "summary": "判定と変数宣言を同時に。",
+   "examples": [
+    {
+     "code": "if (o instanceof String s)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0214"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "演算子の優先順位",
+   "summary": "計算の順番。",
+   "examples": [
+    {
+     "code": "a + b * c",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0215"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "文字列連結",
+   "summary": "+ で文字列を連結。",
+   "examples": [
+    {
+     "code": "\"a\" + 1",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0216"
+  },
+  {
+   "lang": "java",
+   "category": "演算子",
+   "term": "== と equals",
+   "summary": "参照比較と内容比較。",
+   "examples": [
+    {
+     "code": "s1.equals(s2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0217"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "if 文",
+   "summary": "条件分岐。",
+   "examples": [
+    {
+     "code": "if (a > 0) {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0218"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "else if",
+   "summary": "複数の条件分岐。",
+   "examples": [
+    {
+     "code": "else if (a == 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0219"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "switch 文",
+   "summary": "値による分岐。",
+   "examples": [
+    {
+     "code": "switch (x) { case 1: }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0220"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "アロー形式 case",
+   "summary": "break 不要の case。",
+   "examples": [
+    {
+     "code": "case 1 -> \"one\";",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0221"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "yield",
+   "summary": "switch 式で値を返す。",
+   "examples": [
+    {
+     "code": "yield 5;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0222"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "for 文",
+   "summary": "回数が決まった繰り返し。",
+   "examples": [
+    {
+     "code": "for (int i = 0; i < 5; i++)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0223"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "拡張 for 文",
+   "summary": "要素を順に取り出す。",
+   "examples": [
+    {
+     "code": "for (String s : list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0224"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "while 文",
+   "summary": "条件が真の間繰り返す。",
+   "examples": [
+    {
+     "code": "while (x < 10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0225"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "do-while 文",
+   "summary": "先に実行してから判定。",
+   "examples": [
+    {
+     "code": "do { } while (x < 10);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0226"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "break",
+   "summary": "ループを抜ける。",
+   "examples": [
+    {
+     "code": "break;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0227"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "continue",
+   "summary": "次の周回へ進む。",
+   "examples": [
+    {
+     "code": "continue;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0228"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "ラベル付き break",
+   "summary": "外側のループを抜ける。",
+   "examples": [
+    {
+     "code": "outer: break outer;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0229"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "return",
+   "summary": "メソッドから戻る。",
+   "examples": [
+    {
+     "code": "return x;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0230"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "無限ループ",
+   "summary": "終わらない繰り返し。",
+   "examples": [
+    {
+     "code": "while (true) {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0231"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "多重ループ",
+   "summary": "ループの入れ子。",
+   "examples": [
+    {
+     "code": "for (...) for (...)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0232"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "ガード節",
+   "summary": "早期 return で入れ子を減らす。",
+   "examples": [
+    {
+     "code": "if (x == null) return;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0233"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "パターンマッチング switch",
+   "summary": "型で分岐する。",
+   "examples": [
+    {
+     "code": "case String s -> s",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0234"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "レコードパターン",
+   "summary": "レコードを分解して判定。",
+   "examples": [
+    {
+     "code": "case Point(int x, int y)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0235"
+  },
+  {
+   "lang": "java",
+   "category": "制御構文",
+   "term": "when ガード",
+   "summary": "パターンに条件を付ける。",
+   "examples": [
+    {
+     "code": "case Integer i when i > 0",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0236"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の宣言",
+   "summary": "同じ型を並べる。",
+   "examples": [
+    {
+     "code": "int[] a = new int[5];",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0237"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の初期化",
+   "summary": "値を並べて作る。",
+   "examples": [
+    {
+     "code": "int[] a = {1, 2, 3};",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0238"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "length",
+   "summary": "配列の長さ。",
+   "examples": [
+    {
+     "code": "a.length",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0239"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "多次元配列",
+   "summary": "配列の配列。",
+   "examples": [
+    {
+     "code": "int[][] m = new int[3][3];",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0240"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "ジャグ配列",
+   "summary": "行ごとに長さが違う配列。",
+   "examples": [
+    {
+     "code": "new int[3][]",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0241"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "ArrayIndexOutOfBoundsException",
+   "summary": "範囲外アクセス。",
+   "examples": [
+    {
+     "code": "a[10]",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0242"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.toString",
+   "summary": "配列を文字列に。",
+   "examples": [
+    {
+     "code": "Arrays.toString(a)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0243"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.deepToString",
+   "summary": "多次元配列を文字列に。",
+   "examples": [
+    {
+     "code": "Arrays.deepToString(m)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0244"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.sort",
+   "summary": "並べ替え。",
+   "examples": [
+    {
+     "code": "Arrays.sort(a);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0245"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.fill",
+   "summary": "同じ値で埋める。",
+   "examples": [
+    {
+     "code": "Arrays.fill(a, 0);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0246"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.copyOf",
+   "summary": "長さを指定してコピー。",
+   "examples": [
+    {
+     "code": "Arrays.copyOf(a, 10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0247"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.copyOfRange",
+   "summary": "範囲をコピー。",
+   "examples": [
+    {
+     "code": "Arrays.copyOfRange(a, 1, 3)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0248"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.equals",
+   "summary": "内容の比較。",
+   "examples": [
+    {
+     "code": "Arrays.equals(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0249"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.asList",
+   "summary": "配列をリストに。",
+   "examples": [
+    {
+     "code": "Arrays.asList(1, 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0250"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.binarySearch",
+   "summary": "二分探索。",
+   "examples": [
+    {
+     "code": "Arrays.binarySearch(a, 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0251"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.stream",
+   "summary": "配列から Stream。",
+   "examples": [
+    {
+     "code": "Arrays.stream(a)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0252"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.hashCode",
+   "summary": "内容のハッシュ。",
+   "examples": [
+    {
+     "code": "Arrays.hashCode(a)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0253"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "Arrays.setAll",
+   "summary": "添字から値を設定。",
+   "examples": [
+    {
+     "code": "Arrays.setAll(a, i -> i * 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0254"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の複製",
+   "summary": "clone で浅いコピー。",
+   "examples": [
+    {
+     "code": "a.clone()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0255"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "可変長引数",
+   "summary": "引数の個数が可変。",
+   "examples": [
+    {
+     "code": "void f(int... a)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0256"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の逆順",
+   "summary": "手作業で反転する。",
+   "examples": [
+    {
+     "code": "Collections.reverse(list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0257"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の最大値",
+   "summary": "走査して求める。",
+   "examples": [
+    {
+     "code": "Arrays.stream(a).max()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0258"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "配列の合計",
+   "summary": "stream で合計。",
+   "examples": [
+    {
+     "code": "Arrays.stream(a).sum()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0259"
+  },
+  {
+   "lang": "java",
+   "category": "配列",
+   "term": "2次元配列の走査",
+   "summary": "二重ループで処理。",
+   "examples": [
+    {
+     "code": "for (int[] r : m)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0260"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "クラス定義",
+   "summary": "オブジェクトの設計図。",
+   "examples": [
+    {
+     "code": "class Dog {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0261"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "インスタンス",
+   "summary": "クラスから作った実体。",
+   "examples": [
+    {
+     "code": "new Dog()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0262"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "フィールド",
+   "summary": "クラスが持つ変数。",
+   "examples": [
+    {
+     "code": "private int age;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0263"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "メソッド",
+   "summary": "クラスが持つ処理。",
+   "examples": [
+    {
+     "code": "void bark() {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0264"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "デフォルトコンストラクタ",
+   "summary": "引数なしの自動生成。",
+   "examples": [
+    {
+     "code": "new Dog()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0265"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "コンストラクタのオーバーロード",
+   "summary": "引数違いで複数定義。",
+   "examples": [
+    {
+     "code": "Dog(), Dog(int a)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0266"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "this()",
+   "summary": "別のコンストラクタ呼び出し。",
+   "examples": [
+    {
+     "code": "this(0);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0267"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "super()",
+   "summary": "親のコンストラクタ呼び出し。",
+   "examples": [
+    {
+     "code": "super(name);",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0268"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "extends",
+   "summary": "クラスを継承する。",
+   "examples": [
+    {
+     "code": "class Dog extends Animal",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0269"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "implements",
+   "summary": "インターフェースを実装。",
+   "examples": [
+    {
+     "code": "class A implements B",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0270"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@Override",
+   "summary": "上書きを明示する注釈。",
+   "examples": [
+    {
+     "code": "@Override public String toString()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0271"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "多態性",
+   "summary": "親型で子の振る舞いを呼ぶ。",
+   "examples": [
+    {
+     "code": "Animal a = new Dog();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0272"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "抽象クラス",
+   "summary": "直接生成できない親。",
+   "examples": [
+    {
+     "code": "abstract class Shape {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0273"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "抽象メソッド",
+   "summary": "本体を持たない宣言。",
+   "examples": [
+    {
+     "code": "abstract double area();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0274"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "インターフェース",
+   "summary": "実装すべき約束事。",
+   "examples": [
+    {
+     "code": "interface Flyable {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0275"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "static メソッド (IF)",
+   "summary": "インターフェース内の static。",
+   "examples": [
+    {
+     "code": "static int g() {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0276"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "private メソッド (IF)",
+   "summary": "インターフェース内の補助。",
+   "examples": [
+    {
+     "code": "private void h() {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0277"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "マーカーインターフェース",
+   "summary": "メソッドを持たない目印。",
+   "examples": [
+    {
+     "code": "Serializable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0278"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "sealed クラス",
+   "summary": "継承先を限定する。",
+   "examples": [
+    {
+     "code": "sealed class A permits B, C",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0279"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "permits",
+   "summary": "許可するサブクラスの指定。",
+   "examples": [
+    {
+     "code": "permits B",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0280"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "non-sealed",
+   "summary": "封印を解く。",
+   "examples": [
+    {
+     "code": "non-sealed class B",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0281"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "コンパクトコンストラクタ",
+   "summary": "record の検証用。",
+   "examples": [
+    {
+     "code": "Point { if (x < 0) throw ...; }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0282"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "enum のフィールド",
+   "summary": "値に情報を持たせる。",
+   "examples": [
+    {
+     "code": "RED(\"赤\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0283"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "enum.values",
+   "summary": "全要素の配列。",
+   "examples": [
+    {
+     "code": "Color.values()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0284"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "enum.valueOf",
+   "summary": "名前から要素を得る。",
+   "examples": [
+    {
+     "code": "Color.valueOf(\"RED\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0285"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "enum.ordinal",
+   "summary": "定義順の番号。",
+   "examples": [
+    {
+     "code": "RED.ordinal()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0286"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "EnumMap",
+   "summary": "enum をキーにした Map。",
+   "examples": [
+    {
+     "code": "new EnumMap<>(Color.class)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0287"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "EnumSet",
+   "summary": "enum 用の Set。",
+   "examples": [
+    {
+     "code": "EnumSet.of(RED)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0288"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "static フィールド",
+   "summary": "クラスで共有する変数。",
+   "examples": [
+    {
+     "code": "static int count;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0289"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "static メソッド",
+   "summary": "インスタンス不要のメソッド。",
+   "examples": [
+    {
+     "code": "Math.abs(-1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0290"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "static 初期化ブロック",
+   "summary": "クラス読み込み時の処理。",
+   "examples": [
+    {
+     "code": "static { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0291"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "インスタンス初期化ブロック",
+   "summary": "生成時の共通処理。",
+   "examples": [
+    {
+     "code": "{ }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0292"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "final クラス",
+   "summary": "継承できないクラス。",
+   "examples": [
+    {
+     "code": "final class A {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0293"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "final メソッド",
+   "summary": "上書きできないメソッド。",
+   "examples": [
+    {
+     "code": "final void f() {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0294"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "パッケージプライベート",
+   "summary": "修飾子なしの範囲。",
+   "examples": [
+    {
+     "code": "class A {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0295"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "カプセル化",
+   "summary": "内部を隠して公開を絞る。",
+   "examples": [
+    {
+     "code": "private + getter",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0296"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "不変オブジェクト",
+   "summary": "生成後に変化しない。",
+   "examples": [
+    {
+     "code": "final フィールド",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0297"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "static ネストクラス",
+   "summary": "外側に依存しない内部クラス。",
+   "examples": [
+    {
+     "code": "static class N {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0298"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "ローカルクラス",
+   "summary": "メソッド内のクラス。",
+   "examples": [
+    {
+     "code": "void f() { class L {} }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0299"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Object クラス",
+   "summary": "全クラスの親。",
+   "examples": [
+    {
+     "code": "Object o;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0300"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "toString",
+   "summary": "文字列表現。",
+   "examples": [
+    {
+     "code": "o.toString()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0301"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "equals",
+   "summary": "同値判定。",
+   "examples": [
+    {
+     "code": "a.equals(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0302"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "hashCode",
+   "summary": "ハッシュ値。",
+   "examples": [
+    {
+     "code": "o.hashCode()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0303"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "equals と hashCode の約束",
+   "summary": "同値なら同じハッシュ。",
+   "examples": [
+    {
+     "code": "Objects.hash(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0304"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "clone",
+   "summary": "複製メソッド。",
+   "examples": [
+    {
+     "code": "o.clone()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0305"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "getClass",
+   "summary": "実行時のクラス情報。",
+   "examples": [
+    {
+     "code": "o.getClass()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0306"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "finalize",
+   "summary": "廃止予定の終了処理。",
+   "examples": [
+    {
+     "code": "deprecated",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0307"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Objects.equals",
+   "summary": "null 安全な比較。",
+   "examples": [
+    {
+     "code": "Objects.equals(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0308"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Objects.requireNonNull",
+   "summary": "null を拒否する。",
+   "examples": [
+    {
+     "code": "Objects.requireNonNull(x)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0309"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Objects.toString",
+   "summary": "null 安全な文字列化。",
+   "examples": [
+    {
+     "code": "Objects.toString(o, \"\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0310"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Objects.hash",
+   "summary": "複数値のハッシュ。",
+   "examples": [
+    {
+     "code": "Objects.hash(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0311"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Comparable",
+   "summary": "自然順序を定義。",
+   "examples": [
+    {
+     "code": "compareTo(T o)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0312"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Cloneable",
+   "summary": "複製可能の目印。",
+   "examples": [
+    {
+     "code": "implements Cloneable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0313"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "型パラメータ",
+   "summary": "総称型の名前。",
+   "examples": [
+    {
+     "code": "class Box<T>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0314"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "境界型パラメータ",
+   "summary": "型の上限を指定。",
+   "examples": [
+    {
+     "code": "<T extends Number>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0315"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "ワイルドカード",
+   "summary": "不明な型。",
+   "examples": [
+    {
+     "code": "List<?>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0316"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "上限ワイルドカード",
+   "summary": "型の上限を指定。",
+   "examples": [
+    {
+     "code": "List<? extends Number>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0317"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "下限ワイルドカード",
+   "summary": "型の下限を指定。",
+   "examples": [
+    {
+     "code": "List<? super Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0318"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "PECS 原則",
+   "summary": "読むなら extends 書くなら super。",
+   "examples": [
+    {
+     "code": "Producer Extends",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0319"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "型消去",
+   "summary": "実行時には型情報がない。",
+   "examples": [
+    {
+     "code": "type erasure",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0320"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "ダイヤモンド演算子",
+   "summary": "型引数を省略する。",
+   "examples": [
+    {
+     "code": "new ArrayList<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0321"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "ジェネリックメソッド",
+   "summary": "メソッド単位の型引数。",
+   "examples": [
+    {
+     "code": "<T> void f(T t)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0322"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "再帰的型境界",
+   "summary": "自分自身を型境界に。",
+   "examples": [
+    {
+     "code": "<T extends Comparable<T>>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0323"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "アノテーション",
+   "summary": "メタデータの注釈。",
+   "examples": [
+    {
+     "code": "@Deprecated",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0324"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@interface",
+   "summary": "独自注釈の定義。",
+   "examples": [
+    {
+     "code": "@interface MyAnno {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0325"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@Retention",
+   "summary": "注釈の保持期間。",
+   "examples": [
+    {
+     "code": "RetentionPolicy.RUNTIME",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0326"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@Target",
+   "summary": "注釈の付与先。",
+   "examples": [
+    {
+     "code": "ElementType.METHOD",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0327"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@SuppressWarnings",
+   "summary": "警告の抑制。",
+   "examples": [
+    {
+     "code": "@SuppressWarnings(\"unchecked\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0328"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@SafeVarargs",
+   "summary": "可変長引数の警告抑制。",
+   "examples": [
+    {
+     "code": "@SafeVarargs",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0329"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "@FunctionalInterface",
+   "summary": "関数型の明示。",
+   "examples": [
+    {
+     "code": "@FunctionalInterface",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0330"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "リフレクション",
+   "summary": "実行時にクラスを調べる。",
+   "examples": [
+    {
+     "code": "Class.forName(\"A\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0331"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Class.getMethods",
+   "summary": "メソッド一覧。",
+   "examples": [
+    {
+     "code": "cls.getMethods()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0332"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Method.invoke",
+   "summary": "メソッドを動的に呼ぶ。",
+   "examples": [
+    {
+     "code": "m.invoke(obj)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0333"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "Field.setAccessible",
+   "summary": "private へのアクセス許可。",
+   "examples": [
+    {
+     "code": "f.setAccessible(true)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0334"
+  },
+  {
+   "lang": "java",
+   "category": "クラスと継承",
+   "term": "動的プロキシ",
+   "summary": "実行時にプロキシ生成。",
+   "examples": [
+    {
+     "code": "Proxy.newProxyInstance",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0335"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "try-catch",
+   "summary": "例外を捕捉する。",
+   "examples": [
+    {
+     "code": "try { } catch (Exception e) { }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0336"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "finally",
+   "summary": "必ず実行する処理。",
+   "examples": [
+    {
+     "code": "finally { close(); }",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0337"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "AutoCloseable",
+   "summary": "自動クローズ対象。",
+   "examples": [
+    {
+     "code": "implements AutoCloseable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0338"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "throw",
+   "summary": "例外を投げる。",
+   "examples": [
+    {
+     "code": "throw new IOException();",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0339"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "throws",
+   "summary": "メソッドが投げる例外の宣言。",
+   "examples": [
+    {
+     "code": "void f() throws IOException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0340"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "検査例外",
+   "summary": "捕捉か宣言が必須。",
+   "examples": [
+    {
+     "code": "IOException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0341"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "非検査例外",
+   "summary": "捕捉が必須でない。",
+   "examples": [
+    {
+     "code": "RuntimeException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0342"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "Throwable",
+   "summary": "例外とエラーの親。",
+   "examples": [
+    {
+     "code": "Throwable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0343"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "Exception",
+   "summary": "例外の親クラス。",
+   "examples": [
+    {
+     "code": "Exception",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0344"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "Error",
+   "summary": "回復困難な異常。",
+   "examples": [
+    {
+     "code": "OutOfMemoryError",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0345"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "RuntimeException",
+   "summary": "実行時例外の親。",
+   "examples": [
+    {
+     "code": "RuntimeException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0346"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "NullPointerException",
+   "summary": "null への操作。",
+   "examples": [
+    {
+     "code": "s.length()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0347"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "IllegalArgumentException",
+   "summary": "不正な引数。",
+   "examples": [
+    {
+     "code": "throw new IllegalArgumentException()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0348"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "IllegalStateException",
+   "summary": "不正な状態。",
+   "examples": [
+    {
+     "code": "throw new IllegalStateException()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0349"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "ClassCastException",
+   "summary": "不正なキャスト。",
+   "examples": [
+    {
+     "code": "(String) obj",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0350"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "NumberFormatException",
+   "summary": "数値変換の失敗。",
+   "examples": [
+    {
+     "code": "Integer.parseInt(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0351"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "ArithmeticException",
+   "summary": "0 での整数除算など。",
+   "examples": [
+    {
+     "code": "1 / 0",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0352"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "IndexOutOfBoundsException",
+   "summary": "範囲外の添字。",
+   "examples": [
+    {
+     "code": "list.get(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0353"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "ConcurrentModificationException",
+   "summary": "走査中の変更。",
+   "examples": [
+    {
+     "code": "for 内で remove",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0354"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "UnsupportedOperationException",
+   "summary": "未対応の操作。",
+   "examples": [
+    {
+     "code": "List.of().add(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0355"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "StackOverflowError",
+   "summary": "再帰が深すぎる。",
+   "examples": [
+    {
+     "code": "無限再帰",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0356"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "OutOfMemoryError",
+   "summary": "メモリ不足。",
+   "examples": [
+    {
+     "code": "new byte[Integer.MAX_VALUE]",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0357"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "IOException",
+   "summary": "入出力の失敗。",
+   "examples": [
+    {
+     "code": "IOException",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0358"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "FileNotFoundException",
+   "summary": "ファイルがない。",
+   "examples": [
+    {
+     "code": "new FileReader(\"x\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0359"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "InterruptedException",
+   "summary": "割り込みを受けた。",
+   "examples": [
+    {
+     "code": "Thread.sleep(100)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0360"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "ClassNotFoundException",
+   "summary": "クラスが見つからない。",
+   "examples": [
+    {
+     "code": "Class.forName",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0361"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "NoSuchElementException",
+   "summary": "要素がない。",
+   "examples": [
+    {
+     "code": "iterator.next()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0362"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "DateTimeException",
+   "summary": "日時の異常。",
+   "examples": [
+    {
+     "code": "LocalDate.of(2024, 2, 30)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0363"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "カスタム例外",
+   "summary": "独自の例外クラス。",
+   "examples": [
+    {
+     "code": "class MyEx extends Exception",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0364"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "例外の連鎖",
+   "summary": "原因を保持する。",
+   "examples": [
+    {
+     "code": "new MyEx(\"x\", cause)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0365"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "getCause",
+   "summary": "原因の例外。",
+   "examples": [
+    {
+     "code": "e.getCause()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0366"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "getMessage",
+   "summary": "メッセージ取得。",
+   "examples": [
+    {
+     "code": "e.getMessage()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0367"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "printStackTrace",
+   "summary": "スタックトレース表示。",
+   "examples": [
+    {
+     "code": "e.printStackTrace()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0368"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "getStackTrace",
+   "summary": "スタック情報の取得。",
+   "examples": [
+    {
+     "code": "e.getStackTrace()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0369"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "addSuppressed",
+   "summary": "抑制例外の追加。",
+   "examples": [
+    {
+     "code": "e.addSuppressed(t)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0370"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "マルチキャッチ",
+   "summary": "複数の例外を 1 つで捕捉。",
+   "examples": [
+    {
+     "code": "catch (A e)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0371"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "例外の握りつぶし",
+   "summary": "何もしない catch は避ける。",
+   "examples": [
+    {
+     "code": "catch (Exception e) {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0372"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "アサーション",
+   "summary": "開発時の前提確認。",
+   "examples": [
+    {
+     "code": "assert x > 0;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0373"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "-ea オプション",
+   "summary": "アサーションを有効化。",
+   "examples": [
+    {
+     "code": "java -ea Main",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0374"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "UncaughtExceptionHandler",
+   "summary": "捕捉されない例外の処理。",
+   "examples": [
+    {
+     "code": "Thread.setDefaultUncaughtExceptionHandler",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0375"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "例外の再スロー",
+   "summary": "捕捉して再度投げる。",
+   "examples": [
+    {
+     "code": "throw e;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0376"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "早期失敗",
+   "summary": "不正を早く検出する。",
+   "examples": [
+    {
+     "code": "fail fast",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0377"
+  },
+  {
+   "lang": "java",
+   "category": "例外処理",
+   "term": "Optional による回避",
+   "summary": "null の代わりに使う。",
+   "examples": [
+    {
+     "code": "Optional.empty()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0378"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.length",
+   "summary": "文字数。",
+   "examples": [
+    {
+     "code": "s.length()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0379"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.charAt",
+   "summary": "指定位置の文字。",
+   "examples": [
+    {
+     "code": "s.charAt(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0380"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.substring",
+   "summary": "部分文字列。",
+   "examples": [
+    {
+     "code": "s.substring(1, 3)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0381"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.indexOf",
+   "summary": "位置を探す。",
+   "examples": [
+    {
+     "code": "s.indexOf(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0382"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.lastIndexOf",
+   "summary": "最後の位置を探す。",
+   "examples": [
+    {
+     "code": "s.lastIndexOf(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0383"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.contains",
+   "summary": "含むか判定。",
+   "examples": [
+    {
+     "code": "s.contains(\"ab\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0384"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.startsWith",
+   "summary": "先頭一致。",
+   "examples": [
+    {
+     "code": "s.startsWith(\"ab\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0385"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.endsWith",
+   "summary": "末尾一致。",
+   "examples": [
+    {
+     "code": "s.endsWith(\"ab\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0386"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.equalsIgnoreCase",
+   "summary": "大小無視の比較。",
+   "examples": [
+    {
+     "code": "a.equalsIgnoreCase(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0387"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.compareTo",
+   "summary": "辞書順の比較。",
+   "examples": [
+    {
+     "code": "a.compareTo(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0388"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.toUpperCase",
+   "summary": "大文字に変換。",
+   "examples": [
+    {
+     "code": "s.toUpperCase()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0389"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.toLowerCase",
+   "summary": "小文字に変換。",
+   "examples": [
+    {
+     "code": "s.toLowerCase()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0390"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.trim",
+   "summary": "前後の空白を除く。",
+   "examples": [
+    {
+     "code": "s.trim()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0391"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.strip",
+   "summary": "Unicode 対応の空白除去。",
+   "examples": [
+    {
+     "code": "s.strip()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0392"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.isEmpty",
+   "summary": "空文字か判定。",
+   "examples": [
+    {
+     "code": "s.isEmpty()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0393"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.isBlank",
+   "summary": "空白のみか判定。",
+   "examples": [
+    {
+     "code": "s.isBlank()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0394"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.replace",
+   "summary": "文字列を置換。",
+   "examples": [
+    {
+     "code": "s.replace(\"a\", \"b\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0395"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.replaceAll",
+   "summary": "正規表現で置換。",
+   "examples": [
+    {
+     "code": "s.replaceAll(\"[0-9]\", \"\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0396"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.split",
+   "summary": "区切って配列に。",
+   "examples": [
+    {
+     "code": "s.split(\",\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0397"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.valueOf",
+   "summary": "値を文字列に。",
+   "examples": [
+    {
+     "code": "String.valueOf(10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0398"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.formatted",
+   "summary": "インスタンスから書式化。",
+   "examples": [
+    {
+     "code": "\"%d\".formatted(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0399"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.repeat",
+   "summary": "繰り返し連結。",
+   "examples": [
+    {
+     "code": "\"ab\".repeat(3)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0400"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.chars",
+   "summary": "文字の IntStream。",
+   "examples": [
+    {
+     "code": "s.chars()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0401"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.toCharArray",
+   "summary": "char 配列に変換。",
+   "examples": [
+    {
+     "code": "s.toCharArray()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0402"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.lines",
+   "summary": "行の Stream。",
+   "examples": [
+    {
+     "code": "s.lines()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0403"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.matches",
+   "summary": "正規表現に一致するか。",
+   "examples": [
+    {
+     "code": "s.matches(\"[a-z]+\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0404"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.intern",
+   "summary": "文字列プールに入れる。",
+   "examples": [
+    {
+     "code": "s.intern()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0405"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.concat",
+   "summary": "連結。",
+   "examples": [
+    {
+     "code": "a.concat(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0406"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.codePointAt",
+   "summary": "コードポイント取得。",
+   "examples": [
+    {
+     "code": "s.codePointAt(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0407"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.getBytes",
+   "summary": "バイト配列に変換。",
+   "examples": [
+    {
+     "code": "s.getBytes(UTF_8)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0408"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.copyValueOf",
+   "summary": "char 配列から文字列。",
+   "examples": [
+    {
+     "code": "String.copyValueOf(arr)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0409"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.indent",
+   "summary": "字下げを加える。",
+   "examples": [
+    {
+     "code": "s.indent(2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0410"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.stripLeading",
+   "summary": "先頭の空白を除く。",
+   "examples": [
+    {
+     "code": "s.stripLeading()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0411"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "String.stripTrailing",
+   "summary": "末尾の空白を除く。",
+   "examples": [
+    {
+     "code": "s.stripTrailing()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0412"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "文字列の不変性",
+   "summary": "作成後は変更できない。",
+   "examples": [
+    {
+     "code": "immutable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0413"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "文字列プール",
+   "summary": "同じリテラルを共有。",
+   "examples": [
+    {
+     "code": "\"a\" == \"a\"",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0414"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.append",
+   "summary": "末尾に追加。",
+   "examples": [
+    {
+     "code": "sb.append(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0415"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.insert",
+   "summary": "途中に挿入。",
+   "examples": [
+    {
+     "code": "sb.insert(0, \"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0416"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.reverse",
+   "summary": "逆順にする。",
+   "examples": [
+    {
+     "code": "sb.reverse()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0417"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.deleteCharAt",
+   "summary": "1 文字削除。",
+   "examples": [
+    {
+     "code": "sb.deleteCharAt(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0418"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.setLength",
+   "summary": "長さを設定。",
+   "examples": [
+    {
+     "code": "sb.setLength(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0419"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuilder.toString",
+   "summary": "String に変換。",
+   "examples": [
+    {
+     "code": "sb.toString()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0420"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringBuffer",
+   "summary": "スレッド安全な可変文字列。",
+   "examples": [
+    {
+     "code": "new StringBuffer()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0421"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "StringJoiner",
+   "summary": "区切り付きで連結。",
+   "examples": [
+    {
+     "code": "new StringJoiner(\",\", \"[\", \"]\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0422"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Scanner.nextInt",
+   "summary": "整数を読む。",
+   "examples": [
+    {
+     "code": "sc.nextInt()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0423"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Scanner.nextLine",
+   "summary": "1 行を読む。",
+   "examples": [
+    {
+     "code": "sc.nextLine()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0424"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Scanner.hasNext",
+   "summary": "次の入力があるか。",
+   "examples": [
+    {
+     "code": "sc.hasNext()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0425"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "正規表現",
+   "summary": "文字列のパターン。",
+   "examples": [
+    {
+     "code": "Pattern.compile(\"a+\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0426"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Pattern",
+   "summary": "正規表現のコンパイル。",
+   "examples": [
+    {
+     "code": "Pattern.compile(\"\\\\d+\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0427"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Matcher",
+   "summary": "一致の検索。",
+   "examples": [
+    {
+     "code": "p.matcher(s)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0428"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Matcher.find",
+   "summary": "次の一致を探す。",
+   "examples": [
+    {
+     "code": "m.find()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0429"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Matcher.group",
+   "summary": "一致した部分。",
+   "examples": [
+    {
+     "code": "m.group(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0430"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Matcher.matches",
+   "summary": "全体一致の判定。",
+   "examples": [
+    {
+     "code": "m.matches()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0431"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "名前付きグループ",
+   "summary": "グループに名前を付ける。",
+   "examples": [
+    {
+     "code": "(?<year>\\\\d+)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0432"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Pattern.CASE_INSENSITIVE",
+   "summary": "大小無視のフラグ。",
+   "examples": [
+    {
+     "code": "Pattern.compile(\"a\", Pattern.CASE_INSENSITIVE)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0433"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Character",
+   "summary": "文字のユーティリティ。",
+   "examples": [
+    {
+     "code": "Character.isLetter(c)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0434"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Charset / StandardCharsets",
+   "summary": "文字コード。",
+   "examples": [
+    {
+     "code": "StandardCharsets.UTF_8",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0435"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "文字コード変換",
+   "summary": "バイトと文字列の変換。",
+   "examples": [
+    {
+     "code": "new String(bytes, UTF_8)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0436"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Base64",
+   "summary": "Base64 変換。",
+   "examples": [
+    {
+     "code": "Base64.getEncoder().encodeToString(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0437"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "MessageFormat",
+   "summary": "引数埋め込み形式。",
+   "examples": [
+    {
+     "code": "MessageFormat.format(\"{0}さん\", n)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0438"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "NumberFormat",
+   "summary": "数値の書式。",
+   "examples": [
+    {
+     "code": "NumberFormat.getInstance()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0439"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "DecimalFormat",
+   "summary": "数値の桁書式。",
+   "examples": [
+    {
+     "code": "new DecimalFormat(\"#,###\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0440"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Locale",
+   "summary": "地域の指定。",
+   "examples": [
+    {
+     "code": "Locale.JAPAN",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0441"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "ResourceBundle",
+   "summary": "多言語リソース。",
+   "examples": [
+    {
+     "code": "ResourceBundle.getBundle(\"msg\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0442"
+  },
+  {
+   "lang": "java",
+   "category": "String",
+   "term": "Normalizer",
+   "summary": "Unicode 正規化。",
+   "examples": [
+    {
+     "code": "Normalizer.normalize(s, NFC)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0443"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collection",
+   "summary": "コレクションの親。",
+   "examples": [
+    {
+     "code": "Collection<E>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0444"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List",
+   "summary": "順序付きの集合。",
+   "examples": [
+    {
+     "code": "List<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0445"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "LinkedList",
+   "summary": "連結リスト。",
+   "examples": [
+    {
+     "code": "new LinkedList<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0446"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.copyOf",
+   "summary": "不変コピー。",
+   "examples": [
+    {
+     "code": "List.copyOf(list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0447"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.add",
+   "summary": "追加。",
+   "examples": [
+    {
+     "code": "list.add(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0448"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.get",
+   "summary": "取得。",
+   "examples": [
+    {
+     "code": "list.get(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0449"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.set",
+   "summary": "置き換え。",
+   "examples": [
+    {
+     "code": "list.set(0, \"b\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0450"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.remove",
+   "summary": "削除。",
+   "examples": [
+    {
+     "code": "list.remove(0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0451"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.size",
+   "summary": "要素数。",
+   "examples": [
+    {
+     "code": "list.size()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0452"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.contains",
+   "summary": "含むか判定。",
+   "examples": [
+    {
+     "code": "list.contains(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0453"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.indexOf",
+   "summary": "位置を探す。",
+   "examples": [
+    {
+     "code": "list.indexOf(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0454"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.subList",
+   "summary": "部分リスト。",
+   "examples": [
+    {
+     "code": "list.subList(0, 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0455"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.sort",
+   "summary": "並べ替え。",
+   "examples": [
+    {
+     "code": "list.sort(null)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0456"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.removeIf",
+   "summary": "条件で削除。",
+   "examples": [
+    {
+     "code": "list.removeIf(x -> x < 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0457"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.replaceAll",
+   "summary": "全要素を変換。",
+   "examples": [
+    {
+     "code": "list.replaceAll(String::trim)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0458"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.forEach",
+   "summary": "全要素に処理。",
+   "examples": [
+    {
+     "code": "list.forEach(System.out::println)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0459"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.toArray",
+   "summary": "配列に変換。",
+   "examples": [
+    {
+     "code": "list.toArray(new String[0])",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0460"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.addAll",
+   "summary": "まとめて追加。",
+   "examples": [
+    {
+     "code": "list.addAll(other)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0461"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.clear",
+   "summary": "全削除。",
+   "examples": [
+    {
+     "code": "list.clear()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0462"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "List.isEmpty",
+   "summary": "空か判定。",
+   "examples": [
+    {
+     "code": "list.isEmpty()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0463"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ListIterator",
+   "summary": "双方向のイテレータ。",
+   "examples": [
+    {
+     "code": "list.listIterator()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0464"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Iterator.hasNext",
+   "summary": "次があるか。",
+   "examples": [
+    {
+     "code": "it.hasNext()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0465"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Iterator.remove",
+   "summary": "走査中に安全に削除。",
+   "examples": [
+    {
+     "code": "it.remove()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0466"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Iterable",
+   "summary": "拡張 for の対象。",
+   "examples": [
+    {
+     "code": "implements Iterable<T>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0467"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Set",
+   "summary": "重複なしの集合。",
+   "examples": [
+    {
+     "code": "Set<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0468"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "LinkedHashSet",
+   "summary": "挿入順を保つ Set。",
+   "examples": [
+    {
+     "code": "new LinkedHashSet<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0469"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeSet",
+   "summary": "整列済みの Set。",
+   "examples": [
+    {
+     "code": "new TreeSet<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0470"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Set.of",
+   "summary": "不変 Set を作る。",
+   "examples": [
+    {
+     "code": "Set.of(1, 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0471"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "retainAll",
+   "summary": "積集合。",
+   "examples": [
+    {
+     "code": "a.retainAll(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0472"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "removeAll",
+   "summary": "差集合。",
+   "examples": [
+    {
+     "code": "a.removeAll(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0473"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "containsAll",
+   "summary": "部分集合の判定。",
+   "examples": [
+    {
+     "code": "a.containsAll(b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0474"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "SortedSet",
+   "summary": "整列済み Set のインターフェース。",
+   "examples": [
+    {
+     "code": "SortedSet<E>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0475"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "NavigableSet",
+   "summary": "近傍探索ができる Set。",
+   "examples": [
+    {
+     "code": "ts.floor(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0476"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeSet.first / last",
+   "summary": "最小・最大。",
+   "examples": [
+    {
+     "code": "ts.first()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0477"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeSet.ceiling / higher",
+   "summary": "以上・より大。",
+   "examples": [
+    {
+     "code": "ts.ceiling(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0478"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map",
+   "summary": "キーと値の対応。",
+   "examples": [
+    {
+     "code": "Map<String, Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0479"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.of",
+   "summary": "不変 Map を作る。",
+   "examples": [
+    {
+     "code": "Map.of(\"a\", 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0480"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.entry",
+   "summary": "エントリの生成。",
+   "examples": [
+    {
+     "code": "Map.entry(\"a\", 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0481"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.put",
+   "summary": "登録。",
+   "examples": [
+    {
+     "code": "map.put(\"a\", 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0482"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.get",
+   "summary": "取得。",
+   "examples": [
+    {
+     "code": "map.get(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0483"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.getOrDefault",
+   "summary": "無ければ既定値。",
+   "examples": [
+    {
+     "code": "map.getOrDefault(\"a\", 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0484"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.containsKey",
+   "summary": "キーの存在判定。",
+   "examples": [
+    {
+     "code": "map.containsKey(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0485"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.containsValue",
+   "summary": "値の存在判定。",
+   "examples": [
+    {
+     "code": "map.containsValue(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0486"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.remove",
+   "summary": "削除。",
+   "examples": [
+    {
+     "code": "map.remove(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0487"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.keySet",
+   "summary": "キーの集合。",
+   "examples": [
+    {
+     "code": "map.keySet()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0488"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.values",
+   "summary": "値の集合。",
+   "examples": [
+    {
+     "code": "map.values()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0489"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.entrySet",
+   "summary": "エントリの集合。",
+   "examples": [
+    {
+     "code": "map.entrySet()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0490"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.putIfAbsent",
+   "summary": "無ければ登録。",
+   "examples": [
+    {
+     "code": "map.putIfAbsent(\"a\", 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0491"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.computeIfAbsent",
+   "summary": "無ければ計算して登録。",
+   "examples": [
+    {
+     "code": "map.computeIfAbsent(k, x -> new ArrayList<>())",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0492"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.computeIfPresent",
+   "summary": "あれば再計算。",
+   "examples": [
+    {
+     "code": "map.computeIfPresent(k, (a, b) -> b + 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0493"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.compute",
+   "summary": "計算して更新。",
+   "examples": [
+    {
+     "code": "map.compute(k, (a, b) -> ...)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0494"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.merge",
+   "summary": "値を結合して更新。",
+   "examples": [
+    {
+     "code": "map.merge(k, 1, Integer::sum)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0495"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.forEach",
+   "summary": "全エントリに処理。",
+   "examples": [
+    {
+     "code": "map.forEach((k, v) -> ...)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0496"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.replaceAll",
+   "summary": "全値を変換。",
+   "examples": [
+    {
+     "code": "map.replaceAll((k, v) -> v * 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0497"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Map.putAll",
+   "summary": "まとめて登録。",
+   "examples": [
+    {
+     "code": "map.putAll(other)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0498"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeMap.firstKey",
+   "summary": "最小のキー。",
+   "examples": [
+    {
+     "code": "tm.firstKey()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0499"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeMap.headMap / tailMap",
+   "summary": "範囲のマップ。",
+   "examples": [
+    {
+     "code": "tm.headMap(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0500"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "TreeMap.floorKey",
+   "summary": "以下で最大のキー。",
+   "examples": [
+    {
+     "code": "tm.floorKey(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0501"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "IdentityHashMap",
+   "summary": "参照比較の Map。",
+   "examples": [
+    {
+     "code": "new IdentityHashMap<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0502"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "WeakHashMap",
+   "summary": "弱参照キーの Map。",
+   "examples": [
+    {
+     "code": "new WeakHashMap<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0503"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ConcurrentHashMap",
+   "summary": "スレッド安全な Map。",
+   "examples": [
+    {
+     "code": "new ConcurrentHashMap<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0504"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Hashtable",
+   "summary": "古い同期済み Map。",
+   "examples": [
+    {
+     "code": "new Hashtable<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0505"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Properties",
+   "summary": "設定の Map。",
+   "examples": [
+    {
+     "code": "props.getProperty(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0506"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Queue",
+   "summary": "先入れ先出し。",
+   "examples": [
+    {
+     "code": "Queue<Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0507"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Deque",
+   "summary": "両端キュー。",
+   "examples": [
+    {
+     "code": "Deque<Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0508"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ArrayDeque",
+   "summary": "配列ベースの Deque。",
+   "examples": [
+    {
+     "code": "new ArrayDeque<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0509"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Queue.offer",
+   "summary": "末尾に追加。",
+   "examples": [
+    {
+     "code": "q.offer(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0510"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Queue.poll",
+   "summary": "先頭を取り出す。",
+   "examples": [
+    {
+     "code": "q.poll()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0511"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Queue.peek",
+   "summary": "先頭を見る。",
+   "examples": [
+    {
+     "code": "q.peek()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0512"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Deque.push / pop",
+   "summary": "スタックとして使う。",
+   "examples": [
+    {
+     "code": "d.push(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0513"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Deque.addFirst / addLast",
+   "summary": "両端に追加。",
+   "examples": [
+    {
+     "code": "d.addFirst(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0514"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "PriorityQueue",
+   "summary": "優先度付きキュー。",
+   "examples": [
+    {
+     "code": "new PriorityQueue<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0515"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "PriorityQueue の比較",
+   "summary": "Comparator で順序を指定。",
+   "examples": [
+    {
+     "code": "new PriorityQueue<>(cmp)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0516"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Stack",
+   "summary": "古いスタッククラス。",
+   "examples": [
+    {
+     "code": "new Stack<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0517"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Vector",
+   "summary": "古い同期済みリスト。",
+   "examples": [
+    {
+     "code": "new Vector<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0518"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "BlockingQueue",
+   "summary": "ブロックするキュー。",
+   "examples": [
+    {
+     "code": "new LinkedBlockingQueue<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0519"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ArrayBlockingQueue",
+   "summary": "容量固定のキュー。",
+   "examples": [
+    {
+     "code": "new ArrayBlockingQueue<>(10)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0520"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "CopyOnWriteArrayList",
+   "summary": "書き込み時コピーのリスト。",
+   "examples": [
+    {
+     "code": "new CopyOnWriteArrayList<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0521"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "ConcurrentLinkedQueue",
+   "summary": "非ブロックのキュー。",
+   "examples": [
+    {
+     "code": "new ConcurrentLinkedQueue<>()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0522"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "SequencedCollection",
+   "summary": "順序が定義されたコレクション。",
+   "examples": [
+    {
+     "code": "list.getFirst()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0523"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "reversed",
+   "summary": "逆順のビュー。",
+   "examples": [
+    {
+     "code": "list.reversed()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0524"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.reverse",
+   "summary": "逆順にする。",
+   "examples": [
+    {
+     "code": "Collections.reverse(list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0525"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.shuffle",
+   "summary": "並びをランダムに。",
+   "examples": [
+    {
+     "code": "Collections.shuffle(list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0526"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.max / min",
+   "summary": "最大・最小。",
+   "examples": [
+    {
+     "code": "Collections.max(list)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0527"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.unmodifiableList",
+   "summary": "変更不可のビュー。",
+   "examples": [
+    {
+     "code": "Collections.unmodifiableList(l)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0528"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.synchronizedList",
+   "summary": "同期ラッパー。",
+   "examples": [
+    {
+     "code": "Collections.synchronizedList(l)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0529"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.emptyList",
+   "summary": "空リスト。",
+   "examples": [
+    {
+     "code": "Collections.emptyList()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0530"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.singletonList",
+   "summary": "要素 1 つのリスト。",
+   "examples": [
+    {
+     "code": "Collections.singletonList(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0531"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.frequency",
+   "summary": "出現回数。",
+   "examples": [
+    {
+     "code": "Collections.frequency(l, \"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0532"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.swap",
+   "summary": "要素の入れ替え。",
+   "examples": [
+    {
+     "code": "Collections.swap(l, 0, 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0533"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.binarySearch",
+   "summary": "二分探索。",
+   "examples": [
+    {
+     "code": "Collections.binarySearch(l, 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0534"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.nCopies",
+   "summary": "同じ値の繰り返し。",
+   "examples": [
+    {
+     "code": "Collections.nCopies(3, \"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0535"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.disjoint",
+   "summary": "共通要素がないか。",
+   "examples": [
+    {
+     "code": "Collections.disjoint(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0536"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.addAll",
+   "summary": "まとめて追加。",
+   "examples": [
+    {
+     "code": "Collections.addAll(l, 1, 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0537"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Collections.rotate",
+   "summary": "要素を回転。",
+   "examples": [
+    {
+     "code": "Collections.rotate(l, 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0538"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Comparator.comparing",
+   "summary": "キーで比較。",
+   "examples": [
+    {
+     "code": "Comparator.comparing(P::getAge)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0539"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "thenComparing",
+   "summary": "第 2 キーで比較。",
+   "examples": [
+    {
+     "code": "cmp.thenComparing(P::getName)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0540"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Comparator.reversed",
+   "summary": "逆順にする。",
+   "examples": [
+    {
+     "code": "cmp.reversed()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0541"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Comparator.naturalOrder",
+   "summary": "自然順序。",
+   "examples": [
+    {
+     "code": "Comparator.naturalOrder()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0542"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Comparator.nullsFirst",
+   "summary": "null を先頭に。",
+   "examples": [
+    {
+     "code": "Comparator.nullsFirst(cmp)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0543"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "BitSet",
+   "summary": "ビットの集合。",
+   "examples": [
+    {
+     "code": "new BitSet(100)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0544"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.of / ofNullable",
+   "summary": "Optional の生成。",
+   "examples": [
+    {
+     "code": "Optional.ofNullable(s)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0545"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.isPresent",
+   "summary": "値の有無。",
+   "examples": [
+    {
+     "code": "o.isPresent()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0546"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.orElse",
+   "summary": "無ければ既定値。",
+   "examples": [
+    {
+     "code": "o.orElse(\"\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0547"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.orElseGet",
+   "summary": "無ければ計算。",
+   "examples": [
+    {
+     "code": "o.orElseGet(() -> \"\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0548"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.orElseThrow",
+   "summary": "無ければ例外。",
+   "examples": [
+    {
+     "code": "o.orElseThrow()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0549"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.map",
+   "summary": "値を変換。",
+   "examples": [
+    {
+     "code": "o.map(String::length)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0550"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.flatMap",
+   "summary": "Optional を平坦化。",
+   "examples": [
+    {
+     "code": "o.flatMap(f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0551"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.filter",
+   "summary": "条件で絞る。",
+   "examples": [
+    {
+     "code": "o.filter(x -> x > 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0552"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.ifPresent",
+   "summary": "あれば処理。",
+   "examples": [
+    {
+     "code": "o.ifPresent(System.out::println)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0553"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "Optional.ifPresentOrElse",
+   "summary": "あるなしで処理。",
+   "examples": [
+    {
+     "code": "o.ifPresentOrElse(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0554"
+  },
+  {
+   "lang": "java",
+   "category": "コレクション",
+   "term": "OptionalInt",
+   "summary": "int 用の Optional。",
+   "examples": [
+    {
+     "code": "OptionalInt.of(1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0555"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "コンストラクタ参照",
+   "summary": "生成を関数として渡す。",
+   "examples": [
+    {
+     "code": "ArrayList::new",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0556"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Function",
+   "summary": "1 引数で値を返す。",
+   "examples": [
+    {
+     "code": "Function<Integer, String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0557"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "BiFunction",
+   "summary": "2 引数で値を返す。",
+   "examples": [
+    {
+     "code": "BiFunction<A, B, C>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0558"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Supplier",
+   "summary": "値を供給する。",
+   "examples": [
+    {
+     "code": "Supplier<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0559"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Consumer",
+   "summary": "値を受け取り処理。",
+   "examples": [
+    {
+     "code": "Consumer<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0560"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "BiConsumer",
+   "summary": "2 値を受け取る。",
+   "examples": [
+    {
+     "code": "BiConsumer<A, B>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0561"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Predicate",
+   "summary": "真偽を返す。",
+   "examples": [
+    {
+     "code": "Predicate<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0562"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "UnaryOperator",
+   "summary": "同型の変換。",
+   "examples": [
+    {
+     "code": "UnaryOperator<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0563"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "BinaryOperator",
+   "summary": "同型 2 つから 1 つ。",
+   "examples": [
+    {
+     "code": "BinaryOperator<Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0564"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Predicate.and / or / negate",
+   "summary": "条件の合成。",
+   "examples": [
+    {
+     "code": "p.and(q)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0565"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Function.andThen / compose",
+   "summary": "関数の合成。",
+   "examples": [
+    {
+     "code": "f.andThen(g)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0566"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Function.identity",
+   "summary": "入力をそのまま返す。",
+   "examples": [
+    {
+     "code": "Function.identity()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0567"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Runnable",
+   "summary": "引数・戻り値なし。",
+   "examples": [
+    {
+     "code": "Runnable r = () -> {}",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0568"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Callable",
+   "summary": "戻り値ありのタスク。",
+   "examples": [
+    {
+     "code": "Callable<Integer>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0569"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "IntFunction / ToIntFunction",
+   "summary": "int 向けの関数。",
+   "examples": [
+    {
+     "code": "ToIntFunction<String>",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0570"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Stream.of",
+   "summary": "値から Stream。",
+   "examples": [
+    {
+     "code": "Stream.of(1, 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0571"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Stream.iterate",
+   "summary": "規則的に生成。",
+   "examples": [
+    {
+     "code": "Stream.iterate(1, x -> x * 2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0572"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Stream.generate",
+   "summary": "Supplier で生成。",
+   "examples": [
+    {
+     "code": "Stream.generate(() -> 1)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0573"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "IntStream.range",
+   "summary": "整数の範囲。",
+   "examples": [
+    {
+     "code": "IntStream.range(0, 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0574"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "IntStream.rangeClosed",
+   "summary": "終端を含む範囲。",
+   "examples": [
+    {
+     "code": "IntStream.rangeClosed(1, 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0575"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "filter",
+   "summary": "条件で絞る。",
+   "examples": [
+    {
+     "code": "s.filter(x -> x > 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0576"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "mapToInt",
+   "summary": "int へ変換。",
+   "examples": [
+    {
+     "code": "s.mapToInt(Integer::intValue)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0577"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "flatMap",
+   "summary": "ストリームを平坦化。",
+   "examples": [
+    {
+     "code": "s.flatMap(List::stream)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0578"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "distinct",
+   "summary": "重複を除く。",
+   "examples": [
+    {
+     "code": "s.distinct()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0579"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "sorted",
+   "summary": "整列。",
+   "examples": [
+    {
+     "code": "s.sorted()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0580"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "limit",
+   "summary": "先頭 N 件。",
+   "examples": [
+    {
+     "code": "s.limit(5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0581"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "skip",
+   "summary": "先頭 N 件を飛ばす。",
+   "examples": [
+    {
+     "code": "s.skip(2)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0582"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "peek",
+   "summary": "途中で覗く。",
+   "examples": [
+    {
+     "code": "s.peek(System.out::println)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0583"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "takeWhile",
+   "summary": "条件の間だけ取る。",
+   "examples": [
+    {
+     "code": "s.takeWhile(x -> x < 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0584"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "dropWhile",
+   "summary": "条件の間は捨てる。",
+   "examples": [
+    {
+     "code": "s.dropWhile(x -> x < 5)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0585"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "boxed",
+   "summary": "基本型をラッパーに。",
+   "examples": [
+    {
+     "code": "intStream.boxed()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0586"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "toList",
+   "summary": "不変リストに。",
+   "examples": [
+    {
+     "code": "s.toList()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0587"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "forEach",
+   "summary": "各要素に処理。",
+   "examples": [
+    {
+     "code": "s.forEach(System.out::println)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0588"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "count",
+   "summary": "件数。",
+   "examples": [
+    {
+     "code": "s.count()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0589"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "sum / average",
+   "summary": "合計・平均。",
+   "examples": [
+    {
+     "code": "intStream.sum()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0590"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "min / max",
+   "summary": "最小・最大。",
+   "examples": [
+    {
+     "code": "s.max(Comparator.naturalOrder())",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0591"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "anyMatch",
+   "summary": "1 つでも一致。",
+   "examples": [
+    {
+     "code": "s.anyMatch(x -> x > 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0592"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "allMatch",
+   "summary": "すべて一致。",
+   "examples": [
+    {
+     "code": "s.allMatch(x -> x > 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0593"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "noneMatch",
+   "summary": "1 つも一致しない。",
+   "examples": [
+    {
+     "code": "s.noneMatch(x -> x < 0)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0594"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "findFirst",
+   "summary": "最初の要素。",
+   "examples": [
+    {
+     "code": "s.findFirst()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0595"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "findAny",
+   "summary": "任意の要素。",
+   "examples": [
+    {
+     "code": "s.findAny()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0596"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "toArray",
+   "summary": "配列に変換。",
+   "examples": [
+    {
+     "code": "s.toArray()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0597"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "summaryStatistics",
+   "summary": "統計情報。",
+   "examples": [
+    {
+     "code": "intStream.summaryStatistics()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0598"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "mapMulti",
+   "summary": "1 対多の変換。",
+   "examples": [
+    {
+     "code": "s.mapMulti((x, c) -> c.accept(x))",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0599"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.toList",
+   "summary": "リストに集める。",
+   "examples": [
+    {
+     "code": "Collectors.toList()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0600"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.toSet",
+   "summary": "Set に集める。",
+   "examples": [
+    {
+     "code": "Collectors.toSet()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0601"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.toMap",
+   "summary": "Map に集める。",
+   "examples": [
+    {
+     "code": "Collectors.toMap(k, v)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0602"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.joining",
+   "summary": "文字列に連結。",
+   "examples": [
+    {
+     "code": "Collectors.joining(\",\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0603"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.groupingBy",
+   "summary": "グループ化。",
+   "examples": [
+    {
+     "code": "Collectors.groupingBy(P::getCity)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0604"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.partitioningBy",
+   "summary": "真偽で 2 分割。",
+   "examples": [
+    {
+     "code": "Collectors.partitioningBy(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0605"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.counting",
+   "summary": "件数を数える。",
+   "examples": [
+    {
+     "code": "Collectors.counting()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0606"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.summingInt",
+   "summary": "合計。",
+   "examples": [
+    {
+     "code": "Collectors.summingInt(f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0607"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.averagingInt",
+   "summary": "平均。",
+   "examples": [
+    {
+     "code": "Collectors.averagingInt(f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0608"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.mapping",
+   "summary": "変換して集める。",
+   "examples": [
+    {
+     "code": "Collectors.mapping(f, toList())",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0609"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.collectingAndThen",
+   "summary": "集めた後に変換。",
+   "examples": [
+    {
+     "code": "collectingAndThen(toList(), f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0610"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "Collectors.teeing",
+   "summary": "2 つの結果を合成。",
+   "examples": [
+    {
+     "code": "Collectors.teeing(a, b, f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0611"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "遅延評価",
+   "summary": "終端操作まで実行されない。",
+   "examples": [
+    {
+     "code": "lazy",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0612"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "中間操作",
+   "summary": "ストリームを返す操作。",
+   "examples": [
+    {
+     "code": "filter, map",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0613"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "終端操作",
+   "summary": "結果を得る操作。",
+   "examples": [
+    {
+     "code": "collect, count",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0614"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "並列ストリーム",
+   "summary": "複数スレッドで処理。",
+   "examples": [
+    {
+     "code": "list.parallelStream()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0615"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "副作用の回避",
+   "summary": "ラムダ内で状態を変えない。",
+   "examples": [
+    {
+     "code": "pure function",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0616"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "有効 final",
+   "summary": "ラムダが使える変数の条件。",
+   "examples": [
+    {
+     "code": "effectively final",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0617"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "高階関数",
+   "summary": "関数を受け取る関数。",
+   "examples": [
+    {
+     "code": "map(f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0618"
+  },
+  {
+   "lang": "java",
+   "category": "ラムダとStream",
+   "term": "カリー化",
+   "summary": "引数を 1 つずつ受ける。",
+   "examples": [
+    {
+     "code": "a -> b -> a + b",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0619"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "File",
+   "summary": "ファイルとパス。",
+   "examples": [
+    {
+     "code": "new File(\"a.txt\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0620"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "File.exists",
+   "summary": "存在確認。",
+   "examples": [
+    {
+     "code": "f.exists()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0621"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "File.listFiles",
+   "summary": "一覧取得。",
+   "examples": [
+    {
+     "code": "dir.listFiles()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0622"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Path",
+   "summary": "新しいパス表現。",
+   "examples": [
+    {
+     "code": "Path.of(\"a.txt\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0623"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Paths.get",
+   "summary": "パスの生成。",
+   "examples": [
+    {
+     "code": "Paths.get(\"a.txt\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0624"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Path.resolve",
+   "summary": "パスの結合。",
+   "examples": [
+    {
+     "code": "base.resolve(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0625"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Path.getFileName",
+   "summary": "ファイル名部分。",
+   "examples": [
+    {
+     "code": "p.getFileName()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0626"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Path.toAbsolutePath",
+   "summary": "絶対パス。",
+   "examples": [
+    {
+     "code": "p.toAbsolutePath()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0627"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.readString",
+   "summary": "全体を文字列で読む。",
+   "examples": [
+    {
+     "code": "Files.readString(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0628"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.lines",
+   "summary": "行の Stream。",
+   "examples": [
+    {
+     "code": "Files.lines(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0629"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.write",
+   "summary": "バイトや行を書く。",
+   "examples": [
+    {
+     "code": "Files.write(p, lines)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0630"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.copy",
+   "summary": "コピー。",
+   "examples": [
+    {
+     "code": "Files.copy(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0631"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.move",
+   "summary": "移動。",
+   "examples": [
+    {
+     "code": "Files.move(a, b)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0632"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.delete",
+   "summary": "削除。",
+   "examples": [
+    {
+     "code": "Files.delete(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0633"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.deleteIfExists",
+   "summary": "あれば削除。",
+   "examples": [
+    {
+     "code": "Files.deleteIfExists(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0634"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.createDirectories",
+   "summary": "階層ごと作成。",
+   "examples": [
+    {
+     "code": "Files.createDirectories(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0635"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.createTempFile",
+   "summary": "一時ファイル作成。",
+   "examples": [
+    {
+     "code": "Files.createTempFile(\"a\", \".txt\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0636"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.exists",
+   "summary": "存在確認。",
+   "examples": [
+    {
+     "code": "Files.exists(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0637"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.size",
+   "summary": "ファイルサイズ。",
+   "examples": [
+    {
+     "code": "Files.size(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0638"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.walk",
+   "summary": "再帰的に走査。",
+   "examples": [
+    {
+     "code": "Files.walk(dir)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0639"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.list",
+   "summary": "直下の一覧。",
+   "examples": [
+    {
+     "code": "Files.list(dir)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0640"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Files.newBufferedReader",
+   "summary": "バッファ付き読込。",
+   "examples": [
+    {
+     "code": "Files.newBufferedReader(p)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0641"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "BufferedWriter",
+   "summary": "バッファ付き書込。",
+   "examples": [
+    {
+     "code": "bw.write(\"a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0642"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "FileReader / FileWriter",
+   "summary": "文字ファイルの入出力。",
+   "examples": [
+    {
+     "code": "new FileReader(\"a.txt\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0643"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "InputStream / OutputStream",
+   "summary": "バイトの入出力。",
+   "examples": [
+    {
+     "code": "InputStream",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0644"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "FileInputStream",
+   "summary": "ファイルのバイト読込。",
+   "examples": [
+    {
+     "code": "new FileInputStream(f)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0645"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "ByteArrayOutputStream",
+   "summary": "メモリ上の出力。",
+   "examples": [
+    {
+     "code": "new ByteArrayOutputStream()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0646"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "InputStreamReader",
+   "summary": "バイトを文字に変換。",
+   "examples": [
+    {
+     "code": "new InputStreamReader(in, UTF_8)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0647"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "PrintWriter",
+   "summary": "書式付き出力。",
+   "examples": [
+    {
+     "code": "new PrintWriter(w)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0648"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "ObjectOutputStream",
+   "summary": "オブジェクトの書き出し。",
+   "examples": [
+    {
+     "code": "oos.writeObject(o)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0649"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Serializable",
+   "summary": "シリアライズ可能の目印。",
+   "examples": [
+    {
+     "code": "implements Serializable",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0650"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "transient",
+   "summary": "シリアライズ対象外。",
+   "examples": [
+    {
+     "code": "transient int x;",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0651"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "serialVersionUID",
+   "summary": "版を表す番号。",
+   "examples": [
+    {
+     "code": "private static final long serialVersionUID",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0652"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "NIO チャネル",
+   "summary": "バッファ指向の入出力。",
+   "examples": [
+    {
+     "code": "FileChannel",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0653"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "ByteBuffer",
+   "summary": "バイトのバッファ。",
+   "examples": [
+    {
+     "code": "ByteBuffer.allocate(1024)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0654"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "WatchService",
+   "summary": "ファイル変更の監視。",
+   "examples": [
+    {
+     "code": "FileSystems.getDefault().newWatchService()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0655"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Socket",
+   "summary": "TCP クライアント。",
+   "examples": [
+    {
+     "code": "new Socket(\"host\", 80)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0656"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "ServerSocket",
+   "summary": "TCP サーバー。",
+   "examples": [
+    {
+     "code": "new ServerSocket(8080)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0657"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "URL / URI",
+   "summary": "場所の表現。",
+   "examples": [
+    {
+     "code": "URI.create(\"http://a\")",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0658"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "HttpClient",
+   "summary": "HTTP 通信。",
+   "examples": [
+    {
+     "code": "HttpClient.newHttpClient()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0659"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "HttpRequest",
+   "summary": "要求の生成。",
+   "examples": [
+    {
+     "code": "HttpRequest.newBuilder(uri).build()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0660"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "HttpResponse.BodyHandlers",
+   "summary": "応答の受け取り方。",
+   "examples": [
+    {
+     "code": "BodyHandlers.ofString()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0661"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "sendAsync",
+   "summary": "非同期の送信。",
+   "examples": [
+    {
+     "code": "client.sendAsync(req, h)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0662"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "ZipInputStream",
+   "summary": "zip の読み取り。",
+   "examples": [
+    {
+     "code": "new ZipInputStream(in)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0663"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "GZIPOutputStream",
+   "summary": "gzip 圧縮。",
+   "examples": [
+    {
+     "code": "new GZIPOutputStream(out)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0664"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "try-with-resources と I/O",
+   "summary": "入出力は自動で閉じる。",
+   "examples": [
+    {
+     "code": "try (var br = ...)",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0665"
+  },
+  {
+   "lang": "java",
+   "category": "入出力",
+   "term": "Console",
+   "summary": "コンソール入出力。",
+   "examples": [
+    {
+     "code": "System.console()",
+     "note": ""
+    }
+   ],
+   "pages": [],
+   "id": "java-0666"
+  }
+ ]
+}
