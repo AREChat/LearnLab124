@@ -1,0 +1,271 @@
+並行処理 || Thread || スレッドを表すクラス。 || new Thread(r).start()
+並行処理 || Thread.start || スレッドを開始する。 || t.start()
+並行処理 || Thread.run || 処理本体。直接呼ぶと別スレッドにならない。 || t.run()
+並行処理 || Thread.join || 終了を待つ。 || t.join()
+並行処理 || Thread.sleep || 指定時間止まる。 || Thread.sleep(1000)
+並行処理 || Thread.interrupt || 割り込みを要求する。 || t.interrupt()
+並行処理 || isInterrupted || 割り込み状態の確認。 || Thread.currentThread().isInterrupted()
+並行処理 || Thread.currentThread || 実行中のスレッド。 || Thread.currentThread().getName()
+並行処理 || Thread.setDaemon || デーモンスレッドにする。 || t.setDaemon(true)
+並行処理 || Thread.yield || 実行を譲る。 || Thread.yield()
+並行処理 || スレッドの優先度 || 実行順のヒント。 || t.setPriority(5)
+並行処理 || スレッドの状態 || NEW や RUNNABLE など。 || t.getState()
+並行処理 || Thread.Builder || スレッドの作成補助。 || Thread.ofVirtual().start(r)
+並行処理 || 仮想スレッド || 軽量なスレッド。 || Thread.startVirtualThread(r)
+並行処理 || ThreadLocal || スレッドごとの変数。 || ThreadLocal<String>
+並行処理 || synchronized メソッド || 排他制御。 || synchronized void f() {}
+並行処理 || synchronized ブロック || 範囲を絞った排他。 || synchronized (lock) {}
+並行処理 || モニタ || 排他制御の仕組み。 || lock object
+並行処理 || volatile || 可視性を保証する。 || volatile boolean flag;
+並行処理 || wait / notify || 待機と通知。 || lock.wait()
+並行処理 || notifyAll || 待機中を全員起こす。 || lock.notifyAll()
+並行処理 || デッドロック || 互いに待ち続ける。 || lock A と lock B
+並行処理 || ライブロック || 動くが進まない状態。 || livelock
+並行処理 || スタベーション || 実行機会が回ってこない。 || starvation
+並行処理 || 競合状態 || 実行順で結果が変わる。 || race condition
+並行処理 || スレッドセーフ || 複数スレッドで安全。 || thread-safe
+並行処理 || 原子性 || 途中が見えない操作。 || atomicity
+並行処理 || 可視性 || 変更が他から見える性質。 || visibility
+並行処理 || happens-before || 順序の保証関係。 || Java Memory Model
+並行処理 || Java メモリモデル || スレッド間のメモリ規則。 || JMM
+並行処理 || ExecutorService || スレッドプールの管理。 || Executors.newFixedThreadPool(4)
+並行処理 || Executors.newCachedThreadPool || 必要に応じて増えるプール。 || Executors.newCachedThreadPool()
+並行処理 || Executors.newSingleThreadExecutor || 1 スレッドで順に実行。 || Executors.newSingleThreadExecutor()
+並行処理 || Executors.newVirtualThreadPerTaskExecutor || 仮想スレッドの実行器。 || Executors.newVirtualThreadPerTaskExecutor()
+並行処理 || ScheduledExecutorService || 定期実行。 || scheduleAtFixedRate(r, 0, 1, SECONDS)
+並行処理 || ExecutorService.submit || タスクの投入。 || ex.submit(task)
+並行処理 || ExecutorService.shutdown || 受付を終了する。 || ex.shutdown()
+並行処理 || awaitTermination || 終了を待つ。 || ex.awaitTermination(1, SECONDS)
+並行処理 || invokeAll || 全タスクを実行して待つ。 || ex.invokeAll(tasks)
+並行処理 || Future || 将来の結果。 || Future<Integer>
+並行処理 || Future.get || 結果を待って取得。 || f.get()
+並行処理 || Future.cancel || 取り消し。 || f.cancel(true)
+並行処理 || CompletableFuture || 非同期処理の合成。 || CompletableFuture.supplyAsync(f)
+並行処理 || thenApply || 結果を変換する。 || cf.thenApply(x -> x + 1)
+並行処理 || thenCompose || 非同期を連結する。 || cf.thenCompose(f)
+並行処理 || thenCombine || 2 つの結果を合成。 || a.thenCombine(b, f)
+並行処理 || thenAccept || 結果を消費する。 || cf.thenAccept(System.out::println)
+並行処理 || exceptionally || 例外時の処理。 || cf.exceptionally(e -> 0)
+並行処理 || handle || 結果と例外の両方を扱う。 || cf.handle((v, e) -> v)
+並行処理 || allOf / anyOf || 複数の完了待ち。 || CompletableFuture.allOf(a, b)
+並行処理 || ForkJoinPool || 分割統治の実行器。 || new ForkJoinPool()
+並行処理 || RecursiveTask || 値を返す分割タスク。 || extends RecursiveTask<Long>
+並行処理 || RecursiveAction || 値なしの分割タスク。 || extends RecursiveAction
+並行処理 || ReentrantLock || 明示的なロック。 || new ReentrantLock()
+並行処理 || Lock.lock / unlock || ロックの取得と解放。 || lock.lock()
+並行処理 || tryLock || 取れなければ諦める。 || lock.tryLock()
+並行処理 || ReadWriteLock || 読み書き別のロック。 || new ReentrantReadWriteLock()
+並行処理 || StampedLock || 楽観読み込みのロック。 || new StampedLock()
+並行処理 || Condition || ロックに紐づく待機条件。 || lock.newCondition()
+並行処理 || Semaphore || 同時実行数の制限。 || new Semaphore(3)
+並行処理 || CountDownLatch || 完了を待ち合わせる。 || new CountDownLatch(3)
+並行処理 || CyclicBarrier || 全員がそろうまで待つ。 || new CyclicBarrier(3)
+並行処理 || Phaser || 段階的な同期。 || new Phaser(3)
+並行処理 || Exchanger || 2 スレッド間の交換。 || new Exchanger<String>()
+並行処理 || AtomicInteger || 原子的な整数。 || new AtomicInteger()
+並行処理 || AtomicLong || 原子的な long。 || new AtomicLong()
+並行処理 || AtomicReference || 原子的な参照。 || new AtomicReference<>()
+並行処理 || compareAndSet || 比較して更新する。 || ai.compareAndSet(0, 1)
+並行処理 || incrementAndGet || 加算して返す。 || ai.incrementAndGet()
+並行処理 || LongAdder || 高競合に強い加算器。 || new LongAdder()
+並行処理 || CAS || 比較交換の命令。 || compare and swap
+並行処理 || LinkedBlockingQueue || 連結のブロッキングキュー。 || new LinkedBlockingQueue<>()
+並行処理 || BlockingQueue.put / take || ブロックして出し入れ。 || q.take()
+並行処理 || SynchronousQueue || 受け渡し専用のキュー。 || new SynchronousQueue<>()
+並行処理 || DelayQueue || 遅延付きキュー。 || new DelayQueue<>()
+並行処理 || ConcurrentSkipListMap || 並行対応の整列 Map。 || new ConcurrentSkipListMap<>()
+並行処理 || CopyOnWriteArraySet || 書き込み時コピーの Set。 || new CopyOnWriteArraySet<>()
+並行処理 || TimeUnit || 時間の単位。 || TimeUnit.SECONDS
+並行処理 || Timer / TimerTask || 古いタイマー機能。 || new Timer()
+並行処理 || 生産者消費者 || キューで役割を分ける。 || producer, consumer
+並行処理 || スレッドプール || スレッドを使い回す。 || thread pool
+並行処理 || 不変による安全 || 変更しなければ安全。 || immutable
+並行処理 || 構造化並行性 || 子タスクを親が管理。 || StructuredTaskScope
+並行処理 || ScopedValue || スレッド間で共有する不変値。 || ScopedValue.where(KEY, v)
+並行処理 || Flow API || リアクティブ仕様。 || Flow.Publisher
+並行処理 || parallelStream の注意 || 共有状態を避ける。 || list.parallelStream()
+日付と時刻 || LocalDate || 日付のみ。 || LocalDate.now()
+日付と時刻 || LocalTime || 時刻のみ。 || LocalTime.of(9, 30)
+日付と時刻 || LocalDateTime || 日付と時刻。 || LocalDateTime.now()
+日付と時刻 || ZonedDateTime || タイムゾーン付き日時。 || ZonedDateTime.now()
+日付と時刻 || OffsetDateTime || UTC との差付き日時。 || OffsetDateTime.now()
+日付と時刻 || Instant || 時刻の一点。 || Instant.now()
+日付と時刻 || Duration || 時間の長さ。 || Duration.ofMinutes(5)
+日付と時刻 || Period || 日付の期間。 || Period.ofDays(7)
+日付と時刻 || ChronoUnit || 単位指定の計算。 || ChronoUnit.DAYS.between(a, b)
+日付と時刻 || DateTimeFormatter || 日時の書式。 || DateTimeFormatter.ofPattern("yyyy/MM/dd")
+日付と時刻 || ISO_LOCAL_DATE || 標準の日付書式。 || DateTimeFormatter.ISO_LOCAL_DATE
+日付と時刻 || LocalDate.of || 日付を作る。 || LocalDate.of(2024, 1, 1)
+日付と時刻 || LocalDate.parse || 文字列から日付。 || LocalDate.parse("2024-01-01")
+日付と時刻 || plusDays / minusDays || 日の加減。 || d.plusDays(1)
+日付と時刻 || plusMonths || 月の加算。 || d.plusMonths(1)
+日付と時刻 || withDayOfMonth || 日を差し替え。 || d.withDayOfMonth(1)
+日付と時刻 || lengthOfMonth || 月の日数。 || d.lengthOfMonth()
+日付と時刻 || isLeapYear || うるう年の判定。 || d.isLeapYear()
+日付と時刻 || getDayOfWeek || 曜日。 || d.getDayOfWeek()
+日付と時刻 || DayOfWeek || 曜日の列挙型。 || DayOfWeek.MONDAY
+日付と時刻 || Month || 月の列挙型。 || Month.JANUARY
+日付と時刻 || YearMonth || 年月。 || YearMonth.of(2024, 2)
+日付と時刻 || Year / MonthDay || 年・月日。 || Year.isLeap(2024)
+日付と時刻 || TemporalAdjusters || 月初・月末などの調整。 || d.with(lastDayOfMonth())
+日付と時刻 || isBefore / isAfter || 前後の比較。 || a.isBefore(b)
+日付と時刻 || ZoneId || タイムゾーン。 || ZoneId.of("Asia/Tokyo")
+日付と時刻 || ZoneOffset || UTC からの差。 || ZoneOffset.ofHours(9)
+日付と時刻 || atZone || ゾーンを付与。 || ldt.atZone(zone)
+日付と時刻 || Instant.toEpochMilli || エポックからのミリ秒。 || i.toEpochMilli()
+日付と時刻 || Clock || 時計の抽象。テストで固定できる。 || Clock.fixed(i, zone)
+日付と時刻 || java.util.Date || 古い日時クラス。 || new Date()
+日付と時刻 || Calendar || 古いカレンダー。 || Calendar.getInstance()
+日付と時刻 || SimpleDateFormat || 古い日時書式。スレッド非安全。 || new SimpleDateFormat("yyyy")
+日付と時刻 || Date.toInstant || 旧型から新型へ。 || date.toInstant()
+日付と時刻 || サマータイム || 夏時間への切り替え。 || ZonedDateTime
+日付と時刻 || DateTimeParseException || 解析の失敗。 || LocalDate.parse("x")
+日付と時刻 || Locale と書式 || 地域別の日付表記。 || DateTimeFormatter.ofLocalizedDate(MEDIUM)
+日付と時刻 || JapaneseDate || 和暦の日付。 || JapaneseDate.now()
+日付と時刻 || 日付の差を求める || between で計算。 || Period.between(a, b)
+日付と時刻 || 経過時間の計測 || Instant と Duration を使う。 || Duration.between(s, e)
+JVM || JVM || Java 仮想マシン。 || java Main
+JVM || JRE || 実行環境。 || runtime
+JVM || JDK || 開発キット。 || javac, java
+JVM || バイトコード || JVM が実行する命令列。 || Main.class
+JVM || javac || コンパイラ。 || javac Main.java
+JVM || java コマンド || プログラムを実行する。 || java Main
+JVM || javap || クラスの逆アセンブル。 || javap -c Main
+JVM || jar コマンド || JAR の作成。 || jar cf a.jar *.class
+JVM || jshell || 対話型の実行環境。 || jshell
+JVM || jlink || 最小の実行環境を作る。 || jlink --add-modules java.base
+JVM || jpackage || インストーラの作成。 || jpackage --input in
+JVM || jdeps || 依存の解析。 || jdeps a.jar
+JVM || jcmd || 診断コマンド。 || jcmd PID VM.flags
+JVM || jstack || スレッドダンプ。 || jstack PID
+JVM || jmap || ヒープの情報。 || jmap -heap PID
+JVM || jstat || GC の統計。 || jstat -gc PID
+JVM || jconsole || 監視ツール。 || jconsole
+JVM || JFR || 低負荷のプロファイラ。 || Java Flight Recorder
+JVM || VisualVM || 監視・解析ツール。 || visualvm
+JVM || クラスローダー || クラスを読み込む。 || ClassLoader
+JVM || ブートストラップクラスローダー || 基本クラスを読む。 || bootstrap
+JVM || クラスパス || クラスを探す場所。 || java -cp lib/* Main
+JVM || モジュールパス || モジュールを探す場所。 || --module-path
+JVM || ヒープ || オブジェクトの置き場。 || -Xmx512m
+JVM || スタック領域 || 呼び出しごとの領域。 || -Xss1m
+JVM || メタスペース || クラス情報の領域。 || -XX:MaxMetaspaceSize
+JVM || 若い世代 || 新しいオブジェクトの領域。 || Young Generation
+JVM || 古い世代 || 長生きするオブジェクトの領域。 || Old Generation
+JVM || GC || 不要なオブジェクトの回収。 || garbage collection
+JVM || G1 GC || 既定のガベージコレクタ。 || -XX:+UseG1GC
+JVM || ZGC || 低遅延の GC。 || -XX:+UseZGC
+JVM || Shenandoah || 低停止時間の GC。 || -XX:+UseShenandoahGC
+JVM || Parallel GC || スループット重視の GC。 || -XX:+UseParallelGC
+JVM || Serial GC || 単純な GC。 || -XX:+UseSerialGC
+JVM || Stop-the-World || GC 中の全停止。 || STW
+JVM || 到達可能性 || 参照をたどれる状態。 || reachable
+JVM || GC ルート || 回収判定の出発点。 || GC roots
+JVM || メモリリーク || 不要な参照が残る。 || static list
+JVM || 強参照 || 通常の参照。 || Object o = new Object()
+JVM || SoftReference || メモリ不足時に回収。 || new SoftReference<>(o)
+JVM || WeakReference || 次の GC で回収。 || new WeakReference<>(o)
+JVM || PhantomReference || 回収後の通知用。 || new PhantomReference<>(o, q)
+JVM || Cleaner || 後始末の仕組み。 || Cleaner.create()
+JVM || JIT コンパイラ || 実行中にネイティブ化。 || C1, C2
+JVM || ホットスポット || 頻繁に実行される箇所。 || HotSpot
+JVM || 逃避解析 || 割り当てを省く最適化。 || escape analysis
+JVM || インライン化 || 呼び出しを展開する。 || inlining
+JVM || ウォームアップ || 最適化が効くまでの時間。 || warmup
+JVM || GraalVM || 高性能な VM とネイティブ化。 || native-image
+JVM || AOT コンパイル || 事前コンパイル。 || ahead-of-time
+JVM || CDS || クラスデータ共有で起動を速く。 || -Xshare
+JVM || -Xms / -Xmx || 初期・最大ヒープ。 || -Xms256m -Xmx1g
+JVM || -XX オプション || 詳細な JVM 設定。 || -XX:+PrintFlagsFinal
+JVM || -D オプション || システムプロパティ。 || -Dfile.encoding=UTF-8
+JVM || JAVA_HOME || JDK の場所。 || JAVA_HOME
+JVM || LTS || 長期サポート版。 || Java 17, 21
+JVM || OpenJDK || オープンソースの JDK。 || openjdk
+JVM || Temurin || OpenJDK のビルド。 || Eclipse Temurin
+JVM || SDKMAN || JDK の切り替えツール。 || sdk install java
+JVM || リリースサイクル || 半年ごとの新版。 || Java 21, 22
+JVM || プレビュー機能 || 試用段階の機能。 || --enable-preview
+JVM || JEP || 機能提案の文書。 || JEP 444
+JVM || Project Loom || 仮想スレッドの計画。 || virtual threads
+JVM || Project Valhalla || 値型の計画。 || value classes
+JVM || Project Panama || ネイティブ連携の計画。 || Foreign Function
+JVM || Project Amber || 言語機能の改善。 || records, sealed
+JVM || JNI || ネイティブ呼び出し。 || native void f();
+JVM || Foreign Function and Memory API || 安全なネイティブ連携。 || java.lang.foreign
+JVM || Unsafe || 内部の危険な API。 || sun.misc.Unsafe
+JVM || モジュールシステム || JPMS によるモジュール化。 || module-info.java
+JVM || module-info.java || モジュールの定義。 || module a { requires b; }
+JVM || requires || 依存モジュール。 || requires java.sql;
+JVM || exports || 公開パッケージ。 || exports com.a;
+JVM || opens || リフレクション向けの公開。 || opens com.a;
+JVM || ServiceLoader || サービスの探索。 || ServiceLoader.load(S.class)
+JVM || マルチリリース JAR || 版ごとのクラス格納。 || META-INF/versions
+JVM || MANIFEST.MF || JAR の情報ファイル。 || Main-Class: Main
+JVM || 実行可能 JAR || java -jar で起動。 || java -jar app.jar
+JVM || シェバン起動 || 単一ファイルの実行。 || java Main.java
+ビルドと開発 || Maven || ビルドツール。 || mvn package
+ビルドと開発 || pom.xml || Maven の設定。 || pom.xml
+ビルドと開発 || Maven ライフサイクル || compile、test、package など。 || mvn clean install
+ビルドと開発 || Maven プラグイン || ビルドの拡張。 || maven-compiler-plugin
+ビルドと開発 || 依存スコープ || compile、test など。 || scope test
+ビルドと開発 || 推移的依存 || 依存の依存。 || mvn dependency:tree
+ビルドと開発 || Maven Central || 公開リポジトリ。 || central
+ビルドと開発 || SNAPSHOT || 開発中の版。 || 1.0-SNAPSHOT
+ビルドと開発 || マルチモジュール || 複数プロジェクトの束ね。 || modules
+ビルドと開発 || BOM || 版をまとめる定義。 || dependencyManagement
+ビルドと開発 || Gradle || 柔軟なビルドツール。 || gradle build
+ビルドと開発 || build.gradle || Gradle の設定。 || build.gradle
+ビルドと開発 || Gradle Wrapper || 版を固定して実行。 || gradlew build
+ビルドと開発 || Kotlin DSL || Gradle の Kotlin 設定。 || build.gradle.kts
+ビルドと開発 || implementation || Gradle の依存指定。 || implementation 'a:b:1'
+ビルドと開発 || Gradle タスク || ビルドの作業単位。 || tasks.register
+ビルドと開発 || ビルドキャッシュ || 結果を再利用。 || --build-cache
+ビルドと開発 || Ant || 古いビルドツール。 || build.xml
+ビルドと開発 || IntelliJ IDEA || 代表的な IDE。 || IntelliJ
+ビルドと開発 || Eclipse || オープンソースの IDE。 || Eclipse
+ビルドと開発 || NetBeans || Apache の IDE。 || NetBeans
+ビルドと開発 || VS Code の Java 拡張 || エディタで開発。 || Extension Pack for Java
+ビルドと開発 || デバッガ || 動作を追う。 || breakpoint
+ビルドと開発 || ブレークポイント || 実行を止める位置。 || breakpoint
+ビルドと開発 || ステップ実行 || 1 行ずつ進める。 || step over
+ビルドと開発 || リモートデバッグ || 別プロセスにつなぐ。 || -agentlib:jdwp
+ビルドと開発 || コードフォーマッタ || 整形ツール。 || google-java-format
+ビルドと開発 || Checkstyle || コーディング規約の検査。 || checkstyle.xml
+ビルドと開発 || SpotBugs || バグ検出ツール。 || spotbugs
+ビルドと開発 || PMD || 静的解析。 || pmd
+ビルドと開発 || SonarQube || 品質の継続的な解析。 || sonar
+ビルドと開発 || JaCoCo || カバレッジ計測。 || jacoco
+ビルドと開発 || Lombok || ボイラープレート削減。 || @Getter
+ビルドと開発 || MapStruct || オブジェクト変換の生成。 || @Mapper
+ビルドと開発 || アノテーションプロセッサ || コンパイル時の処理。 || javax.annotation.processing
+ビルドと開発 || Javadoc 生成 || API 文書の出力。 || javadoc -d doc
+ビルドと開発 || CI || 継続的インテグレーション。 || GitHub Actions
+ビルドと開発 || Dockerfile (Java) || コンテナ化。 || FROM eclipse-temurin:21
+ビルドと開発 || Jib || Docker なしでイメージ作成。 || jib:build
+ビルドと開発 || ログ出力 || 実行状況の記録。 || logger.info("a")
+ビルドと開発 || java.util.logging || 標準のログ。 || Logger.getLogger("a")
+ビルドと開発 || SLF4J || ログの共通 API。 || LoggerFactory.getLogger(A.class)
+ビルドと開発 || Logback || ログの実装。 || logback.xml
+ビルドと開発 || Log4j 2 || ログの実装。 || log4j2.xml
+ビルドと開発 || ログレベル || TRACE から ERROR まで。 || DEBUG, WARN
+ビルドと開発 || MDC || ログに文脈を付ける。 || MDC.put("id", "1")
+ビルドと開発 || JUnit 5 || テストの標準。 || @Test
+ビルドと開発 || @BeforeEach / @AfterEach || 各テストの前後処理。 || @BeforeEach void setUp()
+ビルドと開発 || @ParameterizedTest || 値を変えて繰り返す。 || @ValueSource(ints = {1, 2})
+ビルドと開発 || assertEquals || 等しさの検証。 || assertEquals(1, x)
+ビルドと開発 || assertThrows || 例外の検証。 || assertThrows(E.class, () -> f())
+ビルドと開発 || assertAll || 複数検証をまとめる。 || assertAll(a, b)
+ビルドと開発 || @Disabled || テストの無効化。 || @Disabled
+ビルドと開発 || @Nested || テストの入れ子。 || @Nested class A
+ビルドと開発 || @TempDir || 一時ディレクトリ。 || @TempDir Path dir
+ビルドと開発 || Mockito || モックの作成。 || mock(A.class)
+ビルドと開発 || when / thenReturn || モックの振る舞い。 || when(m.f()).thenReturn(1)
+ビルドと開発 || verify || 呼び出しの検証。 || verify(m).f()
+ビルドと開発 || @Mock / @InjectMocks || モックの注入。 || @Mock A a
+ビルドと開発 || AssertJ || 読みやすい検証。 || assertThat(x).isEqualTo(1)
+ビルドと開発 || Hamcrest || マッチャーによる検証。 || assertThat(x, is(1))
+ビルドと開発 || Testcontainers || コンテナを使うテスト。 || new PostgreSQLContainer<>()
+ビルドと開発 || WireMock || HTTP のスタブ。 || stubFor(get(...))
+ビルドと開発 || TDD || テスト駆動開発。 || Red Green Refactor
+ビルドと開発 || ベンチマーク (JMH) || 精密な性能測定。 || @Benchmark
+ビルドと開発 || ミューテーションテスト || テストの質を測る。 || PIT

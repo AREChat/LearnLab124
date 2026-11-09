@@ -1,0 +1,324 @@
+データベース(Java) || JDBC || DB 接続の標準 API。 || DriverManager.getConnection(url)
+データベース(Java) || Connection || DB との接続。 || conn.close()
+データベース(Java) || Statement || SQL の実行。 || conn.createStatement()
+データベース(Java) || PreparedStatement || 安全なパラメータ付き SQL。 || conn.prepareStatement("select * from a where id=?")
+データベース(Java) || ResultSet || 検索結果。 || rs.next()
+データベース(Java) || ResultSet.getString || 列の値を取得。 || rs.getString("name")
+データベース(Java) || executeQuery || 検索を実行。 || ps.executeQuery()
+データベース(Java) || executeUpdate || 更新を実行。 || ps.executeUpdate()
+データベース(Java) || addBatch / executeBatch || 一括実行。 || ps.addBatch()
+データベース(Java) || トランザクション || まとまりで確定・取消。 || conn.setAutoCommit(false)
+データベース(Java) || commit / rollback || 確定と取り消し。 || conn.commit()
+データベース(Java) || セーブポイント || 途中までのロールバック。 || conn.setSavepoint()
+データベース(Java) || SQL インジェクション対策 || プレースホルダを使う。 || ps.setString(1, v)
+データベース(Java) || DataSource || 接続の供給元。 || ds.getConnection()
+データベース(Java) || コネクションプール || 接続の使い回し。 || HikariCP
+データベース(Java) || HikariCP || 高速な接続プール。 || new HikariDataSource()
+データベース(Java) || ドライバ || DB ごとの接続部品。 || org.postgresql.Driver
+データベース(Java) || JDBC URL || 接続先の指定。 || jdbc:postgresql://host/db
+データベース(Java) || 分離レベル || 同時実行時の見え方。 || TRANSACTION_READ_COMMITTED
+データベース(Java) || メタデータ || DB の構造情報。 || conn.getMetaData()
+データベース(Java) || CallableStatement || ストアドプロシージャ呼び出し。 || conn.prepareCall("{call f(?)}")
+データベース(Java) || RowSet || 切断型の結果。 || RowSetProvider
+データベース(Java) || JPA || ORM の標準仕様。 || jakarta.persistence
+データベース(Java) || Hibernate || 代表的な JPA 実装。 || SessionFactory
+データベース(Java) || @Entity || テーブルに対応するクラス。 || @Entity class User {}
+データベース(Java) || @Table || テーブル名の指定。 || @Table(name = "users")
+データベース(Java) || @Id || 主キー。 || @Id Long id;
+データベース(Java) || @GeneratedValue || 主キーの自動採番。 || @GeneratedValue(strategy = IDENTITY)
+データベース(Java) || @Column || 列の指定。 || @Column(name = "n")
+データベース(Java) || @OneToMany || 1 対多の関連。 || @OneToMany(mappedBy = "user")
+データベース(Java) || @ManyToOne || 多対 1 の関連。 || @ManyToOne
+データベース(Java) || @ManyToMany || 多対多の関連。 || @ManyToMany
+データベース(Java) || @JoinColumn || 結合列の指定。 || @JoinColumn(name = "user_id")
+データベース(Java) || EntityManager || エンティティの管理。 || em.persist(e)
+データベース(Java) || persist / merge || 登録と更新。 || em.merge(e)
+データベース(Java) || find || 主キーで取得。 || em.find(User.class, 1L)
+データベース(Java) || JPQL || JPA の問い合わせ言語。 || select u from User u
+データベース(Java) || Criteria API || 型安全な問い合わせ。 || cb.createQuery(User.class)
+データベース(Java) || 遅延ロード || 必要になるまで読まない。 || FetchType.LAZY
+データベース(Java) || 即時ロード || すぐに読む。 || FetchType.EAGER
+データベース(Java) || N+1 問題 || 大量の追加クエリ。 || join fetch
+データベース(Java) || 楽観ロック || 更新時に版で検出。 || @Version
+データベース(Java) || 悲観ロック || 取得時にロック。 || LockModeType.PESSIMISTIC_WRITE
+データベース(Java) || @Transactional || トランザクション境界。 || @Transactional
+データベース(Java) || 伝播 (propagation) || 入れ子のトランザクション挙動。 || Propagation.REQUIRES_NEW
+データベース(Java) || 永続化コンテキスト || 管理中のエンティティ集合。 || persistence context
+データベース(Java) || ダーティチェック || 変更の自動検出。 || dirty checking
+データベース(Java) || キャッシュ (1次・2次) || 取得結果の再利用。 || second-level cache
+データベース(Java) || MyBatis || SQL マッピングの FW。 || @Select
+データベース(Java) || jOOQ || 型安全な SQL 組み立て。 || DSL.using(conn)
+データベース(Java) || Flyway || DB マイグレーション。 || V1__init.sql
+データベース(Java) || Liquibase || DB 変更管理。 || changelog.xml
+データベース(Java) || H2 Database || 組み込み DB。 || jdbc:h2:mem:test
+データベース(Java) || SQLite JDBC || 軽量ファイル DB。 || jdbc:sqlite:a.db
+データベース(Java) || Spring Data JPA || リポジトリ自動生成。 || interface UserRepo extends JpaRepository
+データベース(Java) || JpaRepository || 基本的な DB 操作。 || repo.findAll()
+データベース(Java) || クエリメソッド || 名前から問い合わせを生成。 || findByName(String n)
+データベース(Java) || @Query || 独自クエリ。 || @Query("select u from User u")
+データベース(Java) || Pageable || ページング。 || PageRequest.of(0, 10)
+データベース(Java) || Specification || 動的な検索条件。 || Specification<User>
+データベース(Java) || Redis (Jedis) || キーバリュー DB のクライアント。 || new Jedis("localhost")
+データベース(Java) || MongoDB ドライバ || 文書 DB への接続。 || MongoClients.create()
+データベース(Java) || Elasticsearch クライアント || 検索エンジンの利用。 || RestHighLevelClient
+データベース(Java) || Kafka クライアント || メッセージング。 || KafkaProducer
+Spring || Spring Framework || 代表的な Java FW。 || spring-context
+Spring || Spring Boot || 設定を簡素化する FW。 || @SpringBootApplication
+Spring || @SpringBootApplication || 起動クラスの注釈。 || @SpringBootApplication class App
+Spring || SpringApplication.run || アプリの起動。 || SpringApplication.run(App.class, args)
+Spring || DI || 依存性の注入。 || @Autowired
+Spring || IoC コンテナ || オブジェクトを管理する。 || ApplicationContext
+Spring || Bean || 管理されるオブジェクト。 || @Bean
+Spring || @Component || Bean として登録。 || @Component
+Spring || @Service || サービス層の Bean。 || @Service
+Spring || @Repository || データ層の Bean。 || @Repository
+Spring || @Controller || 画面制御の Bean。 || @Controller
+Spring || @RestController || REST 用のコントローラ。 || @RestController
+Spring || @Configuration || 設定クラス。 || @Configuration
+Spring || @Autowired || 自動で注入。 || @Autowired Service s;
+Spring || コンストラクタインジェクション || 推奨される注入方法。 || A(B b) {}
+Spring || @Qualifier || 候補を名前で指定。 || @Qualifier("a")
+Spring || @Primary || 優先する Bean。 || @Primary
+Spring || @Value || 設定値の注入。 || @Value("${a.b}")
+Spring || @ConfigurationProperties || 設定の束ね。 || @ConfigurationProperties(prefix = "a")
+Spring || @Profile || 環境別の Bean。 || @Profile("dev")
+Spring || @Scope || Bean の生存範囲。 || @Scope("prototype")
+Spring || シングルトンスコープ || 1 つだけ生成。 || singleton
+Spring || @Lazy || 遅延初期化。 || @Lazy
+Spring || @PostConstruct || 初期化後の処理。 || @PostConstruct
+Spring || @PreDestroy || 破棄前の処理。 || @PreDestroy
+Spring || @Conditional || 条件付き登録。 || @ConditionalOnProperty
+Spring || 自動構成 || 条件に応じた自動設定。 || auto-configuration
+Spring || スターター || 依存のまとめ。 || spring-boot-starter-web
+Spring || application.properties || 設定ファイル。 || server.port=8080
+Spring || application.yml || YAML の設定ファイル。 || server: port: 8080
+Spring || Actuator || 監視用エンドポイント。 || /actuator/health
+Spring || DevTools || 開発時の自動再起動。 || spring-boot-devtools
+Spring || @GetMapping || GET の割り当て。 || @GetMapping("/a")
+Spring || @PostMapping || POST の割り当て。 || @PostMapping("/a")
+Spring || @PutMapping / @DeleteMapping || 更新・削除の割り当て。 || @DeleteMapping("/a/{id}")
+Spring || @RequestMapping || 共通の割り当て。 || @RequestMapping("/api")
+Spring || @PathVariable || パスの値を受け取る。 || @PathVariable Long id
+Spring || @RequestParam || クエリの値を受け取る。 || @RequestParam String q
+Spring || @RequestBody || 本文を受け取る。 || @RequestBody User u
+Spring || @ResponseBody || 戻り値を本文に。 || @ResponseBody
+Spring || ResponseEntity || 応答の詳細を指定。 || ResponseEntity.ok(body)
+Spring || @ResponseStatus || 状態コードの指定。 || @ResponseStatus(HttpStatus.CREATED)
+Spring || @ExceptionHandler || 例外の処理。 || @ExceptionHandler(E.class)
+Spring || @ControllerAdvice || 共通の例外処理。 || @RestControllerAdvice
+Spring || @Valid || 入力検証の実行。 || @Valid @RequestBody
+Spring || Bean Validation || 検証の注釈群。 || @NotNull @Size
+Spring || @NotBlank || 空白でない。 || @NotBlank String name
+Spring || @Email || メール形式。 || @Email
+Spring || @Min / @Max || 数値の範囲。 || @Min(0)
+Spring || Spring MVC || Web の MVC FW。 || DispatcherServlet
+Spring || DispatcherServlet || 要求の振り分け。 || DispatcherServlet
+Spring || ViewResolver || 画面の解決。 || InternalResourceViewResolver
+Spring || Thymeleaf || テンプレートエンジン。 || th:text="${a}"
+Spring || Model || 画面へ値を渡す。 || model.addAttribute("a", v)
+Spring || @ModelAttribute || フォームの束縛。 || @ModelAttribute Form f
+Spring || RedirectAttributes || リダイレクト時の値。 || ra.addFlashAttribute
+Spring || Interceptor || 前後処理の差し込み。 || HandlerInterceptor
+Spring || Filter || サーブレットの前処理。 || OncePerRequestFilter
+Spring || CORS 設定 || 別オリジンの許可。 || @CrossOrigin
+Spring || WebClient || 非同期 HTTP クライアント。 || WebClient.create()
+Spring || RestTemplate || 古い HTTP クライアント。 || new RestTemplate()
+Spring || RestClient || 新しい同期クライアント。 || RestClient.create()
+Spring || WebFlux || リアクティブな Web。 || Mono, Flux
+Spring || Mono / Flux || 0〜1 件・複数件の流れ。 || Mono.just(1)
+Spring || Project Reactor || リアクティブ基盤。 || reactor-core
+Spring || Spring Security || 認証・認可。 || SecurityFilterChain
+Spring || 認証 || 本人の確認。 || authentication
+Spring || 認可 || 権限の確認。 || authorization
+Spring || UserDetailsService || ユーザー情報の取得。 || loadUserByUsername
+Spring || PasswordEncoder || パスワードのハッシュ化。 || BCryptPasswordEncoder
+Spring || @PreAuthorize || メソッドの認可。 || @PreAuthorize("hasRole('ADMIN')")
+Spring || CSRF 対策 || 偽装要求の防止。 || csrf()
+Spring || JWT || 署名付きトークン。 || Authorization: Bearer
+Spring || OAuth 2.0 || 認可の標準。 || oauth2Login()
+Spring || セッション管理 || ログイン状態の保持。 || HttpSession
+Spring || Spring AOP || アスペクト指向。 || @Aspect
+Spring || @Around / @Before / @After || 処理の差し込み。 || @Around("execution(* a.*(..))")
+Spring || ポイントカット || 差し込み位置の指定。 || @Pointcut
+Spring || @Async || 非同期実行。 || @Async
+Spring || @Scheduled || 定期実行。 || @Scheduled(fixedRate = 1000)
+Spring || @Cacheable || 結果のキャッシュ。 || @Cacheable("a")
+Spring || @EventListener || イベントの受信。 || @EventListener
+Spring || ApplicationEventPublisher || イベントの発行。 || publisher.publishEvent(e)
+Spring || Spring Batch || バッチ処理 FW。 || Job, Step
+Spring || Spring Cloud || 分散システム支援。 || spring-cloud
+Spring || Eureka || サービス登録。 || @EnableEurekaServer
+Spring || Spring Cloud Gateway || API ゲートウェイ。 || gateway
+Spring || Feign || 宣言的 HTTP クライアント。 || @FeignClient
+Spring || Resilience4j || 障害対策ライブラリ。 || @CircuitBreaker
+Spring || サーキットブレーカー || 障害の連鎖を防ぐ。 || circuit breaker
+Spring || Spring Test || テスト支援。 || @SpringBootTest
+Spring || @WebMvcTest || Web 層のテスト。 || @WebMvcTest
+Spring || MockMvc || 疑似リクエスト。 || mockMvc.perform(get("/a"))
+Spring || @DataJpaTest || DB 層のテスト。 || @DataJpaTest
+Spring || @MockBean || モックの差し替え。 || @MockBean A a
+Spring || Spring Initializr || 雛形の生成。 || start.spring.io
+Spring || springdoc / OpenAPI || API 文書の生成。 || @Operation
+Spring || Lombok と Spring || 記述を減らす併用。 || @RequiredArgsConstructor
+Spring || Quarkus || 高速起動の FW。 || quarkus dev
+Spring || Micronaut || コンパイル時 DI の FW。 || micronaut
+Spring || Jakarta EE || 企業向け標準仕様。 || jakarta.servlet
+Spring || Servlet || Web 処理の基本。 || HttpServlet
+Spring || JSP || サーバー側画面技術。 || .jsp
+Spring || JSF || コンポーネント型の Web FW。 || .xhtml
+Spring || Tomcat || サーブレットコンテナ。 || tomcat
+Spring || Jetty || 軽量コンテナ。 || jetty
+Spring || Undertow || 高性能コンテナ。 || undertow
+Spring || WAR ファイル || Web アプリの配備形式。 || app.war
+Spring || JAX-RS || REST の標準 API。 || @Path("/a")
+Spring || Jersey || JAX-RS の実装。 || jersey
+Spring || Jackson || JSON 変換。 || new ObjectMapper()
+Spring || ObjectMapper.readValue || JSON からオブジェクト。 || mapper.readValue(json, A.class)
+Spring || writeValueAsString || オブジェクトから JSON。 || mapper.writeValueAsString(o)
+Spring || @JsonProperty || JSON 名の指定。 || @JsonProperty("a")
+Spring || @JsonIgnore || JSON から除外。 || @JsonIgnore
+Spring || Gson || Google の JSON ライブラリ。 || new Gson().toJson(o)
+Spring || JAXB || XML と Java の変換。 || JAXBContext
+Spring || DOM パーサー || XML を木で扱う。 || DocumentBuilder
+Spring || SAX パーサー || XML をイベントで処理。 || SAXParser
+Spring || StAX || XML のストリーム処理。 || XMLStreamReader
+Spring || XPath || XML の検索式。 || XPathFactory
+Spring || Apache Commons || 汎用ライブラリ群。 || commons-lang3
+Spring || StringUtils || 文字列の補助。 || StringUtils.isBlank(s)
+Spring || Guava || Google の汎用ライブラリ。 || ImmutableList.of(1)
+Spring || Apache POI || Office ファイルの操作。 || new XSSFWorkbook()
+Spring || iText / PDFBox || PDF の操作。 || PDDocument
+Spring || OpenCSV || CSV の読み書き。 || CSVReader
+セキュリティと設計 || 入力検証 || 受け取る値を確認する。 || validate
+セキュリティと設計 || XSS 対策 || 出力時にエスケープ。 || escapeHtml
+セキュリティと設計 || パスワードのハッシュ化 || 平文で保存しない。 || BCrypt
+セキュリティと設計 || ソルト || ハッシュに加えるランダム値。 || salt
+セキュリティと設計 || MessageDigest || ハッシュ計算。 || MessageDigest.getInstance("SHA-256")
+セキュリティと設計 || SecureRandom || 暗号用の乱数。 || new SecureRandom()
+セキュリティと設計 || Cipher || 暗号化と復号。 || Cipher.getInstance("AES/GCM/NoPadding")
+セキュリティと設計 || KeyStore || 鍵の保管。 || KeyStore.getInstance("PKCS12")
+セキュリティと設計 || SSLContext || TLS の設定。 || SSLContext.getDefault()
+セキュリティと設計 || 署名と検証 || 改ざんの検出。 || Signature.getInstance("SHA256withRSA")
+セキュリティと設計 || Mac / HMAC || 鍵付きハッシュ。 || Mac.getInstance("HmacSHA256")
+セキュリティと設計 || デシリアライズ脆弱性 || 信頼できない入力に注意。 || ObjectInputFilter
+セキュリティと設計 || 最小権限 || 必要最小限の権限。 || least privilege
+セキュリティと設計 || 秘密情報の管理 || コードに書かない。 || 環境変数
+セキュリティと設計 || 依存の脆弱性検査 || 既知の欠陥を調べる。 || OWASP Dependency-Check
+セキュリティと設計 || SOLID 原則 || 設計の 5 原則。 || SRP, OCP
+セキュリティと設計 || 単一責任の原則 || 1 クラス 1 責務。 || SRP
+セキュリティと設計 || 開放閉鎖の原則 || 拡張に開き修正に閉じる。 || OCP
+セキュリティと設計 || リスコフの置換原則 || 子は親の代わりになれる。 || LSP
+セキュリティと設計 || インターフェース分離 || 小さなインターフェース。 || ISP
+セキュリティと設計 || 依存性逆転 || 抽象に依存する。 || DIP
+セキュリティと設計 || DRY || 繰り返さない。 || Don't Repeat Yourself
+セキュリティと設計 || KISS || 単純に保つ。 || Keep It Simple
+セキュリティと設計 || YAGNI || 必要になるまで作らない。 || YAGNI
+セキュリティと設計 || 継承より委譲 || 部品として持つ。 || composition
+セキュリティと設計 || Singleton パターン || インスタンスを 1 つに。 || getInstance()
+セキュリティと設計 || Factory パターン || 生成を任せる。 || Factory.create()
+セキュリティと設計 || Abstract Factory || 関連部品の生成。 || AbstractFactory
+セキュリティと設計 || Builder パターン || 段階的に組み立てる。 || Builder.name("a").build()
+セキュリティと設計 || Prototype パターン || 複製して生成。 || clone()
+セキュリティと設計 || Adapter パターン || 互換のない形をつなぐ。 || Adapter
+セキュリティと設計 || Decorator パターン || 機能を重ねる。 || new BufferedReader(r)
+セキュリティと設計 || Facade パターン || 窓口を 1 つに。 || Facade
+セキュリティと設計 || Proxy パターン || 代理で制御。 || Proxy
+セキュリティと設計 || Composite パターン || 木構造を同一視。 || Composite
+セキュリティと設計 || Bridge パターン || 抽象と実装を分離。 || Bridge
+セキュリティと設計 || Flyweight パターン || 共有して節約。 || Flyweight
+セキュリティと設計 || Observer パターン || 変化を通知する。 || addListener
+セキュリティと設計 || Strategy パターン || アルゴリズムを差し替える。 || Comparator
+セキュリティと設計 || Template Method || 手順の骨組みを定義。 || abstract class
+セキュリティと設計 || Command パターン || 操作をオブジェクト化。 || execute()
+セキュリティと設計 || State パターン || 状態ごとに振る舞いを変える。 || State
+セキュリティと設計 || Iterator パターン || 順に取り出す。 || Iterator
+セキュリティと設計 || Visitor パターン || 構造と処理を分離。 || accept(visitor)
+セキュリティと設計 || Chain of Responsibility || 順に処理を渡す。 || Handler
+セキュリティと設計 || Mediator パターン || 仲介役を置く。 || Mediator
+セキュリティと設計 || Memento パターン || 状態を保存して戻す。 || Memento
+セキュリティと設計 || MVC || 画面・処理・データの分離。 || Model View Controller
+セキュリティと設計 || レイヤードアーキテクチャ || 層に分ける。 || controller service repository
+セキュリティと設計 || ヘキサゴナルアーキテクチャ || ポートとアダプタ。 || ports and adapters
+セキュリティと設計 || DDD || ドメイン駆動設計。 || Entity, ValueObject
+セキュリティと設計 || 値オブジェクト || 値で同一性を判断する。 || record Money(int a)
+セキュリティと設計 || 集約 || 整合性の単位。 || Aggregate
+セキュリティと設計 || DTO || データ転送用のオブジェクト。 || record UserDto()
+セキュリティと設計 || リポジトリパターン || 永続化の抽象化。 || Repository
+セキュリティと設計 || CQRS || 参照と更新を分離。 || Command Query
+セキュリティと設計 || イベントソーシング || イベントを記録して状態を再現。 || event sourcing
+セキュリティと設計 || マイクロサービス || 小さなサービスの集合。 || microservices
+セキュリティと設計 || モノリス || 1 つにまとまった構成。 || monolith
+セキュリティと設計 || REST || HTTP による API 設計。 || GET /users/1
+セキュリティと設計 || べき等性 || 何度実行しても同じ結果。 || idempotent
+セキュリティと設計 || API バージョニング || 版を分けて互換を保つ。 || /v1/users
+セキュリティと設計 || リファクタリング || 動作を変えず整理する。 || extract method
+セキュリティと設計 || コードレビュー || 他者による確認。 || pull request
+セキュリティと設計 || 技術的負債 || 後で払うコスト。 || tech debt
+セキュリティと設計 || ボイラープレート || 定型的な記述。 || getter, setter
+アルゴリズム(Java) || 計算量 || 処理の増え方。 || O(n)
+アルゴリズム(Java) || 線形探索 || 先頭から順に探す。 || for (int x : a)
+アルゴリズム(Java) || 二分探索 || 半分ずつ絞る。 || Arrays.binarySearch
+アルゴリズム(Java) || バブルソート || 隣同士を交換する整列。 || O(n^2)
+アルゴリズム(Java) || 選択ソート || 最小を選ぶ整列。 || selection sort
+アルゴリズム(Java) || 挿入ソート || 順に挿入する整列。 || insertion sort
+アルゴリズム(Java) || クイックソート || 分割して整列。 || quick sort
+アルゴリズム(Java) || マージソート || 併合して整列。 || merge sort
+アルゴリズム(Java) || ヒープソート || ヒープで整列。 || heap sort
+アルゴリズム(Java) || 再帰 || 自分自身を呼ぶ。 || f(n - 1)
+アルゴリズム(Java) || メモ化 || 計算結果を保存。 || Map<Integer, Long>
+アルゴリズム(Java) || 動的計画法 || 部分問題の結果を使う。 || dp[i]
+アルゴリズム(Java) || 貪欲法 || 局所最適を選ぶ。 || greedy
+アルゴリズム(Java) || 深さ優先探索 || 行けるところまで進む。 || DFS
+アルゴリズム(Java) || 幅優先探索 || 近い順に探す。 || BFS
+アルゴリズム(Java) || ダイクストラ法 || 最短経路を求める。 || PriorityQueue
+アルゴリズム(Java) || ユークリッドの互除法 || 最大公約数。 || gcd(a, b)
+アルゴリズム(Java) || 素数判定 || 割り切れるか調べる。 || isPrime(n)
+アルゴリズム(Java) || エラトステネスの篩 || 素数を列挙。 || boolean[] sieve
+アルゴリズム(Java) || 累積和 || 区間和を高速化。 || prefix[i]
+アルゴリズム(Java) || 二重ループの最適化 || 計算量を下げる。 || two pointers
+アルゴリズム(Java) || 尺取り法 || 区間を伸縮する。 || two pointers
+アルゴリズム(Java) || ビット全探索 || 部分集合を列挙。 || 1 << n
+アルゴリズム(Java) || 連結リスト実装 || ノードで要素をつなぐ。 || class Node
+アルゴリズム(Java) || 二分木 || 子が最大 2 つの木。 || class Tree
+アルゴリズム(Java) || 二分探索木 || 大小で配置する木。 || BST
+アルゴリズム(Java) || ハッシュ表 || キーで高速検索。 || HashMap
+アルゴリズム(Java) || グラフ表現 || 隣接リストなど。 || List<List<Integer>>
+アルゴリズム(Java) || Union-Find || 集合の併合と判定。 || find, union
+アルゴリズム(Java) || トポロジカルソート || 依存順に並べる。 || topological sort
+アルゴリズム(Java) || 競技プログラミング (Java) || 高速入出力が鍵。 || BufferedReader
+アルゴリズム(Java) || 乱数の生成 || 疑似乱数を得る。 || new Random(42)
+アルゴリズム(Java) || Math.random || 0 以上 1 未満の乱数。 || Math.random()
+アルゴリズム(Java) || ThreadLocalRandom || 並行向けの乱数。 || ThreadLocalRandom.current().nextInt(10)
+アルゴリズム(Java) || Math.abs || 絶対値。 || Math.abs(-3)
+アルゴリズム(Java) || Math.pow || べき乗。 || Math.pow(2, 10)
+アルゴリズム(Java) || Math.sqrt || 平方根。 || Math.sqrt(16)
+アルゴリズム(Java) || Math.max / min || 大きい・小さい方。 || Math.max(a, b)
+アルゴリズム(Java) || Math.floor / ceil || 切り捨て・切り上げ。 || Math.ceil(1.2)
+アルゴリズム(Java) || Math.round || 四捨五入。 || Math.round(1.5)
+アルゴリズム(Java) || Math.floorMod || 負数でも正の剰余。 || Math.floorMod(-1, 3)
+アルゴリズム(Java) || Math.addExact || あふれを検出する加算。 || Math.addExact(a, b)
+アルゴリズム(Java) || Math.hypot || 斜辺の長さ。 || Math.hypot(3, 4)
+アルゴリズム(Java) || Math.toRadians || 度をラジアンに。 || Math.toRadians(90)
+アルゴリズム(Java) || StrictMath || 結果が一定の数学関数。 || StrictMath.sin(1)
+Android(Java) || Activity || 画面の単位。 || class A extends Activity
+Android(Java) || Fragment || 画面の部品。 || class F extends Fragment
+Android(Java) || ライフサイクル || 生成から破棄までの流れ。 || onCreate, onDestroy
+Android(Java) || onCreate || 生成時に呼ばれる。 || protected void onCreate(Bundle b)
+Android(Java) || Intent || 画面や機能の起動要求。 || new Intent(this, B.class)
+Android(Java) || AndroidManifest.xml || アプリの宣言ファイル。 || AndroidManifest.xml
+Android(Java) || View / ViewGroup || 画面部品と入れ物。 || findViewById(R.id.a)
+Android(Java) || RecyclerView || 効率的な一覧。 || RecyclerView.Adapter
+Android(Java) || Adapter || データと表示の橋渡し。 || onBindViewHolder
+Android(Java) || ViewModel || 画面の状態保持。 || extends ViewModel
+Android(Java) || LiveData || 観察可能なデータ。 || LiveData<String>
+Android(Java) || Room || ローカル DB。 || @Dao
+Android(Java) || SharedPreferences || 小さな設定値の保存。 || getSharedPreferences("a", 0)
+Android(Java) || Retrofit || HTTP クライアント。 || Retrofit.Builder()
+Android(Java) || Service || バックグラウンド処理。 || extends Service
+Android(Java) || BroadcastReceiver || 通知の受信。 || onReceive
+Android(Java) || WorkManager || 確実な定期処理。 || WorkManager.getInstance()
+Android(Java) || Context || アプリの環境情報。 || getApplicationContext()
+Android(Java) || Gradle (Android) || ビルド設定。 || build.gradle
+Android(Java) || APK / AAB || 配布形式。 || app-release.aab
+Android(Java) || パーミッション || 権限の要求。 || requestPermissions
+Android(Java) || Logcat || ログの確認。 || Log.d("TAG", "a")
