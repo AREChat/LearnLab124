@@ -1,0 +1,215 @@
+エラーメッセージ || TypeError: x is not a function || 関数でない値を呼んだ。 || undefined()
+エラーメッセージ || TypeError: Cannot read properties of undefined || undefined のプロパティを読んだ。 || a.b.c
+エラーメッセージ || TypeError: Cannot set properties of null || null に代入しようとした。 || null.a = 1
+エラーメッセージ || TypeError: x is not iterable || 反復できない値を展開した。 || [...undefined]
+エラーメッセージ || TypeError: Assignment to constant variable || const に再代入した。 || const a = 1; a = 2
+エラーメッセージ || TypeError: Cannot convert undefined or null to object || null を Object 関数に渡した。 || Object.keys(null)
+エラーメッセージ || TypeError: Failed to fetch || 通信に失敗した。 || fetch(url)
+エラーメッセージ || TypeError: Converting circular structure to JSON || 循環参照を JSON にした。 || JSON.stringify(o)
+エラーメッセージ || TypeError: Class constructor cannot be invoked without 'new' || new なしでクラスを呼んだ。 || A()
+エラーメッセージ || TypeError: Illegal invocation || this が正しくない呼び出し。 || const f = el.focus; f()
+エラーメッセージ || ReferenceError: x is not defined || 宣言されていない変数。 || console.log(x)
+エラーメッセージ || ReferenceError: Cannot access before initialization || TDZ で宣言前に触れた。 || console.log(a); let a
+エラーメッセージ || SyntaxError: Unexpected token || 予期しない記号。 || JSON.parse('<')
+エラーメッセージ || SyntaxError: Unexpected end of JSON input || JSON が途中で終わる。 || JSON.parse('')
+エラーメッセージ || SyntaxError: Invalid or unexpected token || 不正な文字。 || 全角空白など
+エラーメッセージ || SyntaxError: Identifier has already been declared || 同名を再宣言した。 || let a; let a
+エラーメッセージ || SyntaxError: Cannot use import statement outside a module || ESM でない所で import。 || type="module" が必要
+エラーメッセージ || SyntaxError: await is only valid in async functions || async 外の await。 || await f()
+エラーメッセージ || RangeError: Maximum call stack size exceeded || 再帰が深すぎる。 || function f() { f() }
+エラーメッセージ || RangeError: Invalid array length || 不正な配列の長さ。 || new Array(-1)
+エラーメッセージ || RangeError: toFixed() digits argument must be between 0 and 100 || 桁数の範囲外。 || x.toFixed(200)
+エラーメッセージ || RangeError: Invalid time value || 不正な日時。 || new Date('x').toISOString()
+エラーメッセージ || URIError: URI malformed || 不正な URI の変換。 || decodeURIComponent('%')
+エラーメッセージ || EvalError || eval 関連の旧エラー。 || EvalError
+エラーメッセージ || DOMException: NotAllowedError || 許可されていない操作。 || play()
+エラーメッセージ || DOMException: QuotaExceededError || 保存容量を超えた。 || localStorage.setItem
+エラーメッセージ || DOMException: InvalidStateError || 不正な状態での操作。 || xhr.send()
+エラーメッセージ || DOMException: AbortError || 中断された。 || controller.abort()
+エラーメッセージ || DOMException: SecurityError || 安全でない操作。 || cross-origin
+エラーメッセージ || DOMException: NetworkError || 通信に失敗した。 || NetworkError
+エラーメッセージ || DOMException: NotFoundError || 対象が見つからない。 || removeChild
+エラーメッセージ || DOMException: HierarchyRequestError || 不正な階層の操作。 || appendChild
+エラーメッセージ || Uncaught (in promise) || Promise の失敗が処理されなかった。 || Promise.reject()
+エラーメッセージ || CORS policy: No 'Access-Control-Allow-Origin' || サーバーが許可していない。 || fetch cross-origin
+エラーメッセージ || Mixed Content || HTTPS ページから HTTP を読んだ。 || http:// を避ける
+エラーメッセージ || Refused to execute inline script (CSP) || CSP でインラインが禁止。 || script-src
+エラーメッセージ || ResizeObserver loop limit exceeded || 無害なことが多い通知。 || ResizeObserver
+エラーメッセージ || Hydration failed || サーバーと画面の HTML が不一致。 || React hydration
+エラーメッセージ || Too many re-renders || 描画中に状態を更新した。 || setState in render
+エラーメッセージ || Invalid hook call || Hook の使い方が誤り。 || useState outside component
+エラーメッセージ || Each child in a list should have a unique key || key がない。 || <li key>
+エラーメッセージ || Can't perform a React state update on an unmounted component || 破棄後の更新（旧）。 || cleanup
+エラーメッセージ || ERR_MODULE_NOT_FOUND || モジュールが見つからない (Node)。 || import './a'
+エラーメッセージ || ERR_REQUIRE_ESM || require で ESM を読んだ。 || require('esm-only')
+エラーメッセージ || ENOENT || ファイルがない。 || fs.readFile
+エラーメッセージ || EACCES || 権限がない。 || fs.writeFile
+エラーメッセージ || EADDRINUSE || ポートが使用中。 || listen(3000)
+エラーメッセージ || ECONNREFUSED || 接続を拒否された。 || connect
+エラーメッセージ || ETIMEDOUT || 時間切れ。 || request
+エラーメッセージ || ENOTFOUND || 名前が引けない。 || dns
+エラーメッセージ || EMFILE || 開いたファイルが多すぎる。 || too many open files
+エラーメッセージ || JavaScript heap out of memory || メモリ不足 (Node)。 || --max-old-space-size
+パターン(JS) || 即時実行関数式 (IIFE) の用途 || スコープを閉じる。 || (function() { })()
+パターン(JS) || モジュールパターン (旧) || クロージャで公開部分を絞る。 || return { publicMethod }
+パターン(JS) || レベリングモジュールパターン || 公開する名前を最後にまとめる。 || return { a, b }
+パターン(JS) || コンストラクタパターン || 関数でオブジェクトを作る。 || function Person() { }
+パターン(JS) || プロトタイプパターン || メソッドを共有する。 || Person.prototype.say = f
+パターン(JS) || ファクトリパターン (JS) || 条件で生成する関数。 || createUser(type)
+パターン(JS) || ビルダーパターン (JS) || メソッドチェーンで組み立てる。 || new QB().from('a').where('b').build()
+パターン(JS) || メソッドチェーン || this を返して連ねる。 || return this
+パターン(JS) || 流れるインターフェース || 読みやすい連鎖。 || $('a').addClass('b')
+パターン(JS) || ストラテジーパターン (JS) || 関数を差し替える。 || strategies[type](x)
+パターン(JS) || コマンドパターン (JS) || 操作をオブジェクトにする。 || {execute, undo}
+パターン(JS) || デコレータパターン (JS) || 関数をラップする。 || withLog(f)
+パターン(JS) || アダプタパターン (JS) || 形式を合わせる。 || adapt(api)
+パターン(JS) || ファサードパターン (JS) || 窓口を単純にする。 || api.getUser()
+パターン(JS) || プロキシパターン (JS) || Proxy で制御する。 || new Proxy(o, h)
+パターン(JS) || 状態パターン (JS) || 状態ごとの動作を持つ。 || state.next()
+パターン(JS) || イテレータパターン (JS) || 順に取り出す。 || Symbol.iterator
+パターン(JS) || メディエータパターン (JS) || 仲介者を置く。 || mediator.notify
+パターン(JS) || テンプレートメソッド (JS) || 手順を枠組みで決める。 || run() { this.a(); this.b() }
+パターン(JS) || チェーンオブレスポンシビリティ (JS) || ミドルウェアの連鎖。 || next()
+パターン(JS) || 依存性注入パターン (JS) || 引数で依存を渡す。 || createService({db})
+パターン(JS) || サービスロケータ || 登録所から取り出す。 || container.get('db')
+パターン(JS) || リポジトリパターン (JS) || データ取得を隠す。 || userRepo.find(id)
+パターン(JS) || ユニットオブワーク (JS) || 変更をまとめて確定する。 || uow.commit()
+パターン(JS) || CQRS (JS) || 読み書きの分離。 || command / query
+パターン(JS) || ピュアな関数コア・命令的シェル || 純粋部分と副作用を分ける。 || functional core
+パターン(JS) || モナド風の Maybe / Result || 失敗を値で扱う。 || Result.ok(1)
+パターン(JS) || レンズ || 入れ子の値を読み書きする。 || lens(path)
+パターン(JS) || トランスデューサ || 変換を合成する。 || transduce
+パターン(JS) || 遅延評価 || 必要になるまで計算しない。 || generator
+パターン(JS) || 末尾再帰 || 再帰を最適化できる形。 || return f(n - 1, acc)
+パターン(JS) || トランポリン || 再帰を反復に変える。 || trampoline(f)
+パターン(JS) || メモ化されたセレクタ || 同じ入力なら再計算しない。 || reselect
+パターン(JS) || 不変データ構造 || 変更せず新しい値を作る。 || Immutable.js
+パターン(JS) || 構造共有 || 変更部分だけ新しく作る。 || structural sharing
+パターン(JS) || ストア購読パターン || 変更を購読する。 || store.subscribe(f)
+パターン(JS) || 楽観的ロック (JS) || 版番号で競合を検出する。 || version
+パターン(JS) || 取り消し・やり直し || 履歴を保持する。 || undo stack
+パターン(JS) || デバウンスと検索 || 入力が止まってから検索する。 || debounce
+パターン(JS) || オブジェクトプール || 再利用して負荷を減らす。 || pool
+パターン(JS) || 遅延初期化 || 初回に作る。 || lazy init
+パターン(JS) || 空オブジェクトパターン (Null Object) || 空の代役を返す。 || noopLogger
+パターン(JS) || フィーチャーフラグ || 機能を切り替える。 || flags.newUI
+パターン(JS) || プラグイン機構 || 拡張を登録する。 || app.use(plugin)
+パターン(JS) || イベントバス || 離れた部品が通信する。 || bus.emit('a')
+パターン(JS) || 中断可能な処理 || AbortSignal を渡す。 || f({signal})
+パターン(JS) || リトライと指数バックオフ || 待ち時間を倍にして再試行する。 || delay *= 2
+パターン(JS) || サーキットブレーカー || 失敗が続くと遮断する。 || opossum
+パターン(JS) || 冪等キー || 重複実行を防ぐ。 || Idempotency-Key
+tsconfigオプション || compilerOptions || コンパイラの設定。 || "compilerOptions": {}
+tsconfigオプション || include / exclude / files || 対象ファイル。 || "include": ["src"]
+tsconfigオプション || extends || 設定を継承する。 || "extends": "./base.json"
+tsconfigオプション || outDir / rootDir || 出力先・入力の根。 || "outDir": "dist"
+tsconfigオプション || declaration / declarationMap || .d.ts の出力。 || "declaration": true
+tsconfigオプション || sourceMap / inlineSourceMap || ソースマップの出力。 || "sourceMap": true
+tsconfigオプション || noEmit / emitDeclarationOnly || 出力の制限。 || "noEmit": true
+tsconfigオプション || module / moduleDetection || モジュール形式。 || "module": "ESNext"
+tsconfigオプション || jsx / jsxImportSource || JSX の変換。 || "jsx": "react-jsx"
+tsconfigオプション || allowJs / checkJs || JS の扱い。 || "allowJs": true
+tsconfigオプション || esModuleInterop / allowSyntheticDefaultImports || CommonJS との互換。 || "esModuleInterop": true
+tsconfigオプション || resolveJsonModule || JSON の import。 || "resolveJsonModule": true
+tsconfigオプション || forceConsistentCasingInFileNames || ファイル名の大小を厳格に。 || true
+tsconfigオプション || noImplicitReturns / noImplicitThis || 暗黙の戻り・this を禁止。 || "noImplicitReturns": true
+tsconfigオプション || noUnusedLocals / noUnusedParameters || 未使用の検出。 || "noUnusedLocals": true
+tsconfigオプション || noFallthroughCasesInSwitch || switch の貫通を禁止。 || true
+tsconfigオプション || strictFunctionTypes / strictBindCallApply || 関数型の厳格化。 || "strictFunctionTypes": true
+tsconfigオプション || strictPropertyInitialization || プロパティの初期化を必須に。 || true
+tsconfigオプション || useUnknownInCatchVariables || catch の変数を unknown に。 || true
+tsconfigオプション || alwaysStrict || 常に strict モード。 || true
+tsconfigオプション || experimentalDecorators || 旧式デコレータの有効化。 || true
+tsconfigオプション || emitDecoratorMetadata || デコレータの型情報を出力。 || true
+tsconfigオプション || importHelpers / downlevelIteration || 古い環境向けの補助。 || true
+tsconfigオプション || removeComments / stripInternal || 出力の整理。 || "removeComments": true
+tsconfigオプション || typeRoots / types || 読み込む型定義。 || "types": ["node"]
+tsconfigオプション || rootDirs || 複数の根を 1 つに見せる。 || "rootDirs": []
+tsconfigオプション || allowImportingTsExtensions || .ts を import できる。 || true
+tsconfigオプション || customConditions || exports の条件を追加。 || "customConditions": []
+tsconfigオプション || erasableSyntaxOnly || 消せる構文だけに限る。 || true
+tsconfigオプション || tsc --build / --watch || 参照ビルド・監視。 || tsc -b
+tsconfigオプション || tsc --init || tsconfig の生成。 || tsc --init
+ESLintルール || no-unused-vars || 未使用の変数。 || eslint no-unused-vars
+ESLintルール || no-undef || 未定義の変数。 || no-undef
+ESLintルール || no-console || console の使用。 || no-console
+ESLintルール || eqeqeq || === を強制する。 || eqeqeq
+ESLintルール || prefer-const || 再代入しないなら const。 || prefer-const
+ESLintルール || no-var || var を禁止。 || no-var
+ESLintルール || no-shadow || 変数の隠蔽を禁止。 || no-shadow
+ESLintルール || curly || 波括弧を必須に。 || curly
+ESLintルール || semi / quotes || 書式の規則。 || semi
+ESLintルール || no-empty || 空のブロック。 || no-empty
+ESLintルール || no-eval / no-implied-eval || eval の禁止。 || no-eval
+ESLintルール || no-prototype-builtins || プロトタイプ関数の直接呼び出し。 || no-prototype-builtins
+ESLintルール || no-await-in-loop || ループ内の await。 || no-await-in-loop
+ESLintルール || require-await || await のない async。 || require-await
+ESLintルール || no-return-await || 不要な return await。 || no-return-await
+ESLintルール || no-floating-promises || 待たない Promise。 || @typescript-eslint/no-floating-promises
+ESLintルール || consistent-return || 戻り値の一貫性。 || consistent-return
+ESLintルール || complexity || 複雑度の上限。 || complexity
+ESLintルール || max-lines / max-params || 行数・引数の上限。 || max-params
+ESLintルール || react-hooks/rules-of-hooks || Hook の規則。 || rules-of-hooks
+ESLintルール || react-hooks/exhaustive-deps || 依存配列の確認。 || exhaustive-deps
+ESLintルール || jsx-a11y || JSX のアクセシビリティ。 || eslint-plugin-jsx-a11y
+ESLintルール || import/order || import の順序。 || import/order
+ESLintルール || flat config || 新しい設定形式。 || eslint.config.js
+ESLintルール || extends / plugins / rules || 設定の三要素。 || "extends": ["eslint:recommended"]
+ESLintルール || eslint --fix || 自動修正。 || eslint --fix
+ESLintルール || eslint-disable コメント || 規則を無効化する。 || // eslint-disable-next-line
+Prettier設定 || printWidth || 1 行の長さ。 || "printWidth": 100
+Prettier設定 || tabWidth / useTabs || インデント。 || "tabWidth": 2
+Prettier設定 || semi (Prettier) || セミコロンの有無。 || "semi": false
+Prettier設定 || singleQuote || 単一引用符。 || "singleQuote": true
+Prettier設定 || trailingComma || 末尾のカンマ。 || "trailingComma": "all"
+Prettier設定 || bracketSpacing || 波括弧内の空白。 || true
+Prettier設定 || arrowParens || アロー関数の括弧。 || "arrowParens": "always"
+Prettier設定 || endOfLine || 改行コード。 || "endOfLine": "lf"
+Prettier設定 || .prettierrc / .prettierignore || 設定と除外。 || .prettierignore
+Prettier設定 || prettier --check || 整形済みか確認する。 || prettier --check .
+package.jsonフィールド || name / version / description || 基本情報。 || "name": "a"
+package.jsonフィールド || scripts || コマンドの定義。 || "scripts": {"test": "vitest"}
+package.jsonフィールド || bin || 実行コマンドの公開。 || "bin": {"a": "cli.js"}
+package.jsonフィールド || files || 公開に含めるファイル。 || "files": ["dist"]
+package.jsonフィールド || sideEffects || 副作用の有無（ツリーシェイク用）。 || "sideEffects": false
+package.jsonフィールド || repository / homepage / bugs || 関連リンク。 || "repository": {}
+package.jsonフィールド || keywords / author / license || 検索語・作者・ライセンス。 || "keywords": []
+package.jsonフィールド || private || 公開しない印。 || "private": true
+package.jsonフィールド || overrides / resolutions || 依存の版を強制する。 || "overrides": {}
+package.jsonフィールド || optionalDependencies || 入らなくてもよい依存。 || "optionalDependencies"
+package.jsonフィールド || browser フィールド || ブラウザ用の入口。 || "browser": "b.js"
+package.jsonフィールド || imports (#) || 内部の別名。 || "imports": {"#a": "./a.js"}
+package.jsonフィールド || packageManager || 使う管理ツールの版。 || "packageManager": "pnpm@9"
+package.jsonフィールド || prepare / prepublishOnly || ライフサイクルスクリプト。 || "prepare": "husky"
+package.jsonフィールド || postinstall の注意 || 任意コードが動く。 || postinstall
+Viteとwebpack設定 || resolve.alias || import の別名。 || resolve: {alias: {'@': '/src'}}
+Viteとwebpack設定 || server.proxy || 開発サーバーの転送。 || server: {proxy: {'/api': 'http://localhost:3000'}}
+Viteとwebpack設定 || build.outDir / base || 出力先・公開パス。 || base: '/repo/'
+Viteとwebpack設定 || build.rollupOptions || Rollup の詳細設定。 || rollupOptions: {}
+Viteとwebpack設定 || define / env (import.meta.env) || 定数・環境変数。 || import.meta.env.VITE_A
+Viteとwebpack設定 || .env.production / .env.local || 環境ごとの変数。 || VITE_API=
+Viteとwebpack設定 || plugins (Vite) || 機能を足す。 || plugins: [react()]
+Viteとwebpack設定 || optimizeDeps || 依存の事前変換。 || optimizeDeps.include
+Viteとwebpack設定 || vite preview || ビルド結果の確認。 || vite preview
+Viteとwebpack設定 || webpack entry / output || 入口と出力。 || entry: './src/index.js'
+Viteとwebpack設定 || webpack mode || development / production。 || mode: 'production'
+Viteとwebpack設定 || webpack devtool || ソースマップの種類。 || devtool: 'source-map'
+Viteとwebpack設定 || splitChunks || 共通部分の分割。 || optimization.splitChunks
+Viteとwebpack設定 || babel-loader / css-loader || 変換の loader。 || module.rules
+Viteとwebpack設定 || MiniCssExtractPlugin || CSS を別ファイルに出す。 || new MiniCssExtractPlugin()
+Viteとwebpack設定 || HtmlWebpackPlugin || HTML を生成する。 || new HtmlWebpackPlugin()
+Viteとwebpack設定 || contenthash || 内容で変わるファイル名。 || [name].[contenthash].js
+Viteとwebpack設定 || externals || バンドルに含めない依存。 || externals: {react: 'React'}
+Viteとwebpack設定 || bundle analyzer || バンドルの内訳を見る。 || webpack-bundle-analyzer
+Deno・Bun || Deno.readTextFile / writeTextFile || ファイルの読み書き (Deno)。 || await Deno.readTextFile(p)
+Deno・Bun || Deno.serve || HTTP サーバー (Deno)。 || Deno.serve(handler)
+Deno・Bun || deno.json || Deno の設定。 || deno.json
+Deno・Bun || deno task / deno test || タスク・テスト。 || deno task dev
+Deno・Bun || Deno の権限 (--allow-*) || 実行時の許可。 || --allow-net
+Deno・Bun || JSR || 新しいパッケージの置き場。 || jsr:@std/assert
+Deno・Bun || npm: 指定子 || Deno で npm を使う。 || import x from 'npm:x'
+Deno・Bun || Bun.serve || HTTP サーバー (Bun)。 || Bun.serve({fetch})
+Deno・Bun || Bun.file / Bun.write || ファイル操作 (Bun)。 || await Bun.file(p).text()
+Deno・Bun || bun install / bun test || 高速な管理・テスト。 || bun install
+Deno・Bun || bun:sqlite || 組み込みの SQLite。 || new Database('a.db')
+Deno・Bun || Bun.$ (シェル) || シェルコマンドを書く。 || await Bun.$`ls`

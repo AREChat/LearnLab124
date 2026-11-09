@@ -1,0 +1,160 @@
+サーバーFW || NestJS || TypeScript の構造化されたサーバー FW。 || @Controller()
+サーバーFW || @Module / @Injectable (Nest) || 構成と注入。 || @Module({})
+サーバーFW || @Get / @Post / @Body / @Param (Nest) || ルートと入力。 || @Get(':id')
+サーバーFW || Pipe / Guard / Interceptor (Nest) || 検証・認可・横断処理。 || @UseGuards(AuthGuard)
+サーバーFW || Fastify の route / schema || スキーマつきのルート。 || fastify.get('/', {schema}, h)
+サーバーFW || Fastify plugin / decorate || 機能の拡張。 || fastify.register(plugin)
+サーバーFW || Koa の ctx || 要求と応答をまとめた文脈。 || ctx.body = 'a'
+サーバーFW || Hono のルーティング || 軽量な Web 標準ベースの FW。 || app.get('/', c => c.text('a'))
+サーバーFW || Hono の c.json / c.req || 応答と要求。 || c.json({})
+サーバーFW || Elysia / h3 / Nitro || 新しい軽量な FW。 || defineEventHandler
+サーバーFW || tRPC router / procedure || 型を共有する API。 || t.procedure.query()
+サーバーFW || GraphQL schema / resolver || 型と解決関数。 || type Query { user: User }
+サーバーFW || Apollo Server / Client || GraphQL のサーバー・クライアント。 || new ApolloServer()
+サーバーFW || GraphQL の query / mutation / subscription || 取得・変更・購読。 || mutation { addUser }
+サーバーFW || gql タグ || GraphQL の文字列。 || gql`query { a }`
+サーバーFW || urql / graphql-request || 軽量な GraphQL クライアント。 || request(url, query)
+サーバーFW || REST と OpenAPI || API の仕様記述。 || openapi.yaml
+サーバーFW || Swagger UI / Redoc || API 文書の表示。 || swagger-ui
+サーバーFW || API のバージョニング || /v1 のように分ける。 || /api/v1
+サーバーFW || ページネーション (cursor / offset) || 取得の分割方式。 || ?cursor=abc
+サーバーFW || レート制限 || 呼び出し回数を制限する。 || 429 Too Many Requests
+サーバーFW || Webhook の受信 || 外部からの通知を受ける。 || app.post('/webhook')
+サーバーFW || 署名の検証 (Webhook) || 送信元を確かめる。 || crypto.timingSafeEqual
+サーバーFW || ジョブキュー (BullMQ) || 非同期の処理を順に行う。 || new Queue('a')
+サーバーFW || cron (node-cron) || 定期実行。 || cron.schedule('* * * * *', f)
+サーバーFW || ファイルアップロードの処理 || 受信と保存。 || multer
+サーバーFW || ストリーミング応答 || 少しずつ返す。 || res.write(chunk)
+サーバーFW || SSE の実装 || イベントを流す。 || res.setHeader('Content-Type', 'text/event-stream')
+サーバーFW || Socket.IO の emit / on || イベントの送受信。 || socket.emit('a', d)
+サーバーFW || Socket.IO の room || グループ送信。 || socket.join('r')
+サーバーFW || ws ライブラリ || WebSocket サーバー。 || new WebSocketServer({port})
+サーバーFW || ヘルスチェックエンドポイント || 稼働確認。 || app.get('/health')
+サーバーFW || グレースフルシャットダウン || 処理を終えてから止める。 || server.close()
+サーバーFW || 環境変数の検証 || 起動時に必須値を確認。 || zod parse(process.env)
+サーバーFW || 構造化ログ || JSON でログを出す。 || pino
+サーバーFW || リクエスト ID || 通信を追跡する。 || x-request-id
+サーバーFW || エラーハンドリング (集中) || 一か所でまとめて処理。 || app.use(errorHandler)
+サーバーFW || セッション管理 || 利用者の状態を保持する。 || express-session
+サーバーFW || Cookie の設定 || 属性を付けて発行する。 || res.cookie('a', 'b', {httpOnly: true})
+サーバーFW || パスワードの保存 || ハッシュ化して保存する。 || bcrypt.hash
+サーバーFW || OAuth のフロー || 認可コードで認証する。 || authorization code
+サーバーFW || OpenID Connect || OAuth 上の認証。 || id_token
+サーバーFW || リフレッシュトークン || 長期のトークン。 || refresh_token
+サーバーFW || RBAC / ABAC || 役割・属性による認可。 || role
+サーバーFW || CSRF 対策 (サーバー) || トークンや SameSite。 || csurf
+サーバーFW || 入力のサニタイズ || 不正な値を無害化する。 || validator.js
+データベース(JS) || Prisma Client || 型安全な DB アクセス。 || prisma.user.findMany()
+データベース(JS) || prisma migrate / schema.prisma || スキーマの移行。 || prisma migrate dev
+データベース(JS) || Drizzle ORM || 軽量な TS の ORM。 || db.select().from(users)
+データベース(JS) || TypeORM / Sequelize || 従来の ORM。 || @Entity()
+データベース(JS) || Knex / Kysely || クエリビルダー。 || knex('users').where({id})
+データベース(JS) || Mongoose || MongoDB の ODM。 || new Schema({})
+データベース(JS) || MongoDB の find / aggregate || 検索・集計。 || db.collection('a').find()
+データベース(JS) || pg / mysql2 || ドライバー。 || new Pool()
+データベース(JS) || better-sqlite3 || 同期の SQLite。 || new Database('a.db')
+データベース(JS) || Redis の get / set / expire || キーバリューの操作。 || redis.set('a', 1)
+データベース(JS) || ioredis / node-redis || Redis のクライアント。 || new Redis()
+データベース(JS) || トランザクション (JS) || まとめて確定する。 || prisma.$transaction([])
+データベース(JS) || コネクションプール (JS) || 接続を使い回す。 || pool.query
+データベース(JS) || N+1 問題 (ORM) || 関連の取得を一度にする。 || include
+データベース(JS) || マイグレーション管理 || 版管理して適用する。 || migrations
+データベース(JS) || シード || 初期データを入れる。 || prisma db seed
+データベース(JS) || Supabase の select / insert || クエリの記述。 || supabase.from('a').select()
+データベース(JS) || Supabase Auth / Storage / Realtime || 認証・保存・リアルタイム。 || supabase.auth.signIn
+データベース(JS) || Firebase Firestore || ドキュメント DB。 || getDocs(collection(db, 'a'))
+データベース(JS) || Firebase Auth || 認証。 || signInWithPopup()
+データベース(JS) || Neon / PlanetScale / Turso || サーバーレス DB。 || @neondatabase/serverless
+データベース(JS) || Cloudflare D1 / KV / R2 || エッジの保存先。 || env.DB.prepare()
+データベース(JS) || Upstash || サーバーレス Redis。 || @upstash/redis
+データベース(JS) || Elasticsearch / Algolia / Meilisearch || 検索エンジン。 || index.search('q')
+データベース(JS) || ベクトル検索 (JS) || 埋め込みで近い文書を探す。 || pgvector
+データベース(JS) || LangChain.js / AI SDK || 言語モデルを扱う。 || generateText()
+データベース(JS) || OpenAI / Anthropic SDK || API を呼ぶ。 || client.messages.create()
+データベース(JS) || ストリーミングで LLM 応答 || 逐次表示する。 || stream: true
+ゲーム開発(JS) || ゲームループの固定ステップ || 一定間隔で更新する。 || accumulator
+ゲーム開発(JS) || スプライトシート || 複数コマの画像。 || ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh)
+ゲーム開発(JS) || タイルマップ || 小さな絵で地形を作る。 || map[y][x]
+ゲーム開発(JS) || 矩形・円の衝突判定 || 重なりの計算。 || dx*dx + dy*dy < r*r
+ゲーム開発(JS) || AABB 判定 || 軸に沿った矩形の判定。 || a.x < b.x + b.w
+ゲーム開発(JS) || 加速度と摩擦 || 速度の更新。 || vx *= 0.9
+ゲーム開発(JS) || 重力とジャンプ || 速度に重力を加える。 || vy += g
+ゲーム開発(JS) || カメラの追従 || 画面を主役に合わせる。 || camera.x = player.x
+ゲーム開発(JS) || パーティクル || 粒子の演出。 || particles.push
+ゲーム開発(JS) || イージング関数 || 動きの緩急。 || easeInOutQuad
+ゲーム開発(JS) || 線形補間 (lerp) || 2点の間を補う。 || a + (b - a) * t
+ゲーム開発(JS) || ベクトル演算 || 位置と方向の計算。 || {x, y}
+ゲーム開発(JS) || 正規化 / 内積 / 外積 || ベクトルの基本演算。 || dot(a, b)
+ゲーム開発(JS) || 角度から方向 || 三角関数で変換する。 || Math.cos(a), Math.sin(a)
+ゲーム開発(JS) || 乱数のシード固定 || 再現できる乱数。 || mulberry32
+ゲーム開発(JS) || A* 経路探索 || 最短経路を求める。 || A*
+ゲーム開発(JS) || 状態機械 (ゲーム) || 場面や敵の状態管理。 || state machine
+ゲーム開発(JS) || セーブデータ || JSON で保存する。 || localStorage.setItem('save', JSON.stringify(s))
+ゲーム開発(JS) || 入力の管理 || キー状態を保持する。 || keys[e.code] = true
+ゲーム開発(JS) || タッチ操作の仮想パッド || 画面上の操作部。 || touchstart
+ゲーム開発(JS) || 音の管理 || BGM と効果音。 || new Audio
+ゲーム開発(JS) || フレームレート調整 || 描画間隔を整える。 || requestAnimationFrame
+ゲーム開発(JS) || オフスクリーン描画 || 先に別の canvas に描く。 || document.createElement('canvas')
+ゲーム開発(JS) || ピクセルアートの拡大 || ぼかさず拡大する。 || imageSmoothingEnabled = false
+ゲーム開発(JS) || ECS || エンティティ・コンポーネント・システム。 || bitecs
+ゲーム開発(JS) || ゲームエンジン (Phaser) の Scene || 場面の管理。 || class A extends Phaser.Scene
+アクセシビリティ(JS) || フォーカスの移動 || focus() で明示する。 || el.focus()
+アクセシビリティ(JS) || aria 属性の更新 || 状態を属性に反映する。 || el.setAttribute('aria-expanded', 'true')
+アクセシビリティ(JS) || キーボード操作の実装 || Enter・Space・矢印。 || e.key === 'ArrowDown'
+アクセシビリティ(JS) || ライブリージョンの更新 || テキストを入れ替えて通知。 || liveRegion.textContent = msg
+アクセシビリティ(JS) || inert の切り替え || 背景の操作を止める。 || el.inert = true
+アクセシビリティ(JS) || prefers-reduced-motion の判定 || 動きを減らす。 || matchMedia('(prefers-reduced-motion: reduce)')
+アクセシビリティ(JS) || ARIA authoring practices || 部品ごとの作法。 || APG
+アクセシビリティ(JS) || フォーカストラップの実装 || Tab を内側で循環させる。 || keydown Tab
+アクセシビリティ(JS) || スクリーンリーダー向け通知 || role="status" へ出力。 || aria-live
+アクセシビリティ(JS) || タッチターゲット || 十分な大きさを確保する。 || 44px
+アクセシビリティ(JS) || 色のコントラスト検証 || WCAG の比を計算する。 || contrast ratio
+アクセシビリティ(JS) || 読み上げ順 || DOM の順序で決まる。 || tabindex
+入力・フォーム(JS) || React Hook Form の register || 入力の登録。 || register('name')
+入力・フォーム(JS) || Formik / Final Form || フォーム管理。 || useFormik()
+入力・フォーム(JS) || Zod スキーマ検証 || 型つきの検証。 || z.object({name: z.string()})
+入力・フォーム(JS) || Yup / Joi / Valibot || 検証ライブラリ。 || yup.string().required()
+入力・フォーム(JS) || 入力マスク || 書式に合わせて整形する。 || imask
+入力・フォーム(JS) || オートコンプリート (JS) || 候補を表示する。 || datalist
+入力・フォーム(JS) || 日本語入力 (IME) の注意 || compositionend を確認。 || isComposing
+入力・フォーム(JS) || 住所の自動入力 || 郵便番号から検索する。 || zipcloud
+入力・フォーム(JS) || 二重送信の防止 || 送信中は無効にする。 || button.disabled = true
+入力・フォーム(JS) || 送信前の確認 || 内容を確認させる。 || confirm
+入力・フォーム(JS) || 入力内容の自動保存 || 下書きを保存する。 || localStorage
+入力・フォーム(JS) || ファイル選択の検証 || 種類・大きさを確認。 || file.size
+入力・フォーム(JS) || ドラッグでファイル追加 || drop を処理する。 || dataTransfer.files
+入力・フォーム(JS) || 画像のリサイズアップロード || canvas で縮小して送る。 || canvas.toBlob
+入力・フォーム(JS) || 署名パッド || canvas に手書きする。 || signature_pad
+入力・フォーム(JS) || リッチテキストの入力 || contenteditable を使う。 || contenteditable
+入力・フォーム(JS) || テキストエリアの自動拡張 || 高さを内容に合わせる。 || el.style.height = el.scrollHeight + 'px'
+入力・フォーム(JS) || 文字数カウント || 入力ごとに数える。 || e.target.value.length
+入力・フォーム(JS) || パスワード表示切替 || type を切り替える。 || input.type = 'text'
+入力・フォーム(JS) || Enter での次項目移動 || フォーカスを動かす。 || next.focus()
+文字列とUnicode || サロゲートペアの扱い || for...of で 1 文字ずつ。 || [...'😀']
+文字列とUnicode || 書記素クラスタ || 見た目 1 文字の単位。 || Intl.Segmenter
+文字列とUnicode || 結合文字 || 濁点などを別の文字で表す。 || 'が'.normalize('NFD')
+文字列とUnicode || NFC / NFD / NFKC / NFKD || 正規化の形式。 || normalize('NFKC')
+文字列とUnicode || 全角英数を半角へ || NFKC で統一する。 || s.normalize('NFKC')
+文字列とUnicode || 異体字 || 同じ字の別の字形。 || 﨑 と 崎
+文字列とUnicode || 絵文字の ZWJ 連結 || 複数の絵文字を 1 つに。 || '👨‍👩‍👧'
+文字列とUnicode || 文字コード (UTF-8 / UTF-16) || 符号化方式。 || TextEncoder
+文字列とUnicode || BOM || 先頭の印。 || ﻿
+文字列とUnicode || 改行コードの違い || CRLF と LF。 || s.split(/\r?\n/)
+文字列とUnicode || ひらがな↔カタカナ変換 || 文字コードを動かす。 || String.fromCharCode(c.charCodeAt(0) + 0x60)
+文字列とUnicode || 半角カナ→全角 || 対応表で変換する。 || normalize('NFKC')
+文字列とUnicode || 並べ替え (五十音) || Collator で比較する。 || new Intl.Collator('ja')
+文字列とUnicode || 文字種の判定 || Unicode プロパティで調べる。 || /\p{Script=Han}/u
+文字列とUnicode || 文字幅 (全角・半角) || 表示幅を数える。 || east-asian-width
+文字列とUnicode || URL の日本語 || エンコードされる。 || encodeURI
+文字列とUnicode || Punycode || 国際化ドメインの表記。 || xn--
+文字列とUnicode || ファイル名の禁止文字 || OS ごとに異なる。 || \ / : * ? " < > |
+文字列とUnicode || 文字列の比較 (大小無視) || toLowerCase や localeCompare。 || a.toLowerCase() === b.toLowerCase()
+文字列とUnicode || Base64URL || URL に使える Base64。 || replace(/\+/g, '-')
+文字列とUnicode || UUID の形式 || 8-4-4-4-12 の 16 進。 || crypto.randomUUID()
+文字列とUnicode || 乱数文字列の生成 || 安全な乱数から作る。 || crypto.getRandomValues
+文字列とUnicode || ハッシュ化 (SHA-256) || Web Crypto で計算する。 || crypto.subtle.digest('SHA-256', data)
+文字列とUnicode || HMAC の計算 || 鍵つきハッシュ。 || crypto.subtle.sign('HMAC', key, data)
+文字列とUnicode || AES-GCM 暗号化 || 共通鍵暗号。 || crypto.subtle.encrypt
+文字列とUnicode || RSA / ECDSA 署名 || 公開鍵暗号の署名。 || crypto.subtle.sign
+文字列とUnicode || PBKDF2 / HKDF || 鍵の導出。 || crypto.subtle.deriveKey
+文字列とUnicode || JWK 形式 || 鍵を JSON で表す。 || crypto.subtle.exportKey('jwk', k)
