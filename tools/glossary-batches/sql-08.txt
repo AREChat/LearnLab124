@@ -1,0 +1,75 @@
+# カテゴリ || 用語 || 説明 || コード例
+システム情報 || INFORMATION_SCHEMA || テーブルや列の情報を調べる標準のビュー。 || SELECT * FROM information_schema.tables;
+システム情報 || information_schema.columns || 列の名前・型の一覧。 || SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 't';
+システム情報 || pg_catalog || PostgreSQL のシステム情報の置き場。 || SELECT * FROM pg_catalog.pg_tables;
+システム情報 || pg_stat_activity || 実行中の接続と SQL を見る（PostgreSQL）。 || SELECT * FROM pg_stat_activity;
+システム情報 || pg_indexes || インデックスの一覧。 || SELECT * FROM pg_indexes WHERE tablename = 't';
+システム情報 || sqlite_master || SQLite のテーブル情報。 || SELECT * FROM sqlite_master;
+システム情報 || sys.tables (SQL Server) || SQL Server のテーブル一覧。 || SELECT * FROM sys.tables;
+システム情報 || user_tables (Oracle) || Oracle の自分のテーブル一覧。 || SELECT table_name FROM user_tables;
+システム情報 || version() || DB のバージョンを調べる。 || SELECT version();
+システム情報 || current_database / current_schema || 現在のデータベース・スキーマ。 || SELECT current_database();
+システム情報 || pg_get_viewdef || ビューの定義 SQL を取得する。 || SELECT pg_get_viewdef('v');
+システム情報 || テーブルの行数の目安 || 統計情報から大まかな件数を知る。 || SELECT reltuples FROM pg_class WHERE relname = 't';
+システム情報 || ロールの一覧 || ユーザー・ロールを確認する。 || SELECT * FROM pg_roles;
+システム情報 || 設定値の確認 || 現在の設定を調べる。 || SHOW work_mem;
+システム情報 || 設定値の変更 (SET) || セッションの設定を変える。 || SET statement_timeout = '5s';
+ビュー || ビューの利点 || 複雑な検索に名前を付けて再利用できる。 || CREATE VIEW v AS SELECT ...
+ビュー || 更新可能ビュー || 条件を満たすビューは INSERT や UPDATE もできる。 || UPDATE v SET name = 'a'
+ビュー || WITH CHECK OPTION || ビューの条件に合わない更新を禁止する。 || CREATE VIEW v AS SELECT * FROM t WHERE a > 0 WITH CHECK OPTION;
+ビュー || security_invoker || ビューを呼ぶ人の権限で実行する（PostgreSQL 15 以降）。 || CREATE VIEW v WITH (security_invoker = true) AS SELECT ...
+ビュー || ビューの依存関係 || 元の表を変えるとビューに影響する。 || DROP ... CASCADE に注意
+ビュー || ビューとパフォーマンス || ビューは保存された SQL であり、それだけで速くはならない。 || マテリアライズドビューなら保存される
+ビュー || ALTER VIEW || ビューの名前や設定を変える。 || ALTER VIEW v RENAME TO v2;
+ビュー || 再帰ビュー || 再帰 CTE をビューにする。 || CREATE RECURSIVE VIEW
+ストアド・関数 || 戻り値のある関数 || 値を返すユーザー定義関数。 || CREATE FUNCTION f() RETURNS INT
+ストアド・関数 || 集計関数の自作 || 独自の集計関数を作る。 || CREATE AGGREGATE
+ストアド・関数 || IMMUTABLE / STABLE / VOLATILE || 関数の性質の宣言（PostgreSQL）。最適化に使われる。 || CREATE FUNCTION f() ... IMMUTABLE
+ストアド・関数 || SECURITY DEFINER || 作った人の権限で関数を実行する。 || CREATE FUNCTION f() ... SECURITY DEFINER
+ストアド・関数 || SET search_path (関数) || 関数内の参照先を固定して安全にする。 || SET search_path = ''
+ストアド・関数 || LANGUAGE plpgsql || PostgreSQL の手続き言語。 || LANGUAGE plpgsql
+ストアド・関数 || トリガー関数 || トリガーから呼ばれる関数。NEW や OLD を使う。 || RETURN NEW;
+ストアド・関数 || NEW と OLD || 変更後・変更前の行。 || NEW.updated_at := now();
+ストアド・関数 || 更新日時の自動設定 || BEFORE UPDATE で updated_at を入れる。 || BEFORE UPDATE トリガー
+ストアド・関数 || 監査トリガー || 変更履歴を別の表に記録する。 || AFTER UPDATE トリガー
+ストアド・関数 || 文レベルトリガー || 1回の文につき1回だけ動く。 || FOR EACH STATEMENT
+ストアド・関数 || INSTEAD OF トリガー || ビューへの更新を別の処理に置き換える。 || INSTEAD OF INSERT
+ストアド・関数 || イベントトリガー || CREATE や DROP などの操作に反応する。 || CREATE EVENT TRIGGER
+ストアド・関数 || PERFORM || 結果を使わずに関数を呼ぶ。 || PERFORM f();
+ストアド・関数 || FOUND 変数 || 直前の文で行が見つかったか。 || IF FOUND THEN
+ストアド・関数 || GET DIAGNOSTICS || 処理した行数などを取得する。 || GET DIAGNOSTICS n = ROW_COUNT;
+ストアド・関数 || FOR ... IN (ループ) || 検索結果を1行ずつ処理する。 || FOR r IN SELECT * FROM t LOOP
+ストアド・関数 || RETURN QUERY || 検索結果をそのまま返す。 || RETURN QUERY SELECT * FROM t;
+ストアド・関数 || 関数のオーバーロード || 引数が違う同名の関数を作れる。 || f(int) / f(text)
+ストアド・関数 || 依存する関数の変更 || 戻り値の型を変えるときは DROP して作り直す。 || DROP FUNCTION f();
+ストアド・関数 || pg_cron || 定期的に SQL を実行する拡張機能。 || SELECT cron.schedule('job', '0 3 * * *', 'select 1');
+ストアド・関数 || pgcrypto || 暗号化・ハッシュの拡張機能。 || SELECT crypt('pw', gen_salt('bf'));
+ストアド・関数 || uuid-ossp || UUID を作る拡張機能。 || SELECT uuid_generate_v4();
+ストアド・関数 || pg_stat_statements || SQL ごとの実行時間を集計する拡張機能。 || SELECT * FROM pg_stat_statements;
+ストアド・関数 || PostGIS || 地理情報を扱う拡張機能。 || SELECT ST_Distance(a, b);
+ストアド・関数 || pgvector || ベクトルを保存・検索する拡張機能。 || embedding VECTOR(3)
+ストアド・関数 || postgres_fdw || 別のデータベースの表を参照する。 || CREATE FOREIGN TABLE
+ストアド・関数 || FOREIGN DATA WRAPPER || 外部のデータを表のように扱う仕組み。 || CREATE SERVER
+Supabase関連 || RLS (行レベルセキュリティ) || 行ごとに誰が読み書きできるかを決める。 || ALTER TABLE t ENABLE ROW LEVEL SECURITY;
+Supabase関連 || auth.uid() || ログイン中のユーザー ID を返す。 || USING (user_id = auth.uid())
+Supabase関連 || anon / authenticated ロール || 未ログイン・ログイン済みの権限の区分。 || GRANT SELECT ON t TO authenticated;
+Supabase関連 || service_role || RLS を無視できる管理用のキー。公開してはいけない。 || サーバー側だけで使う
+Supabase関連 || Edge Function || サーバー側で動かす小さなプログラム。 || supabase functions deploy
+Supabase関連 || Realtime || データの変更をリアルタイムに受け取る機能。 || supabase.channel('room')
+Supabase関連 || Storage || ファイルを保存する機能。 || supabase.storage.from('img')
+Supabase関連 || PostgREST || テーブルを自動で HTTP の API にする仕組み。 || /rest/v1/t
+Supabase関連 || JWT || ログイン情報を含む署名付きのトークン。 || auth.jwt()
+Supabase関連 || マイグレーション (Supabase) || 構造の変更をファイルで管理する。 || supabase db push
+Supabase関連 || SECURITY DEFINER 関数の公開 || exposed な schema に置く関数は権限に注意。 || private スキーマに置く
+Supabase関連 || ポリシーのテスト || 別のロールで実行して確認する。 || SET ROLE authenticated;
+Supabase関連 || Advisor (セキュリティ警告) || 設定の不備を教えてくれる診断。 || RLS 無効などを検出
+SQL標準の新機能 || MERGE (標準SQL) || 追加・更新・削除を1文で行う。 || MERGE INTO t USING s ON ...
+SQL標準の新機能 || FETCH FIRST WITH TIES || 同順位の行も含めて取得する。 || FETCH FIRST 3 ROWS WITH TIES
+SQL標準の新機能 || GENERATED ... AS IDENTITY || 標準的な自動採番。 || id INT GENERATED ALWAYS AS IDENTITY
+SQL標準の新機能 || JSON_TABLE (標準) || JSON を表に変換する。 || JSON_TABLE(...)
+SQL標準の新機能 || LISTAGG (標準) || 文字列をまとめる標準の関数。 || LISTAGG(name, ',')
+SQL標準の新機能 || IS DISTINCT FROM || NULL を含めて「異なる」を判定する。 || a IS DISTINCT FROM b
+SQL標準の新機能 || BOOLEAN の標準化 || TRUE / FALSE / UNKNOWN の3値論理。 || WHERE flag IS TRUE
+SQL標準の新機能 || 三値論理 || 真・偽・不明の3つの値で判断する。 || NULL = NULL は UNKNOWN
+SQL標準の新機能 || 時間の期間 (PERIOD) || 期間を表す型や構文。 || PERIOD FOR validity (s, e)
+SQL標準の新機能 || システムバージョニング || 過去の状態を自動で保存する表。 || WITH SYSTEM VERSIONING

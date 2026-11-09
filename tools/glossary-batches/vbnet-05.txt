@@ -1,0 +1,97 @@
+# カテゴリ || 用語 || 説明 || コード例
+プロシージャ || Sub の呼び出し || 値を返さない手続きを呼び出す。 || ShowMsg("hi")
+プロシージャ || Function の戻り値 || Return で値を返す。 || Function Add(a As Integer, b As Integer) As Integer : Return a + b : End Function
+プロシージャ || 名前付き引数 || 引数名を指定して呼び出す。 || Calc(price:=100, tax:=0.1)
+プロシージャ || Optional の既定値 || 省略したときの値を決める。 || Sub M(Optional n As Integer = 1)
+プロシージャ || ParamArray の使い方 || 引数を好きな数だけ渡せる。 || Function Sum(ParamArray n() As Integer)
+プロシージャ || 再帰呼び出し || 自分自身を呼ぶ関数。 || Function Fact(n As Integer) As Integer
+プロシージャ || 複数の値を返す (ByRef・タプル) || 参照渡しやタプルで複数返す。 || Function F() As (Integer, String)
+プロシージャ || ローカル関数 (ラムダ変数) || 関数の中で小さな関数を定義する。 || Dim f = Function(x As Integer) x + 1
+プロシージャ || 式形式のラムダ || 1行のラムダ。 || Function(x) x * x
+プロシージャ || 文形式のラムダ || 複数行のラムダ。 || Sub() : DoA() : DoB() : End Sub
+プロシージャ || 関数の戻り値型 Task || 非同期関数の戻り値。 || Async Function F() As Task
+プロシージャ || Extension 属性 || 既存の型にメソッドを追加する。 || <Extension> Function Twice(s As String)
+プロシージャ || Iterator 関数 || Yield で1つずつ値を返す。 || Yield i
+プロシージャ || 引数の検証 || 不正な引数は先頭でエラーにする。 || If x Is Nothing Then Throw New ArgumentNullException(NameOf(x))
+プロシージャ || プロシージャの長さと分割 || 1つの処理は短く、役割を1つにする。 || 長い処理を小さな関数へ
+プロシージャ || 副作用のない関数 || 同じ入力で必ず同じ結果を返し、外の状態を変えない。 || 純粋関数
+プロシージャ || デフォルト引数とオーバーロード || どちらでも省略可能な引数を表せる。 || Sub M() / Sub M(n As Integer)
+プロシージャ || Main の引数 || コマンドライン引数を受け取る。 || Sub Main(args As String())
+プロシージャ || Shared Function || インスタンスなしで呼べる関数。 || Utils.Add(1, 2)
+プロシージャ || 関数ポインタ (デリゲート) || 関数を引数として渡す。 || Sub Run(act As Action)
+クラス応用 || SOLID 原則 || 保守しやすいクラス設計の5つの原則。 || 単一責任など
+クラス応用 || 単一責任の原則 || 1つのクラスは1つの役割だけを持つ。 || 画面と保存を分ける
+クラス応用 || 依存性注入 (DI) || 必要な部品を外から渡す設計。 || New Service(New Repo())
+クラス応用 || インターフェースで疎結合 || 具体的なクラスでなく契約に依存する。 || Dim r As IRepo = New SqlRepo()
+クラス応用 || ポリモーフィズム || 同じ呼び出しで型ごとに違う動きをする。 || shape.Draw()
+クラス応用 || カプセル化 || 内部の状態を隠し、窓口だけ公開する。 || Private フィールド + Property
+クラス応用 || 継承と委譲 || 継承より、部品として持つ（委譲）が柔軟なことが多い。 || Private _engine As Engine
+クラス応用 || シングルトン || 全体で1つだけのインスタンス。 || Shared ReadOnly Instance As New Config()
+クラス応用 || ファクトリメソッド || 作り方を隠してオブジェクトを返す。 || Shared Function Create() As Shape
+クラス応用 || ビルダー || 手順を分けて複雑なオブジェクトを作る。 || b.SetName("A").Build()
+クラス応用 || イベント駆動 || 出来事を受けて処理を動かす。 || AddHandler obj.Changed, AddressOf OnChanged
+クラス応用 || EventArgs の独自定義 || イベントで渡す情報を決める。 || Class MyArgs : Inherits EventArgs
+クラス応用 || 不変オブジェクト || 作成後に変更できないオブジェクト。 || ReadOnly プロパティのみ
+クラス応用 || ValueObject || 値で等しさを判断するオブジェクト。 || Equals を実装
+クラス応用 || DTO || データを運ぶだけのクラス。 || Class UserDto
+クラス応用 || Repository パターン || データの保存・取得を窓口にまとめる。 || IUserRepository
+クラス応用 || MVVM || 画面・データ・橋渡しに分ける設計。 || View / ViewModel / Model
+クラス応用 || INotifyPropertyChanged || 値の変更を画面に伝える。 || RaiseEvent PropertyChanged
+クラス応用 || ICommand || ボタン操作をクラスで表す。 || Implements ICommand
+クラス応用 || 抽象クラスとインターフェースの違い || 抽象クラスは実装も持てる。複数継承はインターフェース。 || MustInherit / Interface
+クラス応用 || 継承の深さ || 深い継承は理解しにくい。浅く保つ。 || 2〜3階層まで
+ジェネリック || Generic クラス || 型を後で決められるクラス。 || Class Box(Of T)
+ジェネリック || Generic メソッド || 型を引数のように受け取るメソッド。 || Function Max(Of T)(a As T, b As T) As T
+ジェネリック || 型制約 (As) || 使える型を制限する。 || Class Box(Of T As IComparable)
+ジェネリック || New 制約 || 引数なしで作れる型に限定する。 || Of T As New
+ジェネリック || Class / Structure 制約 || 参照型・値型に限定する。 || Of T As Class
+ジェネリック || ジェネリックインターフェース || 型を持つインターフェース。 || Interface IRepo(Of T)
+ジェネリック || default (Nothing) の意味 || 型の既定値（0や Nothing）。 || Dim d As T = Nothing
+ジェネリック || List(Of List(Of T)) || 入れ子のジェネリック。 || New List(Of List(Of Integer))
+ジェネリック || Dictionary(Of K, List(Of V)) || キーごとにリストを持つ辞書。 || New Dictionary(Of String, List(Of Integer))
+ジェネリック || Nullable(Of T) || 値型に Nothing を持たせる。 || Dim n As Integer? = Nothing
+ジェネリック || HasValue / Value || Nullable に値があるか・取り出す。 || If n.HasValue Then
+ジェネリック || GetValueOrDefault || 値がなければ既定値を返す。 || n.GetValueOrDefault(0)
+ジェネリック || IEnumerable(Of T) || 列挙できるものの共通のインターフェース。 || Function F() As IEnumerable(Of Integer)
+ジェネリック || ICollection / IList || 追加・削除や添字アクセスができる契約。 || IList(Of String)
+ジェネリック || IReadOnlyList || 読み取り専用の一覧として渡す。 || IReadOnlyList(Of String)
+文法の補足 || Option Infer On || 型推論を有効にする。 || Option Infer On
+文法の補足 || Const と ReadOnly の違い || Const はコンパイル時に決まる。ReadOnly は実行時。 || Const PI = 3.14
+文法の補足 || Shared ReadOnly || クラスで共有する読み取り専用の値。 || Shared ReadOnly Empty As New Foo
+文法の補足 || 名前空間のエイリアス || Imports で別名を付ける。 || Imports Sys = System.Text
+文法の補足 || Global キーワード || 最上位の名前空間を指定する。 || Global.System.String
+文法の補足 || Me.Controls || フォーム上の部品の一覧。 || For Each c In Me.Controls
+文法の補足 || Handles と WithEvents || イベントを宣言的に結び付ける。 || WithEvents btn As Button
+文法の補足 || Property の Get/Set || 値の取得と設定の処理を書く。 || Get : Return _v : End Get
+文法の補足 || 文字列の埋め込み式 || $"{name}さん" で値を埋め込む。 || $"{n:N0}円"
+文法の補足 || Nothing との比較 || Is Nothing で調べる。 || If obj Is Nothing Then
+文法の補足 || With 初期化 || With 句でプロパティを設定する。 || New P With {.A = 1}
+文法の補足 || 行内の複数文 (:) || コロンで1行に複数の文を書く。 || a = 1 : b = 2
+文法の補足 || 戻り値の無視 || 関数の戻り値を使わない呼び出し。 || Call F()
+文法の補足 || ByRef 引数と配列 || 配列はそのまま渡しても要素を変更できる。 || Sub Fill(a() As Integer)
+文法の補足 || 型の別名 (Imports) || 長い型名を短くする。 || Imports Dict = System.Collections.Generic.Dictionary(Of String, String)
+文法の補足 || 属性 (<Serializable>) || クラスに付加情報を与える。 || <Serializable> Class A
+文法の補足 || 定数式 || コンパイル時に計算される式。 || Const N = 2 * 60
+文法の補足 || ビット演算 (And/Or) || 数のビットごとの演算。 || flags And Mask
+文法の補足 || Is と = の違い || Is は参照の同一性、= は値の比較。 || a Is b
+文法の補足 || String と string の違い || VB.NET は大文字小文字を区別しない。 || Dim s As string
+応用技術 || WPF || XAML で画面を作る、Windows の UI 技術。 || <Window x:Class="MainWindow">
+応用技術 || XAML || 画面を XML で記述する言語。 || <Button Content="OK"/>
+応用技術 || ASP.NET Core || Web アプリを作る基盤。 || WebApplication.CreateBuilder
+応用技術 || Web API || HTTP で JSON などを返す仕組み。 || <HttpGet> Function Get()
+応用技術 || Blazor || .NET で Web UI を作る技術。 || @page "/"
+応用技術 || Windows サービス || 画面なしで常駐するプログラム。 || Inherits ServiceBase
+応用技術 || コンソールアプリ || 文字だけで動くプログラム。 || Sub Main()
+応用技術 || クラスライブラリ || 他から使う部品の集まり。 || .dll
+応用技術 || 発行 (Publish) || 配布用にまとめて出力する。 || dotnet publish -c Release
+応用技術 || 自己完結型 / フレームワーク依存 || .NET を同梱するかしないか。 || --self-contained
+応用技術 || ClickOnce || かんたんに配布・更新できる仕組み。 || 発行ウィザード
+応用技術 || P/Invoke || Windows API など外部の関数を呼ぶ。 || <DllImport("user32.dll")>
+応用技術 || COM 相互運用 || Office など COM を操作する。 || CreateObject("Excel.Application")
+応用技術 || Excel の操作 (Interop) || .NET から Excel を操作する。 || xl.Workbooks.Open(path)
+応用技術 || ClosedXML / EPPlus || Excel なしで xlsx を読み書きする。 || New XLWorkbook()
+応用技術 || PDF の出力 || ライブラリで PDF を作る。 || PdfSharp
+応用技術 || 印刷 (PrintDocument) || プリンタに出力する。 || New PrintDocument()
+応用技術 || 設定ファイル (appsettings.json) || 設定を JSON で管理する。 || ConfigurationBuilder
+応用技術 || 多言語対応 (リソース) || 文言をリソースファイルで切り替える。 || My.Resources.Hello
+応用技術 || インストーラ作成 || 配布用のセットアップを作る。 || MSIX / WiX
