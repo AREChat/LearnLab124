@@ -1,0 +1,126 @@
+# カテゴリ || 用語 || 説明 || コード例
+MySQL || SHOW DATABASES || データベースの一覧を表示する（MySQL）。 || SHOW DATABASES;
+MySQL || SHOW TABLES || テーブルの一覧を表示する。 || SHOW TABLES;
+MySQL || DESCRIBE / DESC || テーブルの列の構成を表示する。 || DESCRIBE users;
+MySQL || SHOW CREATE TABLE || テーブルを作った SQL を表示する。 || SHOW CREATE TABLE users;
+MySQL || USE || 使うデータベースを切り替える。 || USE shop;
+MySQL || SHOW INDEX || テーブルのインデックスを表示する。 || SHOW INDEX FROM users;
+MySQL || SHOW PROCESSLIST || 実行中の処理の一覧を表示する。 || SHOW PROCESSLIST;
+MySQL || SHOW VARIABLES || 設定値を表示する。 || SHOW VARIABLES LIKE 'max_connections';
+MySQL || ENGINE=InnoDB || トランザクションと外部キーに対応した標準のストレージエンジン。 || CREATE TABLE t (id INT) ENGINE=InnoDB;
+MySQL || ENGINE=MyISAM || 古いストレージエンジン。トランザクション非対応。 || CREATE TABLE t (id INT) ENGINE=MyISAM;
+MySQL || LAST_INSERT_ID || 直前に自動採番された ID を返す。 || SELECT LAST_INSERT_ID();
+MySQL || UNSIGNED || 負の数を持たない整数型にする。 || age TINYINT UNSIGNED
+MySQL || TINYINT / MEDIUMINT || 小さめの整数型。 || flag TINYINT(1)
+MySQL || DATETIME || 日付と時刻を持つ型（MySQL）。 || created DATETIME DEFAULT CURRENT_TIMESTAMP
+MySQL || ON UPDATE CURRENT_TIMESTAMP || 更新のたびに日時を自動で入れる。 || updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+MySQL || SET (型) || 決めた候補から複数選べる型。 || hobby SET('music','book','game')
+MySQL || FIND_IN_SET || カンマ区切りの文字列の中にあるか調べる。 || SELECT FIND_IN_SET('b', 'a,b,c');
+MySQL || IFNULL と COALESCE || NULL を別の値に置き換える。複数ならCOALESCE。 || SELECT IFNULL(a, 0) FROM t;
+MySQL || SQL_CALC_FOUND_ROWS || LIMIT を無視した全件数を後で取れる指定（古い方法）。 || SELECT SQL_CALC_FOUND_ROWS * FROM t LIMIT 10;
+MySQL || mysqldump || データベースをバックアップするコマンド。 || mysqldump -u root shop > shop.sql
+MySQL || CHARACTER SET utf8mb4 || 絵文字も扱える文字コード設定。 || CREATE DATABASE d CHARACTER SET utf8mb4;
+MySQL || GROUP_CONCAT の区切り || 区切り文字や順序を指定して文字列をまとめる。 || SELECT GROUP_CONCAT(name ORDER BY id SEPARATOR '/') FROM t;
+MySQL || INSERT IGNORE || エラーになる行を飛ばして追加する。 || INSERT IGNORE INTO t (id) VALUES (1);
+MySQL || LIMIT 開始, 件数 || 開始位置と件数を指定して取得する。 || SELECT * FROM t LIMIT 20, 10;
+MySQL || バッククォート (`) || 予約語などの名前を囲む記号。 || SELECT `order` FROM t;
+SQL Server || TOP (件数) || 先頭から件数を指定して取得する。 || SELECT TOP 10 * FROM t;
+SQL Server || TOP PERCENT || 先頭から割合で取得する。 || SELECT TOP 10 PERCENT * FROM t;
+SQL Server || IDENTITY(1,1) || 自動採番の開始値と増分を指定する。 || id INT IDENTITY(1,1) PRIMARY KEY
+SQL Server || SCOPE_IDENTITY || 直前に採番された ID を返す。 || SELECT SCOPE_IDENTITY();
+SQL Server || NVARCHAR || 日本語など Unicode を扱える文字列型。 || name NVARCHAR(50)
+SQL Server || N'文字列' || Unicode 文字列リテラルを表す接頭辞。 || SELECT N'日本語';
+SQL Server || DATETIME2 || 精度の高い日時型。 || created DATETIME2 DEFAULT SYSDATETIME()
+SQL Server || SYSDATETIME || 現在の日時を高精度で返す。 || SELECT SYSDATETIME();
+SQL Server || CONVERT || 型変換とスタイル指定を行う。 || SELECT CONVERT(VARCHAR(10), GETDATE(), 120);
+SQL Server || 一時テーブル (#t) || 先頭に # を付けた接続中だけの一時テーブル。 || SELECT * INTO #tmp FROM t;
+SQL Server || SELECT INTO || 検索結果から新しいテーブルを作る。 || SELECT * INTO t2 FROM t1;
+SQL Server || OUTPUT 句 || 更新した行の内容を結果として返す。 || DELETE FROM t OUTPUT DELETED.* WHERE id = 1;
+SQL Server || CROSS APPLY || 行ごとに表を返す関数と結合する。 || SELECT * FROM t CROSS APPLY f(t.id);
+SQL Server || OUTER APPLY || CROSS APPLY の外部結合版。 || SELECT * FROM t OUTER APPLY f(t.id);
+SQL Server || TRY...CATCH || エラーを受け止めて処理する。 || BEGIN TRY SELECT 1/0; END TRY BEGIN CATCH SELECT ERROR_MESSAGE(); END CATCH
+SQL Server || EXEC / sp_executesql || ストアドや動的SQLを実行する。 || EXEC sp_executesql N'SELECT 1';
+SQL Server || @@ROWCOUNT || 直前の文で処理した行数を返す。 || SELECT @@ROWCOUNT;
+SQL Server || テーブル変数 || 手続き内で使える表形式の変数。 || DECLARE @t TABLE (id INT);
+SQL Server || WITH (NOLOCK) || ロックせずに読むヒント。ダーティリードに注意。 || SELECT * FROM t WITH (NOLOCK);
+SQL Server || SET NOCOUNT ON || 処理件数のメッセージを出さない設定。 || SET NOCOUNT ON;
+SQL Server || STUFF || 文字列の一部を差し替える。 || SELECT STUFF('abcdef', 2, 3, 'X');
+SQL Server || FOR XML PATH || 検索結果をXMLにする。文字列連結にも使われた。 || SELECT name + ',' FROM t FOR XML PATH('');
+Oracle || ROWNUM || 取得した行に付く連番。件数の絞り込みに使う。 || SELECT * FROM t WHERE ROWNUM <= 10;
+Oracle || ROWID || 行の物理的な住所を示す疑似列。 || SELECT ROWID, name FROM t;
+Oracle || VARCHAR2 || Oracle の可変長文字列型。 || name VARCHAR2(50)
+Oracle || NUMBER || 数値型。精度と小数桁を指定できる。 || price NUMBER(10, 2)
+Oracle || SEQUENCE.NEXTVAL || シーケンスから次の値を取る。 || INSERT INTO t (id) VALUES (seq_t.NEXTVAL);
+Oracle || SEQUENCE.CURRVAL || シーケンスの現在値を取る。 || SELECT seq_t.CURRVAL FROM DUAL;
+Oracle || TO_NUMBER || 文字列を数値に変換する。 || SELECT TO_NUMBER('123') FROM DUAL;
+Oracle || NVL2 || NULL かどうかで返す値を切り替える。 || SELECT NVL2(a, '有', '無') FROM t;
+Oracle || CONNECT BY (階層問い合わせ) || 親子関係をたどって木構造を取り出す。 || SELECT name FROM emp START WITH mgr IS NULL CONNECT BY PRIOR id = mgr;
+Oracle || LEVEL || 階層問い合わせの深さを返す。 || SELECT LEVEL, name FROM emp CONNECT BY PRIOR id = mgr;
+Oracle || PL/SQL || Oracle の手続き型言語。 || BEGIN NULL; END;
+Oracle || (+) 外部結合 || 古い書き方の外部結合。 || WHERE a.id = b.id(+)
+Oracle || FETCH FIRST n ROWS ONLY || 先頭から n 行だけ取得する。 || SELECT * FROM t FETCH FIRST 5 ROWS ONLY;
+Oracle || テーブルスペース || データを保存する領域の単位。 || CREATE TABLESPACE ts DATAFILE 'ts.dbf' SIZE 100M;
+Oracle || SYNONYM (同義語) || オブジェクトに別名を付ける。 || CREATE SYNONYM emp FOR hr.employees;
+Oracle || DBMS_OUTPUT.PUT_LINE || PL/SQL から文字を表示する。 || DBMS_OUTPUT.PUT_LINE('hello');
+Oracle || FLASHBACK QUERY || 過去の時点のデータを検索する。 || SELECT * FROM t AS OF TIMESTAMP SYSTIMESTAMP - INTERVAL '1' HOUR;
+PostgreSQL || \d (psql) || テーブルの構成を表示する psql のコマンド。 || \d users
+PostgreSQL || \dt (psql) || テーブルの一覧を表示する psql のコマンド。 || \dt
+PostgreSQL || \l (psql) || データベースの一覧を表示する psql のコマンド。 || \l
+PostgreSQL || \c (psql) || 別のデータベースにつなぎ替える。 || \c shop
+PostgreSQL || SERIAL と IDENTITY || 自動採番。新しい書き方は GENERATED AS IDENTITY。 || id INT GENERATED ALWAYS AS IDENTITY
+PostgreSQL || TEXT 型 || 長さ制限のない文字列型。 || body TEXT
+PostgreSQL || BYTEA || バイナリデータの型。 || data BYTEA
+PostgreSQL || INET / CIDR || IP アドレスやネットワークを扱う型。 || ip INET
+PostgreSQL || RANGE 型 || 範囲（期間など）を1つの値として持つ型。 || period TSRANGE
+PostgreSQL || EXTENSION || 機能を追加する拡張機能を有効にする。 || CREATE EXTENSION IF NOT EXISTS pgcrypto;
+PostgreSQL || gen_random_uuid || ランダムな UUID を作る。 || SELECT gen_random_uuid();
+PostgreSQL || DISTINCT ON || 指定した列ごとに最初の1行だけ取る。 || SELECT DISTINCT ON (user_id) * FROM logs ORDER BY user_id, created_at DESC;
+PostgreSQL || generate_series || 連続した数や日付の行を作る。 || SELECT * FROM generate_series(1, 5);
+PostgreSQL || WITH ... RETURNING (CTE 更新) || 更新結果を次の処理で使う。 || WITH d AS (DELETE FROM t RETURNING *) INSERT INTO t_log SELECT * FROM d;
+PostgreSQL || LISTEN / NOTIFY || 他の接続へ通知を送り受け取る仕組み。 || NOTIFY ch, 'hello';
+PostgreSQL || ROW LEVEL SECURITY (RLS) || 行ごとにアクセスできる人を制限する仕組み。 || ALTER TABLE t ENABLE ROW LEVEL SECURITY;
+PostgreSQL || CREATE POLICY || 行レベルセキュリティの規則を作る。 || CREATE POLICY p ON t FOR SELECT USING (owner = current_user);
+PostgreSQL || search_path || スキーマ名を省略したとき探す順番の設定。 || SET search_path TO sales, public;
+PostgreSQL || pg_dump || データベースをバックアップするコマンド。 || pg_dump shop > shop.sql
+PostgreSQL || TABLESAMPLE || 表からランダムに一部の行を取る。 || SELECT * FROM t TABLESAMPLE BERNOULLI (10);
+PostgreSQL || FILTER 句 || 集計に条件を付ける。 || SELECT COUNT(*) FILTER (WHERE active) FROM t;
+PostgreSQL || ILIKE と pg_trgm || 大文字小文字を区別しない検索と、部分一致の高速化。 || SELECT * FROM t WHERE name ILIKE '%abc%';
+DB設計 || 正規化 || データの重複をなくし、更新時の矛盾を防ぐ設計の手順。 || 表を分けて外部キーでつなぐ
+DB設計 || 第1正規形 || 1つのセルに1つの値だけを入れる。繰り返し項目をなくす。 || 電話番号1・電話番号2を別の表に分ける
+DB設計 || 第2正規形 || 主キーの一部だけで決まる列を別の表に分ける。 || 商品名を注文明細から商品表へ
+DB設計 || 第3正規形 || 主キー以外の列で決まる列を別の表に分ける。 || 郵便番号から決まる住所を別表へ
+DB設計 || ボイス・コッド正規形 (BCNF) || すべての決定項目が候補キーになるようにした形。 || 第3正規形をより厳しくしたもの
+DB設計 || 非正規化 || 速度のために、あえて重複を持たせる設計。 || 集計値を表に持っておく
+DB設計 || ER 図 || エンティティ（もの）と関連を描いた設計図。 || 顧客 1 ─ N 注文
+DB設計 || エンティティ || データとして管理する「もの」。表になる。 || 顧客、商品、注文
+DB設計 || 1対多 (1:N) の関連 || 1つの親に複数の子がある関係。外部キーで表す。 || 顧客1人に注文が複数
+DB設計 || 多対多 (N:M) の関連 || 中間テーブルを作り、2つの1対多に分けて表す。 || 学生と授業 → 履修
+DB設計 || 中間テーブル (連関表) || 多対多を表す表。両方の主キーを外部キーに持つ。 || enrollment (student_id, course_id)
+DB設計 || スキーマ設計の命名規則 || 表名・列名のルールをそろえて読みやすくする。 || snake_case で統一
+DB設計 || マスタテーブル || 商品・顧客など、あまり変わらない基本情報の表。 || products
+DB設計 || トランザクションテーブル || 注文など、日々増えていく取引の記録の表。 || orders
+DB設計 || 履歴テーブル || 変更前の内容や過去の状態を残す表。 || user_history
+DB設計 || 論理設計と物理設計 || 論理は項目と関係、物理は型・インデックスなどの具体策。 || 論理 → 物理の順に設計
+DB設計 || データ辞書 || 表や列の意味・型・ルールをまとめた資料。 || 列名、型、説明の一覧
+DB設計 || スタースキーマ || 事実表と複数のディメンション表で分析向けに作る構成。 || sales ─ date / product / store
+DB設計 || OLTP と OLAP || 日々の処理向けと、分析向けのデータベース。 || 注文システム / 売上分析
+権限・セキュリティ || CREATE USER || ユーザー（ログイン名）を作る。 || CREATE USER app IDENTIFIED BY 'pass';
+権限・セキュリティ || CREATE ROLE || 権限をまとめたロールを作る。 || CREATE ROLE readonly;
+権限・セキュリティ || GRANT ROLE || ロールをユーザーに与える。 || GRANT readonly TO app;
+権限・セキュリティ || GRANT SELECT ON || 検索だけを許可する。 || GRANT SELECT ON users TO readonly;
+権限・セキュリティ || GRANT ALL PRIVILEGES || すべての権限を与える。与えすぎに注意。 || GRANT ALL PRIVILEGES ON DATABASE shop TO admin;
+権限・セキュリティ || REVOKE (権限の取り消し) || 与えた権限を取り消す。 || REVOKE INSERT ON users FROM app;
+権限・セキュリティ || WITH GRANT OPTION || 受け取った人が他の人にも権限を与えられる。 || GRANT SELECT ON t TO u WITH GRANT OPTION;
+権限・セキュリティ || ALTER USER (パスワード変更) || パスワードなどを変更する。 || ALTER USER app WITH PASSWORD 'new';
+権限・セキュリティ || DROP USER || ユーザーを削除する。 || DROP USER app;
+権限・セキュリティ || 最小権限の原則 || 必要な権限だけを与える考え方。 || 読むだけの人には SELECT だけ
+権限・セキュリティ || SQL インジェクション || 入力に SQL を混ぜて不正に操作する攻撃。 || 文字列連結でSQLを作らない
+権限・セキュリティ || プリペアドステートメント || 値を後から安全に渡す仕組み。SQL インジェクション対策の基本。 || PREPARE s AS SELECT * FROM t WHERE id = $1;
+権限・セキュリティ || EXECUTE (準備した文) || 準備した文を値を渡して実行する。 || EXECUTE s(1);
+権限・セキュリティ || パスワードのハッシュ化 || パスワードそのものでなく、戻せない形に変えて保存する。 || crypt('pass', gen_salt('bf'))
+権限・セキュリティ || 暗号化 (列) || 重要な列を暗号にして保存する。 || pgp_sym_encrypt('secret', 'key')
+権限・セキュリティ || 監査ログ || 誰がいつ何をしたかの記録。 || トリガーで履歴表に保存
+権限・セキュリティ || バックアップとリストア || データの控えを取り、必要なとき元に戻す。 || pg_dump / pg_restore
+権限・セキュリティ || SSL/TLS 接続 || DB との通信を暗号化する。 || sslmode=require
+権限・セキュリティ || ビューによる公開制限 || 見せてよい列だけのビューを作り、元の表は見せない。 || CREATE VIEW v AS SELECT id, name FROM users;
+権限・セキュリティ || データのマスキング || 個人情報を一部伏せて見せる。 || SELECT CONCAT(LEFT(email, 2), '***') FROM users;
