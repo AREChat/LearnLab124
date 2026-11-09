@@ -1,0 +1,50 @@
+補足(JS) || ブラウザの JS エンジン || V8 / SpiderMonkey / JavaScriptCore。 || V8
+補足(JS) || JIT コンパイル || 実行時に機械語へ変換する。 || just-in-time
+補足(JS) || コールスタック || 実行中の関数の積み重ね。 || call stack
+補足(JS) || ヒープ || オブジェクトを置くメモリ領域。 || heap
+補足(JS) || シングルスレッド || JS は基本的に1本で動く。 || single thread
+補足(JS) || ブロッキング処理 || 重い処理が画面を止める。 || while(true)
+補足(JS) || スクリプトの読み込み順 || defer / async の違い。 || <script defer>
+補足(JS) || ES モジュールの遅延実行 || type=module は defer 相当。 || <script type="module">
+補足(JS) || window と globalThis || 環境共通の名前は globalThis。 || globalThis
+補足(JS) || use strict の効果 || 暗黙のグローバル作成などを禁止。 || 'use strict'
+補足(JS) || 予約語 || 名前に使えない語。 || class, return
+補足(JS) || 識別子の規則 || 英数字・$・_ が使える。 || $el, _a
+補足(JS) || コメント || 説明を書く。 || // と /* */
+補足(JS) || Unicode エスケープ || 文字を \u で書く。 || 'あ'
+補足(JS) || 数値リテラル || 進数や区切りの書き方。 || 0xFF, 0b11, 1_000
+補足(JS) || 指数表記 || e で桁を表す。 || 1e3
+補足(JS) || 日付の月は 0 始まり || 月に注意する。 || new Date(2026, 10, 9)
+補足(JS) || parseInt の基数 || 第2引数を指定する。 || parseInt('08', 10)
+補足(JS) || map と parseInt の落とし穴 || 引数が渡されて誤る。 || ['1','2'].map(parseInt)
+補足(JS) || sort の既定動作 || 文字列として比較される。 || [10, 9].sort()
+補足(JS) || 配列の in と includes || 添字と値の違い。 || 0 in [5]
+補足(JS) || == の落とし穴 || 型変換で意外な結果。 || [] == false
+補足(JS) || this の落とし穴 || メソッドを切り離すと失われる。 || const f = obj.f
+補足(JS) || var のループ問題 || 共有された変数が参照される。 || for (var i...)
+補足(JS) || 非同期の順序 || then は同期処理の後に実行。 || Promise.resolve().then
+補足(JS) || forEach と await || forEach は待たない。 || for...of を使う
+補足(JS) || 浮動小数点の比較 || 誤差を許して比較する。 || Math.abs(a - b) < Number.EPSILON
+補足(JS) || 日付のタイムゾーン問題 || UTC とローカルの差。 || toISOString
+補足(JS) || localStorage の容量 || 約 5MB が目安。 || QuotaExceededError
+補足(JS) || localStorage は文字列のみ || JSON で変換する。 || JSON.stringify
+補足(JS) || Cookie の属性 || Secure・HttpOnly・SameSite。 || document.cookie
+補足(JS) || ブラウザの対応確認 || MDN の互換性表を見る。 || compat data
+補足(JS) || 機能検出 || 使えるかを確かめて分岐する。 || if ('fetch' in window)
+補足(JS) || ユーザーエージェント判定の問題 || 偽装や変更がある。 || navigator.userAgent
+補足(JS) || User-Agent Client Hints || UA の代わりの情報。 || navigator.userAgentData
+補足(JS) || window.name の利用 || 窓ごとの文字列。 || window.name
+補足(JS) || iframe との通信 || postMessage を使う。 || iframe.contentWindow.postMessage
+補足(JS) || 同一オリジンポリシーの例外 || document.domain など。 || 非推奨
+補足(JS) || Web Storage イベント || 別タブの変更を知る。 || storage event
+補足(JS) || BroadcastChannel の活用 || タブ間の同期。 || new BroadcastChannel('a')
+補足(JS) || SharedWorker || タブ間で共有するワーカー。 || new SharedWorker('w.js')
+補足(JS) || Worklet || 描画や音の専用処理。 || audioWorklet
+補足(JS) || ImageBitmap || 高速な画像の扱い。 || createImageBitmap(blob)
+補足(JS) || OffscreenCanvas の活用 || ワーカーで描画する。 || transferControlToOffscreen()
+補足(JS) || WebCodecs || 動画・音声の符号化。 || new VideoDecoder()
+補足(JS) || WebTransport || 低遅延の通信。 || new WebTransport(url)
+補足(JS) || Compression Streams || ブラウザでの圧縮。 || new CompressionStream('gzip')
+補足(JS) || Web Share Target || 共有の受け口。 || manifest share_target
+補足(JS) || File Handling API || 関連づけたファイルを開く。 || launchQueue
+補足(JS) || Badging API || アイコンに数字を出す。 || navigator.setAppBadge(3)
