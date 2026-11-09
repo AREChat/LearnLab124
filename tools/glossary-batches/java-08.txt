@@ -1,0 +1,133 @@
+実践 || 標準入力の高速化 || BufferedReader を使う。 || new BufferedReader(new InputStreamReader(System.in))
+実践 || 複数値の入力 || split で分ける。 || line.split(" ")
+実践 || StreamTokenizer || 数値の高速読み取り。 || new StreamTokenizer(r)
+実践 || PrintWriter の高速出力 || 出力をまとめる。 || new PrintWriter(System.out)
+実践 || 文字列の反転 || StringBuilder を使う。 || new StringBuilder(s).reverse()
+実践 || 回文判定 || 反転と比較する。 || s.equals(rev)
+実践 || 文字の出現回数 || Map で数える。 || map.merge(c, 1, Integer::sum)
+実践 || 重複の除去 || Set に入れる。 || new LinkedHashSet<>(list)
+実践 || リストの並べ替え (複数キー) || thenComparing を使う。 || cmp.thenComparing(f)
+実践 || 最大値の位置 || 走査して添字を保持。 || int idx = 0;
+実践 || 二次元配列のコピー || 行ごとにコピーする。 || a[i].clone()
+実践 || 配列の回転 || 要素をずらす。 || Collections.rotate
+実践 || 行列の積 || 三重ループで計算。 || c[i][j] += a[i][k] * b[k][j]
+実践 || 素因数分解 || 小さい数から割る。 || while (n % p == 0)
+実践 || フィボナッチ数 || 再帰やループで求める。 || fib(n - 1) + fib(n - 2)
+実践 || 階乗 || BigInteger で桁あふれ回避。 || BigInteger.valueOf(n)
+実践 || 最大公約数 (BigInteger) || gcd メソッド。 || a.gcd(b)
+実践 || 日付の差の日数 || ChronoUnit を使う。 || ChronoUnit.DAYS.between(a, b)
+実践 || 曜日の取得 || DayOfWeek を使う。 || d.getDayOfWeek()
+実践 || 月末日の取得 || lengthOfMonth を使う。 || d.lengthOfMonth()
+実践 || 年齢の計算 || Period を使う。 || Period.between(b, now).getYears()
+実践 || 現在時刻の表示 || フォーマットして出す。 || LocalDateTime.now().format(f)
+実践 || CSV の読み込み || 行を split する。 || line.split(",")
+実践 || CSV の書き出し || String.join で連結。 || String.join(",", cols)
+実践 || テキストの全行処理 || Files.lines を使う。 || Files.lines(p).forEach(...)
+実践 || ファイルの追記 || APPEND オプション。 || StandardOpenOption.APPEND
+実践 || ディレクトリの再帰削除 || walk と逆順で削除。 || Files.walk(p)
+実践 || ファイルの拡張子取得 || lastIndexOf を使う。 || name.lastIndexOf('.')
+実践 || 設定ファイルの読み込み || Properties を使う。 || props.load(in)
+実践 || JSON の読み込み || ObjectMapper を使う。 || mapper.readTree(s)
+実践 || 乱数の再現 || シードを固定する。 || new Random(1)
+実践 || ランダムな要素選択 || 乱数で添字を選ぶ。 || list.get(r.nextInt(n))
+実践 || サイコロの実装 || nextInt で 1〜6。 || r.nextInt(6) + 1
+実践 || じゃんけんの実装 || enum と乱数。 || enum Hand
+実践 || ToDo アプリの設計 || List と record。 || record Task(String t)
+実践 || 電卓の実装 || switch 式で演算子分岐。 || switch (op)
+実践 || 数当てゲーム || 乱数と Scanner。 || while (guess != ans)
+実践 || 在庫管理の設計 || Map で数量を管理。 || Map<String, Integer>
+実践 || 簡易 Web サーバー || HttpServer を使う。 || HttpServer.create()
+実践 || com.sun.net.httpserver || 標準の簡易サーバー。 || HttpHandler
+実践 || スケジューラの実装 || ScheduledExecutorService。 || scheduleWithFixedDelay
+実践 || キャッシュの実装 || LinkedHashMap で LRU。 || removeEldestEntry
+実践 || 簡易ロガーの実装 || 時刻とレベルを付けて出力。 || System.out.printf
+実践 || 状態遷移の実装 || enum と switch。 || enum State
+実践 || イベント駆動の実装 || リスナーを登録。 || List<Consumer<E>>
+実践 || ジェネリックなスタック実装 || 配列で実装。 || class Stack<T>
+実践 || 連結リストの反転 || ポインタをつけ替える。 || prev, next
+実践 || 二分探索木の挿入 || 大小で左右へ。 || insert(node, v)
+実践 || 迷路探索 || 幅優先で最短経路。 || Queue<int[]>
+実践 || ナップサック問題 || 動的計画法。 || dp[w]
+実践 || 最長共通部分列 || 動的計画法。 || LCS
+実践 || N クイーン問題 || バックトラック。 || backtracking
+実践 || ハノイの塔 || 再帰で解く。 || hanoi(n, a, b, c)
+実践 || 順列の列挙 || 再帰で並べ替え。 || permute(a, k)
+実践 || 組み合わせの列挙 || 再帰で選択。 || combine
+実践 || 文字列の編集距離 || 動的計画法。 || Levenshtein
+実践 || 単語の頻度集計 || groupingBy と counting。 || groupingBy(w, counting())
+実践 || ソート済みか判定 || 隣同士を比較。 || a[i] <= a[i + 1]
+実践 || 二次元の座標 || record で表す。 || record Point(int x, int y)
+実践 || 距離の計算 || hypot を使う。 || Math.hypot(dx, dy)
+実践 || 角度の計算 || atan2 を使う。 || Math.atan2(dy, dx)
+実践 || 色の変換 || RGB と 16進数。 || String.format("#%02x", r)
+実践 || 画像の縮小 || BufferedImage で描画。 || g.drawImage(img, 0, 0, w, h, null)
+実践 || 画像のグレースケール化 || 画素を平均する。 || (r + g + b) / 3
+実践 || QR コード生成 || ZXing を使う。 || MultiFormatWriter
+実践 || PDF 出力 || PDFBox を使う。 || PDPageContentStream
+実践 || Excel 出力 || POI を使う。 || workbook.write(out)
+実践 || メール送信 || Jakarta Mail。 || Transport.send(m)
+実践 || 暗号化の実装 || AES-GCM を使う。 || Cipher
+実践 || ハッシュ値の 16進表示 || HexFormat を使う。 || HexFormat.of().formatHex(d)
+実践 || パスワード生成 || SecureRandom を使う。 || sr.nextInt(chars.length())
+実践 || UUID 生成 || randomUUID。 || UUID.randomUUID().toString()
+実践 || 時間のかかる処理の計測 || nanoTime の差。 || System.nanoTime() - s
+実践 || スレッドで並列計算 || ExecutorService。 || ex.submit(() -> calc())
+実践 || 並列でファイル処理 || parallelStream。 || files.parallelStream()
+実践 || 排他カウンタ || AtomicInteger。 || count.incrementAndGet()
+実践 || 非同期の合成 || CompletableFuture。 || thenCombine
+実践 || タイムアウト付き実行 || Future.get に時間指定。 || f.get(1, SECONDS)
+実践 || リトライの実装 || 回数制限つきの繰り返し。 || for (int i = 0; i < 3; i++)
+実践 || 設定の優先順位 || 環境変数、引数、ファイル。 || System.getenv
+実践 || シャットダウン処理 || フックで後始末。 || addShutdownHook
+実践 || グレースフルシャットダウン || 処理中を終えて停止。 || ex.shutdown()
+実践 || 例外の集約表示 || 全例外をまとめる。 || addSuppressed
+実践 || 入力値の検証メッセージ || 利用者に分かりやすく。 || IllegalArgumentException
+実践 || 日本語の文字化け対策 || UTF-8 を明示する。 || new String(b, UTF_8)
+実践 || Shift_JIS の読み込み || Charset を指定する。 || Charset.forName("MS932")
+実践 || 全角半角の変換 || Normalizer を使う。 || Normalizer.Form.NFKC
+実践 || ひらがなの判定 || UnicodeBlock を使う。 || UnicodeBlock.HIRAGANA
+実践 || 文字数と文字幅 || サロゲートに注意。 || codePointCount
+実践 || 改行コードの統一 || replace で正規化。 || s.replace("\r\n", "\n")
+実践 || 環境依存の回避 || File.separator を使う。 || Path.of("a", "b")
+実践 || ファイルロック || FileChannel でロック。 || channel.lock()
+実践 || 一時ファイルの削除 || deleteOnExit。 || f.deleteOnExit()
+実践 || プロセスの二重起動防止 || ロックファイルを使う。 || tryLock
+実践 || 実行中のメモリ確認 || Runtime を使う。 || totalMemory() - freeMemory()
+実践 || 起動引数の解析 || 自作または picocli。 || @Command
+実践 || picocli || コマンドライン解析ライブラリ。 || @Option
+実践 || JCommander || コマンドライン解析。 || JCommander
+実践 || Apache Commons CLI || コマンドライン解析。 || Options
+実践 || Apache Commons IO || ファイル操作の補助。 || FileUtils
+実践 || Apache Commons Collections || コレクション拡張。 || MultiValuedMap
+実践 || Apache Commons Codec || 符号化の補助。 || DigestUtils
+実践 || Apache Commons Math || 数学ライブラリ。 || DescriptiveStatistics
+実践 || Joda-Time || 旧日時ライブラリ。 || DateTime
+実践 || ThreeTen-Extra || 日時 API の拡張。 || Interval
+実践 || Vavr || 関数型ライブラリ。 || Try, Option
+実践 || Immutables || 不変クラスの生成。 || @Value.Immutable
+実践 || AutoValue || 値クラスの生成。 || @AutoValue
+実践 || Dagger || コンパイル時 DI。 || @Component
+実践 || Guice || Google の DI。 || Guice.createInjector
+実践 || RxJava || リアクティブ拡張。 || Observable
+実践 || Caffeine || 高性能キャッシュ。 || Caffeine.newBuilder()
+実践 || Ehcache || キャッシュライブラリ。 || CacheManager
+実践 || Quartz || ジョブスケジューラ。 || JobDetail
+実践 || Apache Tika || ファイル内容の判定。 || Tika
+実践 || Jsoup || HTML の解析。 || Jsoup.connect(url).get()
+実践 || HtmlUnit || ヘッドレスブラウザ。 || WebClient
+実践 || Selenide || Selenium の簡易ラッパー。 || $("#a").click()
+実践 || Apache Velocity || テンプレートエンジン。 || VelocityEngine
+実践 || FreeMarker || テンプレートエンジン。 || Configuration
+実践 || Mustache (Java) || テンプレートエンジン。 || MustacheFactory
+実践 || Pebble || テンプレートエンジン。 || PebbleEngine
+実践 || Javalin || 軽量 Web FW。 || Javalin.create()
+実践 || Spark Java || 軽量 Web FW。 || get("/a", (q, s) -> "")
+実践 || Helidon || 軽量 FW。 || Helidon
+実践 || Dropwizard || REST サービス FW。 || Application
+実践 || Play Framework || Web FW。 || play
+実践 || Vaadin || Java で作る画面 FW。 || Vaadin
+実践 || Wicket || コンポーネント型 FW。 || WebPage
+実践 || Struts (旧) || 古い MVC FW。 || struts.xml
+実践 || Seasar2 (旧) || 日本発の DI FW。 || S2
+実践 || Doma || 日本発の DB アクセス。 || @Dao
+実践 || DBFlute || 日本発の DB 支援。 || DBFlute

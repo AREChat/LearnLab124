@@ -1,0 +1,116 @@
+補足2 || ラベル付き continue || 外側ループの次へ進む。 || continue outer;
+補足2 || 条件付きコンパイル相当 || static final の定数で切り替え。 || static final boolean DEBUG = false;
+補足2 || 文字列の switch || String による分岐。 || switch (s) { case "a": }
+補足2 || 長い整数の比較 || long の比較は == で。 || a == b
+補足2 || ラッパーの null 注意 || アンボクシングで NPE。 || Integer x = null; int y = x;
+補足2 || 浮動小数点の比較 || 誤差を許容して比べる。 || Math.abs(a - b) < 1e-9
+補足2 || 整数の桁あふれ検出 || Exact 系メソッド。 || Math.addExact
+補足2 || 文字列の比較 (大小) || compareTo の符号で判断。 || a.compareTo(b) < 0
+補足2 || 三項演算子の型 || 型の昇格に注意。 || true ? 1 : 2.0
+補足2 || 複合代入の暗黙キャスト || 型が自動で戻る。 || byte b += 1;
+補足2 || char の算術 || 文字コードで計算できる。 || (char) (c + 1)
+補足2 || 8進数の落とし穴 || 先頭の 0 は 8進数。 || 010
+補足2 || 配列のデフォルト値 || 0、false、null になる。 || new int[3]
+補足2 || 初期化されないローカル変数 || 使用前に代入が必須。 || int x;
+補足2 || 変数のシャドーイング || 同名変数が隠す。 || this.x = x
+補足2 || 静的ネストと内部クラス || 外側参照の有無が違う。 || static class
+補足2 || 内部クラスの生成 || 外側から生成する。 || outer.new Inner()
+補足2 || 匿名クラスの初期化 || インスタンス初期化子で設定。 || new A() {{ x = 1; }}
+補足2 || インターフェースの定数 || 暗黙に public static final。 || int MAX = 10;
+補足2 || 多重継承の問題 || default の衝突に注意。 || I.super.f()
+補足2 || 抽象クラスとインターフェースの違い || 状態の有無など。 || abstract class
+補足2 || コンストラクタの継承 || 継承されない。 || super(...)
+補足2 || オーバーロードの解決 || 最も適合する版が選ばれる。 || f(int) と f(long)
+補足2 || 可変長引数のオーバーロード || 優先度が低い。 || f(int...)
+補足2 || 静的メソッドのオーバーライド不可 || 隠蔽になる。 || static
+補足2 || protected の範囲 || 同パッケージと子クラス。 || protected
+補足2 || equals のオーバーライド型 || 引数は Object。 || equals(Object o)
+補足2 || hashCode の一貫性 || equals と揃える。 || Objects.hash
+補足2 || compareTo の一貫性 || equals と整合させる。 || Comparable
+補足2 || toString の自動呼び出し || 連結時に呼ばれる。 || "a" + obj
+補足2 || finally での return || 例外を握りつぶす危険。 || finally { return 1; }
+補足2 || catch の順序 || 子クラスを先に書く。 || catch (IOException e)
+補足2 || 例外の再スローの型 || 精密な再スロー。 || throw e;
+補足2 || try-with-resources の順序 || 逆順で閉じる。 || try (A a; B b)
+補足2 || close の例外 || 抑制例外として追加される。 || getSuppressed()
+補足2 || カスタム例外の設計 || 検査か非検査かを選ぶ。 || extends RuntimeException
+補足2 || ファイナライザの廃止 || Cleaner を使う。 || finalize
+補足2 || System.exit と finally || exit すると finally は動かない。 || System.exit(1)
+補足2 || スタックトレースの読み方 || 上が発生箇所。 || at A.f(A.java:1)
+補足2 || シリアライズの互換性 || serialVersionUID を固定。 || serialVersionUID
+補足2 || transient の用途 || 保存したくない項目。 || transient
+補足2 || Externalizable || 手動のシリアライズ。 || writeExternal
+補足2 || readObject / writeObject || シリアライズの独自処理。 || private void readObject
+補足2 || record のシリアライズ || 安全に扱える。 || record
+補足2 || enum のシリアライズ || 名前で復元される。 || enum
+補足2 || クラスのロード順 || 初回使用時に読む。 || class loading
+補足2 || 静的初期化の順序 || 宣言順に実行。 || static {}
+補足2 || 循環依存の初期化 || null に見える場合がある。 || static init cycle
+補足2 || ダブルチェックロッキング || volatile が必要。 || volatile instance
+補足2 || Holder イディオム || 遅延初期化の定番。 || Holder.INSTANCE
+補足2 || 安全な公開 || 他スレッドへの正しい渡し方。 || final field
+補足2 || スレッド間の例外 || run の例外は呼び出し元に届かない。 || UncaughtExceptionHandler
+補足2 || 割り込みの扱い || 状態を戻して終了。 || Thread.currentThread().interrupt()
+補足2 || ロックの順序 || 常に同じ順で取る。 || deadlock avoidance
+補足2 || ロックの粒度 || 小さくして競合を減らす。 || fine-grained lock
+補足2 || ロックフリー || ロックを使わない設計。 || CAS
+補足2 || 不変オブジェクトの共有 || 同期不要で安全。 || immutable
+補足2 || スレッド数の目安 || CPU 数と処理の性質で決める。 || availableProcessors
+補足2 || CPU バウンドと I/O バウンド || 処理の性質の違い。 || thread pool size
+補足2 || 仮想スレッドと同期 || 固定化に注意。 || pinning
+補足2 || ブロッキング呼び出し || 完了まで待つ処理。 || socket.read
+補足2 || ノンブロッキング || 待たずに進む処理。 || NIO
+補足2 || バックプレッシャー || 流量を調整する仕組み。 || Flow.Subscription
+補足2 || リアクティブストリーム || 非同期ストリームの仕様。 || Publisher
+補足2 || メモリの可視性問題 || 更新が見えない問題。 || volatile
+補足2 || False Sharing || キャッシュ競合による低下。 || @Contended
+補足2 || GC 圧の軽減 || 生成を減らす。 || object pool
+補足2 || オブジェクトプール || 再利用で生成を省く。 || pool
+補足2 || 文字列連結の最適化 || ループでは StringBuilder。 || sb.append
+補足2 || ボクシングのコスト || 基本型 Stream を使う。 || IntStream
+補足2 || ArrayList と LinkedList の選択 || 基本は ArrayList。 || ArrayList
+補足2 || HashMap の容量設計 || 件数から初期容量を決める。 || new HashMap<>(n)
+補足2 || 正規表現のコンパイル再利用 || Pattern を使い回す。 || static final Pattern
+補足2 || 例外のコスト || スタックトレース生成が重い。 || fillInStackTrace
+補足2 || ログの文字列生成 || 遅延評価で節約。 || logger.debug("{}", x)
+補足2 || I/O のバッファリング || 小さな読み書きを避ける。 || BufferedInputStream
+補足2 || メモリマップトファイル || 大きなファイルの高速処理。 || FileChannel.map
+補足2 || 直接バッファ || ヒープ外のバッファ。 || ByteBuffer.allocateDirect
+補足2 || JIT 向けの書き方 || 単純で小さなメソッド。 || inlining
+補足2 || 計測してから最適化 || 推測で最適化しない。 || JMH
+補足2 || マイクロベンチマークの罠 || ウォームアップ不足。 || warmup
+補足2 || Escape Analysis の効果 || スタック割り当て相当。 || scalar replacement
+補足2 || リフレクションのコスト || 通常呼び出しより遅い。 || MethodHandle
+補足2 || 起動時間の短縮 || CDS やネイティブ化。 || AppCDS
+補足2 || コンテナ内のメモリ設定 || 割合で指定する。 || -XX:MaxRAMPercentage
+補足2 || コンテナの CPU 認識 || 制限値を考慮する。 || -XX:ActiveProcessorCount
+補足2 || ネイティブメモリ追跡 || 使用量の調査。 || -XX:NativeMemoryTracking
+補足2 || OutOfMemoryError の種類 || ヒープ、メタスペースなど。 || Java heap space
+補足2 || ヒープダンプの自動取得 || OOM 時に出力する。 || HeapDumpOnOutOfMemoryError
+補足2 || 終了コード || 正常は 0。 || System.exit(0)
+補足2 || 標準エラーの使い分け || エラーは System.err へ。 || System.err.println
+補足2 || ロケール依存の落とし穴 || toUpperCase などに注意。 || Locale.ROOT
+補足2 || トルコ語 I 問題 || ロケールで大文字化が変わる。 || toUpperCase(Locale.ROOT)
+補足2 || 浮動小数点の文字列化 || toString の形式。 || Double.toString(0.1)
+補足2 || BigDecimal の生成 || 文字列から作る。 || new BigDecimal("0.1")
+補足2 || BigDecimal の比較 || compareTo を使う。 || a.compareTo(b)
+補足2 || BigDecimal の割り算 || 丸め指定が必要。 || divide(b, 2, RoundingMode.HALF_UP)
+補足2 || 金額の扱い || BigDecimal か整数の最小単位。 || long cents
+補足2 || 税計算の丸め || 方針を統一する。 || RoundingMode.DOWN
+補足2 || 日付の境界 || 時刻の 0 時に注意。 || atStartOfDay
+補足2 || 期間の判定 || 開始以上、終了未満。 || !t.isBefore(s) && t.isBefore(e)
+補足2 || タイムゾーンの保存 || UTC で保存して表示で変換。 || Instant
+補足2 || うるう年の計算 || Year.isLeap を使う。 || Year.isLeap(y)
+補足2 || 祝日の扱い || 自前で定義する。 || Set<LocalDate>
+補足2 || 営業日の計算 || 土日を除いて加算。 || DayOfWeek.SATURDAY
+補足2 || 和暦の変換 || JapaneseDate を使う。 || JapaneseDate.from(d)
+補足2 || 日本語ソート || Collator を使う。 || Collator.getInstance(Locale.JAPAN)
+補足2 || ふりがなの扱い || 別の列で持つ。 || kana
+補足2 || 全角数字の変換 || NFKC 正規化。 || Normalizer.normalize
+補足2 || 半角カナの変換 || NFKC で全角へ。 || NFKC
+補足2 || 郵便番号の検証 || 正規表現で形式確認。 || \\d{3}-\\d{4}
+補足2 || メールアドレスの検証 || 簡易な形式チェック。 || matches
+補足2 || 電話番号の検証 || 桁数と記号の確認。 || matches
+補足2 || マイナンバーの扱い || 厳重な管理が必要。 || 暗号化
+補足2 || 個人情報の扱い || ログに出さない。 || mask
+補足2 || マスキング || 一部を伏せ字にする。 || replaceAll

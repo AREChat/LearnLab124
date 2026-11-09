@@ -1,0 +1,231 @@
+配列 || 配列リテラル || 角括弧で配列を作る。 || $a = [1, 2, 3];
+配列 || 連想配列 || キーと値の組。 || ['a' => 1]
+配列 || 多次元配列 || 配列の配列。 || $a[0][1]
+配列 || count || 要素数。 || count($a)
+配列 || array_push || 末尾に追加。 || array_push($a, 1)
+配列 || array_pop || 末尾を取り出す。 || array_pop($a)
+配列 || array_shift || 先頭を取り出す。 || array_shift($a)
+配列 || array_unshift || 先頭に追加。 || array_unshift($a, 1)
+配列 || array_merge || 配列の結合。 || array_merge($a, $b)
+配列 || array_merge_recursive || 再帰的な結合。 || array_merge_recursive($a, $b)
+配列 || array_replace || 値の置き換え。 || array_replace($a, $b)
+配列 || array_combine || キーと値の配列を合成。 || array_combine($k, $v)
+配列 || array_keys || キーの配列。 || array_keys($a)
+配列 || array_values || 値の配列。 || array_values($a)
+配列 || array_flip || キーと値の入れ替え。 || array_flip($a)
+配列 || array_slice || 部分配列を取り出す。 || array_slice($a, 1, 2)
+配列 || array_splice || 部分を置換・削除。 || array_splice($a, 1, 1)
+配列 || array_map || 各要素を変換。 || array_map('trim', $a)
+配列 || array_filter || 条件で絞る。 || array_filter($a, fn($x) => $x > 0)
+配列 || array_reduce || 畳み込み。 || array_reduce($a, fn($c, $x) => $c + $x, 0)
+配列 || array_walk || 各要素に処理。 || array_walk($a, fn(&$v) => $v++)
+配列 || array_sum || 合計。 || array_sum($a)
+配列 || array_product || 積。 || array_product($a)
+配列 || array_unique || 重複の除去。 || array_unique($a)
+配列 || array_reverse || 逆順。 || array_reverse($a)
+配列 || array_search || 値からキーを探す。 || array_search(2, $a)
+配列 || in_array || 値の存在確認。 || in_array(2, $a, true)
+配列 || array_key_exists || キーの存在確認。 || array_key_exists('a', $a)
+配列 || array_key_first / last || 最初・最後のキー。 || array_key_first($a)
+配列 || array_is_list || 連番の配列か判定。 || array_is_list($a)
+配列 || array_column || 列を取り出す。 || array_column($rows, 'name')
+配列 || array_chunk || 指定数ごとに分割。 || array_chunk($a, 3)
+配列 || array_fill || 同じ値で埋める。 || array_fill(0, 3, 0)
+配列 || array_fill_keys || キー指定で埋める。 || array_fill_keys($k, 0)
+配列 || array_pad || 指定長まで埋める。 || array_pad($a, 5, 0)
+配列 || range || 連続した値の配列。 || range(1, 5)
+配列 || compact / extract || 変数と配列の変換。 || compact('a', 'b')
+配列 || array_diff || 差集合。 || array_diff($a, $b)
+配列 || array_diff_key || キーの差集合。 || array_diff_key($a, $b)
+配列 || array_intersect || 積集合。 || array_intersect($a, $b)
+配列 || array_intersect_key || キーの積集合。 || array_intersect_key($a, $b)
+配列 || array_count_values || 値の出現回数。 || array_count_values($a)
+配列 || array_flip の用途 || 検索を高速化する。 || isset($flip[$x])
+配列 || array_multisort || 複数配列の整列。 || array_multisort($a, $b)
+配列 || sort || 値で昇順に整列。 || sort($a)
+配列 || rsort || 値で降順に整列。 || rsort($a)
+配列 || asort / arsort || 値で整列しキー維持。 || asort($a)
+配列 || ksort / krsort || キーで整列。 || ksort($a)
+配列 || usort || 比較関数で整列。 || usort($a, fn($x, $y) => $x <=> $y)
+配列 || uasort / uksort || キーを維持した独自整列。 || uasort($a, $f)
+配列 || natsort || 自然順で整列。 || natsort($a)
+配列 || 安定ソート || PHP 8 で整列が安定に。 || sort
+配列 || min / max || 最小・最大。 || max($a)
+配列 || array_walk_recursive || 再帰的に処理。 || array_walk_recursive($a, $f)
+配列 || iterator_to_array || イテレータを配列に。 || iterator_to_array($it)
+配列 || ArrayObject || 配列をオブジェクトで扱う。 || new ArrayObject($a)
+配列 || ArrayIterator || 配列の反復子。 || new ArrayIterator($a)
+配列 || SplStack || スタック。 || new SplStack()
+配列 || SplQueue || キュー。 || new SplQueue()
+配列 || SplObjectStorage || オブジェクトの集合。 || new SplObjectStorage()
+配列 || SplFixedArray || 固定長の配列。 || new SplFixedArray(5)
+配列 || SplPriorityQueue || 優先度付きキュー。 || new SplPriorityQueue()
+配列 || SplMinHeap / SplMaxHeap || ヒープ。 || new SplMinHeap()
+配列 || 配列の添字 || 整数か文字列。 || $a[0]
+配列 || 配列のコピー || 代入で値渡しになる。 || $b = $a;
+配列 || 配列のネスト更新 || 深い要素の書き換え。 || $a['x']['y'] = 1;
+配列 || 配列のアンパック || キー付きも展開可能。 || [...$a, ...$b]
+クラス || class || クラスの定義。 || class A {}
+クラス || new || インスタンス生成。 || new A()
+クラス || プロパティ || クラスの変数。 || public $name;
+クラス || 型付きプロパティ || 型を指定する。 || public int $age;
+クラス || readonly プロパティ || 初期化後に変更不可。 || public readonly int $id;
+クラス || readonly クラス || 全プロパティが読み取り専用。 || readonly class A
+クラス || コンストラクタ || 初期化メソッド。 || public function __construct()
+クラス || コンストラクタ昇格 || 引数をそのままプロパティに。 || __construct(private int $a)
+クラス || デストラクタ || 破棄時の処理。 || __destruct()
+クラス || アクセス修飾子 || public、protected、private。 || private $x;
+クラス || $this || 自分自身。 || $this->name
+クラス || static メソッド || インスタンス不要の呼び出し。 || A::f()
+クラス || static プロパティ || クラスで共有する値。 || self::$count
+クラス || スコープ解決演算子 || :: でクラスの要素へ。 || A::CONST
+クラス || self / static / parent || クラス参照の指定。 || parent::f()
+クラス || 遅延静的束縛 || 呼び出したクラスで解決。 || static::create()
+クラス || クラス定数 || クラスの定数。 || const A = 1;
+クラス || final 定数 || 上書き不可の定数。 || final public const A = 1;
+クラス || 継承 || extends で拡張。 || class B extends A
+クラス || 抽象クラス || 直接生成できない。 || abstract class A
+クラス || 抽象メソッド || 実装を子に任せる。 || abstract function f();
+クラス || インターフェース || 実装の約束事。 || interface I {}
+クラス || implements || インターフェースの実装。 || class A implements I
+クラス || トレイト || 実装の再利用。 || trait T {}
+クラス || use (トレイト) || トレイトの取り込み。 || use T;
+クラス || トレイトの衝突解決 || insteadof で選ぶ。 || use A, B { A::f insteadof B; }
+クラス || final クラス || 継承不可。 || final class A
+クラス || final メソッド || 上書き不可。 || final function f()
+クラス || 列挙型 enum || 定数の集合。 || enum Suit { case Hearts; }
+クラス || backed enum || 値を持つ列挙型。 || enum S: string
+クラス || enum の cases || 全要素の取得。 || Suit::cases()
+クラス || enum の from / tryFrom || 値から列挙型へ。 || Suit::tryFrom('H')
+クラス || enum のメソッド || 振る舞いを持たせる。 || public function label()
+クラス || 無名クラス || 名前のないクラス。 || new class {}
+クラス || マジックメソッド || 特別な動作のメソッド。 || __get
+クラス || __get / __set || 未定義プロパティの読み書き。 || __get($n)
+クラス || __call || 未定義メソッドの呼出。 || __call($n, $a)
+クラス || __callStatic || 未定義 static の呼出。 || __callStatic
+クラス || __invoke || オブジェクトを関数として呼ぶ。 || __invoke()
+クラス || __clone || 複製時の処理。 || __clone()
+クラス || __isset / __unset || isset や unset の処理。 || __isset($n)
+クラス || __serialize || 直列化の独自処理。 || __serialize()
+クラス || __sleep / __wakeup || 旧式の直列化処理。 || __sleep()
+クラス || __set_state || var_export の復元。 || __set_state
+クラス || __debugInfo || var_dump の表示内容。 || __debugInfo()
+クラス || clone || オブジェクトの複製。 || clone $o
+クラス || ディープコピー || 内部まで複製する。 || __clone
+クラス || オブジェクトの比較 || == と === の違い。 || $a === $b
+クラス || get_class || クラス名の取得。 || get_class($o)
+クラス || get_object_vars || プロパティの配列。 || get_object_vars($o)
+クラス || get_class_methods || メソッド一覧。 || get_class_methods($o)
+クラス || method_exists || メソッドの存在確認。 || method_exists($o, 'f')
+クラス || property_exists || プロパティの存在確認。 || property_exists($o, 'p')
+クラス || class_exists || クラスの存在確認。 || class_exists('A')
+クラス || instanceof の使い方 || 型の判定。 || $o instanceof I
+クラス || ::class || クラス名の文字列。 || A::class
+クラス || リフレクション || 実行時にクラスを調べる。 || new ReflectionClass($c)
+クラス || アトリビュート || 構造化されたメタデータ。 || #[Route('/a')]
+クラス || WeakMap || 弱参照のマップ。 || new WeakMap()
+クラス || Countable || count 対応。 || implements Countable
+クラス || ArrayAccess || 配列風アクセス。 || offsetGet
+クラス || IteratorAggregate || 反復を提供する。 || getIterator()
+クラス || JsonSerializable || JSON 化を制御。 || jsonSerialize()
+クラス || Traversable || 反復可能な型。 || Traversable
+例外 || try / catch || 例外の捕捉。 || try {} catch (Exception $e) {}
+例外 || finally || 必ず実行する処理。 || finally {}
+例外 || throw || 例外を投げる。 || throw new Exception("x");
+例外 || throw 式 || 式の中で例外を投げる。 || $a ?? throw new E()
+例外 || Exception || 例外の基本クラス。 || new Exception()
+例外 || Error || 重大なエラーの基本。 || Error
+例外 || Throwable || 例外とエラーの共通型。 || catch (Throwable $t)
+例外 || TypeError || 型の不一致。 || TypeError
+例外 || ValueError || 不正な値。 || ValueError
+例外 || ArgumentCountError || 引数の個数不一致。 || ArgumentCountError
+例外 || DivisionByZeroError || ゼロ除算。 || intdiv(1, 0)
+例外 || ArithmeticError || 算術の失敗。 || ArithmeticError
+例外 || InvalidArgumentException || 不正な引数。 || InvalidArgumentException
+例外 || RuntimeException || 実行時の例外。 || RuntimeException
+例外 || LogicException || ロジックの誤り。 || LogicException
+例外 || JsonException || JSON の失敗。 || JsonException
+例外 || PDOException || DB の例外。 || PDOException
+例外 || getMessage || メッセージ取得。 || $e->getMessage()
+例外 || getCode || コード取得。 || $e->getCode()
+例外 || getTraceAsString || スタックトレース。 || $e->getTraceAsString()
+例外 || getPrevious || 前の例外。 || $e->getPrevious()
+例外 || set_error_handler || エラーハンドラ登録。 || set_error_handler($f)
+例外 || set_exception_handler || 未捕捉例外の処理。 || set_exception_handler($f)
+例外 || trigger_error || エラーを発生させる。 || trigger_error("x", E_USER_WARNING)
+例外 || error_log || ログに出力。 || error_log("x")
+例外 || E_ALL / E_STRICT || エラーレベル。 || E_ALL
+例外 || E_NOTICE / E_WARNING || 注意と警告。 || E_WARNING
+例外 || display_errors || エラー表示の設定。 || display_errors=0
+例外 || log_errors || ログ出力の設定。 || log_errors=1
+例外 || 例外の連鎖 || 原因を保持する。 || new E("x", 0, $prev)
+例外 || カスタム例外 || 独自の例外クラス。 || class MyEx extends Exception
+ファイル || file_get_contents || 全体を読む。 || file_get_contents('a.txt')
+ファイル || file_put_contents || まとめて書く。 || file_put_contents('a.txt', $s)
+ファイル || FILE_APPEND || 追記フラグ。 || FILE_APPEND
+ファイル || LOCK_EX || 排他ロックして書く。 || LOCK_EX
+ファイル || file || 行の配列として読む。 || file('a.txt', FILE_IGNORE_NEW_LINES)
+ファイル || fopen / fclose || ファイルの開閉。 || fopen('a.txt', 'r')
+ファイル || fgets || 1 行読む。 || fgets($fp)
+ファイル || fgetcsv || CSV を 1 行読む。 || fgetcsv($fp)
+ファイル || fputcsv || CSV を 1 行書く。 || fputcsv($fp, $row)
+ファイル || fread / fwrite || 読み書き。 || fwrite($fp, "a")
+ファイル || feof || 終端の判定。 || feof($fp)
+ファイル || flock || ファイルロック。 || flock($fp, LOCK_EX)
+ファイル || file_exists || 存在確認。 || file_exists($p)
+ファイル || is_file / is_dir || ファイルか判定。 || is_dir($p)
+ファイル || is_readable / is_writable || 読み書き可能か。 || is_writable($p)
+ファイル || mkdir || ディレクトリ作成。 || mkdir($p, 0755, true)
+ファイル || rmdir / unlink || 削除。 || unlink($p)
+ファイル || rename / copy || 移動と複製。 || copy($a, $b)
+ファイル || scandir || 一覧取得。 || scandir($d)
+ファイル || glob || パターンで一覧。 || glob('*.php')
+ファイル || basename / dirname || ファイル名・ディレクトリ名。 || basename($p)
+ファイル || pathinfo || パスの分解。 || pathinfo($p, PATHINFO_EXTENSION)
+ファイル || realpath || 絶対パスの解決。 || realpath('.')
+ファイル || filesize / filemtime || サイズと更新日時。 || filesize($p)
+ファイル || tempnam / tmpfile || 一時ファイル。 || tempnam(sys_get_temp_dir(), 'a')
+ファイル || sys_get_temp_dir || 一時ディレクトリ。 || sys_get_temp_dir()
+ファイル || chmod || 権限の変更。 || chmod($p, 0644)
+ファイル || SplFileObject || ファイルのオブジェクト操作。 || new SplFileObject($p)
+ファイル || DirectoryIterator || ディレクトリの走査。 || new DirectoryIterator($d)
+ファイル || RecursiveDirectoryIterator || 再帰的な走査。 || new RecursiveDirectoryIterator($d)
+ファイル || move_uploaded_file || アップロードの保存。 || move_uploaded_file($t, $d)
+ファイル || $_FILES || アップロード情報。 || $_FILES['f']['name']
+ファイル || finfo || MIME タイプの判定。 || new finfo(FILEINFO_MIME_TYPE)
+ファイル || readfile || ファイルを出力。 || readfile($p)
+ファイル || stream_context_create || ストリームの設定。 || stream_context_create($o)
+ファイル || php://input || リクエスト本文。 || file_get_contents('php://input')
+ファイル || php://stdin / stdout || 標準入出力。 || fgets(STDIN)
+ファイル || STDIN / STDOUT / STDERR || 標準ストリーム。 || fwrite(STDERR, "x")
+日時 || time || 現在の UNIX 時刻。 || time()
+日時 || date || 日時の書式化。 || date('Y-m-d H:i:s')
+日時 || mktime || 日時から UNIX 時刻。 || mktime(0, 0, 0, 1, 1, 2024)
+日時 || strtotime || 文字列から UNIX 時刻。 || strtotime('+1 day')
+日時 || checkdate || 日付の妥当性確認。 || checkdate(2, 30, 2024)
+日時 || date_default_timezone_set || タイムゾーン設定。 || date_default_timezone_set('Asia/Tokyo')
+日時 || DateTime || 日時のクラス。 || new DateTime('now')
+日時 || DateTimeImmutable || 不変の日時クラス。 || new DateTimeImmutable()
+日時 || DateTime::format || 書式化。 || $d->format('Y/m/d')
+日時 || DateTime::modify || 日時の変更。 || $d->modify('+1 month')
+日時 || DateTime::diff || 差の計算。 || $a->diff($b)
+日時 || DateInterval || 期間の表現。 || new DateInterval('P1D')
+日時 || DatePeriod || 期間内の反復。 || new DatePeriod($s, $i, $e)
+日時 || DateTimeZone || タイムゾーン。 || new DateTimeZone('UTC')
+日時 || createFromFormat || 書式から生成。 || DateTime::createFromFormat('Y-m-d', $s)
+日時 || Carbon || 日時の拡張ライブラリ。 || Carbon::now()
+日時 || 日付の書式文字 || Y m d H i s など。 || 'Y-m-d'
+日時 || hrtime || 高精度の計測。 || hrtime(true)
+正規表現 || preg_match || 1 回の一致。 || preg_match('/a/', $s, $m)
+正規表現 || preg_match_all || すべての一致。 || preg_match_all('/a/', $s, $m)
+正規表現 || preg_replace || 正規表現で置換。 || preg_replace('/a/', 'b', $s)
+正規表現 || preg_replace_callback || 関数で置換。 || preg_replace_callback('/a/', $f, $s)
+正規表現 || preg_split || 正規表現で分割。 || preg_split('/,/', $s)
+正規表現 || preg_quote || 特殊文字のエスケープ。 || preg_quote($s, '/')
+正規表現 || preg_grep || 一致する要素を抽出。 || preg_grep('/a/', $a)
+正規表現 || 修飾子 u || UTF-8 として扱う。 || '/あ/u'
+正規表現 || 修飾子 i || 大小無視。 || '/a/i'
+正規表現 || 修飾子 m / s / x || 複数行・改行・拡張。 || '/a/s'
+正規表現 || 名前付きキャプチャ || グループに名前を付ける。 || (?<year>\d+)
+正規表現 || PREG_SET_ORDER || 一致結果の並び順。 || PREG_SET_ORDER
+正規表現 || preg_last_error || 正規表現のエラー。 || preg_last_error()

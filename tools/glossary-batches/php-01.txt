@@ -1,0 +1,245 @@
+基本構文 || <?php タグ || PHP コードの開始。 || <?php echo "hi";
+基本構文 || 短縮 echo タグ || 値の出力を簡潔に書く。 || <?= $name ?>
+基本構文 || ?> 閉じタグ || PHP の終了。純 PHP では省略する。 || ?>
+基本構文 || echo || 文字列を出力する。 || echo "Hello";
+基本構文 || print || 出力して 1 を返す。 || print "Hello";
+基本構文 || print_r || 配列などを読みやすく出力。 || print_r($arr);
+基本構文 || var_dump || 型と値を詳しく出力。 || var_dump($x);
+基本構文 || var_export || 再利用できる形式で出力。 || var_export($arr, true)
+基本構文 || printf || 書式付きで出力。 || printf("%05.1f", 3.14);
+基本構文 || sprintf || 書式付き文字列を返す。 || sprintf("%03d", 7)
+基本構文 || heredoc || 複数行文字列。変数が展開される。 || <<<EOT ... EOT;
+基本構文 || nowdoc || 展開されない複数行文字列。 || <<<'EOT' ... EOT;
+基本構文 || コメント || 説明文。 || // # /* */
+基本構文 || PHPDoc || 型情報などを書くコメント。 || /** @param int $a */
+基本構文 || 文末のセミコロン || 文の終わり。 || $a = 1;
+基本構文 || 大文字小文字の区別 || 変数は区別、関数は区別しない。 || $a と $A は別
+基本構文 || define || 定数を定義する。 || define('PI', 3.14);
+基本構文 || const || クラス内や最上位の定数。 || const MAX = 10;
+基本構文 || マジック定数 || 場所に応じて変わる定数。 || __LINE__
+基本構文 || __FILE__ || 現在のファイルのパス。 || echo __FILE__;
+基本構文 || __DIR__ || 現在のディレクトリ。 || require __DIR__ . '/a.php';
+基本構文 || __FUNCTION__ || 現在の関数名。 || __FUNCTION__
+基本構文 || __CLASS__ || 現在のクラス名。 || __CLASS__
+基本構文 || __METHOD__ || 現在のメソッド名。 || __METHOD__
+基本構文 || __NAMESPACE__ || 現在の名前空間。 || __NAMESPACE__
+基本構文 || PHP_EOL || 改行文字。 || echo "a" . PHP_EOL;
+基本構文 || PHP_VERSION || PHP のバージョン。 || echo PHP_VERSION;
+基本構文 || PHP_INT_MAX || 整数の最大値。 || PHP_INT_MAX
+基本構文 || PHP_OS || OS の名前。 || PHP_OS
+基本構文 || phpinfo || 設定情報を表示。 || phpinfo();
+基本構文 || php -v || バージョンの確認。 || php -v
+基本構文 || php -S || 組み込みサーバーの起動。 || php -S localhost:8000
+基本構文 || php -r || 1 行のコードを実行。 || php -r 'echo 1;'
+基本構文 || php -l || 構文チェック。 || php -l a.php
+基本構文 || php -i || 設定情報の表示。 || php -i
+基本構文 || php -m || 読み込み済み拡張の一覧。 || php -m
+基本構文 || php --ini || 読み込む ini ファイル。 || php --ini
+基本構文 || PHP-FPM || FastCGI の実行方式。 || php-fpm
+基本構文 || mod_php || Apache の組み込み実行。 || libphp
+基本構文 || CLI と Web の違い || 実行環境の違い。 || php_sapi_name()
+基本構文 || php_sapi_name || 実行方式の名前。 || php_sapi_name()
+基本構文 || declare(strict_types=1) || 型を厳格に扱う。 || declare(strict_types=1);
+基本構文 || namespace || 名前の衝突を避ける。 || namespace App;
+基本構文 || use 文 || 名前空間のクラスを取り込む。 || use App\Models\User;
+基本構文 || use 関数・定数 || 関数や定数の取り込み。 || use function App\f;
+基本構文 || グループ use || まとめて取り込む。 || use App\{A, B};
+基本構文 || require || 読み込み。失敗は致命的エラー。 || require 'a.php';
+基本構文 || require_once || 1 度だけ読み込む。 || require_once 'a.php';
+基本構文 || include || 読み込み。失敗は警告。 || include 'a.php';
+基本構文 || include_once || 1 度だけ読み込む。 || include_once 'a.php';
+基本構文 || オートロード || クラスを自動で読み込む。 || spl_autoload_register
+基本構文 || spl_autoload_register || オートローダーの登録。 || spl_autoload_register(fn($c) => ...)
+基本構文 || PSR-4 || オートロードの規約。 || App\\ => src/
+基本構文 || PSR-12 || コーディングスタイルの規約。 || PSR-12
+基本構文 || exit / die || 処理を終了する。 || exit(1);
+基本構文 || sleep / usleep || 一定時間止まる。 || sleep(1);
+基本構文 || register_shutdown_function || 終了時に実行。 || register_shutdown_function('f');
+基本構文 || set_time_limit || 実行時間の制限。 || set_time_limit(30);
+基本構文 || ini_set || 設定の実行時変更。 || ini_set('display_errors', '1');
+基本構文 || ini_get || 設定の取得。 || ini_get('memory_limit')
+基本構文 || error_reporting || 報告するエラーの範囲。 || error_reporting(E_ALL);
+基本構文 || memory_get_usage || 使用メモリ量。 || memory_get_usage()
+基本構文 || microtime || 高精度の時刻。 || microtime(true)
+基本構文 || usleep || マイクロ秒の待機。 || usleep(1000)
+基本構文 || uniqid || 一意な ID。 || uniqid()
+基本構文 || random_int || 暗号用の整数乱数。 || random_int(1, 6)
+基本構文 || random_bytes || 暗号用のバイト列。 || bin2hex(random_bytes(16))
+基本構文 || rand / mt_rand || 疑似乱数。 || mt_rand(1, 10)
+基本構文 || mt_srand || 乱数のシード指定。 || mt_srand(1);
+基本構文 || array_rand || 配列から乱択。 || array_rand($a)
+基本構文 || shuffle || 配列をシャッフル。 || shuffle($a);
+基本構文 || gettype || 型名を返す。 || gettype($x)
+基本構文 || get_debug_type || 実行時の型名。 || get_debug_type($x)
+基本構文 || settype || 型を変更する。 || settype($x, "int");
+基本構文 || intval || 整数に変換。 || intval("12")
+基本構文 || floatval || 浮動小数点に変換。 || floatval("1.5")
+基本構文 || strval || 文字列に変換。 || strval(12)
+基本構文 || boolval || 真偽値に変換。 || boolval(0)
+基本構文 || is_int / is_float || 型の判定。 || is_int($x)
+基本構文 || is_string / is_bool || 型の判定。 || is_string($x)
+基本構文 || is_array / is_object || 型の判定。 || is_array($x)
+基本構文 || is_null || null の判定。 || is_null($x)
+基本構文 || is_numeric || 数値として扱えるか。 || is_numeric("12")
+基本構文 || is_callable || 呼び出せるか。 || is_callable($f)
+基本構文 || is_iterable || 反復できるか。 || is_iterable($x)
+基本構文 || isset || 変数が設定され null でないか。 || isset($a['x'])
+基本構文 || empty || 空とみなせるか。 || empty($x)
+基本構文 || unset || 変数や要素の削除。 || unset($a['x']);
+基本構文 || null 合体演算子 || null のとき既定値を使う。 || $a ?? 'x'
+基本構文 || null 合体代入演算子 || null のとき代入する。 || $a ??= 1;
+基本構文 || null 安全演算子 || null なら連鎖を止める。 || $a?->b
+基本構文 || スプレッド演算子 || 配列や引数の展開。 || f(...$args)
+基本構文 || 参照渡し || 変数そのものを渡す。 || function f(&$x)
+基本構文 || 参照代入 || 同じ値を指す。 || $a = &$b;
+基本構文 || 可変変数 || 変数名を変数で指定。 || $$name
+基本構文 || グローバル変数 || 関数外の変数。 || global $x;
+基本構文 || $GLOBALS || 全グローバル変数の配列。 || $GLOBALS['x']
+基本構文 || static 変数 || 呼び出し間で値を保持。 || static $n = 0;
+基本構文 || スコープ || 変数の有効範囲。 || function内は別
+基本構文 || 型の自動変換 || 緩やかな型付け。 || "5" + 3
+基本構文 || 浮動小数点の精度 || 誤差に注意。 || 0.1 + 0.2
+基本構文 || 数値文字列の比較 || 8.0 で挙動が変更。 || "abc" == 0
+基本構文 || 厳密比較 || 型も含めて比較。 || $a === $b
+基本構文 || 宇宙船演算子 || 3 方向の比較。 || $a <=> $b
+基本構文 || 三項演算子 || 条件で値を選ぶ。 || $a ? 'y' : 'n'
+基本構文 || 短縮三項演算子 || 真ならその値。 || $a ?: 'x'
+基本構文 || べき乗演算子 || 累乗を求める。 || 2 ** 3
+基本構文 || 文字列連結演算子 || ドットで連結する。 || "a" . "b"
+基本構文 || 連結代入 || 末尾に追加する。 || $s .= "x";
+基本構文 || 論理演算子 and / or || 優先順位が低い論理演算。 || $a and $b
+基本構文 || xor || 排他的論理和。 || $a xor $b
+基本構文 || instanceof || クラスの判定。 || $o instanceof A
+基本構文 || 実行演算子 || バッククォートでコマンド実行。 || `ls`
+基本構文 || エラー制御演算子 || エラー表示を抑える。 || @file_get_contents($f)
+基本構文 || match 式 || 厳密比較の分岐式。 || match($x) { 1 => 'a', default => 'b' }
+基本構文 || switch 文 || 値による分岐。 || switch ($x) { case 1: }
+基本構文 || if / elseif / else || 条件分岐。 || if ($a) {} elseif ($b) {}
+基本構文 || 代替構文 || テンプレート向けの書き方。 || if ($a): endif;
+基本構文 || for 文 || 回数指定の繰り返し。 || for ($i = 0; $i < 5; $i++)
+基本構文 || foreach 文 || 配列の繰り返し。 || foreach ($a as $k => $v)
+基本構文 || foreach の参照 || 要素を書き換える。 || foreach ($a as &$v)
+基本構文 || while / do-while || 条件付きの繰り返し。 || while ($i < 5)
+基本構文 || break / continue || ループの制御。 || break 2;
+基本構文 || goto || ラベルへのジャンプ。 || goto end;
+基本構文 || list || 配列を変数へ展開。 || list($a, $b) = [1, 2];
+基本構文 || 分割代入 || 配列やキーを展開する。 || ['x' => $x] = $arr;
+基本構文 || 関数の定義 || function で宣言する。 || function add($a, $b) {}
+基本構文 || 戻り値の型宣言 || 戻り値の型を指定。 || function f(): int
+基本構文 || 引数の型宣言 || 引数の型を指定。 || function f(int $a)
+基本構文 || 引数の既定値 || 省略時の値。 || function f($a = 1)
+基本構文 || 名前付き引数 || 名前で引数を渡す。 || f(b: 2, a: 1)
+基本構文 || 可変長引数 || 任意個の引数。 || function f(...$xs)
+基本構文 || ユニオン型 || 複数の型を許す。 || int|string
+基本構文 || 交差型 || すべてを満たす型。 || A&B
+基本構文 || nullable 型 || null を許す型。 || ?int
+基本構文 || mixed 型 || あらゆる型。 || mixed
+基本構文 || void 型 || 戻り値なし。 || : void
+基本構文 || never 型 || 戻らない関数。 || : never
+基本構文 || static 戻り値型 || 呼び出したクラスの型。 || : static
+基本構文 || アロー関数 || 短いクロージャ。 || fn($x) => $x * 2
+基本構文 || クロージャ || 無名関数。 || function($x) { return $x; }
+基本構文 || use でのキャプチャ || 外側変数の取り込み。 || function() use ($a)
+基本構文 || callable 型 || 呼び出し可能な値。 || callable
+基本構文 || first-class callable || 関数を値として取る。 || strlen(...)
+基本構文 || call_user_func || 関数を動的に呼ぶ。 || call_user_func('f', 1)
+基本構文 || call_user_func_array || 配列で引数を渡す。 || call_user_func_array('f', [1])
+基本構文 || func_get_args || 渡された全引数。 || func_get_args()
+基本構文 || function_exists || 関数の存在確認。 || function_exists('f')
+基本構文 || 再帰関数 || 自分自身を呼ぶ。 || f($n - 1)
+基本構文 || ジェネレータ || 値を順に返す関数。 || yield $i;
+基本構文 || yield from || 別の列挙に委譲。 || yield from $gen;
+基本構文 || Closure::bind || クロージャの束縛変更。 || Closure::bind($f, $obj)
+基本構文 || array_map とクロージャ || 各要素を変換。 || array_map(fn($x) => $x * 2, $a)
+文字列 || strlen || バイト数。 || strlen("abc")
+文字列 || mb_strlen || 文字数(マルチバイト)。 || mb_strlen("あ")
+文字列 || str_contains || 含むか判定。 || str_contains($s, "a")
+文字列 || str_starts_with || 先頭一致。 || str_starts_with($s, "a")
+文字列 || str_ends_with || 末尾一致。 || str_ends_with($s, "a")
+文字列 || strpos || 位置を探す。 || strpos($s, "a")
+文字列 || strrpos || 最後の位置を探す。 || strrpos($s, "a")
+文字列 || stripos || 大小無視で探す。 || stripos($s, "a")
+文字列 || mb_strpos || 文字単位で探す。 || mb_strpos($s, "あ")
+文字列 || substr || 部分文字列。 || substr($s, 0, 3)
+文字列 || mb_substr || 文字単位の部分文字列。 || mb_substr($s, 0, 3)
+文字列 || str_replace || 文字列を置換。 || str_replace("a", "b", $s)
+文字列 || str_ireplace || 大小無視で置換。 || str_ireplace("a", "b", $s)
+文字列 || substr_replace || 範囲を置換。 || substr_replace($s, "x", 0, 1)
+文字列 || strtr || 文字の対応で置換。 || strtr($s, "ab", "xy")
+文字列 || str_repeat || 繰り返し連結。 || str_repeat("ab", 3)
+文字列 || str_pad || 指定長に埋める。 || str_pad("5", 3, "0", STR_PAD_LEFT)
+文字列 || str_split || 文字列を分割。 || str_split("abc")
+文字列 || mb_str_split || 文字単位で分割。 || mb_str_split("あい")
+文字列 || explode || 区切り文字で配列に。 || explode(",", $s)
+文字列 || implode / join || 配列を連結。 || implode(",", $a)
+文字列 || trim || 前後の空白を除く。 || trim($s)
+文字列 || ltrim / rtrim || 左・右の空白を除く。 || rtrim($s, "\n")
+文字列 || strtolower / strtoupper || 小文字・大文字。 || strtoupper($s)
+文字列 || mb_strtolower || マルチバイト対応の小文字化。 || mb_strtolower($s)
+文字列 || ucfirst || 先頭を大文字に。 || ucfirst($s)
+文字列 || ucwords || 各単語の先頭を大文字。 || ucwords($s)
+文字列 || lcfirst || 先頭を小文字に。 || lcfirst($s)
+文字列 || strrev || 文字列の反転。 || strrev($s)
+文字列 || strcmp || 文字列の比較。 || strcmp($a, $b)
+文字列 || strcasecmp || 大小無視の比較。 || strcasecmp($a, $b)
+文字列 || strncmp || 先頭 n 文字の比較。 || strncmp($a, $b, 3)
+文字列 || strnatcmp || 自然順の比較。 || strnatcmp($a, $b)
+文字列 || similar_text || 類似度。 || similar_text($a, $b)
+文字列 || levenshtein || 編集距離。 || levenshtein($a, $b)
+文字列 || soundex / metaphone || 発音の近さ。 || soundex($s)
+文字列 || strstr || 最初の一致以降を返す。 || strstr($s, "@")
+文字列 || strrchr || 最後の文字以降を返す。 || strrchr($s, "/")
+文字列 || substr_count || 出現回数。 || substr_count($s, "a")
+文字列 || str_word_count || 単語数。 || str_word_count($s)
+文字列 || wordwrap || 指定幅で折り返す。 || wordwrap($s, 20, "\n")
+文字列 || nl2br || 改行を br タグに。 || nl2br($s)
+文字列 || strip_tags || タグを除去。 || strip_tags($s)
+文字列 || htmlspecialchars || HTML 特殊文字をエスケープ。 || htmlspecialchars($s, ENT_QUOTES)
+文字列 || htmlspecialchars_decode || エスケープを戻す。 || htmlspecialchars_decode($s)
+文字列 || html_entity_decode || HTML エンティティを戻す。 || html_entity_decode($s)
+文字列 || addslashes || スラッシュで退避。 || addslashes($s)
+文字列 || number_format || 数値の桁区切り。 || number_format(1234.5, 2)
+文字列 || money_format の代替 || NumberFormatter を使う。 || NumberFormatter
+文字列 || urlencode / rawurlencode || URL 用の符号化。 || urlencode($s)
+文字列 || urldecode || URL の復号。 || urldecode($s)
+文字列 || http_build_query || 配列をクエリ文字列に。 || http_build_query($a)
+文字列 || parse_url || URL を分解。 || parse_url($u)
+文字列 || parse_str || クエリ文字列を配列に。 || parse_str($q, $out)
+文字列 || base64_encode / decode || Base64 変換。 || base64_encode($s)
+文字列 || bin2hex / hex2bin || 16進数との変換。 || bin2hex($s)
+文字列 || md5 / sha1 || 旧来のハッシュ。 || md5($s)
+文字列 || hash || 各種ハッシュの計算。 || hash('sha256', $s)
+文字列 || hash_hmac || 鍵付きハッシュ。 || hash_hmac('sha256', $d, $k)
+文字列 || crc32 || チェックサム。 || crc32($s)
+文字列 || json_encode || JSON に変換。 || json_encode($a)
+文字列 || json_decode || JSON を解析。 || json_decode($s, true)
+文字列 || json_last_error_msg || JSON のエラー内容。 || json_last_error_msg()
+文字列 || JSON_THROW_ON_ERROR || エラーを例外にする。 || json_decode($s, flags: JSON_THROW_ON_ERROR)
+文字列 || JSON_PRETTY_PRINT || 整形して出力。 || JSON_PRETTY_PRINT
+文字列 || JSON_UNESCAPED_UNICODE || 日本語をそのまま出力。 || JSON_UNESCAPED_UNICODE
+文字列 || serialize / unserialize || PHP 独自の直列化。 || serialize($a)
+文字列 || mb_convert_encoding || 文字コード変換。 || mb_convert_encoding($s, 'UTF-8', 'SJIS')
+文字列 || mb_internal_encoding || 内部文字コード。 || mb_internal_encoding('UTF-8')
+文字列 || mb_detect_encoding || 文字コード判定。 || mb_detect_encoding($s)
+文字列 || mb_convert_kana || かなの変換。 || mb_convert_kana($s, 'KV')
+文字列 || mb_strimwidth || 幅で切り詰め。 || mb_strimwidth($s, 0, 10, '...')
+文字列 || mb_strwidth || 表示幅。 || mb_strwidth($s)
+文字列 || iconv || 文字コード変換。 || iconv('SJIS', 'UTF-8', $s)
+文字列 || sprintf の書式 || %d %s %f など。 || sprintf("%s", $a)
+文字列 || vsprintf || 配列で書式化。 || vsprintf("%d-%d", [1, 2])
+文字列 || sscanf || 書式で読み取る。 || sscanf("12", "%d")
+文字列 || ctype_digit || 数字のみか判定。 || ctype_digit($s)
+文字列 || ctype_alpha || 英字のみか判定。 || ctype_alpha($s)
+文字列 || ctype_alnum || 英数字のみか判定。 || ctype_alnum($s)
+文字列 || chr / ord || 文字コード変換。 || ord("a")
+文字列 || mb_ord / mb_chr || Unicode コードポイント。 || mb_ord("あ")
+文字列 || lcg_value || 0〜1 の乱数。 || lcg_value()
+文字列 || nl_langinfo || ロケール情報。 || nl_langinfo
+文字列 || setlocale || ロケールの設定。 || setlocale(LC_ALL, 'ja_JP')
+文字列 || strval と文字列化 || 値を文字列にする。 || (string)$x
+文字列 || Stringable || __toString を持つ型。 || Stringable
+文字列 || __toString || 文字列変換メソッド。 || public function __toString()
+文字列 || 文字列の添字アクセス || 位置で 1 文字取得。 || $s[0]
+文字列 || 変数展開 || ダブルクォート内で展開。 || "Hi $name"
+文字列 || 複雑な変数展開 || 波括弧で式を埋め込む。 || "{$a['x']}"
+文字列 || シングルクォート || 展開しない文字列。 || 'a $b'

@@ -1,0 +1,12 @@
+補足 || Option Strict On || 暗黙の型変換を禁止する。 || Option Strict On
+補足 || Option Infer || ローカル変数の型推論を制御。 || Option Infer On
+補足 || Option Explicit || 変数宣言を必須にする。 || Option Explicit On
+補足 || Option Compare || 文字列比較の既定。 || Option Compare Text
+補足 || Imports エイリアス || 別名を付けて取り込む。 || Imports S = System.Text
+補足 || Namespace ブロック || 名前空間を定義する。 || Namespace A
+補足 || Global キーワード || 最上位の名前空間を指す。 || Global.System.Console
+補足 || My.Settings || アプリ設定へのアクセス。 || My.Settings.Name
+補足 || My.Computer.FileSystem || ファイル操作の簡易 API。 || My.Computer.FileSystem.ReadAllText(p)
+補足 || Partial Class || クラスを分割して定義。 || Partial Class Form1
+補足 || WithEvents / Handles || イベントの結び付け。 || Handles Button1.Click
+補足 || Static ローカル変数 || 呼び出し間で値を保持。 || Static n As Integer

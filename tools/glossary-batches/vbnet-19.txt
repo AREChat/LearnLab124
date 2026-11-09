@@ -1,0 +1,16 @@
+補足 || AddHandler || 実行時にイベントを結び付ける。 || AddHandler b.Click, AddressOf OnClick
+補足 || RemoveHandler || イベントの結び付けを解除する。 || RemoveHandler b.Click, AddressOf OnClick
+補足 || RaiseEvent || イベントを発生させる。 || RaiseEvent Changed(Me, e)
+補足 || Custom Event || イベントの登録処理を自作する。 || Public Custom Event
+補足 || Delegate Sub || デリゲート型の宣言。 || Delegate Sub Callback(x As Integer)
+補足 || AddressOf || メソッドへの参照を取る。 || AddressOf Foo
+補足 || Lambda 式 (VB) || Function で書く無名関数。 || Function(x) x * 2
+補足 || Iterator Function || Yield で列挙を返す関数。 || Iterator Function Gen() As IEnumerable(Of Integer)
+補足 || Yield || 列挙の要素を返す。 || Yield 1
+補足 || Async / Await (VB) || 非同期処理の記法。 || Await Task.Delay(100)
+補足 || Nullable(Of T) || 値型を Nothing 可能にする。 || Dim n As Integer? = Nothing
+補足 || If 演算子 || 条件による値の選択。 || If(a > b, a, b)
+補足 || TryCast || 失敗時に Nothing を返す変換。 || TryCast(o, String)
+補足 || DirectCast || 型を変換する(厳密)。 || DirectCast(o, String)
+補足 || Using ブロック || 終了時に自動で破棄する。 || Using r As New StreamReader(p)
+補足 || SyncLock || 排他制御のブロック。 || SyncLock obj

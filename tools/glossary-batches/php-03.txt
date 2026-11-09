@@ -1,0 +1,236 @@
+データベース(PHP) || PDO || DB 接続の共通 API。 || new PDO($dsn, $u, $p)
+データベース(PHP) || DSN || 接続先の指定文字列。 || mysql:host=localhost;dbname=a
+データベース(PHP) || PDO::ATTR_ERRMODE || エラー処理の設定。 || PDO::ERRMODE_EXCEPTION
+データベース(PHP) || PDO::ATTR_DEFAULT_FETCH_MODE || 取得形式の既定。 || PDO::FETCH_ASSOC
+データベース(PHP) || prepare || プリペアドステートメント作成。 || $pdo->prepare($sql)
+データベース(PHP) || execute || SQL の実行。 || $st->execute([$id])
+データベース(PHP) || bindValue / bindParam || 値や変数を結び付ける。 || $st->bindValue(':id', 1, PDO::PARAM_INT)
+データベース(PHP) || プレースホルダ || 値の差し込み位置。 || WHERE id = :id
+データベース(PHP) || fetch || 1 行取得。 || $st->fetch()
+データベース(PHP) || fetchAll || 全行取得。 || $st->fetchAll()
+データベース(PHP) || fetchColumn || 1 列だけ取得。 || $st->fetchColumn()
+データベース(PHP) || FETCH_ASSOC / FETCH_OBJ || 取得形式。 || PDO::FETCH_OBJ
+データベース(PHP) || FETCH_CLASS || クラスに取り込む。 || PDO::FETCH_CLASS
+データベース(PHP) || rowCount || 影響を受けた行数。 || $st->rowCount()
+データベース(PHP) || lastInsertId || 直近の挿入 ID。 || $pdo->lastInsertId()
+データベース(PHP) || beginTransaction || トランザクション開始。 || $pdo->beginTransaction()
+データベース(PHP) || commit / rollBack || 確定と取り消し。 || $pdo->commit()
+データベース(PHP) || SQL インジェクション || 入力で SQL が壊れる脆弱性。 || prepare で防ぐ
+データベース(PHP) || mysqli || MySQL 専用の拡張。 || new mysqli($h, $u, $p, $d)
+データベース(PHP) || mysqli_real_escape_string || エスケープ処理。 || $db->real_escape_string($s)
+データベース(PHP) || mysqli プリペアド || 安全な実行。 || $db->prepare($sql)
+データベース(PHP) || 接続の永続化 || 接続を使い回す。 || PDO::ATTR_PERSISTENT
+データベース(PHP) || SQLite (PDO) || ファイル DB への接続。 || new PDO('sqlite:a.db')
+データベース(PHP) || PostgreSQL (PDO) || pgsql ドライバ。 || pgsql:host=localhost
+データベース(PHP) || charset=utf8mb4 || 絵文字対応の文字コード。 || charset=utf8mb4
+データベース(PHP) || ページング || LIMIT と OFFSET。 || LIMIT :n OFFSET :o
+データベース(PHP) || N+1 問題 || 大量の追加クエリ。 || eager loading
+データベース(PHP) || ORM || オブジェクトと表の対応。 || Eloquent
+データベース(PHP) || Doctrine || 代表的な PHP の ORM。 || EntityManager
+データベース(PHP) || マイグレーション || スキーマ変更の管理。 || php artisan migrate
+データベース(PHP) || シーダー || 初期データの投入。 || DatabaseSeeder
+データベース(PHP) || Redis (PHP) || キーバリュー DB。 || new Redis()
+データベース(PHP) || Memcached || メモリキャッシュ。 || new Memcached()
+データベース(PHP) || APCu || プロセス内キャッシュ。 || apcu_fetch('k')
+データベース(PHP) || OPcache || スクリプトのキャッシュ。 || opcache.enable=1
+Web || $_GET || クエリパラメータ。 || $_GET['q']
+Web || $_POST || フォーム送信の値。 || $_POST['name']
+Web || $_REQUEST || GET・POST・COOKIE の合成。 || $_REQUEST
+Web || $_SERVER || サーバー情報。 || $_SERVER['REQUEST_METHOD']
+Web || $_COOKIE || クッキーの値。 || $_COOKIE['a']
+Web || $_SESSION || セッションの値。 || $_SESSION['user']
+Web || $_ENV / getenv || 環境変数。 || getenv('APP_ENV')
+Web || filter_input || 入力の取得と検証。 || filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT)
+Web || filter_var || 値の検証・変換。 || filter_var($e, FILTER_VALIDATE_EMAIL)
+Web || FILTER_VALIDATE_URL || URL の検証。 || FILTER_VALIDATE_URL
+Web || FILTER_SANITIZE_* || 値の無害化。 || FILTER_SANITIZE_NUMBER_INT
+Web || header || HTTP ヘッダーの送信。 || header('Location: /a')
+Web || リダイレクト || Location ヘッダーで遷移。 || header('Location: /'); exit;
+Web || http_response_code || 状態コードの設定。 || http_response_code(404)
+Web || headers_sent || ヘッダー送信済みか。 || headers_sent()
+Web || setcookie || クッキーの設定。 || setcookie('a', 'b', $opts)
+Web || session_start || セッションの開始。 || session_start();
+Web || session_regenerate_id || セッション ID の再生成。 || session_regenerate_id(true)
+Web || session_destroy || セッションの破棄。 || session_destroy();
+Web || session.cookie_httponly || JS から読ませない設定。 || httponly
+Web || session.cookie_secure || HTTPS のみで送る。 || secure
+Web || SameSite 属性 || 他サイトからの送信を制限。 || samesite=Lax
+Web || ob_start || 出力バッファリング。 || ob_start();
+Web || ob_get_clean || バッファを取得して破棄。 || ob_get_clean()
+Web || flush || 出力を送信。 || flush()
+Web || php://output || 出力ストリーム。 || fopen('php://output', 'w')
+Web || Content-Type ヘッダー || 応答の種類。 || header('Content-Type: application/json')
+Web || JSON API の応答 || json_encode と exit。 || echo json_encode($a)
+Web || CORS ヘッダー || 他オリジンの許可。 || Access-Control-Allow-Origin
+Web || file_get_contents で HTTP || 簡易な HTTP 取得。 || file_get_contents($url)
+Web || cURL || 高機能な HTTP 通信。 || curl_init($url)
+Web || curl_setopt || cURL の設定。 || curl_setopt($c, CURLOPT_RETURNTRANSFER, true)
+Web || curl_exec || 通信の実行。 || curl_exec($c)
+Web || Guzzle || HTTP クライアントライブラリ。 || new Client()
+Web || mail || メール送信の簡易関数。 || mail($to, $s, $b)
+Web || mb_send_mail || 日本語メールの送信。 || mb_send_mail($to, $s, $b)
+Web || PHPMailer || メール送信ライブラリ。 || new PHPMailer()
+Web || Symfony Mailer || メール送信の部品。 || Mailer
+Web || PSR-7 || HTTP メッセージの規約。 || RequestInterface
+Web || PSR-15 || ミドルウェアの規約。 || MiddlewareInterface
+Web || PSR-3 || ログの規約。 || LoggerInterface
+Web || PSR-11 || コンテナの規約。 || ContainerInterface
+Web || Monolog || ログライブラリ。 || new Logger('a')
+Web || フロントコントローラ || 入口を 1 つにする。 || index.php
+Web || ルーティング || URL と処理の対応。 || Route::get('/a')
+Web || ミドルウェア || 前後処理の差し込み。 || middleware
+Web || テンプレートエンジン || 画面と処理の分離。 || Twig
+Web || Twig || テンプレートエンジン。 || {{ name }}
+Web || Blade || Laravel のテンプレート。 || @foreach
+Web || MVC || 画面・処理・データの分離。 || Model View Controller
+Web || REST API || HTTP による API 設計。 || GET /users
+Web || WebSocket (Ratchet) || 双方向通信。 || Ratchet
+Web || Swoole || 非同期の拡張。 || Swoole\Http\Server
+Web || ReactPHP || イベント駆動の基盤。 || React\EventLoop
+Web || FrankenPHP || 高速なアプリサーバー。 || frankenphp
+Web || RoadRunner || PHP のアプリサーバー。 || rr serve
+Web || Fiber || 軽量な協調並行処理。 || new Fiber($f)
+Web || Fiber::suspend || 処理の中断。 || Fiber::suspend()
+セキュリティ || XSS || スクリプト注入の脆弱性。 || htmlspecialchars
+セキュリティ || 出力時のエスケープ || 表示直前に処理する。 || htmlspecialchars($s, ENT_QUOTES, 'UTF-8')
+セキュリティ || CSRF || 偽装リクエスト。 || トークン
+セキュリティ || CSRF トークン || 正規の画面か確認する。 || bin2hex(random_bytes(32))
+セキュリティ || hash_equals || 時間一定の比較。 || hash_equals($a, $b)
+セキュリティ || password_hash || パスワードのハッシュ化。 || password_hash($p, PASSWORD_DEFAULT)
+セキュリティ || password_verify || パスワードの検証。 || password_verify($p, $h)
+セキュリティ || password_needs_rehash || 再ハッシュの必要性。 || password_needs_rehash($h, PASSWORD_DEFAULT)
+セキュリティ || PASSWORD_ARGON2ID || Argon2id のアルゴリズム。 || PASSWORD_ARGON2ID
+セキュリティ || openssl_encrypt || 暗号化。 || openssl_encrypt($d, 'aes-256-gcm', $k, 0, $iv, $tag)
+セキュリティ || sodium || 現代的な暗号ライブラリ。 || sodium_crypto_secretbox
+セキュリティ || セッション固定攻撃 || ID の固定を狙う攻撃。 || session_regenerate_id
+セキュリティ || ディレクトリトラバーサル || 上位パスへの侵入。 || basename
+セキュリティ || ファイルアップロードの検証 || 拡張子と MIME を確認。 || finfo
+セキュリティ || eval の危険性 || 任意コード実行の恐れ。 || eval
+セキュリティ || unserialize の危険性 || 信頼できない入力は避ける。 || allowed_classes
+セキュリティ || コマンドインジェクション || OS コマンドへの注入。 || escapeshellarg
+セキュリティ || escapeshellarg || シェル引数のエスケープ。 || escapeshellarg($s)
+セキュリティ || ホワイトリスト検証 || 許可値のみ通す。 || in_array($x, $allowed, true)
+セキュリティ || display_errors の本番設定 || 本番では無効にする。 || display_errors=0
+セキュリティ || expose_php || バージョン表示を隠す。 || expose_php=0
+セキュリティ || open_basedir || アクセス範囲の制限。 || open_basedir
+セキュリティ || disable_functions || 危険な関数の無効化。 || disable_functions
+セキュリティ || allow_url_include || 外部ファイル読込の禁止。 || allow_url_include=0
+セキュリティ || HTTPS 強制 || HSTS ヘッダーなど。 || Strict-Transport-Security
+セキュリティ || CSP || コンテンツ保護ポリシー。 || Content-Security-Policy
+セキュリティ || X-Frame-Options || 埋め込みの制限。 || X-Frame-Options: DENY
+セキュリティ || レート制限 || 回数を制限する。 || throttle
+セキュリティ || 認証と認可 || 本人確認と権限確認。 || auth
+セキュリティ || JWT (PHP) || 署名付きトークン。 || firebase/php-jwt
+セキュリティ || OAuth2 (PHP) || 認可の標準。 || league/oauth2-client
+セキュリティ || Composer audit || 依存の脆弱性検査。 || composer audit
+Composer || Composer || 依存管理ツール。 || composer install
+Composer || composer.json || 依存の定義。 || composer.json
+Composer || composer.lock || 版を固定するファイル。 || composer.lock
+Composer || composer require || パッケージの追加。 || composer require a/b
+Composer || composer update || パッケージの更新。 || composer update
+Composer || composer install --no-dev || 本番向けの導入。 || --no-dev
+Composer || composer dump-autoload || オートロードの再生成。 || composer dump-autoload -o
+Composer || autoload の psr-4 || 名前空間の対応。 || "psr-4": {"App\\": "src/"}
+Composer || vendor ディレクトリ || 導入先。 || vendor/
+Composer || Packagist || 公開リポジトリ。 || packagist.org
+Composer || composer scripts || コマンドの定義。 || "scripts"
+Composer || composer create-project || 雛形から作成。 || composer create-project
+Composer || セマンティックバージョニング (PHP) || 版番号の規則。 || ^1.2
+Composer || キャレット制約 || 互換のある版の指定。 || ^2.0
+Composer || PHP_CodeSniffer || コード規約の検査。 || phpcs
+Composer || PHP-CS-Fixer || コードの自動整形。 || php-cs-fixer fix
+Composer || PHPStan || 静的解析。 || phpstan analyse
+Composer || Psalm || 静的解析。 || psalm
+Composer || Rector || 自動リファクタリング。 || rector
+Composer || PHPUnit || テストフレームワーク。 || class ATest extends TestCase
+Composer || assertSame / assertEquals || 値の検証。 || $this->assertSame(1, $x)
+Composer || dataProvider || テストデータの供給。 || #[DataProvider('d')]
+Composer || モック (PHPUnit) || 代役の生成。 || createMock(A::class)
+Composer || Mockery || モックライブラリ。 || Mockery::mock()
+Composer || Pest || 簡潔なテスト FW。 || it('works', fn() => ...)
+Composer || Codeception || 統合的なテスト FW。 || codecept run
+Composer || Behat || 振る舞い駆動のテスト。 || Behat
+Composer || Xdebug || デバッガ・プロファイラ。 || xdebug.mode=debug
+Composer || ステップ実行 (PHP) || 1 行ずつ追う。 || breakpoint
+Composer || Docker (PHP) || コンテナで開発。 || php:8.3-fpm
+Composer || Laravel Sail || Laravel の Docker 環境。 || ./vendor/bin/sail up
+Composer || XAMPP || 開発用の統合環境。 || xampp
+Composer || Laragon || Windows の開発環境。 || laragon
+Composer || Homestead || Laravel の仮想環境。 || homestead
+Laravel || Laravel || 代表的な PHP FW。 || composer create-project laravel/laravel
+Laravel || Artisan || コマンドラインツール。 || php artisan serve
+Laravel || ルート定義 || routes/web.php。 || Route::get('/', fn() => 'hi');
+Laravel || コントローラ || リクエストを処理。 || php artisan make:controller
+Laravel || Eloquent || Laravel の ORM。 || User::find(1)
+Laravel || モデル || テーブルに対応するクラス。 || class User extends Model
+Laravel || リレーション || モデル同士の関連。 || hasMany
+Laravel || belongsTo / hasOne || 1 対 1・多対 1。 || $this->belongsTo(User::class)
+Laravel || belongsToMany || 多対多。 || belongsToMany
+Laravel || スコープ || 検索条件の再利用。 || scopeActive
+Laravel || アクセサ / ミューテータ || 値の取得・設定時の変換。 || Attribute::make
+Laravel || $fillable / $guarded || 一括代入の許可。 || protected $fillable
+Laravel || クエリビルダ || SQL を組み立てる。 || DB::table('a')->get()
+Laravel || Collection || 配列操作の拡張。 || collect($a)->map()
+Laravel || リクエストの検証 || validate メソッド。 || $request->validate([])
+Laravel || FormRequest || 検証をクラスに分離。 || make:request
+Laravel || ミドルウェア (Laravel) || リクエストの前後処理。 || auth
+Laravel || サービスコンテナ || 依存性の解決。 || app()
+Laravel || サービスプロバイダ || 起動時の登録処理。 || register()
+Laravel || ファサード || 静的記法の窓口。 || Cache::get('a')
+Laravel || .env || 環境ごとの設定。 || APP_ENV=local
+Laravel || config() || 設定値の取得。 || config('app.name')
+Laravel || Blade ディレクティブ || テンプレートの命令。 || @if @foreach
+Laravel || @extends / @section || レイアウトの継承。 || @extends('layout')
+Laravel || Blade コンポーネント || 再利用できる部品。 || <x-alert />
+Laravel || Livewire || PHP で動的 UI。 || wire:click
+Laravel || Inertia.js || SPA 風の連携。 || Inertia::render
+Laravel || Breeze / Jetstream || 認証の雛形。 || laravel/breeze
+Laravel || Sanctum || API 認証。 || auth:sanctum
+Laravel || Passport || OAuth2 の認証。 || passport
+Laravel || Gate / Policy || 認可の仕組み。 || Gate::allows
+Laravel || キュー || 非同期ジョブ。 || dispatch(new Job)
+Laravel || ジョブ || キューで実行する処理。 || ShouldQueue
+Laravel || スケジューラ || 定期実行。 || $schedule->daily()
+Laravel || イベントとリスナー || 出来事の通知。 || event(new E)
+Laravel || Notification || 通知の送信。 || notify()
+Laravel || Mailable || メールのクラス。 || Mail::to($u)->send()
+Laravel || Storage || ファイル保存の抽象化。 || Storage::put('a', $d)
+Laravel || キャッシュ (Laravel) || 結果の保存。 || Cache::remember
+Laravel || Tinker || 対話型の操作。 || php artisan tinker
+Laravel || Telescope / Horizon || 監視・キュー管理。 || telescope
+Laravel || Pint || コード整形。 || ./vendor/bin/pint
+Laravel || Symfony || 部品ベースの FW。 || symfony new
+Laravel || Symfony Console || CLI の部品。 || Command
+Laravel || Symfony HttpFoundation || HTTP の抽象化。 || Request, Response
+Laravel || CodeIgniter || 軽量な FW。 || CodeIgniter
+Laravel || CakePHP || 規約重視の FW。 || bake
+Laravel || Slim || マイクロ FW。 || $app->get()
+Laravel || Yii || 高速な FW。 || yii
+Laravel || Laminas || 旧 Zend Framework。 || laminas
+Laravel || WordPress || 代表的な CMS。 || wp-config.php
+Laravel || WordPress のフック || アクションとフィルター。 || add_action('init', 'f')
+Laravel || add_filter || 値を加工するフック。 || add_filter('the_title', 'f')
+Laravel || テーマ || 見た目のまとまり。 || functions.php
+Laravel || プラグイン (WP) || 機能の追加。 || wp-content/plugins
+Laravel || WP_Query || 投稿の検索。 || new WP_Query($args)
+Laravel || ショートコード || 本文中の簡易記法。 || add_shortcode
+Laravel || wpdb || WordPress の DB クラス。 || $wpdb->get_results()
+Laravel || Drupal || CMS・FW。 || drupal
+Laravel || EC-CUBE || 日本の EC パッケージ。 || EC-CUBE
+Laravel || Magento || EC プラットフォーム。 || Magento
+Laravel || phpMyAdmin || DB の管理画面。 || phpMyAdmin
+Laravel || php.ini || PHP の設定ファイル。 || memory_limit=256M
+Laravel || upload_max_filesize || アップロードの上限。 || upload_max_filesize=10M
+Laravel || post_max_size || POST の上限。 || post_max_size=12M
+Laravel || max_execution_time || 実行時間の上限。 || max_execution_time=30
+Laravel || date.timezone || タイムゾーンの設定。 || date.timezone=Asia/Tokyo
+Laravel || short_open_tag || 短縮タグの許可。 || short_open_tag=Off
+Laravel || PHP 7 の新機能 || スカラー型、?? 演算子。 || ??
+Laravel || PHP 8.0 の新機能 || match、名前付き引数、JIT。 || match
+Laravel || PHP 8.1 の新機能 || enum、readonly、Fiber。 || enum
+Laravel || PHP 8.2 の新機能 || readonly クラス、DNF 型。 || readonly class
+Laravel || PHP 8.3 の新機能 || 型付きクラス定数など。 || const string A = 'a';
+Laravel || PHP 8.4 の新機能 || プロパティフック。 || public string $n { get => ... }
+Laravel || JIT コンパイラ || 実行時のコンパイル。 || opcache.jit
+Laravel || 非推奨機能 || 将来削除される機能。 || #[Deprecated]
+Laravel || EOL (サポート終了) || 更新が止まる時期。 || php.net/supported-versions
