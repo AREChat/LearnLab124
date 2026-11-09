@@ -1,0 +1,184 @@
+Date詳細 || Date.UTC || UTC の時刻値を作る。 || Date.UTC(2026, 10, 9)
+Date詳細 || Date.parse || 文字列を時刻値に変える。 || Date.parse('2026-11-09')
+Date詳細 || getTime / valueOf || UNIX ミリ秒を取る。 || d.getTime()
+Date詳細 || getUTCFullYear / getUTCHours || UTC 基準の値。 || d.getUTCHours()
+Date詳細 || setUTCDate / setUTCHours || UTC 基準で設定する。 || d.setUTCHours(0)
+Date詳細 || getTimezoneOffset || UTC との差（分）。 || d.getTimezoneOffset()
+Date詳細 || toDateString / toTimeString || 日付・時刻の文字列。 || d.toDateString()
+Date詳細 || toUTCString / toGMTString || UTC の文字列。 || d.toUTCString()
+Date詳細 || toLocaleTimeString || 地域の書式で時刻。 || d.toLocaleTimeString('ja-JP')
+Date詳細 || toLocaleString のオプション || 書式を細かく指定する。 || d.toLocaleString('ja-JP', {timeZone: 'Asia/Tokyo'})
+Date詳細 || Invalid Date の判定 || NaN かで確認する。 || isNaN(d)
+Date詳細 || Date のコピー || 値から新しく作る。 || new Date(d)
+Date詳細 || 日付文字列の落とし穴 || 形式によって UTC とローカルで解釈が違う。 || new Date('2026-11-09T00:00')
+Date詳細 || Temporal.PlainDate || 日付だけ。 || Temporal.PlainDate.from('2026-11-09')
+Date詳細 || Temporal.ZonedDateTime || 時間帯つきの日時。 || Temporal.Now.zonedDateTimeISO()
+Date詳細 || Temporal.Duration || 期間。 || Temporal.Duration.from({days: 1})
+Date詳細 || Temporal.Instant || 絶対的な時刻。 || Temporal.Now.instant()
+Date詳細 || Intl.DateTimeFormat の dateStyle || 日付の定型書式。 || {dateStyle: 'long'}
+Date詳細 || Intl.DateTimeFormat の timeZone || 時間帯の指定。 || {timeZone: 'UTC'}
+Date詳細 || formatToParts || 部品に分けて整形する。 || fmt.formatToParts(d)
+Date詳細 || Intl.NumberFormat の style || 通貨・割合などの書式。 || {style: 'percent'}
+Date詳細 || Intl.NumberFormat の notation || 短縮表記。 || {notation: 'compact'}
+Date詳細 || Intl.DisplayNames || 国名や言語名の表示。 || new Intl.DisplayNames(['ja'], {type: 'region'})
+Date詳細 || Intl.Locale || 言語設定の情報。 || new Intl.Locale('ja-JP')
+Date詳細 || Intl.supportedValuesOf || 対応する値の一覧。 || Intl.supportedValuesOf('timeZone')
+Date詳細 || navigator.languages || 優先言語の一覧。 || navigator.languages
+Date詳細 || 和暦の表示 || calendar オプションを使う。 || {calendar: 'japanese'}
+Date詳細 || 祝日の判定 || 外部データや計算が必要。 || holiday-jp
+Date詳細 || 営業日の計算 || 土日と祝日を除く。 || business days
+Date詳細 || 週番号の計算 || ISO 週の求め方。 || ISO week
+Date詳細 || 日付ピッカーの値 || YYYY-MM-DD の文字列。 || input.valueAsDate
+Date詳細 || サマータイム || 時刻のずれに注意。 || DST
+イテレータと生成 || Iterator プロトコル || next() が {value, done} を返す。 || it.next()
+イテレータと生成 || Iterable プロトコル || Symbol.iterator を持つ。 || for (const x of obj)
+イテレータと生成 || Iterator.from || イテレータを作る。 || Iterator.from(a)
+イテレータと生成 || iterator.map / filter / take || 反復の変換。 || it.take(3)
+イテレータと生成 || iterator.drop / flatMap || 読み飛ばし・平坦化。 || it.drop(1)
+イテレータと生成 || iterator.toArray / reduce || 配列化・畳み込み。 || it.toArray()
+イテレータと生成 || iterator.some / every / find || 条件の確認。 || it.find(f)
+イテレータと生成 || generator.next / return / throw || ジェネレータの操作。 || g.next()
+イテレータと生成 || 無限のジェネレータ || 必要な分だけ取り出す。 || function* nat() { let n = 0; while (true) yield n++ }
+イテレータと生成 || ジェネレータでの双方向通信 || next に値を渡す。 || const x = yield 1
+イテレータと生成 || spread とイテレータ || 反復可能なら展開できる。 || [...gen()]
+イテレータと生成 || Array.from のマップ関数 || 変換しながら配列にする。 || Array.from(it, f)
+イテレータと生成 || 非同期ジェネレータ || async function* で順次返す。 || for await (const x of g())
+イテレータと生成 || ReadableStream の async iteration || ストリームを for await で読む。 || for await (const c of stream)
+イテレータと生成 || entries() の分割代入 || キーと値を同時に取る。 || for (const [k, v] of m)
+イテレータと生成 || Symbol.iterator の実装例 || 独自の反復を定義する。 || *[Symbol.iterator]() { }
+Web Components || customElements.define || 独自要素を登録する。 || customElements.define('x-a', A)
+Web Components || observedAttributes || 監視する属性。 || static get observedAttributes()
+Web Components || shadowRoot.innerHTML || Shadow DOM に内容を入れる。 || this.shadowRoot.innerHTML = html
+Web Components || <slot> の利用 || 外から内容を差し込む。 || <slot name="a">
+Web Components || CSS Parts と変数 || 外からの装飾の窓口。 || ::part(x), var(--x)
+Web Components || adoptedStyleSheets || スタイルを共有する。 || shadow.adoptedStyleSheets = [sheet]
+Web Components || customElements.whenDefined || 定義されるまで待つ。 || await customElements.whenDefined('x-a')
+Web Components || template 要素の複製 || template.content を複製する。 || template.content.cloneNode(true)
+Web Components || Lit || Web Components を書きやすくする。 || @customElement('x-a')
+Web Components || Stencil || Web Components のコンパイラ。 || @Component
+Web Components || イベントの境界 (composed) || Shadow を越えるイベント。 || {composed: true}
+Web Components || form-associated || フォームに参加する独自要素。 || static formAssociated
+PWAと保存 || manifest の display || 表示方式。 || "display": "standalone"
+PWAと保存 || beforeinstallprompt || インストール案内の制御。 || window.addEventListener('beforeinstallprompt', f)
+PWAと保存 || Service Worker のライフサイクル || install / activate / fetch。 || self.addEventListener('install', f)
+PWAと保存 || skipWaiting / clients.claim || 即座に有効化する。 || self.skipWaiting()
+PWAと保存 || キャッシュ戦略 || cache-first / network-first など。 || stale-while-revalidate
+PWAと保存 || Workbox || Service Worker の補助ライブラリ。 || workbox.routing
+PWAと保存 || Background Sync || 回線復帰後に送信する。 || registration.sync.register('a')
+PWAと保存 || Periodic Background Sync || 定期的な更新。 || periodicSync.register
+PWAと保存 || navigator.storage.estimate || 保存容量の見積り。 || await navigator.storage.estimate()
+PWAと保存 || navigator.storage.persist || 永続化を要求する。 || navigator.storage.persist()
+PWAと保存 || IndexedDB の基本 || open・transaction・objectStore。 || db.transaction('s', 'readwrite')
+PWAと保存 || idb ライブラリ || IndexedDB を Promise で扱う。 || openDB('db', 1)
+PWAと保存 || Dexie.js || IndexedDB の便利なラッパー。 || new Dexie('db')
+PWAと保存 || Origin Private File System || ブラウザ内の私的なファイル領域。 || navigator.storage.getDirectory()
+PWAと保存 || Cache Storage のバージョニング || 名前に版を付ける。 || caches.open('v2')
+PWAと保存 || オフライン対応の画面 || 通信できない時の代替。 || offline.html
+PWAと保存 || プッシュ通知の購読 || 購読情報をサーバーに送る。 || pushManager.subscribe
+PWAと保存 || VAPID || プッシュの送信者の認証。 || applicationServerKey
+PWAと保存 || Notification.requestPermission || 通知の許可を求める。 || await Notification.requestPermission()
+PWAと保存 || Web App Manifest の shortcuts || ショートカット項目。 || "shortcuts": []
+PWAと保存 || Window Controls Overlay || タイトルバーの領域を使う。 || display_override
+PWAと保存 || URL Handlers / Protocol Handlers || URL の関連づけ。 || registerProtocolHandler
+アニメーション・UIライブラリ || GSAP || 高機能なアニメーション。 || gsap.to(el, {x: 100})
+アニメーション・UIライブラリ || anime.js || 軽量なアニメーション。 || anime({targets: el})
+アニメーション・UIライブラリ || Framer Motion || React のアニメーション。 || <motion.div animate>
+アニメーション・UIライブラリ || Motion One || 軽量な Web Animations 利用。 || animate(el, {opacity: 1})
+アニメーション・UIライブラリ || Lottie || 書き出したアニメの再生。 || lottie.loadAnimation()
+アニメーション・UIライブラリ || ScrollTrigger || スクロール連動のアニメ。 || ScrollTrigger.create()
+アニメーション・UIライブラリ || Lenis / Locomotive Scroll || 滑らかなスクロール。 || new Lenis()
+アニメーション・UIライブラリ || AOS / WOW.js || 出現アニメーション。 || AOS.init()
+アニメーション・UIライブラリ || Material UI (MUI) || React の UI 部品。 || <Button variant="contained">
+アニメーション・UIライブラリ || shadcn/ui || コピーして使う UI 部品。 || npx shadcn add button
+アニメーション・UIライブラリ || Radix UI || 振る舞いだけの部品。 || @radix-ui/react-dialog
+アニメーション・UIライブラリ || Headless UI || 見た目のない部品。 || @headlessui/react
+アニメーション・UIライブラリ || Chakra UI / Mantine || React の UI 部品集。 || <Button>
+アニメーション・UIライブラリ || Ant Design || 業務向けの UI 部品集。 || antd
+アニメーション・UIライブラリ || Element Plus / Vuetify || Vue の UI 部品集。 || <el-button>
+アニメーション・UIライブラリ || DaisyUI || Tailwind のコンポーネント集。 || class="btn"
+アニメーション・UIライブラリ || styled-components / Emotion || CSS-in-JS。 || styled.div``
+アニメーション・UIライブラリ || vanilla-extract / Panda CSS || 型安全な CSS。 || style({})
+アニメーション・UIライブラリ || Storybook の使い方 || 部品を個別に確認する。 || *.stories.tsx
+アニメーション・UIライブラリ || i18next / FormatJS || 多言語対応。 || t('key')
+アニメーション・UIライブラリ || React Query の queryKey || キャッシュの識別子。 || useQuery({queryKey: ['a']})
+アニメーション・UIライブラリ || TanStack Table / Router / Form || 表・遷移・フォーム。 || useReactTable()
+アニメーション・UIライブラリ || Recharts / Victory / ECharts || グラフの部品。 || <LineChart>
+アニメーション・UIライブラリ || Apache ECharts || 高機能なグラフ。 || echarts.init(el)
+アニメーション・UIライブラリ || Mermaid.js || 図をテキストで描く。 || mermaid.initialize()
+アニメーション・UIライブラリ || KaTeX / MathJax || 数式の表示。 || katex.render(s, el)
+アニメーション・UIライブラリ || Monaco / CodeMirror || コードエディタ部品。 || monaco.editor.create()
+アニメーション・UIライブラリ || Quill / TipTap || リッチテキストエディタ。 || new Quill('#e')
+アニメーション・UIライブラリ || Fabric.js / Konva || Canvas の図形操作。 || new fabric.Canvas('c')
+アニメーション・UIライブラリ || PDF.js / jsPDF || PDF の表示・作成。 || new jsPDF()
+アニメーション・UIライブラリ || SheetJS (xlsx) || Excel の読み書き。 || XLSX.utils.json_to_sheet(a)
+アニメーション・UIライブラリ || html2canvas || 画面を画像にする。 || html2canvas(el)
+アニメーション・UIライブラリ || FullCalendar || カレンダー部品。 || new Calendar(el)
+アニメーション・UIライブラリ || Flatpickr / Pikaday || 日付選択部品。 || flatpickr('#d')
+アニメーション・UIライブラリ || Tippy.js / Popper || ツールチップの配置。 || tippy('#a')
+アニメーション・UIライブラリ || Floating UI || 浮かぶ要素の配置。 || computePosition()
+アニメーション・UIライブラリ || Hammer.js / use-gesture || ジェスチャー認識。 || new Hammer(el)
+アニメーション・UIライブラリ || Howler.js の使い方 || 音の再生。 || new Howl({src: ['a.mp3']})
+アニメーション・UIライブラリ || Matter.js / Cannon.js || 物理演算。 || Matter.Engine.create()
+アニメーション・UIライブラリ || Babylon.js || 3D ゲームエンジン。 || new BABYLON.Engine(canvas)
+アニメーション・UIライブラリ || p5.js || 創作向けの描画。 || function draw() { }
+アニメーション・UIライブラリ || Excalibur / Kaboom || 2D ゲームライブラリ。 || kaboom()
+JS用語 || コールバック関数 || 後から呼ばれる関数。 || setTimeout(cb, 0)
+JS用語 || 高階コンポーネント (HOC) || 部品を受け取って部品を返す。 || withAuth(Comp)
+JS用語 || レンダープロップ || 描画を関数で渡す。 || <List render={...}>
+JS用語 || ホイスティング || 宣言が先頭へ巻き上がる。 || hoisting
+JS用語 || ポリフィルとシム || 古い環境の補完。 || polyfill
+JS用語 || トランスパイラ || 構文を変換する道具。 || Babel
+JS用語 || ミニファイ || 空白や名前を縮めて軽くする。 || terser
+JS用語 || 難読化 || 解析しにくくする。 || javascript-obfuscator
+JS用語 || ソースマップの仕組み || 変換後と元の対応表。 || .map
+JS用語 || ホットリロード (HMR) || 保存で部分的に更新する。 || import.meta.hot
+JS用語 || SSR (サーバーサイドレンダリング) || サーバーで HTML を作る。 || renderToString
+JS用語 || CSR || ブラウザで描画する。 || client-side rendering
+JS用語 || SSG || ビルド時に HTML を作る。 || static site generation
+JS用語 || ISR || 一定間隔で静的ページを更新する。 || incremental static regeneration
+JS用語 || ハイドレーション (JS) || 静的 HTML を動かす。 || hydrateRoot
+JS用語 || アイランドアーキテクチャ || 必要な部分だけ動かす。 || Astro islands
+JS用語 || エッジコンピューティング || 利用者に近い所で処理する。 || edge runtime
+JS用語 || BFF || 画面ごとのバックエンド。 || backend for frontend
+JS用語 || モノレポ || 1 つのリポジトリで複数管理。 || monorepo
+JS用語 || マイクロフロントエンド || 画面を独立した部品で作る。 || module federation
+JS用語 || Module Federation || 実行時にモジュールを共有する。 || ModuleFederationPlugin
+JS用語 || デザインシステム || 部品と規則の体系。 || design system
+JS用語 || アクセシビリティ (a11y) || 誰でも使える。 || a11y
+JS用語 || 国際化 (i18n) / 地域化 (l10n) || 多言語・地域対応。 || i18n
+JS用語 || 状態機械 (XState) || 状態遷移で設計する。 || createMachine()
+JS用語 || イベントソーシング || 出来事の記録で状態を表す。 || event sourcing
+JS用語 || CQRS || 読み書きを分ける設計。 || CQRS
+JS用語 || Flux / Redux パターン || 単方向の状態管理。 || dispatch(action)
+JS用語 || reducer || 状態と action から新しい状態を作る。 || (state, action) => newState
+JS用語 || selector || 状態から必要な値を取り出す。 || createSelector
+JS用語 || middleware (Redux) || action の途中処理。 || redux-thunk
+JS用語 || Redux Toolkit || Redux の標準的な道具。 || createSlice({})
+JS用語 || Context API の注意点 || 変更で全体が再描画されうる。 || useContext
+JS用語 || Signals || 細かい単位で更新を伝える仕組み。 || signal(0)
+JS用語 || 細粒度リアクティビティ || 必要な箇所だけ更新する。 || fine-grained reactivity
+JS用語 || Proxy ベースのリアクティブ || Proxy で変更を検出する。 || reactive(obj)
+JS用語 || 依存追跡 || 使った値を自動で記録する。 || dependency tracking
+JS用語 || 仮想 DOM の差分検出 || 前後の木を比べる。 || reconciliation
+JS用語 || React Fiber || 中断できる描画の仕組み。 || fiber
+JS用語 || Concurrent Rendering || 描画を中断・再開できる。 || startTransition
+JS用語 || Streaming SSR || HTML を順次送る。 || renderToPipeableStream
+JS用語 || RSC (Server Components) || サーバーで動く部品。 || server component
+JS用語 || Edge Function || 端で動く関数。 || export const runtime = 'edge'
+JS用語 || JAMstack の API || 静的サイト + API。 || serverless functions
+JS用語 || ヘッドレスブラウザ || 画面なしのブラウザ。 || headless
+JS用語 || Web スクレイピングの注意 || 規約と負荷に配慮する。 || robots.txt
+JS用語 || コーディング規約 (Airbnb など) || チームの書き方の約束。 || eslint-config-airbnb
+JS用語 || セマンティックバージョニング (npm) || 版番号の意味。 || ^1.2.3
+JS用語 || ^ と ~ の違い || 更新を許す範囲。 || ^1.2.3 / ~1.2.3
+JS用語 || lockfile の役割 || 版を固定して再現性を保つ。 || package-lock.json
+JS用語 || 依存の脆弱性対応 || 更新と監査。 || npm audit
+JS用語 || Dependabot / Renovate || 依存の自動更新。 || renovate.json
+JS用語 || GitHub Actions (Node) || 自動テストとビルド。 || actions/setup-node
+JS用語 || ライセンス (MIT など) || 利用条件。 || "license": "MIT"
+JS用語 || ブラウザの対象範囲 || browserslist で決める。 || last 2 versions
+JS用語 || レガシーブラウザ対応 || 変換と補完の方針。 || @vitejs/plugin-legacy
+JS用語 || WebAssembly (Rust) || Rust を Web で動かす。 || wasm-bindgen
+JS用語 || AssemblyScript || TS 風で書く WebAssembly。 || asc
+JS用語 || WASI || WebAssembly の標準的な外部連携。 || WASI
+JS用語 || JavaScript の将来 || 仕様は TC39 で継続的に進化。 || proposals

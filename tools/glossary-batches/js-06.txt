@@ -1,0 +1,237 @@
+jQuery || $(selector) || 要素を選ぶ。 || $('.a')
+jQuery || .on() / .off() || イベントの登録・解除。 || $('a').on('click', f)
+jQuery || .click() / .hover() || 簡易イベント。 || $('a').click(f)
+jQuery || .addClass() / .removeClass() || クラスの追加・削除。 || $('a').addClass('on')
+jQuery || .toggleClass() || クラスの切り替え。 || $('a').toggleClass('on')
+jQuery || .css() || スタイルの取得・設定。 || $('a').css('color', 'red')
+jQuery || .attr() / .prop() || 属性・プロパティ。 || $('a').attr('href')
+jQuery || .val() || 入力値の取得・設定。 || $('input').val()
+jQuery || .text() / .html() || 内容の取得・設定。 || $('a').text('x')
+jQuery || .append() / .prepend() || 子の追加。 || $('ul').append('<li>')
+jQuery || .after() / .before() || 前後に挿入。 || $('a').after(x)
+jQuery || .remove() / .empty() || 削除・中身を空にする。 || $('a').remove()
+jQuery || .show() / .hide() / .toggle() || 表示の切り替え。 || $('a').hide()
+jQuery || .fadeIn() / .fadeOut() || フェード表示。 || $('a').fadeIn(300)
+jQuery || .slideUp() / .slideDown() || スライド表示。 || $('a').slideToggle()
+jQuery || .animate() || アニメーションする。 || $('a').animate({left: 100})
+jQuery || .each() || 繰り返す。 || $('li').each(function() { })
+jQuery || .find() / .closest() / .parent() || 要素をたどる。 || $('a').closest('li')
+jQuery || .siblings() / .next() / .prev() || 兄弟をたどる。 || $('a').next()
+jQuery || .filter() / .not() / .eq() || 絞り込み。 || $('li').eq(0)
+jQuery || .data() || データの保存。 || $('a').data('id')
+jQuery || $.ajax() || 通信する。 || $.ajax({url})
+jQuery || $.get() / $.post() || 簡易通信。 || $.get(url, cb)
+jQuery || $.getJSON() || JSON を取得する。 || $.getJSON(url, cb)
+jQuery || $(document).ready() || 読み込み完了後の処理。 || $(function() { })
+jQuery || $.extend() || オブジェクトを統合する。 || $.extend({}, a, b)
+jQuery || .serialize() || フォームを文字列にする。 || $('form').serialize()
+jQuery || .width() / .height() || 大きさの取得。 || $('a').width()
+jQuery || .offset() / .position() || 位置の取得。 || $('a').offset().top
+jQuery || .scrollTop() || スクロール位置。 || $(window).scrollTop()
+jQuery || event.preventDefault() || 既定動作を止める。 || e.preventDefault()
+jQuery || .delegate() / on の委譲 || 動的な要素にも効かせる。 || $(document).on('click', '.a', f)
+jQuery || $.Deferred() || 非同期の仕組み（旧）。 || $.Deferred()
+jQuery || jQuery UI || UI 部品の拡張。 || $('a').datepicker()
+jQuery || noConflict() || $ の競合を避ける。 || jQuery.noConflict()
+Lodash || _.map / _.filter / _.reduce || 基本の集合操作。 || _.map(a, f)
+Lodash || _.groupBy || 条件で分類する。 || _.groupBy(a, 'type')
+Lodash || _.uniq / _.uniqBy || 重複を除く。 || _.uniq(a)
+Lodash || _.chunk || n 個ずつに分ける。 || _.chunk(a, 2)
+Lodash || _.flatten / _.flattenDeep || 平らにする。 || _.flattenDeep(a)
+Lodash || _.sortBy / _.orderBy || 並べ替える。 || _.orderBy(a, ['n'], ['desc'])
+Lodash || _.get / _.set || パスで値を読み書きする。 || _.get(o, 'a.b', 0)
+Lodash || _.pick / _.omit || 項目の選択・除外。 || _.pick(o, ['a'])
+Lodash || _.merge / _.assign || 統合する。 || _.merge(a, b)
+Lodash || _.cloneDeep || 深い複製。 || _.cloneDeep(o)
+Lodash || _.isEqual || 深い比較。 || _.isEqual(a, b)
+Lodash || _.isEmpty || 空かどうか。 || _.isEmpty(o)
+Lodash || _.debounce / _.throttle || 連続呼び出しの制御。 || _.debounce(f, 300)
+Lodash || _.memoize || 結果をキャッシュする。 || _.memoize(f)
+Lodash || _.range || 連番を作る。 || _.range(5)
+Lodash || _.times || n 回実行する。 || _.times(3, f)
+Lodash || _.sum / _.mean / _.max || 集計。 || _.sum(a)
+Lodash || _.camelCase / _.kebabCase / _.snakeCase || 命名規則の変換。 || _.kebabCase('aB')
+Lodash || _.capitalize / _.truncate || 文字列の整形。 || _.truncate(s, {length: 10})
+Lodash || _.template || 簡易テンプレート。 || _.template('<%= a %>')
+Lodash || _.once / _.partial / _.curry || 関数の加工。 || _.once(f)
+Lodash || _.zip / _.unzip || 配列を組にする。 || _.zip(a, b)
+Lodash || _.difference / _.intersection / _.union || 集合演算。 || _.difference(a, b)
+RxJS || Observable || 値の流れ。 || new Observable(sub => { })
+RxJS || subscribe / unsubscribe || 購読・解除。 || obs.subscribe(f)
+RxJS || of / from / interval / timer || ストリームの生成。 || interval(1000)
+RxJS || fromEvent || イベントをストリーム化。 || fromEvent(el, 'click')
+RxJS || map / filter / tap || 変換・絞り込み・副作用。 || pipe(map(x => x * 2))
+RxJS || switchMap / mergeMap / concatMap || 内側のストリームの扱い。 || switchMap(q => fetch(q))
+RxJS || debounceTime / throttleTime || 時間による間引き。 || debounceTime(300)
+RxJS || distinctUntilChanged || 同じ値が続けば無視。 || distinctUntilChanged()
+RxJS || combineLatest / forkJoin / zip || 複数を組み合わせる。 || combineLatest([a, b])
+RxJS || catchError / retry || エラー処理・再試行。 || retry(3)
+RxJS || takeUntil / take / first || 取得の打ち切り。 || takeUntil(destroy$)
+RxJS || Subject / BehaviorSubject || 発行もできるストリーム。 || new BehaviorSubject(0)
+RxJS || ReplaySubject / AsyncSubject || 過去値を再生する Subject。 || new ReplaySubject(1)
+RxJS || share / shareReplay || 購読を共有する。 || shareReplay(1)
+RxJS || scan / reduce || 累積する。 || scan((a, b) => a + b, 0)
+RxJS || startWith / pairwise || 先頭値・前後の組。 || startWith(0)
+RxJS || ホットとコールド || 購読前から流れるか。 || hot / cold
+Express || app.get / post / put / delete || ルート定義。 || app.get('/a', handler)
+Express || req.params / query / body || 要求の値。 || req.query.q
+Express || res.send / json / status || 応答する。 || res.status(404).json({})
+Express || res.redirect / render / sendFile || 転送・描画・ファイル。 || res.redirect('/a')
+Express || ミドルウェア (use) || 要求を順に処理する。 || app.use(f)
+Express || next() || 次の処理へ進む。 || next()
+Express || エラー処理ミドルウェア || 4 引数の関数。 || (err, req, res, next) => { }
+Express || express.json() / urlencoded() || 本文の解析。 || app.use(express.json())
+Express || express.static || 静的ファイルの配信。 || app.use(express.static('public'))
+Express || express.Router || ルートのまとまり。 || express.Router()
+Express || cookie-parser / express-session || Cookie・セッション。 || app.use(session({}))
+Express || helmet || セキュリティヘッダー。 || app.use(helmet())
+Express || cors (ミドルウェア) || CORS の許可。 || app.use(cors())
+Express || morgan || アクセスログ。 || app.use(morgan('dev'))
+Express || compression || 応答の圧縮。 || app.use(compression())
+Express || rate limiting || 回数制限。 || express-rate-limit
+Express || app.listen || 待ち受け開始。 || app.listen(3000)
+Express || テンプレートエンジン || EJS・Pug など。 || app.set('view engine', 'ejs')
+Next.js || app ディレクトリ || App Router の構成。 || app/page.tsx
+Next.js || layout.tsx / page.tsx / loading.tsx || 画面の部品ファイル。 || layout.tsx
+Next.js || error.tsx / not-found.tsx || エラー・未検出の画面。 || not-found.tsx
+Next.js || route.ts (Route Handler) || API の定義。 || export async function GET()
+Next.js || Server Actions || サーバー側の関数を呼ぶ。 || 'use server'
+Next.js || 'use client' || クライアント部品の宣言。 || 'use client'
+Next.js || generateStaticParams || 静的生成のパラメータ。 || generateStaticParams()
+Next.js || generateMetadata || メタ情報を作る。 || generateMetadata()
+Next.js || next/link / next/image || リンクと画像の部品。 || <Image src width height />
+Next.js || next/font || フォントの最適化。 || import { Inter } from 'next/font/google'
+Next.js || useRouter / usePathname || 遷移と現在のパス。 || usePathname()
+Next.js || middleware.ts || 要求の前処理。 || export function middleware()
+Next.js || revalidatePath / revalidateTag || キャッシュの再検証。 || revalidatePath('/a')
+Next.js || next.config.js || Next の設定。 || module.exports = {}
+Next.js || ISR || 一定時間で再生成する。 || revalidate: 60
+Next.js || 動的ルート [id] || URL の一部を変数にする。 || app/users/[id]/page.tsx
+Next.js || 並列ルート・割り込みルート || 高度な画面構成。 || @modal
+Next.js || Vercel へのデプロイ || 公開の定番。 || vercel deploy
+Svelte || $state / $derived / $effect || Svelte 5 のリアクティブ。 || let n = $state(0)
+Svelte || $props || 部品の引数。 || let {a} = $props()
+Svelte || {#if} / {#each} / {#await} || テンプレートの制御。 || {#each a as x}
+Svelte || bind:value || 双方向の結合。 || <input bind:value={v}>
+Svelte || on:click / onclick || イベント。 || onclick={f}
+Svelte || {@render} / snippet || 再利用できる断片。 || {#snippet row(x)}
+Svelte || SvelteKit || Svelte のフレームワーク。 || +page.svelte
+Svelte || load 関数 || データの読み込み。 || +page.js
+Svelte || form actions || フォームの処理。 || +page.server.js
+Svelte || stores || 共有の状態（旧）。 || writable(0)
+Angular || @Component / @Injectable / @NgModule || 主要なデコレータ。 || @Component({})
+Angular || signals || 変更を追跡する値。 || signal(0)
+Angular || computed / effect (Angular) || 算出・副作用。 || computed(() => n() * 2)
+Angular || *ngIf / *ngFor (旧) || 構造ディレクティブ。 || *ngFor="let x of a"
+Angular || @if / @for (新) || 新しい制御構文。 || @for (x of a; track x.id)
+Angular || DI (依存性注入) || サービスを注入する。 || inject(Service)
+Angular || HttpClient || 通信する。 || this.http.get(url)
+Angular || RouterModule / provideRouter || 画面遷移。 || provideRouter(routes)
+Angular || Reactive Forms || コードで定義するフォーム。 || new FormControl('')
+Angular || Angular CLI || 開発の道具。 || ng generate component
+D3 || d3.select / selectAll || 要素を選ぶ。 || d3.select('svg')
+D3 || data / join / enter / exit || データと要素の対応。 || .data(a).join('circle')
+D3 || scaleLinear / scaleBand / scaleTime || 値の変換（スケール）。 || d3.scaleLinear().domain([0, 10]).range([0, 100])
+D3 || axisBottom / axisLeft || 軸の描画。 || d3.axisBottom(x)
+D3 || line / area / arc / pie || 図形の生成。 || d3.line()
+D3 || transition || アニメーション。 || .transition().duration(500)
+D3 || d3.csv / d3.json || データの読み込み。 || d3.csv('a.csv')
+D3 || d3.max / d3.sum / d3.extent || 集計。 || d3.extent(a)
+D3 || d3.forceSimulation || 力学の配置。 || d3.forceSimulation(nodes)
+D3 || d3.hierarchy / treemap || 階層データ。 || d3.hierarchy(data)
+Three.js || Scene / Camera / Renderer || 3D の三要素。 || new THREE.Scene()
+Three.js || PerspectiveCamera || 遠近のカメラ。 || new THREE.PerspectiveCamera(75, w / h)
+Three.js || WebGLRenderer || 描画器。 || new THREE.WebGLRenderer()
+Three.js || Mesh / Geometry / Material || 形状と素材。 || new THREE.Mesh(geo, mat)
+Three.js || BoxGeometry / SphereGeometry || 基本の形。 || new THREE.BoxGeometry(1, 1, 1)
+Three.js || MeshStandardMaterial || 物理ベースの素材。 || new THREE.MeshStandardMaterial()
+Three.js || AmbientLight / DirectionalLight || 光源。 || new THREE.DirectionalLight()
+Three.js || OrbitControls || マウスで視点を動かす。 || new OrbitControls(camera, el)
+Three.js || GLTFLoader || 3D モデルを読む。 || new GLTFLoader()
+Three.js || requestAnimationFrame ループ || 毎フレーム描画する。 || renderer.setAnimationLoop(f)
+Three.js || Raycaster || クリックした物体の判定。 || new THREE.Raycaster()
+Three.js || react-three-fiber || React で Three.js を使う。 || <Canvas>
+Canvas詳細 || ctx.save / restore || 描画状態の保存・復元。 || ctx.save()
+Canvas詳細 || ctx.translate / rotate / scale || 座標変換。 || ctx.rotate(Math.PI / 4)
+Canvas詳細 || ctx.clearRect || 領域を消す。 || ctx.clearRect(0, 0, w, h)
+Canvas詳細 || ctx.fillStyle / strokeStyle || 塗り・線の色。 || ctx.fillStyle = 'red'
+Canvas詳細 || ctx.lineWidth / lineCap || 線の太さ・端。 || ctx.lineWidth = 2
+Canvas詳細 || ctx.createLinearGradient || グラデーションを作る。 || ctx.createLinearGradient(0, 0, w, 0)
+Canvas詳細 || ctx.bezierCurveTo / quadraticCurveTo || 曲線を描く。 || ctx.bezierCurveTo(...)
+Canvas詳細 || ctx.clip || 描画範囲を切り抜く。 || ctx.clip()
+Canvas詳細 || ctx.measureText || 文字の幅を測る。 || ctx.measureText(s).width
+Canvas詳細 || ctx.font / textAlign || 文字の書式。 || ctx.font = '16px sans-serif'
+Canvas詳細 || ctx.globalAlpha / globalCompositeOperation || 透明度・合成方法。 || ctx.globalAlpha = .5
+Canvas詳細 || ctx.putImageData || 画素を書き込む。 || ctx.putImageData(img, 0, 0)
+Canvas詳細 || Path2D || 再利用できる経路。 || new Path2D('M0 0 L10 10')
+Canvas詳細 || canvas.captureStream || 描画を動画にする。 || canvas.captureStream(30)
+Canvas詳細 || MediaRecorder || 録画・録音する。 || new MediaRecorder(stream)
+WebAudio || AudioContext || 音の処理の入口。 || new AudioContext()
+WebAudio || OscillatorNode || 音を生成する。 || ctx.createOscillator()
+WebAudio || GainNode || 音量を変える。 || ctx.createGain()
+WebAudio || AudioBufferSourceNode || 音声データを再生する。 || ctx.createBufferSource()
+WebAudio || decodeAudioData || 音声を復号する。 || await ctx.decodeAudioData(buf)
+WebAudio || AnalyserNode || 周波数を解析する。 || ctx.createAnalyser()
+WebAudio || BiquadFilterNode || フィルター。 || ctx.createBiquadFilter()
+WebAudio || StereoPannerNode || 左右の定位。 || ctx.createStereoPanner()
+WebAudio || connect / disconnect || ノードをつなぐ。 || osc.connect(gain)
+WebAudio || 自動再生ポリシー || 操作後でないと鳴らせない。 || ctx.resume()
+WebAudio || HTMLAudioElement || 簡易な音の再生。 || new Audio(url)
+Electron || BrowserWindow || ウィンドウを作る。 || new BrowserWindow({width: 800})
+Electron || app.whenReady || 準備完了を待つ。 || app.whenReady().then(create)
+Electron || ipcMain / ipcRenderer || プロセス間通信。 || ipcMain.handle('a', f)
+Electron || contextBridge / preload || 安全な橋渡し。 || contextBridge.exposeInMainWorld
+Electron || Menu / Tray || メニュー・トレイ。 || Menu.setApplicationMenu(m)
+Electron || dialog / shell || ダイアログ・外部起動。 || dialog.showOpenDialog()
+Electron || electron-builder || 配布物を作る。 || electron-builder
+Electron || autoUpdater || 自動更新。 || autoUpdater.checkForUpdates()
+Chrome拡張 || manifest.json (v3) || 拡張の定義。 || "manifest_version": 3
+Chrome拡張 || service_worker (拡張) || 背景処理。 || "background": {"service_worker": "bg.js"}
+Chrome拡張 || content_scripts || ページに差し込む JS。 || "content_scripts": []
+Chrome拡張 || chrome.storage || 拡張のデータ保存。 || chrome.storage.local.set()
+Chrome拡張 || chrome.tabs || タブの操作。 || chrome.tabs.query()
+Chrome拡張 || chrome.runtime.sendMessage || メッセージの送信。 || chrome.runtime.sendMessage()
+Chrome拡張 || chrome.action || ツールバーのボタン。 || chrome.action.onClicked
+Chrome拡張 || permissions / host_permissions || 権限の宣言。 || "permissions": ["storage"]
+Chrome拡張 || chrome.scripting || スクリプトの注入。 || chrome.scripting.executeScript()
+Chrome拡張 || chrome.alarms || 定期実行。 || chrome.alarms.create()
+Apps Script || SpreadsheetApp || スプレッドシートの操作。 || SpreadsheetApp.getActiveSheet()
+Apps Script || getRange / getValues / setValues || セルの読み書き。 || sheet.getRange('A1:B2').getValues()
+Apps Script || DriveApp / GmailApp || ドライブ・メールの操作。 || GmailApp.sendEmail()
+Apps Script || UrlFetchApp || 外部と通信する。 || UrlFetchApp.fetch(url)
+Apps Script || PropertiesService || 設定値の保存。 || PropertiesService.getScriptProperties()
+Apps Script || ScriptApp.newTrigger || 定期実行の設定。 || ScriptApp.newTrigger('f')
+Apps Script || doGet / doPost || Web アプリの入口。 || function doGet(e)
+Apps Script || ContentService || 応答を返す。 || ContentService.createTextOutput()
+Apps Script || LockService || 排他制御。 || LockService.getScriptLock()
+Apps Script || clasp || ローカルで GAS を開発する。 || clasp push
+正規表現レシピ || メールアドレス || 簡易な形式チェック。 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+正規表現レシピ || 郵便番号 (日本) || 7桁の番号。 || /^\d{3}-?\d{4}$/
+正規表現レシピ || 電話番号 (日本) || ハイフンあり・なし。 || /^0\d{1,4}-?\d{1,4}-?\d{4}$/
+正規表現レシピ || URL の抽出 || http(s) から始まる文字列。 || /https?:\/\/[^\s]+/g
+正規表現レシピ || 全角ひらがな || ひらがなの範囲。 || /^[぀-ゟ]+$/
+正規表現レシピ || 全角カタカナ || カタカナの範囲。 || /^[゠-ヿ]+$/
+正規表現レシピ || 漢字 || 漢字の範囲。 || /[一-鿿]/
+正規表現レシピ || 半角英数字 || 英数字のみ。 || /^[A-Za-z0-9]+$/
+正規表現レシピ || 空白の連続を 1 つに || 正規化。 || s.replace(/\s+/g, ' ')
+正規表現レシピ || 前後の空白除去 || trim 相当。 || s.replace(/^\s+|\s+$/g, '')
+正規表現レシピ || 数値の抽出 || 数字の並び。 || s.match(/\d+/g)
+正規表現レシピ || 日付 (YYYY-MM-DD) || 形式のチェック。 || /^\d{4}-\d{2}-\d{2}$/
+正規表現レシピ || 16進カラー || 色コード。 || /^#([0-9a-f]{3}|[0-9a-f]{6})$/i
+正規表現レシピ || HTML タグの除去 || タグを取り除く（簡易）。 || s.replace(/<[^>]*>/g, '')
+正規表現レシピ || キャメルをスネークに || 大文字の前に _ を入れる。 || s.replace(/[A-Z]/g, c => '_' + c.toLowerCase())
+正規表現レシピ || パスワード強度 || 文字種を先読みで確認。 || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+正規表現レシピ || 最短一致 || ? で最短にする。 || /a.*?b/
+正規表現レシピ || 後方参照 || 同じ文字列の繰り返し。 || /(\w)\1/
+正規表現レシピ || 単語境界 || \b で単語の区切り。 || /\bcat\b/
+正規表現レシピ || Unicode プロパティ || 文字の種類で指定する。 || /\p{Script=Hiragana}/u
+正規表現レシピ || 置換での参照 || $1 でグループを使う。 || s.replace(/(\d+)/, '[$1]')
+正規表現レシピ || 置換に関数を使う || 一致ごとに処理する。 || s.replace(/\d+/g, n => n * 2)
+Console API || console.info / debug || 情報・デバッグ表示。 || console.info('a')
+Console API || console.count / countReset || 呼び出し回数。 || console.count('a')
+Console API || console.groupCollapsed / groupEnd || 折りたたみグループ。 || console.groupCollapsed('a')
+Console API || console.timeLog || 途中の経過時間。 || console.timeLog('a')
+Console API || console.clear || 消去する。 || console.clear()
+Console API || console.log の書式 (%s %d %o %c) || 書式付き出力。 || console.log('%c a', 'color:red')
+Console API || console.profile || 性能の記録。 || console.profile('a')
+Console API || console.timeStamp || タイムラインに印を付ける。 || console.timeStamp('a')
