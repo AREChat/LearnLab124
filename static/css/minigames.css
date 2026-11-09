@@ -1,0 +1,22 @@
+/* ミニゲーム集（子どもから大人まで・大きいボタン） */
+.mg-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 1.2em}
+.mg-tab{font:inherit;font-size:1.05em;padding:10px 16px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-bg);color:var(--text-primary);cursor:pointer;min-height:44px}
+.mg-tab[aria-selected="true"]{background:linear-gradient(135deg,#00e0ff,#ae00ff);color:#fff;font-weight:700}
+.mg-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:16px;padding:1.2em;margin-bottom:1.5em}
+.mg-card h2{margin:.2em 0 .4em;color:var(--neon-blue)}
+.mg-note{color:var(--text-secondary);margin:.2em 0 1em}
+.mg-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:.8em 0}
+.mg-btn{font:inherit;font-size:1.1em;padding:12px 22px;border-radius:12px;border:0;background:linear-gradient(135deg,#00e0ff,#ae00ff);color:#fff;font-weight:700;cursor:pointer;min-height:48px}
+.mg-btn:disabled{opacity:.5;cursor:default}
+.mg-big{font-size:1.6em;font-weight:700;text-align:center;min-height:1.6em;margin:.5em 0}
+.mg-input{font:inherit;font-size:1.3em;padding:10px 12px;border-radius:10px;border:1px solid var(--glass-border);background:#0d0d14;color:var(--text-primary);width:min(100%,14em);text-align:center}
+.mg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:420px;margin:0 auto}
+.mg-cell{aspect-ratio:1/1;font-size:clamp(1.8rem,9vw,3rem);border-radius:12px;border:1px solid var(--glass-border);background:#1d1d2b;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.mg-cell.open,.mg-cell.done{background:#26264a}
+.mg-cell.done{opacity:.55}
+.mg-react{height:180px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5em;font-weight:700;color:#fff;background:#8a2b2b;cursor:pointer;user-select:none;text-align:center;padding:0 1em}
+.mg-react.go{background:#1b8f4b}.mg-react.wait{background:#8a6d1b}.mg-react.idle{background:#33415c}
+.mg-best{color:#ffd24a}
+.mg-q{font-size:1.8em;font-weight:700;text-align:center;margin:.4em 0}
+.mg-hands{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.mg-hands .mg-btn{font-size:1.6em;padding:14px 20px}

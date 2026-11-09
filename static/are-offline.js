@@ -5,7 +5,7 @@
   var ROOT = new URL("../", SRC).href;
   var path = location.pathname, base = path.split("/").pop() || "index.html"; try{ base = decodeURIComponent(base); }catch(_e){}
   // ネットが ないと 動かない ページ（アカウント・チャット・管理・ウイルス図鑑など）
-  var NEED = /^(train|weather|Bingo|アンケート|感想|thanks|movie)\.html$/.test(base) && path.indexOf(ROOT.replace(location.origin, "")) === 0 && path.replace(ROOT.replace(location.origin, ""), "").indexOf("/") < 0;
+  var NEED = /^(train|weather|Bingo|アンケート|感想|thanks)\.html$/.test(base) && path.indexOf(ROOT.replace(location.origin, "")) === 0 && path.replace(ROOT.replace(location.origin, ""), "").indexOf("/") < 0;
   var HUB = /(^|\/)(index\.html)?$/.test(path) || /\/(game|game2|game3|game4|game5|dream-frontier|daifugo)\/(index\.html)?$/.test(path) || base === "login.html";
   function ls(k, v){ try{ if(v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); }catch(_e){} return null; }
 
