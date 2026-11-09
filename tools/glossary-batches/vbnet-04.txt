@@ -1,0 +1,104 @@
+# カテゴリ || 用語 || 説明 || コード例
+.NET標準ライブラリ || Math.Abs || 絶対値を返す。 || Math.Abs(-5)
+.NET標準ライブラリ || Math.Round || 四捨五入（既定は偶数丸め）。 || Math.Round(2.5, MidpointRounding.AwayFromZero)
+.NET標準ライブラリ || Math.Floor / Ceiling || 切り捨て・切り上げ。 || Math.Floor(2.7)
+.NET標準ライブラリ || Math.Max / Min || 大きい方・小さい方を返す。 || Math.Max(3, 5)
+.NET標準ライブラリ || Math.Pow / Sqrt || べき乗・平方根。 || Math.Pow(2, 10)
+.NET標準ライブラリ || Math.PI || 円周率。 || Math.PI * r ^ 2
+.NET標準ライブラリ || Math.Truncate || 小数部を切り捨てる。 || Math.Truncate(-2.7)
+.NET標準ライブラリ || Math.Sign || 符号（-1, 0, 1）を返す。 || Math.Sign(-5)
+.NET標準ライブラリ || Random || 乱数を作る。 || Dim r As New Random() : r.Next(1, 7)
+.NET標準ライブラリ || Randomize / Rnd || 古い形式の乱数。 || Rnd()
+.NET標準ライブラリ || Convert.ToInt32 || 値を整数に変換する。 || Convert.ToInt32("10")
+.NET標準ライブラリ || Convert.ToBase64String || バイト列を Base64 文字列にする。 || Convert.ToBase64String(bytes)
+.NET標準ライブラリ || BitConverter || 数値とバイト列を変換する。 || BitConverter.GetBytes(5)
+.NET標準ライブラリ || DateTime.Now / Today / UtcNow || 現在の日時を取得する。 || DateTime.Now
+.NET標準ライブラリ || AddDays / AddMonths / AddHours || 日時に期間を足す。 || d.AddDays(7)
+.NET標準ライブラリ || DateTime.Parse / TryParse || 文字列を日時に変換する。 || DateTime.TryParse(s, d)
+.NET標準ライブラリ || DateTime.DaysInMonth || 月の日数を返す。 || DateTime.DaysInMonth(2026, 2)
+.NET標準ライブラリ || DayOfWeek || 曜日を返す。 || d.DayOfWeek
+.NET標準ライブラリ || DateDiff / DateAdd (関数) || 日付の差・加算の VB 関数。 || DateDiff(DateInterval.Day, a, b)
+.NET標準ライブラリ || Stopwatch || 処理時間を測る。 || Dim sw = Stopwatch.StartNew()
+.NET標準ライブラリ || TimeZoneInfo || タイムゾーンを扱う。 || TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time")
+.NET標準ライブラリ || CultureInfo || 地域ごとの書式（日付・数値）を決める。 || New CultureInfo("ja-JP")
+.NET標準ライブラリ || Environment.MachineName / UserName || PC 名・ユーザー名を取得する。 || Environment.UserName
+.NET標準ライブラリ || Environment.GetEnvironmentVariable || 環境変数を読む。 || Environment.GetEnvironmentVariable("PATH")
+.NET標準ライブラリ || Thread.Sleep || 指定の時間だけ待つ。 || Thread.Sleep(1000)
+.NET標準ライブラリ || GC.Collect || ガベージコレクションを実行する（通常は不要）。 || GC.Collect()
+.NET標準ライブラリ || Lazy(Of T) || 初めて使うときに作る遅延初期化。 || New Lazy(Of Big)
+.NET標準ライブラリ || WeakReference || 弱い参照。メモリ不足時に回収されうる。 || New WeakReference(obj)
+.NET標準ライブラリ || Uri || URL を解析・組み立てる。 || New Uri("https://a.com/b").Host
+.NET標準ライブラリ || WebUtility.UrlEncode || URL 用に文字をエンコードする。 || WebUtility.UrlEncode(s)
+.NET標準ライブラリ || MD5 / SHA256 (ハッシュ) || データのハッシュ値を計算する。 || SHA256.Create().ComputeHash(bytes)
+.NET標準ライブラリ || Rfc2898DeriveBytes || パスワードから安全にハッシュを作る。 || New Rfc2898DeriveBytes(pw, salt, 100000)
+.NET標準ライブラリ || Aes (暗号化) || 共通鍵で暗号化・復号する。 || Aes.Create()
+.NET標準ライブラリ || Encoding.UTF8 / ShiftJIS || 文字コードを指定する。 || Encoding.UTF8.GetBytes(s)
+.NET標準ライブラリ || StringComparison || 文字列比較の方法を指定する。 || StringComparison.OrdinalIgnoreCase
+.NET標準ライブラリ || IDisposable と Using || 後始末が必要な資源を安全に扱う。 || Using sr As New StreamReader(p)
+.NET標準ライブラリ || ILogger / Trace || ログを出力する。 || Trace.WriteLine("開始")
+.NET標準ライブラリ || NuGet パッケージ || 外部のライブラリを追加する仕組み。 || Install-Package Newtonsoft.Json
+.NET標準ライブラリ || Newtonsoft.Json || 広く使われる JSON ライブラリ。 || JsonConvert.SerializeObject(obj)
+非同期とスレッド || Async Function / Task || 非同期で実行する関数。 || Async Function GetAsync() As Task(Of String)
+非同期とスレッド || Await Task.Delay || 画面を止めずに待つ。 || Await Task.Delay(1000)
+非同期とスレッド || Task.WhenAll / WhenAny || 複数の処理をまとめて待つ。 || Await Task.WhenAll(t1, t2)
+非同期とスレッド || CancellationToken || 非同期処理を途中で中止する。 || cts.Cancel()
+非同期とスレッド || Progress(Of T) || 進み具合を画面に伝える。 || New Progress(Of Integer)(Sub(p) bar.Value = p)
+非同期とスレッド || Thread / ThreadPool || スレッドを直接扱う。 || New Thread(AddressOf Work).Start()
+非同期とスレッド || SyncLock || 複数スレッドの同時実行を1つに制限する。 || SyncLock obj
+非同期とスレッド || Interlocked || 安全にカウントを増やす。 || Interlocked.Increment(n)
+非同期とスレッド || Mutex / Semaphore || 同時に使える数を制限する。 || New SemaphoreSlim(3)
+非同期とスレッド || Parallel.For / ForEach || ループを並列で実行する。 || Parallel.For(0, 10, Sub(i) Work(i))
+非同期とスレッド || PLINQ (AsParallel) || LINQ を並列で実行する。 || q.AsParallel()
+非同期とスレッド || Control.InvokeRequired || 別スレッドから画面を触るとき UI スレッドへ切り替える。 || If InvokeRequired Then Invoke(...)
+非同期とスレッド || SynchronizationContext || UI スレッドに処理を戻す仕組み。 || SynchronizationContext.Current
+非同期とスレッド || async void の注意 || イベントハンドラ以外では Task を返す。 || Async Sub btn_Click(...)
+非同期とスレッド || Task.Run で重い処理 || UI を止めないよう別スレッドで実行する。 || Await Task.Run(Sub() Heavy())
+非同期とスレッド || ConfigureAwait || 元のスレッドに戻るかを指定する。 || Await t.ConfigureAwait(False)
+非同期とスレッド || TaskCompletionSource || 手動で Task の完了を制御する。 || New TaskCompletionSource(Of Integer)
+非同期とスレッド || Timer (System.Timers) || 別スレッドで一定間隔の処理を行う。 || New System.Timers.Timer(1000)
+非同期とスレッド || スレッドセーフ || 複数スレッドから同時に使っても壊れないこと。 || ConcurrentQueue を使う
+非同期とスレッド || デッドロック (非同期) || Result や Wait で待つと固まることがある。 || Await を使う
+データベース || SqlConnection.Open / Close || DB との接続を開く・閉じる。 || conn.Open()
+データベース || 接続文字列 || DB に接続するための情報。コードに直接書かない。 || Server=...;Database=...;
+データベース || ExecuteNonQuery || 結果を返さない SQL（更新など）を実行する。 || cmd.ExecuteNonQuery()
+データベース || ExecuteScalar || 1つの値を返す SQL を実行する。 || cmd.ExecuteScalar()
+データベース || SqlDataAdapter.Fill || 検索結果を DataTable に入れる。 || da.Fill(dt)
+データベース || SqlParameter || パラメータで安全に値を渡す。 || cmd.Parameters.AddWithValue("@id", 1)
+データベース || SqlTransaction || 複数の更新をまとめて確定・取り消しする。 || conn.BeginTransaction()
+データベース || OleDb / ODBC || Access などに接続する。 || New OleDbConnection(cs)
+データベース || SQLite (Microsoft.Data.Sqlite) || 軽量なファイル型 DB。 || New SqliteConnection("Data Source=a.db")
+データベース || Dapper || SQL の結果をクラスに簡単に入れるライブラリ。 || conn.Query(Of P)("SELECT * FROM p")
+データベース || DbContext (EF) || Entity Framework の窓口となるクラス。 || Public Class AppDb : Inherits DbContext
+データベース || DbSet || EF でのテーブルに当たるもの。 || Public Property Users As DbSet(Of User)
+データベース || SaveChanges || EF で変更を DB に保存する。 || db.SaveChanges()
+データベース || Migration (EF) || DB の構造変更を管理する。 || Add-Migration Init
+データベース || DataRow / DataColumn || DataTable の行と列。 || dt.Rows(0)("Name")
+データベース || DataView || DataTable の並べ替え・絞り込み表示。 || dt.DefaultView.RowFilter = "Age > 20"
+データベース || SQL インジェクション対策 || 文字列連結でなくパラメータを使う。 || WHERE id = @id
+データベース || using で接続を閉じる || Using で閉じ忘れを防ぐ。 || Using conn As New SqlConnection(cs)
+データベース || 接続プーリング || 接続を再利用して速くする仕組み。 || 自動で有効
+デバッグとテスト || ウォッチ式 || デバッグ中に変数の値を監視する。 || Visual Studio のウォッチウィンドウ
+デバッグとテスト || 条件付きブレークポイント || 条件が成り立ったときだけ止まる。 || i = 100
+デバッグとテスト || Debug.Assert || 条件が成り立つはずの場所を検査する。 || Debug.Assert(n > 0)
+デバッグとテスト || 例外の StackTrace || エラーが起きた場所の経路を見る。 || ex.StackTrace
+デバッグとテスト || InnerException || 元になったエラーを見る。 || ex.InnerException
+デバッグとテスト || 例外の種類 (ArgumentException など) || エラーの種類ごとのクラス。 || Catch ex As ArgumentNullException
+デバッグとテスト || ユニットテスト (MSTest / xUnit) || 小さな単位で自動テストをする。 || <TestMethod> Sub T()
+デバッグとテスト || Assert.AreEqual || テストで期待値と比べる。 || Assert.AreEqual(3, Add(1, 2))
+デバッグとテスト || ログ出力 || 動作の記録を残して原因を調べる。 || File.AppendAllText("log.txt", msg)
+デバッグとテスト || リリースビルドとデバッグビルド || リリースは最適化され、デバッグ情報が少ない。 || Configuration: Release
+デバッグとテスト || 条件付きコンパイル #If || 条件に応じてコードを含める。 || #If DEBUG Then
+デバッグとテスト || コードの警告 || 問題になりそうな書き方への注意。無視しない。 || Option Strict On で多くが防げる
+デバッグとテスト || コードのインデントと整形 || Ctrl+K, Ctrl+D で整える。 || Visual Studio の機能
+デバッグとテスト || XML コメント (''') || 説明文をコードに付ける。 || ''' <summary>説明</summary>
+デバッグとテスト || 命名規則 || 変数名・メソッド名のルール。 || PascalCase / camelCase
+VBAとの違い || Variant がない || VB.NET では型を明示するか推論を使う。 || Dim x As Object
+VBAとの違い || 配列の下限 || VB.NET の配列は 0 始まり。 || Dim a(2) As Integer
+VBAとの違い || Set が不要 || オブジェクトの代入に Set は使わない。 || Dim o = New Obj()
+VBAとの違い || Call の省略 || プロシージャ呼び出しに括弧が必要。 || DoWork()
+VBAとの違い || 引数の既定は ByVal || VB.NET は値渡しが既定。 || Sub M(x As Integer)
+VBAとの違い || Wend ではなく End While || While の終わりの書き方。 || End While
+VBAとの違い || Excel を操作するには || Interop や ClosedXML などを使う。 || Microsoft.Office.Interop.Excel
+VBAとの違い || Long のサイズ || VBA の Long は32ビットだが、VB.NET の Long は64ビット。 || Integer が32ビット
+VBAとの違い || Date の扱い || VB.NET は DateTime 型を使う。 || Dim d As DateTime
+VBAとの違い || イベントの書き方 || Handles 句や AddHandler で結び付ける。 || Handles btn.Click
