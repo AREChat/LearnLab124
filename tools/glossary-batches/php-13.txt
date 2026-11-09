@@ -1,0 +1,112 @@
+filter || FILTER_VALIDATE_INT || 整数の検証。 || filter_var($v, FILTER_VALIDATE_INT)
+filter || FILTER_VALIDATE_FLOAT / BOOLEAN || 小数・真偽の検証。 || FILTER_VALIDATE_BOOLEAN
+filter || FILTER_VALIDATE_REGEXP || 正規表現による検証。 || FILTER_VALIDATE_REGEXP
+filter || FILTER_VALIDATE_DOMAIN / MAC || ドメイン・MAC の検証。 || FILTER_VALIDATE_DOMAIN
+filter || FILTER_NULL_ON_FAILURE || 失敗時に null を返す。 || FILTER_NULL_ON_FAILURE
+filter || FILTER_FLAG_ALLOW_FRACTION || 小数を許可。 || FILTER_FLAG_ALLOW_FRACTION
+filter || FILTER_DEFAULT / UNSAFE_RAW || 加工なしの取得。 || FILTER_UNSAFE_RAW
+filter || FILTER_SANITIZE_SPECIAL_CHARS || 特殊文字の変換。 || FILTER_SANITIZE_SPECIAL_CHARS
+filter || FILTER_SANITIZE_EMAIL / URL || メール・URL の無害化。 || FILTER_SANITIZE_EMAIL
+filter || FILTER_CALLBACK || 独自関数で処理。 || FILTER_CALLBACK
+filter || filter_input_array || 複数入力の一括取得。 || filter_input_array(INPUT_POST, $defs)
+filter || filter_var_array || 配列の一括検証。 || filter_var_array($a, $defs)
+filter || filter_has_var / filter_list || 入力の有無・フィルタ一覧。 || filter_has_var(INPUT_GET, 'a')
+intl || Locale::getDefault || 既定のロケール。 || Locale::getDefault()
+intl || MessageFormatter || 複数形などの書式。 || MessageFormatter::formatMessage
+intl || IntlChar || Unicode 文字の情報。 || IntlChar::isalpha($c)
+intl || Collator::sort || 地域別の整列。 || $c->sort($a)
+intl || Normalizer::NFKC || 互換正規化。 || Normalizer::NFKC
+intl || IntlBreakIterator || 単語・文の境界。 || IntlBreakIterator::createWordInstance
+intl || IntlCalendar / GregorianCalendar || 暦の操作。 || IntlCalendar::createInstance()
+intl || IntlTimeZone || タイムゾーン情報。 || IntlTimeZone::createTimeZone
+intl || IntlDateFormatter の和暦 || 和暦のカレンダー指定。 || '@calendar=japanese'
+intl || grapheme_strlen / substr || 書記素単位の操作。 || grapheme_strlen($s)
+intl || idn_to_ascii / utf8 || 国際化ドメイン名。 || idn_to_ascii($d)
+intl || transliterator_transliterate || 文字種の変換。 || transliterator_transliterate('Any-Latin', $s)
+intl || UConverter || 文字コード変換。 || UConverter::transcode
+intl || Spoofchecker || 紛らわしい文字の検出。 || new Spoofchecker()
+intl || ResourceBundle || 地域別のリソース。 || ResourceBundle::create
+Laravel補足 || Artisan make:model -m || モデルとマイグレーション。 || php artisan make:model A -m
+Laravel補足 || make:controller --resource || リソースコントローラ。 || make:controller A --resource
+Laravel補足 || make:migration / seeder / factory || 各種雛形。 || make:seeder ASeeder
+Laravel補足 || make:request / resource / policy || 検証・整形・認可の雛形。 || make:policy APolicy
+Laravel補足 || make:middleware / event / listener || 前後処理・イベントの雛形。 || make:listener A
+Laravel補足 || make:job / mail / notification || 非同期・通知の雛形。 || make:job A
+Laravel補足 || make:command / test / component || コマンド・テストの雛形。 || make:test ATest
+Laravel補足 || queue:work / failed / retry || キューの操作。 || php artisan queue:work
+Laravel補足 || schedule:run / list || スケジューラの実行。 || php artisan schedule:run
+Laravel補足 || cache:clear / view:clear || キャッシュの消去。 || php artisan cache:clear
+Laravel補足 || key:generate / down / up || キー生成・メンテナンス。 || php artisan down
+Laravel補足 || vendor:publish || 設定の公開。 || php artisan vendor:publish
+Laravel補足 || model:prune / db:show || 不要データ削除・DB 情報。 || php artisan db:show
+Laravel補足 || route() / url() / asset() || URL ヘルパー。 || asset('a.css')
+Laravel補足 || auth() / user() / guest() || 認証ヘルパー。 || auth()->user()
+Laravel補足 || request() / session() / cookie() || リクエスト系ヘルパー。 || request('a')
+Laravel補足 || view() / response() / abort_if() || 応答ヘルパー。 || abort_if($x, 404)
+Laravel補足 || collect() / tap() / retry() || 汎用ヘルパー。 || retry(3, fn() => ...)
+Laravel補足 || optional() / value() / with() || null 安全ヘルパー。 || optional($u)->name
+Laravel補足 || now() / today() / sleep() || 時間ヘルパー。 || now()->addDay()
+Laravel補足 || dd / dump / ddd || デバッグ出力。 || dd($x)
+Laravel補足 || config / env / app_path || 設定・パスのヘルパー。 || storage_path('a')
+Laravel補足 || __() / trans() / lang() || 翻訳ヘルパー。 || __('messages.a')
+Laravel補足 || Str::of / Str::random / limit || 文字列操作。 || Str::limit($s, 20)
+Laravel補足 || Arr::get / pluck / only / except || 配列操作。 || Arr::get($a, 'x.y')
+Laravel補足 || Number::format / currency || 数値の整形。 || Number::currency(100, 'JPY')
+Laravel補足 || Collection::groupBy / sortBy / pluck || 集計メソッド。 || $c->groupBy('a')
+Laravel補足 || Collection::chunk / flatMap / reduce || 変換メソッド。 || $c->chunk(3)
+Laravel補足 || LazyCollection || 遅延コレクション。 || LazyCollection::make()
+Laravel補足 || Eloquent の when / unless || 条件付きクエリ。 || ->when($q, fn($b) => $b->where())
+Laravel補足 || Eloquent の firstOrFail / findOrFail || 見つからなければ 404。 || User::findOrFail($id)
+Laravel補足 || Eloquent の upsert / increment || 一括更新・加算。 || User::upsert($rows, ['id'])
+Laravel補足 || Eloquent の whereIn / whereBetween || 範囲条件。 || whereIn('id', $ids)
+Laravel補足 || Eloquent の orWhere / whereNull || OR・null 条件。 || whereNull('a')
+Laravel補足 || Eloquent の join / leftJoin || 結合。 || ->join('b', 'a.id', '=', 'b.a_id')
+Laravel補足 || Eloquent の selectRaw / groupBy / having || 集計クエリ。 || selectRaw('count(*) c')
+Laravel補足 || Eloquent の toArray / toJson || 配列・JSON 化。 || $u->toArray()
+Laravel補足 || Eloquent の $hidden / $appends || 出力項目の制御。 || protected $hidden
+Laravel補足 || Eloquent の withDefault / touches || 関連の既定・更新伝播。 || withDefault()
+Laravel補足 || Eloquent の morphTo / morphMany || 多態関連。 || morphMany(Comment::class, 'c')
+Laravel補足 || Eloquent の global scope || 常に付く条件。 || addGlobalScope
+Laravel補足 || Eloquent の prunable / massPrunable || 古いデータの削除。 || use Prunable;
+Laravel補足 || Blade の @isset / @empty / @auth || 条件ディレクティブ。 || @auth
+Laravel補足 || Blade の @forelse / @while / @switch || 繰り返し・分岐。 || @forelse($a as $b)
+Laravel補足 || Blade の @include / @each / @stack || 部品・差し込み。 || @stack('scripts')
+Laravel補足 || Blade の {!! !!} || エスケープなし出力。 || {!! $html !!}
+Laravel補足 || Blade の @props / @slot / $attributes || コンポーネント定義。 || @props(['a'])
+Laravel補足 || Blade の @vite / @json / @php || 補助ディレクティブ。 || @json($a)
+Laravel補足 || FormRequest の authorize / rules || 認可・検証ルール。 || public function rules()
+Laravel補足 || Validator::make || 手動検証。 || Validator::make($d, $r)
+Laravel補足 || exists / unique / confirmed ルール || 検証ルールの例。 || 'email' => 'unique:users'
+Laravel補足 || Rule::in / Rule::unique || オブジェクト形式のルール。 || Rule::unique('users')->ignore($id)
+Laravel補足 || Password::min / defaults || パスワードルール。 || Password::min(8)
+Laravel補足 || Gate::define / Policy::before || 認可の定義。 || Gate::define('edit', fn)
+Laravel補足 || @can / authorize() || 認可の確認。 || $this->authorize('update', $p)
+Laravel補足 || Auth::attempt / logout || ログイン処理。 || Auth::attempt($cred)
+Laravel補足 || remember token || ログイン保持。 || remember_token
+Laravel補足 || MustVerifyEmail || メール認証。 || implements MustVerifyEmail
+Laravel補足 || RateLimiter / throttle || 回数制限。 || RateLimiter::for('api')
+Laravel補足 || Http クライアント (Laravel) || 簡易な HTTP 通信。 || Http::get($url)
+Laravel補足 || Http::withToken / retry || 認証・再試行。 || Http::retry(3, 100)
+Laravel補足 || Process ファサード || 外部プロセス実行。 || Process::run('ls')
+Laravel補足 || Concurrency / Bus::batch || 並行・バッチ。 || Bus::batch($jobs)
+Laravel補足 || Cache::tags / lock || タグ・ロック。 || Cache::lock('a')
+Laravel補足 || Redis ファサード || Redis 操作。 || Redis::get('a')
+Laravel補足 || Storage::disk('s3') || S3 の利用。 || Storage::disk('s3')
+Laravel補足 || File upload の store / storeAs || 保存。 || $r->file('a')->store('x')
+Laravel補足 || Mail::to()->queue || メールの非同期送信。 || Mail::to($u)->queue($m)
+Laravel補足 || Notification の channels || メール・Slack など。 || via()
+Laravel補足 || Event::fake / Bus::fake || イベント・ジョブの疑似化。 || Bus::fake()
+Laravel補足 || ModelNotFoundException || モデル未発見の例外。 || ModelNotFoundException
+Laravel補足 || ValidationException || 検証失敗の例外。 || ValidationException
+Laravel補足 || Handler::register / reportable || 例外の報告設定。 || $this->reportable
+Laravel補足 || App::terminating / booted || 起動・終了の hook。 || App::booted()
+Laravel補足 || ServiceProvider::boot / register || 起動時の処理。 || boot()
+Laravel補足 || bind / singleton / scoped || コンテナへの登録。 || $this->app->singleton()
+Laravel補足 || contextual binding || 文脈による依存の切替。 || ->needs()->give()
+Laravel補足 || Facade の mock / spy || ファサードの疑似化。 || Cache::shouldReceive('get')
+Laravel補足 || config/app.php の providers || プロバイダ登録。 || providers
+Laravel補足 || .env.testing / phpunit.xml の env || テスト環境設定。 || APP_ENV=testing
+Laravel補足 || Pest の expect / dataset || Pest のテスト記法。 || expect($x)->toBe(1)
+Laravel補足 || Livewire の wire:model / mount || Livewire の基本。 || wire:model="a"
+Laravel補足 || Inertia の usePage / router || Inertia のフロント。 || usePage()
+Laravel補足 || Laravel Prompts || CLI の対話 UI。 || text('名前?')

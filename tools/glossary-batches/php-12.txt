@@ -1,0 +1,196 @@
+php.ini || memory_limit || 1 リクエストのメモリ上限。 || memory_limit=256M
+php.ini || max_input_vars || 受け取る入力変数の上限。 || max_input_vars=1000
+php.ini || max_input_time || 入力解析の時間上限。 || max_input_time=60
+php.ini || default_charset || 既定の文字コード。 || default_charset="UTF-8"
+php.ini || output_buffering || 出力バッファの設定。 || output_buffering=4096
+php.ini || implicit_flush || 自動フラッシュ。 || implicit_flush=Off
+php.ini || precision || 浮動小数点の表示精度。 || precision=14
+php.ini || serialize_precision の設定 || 直列化の精度。 || serialize_precision=-1
+php.ini || variables_order || スーパーグローバルの順序。 || variables_order="GPCS"
+php.ini || request_order || $_REQUEST の順序。 || request_order="GP"
+php.ini || auto_prepend_file / append_file || 自動で読み込むファイル。 || auto_prepend_file=a.php
+php.ini || include_path || 読み込み探索パス。 || include_path=".:/usr/share/php"
+php.ini || doc_root / user_dir || 公開ルート設定。 || doc_root=/var/www
+php.ini || file_uploads || アップロードの可否。 || file_uploads=On
+php.ini || upload_tmp_dir || アップロードの一時領域。 || upload_tmp_dir=/tmp
+php.ini || max_file_uploads || 同時アップロード数の上限。 || max_file_uploads=20
+php.ini || allow_url_fopen || URL をファイルとして開く許可。 || allow_url_fopen=On
+php.ini || default_socket_timeout || ソケットの既定タイムアウト。 || default_socket_timeout=60
+php.ini || display_startup_errors || 起動時エラーの表示。 || display_startup_errors=Off
+php.ini || html_errors || エラーの HTML 整形。 || html_errors=Off
+php.ini || error_prepend_string || エラー表示の前置文字。 || error_prepend_string
+php.ini || log_errors_max_len || ログ 1 行の最大長。 || log_errors_max_len=1024
+php.ini || ignore_repeated_errors || 同じエラーの抑制。 || ignore_repeated_errors=On
+php.ini || track_errors (廃止) || 旧エラー保持機能。 || removed
+php.ini || zend.exception_ignore_args || 例外から引数を除外。 || zend.exception_ignore_args=On
+php.ini || zend.exception_string_param_max_len || 例外内の文字列長。 || zend.exception_string_param_max_len=0
+php.ini || session.save_path || セッションの保存先。 || session.save_path="/tmp"
+php.ini || session.name || セッション ID の名前。 || session.name=PHPSESSID
+php.ini || session.use_strict_mode || 未発行 ID を拒否。 || session.use_strict_mode=1
+php.ini || session.use_only_cookies || クッキーのみで ID 管理。 || session.use_only_cookies=1
+php.ini || session.cookie_lifetime || クッキーの有効時間。 || session.cookie_lifetime=0
+php.ini || session.cookie_samesite || SameSite の指定。 || session.cookie_samesite=Lax
+php.ini || session.gc_probability / divisor || GC の実行確率。 || session.gc_probability=1
+php.ini || session.sid_length / bits || セッション ID の長さ。 || session.sid_length=48
+php.ini || session.auto_start || 自動でセッション開始。 || session.auto_start=0
+php.ini || opcache.memory_consumption || OPcache のメモリ量。 || opcache.memory_consumption=128
+php.ini || opcache.validate_timestamps || 更新確認の有無。 || opcache.validate_timestamps=0
+php.ini || opcache.revalidate_freq || 更新確認の間隔。 || opcache.revalidate_freq=2
+php.ini || opcache.max_accelerated_files || キャッシュできるファイル数。 || opcache.max_accelerated_files=10000
+php.ini || opcache.interned_strings_buffer || 文字列の共有領域。 || opcache.interned_strings_buffer=8
+php.ini || opcache.jit_buffer_size || JIT のバッファ。 || opcache.jit_buffer_size=64M
+php.ini || opcache.preload_user || プリロードの実行ユーザー。 || opcache.preload_user=www-data
+php.ini || mbstring.language || mbstring の言語設定。 || mbstring.language=Japanese
+php.ini || mbstring.internal_encoding (廃止) || 内部文字コード。 || default_charset
+php.ini || mbstring.substitute_character || 変換できない文字の代替。 || mbstring.substitute_character=none
+php.ini || mail.add_x_header || メールに X ヘッダー追加。 || mail.add_x_header=Off
+php.ini || sendmail_path || sendmail の場所。 || sendmail_path="/usr/sbin/sendmail -t -i"
+php.ini || SMTP / smtp_port (Windows) || SMTP の設定。 || SMTP=localhost
+php.ini || arg_separator.output || URL 引数の区切り。 || arg_separator.output="&amp;"
+php.ini || url_rewriter.tags || URL 書換えの対象タグ。 || url_rewriter.tags
+php.ini || user_agent || fopen 時の User-Agent。 || user_agent="PHP"
+php.ini || cgi.fix_pathinfo || PATH_INFO の扱い。 || cgi.fix_pathinfo=0
+php.ini || realpath_cache_ttl || realpath のキャッシュ時間。 || realpath_cache_ttl=120
+php.ini || zend.enable_gc || GC の有効化。 || zend.enable_gc=On
+php.ini || ffi.enable || FFI の許可。 || ffi.enable=preload
+php.ini || assert.exception || assert を例外化。 || assert.exception=1
+php.ini || xdebug.client_host / port || Xdebug の接続先。 || xdebug.client_port=9003
+php.ini || xdebug.mode の値 || off、develop、debug、coverage、profile。 || xdebug.mode=debug
+php.ini || php-fpm の pm.max_requests || ワーカーの再起動間隔。 || pm.max_requests=500
+php.ini || php-fpm の listen || 待ち受け先。 || listen=/run/php-fpm.sock
+php.ini || php-fpm の catch_workers_output || ワーカー出力の収集。 || catch_workers_output=yes
+php.ini || php-fpm の env 設定 || 環境変数の引き継ぎ。 || clear_env=no
+php.ini || conf.d の分割設定 || 拡張ごとの ini。 || /etc/php/conf.d
+DB関数 || mysqli_connect / mysqli_close || 接続と切断。 || mysqli_connect($h, $u, $p, $d)
+DB関数 || mysqli_query || クエリの実行。 || mysqli_query($c, $sql)
+DB関数 || mysqli_fetch_assoc / fetch_all || 結果の取得。 || mysqli_fetch_assoc($r)
+DB関数 || mysqli_stmt_bind_param || プリペアドの値結合。 || $st->bind_param('is', $a, $b)
+DB関数 || mysqli_stmt_get_result || 結果セットの取得。 || $st->get_result()
+DB関数 || mysqli_insert_id / affected_rows || 挿入 ID・影響行数。 || $c->insert_id
+DB関数 || mysqli_set_charset || 接続の文字コード。 || $c->set_charset('utf8mb4')
+DB関数 || mysqli_report || エラー報告の設定。 || mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT)
+DB関数 || mysqli_begin_transaction || トランザクション開始。 || $c->begin_transaction()
+DB関数 || mysqli_multi_query || 複数クエリの実行。 || $c->multi_query($sql)
+DB関数 || PDO::quote || 値のクォート。 || $pdo->quote($s)
+DB関数 || PDO::exec || 結果なしの SQL 実行。 || $pdo->exec('DELETE ...')
+DB関数 || PDO::query || 即時クエリ実行。 || $pdo->query('SELECT 1')
+DB関数 || PDO::ATTR_EMULATE_PREPARES || プリペアドのエミュレート。 || PDO::ATTR_EMULATE_PREPARES => false
+DB関数 || PDO::ATTR_STRINGIFY_FETCHES || 数値の文字列化。 || PDO::ATTR_STRINGIFY_FETCHES
+DB関数 || PDO::MYSQL_ATTR_INIT_COMMAND || MySQL 接続時の命令。 || SET NAMES utf8mb4
+DB関数 || PDO::FETCH_KEY_PAIR || 2 列を連想配列に。 || PDO::FETCH_KEY_PAIR
+DB関数 || PDO::FETCH_GROUP / UNIQUE || 結果のグループ化。 || PDO::FETCH_GROUP
+DB関数 || PDO::FETCH_COLUMN || 1 列だけ取得。 || PDO::FETCH_COLUMN
+DB関数 || PDO::FETCH_NUM / BOTH || 添字・両方で取得。 || PDO::FETCH_NUM
+DB関数 || PDO::FETCH_LAZY / BOUND || 遅延・束縛取得。 || PDO::FETCH_BOUND
+DB関数 || PDOStatement::bindColumn || 列を変数に結合。 || $st->bindColumn(1, $id)
+DB関数 || PDOStatement::closeCursor || カーソルを閉じる。 || $st->closeCursor()
+DB関数 || PDOStatement::debugDumpParams || パラメータの確認。 || $st->debugDumpParams()
+DB関数 || PDO::getAvailableDrivers || 利用可能なドライバ。 || PDO::getAvailableDrivers()
+DB関数 || PDO::inTransaction || トランザクション中か。 || $pdo->inTransaction()
+DB関数 || PDO::errorInfo / errorCode || エラー情報。 || $pdo->errorInfo()
+DB関数 || SQLite3 クラス || SQLite の拡張。 || new SQLite3('a.db')
+DB関数 || SQLite3::querySingle || 1 値の取得。 || $db->querySingle('SELECT 1')
+DB関数 || SQLite3::prepare / bindValue || プリペアド。 || $db->prepare($sql)
+DB関数 || pg_connect / pg_query || PostgreSQL 専用関数。 || pg_connect($dsn)
+DB関数 || pg_query_params || パラメータ付きクエリ。 || pg_query_params($c, $sql, [$v])
+DB関数 || pg_fetch_assoc / pg_fetch_all || 結果の取得。 || pg_fetch_assoc($r)
+DB関数 || MongoDB\Client || MongoDB の PHP ドライバ。 || new MongoDB\Client()
+DB関数 || Predis || Redis のクライアント。 || new Predis\Client()
+DB関数 || phpredis の set / get || Redis の基本操作。 || $redis->set('a', 1)
+DB関数 || Redis の expire / incr || 期限・加算。 || $redis->incr('n')
+DB関数 || Memcached::set / get || メモリキャッシュ。 || $m->set('a', 1)
+DB関数 || apcu_store / apcu_fetch || APCu の保存・取得。 || apcu_store('a', 1)
+DB関数 || apcu_delete / apcu_cache_info || 削除・状態確認。 || apcu_delete('a')
+DB関数 || opcache_get_status || OPcache の状態。 || opcache_get_status()
+DB関数 || opcache_invalidate / compile_file || OPcache の個別操作。 || opcache_invalidate($f)
+DB関数 || ODBC / OCI8 / sqlsrv || 他 DB の拡張。 || oci_connect
+DB関数 || SQL のトランザクション分離 || 同時実行の見え方。 || SET TRANSACTION ISOLATION LEVEL
+DB関数 || デッドロックの再試行 || 失敗時にやり直す。 || SQLSTATE 40001
+DB関数 || インデックス設計 || 検索の高速化。 || CREATE INDEX
+DB関数 || EXPLAIN の読み方 || 実行計画の確認。 || EXPLAIN SELECT
+DB関数 || 接続のタイムアウト || 接続時間の制限。 || PDO::ATTR_TIMEOUT
+DB関数 || 長時間クエリの対策 || 分割と上限。 || LIMIT
+DB関数 || バルクインサート || 複数行の一括挿入。 || INSERT ... VALUES (...), (...)
+DB関数 || ON DUPLICATE KEY UPDATE || 重複時の更新。 || ON DUPLICATE KEY UPDATE
+DB関数 || RETURNING (PostgreSQL) || 挿入結果の取得。 || INSERT ... RETURNING id
+cURL || CURLOPT_URL || 対象 URL。 || curl_setopt($c, CURLOPT_URL, $u)
+cURL || CURLOPT_POST / POSTFIELDS || POST の指定と本文。 || CURLOPT_POSTFIELDS
+cURL || CURLOPT_HTTPHEADER || ヘッダーの指定。 || CURLOPT_HTTPHEADER
+cURL || CURLOPT_USERAGENT || User-Agent の指定。 || CURLOPT_USERAGENT
+cURL || CURLOPT_FOLLOWLOCATION || リダイレクトに従う。 || CURLOPT_FOLLOWLOCATION
+cURL || CURLOPT_TIMEOUT / CONNECTTIMEOUT || 全体・接続の時間制限。 || CURLOPT_TIMEOUT
+cURL || CURLOPT_SSL_VERIFYPEER / HOST || 証明書の検証。 || CURLOPT_SSL_VERIFYPEER
+cURL || CURLOPT_CAINFO || CA 証明書の指定。 || CURLOPT_CAINFO
+cURL || CURLOPT_HEADER / NOBODY || ヘッダー取得・本文なし。 || CURLOPT_NOBODY
+cURL || CURLOPT_CUSTOMREQUEST || メソッドの指定。 || CURLOPT_CUSTOMREQUEST
+cURL || CURLOPT_USERPWD / HTTPAUTH || 基本認証。 || CURLOPT_USERPWD
+cURL || CURLOPT_COOKIEJAR / COOKIEFILE || クッキーの保存・送信。 || CURLOPT_COOKIEJAR
+cURL || CURLOPT_REFERER / ENCODING || リファラ・圧縮。 || CURLOPT_ENCODING
+cURL || CURLOPT_WRITEFUNCTION || 受信データのコールバック。 || CURLOPT_WRITEFUNCTION
+cURL || CURLOPT_PROXY || プロキシの指定。 || CURLOPT_PROXY
+cURL || CURLOPT_RESOLVE || 名前解決の固定。 || CURLOPT_RESOLVE
+cURL || curl_getinfo || 通信情報の取得。 || curl_getinfo($c, CURLINFO_HTTP_CODE)
+cURL || curl_error / curl_errno || エラーの取得。 || curl_error($c)
+cURL || curl_close / curl_reset || 終了・初期化。 || curl_close($c)
+cURL || curl_multi_init / exec || 並列通信。 || curl_multi_init()
+cURL || curl_file_create / CURLFile || ファイル送信。 || new CURLFile($p)
+cURL || curl_share_init || ハンドル間の共有。 || curl_share_init()
+cURL || HTTP/2 と cURL || プロトコルの指定。 || CURL_HTTP_VERSION_2_0
+cURL || cURL の再試行設計 || 失敗時のやり直し。 || backoff
+cURL || stream_context の http オプション || file_get_contents の設定。 || ['http' => ['method' => 'POST']]
+cURL || SOAP クライアント || SOAP 通信。 || new SoapClient($wsdl)
+cURL || SoapServer || SOAP サーバー。 || new SoapServer($wsdl)
+cURL || XML-RPC || XML による RPC。 || xmlrpc_encode_request
+cURL || ftp_connect / ftp_put || FTP 操作。 || ftp_connect($h)
+cURL || ssh2 拡張 / phpseclib || SSH・SFTP。 || phpseclib3
+cURL || ldap_connect / ldap_bind || LDAP 操作。 || ldap_connect($h)
+cURL || imap_open / IMAP || メール受信。 || imap_open($m, $u, $p)
+cURL || mail ヘッダーインジェクション || 改行混入への対策。 || preg_match('/[\r\n]/', $s)
+cURL || stream_socket_server || ソケットサーバー。 || stream_socket_server('tcp://0.0.0.0:8000')
+cURL || socket_create / socket_bind || 低水準ソケット。 || socket_create(AF_INET, SOCK_STREAM, SOL_TCP)
+cURL || WebSocket サーバー (PHP) || 双方向通信。 || Ratchet, Workerman
+cURL || Workerman || 常駐型のサーバー。 || new Worker()
+cURL || Amp / ReactPHP の Promise || 非同期処理。 || React\Promise
+cURL || PHP の非同期実行 || Fiber やキュー。 || Fiber
+テスト || PHPUnit の TestCase || テストの基底。 || extends TestCase
+テスト || setUp / tearDown || 前後処理。 || protected function setUp(): void
+テスト || setUpBeforeClass / tearDownAfterClass || クラス単位の前後処理。 || public static function setUpBeforeClass()
+テスト || assertTrue / assertFalse || 真偽の検証。 || $this->assertTrue($x)
+テスト || assertNull / assertNotNull || null の検証。 || $this->assertNull($x)
+テスト || assertEmpty / assertNotEmpty || 空の検証。 || $this->assertEmpty($a)
+テスト || assertCount || 件数の検証。 || $this->assertCount(3, $a)
+テスト || assertContains / assertArrayHasKey || 含む・キーの検証。 || $this->assertContains(1, $a)
+テスト || assertStringContainsString || 文字列の包含。 || $this->assertStringContainsString('a', $s)
+テスト || assertMatchesRegularExpression || 正規表現の検証。 || $this->assertMatchesRegularExpression('/a/', $s)
+テスト || assertInstanceOf || 型の検証。 || $this->assertInstanceOf(A::class, $o)
+テスト || assertGreaterThan / LessThan || 大小の検証。 || $this->assertGreaterThan(1, $x)
+テスト || assertEqualsWithDelta || 誤差付きの等値。 || $this->assertEqualsWithDelta(0.3, $x, 0.01)
+テスト || assertJsonStringEqualsJsonString || JSON の等値。 || $this->assertJsonStringEqualsJsonString($a, $b)
+テスト || assertFileExists / assertDirectoryExists || ファイルの存在。 || $this->assertFileExists($p)
+テスト || assertSame と assertEquals の差 || 厳密比較か緩い比較か。 || assertSame
+テスト || expectException || 例外の期待。 || $this->expectException(E::class)
+テスト || expectExceptionMessage / Code || 例外の内容の期待。 || $this->expectExceptionMessage('x')
+テスト || expectOutputString || 出力の期待。 || $this->expectOutputString('a')
+テスト || markTestSkipped / Incomplete || スキップ・未完。 || $this->markTestSkipped()
+テスト || @depends / #[Depends] || テストの依存。 || #[Depends('testA')]
+テスト || #[Test] / #[DataProvider] || 属性によるテスト定義。 || #[Test]
+テスト || #[CoversClass] / #[Group] || カバー対象・グループ。 || #[Group('slow')]
+テスト || createStub / createMock || スタブ・モックの作成。 || $this->createStub(A::class)
+テスト || willReturn / willThrowException || 振る舞いの指定。 || ->method('f')->willReturn(1)
+テスト || expects($this->once()) || 呼出回数の検証。 || ->expects($this->once())
+テスト || with / withConsecutive || 引数の検証。 || ->with($this->equalTo(1))
+テスト || getMockBuilder || モックの詳細設定。 || $this->getMockBuilder(A::class)
+テスト || PHPUnit の phpunit.xml || 設定ファイル。 || phpunit.xml
+テスト || --filter / --group || 実行するテストの絞り込み。 || phpunit --filter testA
+テスト || --coverage-html || カバレッジの出力。 || phpunit --coverage-html cov
+テスト || --testdox || 読みやすい結果表示。 || phpunit --testdox
+テスト || 境界値テスト || 端の値を試す。 || boundary
+テスト || 同値分割 || 代表値で検証。 || equivalence class
+テスト || 回帰テスト || 変更で壊れないか確認。 || regression
+テスト || スナップショットテスト || 出力の保存と比較。 || spatie/phpunit-snapshot-assertions
+テスト || ミューテーションスコア || テストの有効性指標。 || MSI
+テスト || テストダブルの種類 || ダミー・スタブ・スパイ・モック。 || dummy, stub
+テスト || テスト用 DB の分離 || 本番と分けて実行。 || sqlite :memory:
+テスト || HTTP テストの疑似化 || 外部通信を避ける。 || MockHandler
+テスト || 時間のテスト || Clock の差し替え。 || Psr\Clock\ClockInterface
+テスト || テストカバレッジの目標 || 数値より質を重視。 || coverage

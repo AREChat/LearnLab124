@@ -1,0 +1,236 @@
+gem || rack || Ruby の Web サーバ共通インターフェース。 || run ->(env) { [200, {}, ["ok"]] }
+gem || rack middleware || リクエスト処理の連鎖。 || use Rack::Deflater
+gem || rackup || config.ru を起動するコマンド。 || rackup -p 3000
+gem || config.ru || Rack アプリの設定ファイル。 || run MyApp
+gem || sinatra || 軽量 Web フレームワーク。 || get '/' do 'hi' end
+gem || sinatra の before / after || 前後処理のフィルタ。 || before { content_type :json }
+gem || sinatra の halt || 処理を即中断して応答。 || halt 404
+gem || sinatra の erb || テンプレートの描画。 || erb :index
+gem || sinatra の settings || アプリ設定の参照。 || set :port, 4567
+gem || sinatra-contrib || Sinatra の拡張集。 || require 'sinatra/json'
+gem || puma || マルチスレッドの Web サーバ。 || puma -C config/puma.rb
+gem || unicorn || プロセス型の Web サーバ。 || unicorn -c unicorn.rb
+gem || thin || イベント駆動の Web サーバ。 || thin start
+gem || webrick || 標準添付の簡易サーバ。 || WEBrick::HTTPServer.new(Port: 8000)
+gem || falcon || 非同期の Web サーバ。 || falcon serve
+gem || sidekiq || バックグラウンドジョブ処理。 || MyWorker.perform_async(1)
+gem || sidekiq の Worker || ジョブの定義。 || include Sidekiq::Job
+gem || sidekiq の perform_in || 遅延実行。 || MyJob.perform_in(5.minutes)
+gem || resque || Redis ベースのジョブキュー。 || Resque.enqueue(Job)
+gem || delayed_job || DB ベースのジョブキュー。 || obj.delay.run
+gem || good_job || Postgres ベースのジョブ基盤。 || GoodJob
+gem || solid_queue || Rails 標準のジョブ基盤。 || SolidQueue
+gem || whenever || cron 式を Ruby で記述。 || every 1.day do runner "X.run" end
+gem || clockwork || 定期実行の記述。 || every(1.hour, 'job')
+gem || rufus-scheduler || スケジューラ。 || scheduler.every '10s' do end
+gem || redis-rb || Redis クライアント。 || Redis.new.set('a', 1)
+gem || connection_pool || 接続のプール。 || ConnectionPool.new(size: 5) { Redis.new }
+gem || dalli || Memcached クライアント。 || Dalli::Client.new
+gem || pg || PostgreSQL のドライバ。 || PG.connect(dbname: 'x')
+gem || mysql2 || MySQL のドライバ。 || Mysql2::Client.new
+gem || sqlite3 || SQLite のドライバ。 || SQLite3::Database.new('a.db')
+gem || sequel || 軽量 ORM。 || DB[:users].all
+gem || rom-rb || 関数型指向の永続化。 || ROM.container
+gem || hanami || 軽量 Web フレームワーク。 || hanami new app
+gem || roda || ルーティングツリー型の Web ライブラリ。 || route do |r| end
+gem || grape || API 向けフレームワーク。 || class API < Grape::API
+gem || dry-rb || 関数型指向の部品群。 || dry-validation
+gem || dry-validation || 検証の契約。 || Dry::Validation::Contract
+gem || dry-types || 型の定義。 || Types::String
+gem || dry-struct || 型付き構造体。 || class User < Dry::Struct
+gem || dry-monads || モナドの提供。 || Success(1)
+gem || dry-container || DI コンテナ。 || Dry::Container.new
+gem || dry-initializer || 初期化引数の定義。 || option :name
+gem || concurrent-ruby || 並行処理の部品。 || Concurrent::Future
+gem || concurrent-ruby の Promise || 非同期の結果。 || Concurrent::Promise.execute { 1 }
+gem || concurrent-ruby の AtomicFixnum || スレッド安全な数値。 || Concurrent::AtomicFixnum.new(0)
+gem || concurrent-ruby の Map || スレッド安全なハッシュ。 || Concurrent::Map.new
+gem || async || Fiber による非同期。 || Async { sleep 1 }
+gem || async-http || 非同期 HTTP。 || Async::HTTP::Internet
+gem || eventmachine || イベント駆動の基盤。 || EM.run { }
+gem || faraday || HTTP クライアント。 || Faraday.get('https://a.com')
+gem || faraday の middleware || 処理の連鎖。 || f.request :json
+gem || httparty || 簡易 HTTP クライアント。 || HTTParty.get(url)
+gem || rest-client || HTTP クライアント。 || RestClient.get(url)
+gem || typhoeus || 並列 HTTP。 || Typhoeus.get(url)
+gem || httpx || 新しい HTTP クライアント。 || HTTPX.get(url)
+gem || http (http.rb) || 連鎖形式の HTTP。 || HTTP.get(url)
+gem || oj || 高速 JSON。 || Oj.dump(h)
+gem || multi_json || JSON ライブラリの抽象化。 || MultiJson.dump(h)
+gem || jbuilder || JSON の組み立て。 || json.name @user.name
+gem || active_model_serializers || JSON のシリアライザ。 || class UserSerializer
+gem || blueprinter || 軽量シリアライザ。 || UserBlueprint.render(user)
+gem || jsonapi-serializer || JSON:API の出力。 || UserSerializer.new(user)
+gem || fast_jsonapi || 高速な JSON:API。 || include FastJsonapi::ObjectSerializer
+gem || nokogiri || HTML / XML の解析。 || Nokogiri::HTML(html)
+gem || nokogiri の css || CSS セレクタで検索。 || doc.css('a')
+gem || nokogiri の xpath || XPath で検索。 || doc.xpath('//a')
+gem || mechanize || 自動ブラウジング。 || Mechanize.new.get(url)
+gem || selenium-webdriver || ブラウザ操作。 || Selenium::WebDriver.for :chrome
+gem || capybara || 画面テストの DSL。 || visit '/'
+gem || capybara の click_on || リンクやボタンを押す。 || click_on 'Login'
+gem || capybara の fill_in || 入力欄に記入。 || fill_in 'Email', with: 'a'
+gem || capybara の have_content || 文字の存在確認。 || expect(page).to have_content('OK')
+gem || capybara の within || 範囲を限定。 || within('#form') do end
+gem || capybara の find || 要素の取得。 || find('.btn').click
+gem || capybara の all || 複数要素の取得。 || all('li')
+gem || capybara の js: true || JS を有効にして実行。 || scenario 'x', js: true
+gem || capybara の save_and_open_page || HTML を保存して開く。 || save_and_open_page
+gem || cuprite || Chrome 直接制御のドライバ。 || Capybara.javascript_driver = :cuprite
+gem || poltergeist || PhantomJS のドライバ。 || :poltergeist
+gem || webmock || HTTP のスタブ。 || stub_request(:get, url)
+gem || vcr || HTTP 通信の録画・再生。 || VCR.use_cassette('x') do end
+gem || timecop || 時刻の固定。 || Timecop.freeze(Time.now)
+gem || faker || ダミーデータの生成。 || Faker::Name.name
+gem || ffaker || 軽量なダミー生成。 || FFaker::Name.name
+gem || factory_bot || テストデータの工場。 || create(:user)
+gem || factory_bot の trait || 属性の組合せ。 || trait :admin do end
+gem || factory_bot の sequence || 連番の属性。 || sequence(:email) { |n| "a#{n}@x.com" }
+gem || factory_bot の build_stubbed || DB を使わず生成。 || build_stubbed(:user)
+gem || database_cleaner || テスト後の DB 掃除。 || DatabaseCleaner.clean
+gem || shoulda-matchers || モデル検証のマッチャ。 || it { should validate_presence_of(:name) }
+gem || rspec-rails || Rails 向け RSpec。 || rails g rspec:install
+gem || rspec-its || its の記法。 || its(:size) { is_expected.to eq 1 }
+gem || rspec-retry || 失敗テストの再実行。 || config.default_retry_count = 3
+gem || simplecov || カバレッジ計測。 || SimpleCov.start
+gem || minitest || 標準添付のテスト。 || class T < Minitest::Test
+gem || minitest-reporters || 結果表示の拡張。 || Minitest::Reporters.use!
+gem || test-unit || 標準的なテストライブラリ。 || class T < Test::Unit::TestCase
+gem || mocha || モックライブラリ。 || obj.stubs(:a).returns(1)
+gem || guard || ファイル監視の自動実行。 || guard init
+gem || guard-rspec || 変更時に RSpec 実行。 || guard :rspec
+gem || spring || Rails の事前起動。 || spring stop
+gem || bootsnap || 起動の高速化。 || require 'bootsnap/setup'
+gem || rubocop || 静的解析と整形。 || rubocop -a
+gem || rubocop-rails || Rails 用の規則。 || require: rubocop-rails
+gem || rubocop-rspec || RSpec 用の規則。 || require: rubocop-rspec
+gem || rubocop-performance || 性能の規則。 || require: rubocop-performance
+gem || reek || コードの臭い検出。 || reek lib
+gem || brakeman || セキュリティ静的解析。 || brakeman
+gem || bundler-audit || 脆弱な gem の検出。 || bundle audit
+gem || rails_best_practices || Rails 設計の検査。 || rails_best_practices .
+gem || flog || 複雑度の計測。 || flog lib
+gem || flay || 重複コードの検出。 || flay lib
+gem || yard || ドキュメント生成。 || yard doc
+gem || rdoc || 標準のドキュメント生成。 || rdoc lib
+gem || pry || 高機能な対話環境。 || binding.pry
+gem || pry-byebug || pry でデバッグ。 || next, step
+gem || pry-rails || Rails コンソールを pry に。 || rails c
+gem || byebug || デバッガ。 || byebug
+gem || debug (debug gem) || 標準のデバッガ。 || binding.break
+gem || irb || 標準の対話環境。 || irb
+gem || awesome_print || 見やすい出力。 || ap hash
+gem || pp || 整形出力。 || pp hash
+gem || better_errors || 開発時の詳細エラー画面。 || gem 'better_errors'
+gem || binding_of_caller || 呼び出し元の binding。 || binding.of_caller(1)
+gem || bullet || N+1 問題の検出。 || Bullet.enable = true
+gem || rack-mini-profiler || 性能の計測。 || rack-mini-profiler
+gem || memory_profiler || メモリ使用量の解析。 || MemoryProfiler.report { }
+gem || stackprof || サンプリングプロファイラ。 || StackProf.run { }
+gem || ruby-prof || プロファイラ。 || RubyProf.start
+gem || benchmark-ips || 1 秒あたりの回数測定。 || Benchmark.ips { |x| }
+gem || derailed_benchmarks || Rails の性能測定。 || bundle exec derailed bundle:mem
+gem || lograge || ログの簡素化。 || config.lograge.enabled = true
+gem || semantic_logger || 構造化ログ。 || SemanticLogger
+gem || sentry-ruby || エラー監視。 || Sentry.init
+gem || rollbar || エラー監視。 || Rollbar.error(e)
+gem || honeybadger || エラー監視。 || Honeybadger.notify(e)
+gem || newrelic_rpm || 性能監視。 || NewRelic::Agent
+gem || scout_apm || 性能監視。 || ScoutApm
+gem || skylight || 性能監視。 || Skylight
+gem || airbrake || エラー通知。 || Airbrake.notify(e)
+gem || dotenv || .env の読み込み。 || Dotenv.load
+gem || figaro || 設定管理。 || ENV['KEY']
+gem || config (config gem) || 環境別の設定。 || Settings.key
+gem || anyway_config || 設定の統合管理。 || class MyConfig < Anyway::Config
+gem || rails-i18n || 各国語の翻訳集。 || gem 'rails-i18n'
+gem || i18n-tasks || 翻訳の管理。 || i18n-tasks missing
+gem || globalize || モデルの多言語化。 || translates :title
+gem || mobility || 翻訳属性の管理。 || translates :title
+gem || money-rails || 金額の扱い。 || monetize :price_cents
+gem || money || 通貨の計算。 || Money.new(100, 'JPY')
+gem || kaminari || ページネーション。 || User.page(1).per(10)
+gem || will_paginate || ページネーション。 || User.paginate(page: 1)
+gem || pagy || 高速ページネーション。 || pagy(User.all)
+gem || ransack || 検索フォームの生成。 || User.ransack(name_cont: 'a')
+gem || searchkick || Elasticsearch 連携。 || searchkick
+gem || elasticsearch-rails || Elasticsearch 統合。 || include Elasticsearch::Model
+gem || pg_search || Postgres の全文検索。 || pg_search_scope :q, against: :name
+gem || friendly_id || 読みやすい URL。 || friendly_id :title, use: :slugged
+gem || acts_as_list || 並び順の管理。 || acts_as_list
+gem || acts_as_tree || 木構造のモデル。 || acts_as_tree
+gem || ancestry || 階層構造。 || has_ancestry
+gem || closure_tree || 階層構造。 || acts_as_tree
+gem || awesome_nested_set || 入れ子集合モデル。 || acts_as_nested_set
+gem || paper_trail || 変更履歴の記録。 || has_paper_trail
+gem || audited || 監査ログ。 || audited
+gem || paranoia || 論理削除。 || acts_as_paranoid
+gem || discard || 論理削除。 || include Discard::Model
+gem || aasm || 状態機械。 || include AASM
+gem || state_machines || 状態機械。 || state_machine :state
+gem || workflow || 状態遷移の定義。 || include Workflow
+gem || enumerize || enum の拡張。 || enumerize :role, in: [:a]
+gem || store_attribute || JSON 属性の型付け。 || store_attribute :data, :x, :integer
+gem || activerecord-import || 一括挿入。 || User.import(users)
+gem || upsert || 一括の更新挿入。 || Upsert.batch
+gem || ar_lazy_preload || 遅延 preload。 || User.lazy_preload(:posts)
+gem || strong_migrations || 危険なマイグレーションの検出。 || strong_migrations
+gem || scenic || DB ビューの管理。 || create_view :x
+gem || fx || DB 関数・トリガの管理。 || create_function :f
+gem || annotate || モデルへのスキーマ注釈。 || annotate
+gem || schema_plus || スキーマ機能の拡張。 || schema_plus
+gem || foreigner || 外部キー制約の追加。 || add_foreign_key
+gem || apartment || マルチテナント。 || Apartment::Tenant.switch('a')
+gem || acts_as_tenant || テナントの分離。 || acts_as_tenant :account
+gem || devise || 認証の基盤。 || devise_for :users
+gem || devise の before_action || ログイン必須にする。 || before_action :authenticate_user!
+gem || devise の current_user || ログイン中のユーザー。 || current_user
+gem || devise の user_signed_in? || ログイン判定。 || user_signed_in?
+gem || devise の modules || 機能の選択。 || :database_authenticatable
+gem || devise の confirmable || メール確認。 || :confirmable
+gem || devise の lockable || アカウントロック。 || :lockable
+gem || devise の trackable || ログイン追跡。 || :trackable
+gem || devise の omniauthable || 外部認証。 || :omniauthable
+gem || devise_token_auth || API 向けトークン認証。 || mount_devise_token_auth_for
+gem || warden || Rack の認証基盤。 || Warden::Manager
+gem || omniauth || 外部サービス認証。 || provider :github
+gem || omniauth-google-oauth2 || Google 認証。 || :google_oauth2
+gem || doorkeeper || OAuth プロバイダ。 || use_doorkeeper
+gem || jwt || JSON Web Token。 || JWT.encode(payload, key)
+gem || bcrypt || パスワードのハッシュ化。 || BCrypt::Password.create('x')
+gem || rotp || ワンタイムパスワード。 || ROTP::TOTP.new(secret)
+gem || cancancan || 認可。 || can :read, Post
+gem || pundit || ポリシーによる認可。 || authorize @post
+gem || rolify || ロール管理。 || user.add_role :admin
+gem || action_policy || 認可の枠組み。 || authorize! post
+gem || rack-attack || アクセス制限。 || Rack::Attack.throttle
+gem || rack-cors || CORS の設定。 || use Rack::Cors
+gem || secure_headers || セキュリティヘッダ。 || SecureHeaders::Configuration
+gem || recaptcha || reCAPTCHA の連携。 || verify_recaptcha
+gem || carrierwave || ファイルアップロード。 || mount_uploader :img, Up
+gem || shrine || ファイルアップロード。 || include Shrine::Attachment(:img)
+gem || paperclip (旧) || 添付ファイル(非推奨)。 || has_attached_file
+gem || mini_magick || ImageMagick の操作。 || MiniMagick::Image.open(f)
+gem || rmagick || ImageMagick の連携。 || Magick::Image.read(f)
+gem || ruby-vips || 高速な画像処理。 || Vips::Image.new_from_file(f)
+gem || image_processing || 画像変換の共通 API。 || ImageProcessing::Vips
+gem || aws-sdk-s3 || S3 の操作。 || Aws::S3::Client.new
+gem || fog || クラウド操作の抽象化。 || Fog::Storage.new
+gem || google-cloud-storage || GCS の操作。 || Google::Cloud::Storage.new
+gem || stripe || 決済。 || Stripe::Charge.create
+gem || pay || 決済の統合。 || pay
+gem || omise || 決済。 || Omise::Charge
+gem || mail || メール送信の基盤。 || Mail.deliver
+gem || premailer-rails || メールの CSS をインライン化。 || premailer-rails
+gem || letter_opener || 開発時のメール確認。 || config.action_mailer.delivery_method = :letter_opener
+gem || mailcatcher || ダミー SMTP。 || mailcatcher
+gem || postmark-rails || Postmark 送信。 || postmark
+gem || sendgrid-ruby || SendGrid 送信。 || SendGrid::API
+gem || twilio-ruby || SMS・電話。 || Twilio::REST::Client
+gem || slack-ruby-client || Slack 連携。 || Slack::Web::Client.new
+gem || line-bot-api || LINE Bot。 || Line::Bot::Client
+gem || octokit || GitHub API。 || Octokit::Client.new
+gem || google-api-client || Google API。 || Google::Apis
+gem || twitter || X (旧 Twitter) 連携。 || Twitter::REST::Client
+gem || telegram-bot-ruby || Telegram Bot。 || Telegram::Bot::Client
+gem || discordrb || Discord Bot。 || Discordrb::Bot.new

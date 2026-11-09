@@ -1,0 +1,159 @@
+CMake || project() || プロジェクト名と言語。 || project(App LANGUAGES CXX)
+CMake || set(CMAKE_CXX_STANDARD) || C++ 規格の指定。 || set(CMAKE_CXX_STANDARD 20)
+CMake || CMAKE_BUILD_TYPE || Debug・Release の指定。 || -DCMAKE_BUILD_TYPE=Release
+CMake || add_library || ライブラリの定義。 || add_library(a STATIC a.cpp)
+CMake || target_include_directories || ヘッダー探索パス。 || target_include_directories(a PUBLIC include)
+CMake || target_compile_options / definitions || オプション・マクロ。 || target_compile_definitions(a PRIVATE X)
+CMake || target_compile_features || 必要な言語機能。 || target_compile_features(a PUBLIC cxx_std_20)
+CMake || PUBLIC / PRIVATE / INTERFACE || 依存の伝播範囲。 || PRIVATE
+CMake || find_package || 外部ライブラリの探索。 || find_package(Boost REQUIRED)
+CMake || FetchContent || 依存の取得。 || FetchContent_Declare(...)
+CMake || add_subdirectory || 下位のビルド定義。 || add_subdirectory(src)
+CMake || option() || ビルドオプション。 || option(BUILD_TESTS "" ON)
+CMake || install / CPack || インストール・パッケージ。 || install(TARGETS a)
+CMake || enable_testing / add_test || CTest によるテスト。 || add_test(NAME t COMMAND a)
+CMake || ctest || テストの実行。 || ctest --output-on-failure
+CMake || CMakePresets.json || 設定の共有。 || cmake --preset debug
+CMake || toolchain file || クロスコンパイルの設定。 || -DCMAKE_TOOLCHAIN_FILE=a.cmake
+CMake || generator expression || 生成時の条件式。 || $<CONFIG:Debug>
+CMake || CMAKE_EXPORT_COMPILE_COMMANDS || compile_commands.json の出力。 || -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+CMake || cmake --build / --install || ビルド・導入。 || cmake --build build -j
+CMake || out-of-source ビルド || ソースと分けてビルド。 || cmake -B build
+CMake || CMake の変数 / キャッシュ || 設定値の管理。 || set(X 1 CACHE STRING "")
+CMake || CMake の関数 / マクロ || 処理の再利用。 || function(f)
+CMake || Config モード / Find モジュール || パッケージ探索の方式。 || FindBoost.cmake
+CMake || ExternalProject || 外部プロジェクトのビルド。 || ExternalProject_Add
+CMake || CMake のユニティビルド || ビルド高速化。 || CMAKE_UNITY_BUILD
+CMake || precompile_headers || PCH の指定。 || target_precompile_headers
+CMake || 静的解析の統合 || clang-tidy を連携。 || CMAKE_CXX_CLANG_TIDY
+CMake || Bazel / Meson / Buck2 || 別のビルドシステム。 || meson setup build
+CMake || Makefile のターゲット || 作業単位。 || all: app
+CMake || Makefile の変数 / 自動変数 || $@ $< $^ など。 || $@
+CMake || パターンルール || 拡張子による規則。 || %.o: %.cpp
+CMake || .PHONY || 実ファイルでないターゲット。 || .PHONY: clean
+CMake || 依存関係の自動生成 || -MMD でヘッダー依存を作成。 || -MMD -MP
+CMake || 並列ビルド (-j) || 複数ジョブで実行。 || make -j8
+CMake || 増分ビルド || 変更分のみ再ビルド。 || incremental
+CMake || ビルドキャッシュ (sccache) || 結果の再利用。 || sccache
+CMake || 分散ビルド (distcc / icecc) || 複数機でビルド。 || distcc
+CMake || CI での C++ ビルド || 自動ビルドとテスト。 || GitHub Actions
+CMake || コンテナでのビルド環境 || 環境の固定。 || Dockerfile
+CMake || Conan の conanfile || 依存の記述。 || conanfile.txt
+CMake || vcpkg.json (manifest) || 依存の宣言。 || vcpkg.json
+CMake || Hunter / CPM.cmake || CMake 用の依存管理。 || CPMAddPackage
+CMake || ヘッダーオンリーの導入 || include するだけ。 || header-only
+CMake || ABI 互換性の確認 || ライブラリ更新時の注意。 || abi-compliance-checker
+CMake || セマンティックバージョニング (C++) || 版番号の規則。 || SOVERSION
+CMake || SOVERSION / 共有ライブラリの版 || 互換性の版管理。 || libfoo.so.1
+CMake || シンボルの可視性 || 公開する関数の制御。 || -fvisibility=hidden
+CMake || __declspec(dllexport) || Windows の公開指定。 || __declspec(dllexport)
+CMake || .def ファイル || DLL の公開関数一覧。 || EXPORTS
+CMake || import library (.lib) || DLL の読込用。 || .lib
+Boost || Boost.Filesystem / Regex || ファイル・正規表現。 || boost::regex
+Boost || Boost.Asio の io_context || 非同期 I/O の中核。 || boost::asio::io_context
+Boost || Boost.Beast || HTTP・WebSocket。 || boost::beast::http
+Boost || Boost.Program_options || コマンドライン解析。 || boost::program_options
+Boost || Boost.Serialization || 直列化。 || boost::archive
+Boost || Boost.Spirit || 構文解析。 || boost::spirit
+Boost || Boost.Graph (BGL) || グラフアルゴリズム。 || boost::adjacency_list
+Boost || Boost.Geometry || 幾何計算。 || boost::geometry
+Boost || Boost.Multi_index || 複数の索引を持つ容器。 || boost::multi_index_container
+Boost || Boost.Container / flat_map || 追加コンテナ。 || boost::container::flat_map
+Boost || Boost.Lockfree || ロックフリーのキュー。 || boost::lockfree::queue
+Boost || Boost.Thread / Fiber || スレッド・ファイバー。 || boost::fibers
+Boost || Boost.Coroutine2 / Context || コルーチン基盤。 || boost::context
+Boost || Boost.Python / Numpy || Python 連携。 || BOOST_PYTHON_MODULE
+Boost || Boost.Test || テストフレームワーク。 || BOOST_AUTO_TEST_CASE
+Boost || Boost.Log || ログ。 || BOOST_LOG_TRIVIAL(info)
+Boost || Boost.DateTime / Chrono || 日時。 || boost::posix_time
+Boost || Boost.Math / Multiprecision || 数学・多倍長。 || boost::multiprecision
+Boost || Boost.Random / Uuid || 乱数・UUID。 || boost::uuids::random_generator
+Boost || Boost.Algorithm / StringAlgo || 追加アルゴリズム。 || boost::algorithm::trim
+Boost || Boost.Format / Lexical_cast || 書式化・型変換。 || boost::lexical_cast<int>(s)
+Boost || Boost.Optional / Variant / Any || 型の補助(標準化前)。 || boost::optional
+Boost || Boost.Signals2 || シグナルとスロット。 || boost::signals2::signal
+Boost || Boost.Hana / MPL / Fusion || メタプログラミング。 || boost::hana
+Boost || Boost.PropertyTree || 設定の木構造。 || boost::property_tree
+Boost || Boost.Interprocess || プロセス間通信。 || boost::interprocess
+Boost || Boost.Iostreams || ストリームの拡張。 || boost::iostreams
+Boost || Boost.Outcome / Leaf || エラー処理。 || boost::outcome_v2
+Boost || Boost.JSON || JSON 処理。 || boost::json::parse
+Boost || Boost.URL / Process || URL・プロセス。 || boost::urls
+Boost || Boost.Bimap / Heap || 双方向 map・ヒープ。 || boost::bimap
+Boost || Boost.Intrusive || 侵入型コンテナ。 || boost::intrusive::list
+Boost || Boost.Pool || メモリプール。 || boost::pool
+Boost || Boost.Preprocessor || プリプロセッサの補助。 || BOOST_PP_REPEAT
+Boost || Boost.Config / Predef || 環境の判定。 || BOOST_OS_LINUX
+Boost || Poco / Abseil / Folly || 他の C++ ライブラリ群。 || absl::flat_hash_map
+Boost || Abseil の StrCat / Status || 文字列・状態。 || absl::StrCat
+Boost || Folly の Future / Fbstring || Facebook のライブラリ。 || folly::Future
+Boost || Protobuf / gRPC (C++) || RPC 基盤。 || grpc::Server
+Boost || cpprestsdk / Crow / Drogon || Web フレームワーク。 || drogon::app()
+Boost || cpp-httplib || 単一ヘッダーの HTTP。 || httplib::Server
+Boost || libcurl || HTTP 通信ライブラリ。 || curl_easy_perform
+Boost || OpenSSL (C++) || 暗号・TLS。 || SSL_CTX_new
+Boost || libuv / libevent || イベントループ。 || uv_run
+Boost || SQLite / sqlite_orm || 組込み DB。 || sqlite3_open
+Boost || libpqxx / mysql-connector-cpp || DB クライアント。 || pqxx::connection
+Boost || Redis (hiredis / redis-plus-plus) || Redis クライアント。 || redisConnect
+Boost || zlib / lz4 / zstd || 圧縮ライブラリ。 || compress2
+Boost || libpng / libjpeg / stb_image || 画像ライブラリ。 || stbi_load
+Boost || FreeType / HarfBuzz || 文字描画・整形。 || FT_Init_FreeType
+Boost || ICU || Unicode ライブラリ。 || icu::UnicodeString
+Boost || PCRE2 / RE2 || 正規表現ライブラリ。 || RE2::FullMatch
+Boost || yaml-cpp / tinyxml2 || YAML・XML。 || YAML::LoadFile
+Boost || Catch2 の SECTION / REQUIRE || テスト記法。 || REQUIRE(a == b)
+Boost || gtest の TEST / TEST_F || テスト定義。 || TEST_F(Fixture, Name)
+Boost || EXPECT_EQ / ASSERT_EQ || 検証マクロ。 || EXPECT_EQ(a, b)
+Boost || EXPECT_THROW / DEATH || 例外・異常終了の検証。 || EXPECT_THROW(f(), E)
+Boost || gmock の EXPECT_CALL || 呼出の期待。 || EXPECT_CALL(m, f())
+Boost || gtest の parameterized test || 値を変えて実行。 || TEST_P
+Boost || テストフィクスチャ || 共通の準備。 || ::testing::Test
+Boost || Google Benchmark の State || 計測の状態。 || benchmark::State
+Boost || テスト駆動開発 (C++) || テストを先に書く。 || TDD
+Boost || 静的解析ツール比較 || clang-tidy、cppcheck、PVS-Studio。 || PVS-Studio
+Boost || Coverity / SonarQube (C++) || 品質解析。 || SonarQube
+Boost || Doxygen のタグ || @param、@return など。 || @brief
+Boost || コーディング規約 (Google / LLVM) || スタイルの規約。 || .clang-format
+Boost || include-what-you-use || 不要な include の検出。 || iwyu
+Windows || WinMain / wWinMain || GUI アプリの入口。 || int WINAPI WinMain
+Windows || HWND / HINSTANCE / HANDLE || Windows のハンドル型。 || HWND
+Windows || RegisterClass / CreateWindowEx || ウィンドウの作成。 || CreateWindowEx
+Windows || メッセージループ || メッセージの処理。 || GetMessage
+Windows || WndProc / DefWindowProc || ウィンドウプロシージャ。 || LRESULT CALLBACK WndProc
+Windows || WM_PAINT / WM_DESTROY || 代表的なメッセージ。 || WM_PAINT
+Windows || SendMessage / PostMessage || メッセージの送信。 || PostMessage
+Windows || GDI / GDI+ || 描画 API。 || BeginPaint
+Windows || Direct2D / DirectWrite || 2D 描画・文字。 || ID2D1Factory
+Windows || Direct3D 11 / 12 || 3D 描画。 || D3D11CreateDevice
+Windows || DXGI || 画面表示の基盤。 || IDXGISwapChain
+Windows || CreateFile / ReadFile / WriteFile || ファイル I/O。 || CreateFileW
+Windows || CloseHandle || ハンドルの解放。 || CloseHandle(h)
+Windows || CreateThread / WaitForSingleObject || スレッドと待機。 || CreateThread
+Windows || CRITICAL_SECTION / Mutex / Event || 同期オブジェクト。 || EnterCriticalSection
+Windows || SRWLOCK / InterlockedIncrement || 軽量ロック・原子操作。 || InterlockedIncrement
+Windows || スレッドプール API || 非同期の実行。 || CreateThreadpoolWork
+Windows || IOCP (完了ポート) || 非同期 I/O の仕組み。 || CreateIoCompletionPort
+Windows || VirtualAlloc / HeapAlloc || メモリ確保。 || VirtualAlloc
+Windows || レジストリ API || 設定の保存。 || RegOpenKeyEx
+Windows || CreateProcess || プロセスの起動。 || CreateProcessW
+Windows || LoadLibrary / FreeLibrary || DLL の読込。 || LoadLibraryW
+Windows || DllMain || DLL の入口。 || BOOL WINAPI DllMain
+Windows || GetLastError / FormatMessage || エラーの取得。 || GetLastError()
+Windows || SEH (構造化例外) || Windows の例外処理。 || __try / __except
+Windows || ワイド文字 (TCHAR / WCHAR) || Unicode 文字型。 || wchar_t
+Windows || MultiByteToWideChar || 文字コード変換。 || MultiByteToWideChar
+Windows || Winsock || ソケット API。 || WSAStartup
+Windows || COM の IUnknown || 参照カウントの基底。 || AddRef, Release
+Windows || CComPtr / ComPtr || COM のスマートポインタ。 || Microsoft::WRL::ComPtr
+Windows || WMI / ETW || 管理情報・トレース。 || ETW
+Windows || UWP / WinUI 3 || 新しい UI 基盤。 || WinUI
+Windows || .NET との連携 (C++/CLI) || マネージド連携。 || ref class
+Windows || P/Invoke と DLL || C# から C++ を呼ぶ。 || DllImport
+Windows || MSVC の /W4 /permissive- || 警告・厳格化。 || /W4
+Windows || /MD と /MT || ランタイムの結合方式。 || /MD
+Windows || Visual C++ 再頒布可能パッケージ || 実行に必要な部品。 || vcredist
+Windows || _CRT_SECURE_NO_WARNINGS || 旧関数の警告抑制。 || _CRT_SECURE_NO_WARNINGS
+Windows || SAL 注釈 || 引数の意図の記述。 || _In_
+Windows || Windows SDK / WDK || 開発キット。 || Windows.h
+Windows || ドライバ開発 (WDM / KMDF) || カーネルモード開発。 || DriverEntry

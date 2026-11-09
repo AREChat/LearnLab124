@@ -1,0 +1,144 @@
+データ構造 || 動的配列の実装 || 容量を倍々に拡張。 || capacity *= 2
+データ構造 || 連結リストの実装 || ノードをポインタでつなぐ。 || struct Node { Node* next; };
+データ構造 || 双方向リストの実装 || 前後のポインタを持つ。 || prev, next
+データ構造 || スタックの実装 || LIFO の構造。 || push, pop
+データ構造 || キューの実装 || FIFO の構造。 || enqueue, dequeue
+データ構造 || リングバッファ || 循環する固定長の配列。 || head, tail
+データ構造 || 二分木 || 子が 2 つまでの木。 || struct Tree { Tree* l; Tree* r; };
+データ構造 || 二分探索木 || 大小で左右に配置。 || insert, find
+データ構造 || 平衡二分探索木 || 高さを保つ木。 || AVL, 赤黒木
+データ構造 || 赤黒木 || std::map の内部構造。 || red-black tree
+データ構造 || AVL 木 || 厳密に平衡する木。 || AVL
+データ構造 || B 木 / B+ 木 || DB の索引に使う木。 || B-tree
+データ構造 || ヒープ (二分ヒープ) || 優先度付きキューの基礎。 || priority_queue
+データ構造 || ハッシュ表の実装 || チェイン法・開番地法。 || bucket
+データ構造 || ブルームフィルタ || 存在判定の確率的構造。 || bloom filter
+データ構造 || トライ木 || 文字列の接頭辞木。 || trie
+データ構造 || セグメント木 || 区間クエリの構造。 || segment tree
+データ構造 || フェニック木 (BIT) || 累積和の更新・取得。 || Fenwick tree
+データ構造 || スパーステーブル || 静的な区間最小値。 || sparse table
+データ構造 || Union-Find の実装 || 経路圧縮・ランク。 || path compression
+データ構造 || スキップリスト || 確率的な探索構造。 || skip list
+データ構造 || LRU キャッシュ || 最近使っていないものを破棄。 || list + unordered_map
+データ構造 || グラフの隣接リスト || 辺を点ごとに保持。 || vector<vector<int>>
+データ構造 || グラフの隣接行列 || 点同士の関係を行列で。 || adj[i][j]
+データ構造 || 重み付きグラフ || 辺に重みを持つ。 || pair<int, int>
+データ構造 || 有向・無向グラフ || 辺の向きの有無。 || directed
+データ構造 || 木の走査 (前順・中順・後順) || 巡回の順序。 || inorder
+データ構造 || 木の高さ・深さ || 構造の指標。 || height
+データ構造 || 最小全域木 (Kruskal / Prim) || 最小コストの木。 || Kruskal
+データ構造 || 最短経路 (Bellman-Ford / Floyd) || 経路の探索。 || Floyd-Warshall
+データ構造 || 強連結成分分解 || 有向グラフの分解。 || Tarjan
+データ構造 || 最大流 (Dinic) || 流量の最大化。 || max flow
+データ構造 || 二部マッチング || 組合せの最大化。 || bipartite matching
+データ構造 || ビット DP || 集合を整数で表す DP。 || dp[mask]
+データ構造 || 桁 DP || 桁ごとの DP。 || digit dp
+データ構造 || ローリングハッシュ || 部分文字列の高速比較。 || rolling hash
+データ構造 || KMP 法 || 文字列検索のアルゴリズム。 || KMP
+データ構造 || Z アルゴリズム || 文字列の一致長。 || Z-algorithm
+データ構造 || Manacher 法 || 回文の検出。 || manacher
+データ構造 || 接尾辞配列 || 文字列の索引。 || suffix array
+データ構造 || ダブリング || 2 の冪で飛ぶ。 || doubling
+データ構造 || LCA (最小共通祖先) || 木の 2 点の祖先。 || LCA
+データ構造 || オイラーツアー || 木を列にする。 || Euler tour
+データ構造 || HL 分解 || 木のパス分解。 || heavy-light
+データ構造 || 座標圧縮 || 値を連番に変換。 || std::unique
+データ構造 || 尺取り法 (C++) || 区間を伸縮。 || two pointers
+データ構造 || 二分探索 (答えを探す) || 判定問題に変換。 || lo, hi
+データ構造 || 三分探索 || 凸関数の最大・最小。 || ternary search
+データ構造 || 分割統治 || 問題を分けて解く。 || divide and conquer
+データ構造 || 乱択アルゴリズム || 乱数を使う手法。 || randomized
+データ構造 || 近似アルゴリズム || 厳密でない解。 || approximation
+データ構造 || 計算量クラス (P / NP) || 問題の難しさの分類。 || NP-hard
+データ構造 || 償却計算量 || 平均的な計算量。 || amortized
+データ構造 || 空間計算量 || 使用メモリの増え方。 || O(n)
+データ構造 || キャッシュ効率の良い構造 || 連続メモリの活用。 || vector
+言語機能 || 構造化束縛の使い方 || ペアやタプルを分解。 || auto [k, v] = p;
+言語機能 || inline 名前空間 || 版管理に使う。 || inline namespace v1
+言語機能 || ネストした名前空間 (A::B) || 簡潔な宣言。 || namespace a::b
+言語機能 || 名前空間エイリアス || 別名を付ける。 || namespace fs = std::filesystem;
+言語機能 || using enum (C++20) || 列挙子を取り込む。 || using enum Color;
+言語機能 || デフォルトメンバ初期化 || 宣言と同時に初期化。 || int x = 0;
+言語機能 || ビットフィールドの初期化 || 既定値の指定。 || int a : 3 = 1;
+言語機能 || 委譲コンストラクタの使い方 || 初期化の共通化。 || A() : A(0)
+言語機能 || explicit(bool) || 条件付きの explicit。 || explicit(cond) A(T)
+言語機能 || 三方比較の種類 || strong・weak・partial。 || std::strong_ordering
+言語機能 || 比較の自動生成 (== / <=>) || default の比較。 || bool operator==(const A&) const = default;
+言語機能 || 指定初期化子の順序 || 宣言順で書く。 || .x, .y
+言語機能 || ラムダの constexpr / consteval || コンパイル時のラムダ。 || constexpr auto f = []{};
+言語機能 || ラムダのキャプチャ *this || オブジェクトのコピー。 || [*this]
+言語機能 || 状態なしラムダと関数ポインタ || 変換が可能。 || int (*fp)(int) = [](int x) { return x; };
+言語機能 || decltype(auto) || 参照性を保つ推論。 || decltype(auto) f()
+言語機能 || 後置戻り値型 || ラムダや複雑な型に便利。 || auto f() -> decltype(x)
+言語機能 || 汎用的な数値リテラル || 接尾辞の組合せ。 || 1'000ull
+言語機能 || 16進浮動小数リテラル || 正確な表記。 || 0x1.8p1
+言語機能 || constexpr new / vector (C++20) || コンパイル時の動的確保。 || constexpr std::vector<int>
+言語機能 || constexpr の std::string || C++20 から利用可能。 || constexpr std::string
+言語機能 || consteval 関数の用途 || 必ず定数評価。 || consteval
+言語機能 || 定数評価でのリフレクション || C++26 の機能。 || reflect
+言語機能 || 式のテンプレート || 遅延評価で最適化。 || expression templates
+言語機能 || CTAD の推論ガイド || 引数からの型推論。 || template<class T> A(T) -> A<T>;
+言語機能 || 完全転送の落とし穴 || 波括弧の初期化子。 || std::forward
+言語機能 || 参照の折りたたみ || T& と && の規則。 || reference collapsing
+言語機能 || 転送参照と右辺値参照の違い || テンプレート引数かどうか。 || T&&
+言語機能 || ムーブ後の状態 || 有効だが未規定。 || moved-from
+言語機能 || std::move_if_noexcept || 例外安全なムーブ。 || std::move_if_noexcept
+言語機能 || 強い例外保証とムーブ || vector の拡張に影響。 || noexcept
+言語機能 || 特殊メンバ関数の自動生成規則 || 宣言で生成が変わる。 || Rule of Five
+言語機能 || トリビアルな型 || 単純なコピーが可能。 || std::is_trivial
+言語機能 || 標準レイアウト型 || C と互換のレイアウト。 || std::is_standard_layout
+言語機能 || implicit-lifetime 型 || 暗黙に生存開始する型。 || implicit lifetime
+言語機能 || 共用体の型パンニング || 未定義になる場合がある。 || union
+言語機能 || std::bit_cast の利点 || 安全な型の再解釈。 || std::bit_cast
+言語機能 || volatile と atomic の違い || 用途が別。 || volatile
+言語機能 || thread_local の初期化 || スレッドごとに実行。 || thread_local
+言語機能 || 関数 try ブロック || コンストラクタ初期化の例外。 || A() try : x(f()) {} catch (...) {}
+言語機能 || noexcept の仕様 || 例外を投げると terminate。 || noexcept(true)
+言語機能 || 動的例外仕様 (廃止) || throw(int) の旧記法。 || removed
+言語機能 || std::uncaught_exceptions || 例外の数。 || std::uncaught_exceptions()
+言語機能 || std::current_exception / rethrow_exception || 例外の保存・再送。 || std::current_exception()
+言語機能 || std::exception_ptr || 例外のポインタ。 || std::exception_ptr
+言語機能 || ADL の落とし穴 || 意図しない関数が選ばれる。 || using std::swap
+言語機能 || two-phase lookup の回避 || this-> や using。 || this->f()
+言語機能 || テンプレートの不完全型 || 前方宣言との相性。 || incomplete type
+言語機能 || 循環依存の解消 || 前方宣言・インターフェース。 || forward declaration
+言語機能 || ヘッダーの依存最小化 || include を減らす。 || pimpl
+言語機能 || inline 関数のリンケージ || ODR の例外。 || inline
+言語機能 || 内部リンケージ / 外部リンケージ || 名前の見え方。 || static
+言語機能 || 匿名名前空間と static || 内部リンケージの方法。 || namespace {}
+言語機能 || extern template の用途 || ビルド時間の短縮。 || extern template class A<int>;
+言語機能 || 暗黙のインスタンス化 || 使用時に生成。 || implicit instantiation
+言語機能 || 明示的特殊化と ODR || 定義の置き場所。 || template<>
+言語機能 || テンプレートの定義位置 || ヘッダーに書く。 || .h / .hpp
+言語機能 || .tpp / .ipp ファイル || テンプレート実装の分離。 || a.tpp
+言語機能 || concept の合成 || && や || で組合せ。 || concept C = A<T> && B<T>
+言語機能 || requires 節の位置 || 宣言の後ろに書く。 || void f() requires C<T>
+言語機能 || 制約の包摂 || より厳しい制約が優先。 || subsumption
+言語機能 || コンセプトによるオーバーロード || 制約で関数を選択。 || template<std::integral T>
+言語機能 || SFINAE から concept への移行 || 記述が読みやすい。 || enable_if
+言語機能 || std::ranges の customization point || カスタマイズ点。 || std::ranges::begin
+言語機能 || 範囲の borrowed 性 || 一時範囲の安全性。 || borrowed_range
+言語機能 || std::views::all / ref_view || 範囲の参照。 || std::views::all
+言語機能 || std::ranges::to の使い方 || ビューをコンテナへ。 || | std::ranges::to<std::vector>()
+言語機能 || C++23 の deducing this || 明示的なオブジェクト引数。 || void f(this auto&& self)
+言語機能 || C++23 の if consteval || 定数評価の分岐。 || if consteval
+言語機能 || C++23 の multidimensional subscript || 多次元の添字演算子。 || a[1, 2]
+言語機能 || C++23 の static operator() || static の呼出演算子。 || static int operator()(int)
+言語機能 || C++23 の import std || 標準モジュール。 || import std;
+言語機能 || C++23 の std::stacktrace || スタックトレース。 || std::stacktrace
+言語機能 || C++23 の std::print / println || 簡潔な出力。 || std::println("{}", 1);
+言語機能 || C++26 の contracts || 事前・事後条件。 || pre(x > 0)
+言語機能 || C++26 の pack indexing || パックの添字参照。 || Ts...[0]
+言語機能 || C++26 の std::execution || 非同期の標準化。 || std::execution
+言語機能 || C++26 の hazard pointers / RCU || 並行の再利用管理。 || std::hazard_pointer
+言語機能 || C++26 の std::inplace_vector || 固定上限の可変配列。 || std::inplace_vector
+言語機能 || C++26 の std::hive || 安定参照のコンテナ。 || std::hive
+言語機能 || C++26 の = delete("理由") || 削除理由の記述。 || = delete("x")
+言語機能 || C++26 の _ プレースホルダ || 未使用名。 || auto [_, a] = p;
+言語機能 || 提案 (WG21 / paper) || 標準化の過程。 || P0000
+言語機能 || コンパイラの対応状況 || 機能ごとに異なる。 || cppreference
+言語機能 || Compiler Explorer || コンパイル結果の確認。 || godbolt
+言語機能 || cppreference.com || 標準ライブラリの参照。 || cppreference
+言語機能 || C++ Insights || 暗黙の処理の展開。 || cppinsights
+言語機能 || Quick Bench || 簡易ベンチマーク。 || quick-bench
+言語機能 || ISO C++ 標準委員会 || 規格の策定団体。 || WG21

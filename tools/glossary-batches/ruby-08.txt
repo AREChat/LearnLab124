@@ -1,0 +1,295 @@
+RSpec || describe || テストの対象をグループ化。 || describe User do end
+RSpec || context || 条件ごとにグループ化。 || context 'when admin' do end
+RSpec || it || 1 つの期待を記述。 || it 'works' do end
+RSpec || specify || it の別名。 || specify { expect(1).to eq 1 }
+RSpec || example || it の別名。 || example { }
+RSpec || let || 遅延評価のヘルパ。 || let(:user) { create(:user) }
+RSpec || let! || 即時評価のヘルパ。 || let!(:user) { create(:user) }
+RSpec || subject || テスト対象の定義。 || subject { described_class.new }
+RSpec || described_class || 対象クラスの参照。 || described_class.new
+RSpec || before || 各テスト前の処理。 || before { setup }
+RSpec || after || 各テスト後の処理。 || after { cleanup }
+RSpec || around || 前後を包む処理。 || around { |ex| ex.run }
+RSpec || before(:all) || 全体の前に 1 回実行。 || before(:all) { }
+RSpec || shared_examples || 共通のテストを定義。 || shared_examples 'x' do end
+RSpec || it_behaves_like || 共通テストを呼ぶ。 || it_behaves_like 'x'
+RSpec || include_examples || 共通テストを取り込む。 || include_examples 'x'
+RSpec || shared_context || 共通の前提を定義。 || shared_context 'ctx' do end
+RSpec || include_context || 共通の前提を取り込む。 || include_context 'ctx'
+RSpec || expect to eq || 値の等価。 || expect(a).to eq(1)
+RSpec || expect to be || 同一性の確認。 || expect(a).to be(b)
+RSpec || expect to eql || eql? での比較。 || expect(a).to eql(1)
+RSpec || expect to equal || equal? での比較。 || expect(a).to equal(b)
+RSpec || be_truthy || 真に評価される。 || expect(a).to be_truthy
+RSpec || be_falsey || 偽に評価される。 || expect(a).to be_falsey
+RSpec || be_nil || nil であること。 || expect(a).to be_nil
+RSpec || be_empty || 空であること。 || expect([]).to be_empty
+RSpec || be_present (Rails) || 存在すること。 || expect(a).to be_present
+RSpec || be_a / be_an || クラスの確認。 || expect(a).to be_a(String)
+RSpec || be_a_kind_of || kind_of? の確認。 || expect(a).to be_a_kind_of(Numeric)
+RSpec || be_an_instance_of || 直接のインスタンス確認。 || expect(a).to be_an_instance_of(Integer)
+RSpec || be_between || 範囲内であること。 || expect(5).to be_between(1, 10)
+RSpec || be_within || 誤差の範囲内。 || expect(1.0).to be_within(0.1).of(1.05)
+RSpec || be > / be < || 大小の比較。 || expect(5).to be > 3
+RSpec || match || 正規表現や構造との一致。 || expect(s).to match(/a/)
+RSpec || match_array || 順序を問わない配列一致。 || expect(a).to match_array([1, 2])
+RSpec || contain_exactly || 要素が過不足なく一致。 || expect(a).to contain_exactly(1, 2)
+RSpec || include || 要素を含むこと。 || expect(a).to include(1)
+RSpec || start_with || 前方一致。 || expect(s).to start_with('a')
+RSpec || end_with || 後方一致。 || expect(s).to end_with('z')
+RSpec || have_attributes || 属性の確認。 || expect(u).to have_attributes(name: 'a')
+RSpec || respond_to || メソッドを持つこと。 || expect(a).to respond_to(:foo)
+RSpec || raise_error || 例外の発生確認。 || expect { f }.to raise_error(ArgumentError)
+RSpec || raise_error メッセージ || メッセージも確認。 || raise_error(/bad/)
+RSpec || change || 値の変化確認。 || expect { f }.to change { a }.by(1)
+RSpec || change from to || 変化前後の指定。 || change { a }.from(0).to(1)
+RSpec || change Model.count || 件数の変化。 || change(User, :count).by(1)
+RSpec || output || 標準出力の確認。 || expect { puts 1 }.to output("1\n").to_stdout
+RSpec || throw_symbol || throw の確認。 || expect { throw :a }.to throw_symbol(:a)
+RSpec || yield_control || ブロック呼出の確認。 || expect { |b| f(&b) }.to yield_control
+RSpec || yield_with_args || ブロック引数の確認。 || yield_with_args(1)
+RSpec || satisfy || 条件ブロックで確認。 || expect(a).to satisfy { |x| x > 1 }
+RSpec || all マッチャ || 全要素の確認。 || expect(a).to all(be > 0)
+RSpec || and マッチャ || 条件の合成。 || expect(a).to be_a(Integer).and be > 1
+RSpec || or マッチャ || どちらかを満たす。 || expect(a).to eq(1).or eq(2)
+RSpec || not_to || 否定の期待。 || expect(a).not_to eq(1)
+RSpec || is_expected || subject の期待。 || is_expected.to be_truthy
+RSpec || should (旧記法) || 旧来の期待記法。 || a.should eq 1
+RSpec || double || 代役オブジェクト。 || d = double('x', a: 1)
+RSpec || instance_double || 型を検証する代役。 || instance_double(User)
+RSpec || class_double || クラスの代役。 || class_double(User)
+RSpec || spy || 呼出を記録する代役。 || s = spy('x')
+RSpec || allow receive || スタブの設定。 || allow(a).to receive(:b).and_return(1)
+RSpec || expect receive || 呼出の期待。 || expect(a).to receive(:b)
+RSpec || have_received || 呼出の事後確認。 || expect(s).to have_received(:b)
+RSpec || with 引数 || 引数の指定。 || receive(:b).with(1)
+RSpec || and_return || 戻り値の指定。 || and_return(1, 2)
+RSpec || and_raise || 例外を発生。 || and_raise(StandardError)
+RSpec || and_yield || ブロックに値を渡す。 || and_yield(1)
+RSpec || and_call_original || 元の処理を呼ぶ。 || and_call_original
+RSpec || and_throw || throw を発生。 || and_throw(:a)
+RSpec || exactly times || 呼出回数の指定。 || exactly(2).times
+RSpec || at_least once || 最低回数の指定。 || at_least(:once)
+RSpec || at_most || 最大回数の指定。 || at_most(:twice)
+RSpec || once / twice || 回数の短縮記法。 || expect(a).to receive(:b).once
+RSpec || ordered || 呼出順の指定。 || receive(:a).ordered
+RSpec || anything / any_args || 任意の引数。 || with(anything)
+RSpec || instance_of || 型で引数指定。 || with(instance_of(Integer))
+RSpec || hash_including || ハッシュの一部一致。 || with(hash_including(a: 1))
+RSpec || array_including || 配列の一部一致。 || with(array_including(1))
+RSpec || allow_any_instance_of || 全インスタンスのスタブ。 || allow_any_instance_of(User).to receive(:a)
+RSpec || stub_const || 定数の差替え。 || stub_const('A::B', 1)
+RSpec || hide_const || 定数の隠蔽。 || hide_const('A')
+RSpec || RSpec.configure || 全体設定。 || RSpec.configure { |c| }
+RSpec || config.before(:suite) || 全体の開始前処理。 || c.before(:suite) { }
+RSpec || config.include || ヘルパの取り込み。 || c.include Helpers
+RSpec || config.filter_run_when_matching || focus で絞り込み。 || c.filter_run_when_matching :focus
+RSpec || focus (fit / fdescribe) || 対象を絞って実行。 || fit 'x' do end
+RSpec || skip / xit || テストを飛ばす。 || skip 'later'
+RSpec || pending || 未対応としてマーク。 || pending 'bug'
+RSpec || metadata (タグ) || テストへ付与する印。 || it 'x', :slow do end
+RSpec || --tag オプション || タグで絞り込み。 || rspec --tag slow
+RSpec || --format documentation || 見やすい表示形式。 || rspec -f d
+RSpec || --fail-fast || 最初の失敗で停止。 || rspec --fail-fast
+RSpec || --only-failures || 失敗のみ再実行。 || rspec --only-failures
+RSpec || --next-failure || 次の失敗だけ実行。 || rspec --next-failure
+RSpec || --seed || 乱数の種を指定。 || rspec --seed 1234
+RSpec || --order random || ランダム順で実行。 || rspec --order random
+RSpec || .rspec ファイル || 既定オプションの定義。 || --require spec_helper
+RSpec || spec_helper.rb || 基本設定ファイル。 || require 'spec_helper'
+RSpec || rails_helper.rb || Rails 向け設定ファイル。 || require 'rails_helper'
+RSpec || config.use_transactional_fixtures || テストごとにロールバック。 || use_transactional_fixtures = true
+RSpec || type: :model || モデルスペックの種別。 || RSpec.describe User, type: :model
+RSpec || type: :request || リクエストスペック。 || type: :request
+RSpec || type: :system || システムスペック。 || type: :system
+RSpec || type: :controller || コントローラスペック。 || type: :controller
+RSpec || type: :feature || フィーチャスペック。 || type: :feature
+RSpec || type: :view || ビュースペック。 || type: :view
+RSpec || type: :helper || ヘルパスペック。 || type: :helper
+RSpec || type: :mailer || メイラースペック。 || type: :mailer
+RSpec || type: :job || ジョブスペック。 || type: :job
+RSpec || have_http_status || ステータスの確認。 || expect(response).to have_http_status(:ok)
+RSpec || redirect_to || リダイレクトの確認。 || expect(response).to redirect_to('/')
+RSpec || render_template || テンプレートの確認。 || expect(response).to render_template(:index)
+RSpec || have_enqueued_job || ジョブ登録の確認。 || expect { f }.to have_enqueued_job
+RSpec || have_enqueued_mail || メール登録の確認。 || have_enqueued_mail(M, :a)
+RSpec || have_been_enqueued || 登録済みの確認。 || expect(J).to have_been_enqueued
+RSpec || assign (assigns) || インスタンス変数の確認。 || expect(assigns(:a)).to eq 1
+RSpec || post / get / put / delete || リクエストの送信。 || get '/users'
+RSpec || params 指定 || パラメータ付きの送信。 || post '/users', params: { a: 1 }
+RSpec || headers 指定 || ヘッダ付きの送信。 || get '/', headers: { 'X' => '1' }
+RSpec || response.body || 応答の本文。 || JSON.parse(response.body)
+RSpec || sign_in (Devise) || テスト用ログイン。 || sign_in user
+Rails設定 || config/application.rb || 全体の設定。 || config.time_zone = 'Tokyo'
+Rails設定 || config/environments || 環境別の設定。 || development.rb
+Rails設定 || config/routes.rb || ルーティング定義。 || resources :users
+Rails設定 || config/database.yml || DB 接続設定。 || adapter: postgresql
+Rails設定 || config/credentials.yml.enc || 暗号化された秘密情報。 || rails credentials:edit
+Rails設定 || config/master.key || 復号用の鍵。 || master.key
+Rails設定 || config/storage.yml || Active Storage の保存先。 || service: Disk
+Rails設定 || config/cable.yml || Action Cable 設定。 || adapter: redis
+Rails設定 || config/puma.rb || Puma の設定。 || threads 5, 5
+Rails設定 || config/locales || 翻訳ファイル置き場。 || ja.yml
+Rails設定 || config/initializers || 起動時の初期化処理。 || devise.rb
+Rails設定 || config/importmap.rb || importmap の定義。 || pin 'app'
+Rails設定 || config.eager_load || 起動時に全読込。 || config.eager_load = true
+Rails設定 || config.cache_classes || クラスのキャッシュ。 || cache_classes
+Rails設定 || config.force_ssl || HTTPS の強制。 || config.force_ssl = true
+Rails設定 || config.hosts || 許可するホスト。 || config.hosts << 'a.com'
+Rails設定 || config.log_level || ログ水準。 || config.log_level = :info
+Rails設定 || config.active_job.queue_adapter || ジョブ基盤の指定。 || :sidekiq
+Rails設定 || config.action_mailer.delivery_method || メール送信方式。 || :smtp
+Rails設定 || config.action_mailer.default_url_options || メール内 URL の設定。 || host: 'a.com'
+Rails設定 || config.i18n.default_locale || 既定の言語。 || :ja
+Rails設定 || config.autoload_paths || 自動読込のパス。 || config.autoload_paths << Rails.root.join('lib')
+Rails設定 || Zeitwerk || 標準のオートローダ。 || Zeitwerk::Loader
+Rails設定 || config.generators || ジェネレータの設定。 || g.test_framework :rspec
+Rails設定 || config.middleware || ミドルウェアの設定。 || config.middleware.use X
+Rails設定 || config.session_store || セッションの保存先。 || :cookie_store
+Rails設定 || config.public_file_server || 静的ファイルの配信。 || enabled = true
+Rails設定 || config.assets.compile || アセットの動的コンパイル。 || assets.compile = false
+Rails設定 || config.active_record.* || AR の各種設定。 || config.active_record.default_timezone
+Rails設定 || config.x || 独自設定の名前空間。 || config.x.a = 1
+Rails設定 || Rails.application.config_for || YAML 設定の読込。 || config_for(:a)
+Rails設定 || Rails.env || 実行環境の判定。 || Rails.env.production?
+Rails設定 || Rails.root || アプリの根のパス。 || Rails.root.join('a')
+Rails設定 || Rails.logger || ロガー。 || Rails.logger.info('x')
+Rails設定 || Rails.cache || キャッシュの操作。 || Rails.cache.fetch('a') { 1 }
+Rails設定 || Rails.application.credentials || 秘密情報の参照。 || credentials.dig(:a, :b)
+Rails設定 || RAILS_ENV || 環境変数での環境指定。 || RAILS_ENV=production
+Rails設定 || RAILS_MASTER_KEY || 鍵の環境変数。 || RAILS_MASTER_KEY=xxx
+Rails設定 || DATABASE_URL || DB 接続の環境変数。 || postgres://u@h/db
+Rails設定 || SECRET_KEY_BASE || 署名用の秘密鍵。 || secret_key_base
+Rails設定 || RAILS_LOG_TO_STDOUT || 標準出力へログ出力。 || RAILS_LOG_TO_STDOUT=1
+Rails設定 || RAILS_SERVE_STATIC_FILES || 静的ファイルの配信。 || RAILS_SERVE_STATIC_FILES=1
+Rails設定 || RAILS_MAX_THREADS || スレッド数の指定。 || RAILS_MAX_THREADS=5
+ActiveSupport || present? / blank? || 存在・空の判定。 || ''.blank?
+ActiveSupport || presence || 存在すれば自身、無ければ nil。 || a.presence
+ActiveSupport || try || nil 安全な呼出。 || a.try(:b)
+ActiveSupport || delegate || メソッドの委譲。 || delegate :name, to: :user
+ActiveSupport || delegate allow_nil || nil でも安全に委譲。 || delegate :a, to: :b, allow_nil: true
+ActiveSupport || delegate prefix || 接頭辞付きの委譲。 || delegate :a, to: :b, prefix: true
+ActiveSupport || cattr_accessor || クラス変数の accessor。 || cattr_accessor :a
+ActiveSupport || class_attribute || 継承できるクラス属性。 || class_attribute :a
+ActiveSupport || mattr_accessor || モジュール変数の accessor。 || mattr_accessor :a
+ActiveSupport || concern || 関心事モジュール。 || extend ActiveSupport::Concern
+ActiveSupport || included ブロック || 取り込み時の処理。 || included do end
+ActiveSupport || class_methods ブロック || クラスメソッドの定義。 || class_methods do end
+ActiveSupport || alias_method_chain (旧) || メソッド連鎖(廃止)。 || removed
+ActiveSupport || ActiveSupport::Notifications || イベント通知の基盤。 || instrument('a') { }
+ActiveSupport || ActiveSupport::Callbacks || コールバックの基盤。 || define_callbacks :a
+ActiveSupport || ActiveSupport::Duration || 期間オブジェクト。 || 3.days
+ActiveSupport || ago / since || 過去・未来の時刻。 || 3.days.ago
+ActiveSupport || from_now || 現在からの未来時刻。 || 1.hour.from_now
+ActiveSupport || beginning_of_day || 日の始まり。 || Time.now.beginning_of_day
+ActiveSupport || end_of_month || 月の終わり。 || Date.today.end_of_month
+ActiveSupport || beginning_of_week || 週の始まり。 || beginning_of_week
+ActiveSupport || next_week / last_month || 相対的な日付。 || Date.today.next_week
+ActiveSupport || in_time_zone || タイムゾーン変換。 || Time.now.in_time_zone('Tokyo')
+ActiveSupport || Time.zone.now || 設定地域の現在時刻。 || Time.zone.now
+ActiveSupport || Time.current || 設定を考慮した現在時刻。 || Time.current
+ActiveSupport || Date.current || 設定を考慮した今日。 || Date.current
+ActiveSupport || to_fs || 書式付き文字列化。 || Time.now.to_fs(:db)
+ActiveSupport || to_formatted_s || 書式付き変換(旧)。 || to_formatted_s(:short)
+ActiveSupport || humanize || 人が読む形に変換。 || 'a_b'.humanize
+ActiveSupport || titleize || 単語の先頭を大文字に。 || 'a b'.titleize
+ActiveSupport || camelize || キャメルケース化。 || 'a_b'.camelize
+ActiveSupport || underscore || スネークケース化。 || 'AB'.underscore
+ActiveSupport || dasherize || ハイフン区切り化。 || 'a_b'.dasherize
+ActiveSupport || parameterize || URL 向け文字列化。 || 'A B'.parameterize
+ActiveSupport || pluralize / singularize || 複数形・単数形。 || 'user'.pluralize
+ActiveSupport || tableize || テーブル名化。 || 'User'.tableize
+ActiveSupport || classify || クラス名化。 || 'users'.classify
+ActiveSupport || constantize || 文字列から定数化。 || 'User'.constantize
+ActiveSupport || safe_constantize || 失敗しても nil。 || 'X'.safe_constantize
+ActiveSupport || truncate || 文字列の切詰め。 || s.truncate(10)
+ActiveSupport || squish || 空白の圧縮。 || s.squish
+ActiveSupport || strip_heredoc || ヒアドキュメントの字下げ除去。 || <<~EOS
+ActiveSupport || html_safe || HTML として安全と印付け。 || s.html_safe
+ActiveSupport || inquiry || 問い合わせ形式の文字列。 || 'a'.inquiry.a?
+ActiveSupport || starts_with? / ends_with? || 前後の一致。 || s.starts_with?('a')
+ActiveSupport || first / last (配列) || 先頭・末尾の取得。 || a.second
+ActiveSupport || in_groups_of || 固定数でのグループ化。 || a.in_groups_of(2)
+ActiveSupport || in_groups || 指定数のグループに分割。 || a.in_groups(3)
+ActiveSupport || split (配列) || 値で配列を分割。 || a.split(0)
+ActiveSupport || to_sentence || 文章形式の連結。 || [1, 2].to_sentence
+ActiveSupport || extract_options! || 末尾のハッシュを取出す。 || args.extract_options!
+ActiveSupport || without / excluding || 要素を除外。 || a.without(1)
+ActiveSupport || including || 要素を追加。 || a.including(1)
+ActiveSupport || index_by || キーでハッシュ化。 || a.index_by(&:id)
+ActiveSupport || index_with || 値を付けたハッシュ化。 || a.index_with(0)
+ActiveSupport || many? || 複数あるか。 || a.many?
+ActiveSupport || pluck (Enumerable) || 要素から値を抽出。 || a.pluck(:id)
+ActiveSupport || sum (Enumerable) || 合計の計算。 || a.sum(&:price)
+ActiveSupport || maximum / minimum || 最大・最小の取得。 || a.maximum(:age)
+ActiveSupport || exclude? || 含まないか。 || a.exclude?(1)
+ActiveSupport || deep_merge || 入れ子ハッシュの結合。 || h.deep_merge(o)
+ActiveSupport || deep_dup || 入れ子の複製。 || h.deep_dup
+ActiveSupport || deep_symbolize_keys || 入れ子のキーを Symbol 化。 || h.deep_symbolize_keys
+ActiveSupport || deep_transform_keys || 入れ子のキー変換。 || h.deep_transform_keys(&:to_s)
+ActiveSupport || with_indifferent_access || 文字列・Symbol 両対応。 || h.with_indifferent_access
+ActiveSupport || reverse_merge || 既定値を補う。 || opts.reverse_merge(a: 1)
+ActiveSupport || slice (Hash) || 指定キーの抽出。 || h.slice(:a)
+ActiveSupport || except (Hash) || 指定キーの除外。 || h.except(:a)
+ActiveSupport || compact_blank || 空要素の除去。 || a.compact_blank
+ActiveSupport || to_query || クエリ文字列化。 || {a: 1}.to_query
+ActiveSupport || to_param || URL 向けの値。 || user.to_param
+ActiveSupport || Object#to_json || JSON 文字列化。 || obj.to_json
+ActiveSupport || as_json || JSON 向けハッシュ化。 || obj.as_json
+ActiveSupport || ActiveSupport::JSON || JSON の入出力。 || ActiveSupport::JSON.decode(s)
+ActiveSupport || ActiveSupport::HashWithIndifferentAccess || 柔軟なキーのハッシュ。 || HashWithIndifferentAccess.new
+ActiveSupport || ActiveSupport::OrderedOptions || 属性風の設定。 || o.a = 1
+ActiveSupport || ActiveSupport::StringInquirer || 文字列の判定。 || Rails.env.production?
+ActiveSupport || ActiveSupport::Cache || キャッシュの基盤。 || MemoryStore.new
+ActiveSupport || ActiveSupport::TimeWithZone || 地域付き時刻。 || Time.zone.now
+ActiveSupport || ActiveSupport::MessageVerifier || 署名の検証。 || MessageVerifier.new(key)
+ActiveSupport || ActiveSupport::MessageEncryptor || 暗号化。 || MessageEncryptor.new(key)
+ActiveSupport || ActiveSupport::SecurityUtils || 定時間の比較。 || secure_compare(a, b)
+ActiveSupport || ActiveSupport::Testing::TimeHelpers || テストの時刻操作。 || travel_to Time.zone.now
+ActiveSupport || travel_to || 時刻の固定。 || travel_to(1.day.from_now)
+ActiveSupport || freeze_time || 時刻を現在で固定。 || freeze_time do end
+ActiveSupport || ActiveSupport::Deprecation || 廃止予定の警告。 || deprecator.warn('x')
+Hotwire || Turbo Drive || ページ遷移の高速化。 || data-turbo
+Hotwire || Turbo Frames || 部分的な更新。 || turbo_frame_tag 'a'
+Hotwire || Turbo Streams || 差分の更新指示。 || turbo_stream.append
+Hotwire || turbo_stream.append || 末尾に追加。 || turbo_stream.append 'list', partial: 'x'
+Hotwire || turbo_stream.prepend || 先頭に追加。 || turbo_stream.prepend 'list'
+Hotwire || turbo_stream.replace || 要素を置換。 || turbo_stream.replace 'a'
+Hotwire || turbo_stream.update || 中身を更新。 || turbo_stream.update 'a'
+Hotwire || turbo_stream.remove || 要素を削除。 || turbo_stream.remove 'a'
+Hotwire || turbo_stream.before / after || 前後へ挿入。 || turbo_stream.after 'a'
+Hotwire || turbo_stream.morph || 差分を反映。 || turbo_stream.morph 'a'
+Hotwire || broadcasts_to || 変更を配信。 || broadcasts_to :room
+Hotwire || turbo_stream_from || 配信の購読。 || turbo_stream_from @room
+Hotwire || data-turbo-method || リンクの HTTP メソッド。 || data-turbo-method="delete"
+Hotwire || data-turbo-confirm || 確認ダイアログ。 || data-turbo-confirm="OK?"
+Hotwire || data-turbo-frame || 対象フレームの指定。 || data-turbo-frame="_top"
+Hotwire || data-turbo-action || 履歴操作の指定。 || data-turbo-action="advance"
+Hotwire || data-turbo-permanent || 遷移後も保持。 || data-turbo-permanent
+Hotwire || data-turbo="false" || Turbo を無効化。 || data-turbo="false"
+Hotwire || turbo:load || 読込完了イベント。 || document.addEventListener('turbo:load', f)
+Hotwire || turbo:submit-end || 送信完了イベント。 || turbo:submit-end
+Hotwire || Turbo Native || モバイルアプリ化の仕組み。 || Turbo Native
+Hotwire || Stimulus || 軽量 JS フレームワーク。 || data-controller="hello"
+Hotwire || Stimulus controller || 挙動を定義するクラス。 || class extends Controller
+Hotwire || Stimulus targets || 要素の参照。 || static targets = ['name']
+Hotwire || Stimulus values || データ属性の値。 || static values = { n: Number }
+Hotwire || Stimulus classes || CSS クラスの参照。 || static classes = ['hidden']
+Hotwire || Stimulus outlets || 他の controller の参照。 || static outlets = ['x']
+Hotwire || Stimulus actions || イベントの紐付け。 || data-action="click->hello#go"
+Hotwire || connect / disconnect || 接続・切断時の処理。 || connect() { }
+Hotwire || Stimulus params || アクションの引数。 || data-hello-id-param="1"
+Hotwire || stimulus-rails || Rails 向け Stimulus。 || rails g stimulus hello
+Hotwire || importmap-rails || ビルド不要の JS 管理。 || bin/importmap pin x
+Hotwire || jsbundling-rails || JS のバンドル連携。 || rails javascript:install:esbuild
+Hotwire || cssbundling-rails || CSS のバンドル連携。 || rails css:install:tailwind
+Hotwire || propshaft || 軽量なアセット配信。 || gem 'propshaft'
+Hotwire || sprockets || 従来のアセットパイプライン。 || //= require x
+Hotwire || tailwindcss-rails || Tailwind の統合。 || rails tailwindcss:build
+Hotwire || view_component || ビューの部品化。 || class A < ViewComponent::Base
+Hotwire || phlex || Ruby で書くビュー。 || class A < Phlex::HTML
+Hotwire || hotwire-livereload || 自動リロード。 || hotwire-livereload
+Hotwire || Action Cable || WebSocket の仕組み。 || ActionCable.server
+Hotwire || Action Cable の channel || 配信の単位。 || class RoomChannel < ApplicationCable::Channel
+Hotwire || stream_from || 配信の購読。 || stream_from 'room'
+Hotwire || ActionCable.server.broadcast || メッセージの配信。 || broadcast('room', {a: 1})

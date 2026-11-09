@@ -1,0 +1,168 @@
+C標準関数 || strncpy / strncat || 長さ制限付きの複写・連結。 || strncpy(d, s, n)
+C標準関数 || strchr / strrchr || 文字の検索。 || strchr(s, 'a')
+C標準関数 || strstr || 部分文字列の検索。 || strstr(s, "ab")
+C標準関数 || strtok / strtok_r || 文字列の分割。 || strtok(s, ",")
+C標準関数 || strdup / strndup || 文字列の複製。 || strdup(s)
+C標準関数 || strcat / strncmp || 連結・先頭比較。 || strncmp(a, b, n)
+C標準関数 || strspn / strcspn / strpbrk || 文字集合の走査。 || strspn(s, "0123")
+C標準関数 || strerror / perror || エラー内容の表示。 || perror("open")
+C標準関数 || errno || 直近のエラー番号。 || errno == ENOENT
+C標準関数 || atoi / atof / atol || 文字列を数値に変換。 || atoi("12")
+C標準関数 || strtol / strtod / strtoul || エラー検査付きの変換。 || strtol(s, &end, 10)
+C標準関数 || itoa (非標準) || 整数を文字列に。 || snprintf
+C標準関数 || snprintf / vsnprintf || 長さ制限付きの書式化。 || snprintf(b, n, "%d", x)
+C標準関数 || sprintf の危険性 || バッファあふれの恐れ。 || sprintf
+C標準関数 || sscanf / fscanf || 書式付きの読み取り。 || sscanf(s, "%d", &n)
+C標準関数 || getchar / putchar || 1 文字の入出力。 || getchar()
+C標準関数 || puts / fputs / fgetc / fputc || 文字列・文字の出力。 || fputs(s, fp)
+C標準関数 || ungetc / fflush || 文字の戻し・フラッシュ。 || fflush(stdout)
+C標準関数 || fseek / ftell / rewind || 位置の操作。 || fseek(fp, 0, SEEK_END)
+C標準関数 || feof / ferror / clearerr || 状態の確認。 || feof(fp)
+C標準関数 || remove / rename / tmpfile || ファイル操作。 || remove("a")
+C標準関数 || setvbuf / setbuf || バッファの設定。 || setvbuf(stdout, NULL, _IONBF, 0)
+C標準関数 || freopen || ストリームの付け替え。 || freopen("a", "w", stdout)
+C標準関数 || popen / pclose || コマンドの入出力。 || popen("ls", "r")
+C標準関数 || system / getenv / setenv || 実行・環境変数。 || getenv("HOME")
+C標準関数 || abs / labs / div / ldiv || 整数の絶対値・除算。 || div(7, 2)
+C標準関数 || rand / srand / RAND_MAX || 疑似乱数。 || rand() % 10
+C標準関数 || bsearch / qsort の比較関数 || 比較コールバック。 || int cmp(const void*, const void*)
+C標準関数 || malloc / calloc / realloc / free || 動的確保と解放。 || free(p)
+C標準関数 || aligned_alloc || アラインメント指定の確保。 || aligned_alloc(64, n)
+C標準関数 || memcmp / memchr / memmove || メモリの比較・検索・移動。 || memmove(d, s, n)
+C標準関数 || offsetof / container_of || メンバの位置・親構造体。 || offsetof(S, m)
+C標準関数 || va_list / va_start / va_arg || 可変長引数。 || va_start(ap, n)
+C標準関数 || setjmp / longjmp || 大域ジャンプ。 || setjmp(env)
+C標準関数 || signal / raise || シグナル処理。 || signal(SIGINT, h)
+C標準関数 || sigaction || 詳細なシグナル設定。 || sigaction(SIGINT, &sa, 0)
+C標準関数 || atexit / exit / _Exit || 終了処理。 || atexit(f)
+C標準関数 || time / difftime / clock || 時刻・経過時間。 || clock()
+C標準関数 || localtime / gmtime / mktime || 時刻の変換。 || localtime(&t)
+C標準関数 || asctime / ctime / strftime || 時刻の文字列化。 || strftime(b, n, "%F", tm)
+C標準関数 || isalpha / isdigit / isspace / isupper || 文字種の判定。 || isdigit(c)
+C標準関数 || toupper / tolower || 大小の変換。 || toupper(c)
+C標準関数 || wchar.h / wcslen / wprintf || ワイド文字の関数。 || wcslen(w)
+C標準関数 || mbstowcs / wcstombs || マルチバイト変換。 || mbstowcs(w, s, n)
+C標準関数 || locale.h / setlocale || ロケールの設定。 || setlocale(LC_ALL, "")
+C標準関数 || limits.h / float.h || 型の限界値。 || INT_MAX
+C標準関数 || stdint.h / inttypes.h || 幅が決まった整数型。 || uint32_t
+C標準関数 || stdbool.h / stddef.h || bool・size_t など。 || size_t
+C標準関数 || complex.h / tgmath.h || 複素数・総称数学関数。 || creal(z)
+C標準関数 || fenv.h || 浮動小数点環境。 || fesetround
+C標準関数 || assert.h / static_assert || 検査。 || assert(x)
+C標準関数 || threads.h (C11) || C の標準スレッド。 || thrd_create
+C標準関数 || stdatomic.h || C の原子操作。 || atomic_int
+C標準関数 || restrict キーワード || ポインタの別名なしの宣言。 || int* restrict p
+C標準関数 || _Generic || 型による選択(C11)。 || _Generic(x, int: 1)
+C標準関数 || 複合リテラル (C99) || 一時的な構造体の生成。 || (struct P){1, 2}
+C標準関数 || 可変長配列 (VLA) || 実行時に長さが決まる配列。 || int a[n];
+C標準関数 || 指示付き初期化 (C99) || 添字・メンバ指定の初期化。 || int a[5] = {[2] = 1};
+C標準関数 || 柔軟な配列メンバ || 末尾の可変長配列。 || int data[];
+C標準関数 || static inline 関数 || ヘッダー向けのインライン関数。 || static inline int f()
+C標準関数 || 関数ポインタの配列 || 処理の表引き。 || void (*tbl[])(void)
+C標準関数 || const char* const || ポインタも対象も固定。 || const char* const s
+C標準関数 || ポインタのポインタ || 二重ポインタ。 || char** argv
+C標準関数 || void ポインタ || 型のないポインタ。 || void* p
+C標準関数 || 関数のエクスポート (C) || 外部リンケージ。 || extern
+C標準関数 || 構造体のコピー || 代入で全体を複製。 || a = b;
+C標準関数 || typedef struct || 構造体の別名。 || typedef struct { } S;
+C標準関数 || enum の整数性 || C では int として扱う。 || enum
+C標準関数 || ビット操作マクロ || セット・クリア。 || #define SET(x, n) ((x) |= 1u << (n))
+C標準関数 || エンディアン変換 || htons / ntohl。 || htons(80)
+C標準関数 || バイトオーダー || ビッグ・リトルエンディアン。 || endian
+POSIX || open / close / read / write || ファイル記述子の入出力。 || open("a", O_RDONLY)
+POSIX || lseek / fsync / ftruncate || 位置・同期・切り詰め。 || fsync(fd)
+POSIX || stat / fstat / lstat || ファイル情報。 || stat("a", &st)
+POSIX || opendir / readdir / closedir || ディレクトリ走査。 || opendir(".")
+POSIX || mkdir / rmdir / unlink / rename || ディレクトリ・ファイル操作。 || unlink("a")
+POSIX || chmod / chown / umask || 権限の設定。 || chmod("a", 0644)
+POSIX || dup / dup2 / pipe || 記述子の複製・パイプ。 || pipe(fd)
+POSIX || fcntl / ioctl || 記述子の制御。 || fcntl(fd, F_GETFL)
+POSIX || select / poll / epoll || I/O の多重化。 || epoll_wait
+POSIX || kqueue / io_uring || 高速な非同期 I/O。 || io_uring_setup
+POSIX || mmap / munmap / msync || メモリマップ。 || mmap(0, n, PROT_READ, MAP_SHARED, fd, 0)
+POSIX || fork / exec / wait / waitpid || プロセス生成・置換・待機。 || fork()
+POSIX || getpid / getppid / kill || プロセス ID・シグナル送信。 || kill(pid, SIGTERM)
+POSIX || 孤児・ゾンビプロセス || 親子関係の異常。 || zombie
+POSIX || daemon / setsid || デーモン化。 || setsid()
+POSIX || pthread_create / pthread_join || POSIX スレッド。 || pthread_create(&t, 0, f, 0)
+POSIX || pthread_mutex_lock / unlock || 排他制御。 || pthread_mutex_lock(&m)
+POSIX || pthread_cond_wait / signal || 条件変数。 || pthread_cond_wait
+POSIX || pthread_rwlock / spinlock || 読み書き・スピンロック。 || pthread_rwlock_rdlock
+POSIX || pthread_key_create / TLS || スレッド固有データ。 || pthread_key_create
+POSIX || sem_init / sem_wait / sem_post || POSIX セマフォ。 || sem_wait(&s)
+POSIX || shm_open / shmget || 共有メモリ。 || shm_open("/a", O_CREAT, 0600)
+POSIX || msgget / mq_open || メッセージキュー。 || mq_open
+POSIX || socket / bind / listen / accept || ソケットサーバー。 || socket(AF_INET, SOCK_STREAM, 0)
+POSIX || connect / send / recv || ソケットクライアント。 || connect(fd, addr, len)
+POSIX || sendto / recvfrom || UDP の送受信。 || sendto
+POSIX || setsockopt / getsockopt || ソケットの設定。 || setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof on)
+POSIX || getaddrinfo / freeaddrinfo || 名前解決。 || getaddrinfo(h, p, &hints, &res)
+POSIX || inet_pton / inet_ntop || IP の変換。 || inet_pton(AF_INET, s, &a)
+POSIX || sockaddr_in / sockaddr_in6 || アドレス構造体。 || struct sockaddr_in
+POSIX || Unix ドメインソケット || ローカル通信。 || AF_UNIX
+POSIX || SO_REUSEADDR / TCP_NODELAY || 再利用・遅延無効。 || TCP_NODELAY
+POSIX || ノンブロッキング I/O || 待たずに返す。 || O_NONBLOCK
+POSIX || C10K 問題 || 大量接続の課題。 || epoll
+POSIX || Reactor / Proactor || I/O 処理のパターン。 || reactor
+POSIX || signalfd / timerfd / eventfd || 記述子で扱うイベント。 || eventfd
+POSIX || inotify || ファイル変更の監視。 || inotify_init
+POSIX || getrlimit / setrlimit || 資源制限。 || RLIMIT_NOFILE
+POSIX || ulimit / core ファイル || 制限とコアダンプ。 || ulimit -c unlimited
+POSIX || strace / ltrace || システムコールの追跡。 || strace ./a.out
+POSIX || ldd / nm / objdump / readelf || バイナリ解析。 || objdump -d a.out
+POSIX || perf / gprof / valgrind --tool=callgrind || 性能解析。 || perf record
+POSIX || ELF 形式 || Linux の実行形式。 || ELF
+POSIX || PE 形式 || Windows の実行形式。 || PE
+POSIX || Mach-O 形式 || macOS の実行形式。 || Mach-O
+POSIX || シンボルテーブル || 名前とアドレスの対応。 || nm
+POSIX || PLT / GOT || 動的リンクの仕組み。 || PLT
+POSIX || LD_LIBRARY_PATH / rpath || 共有ライブラリの探索。 || -Wl,-rpath
+POSIX || LD_PRELOAD || ライブラリの先行読込。 || LD_PRELOAD=a.so
+POSIX || 仮想メモリ || アドレス空間の抽象。 || virtual memory
+POSIX || ページング / スワップ || メモリの入れ替え。 || swap
+POSIX || スタック・ヒープ・データ・テキスト || プロセスのメモリ領域。 || segment
+POSIX || ASLR / スタックカナリア || 攻撃への対策。 || -fstack-protector
+POSIX || Spectre / Meltdown 対策 || CPU 脆弱性への対処。 || retpoline
+POSIX || コンテキストスイッチ || 実行の切り替え。 || context switch
+POSIX || スケジューリング || 実行順の決定。 || sched_yield
+POSIX || 優先度逆転 || 低優先度が高優先度を妨げる。 || priority inversion
+POSIX || NUMA || メモリ配置の非均一性。 || numactl
+POSIX || CPU アフィニティ || 実行 CPU の固定。 || sched_setaffinity
+POSIX || キャッシュ階層 || L1・L2・L3。 || cache
+POSIX || メモリバリア / フェンス || 順序保証の命令。 || __sync_synchronize
+POSIX || TLB || アドレス変換のキャッシュ。 || TLB
+POSIX || 分岐予測 || 先読み実行。 || branch prediction
+POSIX || パイプライン / スーパースカラ || CPU の並列実行。 || pipeline
+POSIX || SIMD 命令 (SSE / AVX / NEON) || データ並列命令。 || _mm256_add_ps
+POSIX || イントリンシック関数 || 命令に対応する関数。 || _mm_add_epi32
+POSIX || アセンブリのインライン || 命令の直接記述。 || asm volatile
+POSIX || ABI (System V / Windows x64) || 呼出規約。 || calling convention
+POSIX || 呼出規約 (cdecl / stdcall) || 引数の渡し方。 || __stdcall
+POSIX || スタックフレーム || 関数呼出の領域。 || frame pointer
+POSIX || 末尾呼出最適化 || スタックを消費しない呼出。 || tail call
+POSIX || リンク時最適化 (LTO) || 全体最適化。 || -flto
+POSIX || PGO (プロファイル誘導最適化) || 実測に基づく最適化。 || -fprofile-generate
+POSIX || デバッグシンボル (DWARF) || デバッグ情報の形式。 || DWARF
+POSIX || コアダンプの解析 || クラッシュ原因の特定。 || gdb a.out core
+GDB || gdb の起動 || デバッガの開始。 || gdb ./a.out
+GDB || break / tbreak || ブレークポイント。 || break main
+GDB || run / start / continue || 実行の制御。 || run
+GDB || next / step / finish / until || ステップ実行。 || next
+GDB || print / display / x || 値・メモリの表示。 || print x
+GDB || backtrace / frame / up / down || 呼出履歴の確認。 || bt
+GDB || watch / rwatch / awatch || 変数の監視。 || watch x
+GDB || info locals / registers / threads || 状態の一覧。 || info locals
+GDB || set var / call || 変数設定・関数呼出。 || set var x = 1
+GDB || condition / ignore || 条件付きブレーク。 || break f if x > 3
+GDB || thread apply all bt || 全スレッドの履歴。 || thread apply all bt
+GDB || layout src / tui || 画面分割の表示。 || layout src
+GDB || catch throw || 例外発生で停止。 || catch throw
+GDB || reverse debugging (rr) || 逆実行デバッグ。 || rr record
+GDB || lldb の基本 || LLVM のデバッガ。 || lldb ./a.out
+GDB || Visual Studio デバッガ || Windows のデバッガ。 || F5, F10, F11
+GDB || WinDbg || Windows の詳細デバッガ。 || windbg
+GDB || minidump || Windows のクラッシュ情報。 || .dmp
+GDB || pdb ファイル || Windows のデバッグ情報。 || .pdb
+GDB || AddressSanitizer のレポート || エラー位置の表示。 || ERROR: AddressSanitizer
+GDB || printf デバッグ || 出力による確認。 || std::cerr
+GDB || ログ駆動のデバッグ || 記録から原因を探す。 || spdlog
