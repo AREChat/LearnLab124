@@ -1,0 +1,113 @@
+# カテゴリ || 用語 || 説明 || コード例
+DDL || CREATE DATABASE || 新しいデータベースを作る。 || CREATE DATABASE shop;
+DDL || DROP DATABASE || データベースごと削除する。元に戻せない。 || DROP DATABASE shop;
+DDL || CREATE SCHEMA || テーブルをまとめる名前空間（スキーマ）を作る。 || CREATE SCHEMA sales;
+DDL || DROP SCHEMA || スキーマを削除する。CASCADE で中身ごと消せる。 || DROP SCHEMA sales CASCADE;
+DDL || CREATE TABLE AS || 検索結果から新しいテーブルを作る。 || CREATE TABLE t2 AS SELECT * FROM t1 WHERE id < 100;
+DDL || CREATE TEMPORARY TABLE || 接続中だけ使える一時テーブルを作る。 || CREATE TEMPORARY TABLE tmp (id INT, v TEXT);
+DDL || CREATE TABLE IF NOT EXISTS || 無いときだけテーブルを作る（あってもエラーにしない）。 || CREATE TABLE IF NOT EXISTS t (id INT);
+DDL || DROP TABLE IF EXISTS || あるときだけテーブルを削除する。 || DROP TABLE IF EXISTS t;
+DDL || ALTER TABLE RENAME TO || テーブルの名前を変える。 || ALTER TABLE t RENAME TO t_old;
+DDL || ALTER TABLE RENAME COLUMN || 列の名前を変える。 || ALTER TABLE t RENAME COLUMN a TO b;
+DDL || ALTER TABLE ALTER COLUMN TYPE || 列のデータ型を変える（PostgreSQL）。 || ALTER TABLE t ALTER COLUMN price TYPE NUMERIC(10,2);
+DDL || ALTER TABLE MODIFY COLUMN || 列の定義を変える（MySQL）。 || ALTER TABLE t MODIFY COLUMN name VARCHAR(100) NOT NULL;
+DDL || ALTER TABLE ADD CONSTRAINT || 後から制約を追加する。 || ALTER TABLE t ADD CONSTRAINT uq_email UNIQUE (email);
+DDL || ALTER TABLE DROP CONSTRAINT || 制約を削除する。 || ALTER TABLE t DROP CONSTRAINT uq_email;
+DDL || ALTER TABLE SET DEFAULT || 列の既定値を設定する。 || ALTER TABLE t ALTER COLUMN status SET DEFAULT 'new';
+DDL || ALTER TABLE SET NOT NULL || 列に NOT NULL を付ける。 || ALTER TABLE t ALTER COLUMN name SET NOT NULL;
+DDL || COMMENT ON || テーブルや列に説明文を付ける。 || COMMENT ON TABLE t IS '商品マスタ';
+DDL || RENAME TABLE || テーブル名を変更する（MySQL・Oracle）。 || RENAME TABLE a TO b;
+DDL || CREATE TYPE || 独自の型（列挙型など）を作る。 || CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
+DDL || CREATE DOMAIN || 制約付きの独自データ型を作る。 || CREATE DOMAIN age AS INT CHECK (VALUE BETWEEN 0 AND 150);
+DDL || CREATE MATERIALIZED VIEW || 結果を保存しておくビュー。速いが更新が必要。 || CREATE MATERIALIZED VIEW mv AS SELECT dept, COUNT(*) c FROM emp GROUP BY dept;
+DDL || REFRESH MATERIALIZED VIEW || マテリアライズドビューの中身を最新にする。 || REFRESH MATERIALIZED VIEW mv;
+DDL || CREATE OR REPLACE VIEW || ビューを作る。すでにあれば置き換える。 || CREATE OR REPLACE VIEW v AS SELECT id, name FROM t;
+DDL || GENERATED ALWAYS AS || 他の列から自動計算される列（生成列）。 || CREATE TABLE t (a INT, b INT, s INT GENERATED ALWAYS AS (a + b) STORED);
+DDL || PARTITION BY (テーブル) || 大きなテーブルを範囲などで分割して管理する。 || CREATE TABLE log (d DATE, m TEXT) PARTITION BY RANGE (d);
+制約 || CHECK || 列に入れてよい値の条件を決める。 || CREATE TABLE t (age INT CHECK (age >= 0));
+制約 || 複合主キー || 複数の列の組み合わせで行を一意に決める主キー。 || PRIMARY KEY (order_id, line_no)
+制約 || ON DELETE CASCADE || 親行を消したとき、子行も一緒に消す。 || FOREIGN KEY (uid) REFERENCES users(id) ON DELETE CASCADE
+制約 || ON DELETE SET NULL || 親行を消したとき、子の外部キーを NULL にする。 || FOREIGN KEY (uid) REFERENCES users(id) ON DELETE SET NULL
+制約 || ON DELETE RESTRICT || 子行があるうちは親行を消せない。 || FOREIGN KEY (uid) REFERENCES users(id) ON DELETE RESTRICT
+制約 || ON UPDATE CASCADE || 親のキーを変えたとき、子の値も合わせて変える。 || FOREIGN KEY (uid) REFERENCES users(id) ON UPDATE CASCADE
+制約 || DEFERRABLE || 制約の確認をコミット時まで遅らせられる。 || FOREIGN KEY (a) REFERENCES t(id) DEFERRABLE INITIALLY DEFERRED
+制約 || 制約名 (CONSTRAINT) || 制約に名前を付け、後で管理しやすくする。 || CONSTRAINT pk_t PRIMARY KEY (id)
+制約 || EXCLUDE 制約 || 重なりなどを禁止する制約（PostgreSQL）。 || EXCLUDE USING gist (room WITH =, period WITH &&)
+制約 || 参照整合性 || 外部キーが必ず存在する親行を指す、というルール。 || 外部キー制約で守る
+制約 || 候補キー || 行を一意に決められる列の組み合わせ。主キーはその1つ。 || 例：社員番号、メールアドレス
+制約 || 代理キー || 業務の意味を持たない、連番などの人工的なキー。 || id SERIAL PRIMARY KEY
+制約 || 自然キー || 業務上もともと意味のあるキー（例：商品コード）。 || product_code VARCHAR(10) PRIMARY KEY
+インデックス || ユニークインデックス || 重複を禁止するインデックス。 || CREATE UNIQUE INDEX ux_email ON users(email);
+インデックス || 複合インデックス || 複数列をまとめたインデックス。列の順番が重要。 || CREATE INDEX ix_ab ON t(a, b);
+インデックス || 部分インデックス || 条件に合う行だけにつくるインデックス（PostgreSQL）。 || CREATE INDEX ix_active ON t(id) WHERE active;
+インデックス || 式インデックス || 列の計算結果にインデックスを付ける。 || CREATE INDEX ix_lower ON users(LOWER(email));
+インデックス || カバリングインデックス || 検索に必要な列をすべて含み、表を読まずに済むインデックス。 || CREATE INDEX ix ON t(a) INCLUDE (b);
+インデックス || B-tree インデックス || 最もよく使われる木構造のインデックス。範囲検索に強い。 || CREATE INDEX ix ON t USING btree (a);
+インデックス || ハッシュインデックス || 等号検索だけに向いたインデックス。 || CREATE INDEX ix ON t USING hash (a);
+インデックス || GIN インデックス || 配列・JSON・全文検索に向いたインデックス（PostgreSQL）。 || CREATE INDEX ix ON t USING gin (tags);
+インデックス || クラスタ化インデックス || 表の並び順そのものを決めるインデックス。1表に1つ。 || CREATE CLUSTERED INDEX ix ON t(id);
+インデックス || インデックスが効かない書き方 || 列に関数をかけたり、前方に % を付けた LIKE では使われにくい。 || WHERE LOWER(name) = 'a'
+インデックス || ALTER INDEX REBUILD || 断片化したインデックスを作り直す。 || ALTER INDEX ix ON t REBUILD;
+インデックス || REINDEX || インデックスを再構築する（PostgreSQL・MySQL）。 || REINDEX INDEX ix;
+性能 || EXPLAIN || 実行計画（どう検索するか）を表示する。 || EXPLAIN SELECT * FROM t WHERE id = 1;
+性能 || EXPLAIN ANALYZE || 実際に実行して、時間つきの実行計画を表示する。 || EXPLAIN ANALYZE SELECT * FROM t WHERE id = 1;
+性能 || フルスキャン (Seq Scan) || 表を端から全部読む方法。大きな表では遅い。 || EXPLAIN の結果に Seq Scan と出る
+性能 || インデックススキャン || インデックスで必要な行だけを探す方法。 || EXPLAIN の結果に Index Scan と出る
+性能 || ANALYZE (統計情報) || 実行計画に使う統計情報を更新する。 || ANALYZE t;
+性能 || VACUUM || 不要になった領域を整理する（PostgreSQL）。 || VACUUM ANALYZE t;
+性能 || N+1 問題 || 1回の検索のあと、行ごとに追加で検索してしまう遅い書き方。 || JOIN や IN でまとめて取得して避ける
+性能 || SELECT * を避ける || 必要な列だけ取ると、通信量と読み込みが減る。 || SELECT id, name FROM t;
+性能 || ヒント句 || 実行計画を人が指定する指示（Oracle・MySQL）。 || SELECT /*+ INDEX(t ix) */ * FROM t;
+性能 || 実行計画のキャッシュ || 同じ SQL の解析結果を再利用して速くする仕組み。 || プレースホルダを使うと効きやすい
+性能 || バインド変数 || SQL に値を後から渡す仕組み。速く、安全。 || SELECT * FROM t WHERE id = :id;
+性能 || EXISTS と IN の使い分け || 副問い合わせの結果が大きいときは EXISTS が速いことが多い。 || WHERE EXISTS (SELECT 1 FROM o WHERE o.uid = u.id)
+トランザクション || SAVEPOINT || トランザクションの途中に戻れる目印を付ける。 || SAVEPOINT sp1;
+トランザクション || ROLLBACK TO SAVEPOINT || 目印の時点まで取り消す。 || ROLLBACK TO SAVEPOINT sp1;
+トランザクション || START TRANSACTION || トランザクションを始める（標準SQL・MySQL）。 || START TRANSACTION;
+トランザクション || ACID 特性 || 原子性・一貫性・独立性・永続性の4つの性質。 || Atomicity, Consistency, Isolation, Durability
+トランザクション || READ COMMITTED || コミット済みの変更だけが見える分離レベル。 || SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+トランザクション || REPEATABLE READ || 同じ行を読み直しても同じ値が見える分離レベル。 || SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+トランザクション || SERIALIZABLE || 1つずつ順番に実行したのと同じ結果になる最も厳しい分離レベル。 || SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+トランザクション || ダーティリード || まだコミットされていない変更を読んでしまう現象。 || READ UNCOMMITTED で起こりうる
+トランザクション || ファジーリード || 同じ行を読み直すと値が変わっている現象。 || READ COMMITTED で起こりうる
+トランザクション || ファントムリード || 読み直すと行が増えたり減ったりしている現象。 || REPEATABLE READ でも起こりうる
+トランザクション || デッドロック || 互いに相手のロック解除を待って止まる状態。 || 更新の順番をそろえて避ける
+トランザクション || 楽観ロック || 更新時に他の人が変更していないか確認する方式。 || UPDATE t SET v = 1, ver = ver + 1 WHERE id = 1 AND ver = 5;
+トランザクション || 悲観ロック || 読む時点でロックをかけて他の更新を止める方式。 || SELECT * FROM t WHERE id = 1 FOR UPDATE;
+トランザクション || FOR UPDATE SKIP LOCKED || ロックされた行を飛ばして取る（キュー処理向け）。 || SELECT * FROM jobs FOR UPDATE SKIP LOCKED LIMIT 1;
+トランザクション || FOR SHARE || 読んだ行を他の人に書き換えられないよう共有ロックする。 || SELECT * FROM t WHERE id = 1 FOR SHARE;
+トランザクション || オートコミット || 1文ごとに自動で確定する設定。 || SET autocommit = 0;
+トランザクション || 二相コミット || 複数のDBにまたがる更新を、全員が準備できてから確定する方式。 || PREPARE TRANSACTION 'tx1';
+手続き || CREATE FUNCTION || ユーザー定義関数を作る。 || CREATE FUNCTION add1(x INT) RETURNS INT AS $$ SELECT x + 1 $$ LANGUAGE sql;
+手続き || CREATE PROCEDURE || ストアドプロシージャを作る。 || CREATE PROCEDURE p() LANGUAGE sql AS $$ DELETE FROM tmp $$;
+手続き || CALL || ストアドプロシージャを呼び出す。 || CALL p();
+手続き || CREATE TRIGGER || 行の追加・更新・削除に合わせて自動実行する処理を作る。 || CREATE TRIGGER trg BEFORE INSERT ON t FOR EACH ROW EXECUTE FUNCTION f();
+手続き || DROP TRIGGER || トリガーを削除する。 || DROP TRIGGER trg ON t;
+手続き || BEFORE トリガー || 変更の前に動くトリガー。値の補正や検査に使う。 || BEFORE INSERT
+手続き || AFTER トリガー || 変更の後に動くトリガー。履歴の記録などに使う。 || AFTER UPDATE
+手続き || カーソル (CURSOR) || 結果を1行ずつ処理するための仕組み。 || DECLARE c CURSOR FOR SELECT * FROM t;
+手続き || FETCH (カーソル) || カーソルから次の行を取り出す。 || FETCH NEXT FROM c;
+手続き || DECLARE (変数) || 手続きの中で使う変数を宣言する。 || DECLARE n INT := 0;
+手続き || IF 文 (手続き) || 条件で処理を分ける。 || IF n > 0 THEN RAISE NOTICE 'ok'; END IF;
+手続き || LOOP / WHILE (手続き) || 処理をくり返す。 || WHILE n < 10 LOOP n := n + 1; END LOOP;
+手続き || RAISE / THROW || 手続きの中からエラーや通知を出す。 || RAISE EXCEPTION 'bad value';
+手続き || EXCEPTION ブロック || 手続き内のエラーを受け止めて処理する。 || EXCEPTION WHEN OTHERS THEN RAISE NOTICE 'error';
+手続き || RETURNS TABLE || 関数が表の形で結果を返す。 || CREATE FUNCTION f() RETURNS TABLE (id INT, name TEXT) AS $$ SELECT id, name FROM t $$ LANGUAGE sql;
+手続き || 動的 SQL (EXECUTE) || 文字列で組み立てた SQL を実行する。注入に注意。 || EXECUTE format('SELECT * FROM %I', tbl);
+手続き || DO ブロック || 名前を付けずにその場で手続きを実行する（PostgreSQL）。 || DO $$ BEGIN RAISE NOTICE 'hi'; END $$;
+データ更新 || INSERT SELECT || 検索結果をそのまま別テーブルに追加する。 || INSERT INTO t2 (a, b) SELECT a, b FROM t1;
+データ更新 || INSERT 複数行 || 1文で複数行を追加する。 || INSERT INTO t (a, b) VALUES (1, 'x'), (2, 'y');
+データ更新 || INSERT DEFAULT VALUES || すべて既定値で1行追加する。 || INSERT INTO t DEFAULT VALUES;
+データ更新 || ON CONFLICT DO NOTHING || 重複したら何もしない（PostgreSQL）。 || INSERT INTO t (id) VALUES (1) ON CONFLICT DO NOTHING;
+データ更新 || ON CONFLICT DO UPDATE (UPSERT) || 重複したら更新に切り替える（PostgreSQL）。 || INSERT INTO t (id, v) VALUES (1, 'a') ON CONFLICT (id) DO UPDATE SET v = EXCLUDED.v;
+データ更新 || ON DUPLICATE KEY UPDATE || 重複したら更新する（MySQL）。 || INSERT INTO t (id, v) VALUES (1, 'a') ON DUPLICATE KEY UPDATE v = VALUES(v);
+データ更新 || MERGE || 一致すれば更新、なければ追加を1文で行う。 || MERGE INTO t USING s ON t.id = s.id WHEN MATCHED THEN UPDATE SET v = s.v WHEN NOT MATCHED THEN INSERT (id, v) VALUES (s.id, s.v);
+データ更新 || REPLACE INTO || 重複したら古い行を消して入れ直す（MySQL）。 || REPLACE INTO t (id, v) VALUES (1, 'a');
+データ更新 || RETURNING || 追加・更新した行をそのまま結果として返す。 || INSERT INTO t (v) VALUES ('a') RETURNING id;
+データ更新 || UPDATE FROM || 別のテーブルの値を使って更新する。 || UPDATE t SET v = s.v FROM s WHERE t.id = s.id;
+データ更新 || UPDATE JOIN || 結合して更新する（MySQL・SQL Server）。 || UPDATE t JOIN s ON t.id = s.id SET t.v = s.v;
+データ更新 || DELETE USING || 別のテーブルと突き合わせて削除する。 || DELETE FROM t USING s WHERE t.id = s.id;
+データ更新 || DELETE と TRUNCATE の違い || DELETE は条件指定と元に戻しが可能、TRUNCATE は全件を高速に消す。 || TRUNCATE TABLE t;
+データ更新 || COPY || ファイルとテーブルの間で大量データを出し入れする（PostgreSQL）。 || COPY t FROM '/tmp/t.csv' WITH (FORMAT csv, HEADER);
+データ更新 || LOAD DATA INFILE || CSV などを一気に読み込む（MySQL）。 || LOAD DATA INFILE 't.csv' INTO TABLE t FIELDS TERMINATED BY ',';
+データ更新 || 論理削除 || 行を消さず、削除フラグを立てて見えなくする方法。 || UPDATE t SET deleted_at = NOW() WHERE id = 1;
