@@ -1,0 +1,79 @@
+言語詳細 || 型の強制 (coercive typing) || 既定の緩い型変換。 || function f(int $a)
+言語詳細 || strict_types の範囲 || ファイル単位で有効。 || declare(strict_types=1);
+言語詳細 || 戻り値の共変性 || 子で戻り値を狭められる。 || function f(): static
+言語詳細 || 引数の反変性 || 子で引数を広げられる。 || function f(object $o)
+言語詳細 || プロパティ型の不変性 || 継承で型を変えられない。 || public int $a;
+言語詳細 || 未初期化プロパティ || 型付きで未代入の状態。 || Error: must not be accessed
+言語詳細 || プロパティの既定値 || 定数式のみ可。 || public array $a = [];
+言語詳細 || 静的変数の初期化 || 定数式で初期化。 || static $n = 0;
+言語詳細 || 定数式での new || 8.1 で一部許可。 || public function __construct(A $a = new A)
+言語詳細 || 定数式での enum || 定数に列挙型を使う。 || const X = Suit::Hearts;
+言語詳細 || final 修飾子の定数 || 8.1 の機能。 || final public const A = 1;
+言語詳細 || インターフェースの定数 || 定義と上書き。 || interface I { const A = 1; }
+言語詳細 || 抽象 static メソッド || 子に実装を強制。 || abstract public static function f();
+言語詳細 || トレイトの抽象メソッド || 利用側に実装を強制。 || abstract function f();
+言語詳細 || トレイトの static || 各クラスで別領域。 || static $n
+言語詳細 || トレイトの定数 || 8.2 から定義可能。 || trait T { const A = 1; }
+言語詳細 || 名前付き引数と可変長 || 余りは配列に入る。 || f(...$args)
+言語詳細 || スプレッドと文字列キー || 8.1 から展開可能。 || [...['a' => 1]]
+言語詳細 || list とキー参照 || 参照で分割代入。 || [&$a] = $arr;
+言語詳細 || 入れ子の分割代入 || 深い構造を展開。 || [[$a, $b]] = $x;
+言語詳細 || switch の緩い比較 || == で比較される。 || switch ('1')
+言語詳細 || match の例外 || 一致なしは例外。 || UnhandledMatchError
+言語詳細 || match の複数条件 || カンマで列挙。 || match($x) { 1, 2 => 'a' }
+言語詳細 || match(true) || 条件式として使う。 || match(true) { $a > 1 => 'x' }
+言語詳細 || ?-> の連鎖 || null で全体が null。 || $a?->b()?->c
+言語詳細 || ?? と isset の違い || 未定義でも警告なし。 || $a['x'] ?? 0
+言語詳細 || 三項のネスト || 括弧が必須(8.0)。 || ($a ? 1 : 2) ? 3 : 4
+言語詳細 || 文字列と数値の比較 || 8.0 で規則が変更。 || 0 == 'a'
+言語詳細 || 数値文字列の定義 || 末尾空白を許容(8.0)。 || is_numeric('1 ')
+言語詳細 || 整数のオーバーフロー || float に変換される。 || PHP_INT_MAX + 1
+言語詳細 || 浮動小数点の文字列化 || 精度設定に依存。 || precision
+言語詳細 || serialize_precision || 直列化の精度。 || -1
+言語詳細 || 8進数の暗黙変換 || 先頭 0 の整数リテラル。 || 010
+言語詳細 || 空配列の真偽 || 空配列は偽。 || if ([])
+言語詳細 || "0" の真偽 || 文字列 0 は偽。 || if ("0")
+言語詳細 || SimpleXMLElement の真偽 || 空要素は偽。 || if ($xml)
+言語詳細 || null の比較 || null == false。 || null == 0
+言語詳細 || 参照の落とし穴 (foreach) || 参照が残る。 || unset($v)
+言語詳細 || 配列のコピー遅延 || 書き込み時にコピー。 || copy-on-write
+言語詳細 || オブジェクトの == 比較 || プロパティ値で比較。 || $a == $b
+言語詳細 || オブジェクトの === 比較 || 同一インスタンスか。 || $a === $b
+言語詳細 || clone とプロパティ || 浅いコピー。 || clone $o
+言語詳細 || __clone での深いコピー || 内部も複製。 || $this->a = clone $this->a;
+言語詳細 || static コンテキストのエラー || $this は使えない。 || static function
+言語詳細 || 遅延束縛の static:: || 呼び出したクラス。 || new static
+言語詳細 || new static と new self || 継承時の違い。 || new static()
+言語詳細 || クラス定数の継承 || static:: で参照。 || static::A
+言語詳細 || 可視性の継承 || 広げるのみ可。 || protected to public
+言語詳細 || コンストラクタの継承 || 子で再定義すると親は呼ばれない。 || parent::__construct()
+言語詳細 || デストラクタの順序 || 終了時にまとめて実行。 || __destruct
+言語詳細 || マジック定数 ::class || 完全修飾名。 || A::class
+言語詳細 || $object::class || インスタンスのクラス名。 || $o::class
+言語詳細 || 可変クラス名 || 文字列から new。 || new $name
+言語詳細 || 可変メソッド名 || 文字列でメソッド呼出。 || $o->$m()
+言語詳細 || 可変プロパティ名 || 文字列でプロパティ参照。 || $o->{$p}
+言語詳細 || 可変関数名 || 文字列で関数呼出。 || $f()
+言語詳細 || static 変数と継承 || 8.1 で共有規則が変更。 || static $n
+言語詳細 || ジェネレータと参照 || 参照を返せる。 || function &gen()
+言語詳細 || ジェネレータのキー || キーも yield できる。 || yield $k => $v;
+言語詳細 || Fiber とジェネレータの違い || どこでも中断できる。 || Fiber::suspend
+言語詳細 || __invoke と callable || オブジェクトを関数に。 || is_callable($o)
+言語詳細 || __call と __callStatic の使い分け || 動的呼び出し。 || __callStatic
+言語詳細 || __set と型付きプロパティ || 宣言済みには効かない。 || __set
+言語詳細 || ArrayAccess と isset || offsetExists の呼び出し。 || offsetExists
+言語詳細 || Countable と count || count の対応。 || count($o)
+言語詳細 || IteratorAggregate と yield || ジェネレータで実装。 || getIterator(): Generator
+言語詳細 || Serializable (非推奨) || __serialize への移行。 || __serialize
+言語詳細 || __set_state と var_export || 復元用メソッド。 || __set_state
+言語詳細 || eval の使用 || 原則避ける。 || eval($code)
+言語詳細 || include の戻り値 || 設定ファイルで利用。 || return ['a' => 1];
+言語詳細 || include と相対パス || 基準の違いに注意。 || __DIR__
+言語詳細 || ファイル末尾の空行 || 余計な出力を避ける。 || omit ?>
+言語詳細 || ヒアドキュメントの閉じ || 8.0 から柔軟に。 || EOT;
+言語詳細 || 文字列のバイト列性 || UTF-8 を意識。 || strlen
+言語詳細 || ロケール依存関数 || 環境で結果が変わる。 || setlocale
+言語詳細 || 浮動小数点の比較関数 || 許容誤差で比較。 || abs($a - $b) < PHP_FLOAT_EPSILON
+言語詳細 || ゼロ除算の挙動 || 8.0 で例外。 || DivisionByZeroError
+言語詳細 || fdiv || 例外にならない除算。 || fdiv(1, 0)
+言語詳細 || intdiv の例外 || ゼロ・オーバーフロー時。 || intdiv(PHP_INT_MIN, -1)

@@ -1,0 +1,65 @@
+用語 || Ruby || 日本発のオブジェクト指向スクリプト言語。 || puts "Hello"
+用語 || まつもとゆきひろ (Matz) || Ruby の生みの親。 || Matz
+用語 || MRI / CRuby || 標準の Ruby 実装。 || ruby
+用語 || JRuby || JVM 上の Ruby 実装。 || jruby
+用語 || TruffleRuby || GraalVM 上の高速実装。 || truffleruby
+用語 || mruby / MRuby || 組込み向けの軽量実装。 || mrbc
+用語 || YARV || Ruby の仮想マシン。 || RubyVM::InstructionSequence
+用語 || 動的型付け (Ruby) || 実行時に型が決まる。 || x = 1; x = "a"
+用語 || ダックタイピング || 型でなく振る舞いで判断。 || respond_to?
+用語 || 全てがオブジェクト || 整数も nil もオブジェクト。 || 1.class
+用語 || メッセージ送信 || メソッド呼出の考え方。 || obj.send(:f)
+用語 || 括弧の省略 || メソッド呼出の括弧を省ける。 || puts "a"
+用語 || 慣用句 (イディオム) || Ruby らしい書き方。 || map(&:to_s)
+用語 || Rubyist の美学 || 読みやすさ・書きやすさ。 || Principle of Least Surprise
+用語 || 最小驚きの原則 || 直感に沿う設計。 || POLS
+用語 || メソッドチェーン (Ruby) || ドットで連続呼出。 || a.map.select
+用語 || ブロックの哲学 || 処理を渡す設計。 || each { }
+用語 || DSL (Ruby) || ブロックで書く専用記法。 || describe do
+用語 || メタプログラミングの原則 || 使いすぎない。 || define_method
+用語 || モンキーパッチの危険 || 他への影響に注意。 || refine
+用語 || 凍結リテラル || 文字列を不変にする。 || frozen_string_literal
+用語 || 破壊的メソッド (!) || 元を変更するメソッド。 || sort!
+用語 || 述語メソッド (?) || 真偽を返すメソッド。 || empty?
+用語 || 副作用の少ない設計 || 非破壊的に書く。 || map
+用語 || Enumerable 中心の設計 || each を軸に機能拡張。 || include Enumerable
+用語 || Comparable 中心の設計 || <=> を軸に比較。 || include Comparable
+用語 || to_s / to_str の違い || 明示・暗黙の変換。 || to_str
+用語 || to_a / to_ary の違い || 配列への変換。 || to_ary
+用語 || coerce || 数値の型の揃え方。 || def coerce(o)
+用語 || ==, eql?, equal? の違い || 等価性の 3 段階。 || a.eql?(b)
+用語 || hash と eql? の約束 || Hash のキーに必要。 || def hash
+用語 || 参照渡し (Ruby) || オブジェクト参照の値渡し。 || def f(a); a << 1; end
+用語 || 代入は参照のコピー || 別名が付くだけ。 || b = a
+用語 || シンボルと文字列の違い || 同一性・用途の違い。 || :a.object_id
+用語 || 定数の再代入警告 || 警告が出る。 || A = 1; A = 2
+用語 || 変数のスコープ || ローカル・ブロック・メソッド。 || def f; end
+用語 || ブロックのクロージャ || 外の変数を参照。 || x = 1; [1].each { x += 1 }
+用語 || self の変化 || 文脈ごとに変わる。 || self
+用語 || トップレベルの self || main オブジェクト。 || self.to_s
+用語 || メソッド探索順 (MRO) || 継承・モジュールの順。 || ancestors
+用語 || singleton class || 特異クラス。 || class << obj
+用語 || eigenclass || 特異クラスの別名。 || eigenclass
+用語 || Module と Class の関係 || Class は Module の子。 || Class.superclass
+用語 || 後置 rescue / if || 短い例外・条件記述。 || x = f rescue nil
+用語 || 文と式の区別なし || ほぼすべてが式。 || x = if a then 1 end
+用語 || 暗黙の戻り値 || 最後の式の値。 || def f; 1; end
+用語 || 多重代入の使い道 || 入れ替え・分解。 || a, b = b, a
+用語 || パターンマッチ (Ruby) || 構造による分岐。 || case x in {a:}
+用語 || 型注釈なしの設計 || RBS や YARD で補う。 || RBS
+用語 || Ruby の速度 || YJIT で高速化。 || --yjit
+用語 || GVL の影響 || CPU 並列が制限される。 || GVL
+用語 || プロセス並列 || fork や Ractor で対処。 || Process.fork
+用語 || Puma のスレッドとワーカー || 同時処理数の調整。 || workers 2
+用語 || Rails の思想 || 設定より規約。 || CoC
+用語 || ActiveRecord パターン || 行をオブジェクトにする。 || Active Record
+用語 || Fat Model Skinny Controller || モデルに処理を集める指針。 || service
+用語 || サービスオブジェクト || 業務処理のクラス化。 || call
+用語 || フォームオブジェクト (Rails) || 入力のまとまり。 || ActiveModel::Model
+用語 || ActiveModel::Model || DB なしのモデル。 || include ActiveModel::Model
+用語 || Query Object / Decorator || 検索・表示の分離。 || Draper
+用語 || Concern の使いどころ || 共通処理の切り出し。 || concerns/
+用語 || Rails の落とし穴 (N+1) || 先読みで回避。 || includes
+用語 || Rails のセキュリティ || CSRF・XSS・SQLi 対策。 || strong parameters
+用語 || Rails のアップグレード || 段階的に版を上げる。 || rails app:update
+用語 || Rails の配布 || Docker と Kamal。 || kamal setup

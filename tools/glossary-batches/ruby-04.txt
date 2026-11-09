@@ -1,0 +1,184 @@
+組み込みクラス || Integer#digits || 各桁の配列。 || 123.digits
+組み込みクラス || Integer#bit_length || ビット長。 || 255.bit_length
+組み込みクラス || Integer#pow (mod) || 剰余付きのべき乗。 || 2.pow(10, 1000)
+組み込みクラス || Integer#gcd / lcm || 最大公約数・最小公倍数。 || 12.gcd(18)
+組み込みクラス || Integer#fdiv || 小数の除算。 || 7.fdiv(2)
+組み込みクラス || Integer#pred / succ || 前後の整数。 || 5.succ
+組み込みクラス || Integer#zero? / positive? / negative? || 符号の判定。 || 0.zero?
+組み込みクラス || Integer#even? / odd? || 偶奇の判定。 || 4.even?
+組み込みクラス || Integer#between? / clamp || 範囲の判定・補正。 || 5.between?(1, 10)
+組み込みクラス || Integer#ceil / floor (桁指定) || 桁を指定した丸め。 || 1234.ceil(-2)
+組み込みクラス || Integer#chr / ord || 文字との変換。 || 97.chr
+組み込みクラス || Integer#to_s(2) || 基数指定の文字列化。 || 255.to_s(2)
+組み込みクラス || String#to_i(2) || 基数指定の整数化。 || "ff".to_i(16)
+組み込みクラス || Integer#times の戻り値 || レシーバ自身を返す。 || 3.times
+組み込みクラス || Float#nan? / infinite? || 異常値の判定。 || x.nan?
+組み込みクラス || Float#round (half:) || 丸め方式の指定。 || 2.5.round(half: :even)
+組み込みクラス || Float#floor / ceil (桁) || 小数桁の丸め。 || 3.14159.floor(2)
+組み込みクラス || Float::EPSILON / MAX / MIN || 浮動小数点の定数。 || Float::EPSILON
+組み込みクラス || Float#to_r / rationalize || 有理数への変換。 || 0.5.to_r
+組み込みクラス || Numeric#step || 刻み付きの繰り返し。 || 1.step(10, 3)
+組み込みクラス || Numeric#divmod / modulo || 商と剰余。 || 7.divmod(3)
+組み込みクラス || Numeric#abs2 / magnitude || 絶対値の別形。 || -3.magnitude
+組み込みクラス || Comparable#between? || 範囲内の判定。 || x.between?(a, b)
+組み込みクラス || Rational || 有理数。 || 1/3r
+組み込みクラス || Complex || 複素数。 || Complex(1, 2)
+組み込みクラス || Integer.sqrt || 整数の平方根。 || Integer.sqrt(17)
+組み込みクラス || Prime ライブラリ || 素数の扱い。 || Prime.each(100)
+組み込みクラス || Matrix ライブラリ || 行列計算。 || Matrix[[1, 2], [3, 4]]
+組み込みクラス || String#delete_prefix / delete_suffix || 接頭辞・接尾辞の削除。 || s.delete_prefix("a")
+組み込みクラス || String#partition / rpartition || 区切りで 3 分割。 || s.partition("=")
+組み込みクラス || String#squeeze || 連続文字の圧縮。 || "aab".squeeze
+組み込みクラス || String#each_grapheme_cluster || 書記素単位の走査。 || s.grapheme_clusters
+組み込みクラス || String#unpack1 || 1 つだけ展開。 || s.unpack1("N")
+組み込みクラス || String#casecmp / casecmp? || 大小無視の比較。 || a.casecmp?(b)
+組み込みクラス || String#hex / oct || 16進・8進の数値化。 || "ff".hex
+組み込みクラス || String#crypt / sum || 暗号化・簡易和。 || s.sum
+組み込みクラス || String#upto || 文字列の範囲走査。 || "a".upto("e")
+組み込みクラス || String#between? || 辞書順の範囲判定。 || "b".between?("a", "c")
+組み込みクラス || String#each_byte / bytes || バイトの走査。 || s.bytes
+組み込みクラス || String#scrub || 不正バイトの置換。 || s.scrub
+組み込みクラス || String#b / force_encoding || バイナリ化・符号化指定。 || s.b
+組み込みクラス || String#unicode_normalize || 文字の正規化。 || s.unicode_normalize(:nfkc)
+組み込みクラス || String#tr_s / delete! || 変換して圧縮・破壊的削除。 || s.tr_s("a", "b")
+組み込みクラス || String#ljust の表整形 || 桁揃え。 || s.ljust(10, ".")
+組み込みクラス || String#% 配列 || 複数値の書式化。 || "%s-%s" % [a, b]
+組み込みクラス || String#to_c / to_r || 複素数・有理数への変換。 || "1/3".to_r
+組み込みクラス || String#to_sym / intern || シンボルへ変換。 || "a".to_sym
+組み込みクラス || String#-@ / +@ || 重複排除・変更可能化。 || -"a"
+組み込みクラス || Symbol#<=> / length || シンボルの比較・長さ。 || :a <=> :b
+組み込みクラス || Symbol#start_with? / upcase || シンボルの文字列操作。 || :abc.upcase
+組み込みクラス || Array#bsearch_index || 二分探索の位置。 || a.bsearch_index { |x| x >= 3 }
+組み込みクラス || Array#intersect? || 共通要素の有無。 || a.intersect?(b)
+組み込みクラス || Array#union / difference / intersection || 集合演算。 || a.union(b)
+組み込みクラス || Array#sum の初期値 || 文字列も連結可能。 || ["a"].sum("")
+組み込みクラス || Array#flatten! / compact! || 破壊的な整理。 || a.compact!
+組み込みクラス || Array#sort! / uniq! / reverse! || 破壊的な操作。 || a.sort!
+組み込みクラス || Array#keep_if / select! || 条件で残す。 || a.keep_if(&:even?)
+組み込みクラス || Array#rindex / find_index || 位置の検索。 || a.rindex(1)
+組み込みクラス || Array#minmax_by || 基準による最小・最大。 || a.minmax_by(&:size)
+組み込みクラス || Array#each_entry || 要素の走査。 || a.each_entry
+組み込みクラス || Array#to_set || Set に変換。 || a.to_set
+組み込みクラス || Array#sum / inject の使い分け || 合計と畳み込み。 || a.sum
+組み込みクラス || Array#step 的な走査 || each_slice や step。 || a.each_slice(2)
+組み込みクラス || Array#cycle(n) || n 周の繰り返し。 || a.cycle(2)
+組み込みクラス || Array#lazy || 遅延列挙。 || a.lazy.map
+組み込みクラス || Array#pack / String#unpack || バイナリ変換。 || [65].pack("C")
+組み込みクラス || Array#* (join) || 区切り連結。 || [1, 2] * ","
+組み込みクラス || Array#<=> || 配列の比較。 || [1] <=> [2]
+組み込みクラス || Array#hash / eql? || 等価性。 || a.eql?(b)
+組み込みクラス || Array#freeze と dup || 凍結と複製。 || a.dup
+組み込みクラス || Hash#store / key || 登録・値からキー。 || h.key(1)
+組み込みクラス || Hash#rassoc / assoc || 組の検索。 || h.assoc(:a)
+組み込みクラス || Hash#filter_map / sum || 変換・集計。 || h.sum { |k, v| v }
+組み込みクラス || Hash#find / detect || 条件に合う組。 || h.find { |k, v| v > 1 }
+組み込みクラス || Hash#each_with_object || 累積オブジェクト付き走査。 || h.each_with_object({})
+組み込みクラス || Hash#to_proc || キーで引く Proc。 || [:a].map(&h)
+組み込みクラス || Hash#default= || 既定値の設定。 || h.default = 0
+組み込みクラス || Hash#transform_keys(&:to_sym) || キーのシンボル化。 || h.transform_keys(&:to_sym)
+組み込みクラス || Hash#dig の入れ子 || 深い参照。 || h.dig(:a, :b)
+組み込みクラス || Hash#sort_by の戻り値 || 配列になる。 || h.sort_by { |k, v| v }.to_h
+組み込みクラス || Hash#min_by / max_by || 値で最小・最大。 || h.max_by { |k, v| v }
+組み込みクラス || Hash#group_by / partition || 分類。 || h.partition { |k, v| v > 1 }
+組み込みクラス || Hash#reduce / inject || 畳み込み。 || h.inject(0) { |s, (k, v)| s + v }
+組み込みクラス || Hash#flat_map || 変換して平坦化。 || h.flat_map { |k, v| [k] * v }
+組み込みクラス || Hash#count (条件) || 条件に合う件数。 || h.count { |k, v| v > 1 }
+組み込みクラス || Hash#any? / all? / none? || 条件の判定。 || h.any? { |k, v| v > 1 }
+組み込みクラス || Hash#delete_if / keep_if || 条件で削除・保持。 || h.keep_if { |k, v| v > 0 }
+組み込みクラス || Hash#reject! / select! || 破壊的な絞り込み。 || h.select! { |k, v| v }
+組み込みクラス || Hash#compare_by_identity の注意 || 文字列キーは別物。 || h.compare_by_identity
+組み込みクラス || Hash の順序 || 挿入順を保持。 || insertion order
+組み込みクラス || Hash の等価性 || 順序に依存しない。 || {a: 1, b: 2} == {b: 2, a: 1}
+組み込みクラス || Range#cover? / include? || 範囲の判定。 || (1..5).cover?(3)
+組み込みクラス || Range#sum / to_a || 合計・配列化。 || (1..10).sum
+組み込みクラス || Range#% (step) || 刻み付きの範囲。 || ((1..10) % 3).to_a
+組み込みクラス || Range の beginless || 始点のない範囲。 || (..5)
+組み込みクラス || Range#minmax / count || 最小最大・件数。 || (1..5).minmax
+組み込みクラス || Range#overlap? || 範囲の重なり。 || (1..3).overlap?(2..4)
+組み込みクラス || Time#to_i / to_f || UNIX 時刻・小数秒。 || Time.now.to_f
+組み込みクラス || Time#utc / localtime || ゾーンの変換。 || t.utc
+組み込みクラス || Time#year / month / day / wday || 要素の取得。 || t.wday
+組み込みクラス || Time#round / floor || 秒未満の丸め。 || t.round
+組み込みクラス || Time#- (差) || 秒数の差。 || t2 - t1
+組み込みクラス || Time.at(…, in:) || ゾーン指定の生成。 || Time.at(0, in: "+09:00")
+組み込みクラス || Time#iso8601 / xmlschema || ISO 形式。 || t.iso8601
+組み込みクラス || Time#httpdate / rfc2822 || RFC 形式。 || t.httpdate
+組み込みクラス || Date#strftime || 日付の書式化。 || d.strftime("%F")
+組み込みクラス || Date#step / upto || 日付の繰り返し。 || d.upto(d + 7)
+組み込みクラス || Date#beginning_of_month (Rails) || 月初。 || d.beginning_of_month
+組み込みクラス || Date#end_of_month || 月末。 || d.end_of_month
+組み込みクラス || Date.leap? || うるう年の判定。 || Date.leap?(2024)
+組み込みクラス || Date#jd / mjd || ユリウス日。 || d.jd
+組み込みクラス || Object#instance_variables || インスタンス変数の一覧。 || obj.instance_variables
+組み込みクラス || Object#public_methods / singleton_methods || メソッドの一覧。 || obj.singleton_methods
+組み込みクラス || Object#instance_variable_defined? || 変数の有無。 || obj.instance_variable_defined?(:@a)
+組み込みクラス || Object#display || 出力する。 || 1.display
+組み込みクラス || Object#enum_for / to_enum || 列挙器の生成。 || obj.to_enum(:each)
+組み込みクラス || Object#extend の用途 || 特定のオブジェクトに機能追加。 || obj.extend(M)
+組み込みクラス || Object#freeze の効果 || 変更の禁止。 || obj.frozen?
+組み込みクラス || Object#instance_of? || 厳密な型判定。 || 1.instance_of?(Integer)
+組み込みクラス || Kernel#Integer / Float / String / Array || 変換関数。 || Integer("12", exception: false)
+組み込みクラス || Kernel#caller || 呼び出し元の情報。 || caller.first
+組み込みクラス || Kernel#__method__ || 現在のメソッド名。 || __method__
+組み込みクラス || Kernel#trap / Signal.trap || シグナルの処理。 || trap("INT") { exit }
+組み込みクラス || Kernel#fork / Process.wait || 子プロセスの作成。 || fork { }
+組み込みクラス || Kernel#exec / spawn || プロセスの置換・起動。 || exec("ls")
+組み込みクラス || Kernel#select || I/O の多重化。 || IO.select([io])
+組み込みクラス || Kernel#srand / Random.rand || 乱数の初期化。 || srand(1)
+組み込みクラス || Kernel#loop と StopIteration || 反復の終了。 || loop { e.next }
+組み込みクラス || Kernel#autoload || 遅延読込。 || autoload :A, "a"
+組み込みクラス || Kernel#set_trace_func || 実行の追跡。 || set_trace_func
+組み込みクラス || Kernel#pp の戻り値 || 引数を返す。 || pp 1
+組み込みクラス || Kernel#putc / readline || 1 文字出力・1 行入力。 || putc "a"
+組み込みクラス || Kernel#open || ファイルや URL を開く。 || open("a")
+組み込みクラス || Process.pid / ppid || プロセス ID。 || Process.pid
+組み込みクラス || Process.kill || シグナルの送信。 || Process.kill("TERM", pid)
+組み込みクラス || Process.clock_gettime の単位 || 秒・ミリ秒の指定。 || :millisecond
+組み込みクラス || Process.daemon || デーモン化。 || Process.daemon
+組み込みクラス || ObjectSpace.garbage_collect || GC の実行。 || ObjectSpace.garbage_collect
+組み込みクラス || ObjectSpace.count_objects || オブジェクト数。 || ObjectSpace.count_objects
+組み込みクラス || Module#constants / const_missing || 定数の一覧・未定義時。 || A.constants
+組み込みクラス || Module#instance_method || メソッドオブジェクトの取得。 || A.instance_method(:f)
+組み込みクラス || Module#class_variable_get / set || クラス変数の動的操作。 || A.class_variable_get(:@@a)
+組み込みクラス || Module#module_eval / class_eval || 文脈の変更。 || A.class_eval { }
+組み込みクラス || Module#name / to_s || 名前の取得。 || A.name
+組み込みクラス || Module#remove_const || 定数の削除。 || Object.send(:remove_const, :A)
+組み込みクラス || Module#public_instance_methods || 公開メソッドの一覧。 || A.public_instance_methods
+組み込みクラス || Module#attr (旧) || アクセサの旧記法。 || attr :a
+組み込みクラス || Class#allocate / superclass || 割り当て・親クラス。 || A.superclass
+組み込みクラス || Class#subclasses || 子クラスの一覧。 || A.subclasses
+組み込みクラス || Class#inherited の用途 || サブクラスの登録。 || def self.inherited(k)
+組み込みクラス || BasicObject || 最小の基底クラス。 || BasicObject
+組み込みクラス || Kernel モジュール || 全オブジェクトの共通機能。 || Kernel
+組み込みクラス || Method / UnboundMethod || メソッドのオブジェクト。 || obj.method(:f)
+組み込みクラス || Method#arity / parameters || 引数の情報。 || m.arity
+組み込みクラス || Method#unbind / bind || 束縛の変更。 || m.unbind.bind(o)
+組み込みクラス || Proc#arity / lambda? || 引数数・lambda 判定。 || pr.lambda?
+組み込みクラス || Proc#curry || カリー化。 || pr.curry
+組み込みクラス || Proc#ruby2_keywords || キーワード引数の互換。 || ruby2_keywords
+組み込みクラス || Binding#local_variable_get || 束縛内の変数取得。 || binding.local_variable_get(:a)
+組み込みクラス || Binding#eval || 束縛で評価。 || binding.eval("a")
+組み込みクラス || ObjectSpace::WeakKeyMap || 弱参照キーの Map。 || WeakKeyMap
+組み込みクラス || Data#with || 一部を変えた複製。 || d.with(x: 1)
+組み込みクラス || Struct#to_a / members || 構造体の要素。 || s.members
+組み込みクラス || Struct#each / each_pair || 要素の走査。 || s.each_pair
+組み込みクラス || Struct の比較 || 要素で等価判定。 || s1 == s2
+組み込みクラス || Set#subset? / superset? || 部分集合の判定。 || a.subset?(b)
+組み込みクラス || Set#each / map / select || 集合の走査。 || s.map { }
+組み込みクラス || Set#delete / add? || 削除・追加の成否。 || s.add?(1)
+組み込みクラス || Set#merge / ^ || 併合・対称差。 || a ^ b
+組み込みクラス || Set#group_by / partition || 分類。 || s.partition(&:odd?)
+組み込みクラス || SortedSet (廃止) || 整列済み集合。 || removed
+組み込みクラス || Enumerable#each_entry || 汎用走査。 || each_entry
+組み込みクラス || Enumerable#sum / minmax || 集計。 || sum
+組み込みクラス || Enumerable#zip / chunk || 組合せ・塊。 || chunk { }
+組み込みクラス || Enumerable#each_cons / each_slice || 窓・分割。 || each_cons(2)
+組み込みクラス || Enumerable#inject(:sym) || シンボルで畳み込み。 || inject(:+)
+組み込みクラス || Enumerable#lazy の注意 || force や first で評価。 || lazy.first(3)
+組み込みクラス || Enumerator::Yielder || 列挙値の送り手。 || y << 1
+組み込みクラス || Enumerator#next / peek / rewind || 外部反復の操作。 || e.peek
+組み込みクラス || Enumerator#with_index || 添字付き走査。 || each.with_index(1)
+組み込みクラス || Enumerator#size / take || 件数・先頭取得。 || e.take(3)
+組み込みクラス || Enumerator.produce || 規則的な列の生成。 || Enumerator.produce(1) { |x| x * 2 }
+組み込みクラス || Enumerator::Product || 直積の列挙。 || Enumerator.product(a, b)
+組み込みクラス || Enumerator::Chain || 列挙器の連結。 || a.each + b.each

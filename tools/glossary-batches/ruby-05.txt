@@ -1,0 +1,258 @@
+標準ライブラリ || StringScanner (strscan) || 文字列の字句解析。 || StringScanner.new(s)
+標準ライブラリ || Shellwords || シェル風の分割。 || Shellwords.split(s)
+標準ライブラリ || English ライブラリ || 特殊変数の英語名。 || $PROGRAM_NAME
+標準ライブラリ || io/console || 端末の制御。 || IO.console.winsize
+標準ライブラリ || IO#getch / noecho || 1 文字入力・非表示入力。 || $stdin.noecho(&:gets)
+標準ライブラリ || Reline / Readline || 行入力の補完。 || Reline.readline("> ")
+標準ライブラリ || ripper || Ruby の字句・構文解析。 || Ripper.lex(src)
+標準ライブラリ || Coverage || カバレッジ計測。 || Coverage.start
+標準ライブラリ || Fiddle || ネイティブ関数の呼出。 || Fiddle::Function
+標準ライブラリ || WeakRef || 弱参照。 || WeakRef.new(o)
+標準ライブラリ || objspace || メモリ使用量の調査。 || ObjectSpace.memsize_of(o)
+標準ライブラリ || Monitor / MonitorMixin || 再入可能な排他制御。 || Monitor.new
+標準ライブラリ || ConditionVariable || 条件待ち。 || ConditionVariable.new
+標準ライブラリ || SizedQueue || 容量付きのキュー。 || SizedQueue.new(10)
+標準ライブラリ || ThreadGroup / Thread.current || スレッドの管理。 || Thread.current[:a]
+標準ライブラリ || Thread#join / value || 終了待ちと戻り値。 || t.value
+標準ライブラリ || Thread#report_on_exception || スレッド例外の報告。 || Thread.report_on_exception = false
+標準ライブラリ || Thread.abort_on_exception || 例外で全体を止める。 || Thread.abort_on_exception = true
+標準ライブラリ || Thread-local 変数 || スレッドごとの値。 || Thread.current[:x]
+標準ライブラリ || Fiber.scheduler || 非同期の仕組み。 || Fiber.set_scheduler
+標準ライブラリ || async gem || Fiber ベースの非同期。 || Async { }
+標準ライブラリ || concurrent-ruby || 並行処理の部品。 || Concurrent::Future
+標準ライブラリ || Ractor.yield / take || Ractor 間の通信。 || Ractor.yield(1)
+標準ライブラリ || Process.fork の注意 || スレッドと併用しない。 || fork
+標準ライブラリ || Parallel gem || 並列処理。 || Parallel.map(a) { }
+標準ライブラリ || DRb || 分散オブジェクト。 || DRb.start_service
+標準ライブラリ || Open3.popen3 || 入出力・エラーの分離。 || Open3.popen3("ls")
+標準ライブラリ || IO.pipe || パイプの作成。 || r, w = IO.pipe
+標準ライブラリ || IO#read_nonblock || 非ブロッキング読込。 || io.read_nonblock(100)
+標準ライブラリ || IO#each_line(chomp: true) || 改行除去付きの行走査。 || f.each_line(chomp: true)
+標準ライブラリ || IO#seek / pos / rewind || 位置の操作。 || f.rewind
+標準ライブラリ || IO#flock || ファイルロック。 || f.flock(File::LOCK_EX)
+標準ライブラリ || File::Stat || ファイルの状態。 || File.stat("a").mode
+標準ライブラリ || File.symlink / readlink || シンボリックリンク。 || File.symlink(a, b)
+標準ライブラリ || File.fnmatch || ワイルドカード照合。 || File.fnmatch("*.rb", n)
+標準ライブラリ || Find.find || 再帰的な探索。 || Find.find(".")
+標準ライブラリ || FileUtils.touch / ln_s || 更新・リンク。 || FileUtils.touch("a")
+標準ライブラリ || FileUtils.cp_r / mkdir_p || 再帰的複写・階層作成。 || FileUtils.cp_r(a, b)
+標準ライブラリ || Dir.pwd / chdir || カレントディレクトリ。 || Dir.chdir("a")
+標準ライブラリ || Dir.home / tmpdir || ホーム・一時領域。 || Dir.home
+標準ライブラリ || Pathname#join / relative_path_from || パスの操作。 || p.join("a")
+標準ライブラリ || Pathname#children / each_child || 子要素の走査。 || p.children
+標準ライブラリ || Pathname#read / write || 読み書き。 || p.read
+標準ライブラリ || OpenSSL::Cipher || 暗号化。 || OpenSSL::Cipher.new("aes-256-gcm")
+標準ライブラリ || OpenSSL::HMAC || 鍵付きハッシュ。 || OpenSSL::HMAC.hexdigest("SHA256", k, d)
+標準ライブラリ || OpenSSL::PKey::RSA || 公開鍵暗号。 || OpenSSL::PKey::RSA.new(2048)
+標準ライブラリ || BCrypt (bcrypt gem) || パスワードのハッシュ化。 || BCrypt::Password.create(p)
+標準ライブラリ || SecureRandom.uuid / alphanumeric || 安全な乱数。 || SecureRandom.uuid
+標準ライブラリ || Digest::MD5 / SHA1 || ハッシュ値。 || Digest::MD5.hexdigest(s)
+標準ライブラリ || Digest::SHA256.file || ファイルのハッシュ。 || Digest::SHA256.file(p).hexdigest
+標準ライブラリ || Base64.strict_encode64 / urlsafe_encode64 || Base64 の種類。 || Base64.urlsafe_encode64(s)
+標準ライブラリ || URI.encode_www_form || クエリの組み立て。 || URI.encode_www_form(a: 1)
+標準ライブラリ || URI.decode_www_form || クエリの分解。 || URI.decode_www_form("a=1")
+標準ライブラリ || URI::HTTP / HTTPS || URI の型。 || URI("http://a")
+標準ライブラリ || URI#host / path / query || URI の要素。 || uri.host
+標準ライブラリ || CGI.escapeHTML || HTML のエスケープ。 || CGI.escapeHTML(s)
+標準ライブラリ || ERB::Util.html_escape || ERB のエスケープ。 || h(s)
+標準ライブラリ || ERB trim_mode || 空白・改行の扱い。 || ERB.new(t, trim_mode: "-")
+標準ライブラリ || Net::HTTP.start || 接続を維持した通信。 || Net::HTTP.start(host)
+標準ライブラリ || Net::HTTP::Post / Get || 要求の種類。 || Net::HTTP::Post.new(uri)
+標準ライブラリ || Net::HTTP の use_ssl || HTTPS の指定。 || http.use_ssl = true
+標準ライブラリ || Net::SMTP / net-imap / net-pop || メール関連。 || Net::SMTP.start
+標準ライブラリ || Net::FTP / Net::SSH || ファイル転送・遠隔操作。 || Net::SSH.start
+標準ライブラリ || Socket.tcp / UDPSocket || ソケット通信。 || Socket.tcp("a", 80)
+標準ライブラリ || TCPSocket#gets / puts || ソケットの入出力。 || s.puts "a"
+標準ライブラリ || GServer (廃止) || 旧サーバー部品。 || removed
+標準ライブラリ || WEBrick の servlet || 簡易アプリ。 || mount_proc
+標準ライブラリ || REXML || XML の解析。 || REXML::Document.new(xml)
+標準ライブラリ || Nokogiri の CSS セレクタ || 要素の検索。 || doc.css("a")
+標準ライブラリ || Nokogiri の XPath || XPath での検索。 || doc.xpath("//a")
+標準ライブラリ || Psych || YAML の実装。 || Psych.load
+標準ライブラリ || YAML.dump || YAML に変換。 || YAML.dump(h)
+標準ライブラリ || YAML permitted_classes || 許可クラスの指定。 || YAML.safe_load(s, permitted_classes: [Symbol])
+標準ライブラリ || JSON.dump / load || 簡易な JSON 入出力。 || JSON.dump(h)
+標準ライブラリ || JSON.parse の object_class || 返す型の指定。 || JSON.parse(s, object_class: OpenStruct)
+標準ライブラリ || JSON::ParserError || JSON の解析失敗。 || JSON::ParserError
+標準ライブラリ || to_json / as_json || JSON への変換。 || h.to_json
+標準ライブラリ || Oj / MultiJson || 高速な JSON gem。 || Oj.dump(h)
+標準ライブラリ || MessagePack || 効率的な直列化。 || MessagePack.pack(h)
+標準ライブラリ || CSV.foreach / headers || CSV の逐次処理。 || CSV.foreach("a.csv", headers: true)
+標準ライブラリ || CSV::Row / Table || CSV の行・表。 || row["name"]
+標準ライブラリ || CSV converters || 型の自動変換。 || converters: :numeric
+標準ライブラリ || CSV のエンコーディング || BOM や Shift_JIS。 || encoding: "BOM|UTF-8"
+標準ライブラリ || Roo / axlsx || Excel の読み書き。 || Roo::Spreadsheet.open
+標準ライブラリ || Prawn || PDF の生成。 || Prawn::Document.new
+標準ライブラリ || Logger のフォーマッタ || 出力形式の指定。 || logger.formatter = proc
+標準ライブラリ || Logger のレベル || DEBUG から FATAL。 || Logger::INFO
+標準ライブラリ || Logger のローテーション || ファイルの世代管理。 || Logger.new("a.log", 5, 1_000_000)
+標準ライブラリ || Benchmark.bm / bmbm || 複数処理の比較。 || Benchmark.bm
+標準ライブラリ || benchmark-ips || 秒あたりの反復数。 || Benchmark.ips
+標準ライブラリ || ruby-prof / stackprof || プロファイラ。 || StackProf.run
+標準ライブラリ || memory_profiler || メモリの計測。 || MemoryProfiler.report
+標準ライブラリ || Timeout::Error || 時間切れ。 || Timeout::Error
+標準ライブラリ || Observable#add_observer || 観察者の登録。 || add_observer(o)
+標準ライブラリ || Singleton#instance || 唯一のインスタンス。 || A.instance
+標準ライブラリ || Forwardable#def_delegator || 個別の委譲。 || def_delegator :@a, :size, :n
+標準ライブラリ || OpenStruct の注意 || 遅く、キー衝突がある。 || OpenStruct.new(a: 1)
+標準ライブラリ || Comparable の clamp || 範囲に収める。 || x.clamp(a, b)
+標準ライブラリ || TSort || 依存順の整列。 || include TSort
+標準ライブラリ || PP / PrettyPrint || 整形出力。 || PP.pp(o)
+標準ライブラリ || Abbrev / getoptlong (旧) || 古い補助。 || removed
+標準ライブラリ || bundled gems || 標準添付の gem。 || bundled
+標準ライブラリ || default gems || 標準に含まれる gem。 || default gem
+標準ライブラリ || gem の依存解決 || バージョン制約。 || ~> 1.2
+標準ライブラリ || 悲観的バージョン指定 || ~> による指定。 || gem "a", "~> 1.2"
+標準ライブラリ || Gemfile の source / git / path || 依存の取得元。 || gem "a", git: "url"
+標準ライブラリ || bundle config || Bundler の設定。 || bundle config set path vendor
+標準ライブラリ || bundle binstubs || 実行ファイルの生成。 || bundle binstubs rspec-core
+標準ライブラリ || bundle gem || gem の雛形作成。 || bundle gem mygem
+標準ライブラリ || gem build / push || gem の作成・公開。 || gem push a.gem
+標準ライブラリ || gemspec の required_ruby_version || 対応する Ruby 版。 || spec.required_ruby_version
+標準ライブラリ || Gem::Version || バージョンの比較。 || Gem::Version.new("1.2")
+標準ライブラリ || RUBYOPT / RUBYLIB || 環境変数による設定。 || RUBYLIB
+標準ライブラリ || $LOAD_PATH / $: || 読込パス。 || $LOAD_PATH.unshift
+標準ライブラリ || $PROGRAM_NAME / $0 || 実行中のスクリプト名。 || $0
+標準ライブラリ || $stdout / $stderr / $stdin || 標準入出力の変数。 || $stdout
+標準ライブラリ || $, $/ $; || 区切り文字の特殊変数。 || $/
+標準ライブラリ || $! / $@ || 直近の例外・バックトレース。 || $!
+標準ライブラリ || $_ / $~ / $& || 直近の入力・照合。 || $~
+標準ライブラリ || ObjectSpace::define_finalizer || 破棄時の処理。 || define_finalizer(o, pr)
+標準ライブラリ || at_exit の順序 || 登録の逆順で実行。 || at_exit
+標準ライブラリ || exit! / abort || 即時終了。 || exit!
+標準ライブラリ || SystemExit / Interrupt || 終了・割り込みの例外。 || rescue Interrupt
+標準ライブラリ || SignalException || シグナルの例外。 || SignalException
+標準ライブラリ || NotImplementedError || 未実装の例外。 || raise NotImplementedError
+標準ライブラリ || NoMatchingPatternError || パターン不一致。 || NoMatchingPatternError
+標準ライブラリ || FloatDomainError || 浮動小数点の範囲外。 || Float::NAN.to_i
+標準ライブラリ || RangeError / EncodingError || 範囲・文字コード異常。 || RangeError
+標準ライブラリ || Encoding::UndefinedConversionError || 変換できない文字。 || encode
+標準ライブラリ || Encoding.default_external || 既定の外部エンコーディング。 || Encoding.default_external
+標準ライブラリ || magic comment (coding) || ソースの文字コード。 || # coding: utf-8
+標準ライブラリ || shebang || 実行方法の指定。 || #!/usr/bin/env ruby
+標準ライブラリ || __END__ / DATA || スクリプト内のデータ。 || DATA.read
+標準ライブラリ || BEGIN ブロック || 最初に実行。 || BEGIN { }
+標準ライブラリ || ObjectSpace と Ractor || 共有禁止の制約。 || shareable
+標準ライブラリ || Ractor.make_shareable || 共有可能にする。 || Ractor.make_shareable(o)
+Rails応用 || ActiveRecord::Base.connection || 接続の取得。 || connection.execute(sql)
+Rails応用 || find_by_sql / select_all || 生 SQL の利用。 || User.find_by_sql(sql)
+Rails応用 || sanitize_sql / quote || SQL の安全化。 || sanitize_sql_array
+Rails応用 || where.not / or / and || 条件の合成。 || where.not(a: 1)
+Rails応用 || where の範囲・配列 || IN や BETWEEN。 || where(id: [1, 2])
+Rails応用 || where のプレースホルダ || 安全な条件指定。 || where("a = ?", v)
+Rails応用 || arel_table || SQL 式の構築。 || User.arel_table[:id]
+Rails応用 || distinct / reorder / reverse_order || 重複除去・並べ替え。 || User.distinct
+Rails応用 || select / pluck / ids || 列の選択。 || User.ids
+Rails応用 || exists? / any? / many? || 存在確認。 || User.exists?(1)
+Rails応用 || first / last / take / sole || 取得。 || User.sole
+Rails応用 || find_or_initialize_by || あれば取得、無ければ初期化。 || find_or_initialize_by(a: 1)
+Rails応用 || touch / increment! / toggle! || 更新日時・加算・反転。 || user.touch
+Rails応用 || update_column / update_columns || 検証なしの更新。 || update_column(:a, 1)
+Rails応用 || reload / refresh || 再読込。 || user.reload
+Rails応用 || dup / becomes || 複製・型の変更。 || user.dup
+Rails応用 || changed? / saved_changes || 変更の検出。 || user.saved_changes
+Rails応用 || attribute_changed? / _was || 変更前の値。 || user.name_was
+Rails応用 || dirty tracking || 変更追跡。 || changes
+Rails応用 || after_commit / after_rollback || トランザクション後の処理。 || after_commit :a
+Rails応用 || before_validation / after_initialize || ライフサイクル。 || after_initialize
+Rails応用 || around_save || 保存の前後を包む。 || around_save
+Rails応用 || validates_uniqueness_of || 一意性の検証。 || validates :email, uniqueness: true
+Rails応用 || validates 長さ・書式・数値 || 標準の検証。 || validates :a, length: { maximum: 10 }
+Rails応用 || validates_associated / confirmation || 関連・確認入力の検証。 || validates :p, confirmation: true
+Rails応用 || validates_with / EachValidator || 独自の検証クラス。 || validates_with A
+Rails応用 || accepts_nested_attributes_for || 入れ子のフォーム。 || accepts_nested_attributes_for :items
+Rails応用 || fields_for || 入れ子のフォーム部品。 || f.fields_for :items
+Rails応用 || polymorphic association || 多態関連。 || belongs_to :a, polymorphic: true
+Rails応用 || STI (単一テーブル継承) || 1 つの表で継承。 || type 列
+Rails応用 || delegated_type || 委譲型の継承。 || delegated_type
+Rails応用 || composed_of / serialize / store || 属性の拡張。 || store :settings
+Rails応用 || attribute API || 属性の型定義。 || attribute :a, :integer
+Rails応用 || normalizes (Rails 7.1) || 入力値の正規化。 || normalizes :email
+Rails応用 || encrypts (Rails 7) || 属性の暗号化。 || encrypts :ssn
+Rails応用 || generates_token_for || 期限付きトークン。 || generates_token_for :reset
+Rails応用 || ActiveRecord::Relation の遅延評価 || 使うまで SQL を発行しない。 || to_a
+Rails応用 || to_sql / explain || SQL の確認・実行計画。 || User.all.to_sql
+Rails応用 || Bullet gem || N+1 の検出。 || Bullet.enable
+Rails応用 || strict_loading || 遅延読込の禁止。 || strict_loading!
+Rails応用 || connected_to / 複数 DB || 読み書きの切り替え。 || connected_to(role: :reading)
+Rails応用 || database.yml || DB 接続設定。 || config/database.yml
+Rails応用 || db:schema:load / structure || スキーマの読込。 || rails db:schema:load
+Rails応用 || db:rollback / redo / version || マイグレーション操作。 || rails db:rollback STEP=2
+Rails応用 || change / up / down メソッド || 可逆なマイグレーション。 || def change
+Rails応用 || reversible / execute || 逆操作の記述。 || reversible do |dir|
+Rails応用 || t.references / t.timestamps || 参照・日時列。 || t.references :user
+Rails応用 || add_foreign_key / check_constraint || 制約の追加。 || add_foreign_key :a, :b
+Rails応用 || disable_ddl_transaction! || DDL のトランザクション無効。 || disable_ddl_transaction!
+Rails応用 || strong_migrations gem || 安全なマイグレーション。 || StrongMigrations
+Rails応用 || annotate gem || モデルへのスキーマ注釈。 || annotate
+Rails応用 || seeds.rb || 初期データ。 || db/seeds.rb
+Rails応用 || fixtures / FactoryBot traits || テストデータ。 || trait :admin
+Rails応用 || ActionController::API || API 用の基底。 || ActionController::API
+Rails応用 || rescue_from || 例外の一括処理。 || rescue_from A, with: :f
+Rails応用 || around_action / after_action || 前後処理。 || after_action :a
+Rails応用 || skip_before_action || 前処理の除外。 || skip_before_action :a
+Rails応用 || helper_method || ビューで使うメソッド。 || helper_method :current_user
+Rails応用 || render json: / status: || JSON 応答と状態コード。 || render json: a, status: :ok
+Rails応用 || head / send_data / send_file || 本文なし・ファイル送信。 || head :no_content
+Rails応用 || redirect_back / url_for || 戻る・URL 生成。 || redirect_back(fallback_location: root_path)
+Rails応用 || request.format / remote_ip || リクエスト情報。 || request.remote_ip
+Rails応用 || cookies.signed / encrypted || 署名・暗号化クッキー。 || cookies.encrypted[:a]
+Rails応用 || session store || セッションの保存先。 || cookie_store
+Rails応用 || CSRF トークンと API || skip_forgery_protection。 || protect_from_forgery
+Rails応用 || Rack::Attack || レート制限。 || Rack::Attack.throttle
+Rails応用 || rack-cors || CORS の設定。 || Rack::Cors
+Rails応用 || content_security_policy || CSP の設定。 || config/initializers
+Rails応用 || force_ssl || HTTPS の強制。 || config.force_ssl = true
+Rails応用 || ActionDispatch::Routing || ルーティング。 || draw
+Rails応用 || constraints / concerns (routes) || ルートの制約・共通化。 || constraints(id: /\d+/)
+Rails応用 || root / get / post / match || ルートの定義。 || root "home#index"
+Rails応用 || path helpers (_path / _url) || URL ヘルパー。 || posts_path
+Rails応用 || default_url_options || URL の既定値。 || default_url_options
+Rails応用 || I18n.t / locale || 多言語化。 || I18n.t("a.b")
+Rails応用 || config/locales/ja.yml || 日本語の翻訳ファイル。 || ja.yml
+Rails応用 || rails-i18n || 標準の翻訳集。 || rails-i18n
+Rails応用 || time_zone / Time.zone || タイムゾーン設定。 || config.time_zone = "Tokyo"
+Rails応用 || 3.days.ago / from_now || 相対的な時間。 || 1.week.from_now
+Rails応用 || Time.current / Date.current || ゾーン考慮の現在時刻。 || Time.current
+Rails応用 || number_to_currency / helpers || 数値の整形。 || number_to_currency(1000)
+Rails応用 || truncate / simple_format / sanitize || 文字列ヘルパー。 || truncate(s, length: 20)
+Rails応用 || image_tag / stylesheet_link_tag || アセットのタグ。 || image_tag("a.png")
+Rails応用 || link_to / button_to || リンク・ボタン。 || button_to "a", path
+Rails応用 || content_tag / tag.div || タグの生成。 || tag.div "a"
+Rails応用 || turbo_frame_tag / turbo_stream || Hotwire のタグ。 || turbo_frame_tag "a"
+Rails応用 || Stimulus controller || JS の部品。 || data-controller="a"
+Rails応用 || ViewComponent || ビュー部品のクラス化。 || ViewComponent::Base
+Rails応用 || Tailwind (Rails) || CSS の導入。 || tailwindcss-rails
+Rails応用 || Sprockets / Propshaft || アセット配信。 || Propshaft
+Rails応用 || jsbundling / cssbundling || ビルド連携。 || jsbundling-rails
+Rails応用 || bin/dev / Procfile.dev || 開発サーバーの起動。 || bin/dev
+Rails応用 || Rails credentials per env || 環境別の機密情報。 || credentials:edit --environment
+Rails応用 || master.key || 暗号鍵。 || config/master.key
+Rails応用 || secret_key_base || 署名の鍵。 || secret_key_base
+Rails応用 || ActiveSupport::Notifications || 計測のイベント。 || instrument
+Rails応用 || ActiveSupport::TimeWithZone || ゾーン付き時刻。 || Time.zone.now
+Rails応用 || ActiveSupport::Duration || 期間の表現。 || 3.days
+Rails応用 || ActiveSupport::Concern の included || 取り込み時の処理。 || included do
+Rails応用 || class_attribute / mattr_accessor || 継承対応の属性。 || class_attribute :a
+Rails応用 || Object#try / presence_in || nil 安全・包含判定。 || x.presence_in(a)
+Rails応用 || String#squish / titleize / pluralize || 文字列の整形。 || "post".pluralize
+Rails応用 || String#underscore / camelize / classify || 命名の変換。 || "UserName".underscore
+Rails応用 || Hash#deep_merge / symbolize_keys || ハッシュの整形。 || h.deep_symbolize_keys
+Rails応用 || Array#in_groups_of / second / third || 配列の補助。 || a.in_groups_of(3)
+Rails応用 || Enumerable#index_by / pluck / sum || 集計の補助。 || users.index_by(&:id)
+Rails応用 || Integer#minutes / hours || 時間の拡張。 || 5.minutes
+Rails応用 || Rails.env.production? || 環境の判定。 || Rails.env.production?
+Rails応用 || Rails.logger / Rails.root || ログ・ルート。 || Rails.root.join("a")
+Rails応用 || ActiveJob queue adapter || キューの選択。 || config.active_job.queue_adapter
+Rails応用 || Solid Queue / Solid Cache / Solid Cable || DB ベースの基盤。 || solid_queue
+Rails応用 || Thruster / Kamal || デプロイ周辺。 || kamal
+Rails応用 || Rails 7 / 8 の新機能 || Hotwire・認証ジェネレータなど。 || rails g authentication
+Rails応用 || rails test / system tests || 標準のテスト実行。 || rails test:system
+Rails応用 || ActionDispatch::IntegrationTest || 結合テスト。 || get "/"
+Rails応用 || assert_difference / assert_response || テストの検証。 || assert_response :success
+Rails応用 || rspec-rails || RSpec の Rails 連携。 || type: :request
+Rails応用 || request spec / feature spec || RSpec のテスト種別。 || describe "GET /"
+Rails応用 || shoulda-matchers || 簡潔なモデルテスト。 || it { should validate_presence_of(:a) }
+Rails応用 || Timecop / travel_to || 時刻の固定。 || travel_to(Time.zone.local(2024))
+Rails応用 || DatabaseCleaner || テスト DB の掃除。 || DatabaseCleaner.clean
+Rails応用 || parallel_tests / --parallel || テストの並列化。 || parallelize(workers: 2)

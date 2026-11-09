@@ -1,0 +1,169 @@
+設計 || RAII の例 || ロックやファイルの自動解放。 || std::lock_guard
+設計 || スコープガード || 終了時に処理を実行。 || scope_exit
+設計 || Pimpl イディオム || 実装をヘッダーから隠す。 || std::unique_ptr<Impl>
+設計 || NVI (非仮想インターフェース) || 公開は非仮想で実装が仮想。 || Non-Virtual Interface
+設計 || ファクトリ関数 || 生成を関数にまとめる。 || std::make_unique<T>()
+設計 || Builder パターン (C++) || 段階的な構築。 || Builder
+設計 || Singleton (C++) || ローカル static で実装。 || static T& instance()
+設計 || Observer (C++) || コールバックの登録。 || std::function
+設計 || Visitor と std::visit || variant の分岐。 || std::visit(f, v)
+設計 || overloaded イディオム || 複数ラムダの束ね。 || struct overloaded : Ts...
+設計 || Strategy (テンプレート) || 型で方式を切替。 || template<class S>
+設計 || Command パターン (C++) || 操作のオブジェクト化。 || std::function<void()>
+設計 || State パターン (variant) || 状態を型で表す。 || std::variant
+設計 || 型安全な ID || 強い型で取り違え防止。 || struct UserId
+設計 || 強い型 (strong typedef) || 別の型として扱う。 || NamedType
+設計 || 不変条件の維持 || コンストラクタで保証。 || invariant
+設計 || ガイドライン (Core Guidelines) || C++ の設計指針。 || isocpp.github.io
+設計 || GSL (Guidelines Support Library) || 指針を支える部品。 || gsl::not_null
+設計 || gsl::span / not_null || 範囲・非 null の保証。 || gsl::not_null<T*>
+設計 || ownership の明示 || 所有者を型で示す。 || unique_ptr
+設計 || 借用 (非所有) の参照 || 生ポインタ・参照。 || const T&
+設計 || 所有権の移譲 || 引数で unique_ptr を渡す。 || f(std::unique_ptr<T>)
+設計 || 引数の渡し方の指針 || 小さい型は値、大きい型は const 参照。 || const T&
+設計 || 戻り値の指針 || 値返しで最適化に任せる。 || return x;
+設計 || out 引数を避ける || 戻り値やタプルで返す。 || std::pair
+設計 || const 正しさ || できる限り const を付ける。 || const
+設計 || constexpr の活用 || コンパイル時計算。 || constexpr
+設計 || noexcept の指針 || ムーブは noexcept に。 || noexcept
+設計 || 例外安全の保証 || 基本・強い・nothrow。 || strong guarantee
+設計 || copy-and-swap || 例外安全な代入。 || swap
+設計 || 値セマンティクス || コピーで独立した値。 || value semantics
+設計 || 参照セマンティクス || 同じ実体を共有。 || reference semantics
+設計 || 継承より合成 || 部品として持つ。 || composition
+設計 || インターフェース分離 || 小さな抽象。 || ISP
+設計 || 依存性逆転 || 抽象に依存する。 || DIP
+設計 || 依存性注入 (C++) || 外から依存を渡す。 || constructor injection
+設計 || テスト容易な設計 || 差し替え可能な依存。 || interface
+設計 || モック (gmock) || テスト用の代役。 || MOCK_METHOD
+設計 || ECS || エンティティ・コンポーネント・システム。 || entt
+設計 || データ指向設計 || メモリ配置の最適化。 || SoA
+設計 || SoA / AoS || 配列の構造と配置。 || Structure of Arrays
+設計 || オブジェクトプール || 再利用で確保を減らす。 || pool
+設計 || アリーナアロケータ || 一括確保・一括解放。 || arena
+設計 || 侵入型コンテナ || ノードに接続情報を持たせる。 || boost::intrusive
+設計 || ロックフリー設計 || ロックを使わない並行。 || std::atomic
+設計 || アクターモデル || メッセージで協調。 || actor
+設計 || リアクティブ (C++) || データの流れで処理。 || RxCpp
+設計 || イベントループ || 待機と処理の繰り返し。 || asio::io_context
+設計 || Boost.Asio || 非同期 I/O ライブラリ。 || boost::asio
+設計 || Networking TS / std::net || ネットワークの標準化案。 || asio
+設計 || sender/receiver || 非同期の標準案。 || std::execution
+設計 || コルーチンの用途 || 非同期・生成器。 || co_await
+設計 || ステートマシン || 状態遷移の実装。 || enum class State
+設計 || メモリ順序の設計 || relaxed、acquire、release。 || memory_order_relaxed
+設計 || ABI 安定の設計 || 公開境界の工夫。 || extern "C"
+設計 || プラグイン構造 || 動的ロードで拡張。 || dlopen
+設計 || dlopen / dlsym || 動的ライブラリの読込。 || dlopen("a.so", RTLD_NOW)
+設計 || LoadLibrary / GetProcAddress || Windows の動的読込。 || LoadLibrary
+設計 || リフレクションの代替 || マクロやコード生成。 || magic_enum
+設計 || シリアライズ (C++) || データの直列化。 || cereal
+設計 || Protocol Buffers (C++) || 直列化形式。 || .proto
+設計 || FlatBuffers || ゼロコピーの直列化。 || flatbuffers
+設計 || JSON ライブラリ比較 || nlohmann、RapidJSON など。 || rapidjson
+設計 || ログ設計 (C++) || レベルと出力先。 || spdlog
+設計 || 設定ファイルの読込 || TOML・YAML など。 || toml++
+設計 || コマンドライン解析 || 引数の処理。 || CLI11
+設計 || テストの種類 || 単体・結合・性能。 || gtest
+設計 || ファズテスト || 乱数入力で検査。 || libFuzzer
+設計 || カバレッジ (C++) || 実行された割合。 || gcov
+設計 || 静的解析 (C++) || 実行せず検査。 || clang-tidy
+設計 || MISRA C++ || 安全性重視の規約。 || MISRA
+設計 || AUTOSAR C++ || 車載向けの規約。 || AUTOSAR
+設計 || CERT C++ || セキュアコーディング規約。 || CERT
+設計 || C++ Core Guidelines Checker || 指針の自動検査。 || cppcoreguidelines-*
+設計 || コードレビューの観点 || 所有権・例外・並行。 || review
+ゲーム・組込み || ゲームループ (C++) || 更新と描画の繰り返し。 || while (running)
+ゲーム・組込み || フレームレート制御 || 時間の管理。 || deltaTime
+ゲーム・組込み || SDL2 || 描画・入力ライブラリ。 || SDL_CreateWindow
+ゲーム・組込み || SFML || マルチメディアライブラリ。 || sf::RenderWindow
+ゲーム・組込み || raylib || 簡単なゲームライブラリ。 || InitWindow
+ゲーム・組込み || OpenGL || 描画 API。 || glDrawArrays
+ゲーム・組込み || Vulkan || 低水準の描画 API。 || vkCreateInstance
+ゲーム・組込み || DirectX || Windows の描画 API。 || ID3D11Device
+ゲーム・組込み || GLFW / GLEW || ウィンドウと拡張。 || glfwInit
+ゲーム・組込み || GLM || 数学ライブラリ。 || glm::vec3
+ゲーム・組込み || ImGui || 即時モード GUI。 || ImGui::Begin
+ゲーム・組込み || Box2D / Bullet || 物理エンジン。 || b2World
+ゲーム・組込み || FMOD / OpenAL || 音声ライブラリ。 || alGenBuffers
+ゲーム・組込み || Unreal Engine の UObject || ゲーム用オブジェクト基盤。 || UCLASS()
+ゲーム・組込み || UPROPERTY / UFUNCTION || リフレクション用マクロ。 || UPROPERTY()
+ゲーム・組込み || Blueprint 連携 || C++ とビジュアルスクリプト。 || BlueprintCallable
+ゲーム・組込み || DXLib || 日本の簡易ゲームライブラリ。 || DxLib_Init
+ゲーム・組込み || Arduino (C++) || 組込み向けの開発環境。 || void setup()
+ゲーム・組込み || pinMode / digitalWrite || ピンの入出力。 || digitalWrite(13, HIGH)
+ゲーム・組込み || ESP32 / ESP-IDF || マイコンと開発環境。 || esp_log
+ゲーム・組込み || PlatformIO || 組込み向けのビルド環境。 || platformio.ini
+ゲーム・組込み || RTOS / FreeRTOS || 実時間 OS。 || xTaskCreate
+ゲーム・組込み || ISR (割り込み処理) || 割り込みの処理関数。 || ISR(TIMER1_COMPA_vect)
+ゲーム・組込み || レジスタ操作 || ハードウェアの直接制御。 || PORTB |= 1
+ゲーム・組込み || volatile の用途 (組込み) || 最適化の抑止。 || volatile uint8_t
+ゲーム・組込み || ビット操作の定番 || セット・クリア・反転。 || x &= ~(1 << n)
+ゲーム・組込み || メモリマップド I/O || アドレスで機器を制御。 || *(volatile uint32_t*)addr
+ゲーム・組込み || リンカスクリプト || メモリ配置の指定。 || .ld
+ゲーム・組込み || スタートアップコード || 起動時の初期化。 || startup.s
+ゲーム・組込み || bare metal || OS なしの動作。 || bare metal
+ゲーム・組込み || 動的確保の回避 || 組込みでの定石。 || static allocation
+ゲーム・組込み || 固定長コンテナ || 確保なしの配列。 || etl::vector
+ゲーム・組込み || ETL (Embedded Template Library) || 組込み向け STL。 || etl
+ゲーム・組込み || ARM Cortex-M || 代表的なマイコン核。 || Cortex-M4
+ゲーム・組込み || CMSIS || ARM 共通のソフトウェア仕様。 || CMSIS
+ゲーム・組込み || HAL / LL ドライバ || 機器制御の層。 || HAL_GPIO_WritePin
+ゲーム・組込み || 割り込み優先度 || 実行順の決定。 || NVIC
+ゲーム・組込み || DMA || CPU を介さない転送。 || DMA
+ゲーム・組込み || UART / SPI / I2C || 通信方式。 || Serial.begin(9600)
+ゲーム・組込み || ROS / ROS 2 || ロボット用ミドルウェア。 || rclcpp
+ゲーム・組込み || OpenCV (C++) || 画像処理。 || cv::imread
+ゲーム・組込み || PCL || 点群処理ライブラリ。 || pcl::PointCloud
+ゲーム・組込み || TensorFlow Lite / ONNX Runtime || 推論ライブラリ。 || Ort::Session
+ゲーム・組込み || CUDA || GPU 並列計算。 || __global__ void k()
+ゲーム・組込み || SYCL / OpenCL || 異種計算の API。 || sycl::queue
+ゲーム・組込み || HPC (C++) || 高性能計算。 || MPI
+ゲーム・組込み || MPI || 分散並列の通信。 || MPI_Send
+ゲーム・組込み || Kokkos / RAJA || 性能可搬の抽象層。 || Kokkos::parallel_for
+Qt || Qt Widgets || 従来型の GUI。 || QPushButton
+Qt || Qt Quick / QML || 宣言的な UI。 || Rectangle { }
+Qt || シグナルとスロット || イベント通知の仕組み。 || connect(a, &A::s, b, &B::f)
+Qt || QObject || Qt の基底クラス。 || Q_OBJECT
+Qt || moc || メタオブジェクトコンパイラ。 || moc
+Qt || QString || Qt の文字列。 || QString s
+Qt || QList / QVector || Qt のコンテナ。 || QList<int>
+Qt || QThread || Qt のスレッド。 || QThread
+Qt || QTimer || タイマー。 || QTimer::singleShot
+Qt || QSettings || 設定の保存。 || QSettings s
+Qt || Qt Creator || 統合開発環境。 || Qt Creator
+Qt || qmake / CMake (Qt) || Qt のビルド。 || qt_add_executable
+Qt || Qt Designer || 画面設計ツール。 || .ui
+Qt || QSS || Qt のスタイルシート。 || setStyleSheet
+Qt || QPainter || 描画。 || QPainter p(this)
+Qt || QNetworkAccessManager || ネットワーク通信。 || QNetworkAccessManager
+Qt || QSqlDatabase || DB 接続。 || QSqlDatabase::addDatabase
+Qt || QtTest || テストフレームワーク。 || QTEST_MAIN
+Qt || Qt のライセンス || LGPL と商用。 || LGPL
+Qt || wxWidgets || 別の GUI ライブラリ。 || wxFrame
+Qt || GTKmm || GTK の C++ 版。 || Gtk::Window
+Qt || Dear ImGui の特徴 || デバッグ UI 向け。 || ImGui
+Qt || Win32 API || Windows の基本 API。 || CreateWindowEx
+Qt || MFC || Microsoft の C++ GUI。 || CWnd
+Qt || WinRT / C++/WinRT || Windows の新 API。 || winrt::
+Qt || COM || Windows の部品モデル。 || CoCreateInstance
+Qt || ATL / WTL || COM・Win32 の補助。 || ATL
+Qt || Windows サービス || 常駐プロセス。 || StartServiceCtrlDispatcher
+Qt || Visual Studio || Microsoft の IDE。 || .sln
+Qt || vcxproj || VS のプロジェクト。 || .vcxproj
+Qt || MSBuild || VS のビルドツール。 || msbuild
+Qt || vcpkg の使い方 || ライブラリ導入。 || vcpkg install fmt
+Qt || CLion || JetBrains の C++ IDE。 || CLion
+Qt || Xcode / clang (macOS) || macOS の開発環境。 || xcodebuild
+Qt || MinGW / MSYS2 || Windows 向け GNU 環境。 || mingw-w64
+Qt || WSL での開発 || Windows 上の Linux 環境。 || WSL
+Qt || Emscripten || WebAssembly へのビルド。 || emcc
+Qt || WebAssembly (C++) || ブラウザで C++ を実行。 || .wasm
+Qt || クロスコンパイル || 別環境向けのビルド。 || toolchain file
+Qt || Android NDK || Android の C++ 開発。 || ndk-build
+Qt || JNI (C++) || Java との連携。 || JNIEXPORT
+Qt || pybind11 || Python との連携。 || PYBIND11_MODULE
+Qt || SWIG / cffi || 言語間の接続。 || swig
+Qt || Python から C++ 呼び出し || 拡張モジュール。 || ctypes
+Qt || Rust との FFI || 相互運用。 || cxx
+Qt || C 言語との相互運用 || extern "C"。 || extern "C"

@@ -1,0 +1,179 @@
+STL詳細 || vector の成長戦略 || 容量が倍々に増える。 || capacity()
+STL詳細 || vector::emplace || 位置を指定して構築。 || v.emplace(it, 1)
+STL詳細 || vector::assign || 内容の置き換え。 || v.assign(5, 0)
+STL詳細 || vector::swap || 内容の交換。 || a.swap(b)
+STL詳細 || vector::pop_back || 末尾の削除。 || v.pop_back()
+STL詳細 || vector::rbegin / crbegin || 逆順の走査。 || v.rbegin()
+STL詳細 || vector の 2 次元化 || vector の入れ子。 || std::vector<std::vector<int>>
+STL詳細 || 配列の初期化 (vector) || 個数と値の指定。 || std::vector<int> v(5, 0);
+STL詳細 || initializer_list || 波括弧の初期化子。 || std::initializer_list<int>
+STL詳細 || list::splice || ノードの付け替え。 || a.splice(it, b)
+STL詳細 || list::sort / unique / merge || list 専用の操作。 || l.sort()
+STL詳細 || deque の特徴 || 両端の追加が速い。 || d.push_front(1)
+STL詳細 || queue / stack の基底 || deque が既定。 || std::stack<int, std::vector<int>>
+STL詳細 || priority_queue の比較 || 比較関数で順序決定。 || std::priority_queue<int, std::vector<int>, std::greater<>>
+STL詳細 || set::insert の戻り値 || 挿入の成否。 || auto [it, ok] = s.insert(1);
+STL詳細 || set::erase || 削除。 || s.erase(1)
+STL詳細 || set::lower_bound || 以上の最初の要素。 || s.lower_bound(5)
+STL詳細 || set::equal_range || 等しい範囲。 || s.equal_range(5)
+STL詳細 || set の透過的比較 || 検索時の型変換を省く。 || std::less<>
+STL詳細 || map の走査 || ペアで取り出す。 || for (auto& [k, v] : m)
+STL詳細 || map::at || 範囲検査付きの参照。 || m.at(k)
+STL詳細 || map::erase / clear || 削除。 || m.erase(k)
+STL詳細 || map::merge || 別の map を取り込む。 || a.merge(b)
+STL詳細 || map::node_type || ノードの再利用。 || m.extract(k)
+STL詳細 || multimap::equal_range || 同キーの範囲。 || mm.equal_range(k)
+STL詳細 || unordered_map の負荷係数 || 拡張の基準。 || m.load_factor()
+STL詳細 || unordered_map::reserve || バケットの確保。 || m.reserve(1000)
+STL詳細 || unordered_map のハッシュ衝突 || 性能低下の原因。 || bucket_count()
+STL詳細 || カスタムハッシュ関数 || 独自型のキー。 || struct H { size_t operator()(const K&) const; };
+STL詳細 || hash_combine || ハッシュの合成。 || h1 ^ (h2 << 1)
+STL詳細 || std::equal_to || 等価の比較関数。 || std::equal_to<>
+STL詳細 || std::plus / minus / multiplies || 算術の関数オブジェクト。 || std::plus<int>()
+STL詳細 || std::logical_and / not_fn || 論理の関数オブジェクト。 || std::not_fn(pred)
+STL詳細 || std::mem_fn || メンバ関数のラッパー。 || std::mem_fn(&A::f)
+STL詳細 || std::ref / cref || 参照のラッパー。 || std::ref(x)
+STL詳細 || std::reference_wrapper || 参照を値として保持。 || std::reference_wrapper<int>
+STL詳細 || std::unique_ptr の配列 || 配列版。 || std::unique_ptr<int[]>
+STL詳細 || std::shared_ptr の use_count || 参照数の確認。 || p.use_count()
+STL詳細 || std::owner_less || 所有順の比較。 || std::owner_less<>
+STL詳細 || std::atomic<shared_ptr> || 原子的な共有ポインタ。 || std::atomic<std::shared_ptr<T>>
+STL詳細 || std::exchange || 値を置き換えて旧値を返す。 || std::exchange(a, 0)
+STL詳細 || std::swap の特殊化 || 型ごとの交換。 || swap(a, b)
+STL詳細 || std::as_const || const 参照を得る。 || std::as_const(x)
+STL詳細 || std::addressof || アドレス演算子の安全版。 || std::addressof(x)
+STL詳細 || std::launder || 寿命が変わった領域への参照。 || std::launder(p)
+STL詳細 || std::construct_at / destroy_at || 領域に構築・破棄。 || std::construct_at(p)
+STL詳細 || std::uninitialized_copy || 未初期化領域への複写。 || std::uninitialized_copy(b, e, out)
+STL詳細 || std::to_underlying || enum の基底値。 || std::to_underlying(e)
+STL詳細 || std::is_enum / underlying_type || 列挙型の判定・基底型。 || std::underlying_type_t<E>
+STL詳細 || std::unreachable || 到達不能の宣言。 || std::unreachable()
+STL詳細 || std::is_constant_evaluated || 定数評価中か判定。 || std::is_constant_evaluated()
+STL詳細 || std::type_identity || 推論の抑止。 || std::type_identity_t<T>
+STL詳細 || std::remove_cvref || cv と参照の除去。 || std::remove_cvref_t<T>
+STL詳細 || std::common_type || 共通の型。 || std::common_type_t<int, double>
+STL詳細 || std::invoke_result || 呼び出しの戻り値型。 || std::invoke_result_t<F, A>
+STL詳細 || std::is_invocable || 呼び出し可能か判定。 || std::is_invocable_v<F>
+STL詳細 || std::is_base_of / is_convertible || 継承・変換の判定。 || std::is_base_of_v<A, B>
+STL詳細 || std::is_trivially_copyable || 単純にコピー可能か。 || std::is_trivially_copyable_v<T>
+STL詳細 || std::integral_constant || 定数の型。 || std::integral_constant<int, 3>
+STL詳細 || std::true_type / false_type || 真偽の型。 || std::true_type
+STL詳細 || std::conjunction / disjunction || 型述語の論理演算。 || std::conjunction_v<A, B>
+STL詳細 || std::ranges::range / view || 範囲のコンセプト。 || std::ranges::range
+STL詳細 || std::sortable / input_iterator || アルゴリズム用コンセプト。 || std::sortable<I>
+STL詳細 || std::same_as / derived_from || 基本のコンセプト。 || std::same_as<T, U>
+STL詳細 || std::convertible_to / constructible_from || 変換・構築のコンセプト。 || std::convertible_to<A, B>
+STL詳細 || std::totally_ordered / regular || 比較・正則のコンセプト。 || std::regular<T>
+STL詳細 || std::invocable / predicate || 呼び出し・述語のコンセプト。 || std::predicate<F, A>
+STL詳細 || std::views::filter / transform || ビューの基本。 || v | std::views::filter(f)
+STL詳細 || views::take / drop / reverse || 先頭・除外・逆順。 || std::views::reverse
+STL詳細 || views::keys / values / elements || 組の要素の取り出し。 || std::views::keys(m)
+STL詳細 || views::split / join || 分割・結合。 || std::views::split(' ')
+STL詳細 || views::chunk / slide || 区切り・窓(C++23)。 || std::views::chunk(3)
+STL詳細 || views::enumerate (C++23) || 添字付き走査。 || std::views::enumerate(v)
+STL詳細 || views::cartesian_product || 直積(C++23)。 || std::views::cartesian_product(a, b)
+STL詳細 || views::adjacent / pairwise || 隣接要素。 || std::views::pairwise
+STL詳細 || ranges::views の遅延評価 || 使うまで計算しない。 || lazy
+STL詳細 || ranges::subrange || イテレータ対の範囲。 || std::ranges::subrange
+STL詳細 || ranges::dangling || 一時範囲の検出。 || std::ranges::dangling
+STL詳細 || ranges::fold_left (C++23) || 畳み込み。 || std::ranges::fold_left(v, 0, std::plus{})
+STL詳細 || ranges::contains (C++23) || 含むか判定。 || std::ranges::contains(v, 1)
+STL詳細 || ranges::starts_with / ends_with || 前後の一致。 || std::ranges::starts_with
+STL詳細 || ranges::min / max / minmax || 範囲の最小・最大。 || std::ranges::max(v)
+STL詳細 || ranges::copy / move || 範囲の複写・移動。 || std::ranges::copy(a, out)
+STL詳細 || ranges::for_each || 各要素に処理。 || std::ranges::for_each(v, f)
+STL詳細 || std::generator の用途 || 遅延列の生成。 || co_yield
+STL詳細 || std::flat_set (C++23) || 配列ベースの set。 || std::flat_set
+STL詳細 || std::stack の pop || 値を返さない。 || s.pop()
+STL詳細 || std::string::npos || 見つからない印。 || s.find("x") == std::string::npos
+STL詳細 || std::string の SSO || 短い文字列の内部格納。 || SSO
+STL詳細 || std::string::reserve / shrink_to_fit || 容量の管理。 || s.reserve(100)
+STL詳細 || std::string::resize_and_overwrite || 高速な書き込み(C++23)。 || s.resize_and_overwrite
+STL詳細 || std::string::front / back || 先頭・末尾の文字。 || s.back()
+STL詳細 || std::string::assign / swap || 代入・交換。 || s.assign("a")
+STL詳細 || std::string::find_last_of || 最後に現れる文字。 || s.find_last_of('/')
+STL詳細 || std::string::find_first_not_of || 除外文字以外の最初。 || s.find_first_not_of(' ')
+STL詳細 || std::string_view::remove_prefix || 先頭を縮める。 || sv.remove_prefix(1)
+STL詳細 || std::string_view の寿命 || 元のデータが必要。 || dangling
+STL詳細 || std::basic_string || 文字列の基底テンプレート。 || std::basic_string<char>
+STL詳細 || std::char_traits || 文字の特性。 || std::char_traits<char>
+STL詳細 || std::locale / imbue || ロケールの設定。 || std::cout.imbue(std::locale(""))
+STL詳細 || std::codecvt (非推奨) || 文字コード変換。 || deprecated
+STL詳細 || std::wcout / wcin || ワイド文字の入出力。 || std::wcout
+STL詳細 || std::put_time / get_time || 日時の書式入出力。 || std::put_time(&tm, "%F")
+STL詳細 || std::time / localtime / gmtime || C の日時関数。 || std::time(nullptr)
+STL詳細 || std::strftime || 日時の書式化。 || std::strftime(buf, n, "%F", &tm)
+STL詳細 || std::chrono::system_clock || 実時間の時計。 || std::chrono::system_clock::now()
+STL詳細 || chrono::high_resolution_clock || 高精度の時計。 || high_resolution_clock::now()
+STL詳細 || chrono::year_month_day (C++20) || 暦の型。 || std::chrono::year_month_day
+STL詳細 || chrono::zoned_time || タイムゾーン付き時刻。 || std::chrono::zoned_time
+STL詳細 || chrono::sys_days / floor || 日付への丸め。 || std::chrono::floor<days>
+STL詳細 || chrono::weekday / month / year || 暦の要素。 || std::chrono::Monday
+STL詳細 || chrono::parse / format || 日時の解析・書式化。 || std::format("{:%F}", t)
+STL詳細 || std::chrono::duration<double> || 小数の時間幅。 || duration<double>
+STL詳細 || chrono::time_point || 時刻の点。 || time_point
+STL詳細 || std::stop_source / stop_callback || 停止要求の仕組み。 || std::stop_source
+STL詳細 || std::call_once / once_flag || 1 度だけ実行。 || std::call_once(f, g)
+STL詳細 || std::shared_future || 複数で共有する future。 || std::shared_future<int>
+STL詳細 || std::promise::set_value || 値の設定。 || p.set_value(1)
+STL詳細 || std::async の launch ポリシー || async か deferred。 || std::launch::deferred
+STL詳細 || std::atomic_flag || 最小の原子型。 || std::atomic_flag
+STL詳細 || std::atomic_ref (C++20) || 既存変数への原子操作。 || std::atomic_ref<int>
+STL詳細 || std::atomic::wait / notify || 値の変化を待つ。 || a.wait(0)
+STL詳細 || fetch_add / fetch_sub || 加減算して旧値を返す。 || a.fetch_add(1)
+STL詳細 || memory_order_seq_cst || 既定の強い順序。 || seq_cst
+STL詳細 || std::atomic_thread_fence || メモリフェンス。 || std::atomic_thread_fence
+STL詳細 || std::hardware_destructive_interference_size || 偽共有の回避。 || alignas
+STL詳細 || false sharing || キャッシュ線の競合。 || cache line
+STL詳細 || std::barrier の phase || 段階的な同期。 || arrive_and_wait
+STL詳細 || std::syncbuf || 同期バッファ。 || std::syncbuf
+STL詳細 || std::filesystem::copy || 複写。 || std::filesystem::copy(a, b)
+STL詳細 || filesystem::remove / remove_all || 削除。 || std::filesystem::remove_all(p)
+STL詳細 || filesystem::rename || 名前変更。 || std::filesystem::rename(a, b)
+STL詳細 || filesystem::file_size || ファイルサイズ。 || std::filesystem::file_size(p)
+STL詳細 || filesystem::last_write_time || 更新日時。 || last_write_time(p)
+STL詳細 || filesystem::current_path || カレントディレクトリ。 || std::filesystem::current_path()
+STL詳細 || filesystem::absolute / canonical || 絶対・正規パス。 || std::filesystem::canonical(p)
+STL詳細 || filesystem::relative || 相対パス。 || std::filesystem::relative(p, base)
+STL詳細 || path::filename / stem / extension || パスの分解。 || p.extension()
+STL詳細 || path::parent_path || 親ディレクトリ。 || p.parent_path()
+STL詳細 || path::operator/ || パスの結合。 || a / "b"
+STL詳細 || recursive_directory_iterator || 再帰的な走査。 || recursive_directory_iterator(p)
+STL詳細 || filesystem_error || ファイル操作の例外。 || std::filesystem::filesystem_error
+STL詳細 || filesystem::space / temp_directory_path || 空き容量・一時領域。 || temp_directory_path()
+STL詳細 || std::filesystem::permissions || 権限の変更。 || permissions(p, perms::owner_all)
+STL詳細 || std::ios_base::failure || 入出力の例外。 || f.exceptions(std::ios::failbit)
+STL詳細 || rdbuf || ストリームバッファの操作。 || std::cout.rdbuf()
+STL詳細 || std::streambuf の継承 || 独自の出力先。 || class MyBuf : public std::streambuf
+STL詳細 || std::istreambuf_iterator || バッファからの反復。 || std::istreambuf_iterator<char>(f)
+STL詳細 || std::ostream_iterator || ストリームへの出力反復。 || std::ostream_iterator<int>(std::cout, " ")
+STL詳細 || std::copy と ostream_iterator || 範囲の出力。 || std::copy(b, e, out)
+STL詳細 || std::ws / skipws || 空白の読み飛ばし。 || std::cin >> std::ws
+STL詳細 || std::getline の区切り || 任意の区切り文字。 || std::getline(f, s, ',')
+STL詳細 || std::cin.ignore || 文字の読み捨て。 || std::cin.ignore(1000, '\n')
+STL詳細 || std::cin.peek / get / unget || 1 文字の先読み・取得。 || std::cin.peek()
+STL詳細 || std::cout.width / fill || 幅と埋め文字。 || std::cout.fill('0')
+STL詳細 || std::setfill / setbase || 埋め文字・基数。 || std::setfill('0')
+STL詳細 || std::showpos / uppercase || 符号・大文字表示。 || std::showpos
+STL詳細 || std::scientific / defaultfloat || 浮動小数点の表記。 || std::scientific
+STL詳細 || std::quoted || 引用符付きの入出力。 || std::quoted(s)
+STL詳細 || std::bitset の操作 || set、reset、flip。 || b.set(3)
+STL詳細 || bitset::to_string / to_ulong || 変換。 || b.to_string()
+STL詳細 || bitset::count / any / none || ビットの数・有無。 || b.count()
+STL詳細 || std::vector<bool> の代替 || bitset や deque。 || std::bitset
+STL詳細 || std::tuple_size / tuple_element || タプルの情報。 || std::tuple_size_v<T>
+STL詳細 || std::tuple_cat || タプルの結合。 || std::tuple_cat(a, b)
+STL詳細 || std::forward_as_tuple || 転送参照のタプル。 || std::forward_as_tuple(a, b)
+STL詳細 || std::make_from_tuple || タプルから構築。 || std::make_from_tuple<A>(t)
+STL詳細 || std::piecewise_construct || ペアの要素を別々に構築。 || std::piecewise_construct
+STL詳細 || std::variant::index / holds_alternative || 保持型の確認。 || std::holds_alternative<int>(v)
+STL詳細 || std::get_if || 安全なアクセス。 || std::get_if<int>(&v)
+STL詳細 || std::monostate || variant の空状態。 || std::monostate
+STL詳細 || std::bad_variant_access || 不正アクセスの例外。 || std::bad_variant_access
+STL詳細 || std::optional::value_or || 無ければ既定値。 || o.value_or(0)
+STL詳細 || std::optional の and_then / transform || 連鎖処理(C++23)。 || o.and_then(f)
+STL詳細 || std::nullopt || 値なしの印。 || std::nullopt
+STL詳細 || std::bad_optional_access || 値なしアクセスの例外。 || o.value()
+STL詳細 || std::any_cast || any から取り出す。 || std::any_cast<int>(a)
+STL詳細 || std::expected の unexpected || エラー値の包み。 || std::unexpected(e)
+STL詳細 || std::source_location の用途 || ログに位置を出す。 || loc.line()

@@ -1,0 +1,179 @@
+CodeIgniter || CodeIgniter 4 || 軽量な PHP FW。 || spark serve
+CodeIgniter || spark || CodeIgniter の CLI。 || php spark migrate
+CodeIgniter || Controller (CI) || リクエスト処理。 || extends BaseController
+CodeIgniter || Model (CI) || DB アクセスの部品。 || extends Model
+CodeIgniter || View (CI) || 画面の表示。 || view('a')
+CodeIgniter || Filters (CI) || 前後処理。 || app/Config/Filters.php
+CodeIgniter || Routes (CI) || ルート定義。 || $routes->get('/', 'Home::index')
+CodeIgniter || Query Builder (CI) || SQL の組み立て。 || $db->table('a')->get()
+CodeIgniter || Validation (CI) || 入力検証。 || $this->validate($rules)
+CodeIgniter || Session (CI) || セッション管理。 || session()->set('a', 1)
+CakePHP || CakePHP || 規約重視の FW。 || bin/cake server
+CakePHP || bake || 雛形生成。 || bin/cake bake all users
+CakePHP || Table / Entity (Cake) || ORM の部品。 || $this->Users->find()
+CakePHP || Component (Cake) || コントローラの部品。 || $this->loadComponent('Flash')
+CakePHP || Behavior (Cake) || モデルの振る舞い。 || addBehavior('Timestamp')
+CakePHP || FormHelper || フォームの生成。 || $this->Form->control('name')
+CakePHP || Authentication (Cake) || 認証プラグイン。 || cakephp/authentication
+CakePHP || Cell (Cake) || 画面部品の再利用。 || $this->cell('Inbox')
+Slim || Slim Framework || マイクロ FW。 || AppFactory::create()
+Slim || ルート (Slim) || URL と処理の対応。 || $app->get('/a', fn)
+Slim || PSR-7 リクエスト / レスポンス || HTTP メッセージ。 || $response->getBody()->write('a')
+Slim || ミドルウェア (Slim) || 前後処理。 || $app->add($mw)
+Slim || DI コンテナ (Slim) || 依存解決。 || $container->get('a')
+Slim || Twig-View || テンプレート連携。 || Twig::create('views')
+Yii || Yii2 || 高速な FW。 || yii serve
+Yii || Gii || コード生成ツール。 || /index.php?r=gii
+Yii || ActiveRecord (Yii) || ORM。 || User::find()->all()
+Yii || Widget (Yii) || 再利用可能な画面部品。 || ActiveForm::begin()
+Yii || RBAC (Yii) || 役割ベースの認可。 || Yii::$app->authManager
+Laminas || Laminas MVC || 旧 Zend の MVC。 || laminas-mvc
+Laminas || Mezzio || PSR-15 ベースの FW。 || mezzio
+Laminas || Laminas Diactoros || PSR-7 の実装。 || ServerRequestFactory
+コンポーネント || league/flysystem || ファイルシステムの抽象化。 || new Filesystem($adapter)
+コンポーネント || league/csv || CSV の読み書き。 || Reader::createFromPath($p)
+コンポーネント || league/commonmark || Markdown の変換。 || CommonMarkConverter
+コンポーネント || league/fractal || API 出力の整形。 || new Manager()
+コンポーネント || league/oauth2-server || OAuth2 サーバー。 || AuthorizationServer
+コンポーネント || vlucas/phpdotenv || .env の読み込み。 || Dotenv::createImmutable
+コンポーネント || nesbot/carbon || 日時の拡張。 || Carbon::now()
+コンポーネント || ramsey/uuid || UUID の生成。 || Uuid::uuid4()
+コンポーネント || fakerphp/faker || ダミーデータ生成。 || Faker\Factory::create()
+コンポーネント || symfony/var-dumper || 見やすいダンプ。 || dump($x)
+コンポーネント || symfony/console || CLI の構築。 || new Application()
+コンポーネント || symfony/yaml || YAML の解析。 || Yaml::parseFile($f)
+コンポーネント || symfony/finder || ファイル検索。 || Finder::create()->files()
+コンポーネント || symfony/process || プロセス実行。 || new Process(['ls'])
+コンポーネント || symfony/http-client || HTTP クライアント。 || HttpClient::create()
+コンポーネント || symfony/cache || キャッシュ。 || new FilesystemAdapter()
+コンポーネント || symfony/translation || 翻訳。 || $t->trans('a')
+コンポーネント || symfony/string || 文字列操作。 || u('a')->upper()
+コンポーネント || symfony/uid || ID の生成。 || new Ulid()
+コンポーネント || symfony/rate-limiter || 回数制限。 || RateLimiterFactory
+コンポーネント || monolog/monolog || ログ出力。 || $log->warning('x')
+コンポーネント || guzzlehttp/guzzle || HTTP クライアント。 || $c->request('GET', $u)
+コンポーネント || guzzlehttp/promises || 非同期の約束。 || new Promise()
+コンポーネント || php-di/php-di || DI コンテナ。 || new ContainerBuilder()
+コンポーネント || nikic/fast-route || 高速ルーティング。 || simpleDispatcher
+コンポーネント || nikic/php-parser || PHP の構文解析。 || ParserFactory
+コンポーネント || phpunit/phpunit || テスト。 || vendor/bin/phpunit
+コンポーネント || mockery/mockery || モック。 || Mockery::mock(A::class)
+コンポーネント || phpstan/phpstan || 静的解析。 || vendor/bin/phpstan
+コンポーネント || vimeo/psalm || 静的解析。 || vendor/bin/psalm
+コンポーネント || squizlabs/php_codesniffer || 規約検査。 || vendor/bin/phpcs
+コンポーネント || friendsofphp/php-cs-fixer || 自動整形。 || php-cs-fixer fix
+コンポーネント || rector/rector || 自動修正。 || vendor/bin/rector
+コンポーネント || deptrac || 依存関係の検査。 || deptrac analyse
+コンポーネント || infection || ミューテーションテスト。 || vendor/bin/infection
+コンポーネント || phpmetrics || 品質指標の計測。 || phpmetrics src
+コンポーネント || phpdocumentor || ドキュメント生成。 || phpdoc -d src
+コンポーネント || twig/twig || テンプレート。 || new Environment($loader)
+コンポーネント || smarty/smarty || テンプレート。 || new Smarty()
+コンポーネント || mustache/mustache || Mustache テンプレート。 || new Mustache_Engine
+コンポーネント || tecnickcom/tcpdf || PDF 生成。 || new TCPDF()
+コンポーネント || dompdf/dompdf || HTML から PDF。 || new Dompdf()
+コンポーネント || mpdf/mpdf || 日本語対応の PDF。 || new Mpdf()
+コンポーネント || setasign/fpdi || 既存 PDF の取り込み。 || new Fpdi()
+コンポーネント || phpoffice/phpword || Word の生成。 || new PhpWord()
+コンポーネント || phpoffice/phppresentation || PowerPoint の生成。 || new PhpPresentation()
+コンポーネント || endroid/qr-code || QR コード。 || QrCode::create($s)
+コンポーネント || intervention/image || 画像処理。 || ImageManager::gd()
+コンポーネント || spatie/laravel-permission || 権限管理。 || assignRole('admin')
+コンポーネント || spatie/laravel-medialibrary || メディア管理。 || addMedia($f)
+コンポーネント || spatie/laravel-activitylog || 操作履歴。 || activity()->log('a')
+コンポーネント || barryvdh/laravel-debugbar || デバッグバー。 || Debugbar::info($x)
+コンポーネント || barryvdh/laravel-dompdf || Laravel の PDF。 || Pdf::loadView('a')
+コンポーネント || maatwebsite/excel || Laravel の Excel 連携。 || Excel::download()
+コンポーネント || laravel/horizon || キュー監視。 || php artisan horizon
+コンポーネント || laravel/telescope || デバッグ支援。 || telescope
+コンポーネント || laravel/socialite || ソーシャルログイン。 || Socialite::driver('x')
+コンポーネント || laravel/cashier || 課金。 || Billable
+コンポーネント || laravel/scout || 全文検索。 || Searchable
+コンポーネント || laravel/pennant || 機能フラグ。 || Feature::active('a')
+コンポーネント || laravel/folio || ページベースのルート。 || folio
+コンポーネント || filament/filament || 管理画面。 || Filament
+コンポーネント || livewire/livewire || 動的 UI。 || Component
+コンポーネント || inertiajs/inertia-laravel || SPA 連携。 || Inertia::render()
+コンポーネント || tightenco/ziggy || JS からルート名を使う。 || route('a')
+コンポーネント || doctrine/dbal || DB 抽象化層。 || DriverManager::getConnection
+コンポーネント || doctrine/migrations || マイグレーション。 || doctrine:migrations:migrate
+コンポーネント || doctrine/collections || コレクション。 || ArrayCollection
+コンポーネント || doctrine/annotations (旧) || 注釈による設定。 || @ORM\Entity
+コンポーネント || cycle/orm || 別の ORM。 || Cycle ORM
+コンポーネント || illuminate/database 単体 || Eloquent を単体で使う。 || Capsule::table()
+コンポーネント || RedBeanPHP || 設定不要の ORM。 || R::dispense('a')
+コンポーネント || Medoo || 軽量 DB ライブラリ。 || new Medoo()
+コンポーネント || Propel || 古参の ORM。 || Propel
+設計と実装 || バリデーション設計 || 検証を一箇所に集約。 || Validator
+設計と実装 || フォームオブジェクト || 入力を型付きで保持。 || readonly class Form
+設計と実装 || アクションクラス || 1 処理 1 クラス。 || __invoke
+設計と実装 || イベント駆動 (PHP) || 発火と購読。 || EventDispatcher
+設計と実装 || ミドルウェアスタック || 層状の処理。 || pipeline
+設計と実装 || パイプラインパターン || 処理を連結。 || array_reduce
+設計と実装 || Specification パターン || 条件のオブジェクト化。 || isSatisfiedBy
+設計と実装 || Unit of Work || 変更をまとめて反映。 || flush
+設計と実装 || Identity Map || 同一エンティティの共有。 || identity map
+設計と実装 || Data Mapper / Active Record || 永続化の方式。 || ActiveRecord
+設計と実装 || Service Locator || 取得役への依存。 || locator
+設計と実装 || Registry パターン || 共有オブジェクトの登録。 || Registry
+設計と実装 || Event Sourcing (PHP) || イベントで状態再現。 || prooph
+設計と実装 || CQRS (PHP) || 更新と参照の分離。 || CommandBus
+設計と実装 || Saga パターン || 分散トランザクション。 || saga
+設計と実装 || Outbox パターン || 確実なイベント発行。 || outbox
+設計と実装 || API ファースト設計 || 仕様を先に決める。 || OpenAPI
+設計と実装 || OpenAPI (PHP) || API 仕様の記述。 || zircote/swagger-php
+設計と実装 || GraphQL (PHP) || 柔軟な問い合わせ API。 || webonyx/graphql-php
+設計と実装 || Lighthouse || Laravel の GraphQL。 || nuwave/lighthouse
+設計と実装 || JSON:API || API 形式の規約。 || application/vnd.api+json
+設計と実装 || HAL / Hydra || ハイパーメディア API。 || HAL
+設計と実装 || ページネーション (カーソル) || 位置指定の分割。 || cursorPaginate
+設計と実装 || 冪等キー || 重複リクエストの防止。 || Idempotency-Key
+設計と実装 || レート制限の実装 || 回数を数える。 || throttle:60,1
+設計と実装 || ETag による楽観制御 || 競合更新の検出。 || If-Match
+設計と実装 || ソフトデリート設計 || 論理削除。 || deleted_at
+設計と実装 || 監査ログ設計 || 変更履歴を残す。 || audit
+設計と実装 || マルチテナント設計 || 利用者ごとの分離。 || tenant_id
+設計と実装 || 多言語対応設計 || 翻訳ファイルの管理。 || lang/
+設計と実装 || タイムゾーン設計 || UTC で保存。 || UTC
+設計と実装 || 通貨と金額の設計 || 最小単位の整数。 || amount_cents
+設計と実装 || 状態遷移の設計 || enum と遷移表。 || enum Status
+設計と実装 || バッチ設計 || 再実行可能にする。 || idempotent
+設計と実装 || ファイルアップロード設計 || 検証・保存・配信。 || S3
+設計と実装 || 署名付き URL || 期限付きのアクセス。 || temporaryUrl
+設計と実装 || Webhook 設計 || 署名と再送。 || retry
+設計と実装 || 非同期処理設計 || キューとワーカー。 || queue
+設計と実装 || 設定管理 || 環境変数と設定ファイル。 || .env
+設計と実装 || 機能フラグ || 段階的な公開。 || feature flag
+設計と実装 || ブルーグリーンデプロイ || 切り替えで無停止。 || blue-green
+設計と実装 || ゼロダウンタイムデプロイ || 無停止の更新。 || php-fpm reload
+設計と実装 || OPcache のリセット || デプロイ後に再読込。 || opcache_reset()
+設計と実装 || ヘルスチェック (PHP) || 稼働確認。 || /health
+設計と実装 || 12-Factor App || クラウド向けの原則。 || 12factor
+設計と実装 || Docker Compose (PHP) || 複数コンテナの構成。 || docker-compose.yml
+設計と実装 || GitHub Actions (PHP) || CI の設定。 || shivammathur/setup-php
+設計と実装 || Composer のキャッシュ || CI の高速化。 || composer cache
+設計と実装 || マトリクステスト || 複数版でテスト。 || matrix
+設計と実装 || 静的解析の段階的導入 || ベースラインの利用。 || phpstan-baseline
+設計と実装 || 型カバレッジ || 型付けの割合。 || type coverage
+設計と実装 || レガシー PHP の移行 || 版を段階的に上げる。 || Rector
+設計と実装 || PHP 5 から 7 への移行 || 非互換の確認。 || PHP 7.0
+設計と実装 || PHP 7 から 8 への移行 || 非推奨の確認。 || PHP 8.0
+設計と実装 || フレームワーク選定 || 規模と要件で選ぶ。 || Laravel
+設計と実装 || CMS 選定 || 運用者に合わせる。 || WordPress
+設計と実装 || ヘッドレス CMS || API で配信。 || REST
+設計と実装 || サーバーレス PHP || FaaS で実行。 || Bref
+設計と実装 || Bref || AWS Lambda の PHP。 || bref
+設計と実装 || Laravel Vapor || Laravel のサーバーレス。 || vapor
+設計と実装 || RoadRunner と Spiral || 常駐型 PHP。 || spiral
+設計と実装 || Swoole の協調 || コルーチン。 || Co\run
+設計と実装 || PHP-PM || プロセスマネージャ。 || ppm
+設計と実装 || Octane の注意点 || 状態の持ち越し。 || static
+設計と実装 || メモリ常駐の落とし穴 || グローバル状態の共有。 || state leak
+設計と実装 || Xdebug のモード || develop、debug、profile。 || xdebug.mode
+設計と実装 || Xdebug の step debug || ステップ実行。 || xdebug.start_with_request
+設計と実装 || カバレッジ (PCOV) || 高速なカバレッジ。 || pcov
+設計と実装 || Blackfire と Tideways || 本番向けの計測。 || tideways
+設計と実装 || New Relic / Sentry || エラー・性能の監視。 || Sentry\init
+設計と実装 || ログの集約 || ELK や Loki。 || Monolog
+設計と実装 || 構造化ログ (PHP) || JSON 形式。 || JsonFormatter
+設計と実装 || トレースID || 呼び出しの追跡。 || trace_id

@@ -1,0 +1,151 @@
+数値 || std::abs / fabs || 絶対値。 || std::abs(-3)
+数値 || std::pow / sqrt / cbrt || べき乗・平方根・立方根。 || std::pow(2, 10)
+数値 || std::exp / log / log2 / log10 || 指数・対数。 || std::log(x)
+数値 || std::sin / cos / tan || 三角関数。 || std::sin(x)
+数値 || std::asin / acos / atan / atan2 || 逆三角関数。 || std::atan2(y, x)
+数値 || std::sinh / cosh / tanh || 双曲線関数。 || std::tanh(x)
+数値 || std::floor / ceil / round / trunc || 丸め。 || std::round(1.5)
+数値 || std::lround / llround || 整数への丸め。 || std::lround(x)
+数値 || std::fmod / remainder || 浮動小数点の剰余。 || std::fmod(5.5, 2)
+数値 || std::hypot || 斜辺の長さ。 || std::hypot(x, y)
+数値 || std::lerp || 線形補間。 || std::lerp(a, b, t)
+数値 || std::midpoint || 中点。 || std::midpoint(a, b)
+数値 || std::gcd / lcm || 最大公約数・最小公倍数。 || std::gcd(a, b)
+数値 || std::isnan / isinf / isfinite || 異常値の判定。 || std::isnan(x)
+数値 || std::signbit / copysign || 符号の操作。 || std::copysign(1, -0.0)
+数値 || std::fma || 積和演算。 || std::fma(a, b, c)
+数値 || std::ldexp / frexp || 仮数と指数の操作。 || std::ldexp(1, 3)
+数値 || std::nextafter || 次の表現可能な値。 || std::nextafter(x, y)
+数値 || std::erf / tgamma || 特殊関数。 || std::tgamma(5)
+数値 || std::numbers::e / pi || 数学定数。 || std::numbers::e
+数値 || std::numeric_limits::epsilon || 機械イプシロン。 || std::numeric_limits<double>::epsilon()
+数値 || 浮動小数点の比較 || 許容誤差で比較。 || std::abs(a - b) < eps
+数値 || IEEE 754 || 浮動小数点の規格。 || IEEE 754
+数値 || 非正規化数 || 極小の数。 || denormal
+数値 || 丸め誤差 || 表現できない誤差。 || 0.1 + 0.2
+数値 || 桁落ち / 情報落ち || 計算上の誤差。 || cancellation
+数値 || 整数の昇格 || 小さい型は int に。 || short + short
+数値 || 通常算術変換 || 型の揃え方。 || int + double
+数値 || 符号付きと符号なしの比較 || 警告の原因。 || -1 < 1u
+数値 || std::cmp_less など || 安全な整数比較。 || std::cmp_less(a, b)
+数値 || std::in_range || 範囲内か判定。 || std::in_range<int>(x)
+数値 || std::saturate_cast || 飽和変換(C++26)。 || saturate_cast
+数値 || std::add_sat など || 飽和演算(C++26)。 || std::add_sat(a, b)
+数値 || __int128 || 128 ビット整数(拡張)。 || __int128 x;
+数値 || boost::multiprecision || 多倍長演算。 || cpp_int
+数値 || GMP / mpfr || 多倍長ライブラリ。 || mpz_class
+数値 || std::complex || 複素数。 || std::complex<double> z
+数値 || std::ratio || コンパイル時の有理数。 || std::ratio<1, 3>
+数値 || std::bit_ceil / bit_floor || 2 の冪への丸め。 || std::bit_ceil(5u)
+数値 || std::popcount || 1 のビット数。 || std::popcount(x)
+数値 || std::countl_zero / countr_zero || 先頭・末尾の 0 の数。 || std::countl_zero(x)
+数値 || std::rotl / rotr || ビット回転。 || std::rotl(x, 3)
+数値 || std::has_single_bit || 2 の冪か判定。 || std::has_single_bit(x)
+数値 || std::byteswap || バイト順の反転。 || std::byteswap(x)
+数値 || std::endian || エンディアンの判定。 || std::endian::native
+数値 || ビットマスク || ビット列の選択。 || x & 0xFF
+数値 || ビットシフトの未定義動作 || 幅以上のシフト。 || 1 << 32
+数値 || 符号拡張 || 上位ビットの扱い。 || signed char
+数値 || 乱数エンジン || 乱数列の生成器。 || std::mt19937
+数値 || std::minstd_rand / ranlux || 他の乱数エンジン。 || std::minstd_rand
+数値 || 分布 (distribution) || 乱数の分布。 || std::normal_distribution
+数値 || bernoulli / binomial / poisson || 確率分布。 || std::bernoulli_distribution
+数値 || discrete_distribution || 重み付きの選択。 || std::discrete_distribution
+数値 || シードの設定 || 乱数列の再現。 || rng.seed(1)
+数値 || std::seed_seq || シード列。 || std::seed_seq
+数値 || rand / srand (旧) || C の乱数。 || rand()
+数値 || std::valarray の演算 || 要素ごとの演算。 || a * 2
+数値 || std::slice / gslice || 配列の部分参照。 || std::slice(0, 3, 1)
+数値 || std::linalg (C++26) || 線形代数の標準化。 || std::linalg
+数値 || BLAS / LAPACK || 線形代数ライブラリ。 || dgemm
+数値 || FFT ライブラリ || 高速フーリエ変換。 || FFTW
+数値 || 数値積分・微分 || 数値計算の基礎。 || Simpson
+数値 || ニュートン法 || 方程式の反復解法。 || x - f(x) / df(x)
+数値 || 二分法 || 範囲を半分にして探す。 || lo, hi
+数値 || 行列計算 || 行列の積・逆行列。 || Eigen
+数値 || 疎行列 || 0 の多い行列。 || Eigen::SparseMatrix
+数値 || 最小二乗法 || 近似曲線の計算。 || least squares
+プリプロセッサ || #if / #elif / #else / #endif || 条件付きコンパイル。 || #if defined(X)
+プリプロセッサ || #undef || マクロの解除。 || #undef MAX
+プリプロセッサ || #error / #warning || コンパイル時のメッセージ。 || #error "x"
+プリプロセッサ || #line || 行番号の指定。 || #line 10
+プリプロセッサ || #pragma || 処理系固有の指示。 || #pragma pack(1)
+プリプロセッサ || #pragma pack || 構造体の詰め方。 || #pragma pack(push, 1)
+プリプロセッサ || __has_include || ヘッダーの有無。 || __has_include(<a.h>)
+プリプロセッサ || __cplusplus || 規格のバージョン値。 || __cplusplus >= 202002L
+プリプロセッサ || __FILE__ / __LINE__ / __func__ || 場所の情報。 || __LINE__
+プリプロセッサ || __DATE__ / __TIME__ || コンパイル日時。 || __DATE__
+プリプロセッサ || 関数形式マクロ || 引数付きマクロ。 || #define SQ(x) ((x) * (x))
+プリプロセッサ || # 演算子 (文字列化) || 引数を文字列に。 || #x
+プリプロセッサ || ## 演算子 (連結) || トークンの連結。 || a##b
+プリプロセッサ || 可変引数マクロ || 任意個の引数。 || #define L(...) f(__VA_ARGS__)
+プリプロセッサ || __VA_OPT__ || 可変引数の条件処理。 || __VA_OPT__(,)
+プリプロセッサ || マクロの落とし穴 || 副作用の二重評価。 || SQ(i++)
+プリプロセッサ || do { } while(0) イディオム || 複文マクロの安全な形。 || do { a; b; } while (0)
+プリプロセッサ || X マクロ || 表からコードを生成。 || #define LIST(X)
+プリプロセッサ || 条件コンパイルの用途 || OS や環境の切替。 || #ifdef _WIN32
+プリプロセッサ || _WIN32 / __linux__ / __APPLE__ || OS 判定マクロ。 || __linux__
+プリプロセッサ || _MSC_VER / __GNUC__ || コンパイラ判定。 || __GNUC__
+プリプロセッサ || NDEBUG || assert の無効化。 || -DNDEBUG
+プリプロセッサ || -D オプション || マクロの定義。 || -DDEBUG=1
+プリプロセッサ || -E オプション || 前処理結果の出力。 || g++ -E a.cpp
+プリプロセッサ || -S オプション || アセンブリの出力。 || g++ -S a.cpp
+プリプロセッサ || -c オプション || オブジェクトの生成。 || g++ -c a.cpp
+プリプロセッサ || -o オプション || 出力名の指定。 || g++ -o app a.cpp
+プリプロセッサ || -fPIC / -shared || 共有ライブラリの作成。 || g++ -shared -fPIC
+プリプロセッサ || -march=native || CPU 向けの最適化。 || -march=native
+プリプロセッサ || -flto || リンク時最適化。 || -flto
+プリプロセッサ || -fno-exceptions / -fno-rtti || 機能の無効化。 || -fno-exceptions
+プリプロセッサ || -pedantic || 厳格な規格準拠。 || -pedantic
+プリプロセッサ || -Wshadow / -Wconversion || 追加の警告。 || -Wconversion
+プリプロセッサ || -fsanitize || 実行時検査。 || -fsanitize=address,undefined
+プリプロセッサ || -pthread || スレッドの有効化。 || -pthread
+プリプロセッサ || ccache || コンパイルのキャッシュ。 || ccache g++
+プリプロセッサ || ビルド時間の短縮 || PCH やモジュール。 || precompiled header
+プリプロセッサ || プリコンパイル済みヘッダー || ヘッダーの先行処理。 || pch.h
+プリプロセッサ || Unity ビルド || 複数ソースを 1 つに。 || unity build
+プリプロセッサ || 前方宣言 || 定義なしの宣言。 || class A;
+プリプロセッサ || ヘッダーの依存削減 || include を減らす。 || forward declaration
+プリプロセッサ || include の順序 || 自己完結性の確認。 || own header first
+プリプロセッサ || ヘッダーの自己完結 || 単独でコンパイル可能。 || self-contained
+未定義動作 || 配列の範囲外アクセス || 未定義動作。 || a[10]
+未定義動作 || ヌルポインタ参照 || 未定義動作。 || *nullptr
+未定義動作 || 符号付き整数のオーバーフロー || 未定義動作。 || INT_MAX + 1
+未定義動作 || 未初期化変数の読み取り || 値が不定。 || int x; x + 1
+未定義動作 || 解放後のメモリ使用 || 未定義動作。 || use-after-free
+未定義動作 || ダングリング参照 || 寿命切れの参照。 || return local ref
+未定義動作 || 一時オブジェクトへの参照 || 寿命に注意。 || const auto& r = f();
+未定義動作 || string_view のダングリング || 元の文字列が消える。 || string_view sv = f();
+未定義動作 || イテレータの無効化 || 変更後の使用。 || v.push_back(1)
+未定義動作 || 範囲 for 中の変更 || コンテナ変更は危険。 || for (x : v) v.push_back
+未定義動作 || 評価順序の未規定 || 副作用の順序。 || i = i++ + 1
+未定義動作 || データ競合 || 排他なしの共有書き込み。 || data race
+未定義動作 || ODR 違反 || 定義の不一致。 || ODR
+未定義動作 || strict aliasing 違反 || 型の別名参照。 || reinterpret_cast
+未定義動作 || アラインメント違反 || 境界外アクセス。 || misaligned
+未定義動作 || 仮想関数とコンストラクタ || 構築中の呼び出し。 || virtual in ctor
+未定義動作 || 基底の非仮想デストラクタ || 派生が破棄されない。 || delete base*
+未定義動作 || 戻り値のない関数 || return 忘れ。 || missing return
+未定義動作 || 無限ループの最適化 || 副作用なしは消える。 || while (1)
+未定義動作 || 浮動小数点から整数への変換 || 範囲外は未定義。 || (int)1e30
+未定義動作 || シフト量の範囲外 || 未定義動作。 || 1 << 40
+未定義動作 || 0 での除算 || 未定義動作。 || 1 / 0
+未定義動作 || メモリの二重解放 || 未定義動作。 || free(p); free(p);
+未定義動作 || new と delete[] の不一致 || 未定義動作。 || delete p
+未定義動作 || malloc と delete の混在 || 未定義動作。 || malloc, delete
+未定義動作 || バッファオーバーラン || 領域外書き込み。 || strcpy
+未定義動作 || 書式文字列の脆弱性 || printf の誤用。 || printf(s)
+未定義動作 || 整数のラップアラウンド || 符号なしは剰余演算。 || unsigned
+未定義動作 || スタックオーバーフロー || 再帰が深すぎる。 || recursion
+未定義動作 || 例外とデストラクタ || 二重例外で terminate。 || throw in dtor
+未定義動作 || const 変数の書き換え || const_cast での変更。 || const_cast
+未定義動作 || 文字列リテラルの書き換え || 未定義動作。 || char* s = "a"
+未定義動作 || メンバ関数ポインタの誤用 || 型の不一致。 || pmf
+未定義動作 || 一時 std::string の c_str || 寿命切れ。 || f().c_str()
+未定義動作 || shared_ptr の生ポインタ二重管理 || 二重解放の原因。 || shared_ptr(p)
+未定義動作 || unique_ptr の二重所有 || 二重解放。 || unique_ptr(p)
+未定義動作 || 移動後の使用 || 状態は有効だが未規定。 || moved-from
+未定義動作 || 初期化順序問題 || グローバルの初期化順。 || static init order
+未定義動作 || 静的初期化の順序 fiasco || 順序未規定。 || static initialization order fiasco
+未定義動作 || スレッド安全でないシングルトン || 競合の恐れ。 || static local
+未定義動作 || ローカル static の初期化 || C++11 から安全。 || static T t;
