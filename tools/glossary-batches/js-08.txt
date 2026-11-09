@@ -1,0 +1,77 @@
+ES仕様の細部 || label / break / continue || ループの制御。 || break outer;
+ES仕様の細部 || switch の fall-through || break がないと次へ続く。 || case 1: case 2:
+ES仕様の細部 || do...while || 先に実行する繰り返し。 || do { } while (c)
+ES仕様の細部 || for のカンマ || 複数の変数を扱う。 || for (let i = 0, j = 9; i < j; i++, j--)
+ES仕様の細部 || with 文 (非推奨) || スコープを拡張する旧機能。 || 使わない
+ES仕様の細部 || getter の遅延評価 || 初回にだけ計算する。 || get x() { delete this.x; return this.x = f() }
+ES仕様の細部 || Object.defineProperties || 複数のプロパティを定義する。 || Object.defineProperties(o, {})
+ES仕様の細部 || Object.getOwnPropertyDescriptor || 記述子を取得する。 || Object.getOwnPropertyDescriptor(o, 'a')
+ES仕様の細部 || Object.getOwnPropertySymbols || シンボルのキーを取る。 || Object.getOwnPropertySymbols(o)
+ES仕様の細部 || Object.setPrototypeOf || プロトタイプを変更する。 || Object.setPrototypeOf(o, p)
+ES仕様の細部 || Object.isExtensible / isSealed || 拡張・封印の確認。 || Object.isSealed(o)
+ES仕様の細部 || Object.entries の順序 || 整数キーが先に並ぶ。 || {2: 'a', 1: 'b'}
+ES仕様の細部 || プロパティの列挙順 || 挿入順が基本。 || for...in
+ES仕様の細部 || Function.prototype.toString || 関数のソースを文字列にする。 || f.toString()
+ES仕様の細部 || Function.length / name || 引数の数・関数名。 || f.length
+ES仕様の細部 || new Function || 文字列から関数を作る。 || new Function('a', 'return a')
+ES仕様の細部 || AsyncFunction / GeneratorFunction || 関数の種類。 || (async () => { }).constructor
+ES仕様の細部 || arguments.callee (廃止) || 自分自身を指す旧機能。 || 使わない
+ES仕様の細部 || Symbol.for / keyFor || 共有のシンボル。 || Symbol.for('a')
+ES仕様の細部 || Symbol.hasInstance || instanceof の挙動を決める。 || static [Symbol.hasInstance](x)
+ES仕様の細部 || Symbol.species || 派生を作る時のコンストラクタ。 || static get [Symbol.species]()
+ES仕様の細部 || Symbol.isConcatSpreadable || concat での展開。 || [Symbol.isConcatSpreadable]
+ES仕様の細部 || Symbol.match / replace / split || 文字列メソッドの挙動を決める。 || [Symbol.match]
+ES仕様の細部 || Symbol.unscopables || with 文から除く名前。 || [Symbol.unscopables]
+ES仕様の細部 || Symbol.dispose / asyncDispose || using で呼ばれる後始末。 || [Symbol.dispose]()
+ES仕様の細部 || DisposableStack || 後始末をまとめる。 || new DisposableStack()
+ES仕様の細部 || Error.prototype.stack || 非標準だが広く使えるスタック。 || e.stack
+ES仕様の細部 || Error.isError || エラーかを判定する。 || Error.isError(x)
+ES仕様の細部 || SuppressedError || 後始末中のエラー。 || new SuppressedError()
+ES仕様の細部 || Promise の状態 || pending / fulfilled / rejected。 || pending
+ES仕様の細部 || thenable || then を持つオブジェクト。 || {then(res) { }}
+ES仕様の細部 || Promise の連鎖 || then が新しい Promise を返す。 || p.then(f).then(g)
+ES仕様の細部 || 未処理の拒否 || catch がない失敗。 || unhandledrejection
+ES仕様の細部 || async 関数の戻り値 || 常に Promise。 || async function f() { return 1 }
+ES仕様の細部 || await の順序 || 後続は次のマイクロタスク。 || await 1
+ES仕様の細部 || 非同期の並行と並列 || JS は並行だが並列ではない。 || concurrency vs parallelism
+ES仕様の細部 || Atomics.wait / notify || 共有メモリの待機・通知。 || Atomics.wait(ta, 0, 0)
+ES仕様の細部 || FinalizationRegistry の注意 || 呼ばれる保証はない。 || registry.register(o, v)
+ES仕様の細部 || JSON のスーパーセット || JSON は JS の部分集合。 || JSON.parse
+ES仕様の細部 || JSON.rawJSON / isRawJSON || 数値の桁を保って出力する。 || JSON.rawJSON('123456789012345678')
+ES仕様の細部 || import defer / source || 読み込み時機を遅らせる提案。 || import defer * as m from 'm'
+ES仕様の細部 || Intl.DurationFormat || 期間の書式。 || new Intl.DurationFormat('ja')
+ES仕様の細部 || Math.sumPrecise || 精度のよい合計。 || Math.sumPrecise(a)
+ES仕様の細部 || Uint8Array.fromBase64 / toHex || バイト列の変換。 || Uint8Array.fromBase64(s)
+ES仕様の細部 || Array.prototype.group (旧) || groupBy の旧名。 || 使わない
+ES仕様の細部 || Math.f16round / Float16Array || 半精度の浮動小数点。 || new Float16Array(2)
+ES仕様の細部 || RegExp.escape || 正規表現用にエスケープする。 || RegExp.escape(s)
+ES仕様の細部 || 正規表現の v フラグ || 集合演算が使える。 || /[\p{L}--[a-z]]/v
+ES仕様の細部 || 正規表現の modifiers || 一部だけ i などを切り替える。 || /(?i:a)b/
+ES仕様の細部 || 重複した名前つきグループ || 同じ名前を別の分岐で使える。 || /(?<y>a)|(?<y>b)/
+ブラウザ機能(JS) || Page Lifecycle API || ページの状態の遷移。 || document.onfreeze
+ブラウザ機能(JS) || Idle Detection API || 利用者の離席検知。 || new IdleDetector()
+ブラウザ機能(JS) || Screen Wake Lock || 画面を消さない。 || navigator.wakeLock.request('screen')
+ブラウザ機能(JS) || Contacts Picker API || 連絡先を選ぶ。 || navigator.contacts.select()
+ブラウザ機能(JS) || Web Bluetooth / WebUSB / WebHID || 機器との通信。 || navigator.bluetooth.requestDevice()
+ブラウザ機能(JS) || Web Serial API || シリアル機器との通信。 || navigator.serial.requestPort()
+ブラウザ機能(JS) || Web NFC || NFC の読み書き。 || new NDEFReader()
+ブラウザ機能(JS) || Gamepad API || ゲームパッドの入力。 || navigator.getGamepads()
+ブラウザ機能(JS) || WebXR || VR・AR の機能。 || navigator.xr.requestSession()
+ブラウザ機能(JS) || Sensor API || 加速度などのセンサー。 || new Accelerometer()
+ブラウザ機能(JS) || Ambient Light / Proximity || 周囲の光・近接の検知。 || new AmbientLightSensor()
+ブラウザ機能(JS) || Eye Dropper API || 画面の色を取る。 || new EyeDropper().open()
+ブラウザ機能(JS) || Barcode Detection API || バーコードの検出。 || new BarcodeDetector()
+ブラウザ機能(JS) || Shape Detection / Face Detection || 形状や顔の検出。 || new FaceDetector()
+ブラウザ機能(JS) || Credential Management API || 認証情報の管理。 || navigator.credentials.get()
+ブラウザ機能(JS) || Federated Credential / FedCM || 外部 ID での認証。 || navigator.credentials.get({identity})
+ブラウザ機能(JS) || Storage Access API || サードパーティ Cookie の許可。 || document.requestStorageAccess()
+ブラウザ機能(JS) || Topics / Privacy Sandbox || プライバシー保護の広告 API。 || document.browsingTopics()
+ブラウザ機能(JS) || Reporting API || 違反などの報告。 || Reporting-Endpoints
+ブラウザ機能(JS) || Network Error Logging || 通信エラーの報告。 || NEL
+ブラウザ機能(JS) || Compute Pressure API || CPU の負荷状況。 || new PressureObserver()
+ブラウザ機能(JS) || Prompt API / 組み込み AI || ブラウザ内の AI 機能。 || LanguageModel.create()
+ブラウザ機能(JS) || Translator / Summarizer API || 翻訳・要約の組み込み機能。 || Translator.create()
+ブラウザ機能(JS) || WebGPU の計算 || GPU で汎用計算をする。 || device.createComputePipeline()
+ブラウザ機能(JS) || WebNN || ブラウザでのニューラルネット。 || navigator.ml
+ブラウザ機能(JS) || TensorFlow.js / ONNX Runtime Web || ブラウザで機械学習。 || tf.loadLayersModel()
+ブラウザ機能(JS) || Transformers.js || ブラウザで言語モデルを動かす。 || pipeline('sentiment-analysis')
