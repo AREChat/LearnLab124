@@ -1,0 +1,253 @@
+JS実践レシピ || 配列の重複を除く || Set で一意にする。 || [...new Set(a)]
+JS実践レシピ || 配列の合計 || reduce で足し合わせる。 || a.reduce((s, x) => s + x, 0)
+JS実践レシピ || 配列の最大値 || スプレッドで渡す。 || Math.max(...a)
+JS実践レシピ || 配列をシャッフル || Fisher-Yates で並べ替える。 || for (let i = a.length - 1; i > 0; i--)
+JS実践レシピ || 配列を n 個ずつに分割 || slice を繰り返す。 || Array.from({length: Math.ceil(a.length/n)}, ...)
+JS実践レシピ || 2つの配列の共通部分 || filter と includes。 || a.filter(x => b.includes(x))
+JS実践レシピ || 配列の差分 || 片方にないものを残す。 || a.filter(x => !b.includes(x))
+JS実践レシピ || 配列をキーでグループ化 || reduce でまとめる。 || Object.groupBy(a, f)
+JS実践レシピ || オブジェクトの配列を並べ替え || 比較関数で並べる。 || a.sort((x, y) => x.n - y.n)
+JS実践レシピ || 日本語の並べ替え || localeCompare を使う。 || a.sort((x, y) => x.localeCompare(y, 'ja'))
+JS実践レシピ || 連番の配列を作る || Array.from で生成する。 || Array.from({length: 5}, (_, i) => i)
+JS実践レシピ || 空の判定 (配列) || length で判定する。 || a.length === 0
+JS実践レシピ || 空の判定 (オブジェクト) || キー数で判定する。 || Object.keys(o).length === 0
+JS実践レシピ || 深いコピー || structuredClone を使う。 || structuredClone(o)
+JS実践レシピ || 浅いコピー || スプレッドでコピーする。 || {...o}
+JS実践レシピ || オブジェクトの結合 || スプレッドで統合する。 || {...a, ...b}
+JS実践レシピ || キーの存在確認 || in か hasOwn を使う。 || Object.hasOwn(o, 'a')
+JS実践レシピ || オブジェクトを配列に || entries で変換する。 || Object.entries(o)
+JS実践レシピ || 文字列の反転 || 分割して逆順に結合。 || [...s].reverse().join('')
+JS実践レシピ || 文字列の先頭を大文字に || 1文字目だけ変換する。 || s[0].toUpperCase() + s.slice(1)
+JS実践レシピ || キャメルケース変換 || 区切りを除いて大文字化。 || s.replace(/-(\w)/g, (_, c) => c.toUpperCase())
+JS実践レシピ || 文字列に含まれるか || includes を使う。 || s.includes('a')
+JS実践レシピ || 文字数の数え方 || 絵文字も 1 文字で数える。 || [...s].length
+JS実践レシピ || 半角・全角の変換 || 範囲で文字コードをずらす。 || String.fromCharCode(c.charCodeAt(0) - 0xFEE0)
+JS実践レシピ || ひらがな→カタカナ || 文字コードを 0x60 ずらす。 || c.charCodeAt(0) + 0x60
+JS実践レシピ || 数値をカンマ区切り || toLocaleString を使う。 || n.toLocaleString()
+JS実践レシピ || 0 埋め || padStart で桁をそろえる。 || String(n).padStart(3, '0')
+JS実践レシピ || 小数の丸め || 桁を指定して四捨五入。 || Math.round(x * 100) / 100
+JS実践レシピ || 範囲の乱数 (整数) || 範囲を計算する。 || Math.floor(Math.random() * (b - a + 1)) + a
+JS実践レシピ || ランダムな ID || randomUUID を使う。 || crypto.randomUUID()
+JS実践レシピ || 日付のフォーマット || Intl で整形する。 || new Intl.DateTimeFormat('ja-JP').format(d)
+JS実践レシピ || 日付の加算 || 日数を足す。 || d.setDate(d.getDate() + 7)
+JS実践レシピ || 日付の差 (日数) || ミリ秒の差を割る。 || (b - a) / 86400000
+JS実践レシピ || 月末日の取得 || 翌月の 0 日を使う。 || new Date(y, m + 1, 0).getDate()
+JS実践レシピ || 曜日の名前 || 配列で引く。 || ['日','月','火','水','木','金','土'][d.getDay()]
+JS実践レシピ || うるう年の判定 || 4・100・400 の規則。 || y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0)
+JS実践レシピ || 年齢の計算 || 誕生日を過ぎたか判定。 || age
+JS実践レシピ || ISO 文字列の日付を扱う || タイムゾーンに注意。 || new Date('2026-11-09')
+JS実践レシピ || 経過時間の表示 || 差を分・秒に直す。 || Math.floor(ms / 1000)
+JS実践レシピ || 時計の表示 || setInterval で更新する。 || setInterval(tick, 1000)
+JS実践レシピ || カウントダウン || 残り時間を毎秒計算する。 || target - Date.now()
+JS実践レシピ || sleep 関数 || Promise で待つ。 || const sleep = ms => new Promise(r => setTimeout(r, ms))
+JS実践レシピ || リトライ処理 || 失敗したら再試行する。 || for (let i = 0; i < 3; i++)
+JS実践レシピ || タイムアウト付き fetch || AbortSignal で中断する。 || fetch(url, {signal: AbortSignal.timeout(5000)})
+JS実践レシピ || 並列数の制限 || 同時実行数を絞る。 || p-limit
+JS実践レシピ || 逐次実行 || for と await で順に実行。 || for (const x of a) await f(x)
+JS実践レシピ || 並列実行 || Promise.all でまとめる。 || await Promise.all(a.map(f))
+JS実践レシピ || デバウンスの実装 || タイマーを張り直す。 || clearTimeout(t); t = setTimeout(f, ms)
+JS実践レシピ || スロットルの実装 || 最後の実行時刻を覚える。 || if (now - last > ms)
+JS実践レシピ || メモ化の実装 || Map に結果を保存する。 || cache.get(key)
+JS実践レシピ || 関数の合成 || 関数を連ねる。 || (...fs) => x => fs.reduceRight((v, f) => f(v), x)
+JS実践レシピ || ディープマージ || 入れ子を再帰的に統合。 || merge(a, b)
+JS実践レシピ || パスでオブジェクトを辿る || 'a.b.c' から値を取る。 || path.split('.').reduce((o, k) => o?.[k], obj)
+JS実践レシピ || クエリ文字列の生成 || URLSearchParams を使う。 || new URLSearchParams(o).toString()
+JS実践レシピ || クエリ文字列の解析 || Object.fromEntries と組み合わせる。 || Object.fromEntries(new URLSearchParams(location.search))
+JS実践レシピ || URL の組み立て || URL クラスを使う。 || new URL('/a', base)
+JS実践レシピ || ファイルのダウンロード || Blob と a 要素を使う。 || a.download = 'a.txt'
+JS実践レシピ || ファイルの読み込み || input と FileReader。 || reader.readAsText(file)
+JS実践レシピ || 画像のプレビュー || createObjectURL を使う。 || URL.createObjectURL(file)
+JS実践レシピ || CSV の作成 || 配列を行と列に変換する。 || rows.map(r => r.join(',')).join('\n')
+JS実践レシピ || CSV の解析 || 引用符に注意して分割する。 || papaparse
+JS実践レシピ || クリップボードにコピー || Clipboard API を使う。 || navigator.clipboard.writeText(s)
+JS実践レシピ || ダークモードの判定 || matchMedia を使う。 || matchMedia('(prefers-color-scheme: dark)').matches
+JS実践レシピ || テーマの保存 || localStorage に記録する。 || localStorage.setItem('theme', t)
+JS実践レシピ || スクロール位置の取得 || scrollY を読む。 || window.scrollY
+JS実践レシピ || 要素が見えるか判定 || IntersectionObserver を使う。 || new IntersectionObserver(cb)
+JS実践レシピ || モーダルの開閉 || dialog を使う。 || dialog.showModal()
+JS実践レシピ || フォームの値を取得 || FormData から取る。 || Object.fromEntries(new FormData(form))
+JS実践レシピ || 入力の即時検証 || input イベントで確認する。 || input.addEventListener('input', check)
+JS実践レシピ || Enter キーで送信 || keydown で判定する。 || e.key === 'Enter'
+JS実践レシピ || IME 変換中の Enter 対策 || isComposing を確認する。 || e.isComposing
+JS実践レシピ || ドラッグ&ドロップでファイル受取 || drop で files を取る。 || e.dataTransfer.files
+JS実践レシピ || 長押しの判定 || タイマーで測る。 || setTimeout(f, 500)
+JS実践レシピ || スワイプの判定 || touchstart と touchend の差。 || touches[0].clientX
+JS実践レシピ || ショートカットキー || modifier を確認する。 || e.ctrlKey && e.key === 's'
+JS実践レシピ || ページ離脱の確認 || beforeunload を使う。 || e.preventDefault()
+JS実践レシピ || 全画面表示の切替 || Fullscreen API を使う。 || el.requestFullscreen()
+JS実践レシピ || 音の再生 || Audio を使う。 || new Audio('a.mp3').play()
+JS実践レシピ || 画面の共有 || getDisplayMedia を使う。 || navigator.mediaDevices.getDisplayMedia()
+JS実践レシピ || QR コードの読み取り || BarcodeDetector を使う。 || new BarcodeDetector()
+JS実践レシピ || 位置情報の取得 || Geolocation を使う。 || navigator.geolocation.getCurrentPosition(cb)
+JS実践レシピ || 端末の判定 || userAgent より機能検出を使う。 || 'ontouchstart' in window
+JS実践レシピ || オンライン状態の検知 || online/offline を聞く。 || window.addEventListener('online', f)
+JS実践レシピ || Service Worker の更新検知 || updatefound を聞く。 || reg.addEventListener('updatefound', f)
+JS実践レシピ || スムーススクロール || scrollIntoView を使う。 || el.scrollIntoView({behavior: 'smooth'})
+JS実践レシピ || 要素の作成 || テンプレートで複製する。 || template.content.cloneNode(true)
+JS実践レシピ || 安全な HTML 挿入 || textContent を使う。 || el.textContent = s
+JS実践レシピ || 要素のクラス切替 || toggle を使う。 || el.classList.toggle('on')
+JS実践レシピ || data 属性の利用 || dataset を読む。 || el.dataset.id
+JS実践レシピ || カスタムイベントの発行 || dispatchEvent を使う。 || el.dispatchEvent(new CustomEvent('a'))
+JS実践レシピ || ローディング表示 || 状態で切り替える。 || el.hidden = false
+JS実践レシピ || 無限スクロール || 末尾の監視で追加読込。 || IntersectionObserver
+JS実践レシピ || 検索の絞り込み || filter と includes。 || items.filter(i => i.name.includes(q))
+JS実践レシピ || ページネーション計算 || 開始位置を求める。 || (page - 1) * size
+JS実践レシピ || ソート列の切替 || 昇降を反転する。 || dir *= -1
+JS実践レシピ || テーブルの動的生成 || 配列から行を作る。 || rows.map(r => `<tr>`)
+JS実践レシピ || 簡易テンプレート || 置換で値を埋める。 || tpl.replace(/{{(\w+)}}/g, (_, k) => d[k])
+JS実践レシピ || カラーコード変換 || 16進と RGB を変える。 || parseInt(h, 16)
+JS実践レシピ || コントラスト比の計算 || 相対輝度を求める。 || luminance
+JS実践レシピ || スロットマシン等の抽選 || 乱数と重み付け。 || weighted random
+JS実践レシピ || 迷路や盤面 || 2次元配列で表す。 || grid[y][x]
+JS実践レシピ || 当たり判定 || 矩形の重なりを調べる。 || a.x < b.x + b.w
+JS実践レシピ || ゲームループ || requestAnimationFrame で更新する。 || function loop(t) { requestAnimationFrame(loop) }
+JS実践レシピ || 経過時間 (delta time) || 前回との差で動かす。 || dt = (t - last) / 1000
+JS実践レシピ || 画像の読み込み待ち || onload を Promise にする。 || new Promise(r => img.onload = r)
+JS実践レシピ || 画像の縮小 || canvas に描いて書き出す。 || canvas.toBlob(cb, 'image/jpeg', .8)
+JS実践レシピ || 画面サイズ対応の canvas || devicePixelRatio を掛ける。 || canvas.width = w * devicePixelRatio
+JS実践レシピ || 音声合成 || speechSynthesis を使う。 || speechSynthesis.speak(new SpeechSynthesisUtterance('a'))
+JS実践レシピ || 音声認識 || SpeechRecognition を使う。 || new webkitSpeechRecognition()
+アルゴリズム(JS) || 線形探索 || 先頭から順に探す。 || a.indexOf(x)
+アルゴリズム(JS) || 二分探索 || 整列済みで半分ずつ探す。 || while (lo <= hi)
+アルゴリズム(JS) || バブルソート || 隣同士を交換する整列。 || for i, j
+アルゴリズム(JS) || クイックソート || 基準で分けて整列。 || quickSort
+アルゴリズム(JS) || マージソート || 分割して併合する整列。 || mergeSort
+アルゴリズム(JS) || 再帰 || 自分を呼ぶ関数。 || fact(n - 1)
+アルゴリズム(JS) || メモ化再帰 || 再計算を避ける。 || memo[n]
+アルゴリズム(JS) || フィボナッチ数列 || 前の2つを足す。 || fib(n)
+アルゴリズム(JS) || 階乗 || 1 から n の積。 || fact(n)
+アルゴリズム(JS) || 素数判定 || √n まで割る。 || isPrime(n)
+アルゴリズム(JS) || エラトステネスの篩 || 素数を一括で求める。 || sieve
+アルゴリズム(JS) || 最大公約数 || ユークリッドの互除法。 || gcd(a, b)
+アルゴリズム(JS) || 回文判定 || 反転と比較。 || s === [...s].reverse().join('')
+アルゴリズム(JS) || アナグラム判定 || 並べ替えて比較する。 || [...a].sort().join('')
+アルゴリズム(JS) || 深さ優先探索 (DFS) || 奥まで進む探索。 || stack
+アルゴリズム(JS) || 幅優先探索 (BFS) || 近い順に探索。 || queue
+アルゴリズム(JS) || ダイクストラ法 || 最短経路を求める。 || priority queue
+アルゴリズム(JS) || 動的計画法 || 部分問題の結果を使う。 || dp[i]
+アルゴリズム(JS) || 貪欲法 || 局所で最良を選ぶ。 || greedy
+アルゴリズム(JS) || スタック || 後入れ先出し。 || a.push / a.pop
+アルゴリズム(JS) || キュー || 先入れ先出し。 || a.push / a.shift
+アルゴリズム(JS) || 連結リスト || ノードをつなぐ構造。 || {value, next}
+アルゴリズム(JS) || 木構造 || 親子の階層。 || {children: []}
+アルゴリズム(JS) || 二分木 || 子が最大2つの木。 || {left, right}
+アルゴリズム(JS) || ハッシュマップ || キーで高速に引く。 || new Map()
+アルゴリズム(JS) || ヒープ || 最小・最大を取り出す木。 || heap
+アルゴリズム(JS) || トライ木 || 文字列の前方一致に強い。 || trie
+アルゴリズム(JS) || ビット演算 || 2進数の操作。 || a & b, a | b, a ^ b
+アルゴリズム(JS) || ビットシフト || 桁をずらす。 || a << 1, a >> 1
+アルゴリズム(JS) || 時間計算量 || 処理量の増え方。 || O(n)
+アルゴリズム(JS) || 空間計算量 || メモリ量の増え方。 || O(1)
+アルゴリズム(JS) || ビッグオー記法 || 計算量の表記。 || O(n log n)
+Reactの詳細 || React.StrictMode || 開発時の追加検査。 || <React.StrictMode>
+Reactの詳細 || Fragment (<>) || 余分な要素を作らずまとめる。 || <></>
+Reactの詳細 || React.memo || 再描画を省く。 || memo(Comp)
+Reactの詳細 || useLayoutEffect || 描画前に同期で実行する。 || useLayoutEffect(f)
+Reactの詳細 || useId || 一意な ID を作る。 || const id = useId()
+Reactの詳細 || useTransition || 更新の優先度を下げる。 || const [pending, start] = useTransition()
+Reactの詳細 || useDeferredValue || 値の反映を遅らせる。 || useDeferredValue(v)
+Reactの詳細 || useSyncExternalStore || 外部の状態を購読する。 || useSyncExternalStore(sub, get)
+Reactの詳細 || useImperativeHandle || 親に公開する操作を決める。 || useImperativeHandle(ref, f)
+Reactの詳細 || useOptimistic || 楽観的な更新。 || useOptimistic(state)
+Reactの詳細 || useActionState || フォームの状態管理。 || useActionState(action, init)
+Reactの詳細 || use (React) || Promise や Context を読む。 || use(promise)
+Reactの詳細 || forwardRef || ref を子に渡す。 || forwardRef(Comp)
+Reactの詳細 || createContext / Provider || 共有の値を配る。 || <Ctx.Provider value>
+Reactの詳細 || lazy / Suspense || 遅延読み込みと待機表示。 || <Suspense fallback>
+Reactの詳細 || ErrorBoundary || 子のエラーを受ける。 || getDerivedStateFromError
+Reactの詳細 || createPortal || 別の場所に描画する。 || createPortal(el, document.body)
+Reactの詳細 || 制御コンポーネント || 状態で値を管理する入力。 || value={v} onChange
+Reactの詳細 || 非制御コンポーネント || DOM が値を持つ入力。 || ref.current.value
+Reactの詳細 || 状態のリフトアップ || 親へ状態を移す。 || lifting state up
+Reactの詳細 || 条件付き描画 || 条件で表示を変える。 || {cond && <A/>}
+Reactの詳細 || リスト描画 || map で要素を作る。 || {a.map(x => <li key={x.id}/>)}
+Reactの詳細 || カスタム Hook || ロジックを関数にまとめる。 || function useX() { }
+Reactの詳細 || Hook のルール || 先頭で呼び、条件内で呼ばない。 || rules of hooks
+Reactの詳細 || 依存配列 || 再実行の条件。 || [a, b]
+Reactの詳細 || クリーンアップ関数 || 後始末を返す。 || return () => { }
+Reactの詳細 || 再レンダリング || 状態変更で再描画される。 || re-render
+Reactの詳細 || React Router || 画面遷移のライブラリ。 || <Route path>
+Reactの詳細 || React Hook Form || フォーム管理。 || useForm()
+Reactの詳細 || SWR || データ取得 Hook。 || useSWR(key, fetcher)
+Reactの詳細 || React Native || スマホアプリを作る。 || View, Text
+Reactの詳細 || Remix / React Router v7 || フルスタックの枠組み。 || loader
+Reactの詳細 || Vite + React || 軽量な開発環境。 || npm create vite
+Vueの詳細 || <script setup> || Composition API の簡潔な書き方。 || <script setup>
+Vueの詳細 || defineProps / defineEmits || props・イベントの宣言。 || defineProps<{a: string}>()
+Vueの詳細 || defineModel || 双方向の値を宣言する。 || const m = defineModel()
+Vueの詳細 || toRef / toRefs || リアクティブを分解する。 || toRefs(state)
+Vueの詳細 || watchEffect || 依存を自動で追跡して実行。 || watchEffect(() => { })
+Vueの詳細 || onMounted / onUnmounted || 生存期間のフック。 || onMounted(f)
+Vueの詳細 || provide / inject || 離れた部品へ値を渡す。 || provide('k', v)
+Vueの詳細 || v-bind / v-on (:/@) || 属性・イベントの結合。 || @click="f"
+Vueの詳細 || v-slot (#) || スロットの内容。 || <template #default>
+Vueの詳細 || v-show || 表示切り替え (display)。 || v-show="open"
+Vueの詳細 || Teleport / Suspense || 別の場所へ描画・待機表示。 || <Teleport to="body">
+Vueの詳細 || Vue Router || 画面遷移。 || useRouter()
+Vueの詳細 || Pinia || Vue の状態管理。 || defineStore()
+Vueの詳細 || Vite (Vue) || Vue 標準の開発環境。 || npm create vue
+Vueの詳細 || Options API || 従来の書き方。 || data(), methods
+Vueの詳細 || VueUse || Composition 関数集。 || useMouse()
+ビルドとツール || vite.config.js || Vite の設定。 || defineConfig({})
+ビルドとツール || webpack loader / plugin || 変換・拡張の仕組み。 || module.rules
+ビルドとツール || Rollup || ライブラリ向けのバンドラー。 || rollup.config.js
+ビルドとツール || SWC || Rust 製の変換ツール。 || @swc/core
+ビルドとツール || Turbopack / Rspack || 高速なバンドラー。 || rspack
+ビルドとツール || Biome || 整形と解析を1つで行う。 || biome check
+ビルドとツール || Husky / lint-staged || コミット時の自動検査。 || .husky/pre-commit
+ビルドとツール || Changesets / semantic-release || 版管理と公開の自動化。 || changeset
+ビルドとツール || monorepo || 複数パッケージを1つのリポジトリで管理。 || workspaces
+ビルドとツール || Turborepo / Nx || monorepo のビルド管理。 || turbo run build
+ビルドとツール || npm workspaces || 複数パッケージの管理。 || "workspaces": ["packages/*"]
+ビルドとツール || exports フィールド || 公開する入口の指定。 || "exports": {".": "./index.js"}
+ビルドとツール || main / module / types || パッケージの入口。 || "main": "index.js"
+ビルドとツール || peerDependencies || 利用側に委ねる依存。 || "peerDependencies"
+ビルドとツール || npm publish || パッケージを公開する。 || npm publish
+ビルドとツール || .npmrc || npm の設定。 || registry=
+ビルドとツール || dotenv || .env を読み込む。 || dotenv.config()
+ビルドとツール || cross-env || 環境変数をOS間で統一。 || cross-env NODE_ENV=production
+ビルドとツール || concurrently || 複数コマンドを同時実行。 || concurrently "a" "b"
+ビルドとツール || nodemon || 変更で再起動。 || nodemon a.js
+ビルドとツール || PM2 || Node のプロセス管理。 || pm2 start a.js
+ビルドとツール || Docker (Node) || コンテナで動かす。 || FROM node:22
+ビルドとツール || serverless / Lambda || サーバーレスで動かす。 || exports.handler
+ビルドとツール || Cloudflare Workers || エッジで動く JS。 || export default { fetch }
+ビルドとツール || Vercel / Netlify Functions || 関数を公開する。 || api/hello.js
+ビルドとツール || Electron || デスクトップアプリを作る。 || BrowserWindow
+ビルドとツール || Tauri || 軽量なデスクトップアプリ。 || tauri build
+ビルドとツール || Capacitor / Cordova || Web をアプリ化する。 || npx cap sync
+ビルドとツール || Chrome 拡張 (manifest v3) || ブラウザ拡張の作り方。 || manifest.json
+ビルドとツール || Bookmarklet || ブックマークで動くコード。 || javascript:(...)
+ビルドとツール || Google Apps Script || Google 製品を自動化する JS。 || function myFunction()
+ビルドとツール || GraphQL || 問い合わせ言語の API。 || query { user { id } }
+ビルドとツール || tRPC || 型をそのまま共有する API。 || trpc
+ビルドとツール || Prisma / Drizzle || データベースの O/R マッパー。 || prisma.user.findMany()
+ビルドとツール || Supabase / Firebase クライアント || BaaS の利用。 || createClient(url, key)
+ビルドとツール || WebSocket ライブラリ (Socket.IO) || 双方向通信。 || io.on('connection')
+ビルドとツール || Passport / NextAuth || 認証ライブラリ。 || passport.authenticate
+ビルドとツール || bcrypt / argon2 || パスワードのハッシュ。 || bcrypt.hash(p, 10)
+ビルドとツール || jsonwebtoken || JWT の作成・検証。 || jwt.sign(payload, key)
+ビルドとツール || multer / formidable || ファイル受信。 || upload.single('file')
+ビルドとツール || nodemailer || メール送信。 || transporter.sendMail()
+ビルドとツール || cheerio / jsdom || サーバーで HTML を解析する。 || cheerio.load(html)
+ビルドとツール || Puppeteer || ブラウザを自動操作する。 || puppeteer.launch()
+ビルドとツール || sharp || 画像処理。 || sharp(file).resize(100)
+ビルドとツール || pino / winston || ログ出力。 || logger.info('a')
+ビルドとツール || zod / yup / joi || 検証ライブラリ。 || z.string().email()
+ビルドとツール || commander / yargs || コマンドライン作成。 || program.option('-p')
+ビルドとツール || inquirer / prompts || 対話的な入力。 || prompts({type: 'text'})
+ビルドとツール || chalk / picocolors || 端末の色づけ。 || chalk.red('x')
+ビルドとツール || chokidar || ファイル監視。 || chokidar.watch('.')
+ビルドとツール || glob / fast-glob || パターンでファイルを探す。 || glob('**/*.js')
+ビルドとツール || marked / markdown-it || Markdown の変換。 || marked.parse(md)
+ビルドとツール || highlight.js / Prism || コードの色づけ。 || hljs.highlightAll()
+ビルドとツール || Day.js / Luxon || 日時のライブラリ。 || DateTime.now()
+ビルドとツール || Immer || 不変更新を簡単に書く。 || produce(state, d => { })
+ビルドとツール || RxJS || 非同期の流れを扱う。 || of(1).pipe(map(...))
+ビルドとツール || Ramda / fp-ts || 関数型のライブラリ。 || R.pipe
+ビルドとツール || mitt / nanoevents || 小さなイベント発行。 || mitt()
+ビルドとツール || SortableJS || ドラッグで並べ替え。 || new Sortable(el)
+ビルドとツール || Swiper || スライダー。 || new Swiper('.swiper')
+ビルドとツール || Leaflet / Mapbox || 地図の表示。 || L.map('map')
+ビルドとツール || Tone.js / Howler.js || 音の扱い。 || new Howl({src})
+ビルドとツール || Phaser / PixiJS || ゲーム・描画エンジン。 || new Phaser.Game(cfg)

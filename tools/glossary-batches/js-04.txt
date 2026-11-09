@@ -1,0 +1,200 @@
+通信とfetch || fetch の基本 || URL に要求して Response を得る。 || const r = await fetch(url)
+通信とfetch || Response.ok / status || 成功か・状態番号。 || r.ok
+通信とfetch || Response.json() || 本文を JSON として読む。 || await r.json()
+通信とfetch || Response.text() / blob() || 文字・バイナリで読む。 || await r.text()
+通信とfetch || Response.arrayBuffer() || バイト列で読む。 || await r.arrayBuffer()
+通信とfetch || Response.clone() || 応答を複製する。 || r.clone()
+通信とfetch || Response.body || ストリームとして読む。 || r.body.getReader()
+通信とfetch || Request オブジェクト || 要求を表す。 || new Request(url)
+通信とfetch || Headers オブジェクト || ヘッダーを扱う。 || new Headers({'X-A': '1'})
+通信とfetch || method / headers / body || fetch の設定。 || fetch(url, {method: 'POST', body})
+通信とfetch || JSON を POST する || Content-Type を付ける。 || headers: {'Content-Type': 'application/json'}
+通信とfetch || FormData を送る || multipart で送る。 || body: formData
+通信とfetch || credentials || Cookie の送信設定。 || credentials: 'include'
+通信とfetch || mode (cors / no-cors) || クロスオリジンの扱い。 || mode: 'cors'
+通信とfetch || cache オプション || キャッシュの扱い。 || cache: 'no-store'
+通信とfetch || redirect オプション || 転送の扱い。 || redirect: 'manual'
+通信とfetch || keepalive || ページを離れても送る。 || keepalive: true
+通信とfetch || navigator.sendBeacon || 離脱時の小さな送信。 || navigator.sendBeacon(url, data)
+通信とfetch || fetch のエラー処理 || ネットワーク失敗のみ reject。 || if (!r.ok) throw
+通信とfetch || アップロードの進捗 || XHR の progress を使う。 || xhr.upload.onprogress
+通信とfetch || XMLHttpRequest || 古い通信 API。 || new XMLHttpRequest()
+通信とfetch || ストリームの読み取り || チャンクごとに読む。 || await reader.read()
+通信とfetch || Server-Sent Events の受信 || EventSource で受ける。 || es.onmessage
+通信とfetch || WebSocket の送受信 || send と onmessage。 || ws.send('a')
+通信とfetch || WebSocket の再接続 || 切断時に再接続する。 || ws.onclose
+通信とfetch || ポーリング || 定期的に問い合わせる。 || setInterval(fetchData, 5000)
+通信とfetch || ロングポーリング || 応答を待たせて即時性を上げる。 || long polling
+通信とfetch || REST クライアント設計 || 関数にまとめる。 || api.get('/users')
+通信とfetch || 認証ヘッダー (Bearer) || トークンを付ける。 || Authorization: Bearer
+通信とfetch || CORS エラーの原因 || サーバーの許可がない。 || Access-Control-Allow-Origin
+通信とfetch || プリフライト || OPTIONS による事前確認。 || preflight
+通信とfetch || キャッシュ制御 || ETag と If-None-Match。 || 304 Not Modified
+通信とfetch || Range リクエスト || 一部だけ取得する。 || Range: bytes=0-99
+通信とfetch || ダウンロード進捗 || 読んだバイト数を数える。 || loaded / total
+型変換と演算 || 文字列への変換 || String() や + ''。 || String(1)
+型変換と演算 || 数値への変換 || Number() や +x。 || Number('12')
+型変換と演算 || 真偽値への変換 || Boolean() や !!。 || !!x
+型変換と演算 || 配列への変換 || Array.from や スプレッド。 || [...set]
+型変換と演算 || オブジェクトの文字列化 || toString の既定値。 || String({}) // '[object Object]'
+型変換と演算 || 0 / '' / null / undefined / NaN / false || falsy な値。 || if (!x)
+型変換と演算 || null と undefined の違い || 未代入と意図的な空。 || null !== undefined
+型変換と演算 || typeof null || 'object' を返す歴史的な仕様。 || typeof null
+型変換と演算 || NaN === NaN || 常に false。 || Number.isNaN
+型変換と演算 || -0 と +0 || 区別される数値。 || Object.is(0, -0)
+型変換と演算 || + 演算子の挙動 || 文字列が混じると連結。 || 1 + '2'
+型変換と演算 || - 演算子の挙動 || 数値に変換して計算する。 || '3' - 1
+型変換と演算 || 比較演算の型変換 || 文字列同士は辞書順。 || '10' < '9'
+型変換と演算 || ** (べき乗) || 累乗を求める。 || 2 ** 10
+型変換と演算 || % (剰余) の符号 || 左辺の符号になる。 || -5 % 3
+型変換と演算 || ++ / -- の前置と後置 || 返す値が異なる。 || a++ と ++a
+型変換と演算 || ビット否定 ~ || 整数化にも使われる。 || ~~3.7
+型変換と演算 || >>> (符号なしシフト) || 符号を無視して右シフト。 || x >>> 0
+型変換と演算 || 短絡評価 || 結果が決まれば評価を止める。 || a && b()
+型変換と演算 || 演算子の優先順位 || 評価の順序。 || () が最優先
+型変換と演算 || 自動セミコロン挿入 (ASI) || 行末の ; が補われる。 || return の直後の改行に注意
+型変換と演算 || var / let / const の違い || スコープと再代入の可否。 || const は再代入不可
+型変換と演算 || const とオブジェクト || 中身は変更できる。 || const o = {}; o.a = 1
+型変換と演算 || グローバル変数 || どこからでも参照できる。 || window.x
+型変換と演算 || ブロックスコープ || {} の中だけ有効。 || let
+型変換と演算 || 関数スコープ || 関数の中だけ有効。 || var
+型変換と演算 || レキシカルスコープ || 書いた位置でスコープが決まる。 || lexical scope
+型変換と演算 || ループ変数のクロージャ || let なら各回で別の変数。 || for (let i...)
+DOM(JS) || NodeList と HTMLCollection || 要素の集合の型。 || document.querySelectorAll
+DOM(JS) || Node と Element || ノード全般と要素。 || nodeType
+DOM(JS) || TreeWalker || DOM を順にたどる。 || document.createTreeWalker
+DOM(JS) || Range / Selection || 範囲と選択。 || document.createRange()
+DOM(JS) || contentEditable の操作 || 編集可能な領域。 || el.contentEditable = true
+DOM(JS) || execCommand (旧) || 旧式の編集命令。 || document.execCommand('bold')
+DOM(JS) || ShadowRoot || Shadow DOM の根。 || el.shadowRoot
+DOM(JS) || slotchange || スロットの変化。 || slot.addEventListener('slotchange')
+DOM(JS) || connectedCallback || 要素が追加された時。 || connectedCallback() { }
+DOM(JS) || attributeChangedCallback || 属性が変わった時。 || static observedAttributes
+DOM(JS) || adoptedCallback || 文書間を移動した時。 || adoptedCallback() { }
+DOM(JS) || ElementInternals || フォーム連携や状態を持つ。 || this.attachInternals()
+DOM(JS) || form-associated custom element || フォーム部品として使える独自要素。 || static formAssociated = true
+DOM(JS) || document.createRange().createContextualFragment || 文字列から DOM を作る。 || range.createContextualFragment(html)
+DOM(JS) || DOMParser || 文字列を DOM に解析する。 || new DOMParser().parseFromString(s, 'text/html')
+DOM(JS) || XMLSerializer || DOM を文字列にする。 || new XMLSerializer().serializeToString(node)
+DOM(JS) || Element.insertAdjacentElement || 位置を指定して要素を挿入。 || el.insertAdjacentElement('afterend', x)
+DOM(JS) || replaceChildren || 子をまとめて入れ替える。 || el.replaceChildren(...nodes)
+DOM(JS) || append と appendChild の違い || 複数・文字列を受けられる。 || el.append('a', b)
+DOM(JS) || children と childNodes の違い || 要素のみ・全ノード。 || el.children
+DOM(JS) || getAttribute と property の違い || 属性とプロパティは別物。 || input.value
+DOM(JS) || classList.contains / replace || クラスの確認・置換。 || el.classList.replace('a', 'b')
+DOM(JS) || style.setProperty || CSS 変数も設定できる。 || el.style.setProperty('--a', '1')
+DOM(JS) || getPropertyValue || CSS 変数を読む。 || getComputedStyle(el).getPropertyValue('--a')
+DOM(JS) || offsetTop / offsetLeft || 親からの位置。 || el.offsetTop
+DOM(JS) || scrollTo / scrollIntoViewIfNeeded || スクロール位置の指定。 || el.scrollTo({top: 0})
+DOM(JS) || elementFromPoint || 座標にある要素。 || document.elementFromPoint(x, y)
+DOM(JS) || focus({preventScroll}) || スクロールせずにフォーカス。 || el.focus({preventScroll: true})
+DOM(JS) || blur() || フォーカスを外す。 || el.blur()
+DOM(JS) || select() / setSelectionRange || 入力欄の選択。 || input.select()
+DOM(JS) || input.validity || 検証結果を読む。 || input.validity.valueMissing
+DOM(JS) || form.elements || フォームの部品の一覧。 || form.elements.name
+DOM(JS) || form.requestSubmit || 検証つきで送信する。 || form.requestSubmit()
+DOM(JS) || dialog.returnValue || ダイアログの戻り値。 || dialog.returnValue
+DOM(JS) || details.open || 開閉の状態。 || details.open = true
+DOM(JS) || image.decode() || 画像の復号を待つ。 || await img.decode()
+DOM(JS) || video.play() の Promise || 再生の開始を待つ。 || await video.play()
+DOM(JS) || MediaSession API || メディア操作の連携。 || navigator.mediaSession
+DOM(JS) || Picture-in-Picture || 小窓表示。 || video.requestPictureInPicture()
+DOM(JS) || ResizeObserverEntry || サイズ変化の通知内容。 || entry.contentRect
+DOM(JS) || IntersectionObserverEntry || 交差の通知内容。 || entry.isIntersecting
+DOM(JS) || MutationRecord || DOM の変更の記録。 || record.addedNodes
+DOM(JS) || ReportingObserver || 非推奨などの報告を受ける。 || new ReportingObserver(cb)
+DOM(JS) || CSS Custom Highlight API || 範囲の強調表示。 || CSS.highlights.set('a', h)
+DOM(JS) || EditContext API || 独自エディタの入力。 || new EditContext()
+Node.js追加 || fs.watch || ファイル変更の監視。 || fs.watch(p, cb)
+Node.js追加 || fs.rm / cp || 削除・コピー。 || fs.rm(p, {recursive: true})
+Node.js追加 || fs.access / exists || 存在や権限の確認。 || await fs.access(p)
+Node.js追加 || fs.appendFile || 追記する。 || fs.appendFile(p, s)
+Node.js追加 || fs.mkdtemp || 一時フォルダを作る。 || fs.mkdtemp(prefix)
+Node.js追加 || os.tmpdir || 一時フォルダの場所。 || os.tmpdir()
+Node.js追加 || process.stdin / stdout || 標準入出力。 || process.stdout.write('a')
+Node.js追加 || process.on('SIGINT') || Ctrl+C を受ける。 || process.on('SIGINT', f)
+Node.js追加 || process.on('uncaughtException') || 未処理の例外を受ける。 || process.on('uncaughtException', f)
+Node.js追加 || process.memoryUsage || メモリ使用量。 || process.memoryUsage()
+Node.js追加 || process.hrtime.bigint || 高精度の時間。 || process.hrtime.bigint()
+Node.js追加 || performance.now (Node) || 経過時間を測る。 || performance.now()
+Node.js追加 || timers/promises || Promise 版のタイマー。 || await setTimeout(1000)
+Node.js追加 || AsyncLocalStorage || 非同期でも文脈を引き継ぐ。 || new AsyncLocalStorage()
+Node.js追加 || Stream の backpressure || 書き込みの詰まり対策。 || drain
+Node.js追加 || Readable.from || 配列などからストリームを作る。 || Readable.from(a)
+Node.js追加 || stream/promises || Promise 版のストリーム。 || await pipeline(a, b)
+Node.js追加 || net.createServer || TCP サーバー。 || net.createServer(cb)
+Node.js追加 || dgram || UDP の通信。 || dgram.createSocket('udp4')
+Node.js追加 || dns.lookup || 名前を引く。 || dns.lookup(host, cb)
+Node.js追加 || http2 || HTTP/2 の通信。 || http2.createServer()
+Node.js追加 || tls || TLS の通信。 || tls.connect()
+Node.js追加 || vm || 別の文脈でコードを実行する。 || vm.runInNewContext(code)
+Node.js追加 || module.createRequire || ESM から require を使う。 || createRequire(import.meta.url)
+Node.js追加 || import.meta.dirname || ESM での現在のフォルダ。 || import.meta.dirname
+Node.js追加 || fileURLToPath || URL をパスに変える。 || fileURLToPath(import.meta.url)
+Node.js追加 || node:sqlite || 標準の SQLite。 || import { DatabaseSync } from 'node:sqlite'
+Node.js追加 || SEA (単一実行ファイル) || Node アプリを 1 つの実行ファイルに。 || node --experimental-sea-config
+Node.js追加 || --permission || 権限モデル。 || node --permission
+Node.js追加 || corepack || パッケージ管理の版管理。 || corepack enable
+Node.js追加 || npm run / npm exec || スクリプトとコマンドの実行。 || npm run build
+Node.js追加 || npm link || ローカルで連携する。 || npm link
+Node.js追加 || npm outdated / update || 古い依存の確認・更新。 || npm outdated
+Node.js追加 || npm ls || 依存の一覧。 || npm ls
+Node.js追加 || npm pack || 配布物を作る。 || npm pack
+Node.js追加 || npm version || 版を上げる。 || npm version patch
+Node.js追加 || .nvmrc / engines || 使う Node の版を示す。 || "engines": {"node": ">=20"}
+TypeScript追加 || Uppercase / Lowercase / Capitalize || 文字列型の変換。 || Uppercase<'a'>
+TypeScript追加 || InstanceType / ConstructorParameters || クラスの型情報。 || InstanceType<typeof A>
+TypeScript追加 || ThisType / ThisParameterType || this の型。 || ThisType<T>
+TypeScript追加 || NoInfer || 型推論に使わない。 || NoInfer<T>
+TypeScript追加 || Readonly 配列 || 変更できない配列型。 || readonly string[]
+TypeScript追加 || タプル型 || 位置ごとに型が決まった配列。 || [string, number]
+TypeScript追加 || 名前つきタプル || 要素に名前を付ける。 || [x: number, y: number]
+TypeScript追加 || 可変長タプル || スプレッドを含むタプル。 || [string, ...number[]]
+TypeScript追加 || 関数のオーバーロード || 複数の呼び出し形を宣言する。 || function f(a: string): void;
+TypeScript追加 || this 引数 || this の型を指定する。 || function f(this: A)
+TypeScript追加 || 抽象コンストラクタ型 || new できる型。 || new (...args: any[]) => T
+TypeScript追加 || const アサーションと enum 代替 || オブジェクトで列挙を表す。 || const A = {X: 'x'} as const
+TypeScript追加 || 型の絞り込み (in) || プロパティの有無で絞る。 || if ('a' in x)
+TypeScript追加 || 型の絞り込み (instanceof) || クラスで絞る。 || if (x instanceof A)
+TypeScript追加 || 網羅性チェック || 全ケースを処理させる。 || const _: never = x
+TypeScript追加 || 変性アノテーション || in / out で型引数の向きを示す。 || interface A<out T>
+TypeScript追加 || const 型パラメータ || リテラルを保つ。 || <const T>
+TypeScript追加 || 宣言のマージ || 同名の宣言が統合される。 || interface A { }
+TypeScript追加 || モジュール拡張 || 既存の型を拡張する。 || declare module 'x'
+TypeScript追加 || グローバル宣言 || グローバルの型を足す。 || declare global { }
+TypeScript追加 || triple-slash directive || 型参照の指示。 || /// <reference types="node" />
+TypeScript追加 || paths / baseUrl || import の別名設定。 || "paths": {"@/*": ["src/*"]}
+TypeScript追加 || moduleResolution || モジュールの解決方式。 || "moduleResolution": "bundler"
+TypeScript追加 || target / lib || 出力の版と使える API。 || "target": "ES2022"
+TypeScript追加 || isolatedModules || 単独変換できる書き方に限る。 || "isolatedModules": true
+TypeScript追加 || skipLibCheck || 型定義の検査を省く。 || "skipLibCheck": true
+TypeScript追加 || incremental / composite || 差分ビルド・参照。 || "incremental": true
+TypeScript追加 || noUncheckedIndexedAccess || 添字アクセスに undefined を含める。 || "noUncheckedIndexedAccess": true
+TypeScript追加 || exactOptionalPropertyTypes || 省略と undefined を区別する。 || "exactOptionalPropertyTypes": true
+TypeScript追加 || ts-expect-error / ts-ignore || 型エラーを抑える。 || // @ts-expect-error
+TypeScript追加 || JSDoc での型指定 || JS に型を書く。 || // @ts-check
+TypeScript追加 || DefinitelyTyped || 型定義の集積所。 || @types
+TypeScript追加 || ts-reset || 標準の型を使いやすく直す。 || @total-typescript/ts-reset
+TypeScript追加 || typescript-eslint || TS 向けの静的解析。 || @typescript-eslint
+テスト(JS) || describe / it / test || テストの構造。 || describe('a', () => { it('b', () => { }) })
+テスト(JS) || expect と matcher || 結果の検証。 || expect(a).toBe(1)
+テスト(JS) || toEqual / toStrictEqual || 値の等価の検証。 || expect(o).toEqual({a: 1})
+テスト(JS) || toThrow || 例外の検証。 || expect(f).toThrow()
+テスト(JS) || resolves / rejects || Promise の検証。 || await expect(p).resolves.toBe(1)
+テスト(JS) || beforeEach / afterEach || 各テストの前後処理。 || beforeEach(() => { })
+テスト(JS) || beforeAll / afterAll || 全体の前後処理。 || beforeAll(() => { })
+テスト(JS) || jest.fn / vi.fn || モック関数。 || const f = vi.fn()
+テスト(JS) || jest.mock / vi.mock || モジュールの差し替え。 || vi.mock('./a')
+テスト(JS) || spyOn || 呼び出しを監視する。 || vi.spyOn(obj, 'f')
+テスト(JS) || フェイクタイマー || 時間を進めて試す。 || vi.useFakeTimers()
+テスト(JS) || スナップショットテスト || 出力を保存して比較。 || toMatchSnapshot()
+テスト(JS) || テストカバレッジ || 実行された割合。 || --coverage
+テスト(JS) || jsdom 環境 || Node 上で DOM を試す。 || environment: 'jsdom'
+テスト(JS) || MSW || 通信をモックする。 || http.get('/a', () => HttpResponse.json({}))
+テスト(JS) || E2E テスト || 実際の画面を操作して試す。 || await page.click('button')
+テスト(JS) || Playwright のロケーター || 要素の探し方。 || page.getByRole('button')
+テスト(JS) || Playwright の自動待機 || 要素が準備できるまで待つ。 || auto-waiting
+テスト(JS) || トレースビューア || 失敗を再現して調べる。 || npx playwright show-trace
+テスト(JS) || テスト駆動開発 (TDD) || テストを先に書く。 || red, green, refactor
+テスト(JS) || Arrange-Act-Assert || テストの 3 段階。 || AAA
+テスト(JS) || テストピラミッド || 単体・結合・E2E の比率。 || test pyramid
