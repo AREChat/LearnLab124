@@ -1017,3 +1017,7 @@ body::before {
 .loading-screen.u-4 {
   display: none;
 }
+
+/* ハンバーガーの 3本線（これが 無いと ボタンが ただの 四角に 見える） */
+#hamburger-menu-btn .hamburger-line { display:block; width:22px; height:3px; margin:4px 0; background:#fff; border-radius:2px; }
+#hamburger-menu-btn { line-height:0; }

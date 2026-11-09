@@ -1,0 +1,8 @@
+/* ハンバーガー（3本線）を、どのページでも 同じ見た目に そろえる（線が無くて 四角に見える・題名に かさなる 対策） */
+#hamburger-menu-btn { background: transparent !important; box-shadow: none !important; border: 0; width: 44px; height: 44px; padding: 0 !important; line-height: 0; cursor: pointer; z-index: 9999 !important; }
+#hamburger-menu-btn .hamburger-line,
+#hamburger-menu-btn::before,
+#hamburger-menu-btn::after { content: ""; display: block; width: 30px; height: 4px; margin: 0 auto 6px; background: #00e0ff; border-radius: 2px; box-shadow: 0 0 8px rgba(0,224,255,.8); }
+#hamburger-menu-btn::before { margin-top: 8px; }
+#hamburger-menu-btn::after { margin-bottom: 0; }
+@media (max-width: 768px) { body.hb-pad { padding-top: 60px; } }

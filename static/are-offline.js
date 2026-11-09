@@ -22,7 +22,7 @@
     if(!NEED && !off){ if(badge){ badge.remove(); badge = null; } return; }
     if(!badge){
       badge = document.createElement("div"); badge.id = "areNetBadge"; badge.setAttribute("role", "status"); badge.setAttribute("aria-live", "polite");
-      badge.style.cssText = "position:fixed;top:max(6px,env(safe-area-inset-top));right:max(6px,env(safe-area-inset-right));z-index:2147483000;pointer-events:none;font:700 12px/1.3 system-ui,sans-serif;padding:4px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.35);max-width:70vw";
+      badge.style.cssText = "position:fixed;top:max(6px,env(safe-area-inset-top));right:max(72px,env(safe-area-inset-right));z-index:2147483000;pointer-events:none;font:700 12px/1.3 system-ui,sans-serif;padding:4px 10px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.35);max-width:70vw";
       document.body.appendChild(badge);
     }
     if(NEED){
