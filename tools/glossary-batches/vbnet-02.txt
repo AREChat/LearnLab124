@@ -1,0 +1,110 @@
+# カテゴリ || 用語 || 説明 || コード例
+基本 || Dim || 変数を宣言する。 || Dim n As Integer = 10
+基本 || Static (変数) || プロシージャを抜けても値を覚えている変数。 || Static count As Integer
+基本 || Option Compare Text || 文字列の比較で大文字小文字を区別しない設定。 || Option Compare Text
+基本 || Region / End Region || コードを折りたたみできるグループにする。 || #Region "初期化"
+基本 || Debug.WriteLine || 出力ウィンドウにデバッグ用の文字を表示する。 || Debug.WriteLine("値=" & n)
+基本 || Environment.NewLine || 改行の文字を返す。 || s = "A" & Environment.NewLine & "B"
+基本 || vbCrLf / vbTab || 改行・タブを表す定数。 || s = "A" & vbCrLf & "B"
+基本 || My.Computer || コンピュータの情報や機能にかんたんにアクセスする。 || My.Computer.Clipboard.SetText("hi")
+基本 || My.Application || アプリケーションの情報を取得する。 || My.Application.Info.Version
+基本 || Application.Exit || アプリケーションを終了する。 || Application.Exit()
+基本 || Environment.GetCommandLineArgs || コマンドライン引数を取得する。 || Dim args = Environment.GetCommandLineArgs()
+基本 || GoTo とラベル || 指定したラベルへ移動する。使いすぎは避ける。 || GoTo Done
+基本 || Stop 文 || デバッグ中にそこで実行を止める。 || Stop
+基本 || End 文 || 処理を直ちに終了する。 || End
+データ型 || Short / UShort || 16ビットの整数型。 || Dim s As Short = 100
+データ型 || UInteger / ULong || 負の数を持たない整数型。 || Dim u As UInteger = 5UI
+データ型 || Byte / SByte || 8ビットの整数型。 || Dim b As Byte = 255
+データ型 || Single || 単精度の浮動小数点型。 || Dim f As Single = 1.5F
+データ型 || TimeSpan || 時間の長さを表す型。 || Dim t As New TimeSpan(1, 30, 0)
+データ型 || DateTimeOffset || UTC との差を含めた日時型。 || Dim d = DateTimeOffset.Now
+データ型 || Guid || 世界で一意な ID を表す型。 || Dim g = Guid.NewGuid()
+データ型 || Tuple (タプル) || 複数の値をまとめて返す。 || Dim t = (1, "a")
+データ型 || 名前付きタプル || 要素に名前を付けたタプル。 || Dim p As (Id As Integer, Name As String) = (1, "A")
+データ型 || BigInteger || 桁数に制限のない整数型。 || Dim b As System.Numerics.BigInteger = 2
+データ型 || Type 型 (GetType) || 型の情報を取得する。 || Dim t = GetType(String)
+データ型 || TypeOf ... Is || オブジェクトが指定の型かどうか調べる。 || If TypeOf o Is String Then
+データ型 || DirectCast / CType / TryCast || オブジェクトの型を変換する。TryCast は失敗で Nothing。 || Dim s = TryCast(o, String)
+データ型 || Option Strict と暗黙の型変換 || 暗黙の型変換を禁止し、バグを防ぐ。 || Option Strict On
+データ型 || Char の判定 (Char.IsDigit) || 文字の種類を調べる。 || Char.IsDigit("5"c)
+データ型 || 文字リテラル "a"c || 1文字を表すリテラル。 || Dim c As Char = "a"c
+データ型 || 16進・2進リテラル || &H や &B で数を表す。 || Dim n = &HFF
+データ型 || 型推論 (Dim x = ...) || 値から型を自動で決める。 || Dim x = 10
+データ型 || 匿名型 || 名前のない型をその場で作る。 || Dim p = New With {.Name = "A", .Age = 20}
+データ型 || Enum の Flags || 複数の値を組み合わせられる列挙型。 || <Flags> Enum Perm : Read = 1 : Write = 2 : End Enum
+データ型 || Enum.Parse / TryParse || 文字列から Enum の値を作る。 || [Enum].TryParse("Read", p)
+文字列 || String.Compare || 文字列を比較する。 || String.Compare(a, b, True)
+文字列 || String.Equals || 文字列が等しいか調べる。 || a.Equals(b, StringComparison.OrdinalIgnoreCase)
+文字列 || StartsWith / EndsWith || 先頭・末尾が指定の文字列か調べる。 || s.StartsWith("http")
+文字列 || PadLeft / PadRight || 指定の長さになるまで文字を詰める。 || "5".PadLeft(3, "0"c)
+文字列 || Insert / Remove || 文字列の途中に挿入・削除する。 || s.Insert(1, "X")
+文字列 || LastIndexOf || 最後に見つかる位置を返す。 || s.LastIndexOf("/")
+文字列 || ToCharArray || 文字列を文字の配列にする。 || s.ToCharArray()
+文字列 || String.Concat || 文字列をつなげる。 || String.Concat("a", "b")
+文字列 || TrimStart / TrimEnd || 先頭・末尾だけ空白を除く。 || s.TrimEnd()
+文字列 || String.IsNullOrWhiteSpace || null・空・空白だけかを調べる。 || String.IsNullOrWhiteSpace(s)
+文字列 || Mid / Left / Right (関数) || 文字列の一部を取り出す VB の関数。 || Mid("abcdef", 2, 3)
+文字列 || InStr || 文字列の位置を返す VB の関数。 || InStr("abc", "b")
+文字列 || StrConv || 全角・半角、大文字小文字を変換する。 || StrConv(s, VbStrConv.Wide)
+文字列 || Format 関数 || 書式を指定して文字列にする。 || Format(1234.5, "#,##0.00")
+文字列 || ToString("N0") || 数値に書式を付けて文字列にする。 || n.ToString("N0")
+文字列 || 日付の書式 (yyyy/MM/dd) || 日付を書式指定で文字列にする。 || Now.ToString("yyyy/MM/dd HH:mm")
+文字列 || Regex.Match / Matches || 正規表現に合う部分を取り出す。 || Regex.Match(s, "\d+").Value
+文字列 || Regex.Replace || 正規表現で置き換える。 || Regex.Replace(s, "\s+", " ")
+文字列 || Regex.IsMatch || 正規表現に合うか判定する。 || Regex.IsMatch(s, "^\d{3}-\d{4}$")
+文字列 || String.Join と Split の組み合わせ || 区切り文字で分けて、つなぎ直す。 || String.Join(",", s.Split(" "c))
+文字列 || Normalize || Unicode の正規化（全角・半角などのゆれ対策）。 || s.Normalize(NormalizationForm.FormKC)
+文字列 || 文字列の比較 CompareOrdinal || 文字コードの順で比較する。 || String.CompareOrdinal(a, b)
+文字列 || 複数行文字列 || 改行を含む文字列を書く。 || Dim s = "A" & vbCrLf & "B"
+制御構文 || If 1行 || 1行で条件分岐を書く。 || If n > 0 Then Console.WriteLine("正")
+制御構文 || Select Case Is || 比較演算子で範囲を指定する。 || Case Is >= 80
+制御構文 || Select Case To || 範囲を指定する。 || Case 1 To 5
+制御構文 || Select Case True || 条件式ごとに分岐する書き方。 || Select Case True
+制御構文 || For Step || 増分を指定する。 || For i = 10 To 0 Step -2
+制御構文 || For Each と Index || 順番を数えながら繰り返す。 || For Each x In list
+制御構文 || Do Until || 条件が成り立つまで繰り返す。 || Do Until n = 0
+制御構文 || Do ... Loop While || 1回は実行してから条件を調べる。 || Do : n += 1 : Loop While n < 10
+制御構文 || Exit For / Exit Do || 繰り返しを途中で抜ける。 || Exit For
+制御構文 || Return || 値を返して関数を終わる。 || Return x + 1
+制御構文 || Throw New Exception || 自分でエラーを発生させる。 || Throw New ArgumentException("不正な値")
+制御構文 || Catch When || 条件に合うときだけエラーを受け止める。 || Catch ex As Exception When ex.Message.Contains("x")
+制御構文 || Finally || エラーの有無にかかわらず必ず実行する。 || Finally : conn.Close()
+制御構文 || On Error GoTo || 古い形式のエラー処理。新規では Try を使う。 || On Error Resume Next
+制御構文 || Err オブジェクト || 古い形式でエラー情報を取得する。 || Err.Description
+制御構文 || ブロックスコープ || Dim した変数は、そのブロック内だけで使える。 || If True Then : Dim x = 1 : End If
+制御構文 || 三項演算 If(a, b, c) || 条件で値を選ぶ。 || Dim s = If(n > 0, "正", "負")
+演算子 || += -= *= /= || 計算して代入する省略形。 || n += 1
+演算子 || &= || 文字列を後ろにつなげて代入する。 || s &= "追加"
+演算子 || Not / And / Or / Xor || 論理・ビット演算子。 || If Not flag Then
+演算子 || << >> || ビットをずらす。 || n << 2
+演算子 || TypeOf ... IsNot || 型でないことを調べる。 || If TypeOf o IsNot String Then
+演算子 || AddressOf || プロシージャのアドレス（デリゲート）を渡す。 || AddHandler btn.Click, AddressOf OnClick
+演算子 || NameOf || 変数や型の名前を文字列で取得する。 || NameOf(name)
+演算子 || ? (Null 条件) || null のときは評価せず Nothing を返す。 || Dim n = s?.Length
+演算子 || \ 整数除算 || 商の整数部分を返す。 || 7 \ 2
+演算子 || 演算子の優先順位 || 計算の順番のルール。迷ったら括弧を使う。 || (a + b) * c
+クラス || 構造体 (Structure) と クラスの違い || 構造体は値型、クラスは参照型。 || Structure P : Public X As Integer : End Structure
+クラス || コンストラクタ チェーン || 別のコンストラクタを呼び出す。 || Me.New(0)
+クラス || Finalize / Dispose || 後始末の処理。IDisposable を実装する。 || Implements IDisposable
+クラス || NotInheritable || 継承できないクラスにする。 || NotInheritable Class A
+クラス || Protected || 派生クラスからのみアクセスできる。 || Protected Sub M()
+クラス || Friend || 同じアセンブリ内からだけアクセスできる。 || Friend Class A
+クラス || 自動実装プロパティ || 本体を書かずにプロパティを作る。 || Public Property Name As String
+クラス || ReadOnly Property || 読み取り専用のプロパティ。 || Public ReadOnly Property Id As Integer
+クラス || 既定のプロパティ (Default) || 添字でアクセスできるプロパティ。 || Default Public ReadOnly Property Item(i As Integer) As String
+クラス || Shared コンストラクタ || クラスを最初に使うときに1回だけ動く。 || Shared Sub New()
+クラス || オブジェクト初期化子 || 作成と同時にプロパティを設定する。 || Dim p As New Person With {.Name = "A"}
+クラス || コレクション初期化子 || 作成と同時に要素を追加する。 || Dim l As New List(Of Integer) From {1, 2, 3}
+クラス || ToString のオーバーライド || 文字列表現を決める。 || Public Overrides Function ToString() As String
+クラス || Equals / GetHashCode || 等しいかの判定を決める。 || Public Overrides Function Equals(o As Object) As Boolean
+クラス || IComparable / IComparer || 並べ替えの基準を決める。 || Implements IComparable(Of P)
+クラス || IEnumerable の実装 || For Each で回せるクラスにする。 || Implements IEnumerable(Of T)
+クラス || Iterator / Yield || 値を1つずつ返すメソッドを作る。 || Iterator Function F() As IEnumerable(Of Integer)
+クラス || デリゲート (Delegate) || メソッドを変数のように扱う型。 || Delegate Sub Notify(msg As String)
+クラス || Action / Func || 標準のデリゲート型。 || Dim f As Func(Of Integer, Integer) = Function(x) x * 2
+クラス || 属性 (Attribute) || クラスやメソッドに付ける追加の情報。 || <Obsolete> Sub Old()
+クラス || リフレクション || 実行中に型やメンバーの情報を調べる。 || GetType(String).GetMethods()
+クラス || 共変性・反変性 || ジェネリックの型の代入ルール。 || IEnumerable(Of Object)
+クラス || 演算子のオーバーロード || + などの演算子の動きを自作する。 || Public Shared Operator +(a As V, b As V) As V
+クラス || 部分メソッド || Partial クラスの中で宣言だけするメソッド。 || Partial Private Sub OnLoad()

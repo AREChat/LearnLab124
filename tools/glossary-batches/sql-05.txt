@@ -1,0 +1,65 @@
+# カテゴリ || 用語 || 説明 || コード例
+実務パターン || 件数の取得 || 条件に合う行の数を数える。 || SELECT COUNT(*) FROM orders WHERE status = 'paid';
+実務パターン || 存在チェック || 行があるかだけを調べる。COUNT より EXISTS が速い。 || SELECT EXISTS (SELECT 1 FROM users WHERE email = 'a@b.c');
+実務パターン || ページネーション (OFFSET) || ページごとに取得する基本の方法。 || SELECT * FROM t ORDER BY id LIMIT 20 OFFSET 40;
+実務パターン || キーセットページネーション || 前のページの最後のキーから続きを取る。大きな表で速い。 || SELECT * FROM t WHERE id > 100 ORDER BY id LIMIT 20;
+実務パターン || 最新の1件だけ取得 || ユーザーごとの最新行を取る。 || SELECT DISTINCT ON (user_id) * FROM logs ORDER BY user_id, created_at DESC;
+実務パターン || 最大値の行を取得 || サブクエリで最大値の行を探す。 || SELECT * FROM t WHERE v = (SELECT MAX(v) FROM t);
+実務パターン || 上位N件 (ランキング) || 順位を付けて上位だけ取る。 || SELECT * FROM (SELECT *, RANK() OVER (ORDER BY score DESC) r FROM t) x WHERE r <= 10;
+実務パターン || 前月との比較 || LAG で前の期間の値と比べる。 || SELECT m, v, v - LAG(v) OVER (ORDER BY m) FROM sales;
+実務パターン || 連続した日付の穴埋め || generate_series と LEFT JOIN で、データのない日も出す。 || SELECT d::date, COALESCE(c, 0) FROM generate_series('2026-11-01'::date, '2026-11-30', '1 day') d LEFT JOIN daily x ON x.day = d::date;
+実務パターン || 累計の計算 || SUM OVER で累計を出す。 || SELECT d, SUM(v) OVER (ORDER BY d) FROM t;
+実務パターン || 構成比 (割合) || 全体に対する割合を出す。 || SELECT name, v * 100.0 / SUM(v) OVER () FROM t;
+実務パターン || 前年同月比 || 年を引いて同じ月と比べる。 || SELECT a.m, a.v / b.v FROM s a JOIN s b ON b.m = a.m - INTERVAL '1 year';
+実務パターン || 行を列に変換 (CASE) || CASE と集計で縦持ちを横持ちにする。 || SELECT id, MAX(CASE WHEN k = 'a' THEN v END) a FROM t GROUP BY id;
+実務パターン || 列を行に変換 (UNION ALL) || 横持ちを縦持ちにする。 || SELECT id, 'a', a FROM t UNION ALL SELECT id, 'b', b FROM t;
+実務パターン || 区切り文字列の展開 || カンマ区切りを行に展開する。 || SELECT unnest(string_to_array('a,b,c', ','));
+実務パターン || 文字列の集約 || 複数行を1つの文字列にまとめる。 || SELECT STRING_AGG(name, ', ' ORDER BY name) FROM t;
+実務パターン || 空文字を NULL にする || NULLIF で空文字を NULL に。 || SELECT NULLIF(name, '') FROM t;
+実務パターン || NULL を含む比較 || NULL との比較は IS NULL を使う。 || WHERE a IS NOT DISTINCT FROM b
+実務パターン || 日付の範囲検索 || 時刻を含む日付は「未満」で終わりを指定する。 || WHERE d >= '2026-11-01' AND d < '2026-12-01'
+実務パターン || 月初・月末の取得 || DATE_TRUNC で月初を出す。 || SELECT DATE_TRUNC('month', CURRENT_DATE);
+実務パターン || 年齢の計算 || 生年月日から年齢を出す。 || SELECT DATE_PART('year', AGE(birth)) FROM t;
+実務パターン || 営業日の計算 || 曜日で土日を除く。 || WHERE EXTRACT(DOW FROM d) NOT IN (0, 6)
+実務パターン || ランダムに1件取得 || ORDER BY RANDOM で並べて1件。大きな表では遅い。 || SELECT * FROM t ORDER BY RANDOM() LIMIT 1;
+実務パターン || テーブルの複製 || 構造とデータをコピーする。 || CREATE TABLE t2 AS TABLE t1;
+実務パターン || 構造だけ複製 || 構造だけコピーする。 || CREATE TABLE t2 (LIKE t1 INCLUDING ALL);
+実務パターン || データの移行 (INSERT SELECT) || 古い表から新しい表へ移す。 || INSERT INTO new_t SELECT * FROM old_t;
+実務パターン || 一括更新の分割 || 大量更新は、件数を区切って少しずつ行う。 || UPDATE t SET v = 1 WHERE id IN (SELECT id FROM t WHERE v IS NULL LIMIT 1000);
+実務パターン || 重複を除いて追加 || 無いものだけを追加する。 || INSERT INTO t SELECT * FROM s WHERE NOT EXISTS (SELECT 1 FROM t WHERE t.id = s.id);
+実務パターン || 孤立データの検出 || 親のいない子データを探す。 || SELECT c.* FROM child c LEFT JOIN parent p ON p.id = c.pid WHERE p.id IS NULL;
+実務パターン || 差分の検出 (EXCEPT) || 2つの表の違いを調べる。 || SELECT * FROM a EXCEPT SELECT * FROM b;
+実務パターン || 階層 (親子) の展開 || 再帰 CTE で木構造をたどる。 || WITH RECURSIVE tree AS (SELECT id, pid FROM n WHERE pid IS NULL UNION ALL SELECT n.id, n.pid FROM n JOIN tree ON n.pid = tree.id) SELECT * FROM tree;
+実務パターン || 連番の発行 || SEQUENCE で重複しない番号を発行する。 || SELECT nextval('seq_order');
+実務パターン || 採番テーブル || 番号を表で管理して発行する方法。 || UPDATE counters SET n = n + 1 RETURNING n;
+実務パターン || ソフトデリート (削除フラグ) || 消さずに削除済みにする。検索では除く。 || WHERE deleted_at IS NULL
+実務パターン || 日次バッチの集計 || 毎日決まった時刻に集計表を更新する。 || INSERT INTO daily SELECT CURRENT_DATE, COUNT(*) FROM orders;
+実務パターン || 在庫の引き当て (排他) || FOR UPDATE で同時更新を防ぐ。 || SELECT stock FROM items WHERE id = 1 FOR UPDATE;
+実務パターン || 検索条件の動的組み立て || 条件が空のときも動く書き方。 || WHERE (:name IS NULL OR name = :name)
+実務パターン || LIKE の前方一致 || 前方一致はインデックスが効きやすい。 || WHERE name LIKE 'abc%'
+実務パターン || ORDER BY の独自順 || CASE で並び順を指定する。 || ORDER BY CASE status WHEN 'urgent' THEN 1 ELSE 2 END
+実務パターン || 集計の絞り込み順 || WHERE で先に絞り、そのあと集計する。 || SELECT dept, COUNT(*) FROM emp WHERE active GROUP BY dept;
+実務パターン || 日付とタイムゾーンの扱い || 保存は UTC、表示のときに変換するのが安全。 || SELECT created_at AT TIME ZONE 'Asia/Tokyo' FROM t;
+実務パターン || 金額は DECIMAL で保存 || 浮動小数点は誤差が出るので避ける。 || price DECIMAL(12, 2)
+実務パターン || 電話番号は文字列で保存 || 先頭の 0 が消えないよう文字列型にする。 || tel VARCHAR(15)
+実務パターン || フラグ列の設計 || 状態は文字列や ENUM で明確に表す。 || status VARCHAR(10) CHECK (status IN ('new','paid'))
+エラー || duplicate key value violates unique constraint || 一意制約に反する値を入れたエラー。 || ON CONFLICT で対処する
+エラー || violates foreign key constraint || 外部キーが指す行がないエラー。 || 親の行を先に登録する
+エラー || null value in column violates not-null constraint || NOT NULL の列に NULL を入れたエラー。 || 値を指定するか既定値を付ける
+エラー || column must appear in the GROUP BY clause || 集計していない列が GROUP BY にないエラー。 || GROUP BY に列を追加する
+エラー || column does not exist || 存在しない列名を指定したエラー。 || 綴りと別名を確認する
+エラー || relation does not exist || 存在しないテーブル名を指定したエラー。 || スキーマ名と綴りを確認する
+エラー || syntax error at or near || 文法の誤り。近くの記号の付け忘れが多い。 || カンマや括弧を確認する
+エラー || division by zero || 0 で割ったエラー。 || NULLIF(b, 0) で割る
+エラー || value too long for type || 列の長さを超える文字を入れたエラー。 || 列を広げるか、入力を切り詰める
+エラー || invalid input syntax for type || 型に合わない文字を入れたエラー。 || 変換前に形式を確認する
+エラー || deadlock detected || ロックの待ち合わせが循環したエラー。 || 更新順を統一してやり直す
+エラー || permission denied || 権限がないエラー。 || GRANT で権限を与える
+エラー || more than one row returned by a subquery || 副問い合わせが複数行を返したエラー。 || LIMIT 1 や集計で1行にする
+エラー || ambiguous column reference || 複数の表に同じ名前の列があるエラー。 || 表名や別名を付けて指定する
+エラー || operator does not exist || 型の組み合わせに演算子がないエラー。 || CAST で型をそろえる
+エラー || could not serialize access || SERIALIZABLE で競合したエラー。 || トランザクションをやり直す
+エラー || too many connections || 接続数が上限に達したエラー。 || コネクションプールを使う
+エラー || lock timeout || ロックの待ち時間が超過したエラー。 || 長いトランザクションを避ける
+エラー || out of range value || 型の範囲を超える数を入れたエラー。 || より大きな型に変える
+エラー || SQLSTATE コード || エラーの種類を表す5桁の番号。 || 23505 は一意制約違反
