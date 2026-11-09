@@ -1,0 +1,111 @@
+CSS操作(JS) || element.classList の一括操作 || 複数のクラスを同時に扱う。 || el.classList.add('a', 'b')
+CSS操作(JS) || style.cssText || スタイルを文字列で設定する。 || el.style.cssText = 'color:red'
+CSS操作(JS) || style.removeProperty || 個別のスタイルを消す。 || el.style.removeProperty('color')
+CSS操作(JS) || insertRule / deleteRule || CSS の規則を追加・削除する。 || sheet.insertRule('a{color:red}')
+CSS操作(JS) || document.styleSheets || スタイルシートの一覧。 || document.styleSheets[0].cssRules
+CSS操作(JS) || CSSStyleDeclaration || スタイルの宣言のオブジェクト。 || el.style
+CSS操作(JS) || getComputedStyle の pseudo || 疑似要素のスタイルを読む。 || getComputedStyle(el, '::before')
+CSS操作(JS) || matchMedia の change イベント || メディアクエリの変化を聞く。 || mq.addEventListener('change', f)
+CSS操作(JS) || prefers-color-scheme の監視 || 設定変更に追従する。 || matchMedia(...).addEventListener
+CSS操作(JS) || CSS.registerProperty || 変数の型を登録する。 || CSS.registerProperty({name: '--x'})
+CSS操作(JS) || animation の getAnimations || 実行中のアニメを取得する。 || el.getAnimations()
+CSS操作(JS) || Animation.finished / cancel / reverse || アニメの制御。 || anim.finished
+CSS操作(JS) || KeyframeEffect / Animation 生成 || アニメを自作する。 || new Animation(effect)
+CSS操作(JS) || DocumentTimeline / ScrollTimeline || 時間軸の定義。 || new ScrollTimeline()
+CSS操作(JS) || ViewTimeline || 表示位置の時間軸。 || new ViewTimeline({subject: el})
+CSS操作(JS) || transitionrun / transitionstart || 遷移の開始系イベント。 || ontransitionrun
+CSS操作(JS) || animationiteration / cancel || 繰り返し・中断のイベント。 || onanimationiteration
+CSS操作(JS) || 強制リフロー || 値を読んで再計算させる。 || el.offsetWidth
+CSS操作(JS) || FLIP アニメーション || 位置の差から滑らかに動かす。 || First Last Invert Play
+CSS操作(JS) || スクロール連動の自作 || scroll イベントで計算する。 || window.addEventListener('scroll', f)
+CSS操作(JS) || 要素の中心座標 || rect から計算する。 || rect.left + rect.width / 2
+CSS操作(JS) || 要素同士の重なり判定 || rect を比べる。 || a.right > b.left
+CSS操作(JS) || ビューポート内判定 || rect が画面に入るか。 || rect.top < innerHeight
+CSS操作(JS) || スクロール量の割合 || 進捗バーに使う。 || scrollY / (scrollHeight - innerHeight)
+CSS操作(JS) || position: sticky の検知 || IntersectionObserver で判定。 || rootMargin: '-1px 0px 0px 0px'
+CSS操作(JS) || ダークモードのクラス切替 || html にクラスを付ける。 || document.documentElement.classList.toggle('dark')
+CSS操作(JS) || CSS 変数の更新 || JS から値を渡す。 || el.style.setProperty('--x', v)
+CSS操作(JS) || テーマカラーの動的変更 || meta を更新する。 || meta[name=theme-color]
+CSS操作(JS) || フォント読み込みの待機 || document.fonts.load で待つ。 || await document.fonts.load('16px X')
+CSS操作(JS) || 画像の遅延読み込み (自作) || data-src を差し替える。 || img.src = img.dataset.src
+CSS操作(JS) || レスポンシブ画像の現在値 || 実際に選ばれた画像。 || img.currentSrc
+CSS操作(JS) || 画面向きの判定 || orientation を確認する。 || screen.orientation.type
+CSS操作(JS) || 高 DPI の判定 || devicePixelRatio を見る。 || window.devicePixelRatio > 1
+CSS操作(JS) || タッチ対応の判定 || maxTouchPoints を見る。 || navigator.maxTouchPoints > 0
+CSS操作(JS) || ホバー可否の判定 || メディアクエリで確認。 || matchMedia('(hover: hover)').matches
+CSS操作(JS) || ダイアログの背景クリックで閉じる || 矩形外のクリックを判定。 || dialog.addEventListener('click', f)
+CSS操作(JS) || ポップオーバーの位置 || anchor と組み合わせる。 || showPopover()
+CSS操作(JS) || スクロールのロック || body の overflow を切り替える。 || document.body.style.overflow = 'hidden'
+ネットワーク応用(JS) || キャッシュバスティング || URL に版を付ける。 || a.js?v=2
+ネットワーク応用(JS) || 条件付きリクエスト || ETag で再取得を省く。 || If-None-Match
+ネットワーク応用(JS) || 並列ダウンロードの制御 || 同時数を絞る。 || p-limit
+ネットワーク応用(JS) || 通信の進捗表示 || Content-Length を使う。 || loaded / total
+ネットワーク応用(JS) || リクエストの重複排除 || 同じ要求を 1 つにまとめる。 || in-flight map
+ネットワーク応用(JS) || SWR パターン || 古い値を出しつつ再取得する。 || stale-while-revalidate
+ネットワーク応用(JS) || 楽観的 UI || 結果を待たず先に反映。 || optimistic UI
+ネットワーク応用(JS) || オフラインキュー || 通信復帰後に送る。 || background sync
+ネットワーク応用(JS) || 通信の再試行 (指数バックオフ) || 待ち時間を延ばして再試行。 || 2 ** attempt
+ネットワーク応用(JS) || タイムアウトの実装 || Promise.race で時間切れにする。 || Promise.race([p, timeout])
+ネットワーク応用(JS) || 通信の中断と再実行 || 古い要求を取り消す。 || controller.abort()
+ネットワーク応用(JS) || ファイルのチャンク送信 || 分割して順に送る。 || file.slice(start, end)
+ネットワーク応用(JS) || 署名付き URL でアップロード || 直接ストレージへ送る。 || presigned URL
+ネットワーク応用(JS) || CDN のキャッシュ制御 || ヘッダーで制御する。 || Cache-Control: s-maxage
+ネットワーク応用(JS) || プリフェッチ || 次の画面のデータを先読みする。 || <link rel="prefetch">
+ネットワーク応用(JS) || Resource Hints || 先読みの指示。 || preconnect, dns-prefetch
+ネットワーク応用(JS) || 103 Early Hints || 応答前に先読みを促す。 || 103
+ネットワーク応用(JS) || HTTP キャッシュとブラウザバック || bfcache の対象にする。 || pageshow
+ネットワーク応用(JS) || bfcache || 戻る操作の高速化。 || event.persisted
+ネットワーク応用(JS) || Beacon による計測 || 離脱時にも確実に送る。 || navigator.sendBeacon
+ネットワーク応用(JS) || Server Timing || サーバーの処理時間を伝える。 || Server-Timing
+ネットワーク応用(JS) || Resource Timing || 読み込み時間を取得する。 || performance.getEntriesByType('resource')
+ネットワーク応用(JS) || Navigation Timing || ページ全体の時間。 || performance.getEntriesByType('navigation')
+ネットワーク応用(JS) || web-vitals ライブラリ || Core Web Vitals を測る。 || onLCP(cb)
+ネットワーク応用(JS) || Long Animation Frames || 長い描画の検出。 || PerformanceObserver
+ネットワーク応用(JS) || User Timing || 独自の計測点。 || performance.mark
+ネットワーク応用(JS) || Real User Monitoring || 実際の利用者の計測。 || RUM
+ネットワーク応用(JS) || A/B テスト || 案を分けて比較する。 || experiment
+ネットワーク応用(JS) || 計測タグの遅延読み込み || 初期表示を妨げない。 || requestIdleCallback
+ネットワーク応用(JS) || Cookie 同意後の計測 || 同意を確認して開始する。 || consent
+ネットワーク応用(JS) || Do Not Track / GPC || 追跡拒否の信号。 || navigator.globalPrivacyControl
+ネットワーク応用(JS) || 指紋採取の対策 || ブラウザ固有情報の悪用。 || fingerprinting
+ネットワーク応用(JS) || サードパーティスクリプトの隔離 || iframe や worker に閉じる。 || Partytown
+ネットワーク応用(JS) || Trusted Types の導入 || DOM XSS を防ぐ。 || require-trusted-types-for 'script'
+ネットワーク応用(JS) || Cross-Origin-Opener-Policy || 窓の分離。 || COOP
+ネットワーク応用(JS) || Cross-Origin-Embedder-Policy || 埋め込みの制限。 || COEP
+ネットワーク応用(JS) || crossOriginIsolated || 共有メモリの利用条件。 || self.crossOriginIsolated
+ネットワーク応用(JS) || Origin Agent Cluster || オリジン単位で分離する。 || Origin-Agent-Cluster
+ネットワーク応用(JS) || Permissions API || 許可状態を調べる。 || navigator.permissions.query({name: 'geolocation'})
+ネットワーク応用(JS) || Fetch Metadata || 要求の文脈を伝えるヘッダー。 || Sec-Fetch-Site
+ネットワーク応用(JS) || Clear-Site-Data || 保存データの削除を指示。 || Clear-Site-Data: "cache"
+ネットワーク応用(JS) || Link ヘッダー || 先読みなどをヘッダーで指示。 || Link: <a.css>; rel=preload
+ネットワーク応用(JS) || Accept-Language の利用 || 言語を判定する。 || Accept-Language
+ネットワーク応用(JS) || Vary ヘッダー || キャッシュの区別を示す。 || Vary: Accept-Encoding
+ネットワーク応用(JS) || Content-Disposition || ダウンロード名の指定。 || attachment; filename="a.pdf"
+ネットワーク応用(JS) || Range 応答 (206) || 部分的な応答。 || 206 Partial Content
+ネットワーク応用(JS) || HEAD リクエスト || 本文なしの確認。 || fetch(url, {method: 'HEAD'})
+ネットワーク応用(JS) || OPTIONS リクエスト || 許可メソッドの問い合わせ。 || OPTIONS
+ネットワーク応用(JS) || PATCH と PUT の違い || 部分更新と全体置換。 || PATCH
+ネットワーク応用(JS) || HTTP 429 / 503 の扱い || 待ってから再試行。 || Retry-After
+ネットワーク応用(JS) || HTTP/2 Push の廃止 || サーバープッシュは非推奨。 || Early Hints
+ネットワーク応用(JS) || WebTransport の用途 || 低遅延の双方向通信。 || datagram
+ネットワーク応用(JS) || WebRTC のデータチャネル || P2P でデータを送る。 || pc.createDataChannel('a')
+ネットワーク応用(JS) || シグナリング || 接続情報の交換。 || offer / answer
+ネットワーク応用(JS) || STUN / TURN || 経路確立の補助。 || iceServers
+ネットワーク応用(JS) || MediaStream / track || 映像・音声の流れ。 || stream.getTracks()
+ネットワーク応用(JS) || getUserMedia の制約 || カメラやマイクの条件。 || {video: {facingMode: 'user'}}
+ネットワーク応用(JS) || enumerateDevices || 機器の一覧。 || navigator.mediaDevices.enumerateDevices()
+ネットワーク応用(JS) || 画面録画 || MediaRecorder と getDisplayMedia。 || new MediaRecorder(stream)
+ネットワーク応用(JS) || Blob の保存 || ダウンロードさせる。 || URL.createObjectURL(blob)
+ネットワーク応用(JS) || ファイルシステムアクセス || ファイルを開く・保存する。 || showSaveFilePicker()
+ネットワーク応用(JS) || ドラッグしてファイル出力 || DataTransfer を使う。 || e.dataTransfer.setData
+ネットワーク応用(JS) || 印刷用のレイアウト || print 用 CSS を使う。 || window.print()
+ネットワーク応用(JS) || QR コードの生成 || ライブラリで描画する。 || qrcode
+ネットワーク応用(JS) || バーコードの生成 || JsBarcode など。 || JsBarcode('#a', '123')
+ネットワーク応用(JS) || 共有ボタンの実装 || Web Share を使う。 || navigator.share
+ネットワーク応用(JS) || ディープリンク || 特定の画面を直接開く URL。 || /item/123
+ネットワーク応用(JS) || URL 状態の同期 || 状態を URL に保存する。 || history.replaceState
+ネットワーク応用(JS) || クエリパラメータの更新 || URL を書き換える。 || url.searchParams.set('q', v)
+ネットワーク応用(JS) || ハッシュルーティング || # で画面を切り替える。 || location.hash
+ネットワーク応用(JS) || History ルーティング || pushState で遷移する。 || history.pushState
+ネットワーク応用(JS) || SPA のスクロール復元 || 戻った時に位置を戻す。 || history.scrollRestoration
+ネットワーク応用(JS) || ページ遷移のアナウンス || 画面変更を読み上げに伝える。 || aria-live
