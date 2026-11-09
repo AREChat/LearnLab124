@@ -1,0 +1,328 @@
+SQLSTATE || 00000 || 正常に完了した。 || SQLSTATE '00000'
+SQLSTATE || 02000 || データなし（該当行がない）。 || SQLSTATE '02000'
+SQLSTATE || 08001 || 接続を確立できない。 || SQLSTATE '08001'
+SQLSTATE || 08003 || 接続が存在しない。 || SQLSTATE '08003'
+SQLSTATE || 08006 || 接続が失敗した。 || SQLSTATE '08006'
+SQLSTATE || 22001 || 文字列が長すぎて切り捨てが起きた。 || SQLSTATE '22001'
+SQLSTATE || 22003 || 数値が範囲外。 || SQLSTATE '22003'
+SQLSTATE || 22007 || 日時の形式が正しくない。 || SQLSTATE '22007'
+SQLSTATE || 22012 || 0 で割ろうとした。 || SQLSTATE '22012'
+SQLSTATE || 22018 || キャストで文字が正しくない。 || SQLSTATE '22018'
+SQLSTATE || 22P02 || 不正なテキスト表現（PostgreSQL）。 || SQLSTATE '22P02'
+SQLSTATE || 23000 || 整合性制約違反（一般）。 || SQLSTATE '23000'
+SQLSTATE || 23502 || NOT NULL 制約違反。 || SQLSTATE '23502'
+SQLSTATE || 23503 || 外部キー制約違反。 || SQLSTATE '23503'
+SQLSTATE || 23505 || 一意制約違反。 || SQLSTATE '23505'
+SQLSTATE || 23514 || CHECK 制約違反。 || SQLSTATE '23514'
+SQLSTATE || 25P02 || 失敗したトランザクションの中で実行した。 || SQLSTATE '25P02'
+SQLSTATE || 28000 || 認証に失敗した。 || SQLSTATE '28000'
+SQLSTATE || 28P01 || パスワードが正しくない（PostgreSQL）。 || SQLSTATE '28P01'
+SQLSTATE || 3D000 || データベースが存在しない。 || SQLSTATE '3D000'
+SQLSTATE || 40001 || シリアライズ失敗（再試行が必要）。 || SQLSTATE '40001'
+SQLSTATE || 40P01 || デッドロックを検出した。 || SQLSTATE '40P01'
+SQLSTATE || 42000 || 構文エラーまたはアクセス違反。 || SQLSTATE '42000'
+SQLSTATE || 42501 || 権限が足りない。 || SQLSTATE '42501'
+SQLSTATE || 42601 || 構文エラー（PostgreSQL）。 || SQLSTATE '42601'
+SQLSTATE || 42703 || 列が存在しない。 || SQLSTATE '42703'
+SQLSTATE || 42883 || 関数が存在しない。 || SQLSTATE '42883'
+SQLSTATE || 42P01 || テーブルが存在しない。 || SQLSTATE '42P01'
+SQLSTATE || 42P07 || すでに同名の表がある。 || SQLSTATE '42P07'
+SQLSTATE || 53000 || リソース不足。 || SQLSTATE '53000'
+SQLSTATE || 53100 || ディスクが満杯。 || SQLSTATE '53100'
+SQLSTATE || 53200 || メモリ不足。 || SQLSTATE '53200'
+SQLSTATE || 53300 || 接続数が多すぎる。 || SQLSTATE '53300'
+SQLSTATE || 55P03 || ロックを取得できない。 || SQLSTATE '55P03'
+SQLSTATE || 57014 || クエリがキャンセルされた。 || SQLSTATE '57014'
+SQLSTATE || 57P01 || 管理者によりシャットダウンされた。 || SQLSTATE '57P01'
+SQLSTATE || P0001 || RAISE EXCEPTION による例外（PL/pgSQL）。 || RAISE EXCEPTION 'error';
+SQLSTATE || P0002 || 行が見つからない（PL/pgSQL）。 || SQLSTATE 'P0002'
+SQLSTATE || P0003 || 複数の行が返った（PL/pgSQL）。 || SQLSTATE 'P0003'
+SQLSTATE || 2BP01 || 依存するオブジェクトがあり削除できない。 || SQLSTATE '2BP01'
+SQLSTATE || 0A000 || 未対応の機能。 || SQLSTATE '0A000'
+MySQLエラー || 1045 || アクセスが拒否された。 || ERROR 1045 (28000)
+MySQLエラー || 1049 || 不明なデータベース。 || ERROR 1049 (42000)
+MySQLエラー || 1054 || 不明な列。 || ERROR 1054 (42S22)
+MySQLエラー || 1062 || 重複したキー。 || ERROR 1062 (23000)
+MySQLエラー || 1064 || 構文エラー。 || ERROR 1064 (42000)
+MySQLエラー || 1146 || テーブルが存在しない。 || ERROR 1146 (42S02)
+MySQLエラー || 1205 || ロック待ちがタイムアウトした。 || ERROR 1205 (HY000)
+MySQLエラー || 1213 || デッドロックが発生した。 || ERROR 1213 (40001)
+MySQLエラー || 1215 || 外部キーを追加できない。 || ERROR 1215 (HY000)
+MySQLエラー || 1451 || 親行を削除・更新できない。 || ERROR 1451 (23000)
+MySQLエラー || 1452 || 子行を追加・更新できない。 || ERROR 1452 (23000)
+MySQLエラー || 2002 || サーバーに接続できない。 || ERROR 2002 (HY000)
+MySQLエラー || 2006 || サーバーが接続を切った。 || ERROR 2006 (HY000)
+MySQLエラー || 2013 || クエリ中に接続を失った。 || ERROR 2013 (HY000)
+Oracleエラー || ORA-00001 || 一意制約違反。 || ORA-00001: unique constraint violated
+Oracleエラー || ORA-00904 || 識別子が正しくない。 || ORA-00904: invalid identifier
+Oracleエラー || ORA-00942 || テーブルまたはビューが存在しない。 || ORA-00942
+Oracleエラー || ORA-01017 || ユーザー名かパスワードが不正。 || ORA-01017
+Oracleエラー || ORA-01400 || NULL を挿入できない。 || ORA-01400
+Oracleエラー || ORA-01403 || データが見つからない。 || ORA-01403: no data found
+Oracleエラー || ORA-01422 || 複数の行が返った。 || ORA-01422: exact fetch returns more than requested
+Oracleエラー || ORA-01722 || 数値が正しくない。 || ORA-01722: invalid number
+Oracleエラー || ORA-01843 || 月が正しくない。 || ORA-01843
+Oracleエラー || ORA-02291 || 親キーが見つからない。 || ORA-02291
+Oracleエラー || ORA-02292 || 子レコードが見つかった。 || ORA-02292
+Oracleエラー || ORA-00060 || デッドロックを検出した。 || ORA-00060
+Oracleエラー || ORA-01555 || スナップショットが古すぎる。 || ORA-01555
+Oracleエラー || ORA-12154 || 接続識別子を解決できない。 || ORA-12154
+Oracleエラー || ORA-12541 || リスナーがない。 || ORA-12541
+SQL Serverエラー || エラー 102 || 構文が正しくない。 || Msg 102
+SQL Serverエラー || エラー 207 || 列名が正しくない。 || Msg 207
+SQL Serverエラー || エラー 208 || オブジェクト名が正しくない。 || Msg 208
+SQL Serverエラー || エラー 515 || NULL を挿入できない。 || Msg 515
+SQL Serverエラー || エラー 547 || 外部キーなどの制約違反。 || Msg 547
+SQL Serverエラー || エラー 2627 || 主キー・一意制約の違反。 || Msg 2627
+SQL Serverエラー || エラー 1205 || デッドロックの犠牲になった。 || Msg 1205
+SQL Serverエラー || エラー 8152 || 文字列が切り捨てられる。 || Msg 8152
+SQL Serverエラー || エラー 18456 || ログインに失敗した。 || Msg 18456
+SQL Serverエラー || エラー 8134 || 0 による除算。 || Msg 8134
+関係モデル || 関係 (relation) || 属性と組の集合。表に相当。 || R(A, B, C)
+関係モデル || 組 (tuple) || 関係の1行。 || (1, 'A')
+関係モデル || 属性 (attribute) || 関係の列。 || name
+関係モデル || 定義域 (domain) || 属性がとれる値の集合。 || 整数、文字列
+関係モデル || 次数 (degree) || 属性の数。 || 列数
+関係モデル || 濃度 (cardinality) || 組の数。 || 行数
+関係モデル || スキーマ (関係) || 関係の名前と属性の定義。 || 学生(学籍番号, 氏名)
+関係モデル || 候補キー || 組を一意に決める最小の属性集合。 || {学籍番号}
+関係モデル || スーパーキー || 組を一意に決める属性集合。 || {学籍番号, 氏名}
+関係モデル || 外部キー (理論) || 他の関係の主キーを参照する属性。 || 学部ID
+関係モデル || 参照整合性 || 外部キーの値が参照先に存在する。 || FOREIGN KEY
+関係モデル || 実体整合性 || 主キーは NULL でない。 || PRIMARY KEY
+関係モデル || 関数従属性 || A が決まれば B が決まる関係。 || A → B
+関係モデル || 完全関数従属 || キー全体に従属し一部には従属しない。 || {A,B} → C
+関係モデル || 部分関数従属 || キーの一部に従属する。 || A → C
+関係モデル || 推移的関数従属 || A→B、B→C から A→C となる。 || A → B → C
+関係モデル || 多値従属 || 属性の組み合わせが独立に決まる。 || A →→ B
+関係モデル || 結合従属 || 分解して結合すると元に戻る関係。 || JD
+関係モデル || 無損失分解 || 分解して結合しても情報を失わない。 || lossless
+関係モデル || 閉包 || 関数従属性から導ける属性の全体。 || A+
+関係モデル || アームストロングの公理 || 関数従属性の推論規則。 || 反射律・増加律・推移律
+関係モデル || 第1正規形 || 属性が原子値である。 || 1NF
+関係モデル || 第2正規形 || 部分関数従属がない。 || 2NF
+関係モデル || 第3正規形 || 推移的関数従属がない。 || 3NF
+関係モデル || ボイスコッド正規形 || 決定項がすべて候補キー。 || BCNF
+関係モデル || 第4正規形 || 自明でない多値従属がない。 || 4NF
+関係モデル || 第5正規形 || 結合従属が候補キーで決まる。 || 5NF
+関係モデル || 非正規形 || 繰り返しを含む表。 || UNF
+関係モデル || 非正規化 || 性能のためあえて重複を許す。 || denormalization
+関係代数 || 選択 (σ) || 条件に合う行を取り出す。 || WHERE
+関係代数 || 射影 (π) || 指定した列を取り出す。 || SELECT 列
+関係代数 || 直積 (×) || 全組み合わせを作る。 || CROSS JOIN
+関係代数 || 和 (∪) || 2つの関係の和集合。 || UNION
+関係代数 || 差 (−) || 一方にあって他方にない行。 || EXCEPT
+関係代数 || 積 (∩) || 両方にある行。 || INTERSECT
+関係代数 || 結合 (⋈) || 条件で2つの関係を結ぶ。 || JOIN
+関係代数 || 自然結合 || 同名の属性で結合する。 || NATURAL JOIN
+関係代数 || 商 (÷) || すべてを満たす組を求める。 || 全称量化
+関係代数 || 名前変更 (ρ) || 関係や属性の名前を変える。 || AS
+関係代数 || 外部結合 (⟕) || 対応のない行も残す。 || LEFT JOIN
+関係代数 || 半結合 || 結合できる左側の行だけ返す。 || EXISTS
+関係代数 || 反結合 || 結合できない左側の行を返す。 || NOT EXISTS
+関係代数 || 関係論理 || 述語論理で問い合わせを表す。 || 組関係論理
+関係代数 || 閉世界仮説 || 記録のない事実は偽とみなす。 || closed world
+トランザクション理論 || 直列化可能 || 逐次実行と同じ結果になる。 || serializable
+トランザクション理論 || スケジュール || 複数処理の実行順序。 || schedule
+トランザクション理論 || 競合直列化可能 || 競合する操作の順序が直列と等価。 || conflict serializable
+トランザクション理論 || 先行グラフ || 競合の依存を表すグラフ。 || precedence graph
+トランザクション理論 || 2相ロック (2PL) || 取得段階と解放段階に分ける。 || two-phase locking
+トランザクション理論 || 厳格な2相ロック || コミットまでロックを持つ。 || strict 2PL
+トランザクション理論 || タイムスタンプ順序 || 開始時刻の順で処理する。 || timestamp ordering
+トランザクション理論 || 楽観的並行制御 || 競合を後で検証する。 || OCC
+トランザクション理論 || 悲観的並行制御 || 先にロックで防ぐ。 || locking
+トランザクション理論 || MVCC (理論) || 版を保持して読み取りを妨げない。 || multi-version
+トランザクション理論 || スナップショット分離 || 開始時点の版を読む。 || snapshot isolation
+トランザクション理論 || 書き込みスキュー || 別の行を更新し制約が破れる異常。 || write skew
+トランザクション理論 || ダーティリード || 未コミットの値を読む。 || dirty read
+トランザクション理論 || 反復不能読み取り || 同じ行を読み直すと値が変わる。 || non-repeatable read
+トランザクション理論 || ファントムリード || 再検索で行が増減する。 || phantom read
+トランザクション理論 || 更新の紛失 || 同時更新で片方が消える。 || lost update
+トランザクション理論 || カスケードアボート || 1つの中止が連鎖して広がる。 || cascading abort
+トランザクション理論 || 回復可能スケジュール || 読んだ相手より先にコミットしない。 || recoverable
+トランザクション理論 || 先行書き込みログ || 変更前にログを書く。 || WAL
+トランザクション理論 || REDO || ログから変更をやり直す。 || redo
+トランザクション理論 || UNDO || ログから変更を取り消す。 || undo
+トランザクション理論 || ARIES || 代表的な回復アルゴリズム。 || analysis, redo, undo
+トランザクション理論 || ファジーチェックポイント || 処理を止めずに取るチェックポイント。 || fuzzy checkpoint
+トランザクション理論 || 2相コミット || 全参加者の合意でコミットする。 || 2PC
+トランザクション理論 || 3相コミット || 2相に事前確認を足した方式。 || 3PC
+トランザクション理論 || サガ || 補償処理で長い処理を扱う。 || saga
+トランザクション理論 || 補償トランザクション || 完了した処理を打ち消す。 || compensation
+トランザクション理論 || 結果整合性 || 時間がたてば一致する。 || eventual consistency
+トランザクション理論 || CAP定理 || 一貫性・可用性・分断耐性は同時に満たせない。 || CAP
+トランザクション理論 || BASE || 基本的に可用で結果整合を許す方針。 || BASE
+トランザクション理論 || PACELC || CAP に遅延と一貫性の選択を足した考え方。 || PACELC
+データ型(PostgreSQL) || smallint || 2バイトの整数。 || smallint
+データ型(PostgreSQL) || bigint || 8バイトの整数。 || bigint
+データ型(PostgreSQL) || numeric || 精度を指定できる数。 || numeric(10,2)
+データ型(PostgreSQL) || real || 単精度の浮動小数点。 || real
+データ型(PostgreSQL) || double precision || 倍精度の浮動小数点。 || double precision
+データ型(PostgreSQL) || smallserial || 2バイトの自動採番。 || smallserial
+データ型(PostgreSQL) || bigserial || 8バイトの自動採番。 || bigserial
+データ型(PostgreSQL) || money || 通貨の型。 || money
+データ型(PostgreSQL) || character varying || 可変長の文字列。 || varchar(50)
+データ型(PostgreSQL) || bpchar || 空白で埋める固定長の文字。 || char(5)
+データ型(PostgreSQL) || bytea || バイナリ列。 || bytea
+データ型(PostgreSQL) || timestamptz || 時間帯つきの日時。 || timestamptz
+データ型(PostgreSQL) || timetz || 時間帯つきの時刻。 || timetz
+データ型(PostgreSQL) || interval || 期間。 || interval '1 day'
+データ型(PostgreSQL) || boolean || 真偽値。 || boolean
+データ型(PostgreSQL) || enum || 列挙型。 || CREATE TYPE mood AS ENUM ('ok','ng');
+データ型(PostgreSQL) || point || 点。 || point(1,2)
+データ型(PostgreSQL) || line || 直線。 || line
+データ型(PostgreSQL) || lseg || 線分。 || lseg
+データ型(PostgreSQL) || box || 長方形。 || box
+データ型(PostgreSQL) || path || 経路。 || path
+データ型(PostgreSQL) || polygon || 多角形。 || polygon
+データ型(PostgreSQL) || circle || 円。 || circle
+データ型(PostgreSQL) || cidr || ネットワークアドレス。 || cidr
+データ型(PostgreSQL) || inet || IP アドレス。 || inet
+データ型(PostgreSQL) || macaddr || MAC アドレス。 || macaddr
+データ型(PostgreSQL) || bit || 固定長のビット列。 || bit(8)
+データ型(PostgreSQL) || bit varying || 可変長のビット列。 || varbit(8)
+データ型(PostgreSQL) || tsvector || 全文検索用の文書。 || to_tsvector('a b')
+データ型(PostgreSQL) || tsquery || 全文検索用の検索式。 || to_tsquery('a & b')
+データ型(PostgreSQL) || uuid || 一意識別子。 || gen_random_uuid()
+データ型(PostgreSQL) || xml || XML データ。 || xml
+データ型(PostgreSQL) || json || JSON を文字のまま保持する。 || json
+データ型(PostgreSQL) || jsonb || バイナリ形式の JSON。 || jsonb
+データ型(PostgreSQL) || int4range || 整数の範囲。 || int4range(1,10)
+データ型(PostgreSQL) || numrange || 数値の範囲。 || numrange(1,2)
+データ型(PostgreSQL) || tsrange || 日時の範囲。 || tsrange
+データ型(PostgreSQL) || daterange || 日付の範囲。 || daterange
+データ型(PostgreSQL) || int4multirange || 整数の複数範囲。 || int4multirange
+データ型(PostgreSQL) || oid || オブジェクト識別子。 || oid
+データ型(PostgreSQL) || regclass || テーブル名の識別子型。 || 't'::regclass
+データ型(PostgreSQL) || pg_lsn || WAL の位置。 || pg_lsn
+データ型(PostgreSQL) || 配列型 || 同じ型の配列。 || integer[]
+データ型(PostgreSQL) || 複合型 || 複数の列をまとめた型。 || CREATE TYPE pt AS (x int, y int);
+データ型(PostgreSQL) || ドメイン型 || 制約をつけた型。 || CREATE DOMAIN pos AS int CHECK (VALUE > 0);
+データ型(MySQL) || TINYINT || 1バイトの整数。 || TINYINT
+データ型(MySQL) || MEDIUMINT || 3バイトの整数。 || MEDIUMINT
+データ型(MySQL) || UNSIGNED || 負の値を持たない。 || INT UNSIGNED
+データ型(MySQL) || ZEROFILL || 0 で埋めて表示する。 || INT(5) ZEROFILL
+データ型(MySQL) || DECIMAL || 固定小数点。 || DECIMAL(10,2)
+データ型(MySQL) || FLOAT || 単精度の小数。 || FLOAT
+データ型(MySQL) || DOUBLE || 倍精度の小数。 || DOUBLE
+データ型(MySQL) || BIT || ビット値。 || BIT(8)
+データ型(MySQL) || TINYTEXT || 短い文字列。 || TINYTEXT
+データ型(MySQL) || MEDIUMTEXT || 中くらいの文字列。 || MEDIUMTEXT
+データ型(MySQL) || LONGTEXT || 長い文字列。 || LONGTEXT
+データ型(MySQL) || BLOB || バイナリの大きなデータ。 || BLOB
+データ型(MySQL) || MEDIUMBLOB || 中くらいのバイナリ。 || MEDIUMBLOB
+データ型(MySQL) || LONGBLOB || 長いバイナリ。 || LONGBLOB
+データ型(MySQL) || BINARY || 固定長のバイナリ。 || BINARY(16)
+データ型(MySQL) || VARBINARY || 可変長のバイナリ。 || VARBINARY(255)
+データ型(MySQL) || ENUM || 列挙値から1つ選ぶ。 || ENUM('a','b')
+データ型(MySQL) || SET || 列挙値から複数選ぶ。 || SET('a','b')
+データ型(MySQL) || YEAR || 年を表す。 || YEAR
+データ型(MySQL) || DATETIME || 日付と時刻。 || DATETIME
+データ型(MySQL) || TIMESTAMP (MySQL) || 時間帯を考慮した日時。 || TIMESTAMP
+データ型(MySQL) || GEOMETRY || 空間データ。 || GEOMETRY
+データ型(MySQL) || JSON (MySQL) || JSON を扱う型。 || JSON
+データ型(MySQL) || AUTO_INCREMENT || 自動採番。 || id INT AUTO_INCREMENT
+データ型(SQL Server) || tinyint || 0〜255 の整数。 || tinyint
+データ型(SQL Server) || smallmoney || 小さい金額の型。 || smallmoney
+データ型(SQL Server) || nvarchar || Unicode の可変長文字。 || nvarchar(50)
+データ型(SQL Server) || nchar || Unicode の固定長文字。 || nchar(10)
+データ型(SQL Server) || ntext || 廃止予定の長い Unicode 文字。 || ntext
+データ型(SQL Server) || varchar(max) || 長大な可変長文字。 || varchar(max)
+データ型(SQL Server) || datetime2 || 精度の高い日時。 || datetime2(7)
+データ型(SQL Server) || datetimeoffset || 時差つきの日時。 || datetimeoffset
+データ型(SQL Server) || smalldatetime || 分単位の日時。 || smalldatetime
+データ型(SQL Server) || uniqueidentifier || GUID。 || NEWID()
+データ型(SQL Server) || rowversion || 行のバージョン番号。 || rowversion
+データ型(SQL Server) || sql_variant || 様々な型を保持する。 || sql_variant
+データ型(SQL Server) || hierarchyid || 階層構造を表す。 || hierarchyid
+データ型(SQL Server) || geography || 地球上の空間データ。 || geography
+データ型(SQL Server) || geometry || 平面の空間データ。 || geometry
+データ型(SQL Server) || IDENTITY || 自動採番。 || id INT IDENTITY(1,1)
+データ型(Oracle) || NUMBER || 数値型。 || NUMBER(10,2)
+データ型(Oracle) || VARCHAR2 || 可変長文字。 || VARCHAR2(50)
+データ型(Oracle) || NVARCHAR2 || 国際文字の可変長。 || NVARCHAR2(50)
+データ型(Oracle) || CLOB || 大きな文字データ。 || CLOB
+データ型(Oracle) || NCLOB || 大きな国際文字データ。 || NCLOB
+データ型(Oracle) || RAW || バイナリ列。 || RAW(16)
+データ型(Oracle) || LONG || 古い長文字型。 || LONG
+データ型(Oracle) || BINARY_FLOAT || 単精度の浮動小数点。 || BINARY_FLOAT
+データ型(Oracle) || BINARY_DOUBLE || 倍精度の浮動小数点。 || BINARY_DOUBLE
+データ型(Oracle) || ROWID || 行の物理アドレス。 || SELECT ROWID FROM t;
+データ型(Oracle) || UROWID || 汎用の行アドレス。 || UROWID
+データ型(Oracle) || TIMESTAMP WITH TIME ZONE || 時間帯つきの日時。 || TIMESTAMP WITH TIME ZONE
+データ型(Oracle) || INTERVAL YEAR TO MONTH || 年月の期間。 || INTERVAL '1-6' YEAR TO MONTH
+データ型(Oracle) || INTERVAL DAY TO SECOND || 日秒の期間。 || INTERVAL '1 02:00:00' DAY TO SECOND
+クライアントコマンド || \l || データベース一覧（psql）。 || \l
+クライアントコマンド || \c || データベースを切り替える（psql）。 || \c mydb
+クライアントコマンド || \dt || テーブル一覧（psql）。 || \dt
+クライアントコマンド || \d || 表の定義を見る（psql）。 || \d users
+クライアントコマンド || \d+ || 詳しい定義を見る（psql）。 || \d+ users
+クライアントコマンド || \dv || ビュー一覧（psql）。 || \dv
+クライアントコマンド || \di || インデックス一覧（psql）。 || \di
+クライアントコマンド || \df || 関数一覧（psql）。 || \df
+クライアントコマンド || \dn || スキーマ一覧（psql）。 || \dn
+クライアントコマンド || \du || ロール一覧（psql）。 || \du
+クライアントコマンド || \dx || 拡張一覧（psql）。 || \dx
+クライアントコマンド || \x || 縦表示に切り替える（psql）。 || \x
+クライアントコマンド || \timing || 実行時間を表示する（psql）。 || \timing on
+クライアントコマンド || \i || ファイルを実行する（psql）。 || \i a.sql
+クライアントコマンド || \copy || クライアント側でコピーする（psql）。 || \copy t FROM 'a.csv' CSV
+クライアントコマンド || \q || 終了する（psql）。 || \q
+クライアントコマンド || \e || エディタで SQL を編集する（psql）。 || \e
+クライアントコマンド || \set || 変数を設定する（psql）。 || \set id 1
+クライアントコマンド || \conninfo || 接続情報を表示する（psql）。 || \conninfo
+クライアントコマンド || \? || ヘルプを表示する（psql）。 || \?
+クライアントコマンド || SHOW DATABASES || データベース一覧（MySQL）。 || SHOW DATABASES;
+クライアントコマンド || SHOW TABLES || テーブル一覧（MySQL）。 || SHOW TABLES;
+クライアントコマンド || DESCRIBE || 表の構造を見る（MySQL）。 || DESCRIBE users;
+クライアントコマンド || SHOW CREATE TABLE || 作成文を見る（MySQL）。 || SHOW CREATE TABLE users;
+クライアントコマンド || SHOW INDEX || インデックス一覧（MySQL）。 || SHOW INDEX FROM users;
+クライアントコマンド || SHOW PROCESSLIST || 実行中の処理（MySQL）。 || SHOW FULL PROCESSLIST;
+クライアントコマンド || SHOW VARIABLES || 設定変数の一覧（MySQL）。 || SHOW VARIABLES LIKE 'max%';
+クライアントコマンド || SHOW STATUS || 稼働状況（MySQL）。 || SHOW STATUS;
+クライアントコマンド || SHOW WARNINGS || 警告の表示（MySQL）。 || SHOW WARNINGS;
+クライアントコマンド || USE || データベースを選ぶ（MySQL）。 || USE mydb;
+クライアントコマンド || mysqldump || MySQL のバックアップ。 || mysqldump mydb > a.sql
+クライアントコマンド || pg_dump || PostgreSQL のバックアップ。 || pg_dump mydb > a.sql
+クライアントコマンド || pg_restore || バックアップから復元する。 || pg_restore -d mydb a.dump
+クライアントコマンド || pg_dumpall || 全データベースのバックアップ。 || pg_dumpall > all.sql
+クライアントコマンド || pg_basebackup || 物理バックアップ。 || pg_basebackup -D dir
+クライアントコマンド || createdb || データベースを作る。 || createdb mydb
+クライアントコマンド || dropdb || データベースを削除する。 || dropdb mydb
+クライアントコマンド || vacuumdb || VACUUM を実行する。 || vacuumdb mydb
+クライアントコマンド || sqlcmd || SQL Server のコマンドライン。 || sqlcmd -S server -d db
+クライアントコマンド || bcp || SQL Server の一括コピー。 || bcp db.dbo.t out a.dat
+クライアントコマンド || sqlplus || Oracle のコマンドライン。 || sqlplus user/pass@db
+クライアントコマンド || sqlite3 || SQLite のコマンドライン。 || sqlite3 a.db
+クライアントコマンド || .tables || テーブル一覧（SQLite）。 || .tables
+クライアントコマンド || .schema || 定義を表示（SQLite）。 || .schema users
+クライアントコマンド || .mode || 出力形式の変更（SQLite）。 || .mode column
+クライアントコマンド || .headers || 見出しの表示（SQLite）。 || .headers on
+クライアントコマンド || .import || ファイルの取り込み（SQLite）。 || .import a.csv t
+クライアントコマンド || .dump || SQL として書き出す（SQLite）。 || .dump
+クライアントコマンド || .quit || 終了する（SQLite）。 || .quit
+SQLiteの要点 || 動的型付け || 列の型は目安で値に型がつく。 || typeof(x)
+SQLiteの要点 || 型親和性 || 列の型に近づけて保存する。 || INTEGER affinity
+SQLiteの要点 || ROWID || 行に必ずある整数の識別子。 || SELECT rowid FROM t;
+SQLiteの要点 || WITHOUT ROWID || ROWID を持たない表。 || CREATE TABLE t(...) WITHOUT ROWID;
+SQLiteの要点 || INTEGER PRIMARY KEY || ROWID の別名になる主キー。 || id INTEGER PRIMARY KEY
+SQLiteの要点 || AUTOINCREMENT || 値を再利用しない採番。 || id INTEGER PRIMARY KEY AUTOINCREMENT
+SQLiteの要点 || PRAGMA || 動作を調べ・設定する命令。 || PRAGMA foreign_keys = ON;
+SQLiteの要点 || PRAGMA table_info || 列の情報を見る。 || PRAGMA table_info(t);
+SQLiteの要点 || PRAGMA journal_mode || ジャーナルの方式。 || PRAGMA journal_mode = WAL;
+SQLiteの要点 || PRAGMA synchronous || 書き込みの同期の強さ。 || PRAGMA synchronous = NORMAL;
+SQLiteの要点 || PRAGMA user_version || スキーマの版番号。 || PRAGMA user_version = 2;
+SQLiteの要点 || PRAGMA integrity_check || 整合性を検査する。 || PRAGMA integrity_check;
+SQLiteの要点 || ATTACH DATABASE || 別のファイルを接続する。 || ATTACH 'b.db' AS b;
+SQLiteの要点 || VACUUM (SQLite) || ファイルを詰めなおす。 || VACUUM;
+SQLiteの要点 || sqlite_master || スキーマ情報の表。 || SELECT * FROM sqlite_master;
+SQLiteの要点 || INSERT OR REPLACE || 重複したら置き換える。 || INSERT OR REPLACE INTO t VALUES (1);
+SQLiteの要点 || INSERT OR IGNORE || 重複したら無視する。 || INSERT OR IGNORE INTO t VALUES (1);
+SQLiteの要点 || GLOB || 大文字小文字を区別するパターン一致。 || WHERE name GLOB 'a*'
+SQLiteの要点 || strftime() || 日時を書式化する。 || SELECT strftime('%Y', 'now');
+SQLiteの要点 || julianday() || ユリウス日を返す。 || SELECT julianday('now');
+SQLiteの要点 || FTS5 || 全文検索の拡張。 || CREATE VIRTUAL TABLE d USING fts5(body);
+SQLiteの要点 || R-Tree || 空間の範囲検索の拡張。 || USING rtree
+SQLiteの要点 || json_extract() || JSON から値を取り出す。 || SELECT json_extract(j, '$.a');
+SQLiteの要点 || ->> 演算子 || JSON から値を文字で取り出す。 || SELECT j ->> '$.a';
+SQLiteの要点 || STRICT テーブル || 型を厳密に守る表。 || CREATE TABLE t(a INT) STRICT;

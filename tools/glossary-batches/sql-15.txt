@@ -1,0 +1,190 @@
+# カテゴリ || 用語 || 説明 || コード例
+PostgreSQL関数 || abs() || 絶対値を返す。 || SELECT abs(-3.5);
+PostgreSQL関数 || cbrt() || 立方根を返す。 || SELECT cbrt(27);
+PostgreSQL関数 || degrees() || ラジアンを度に変える。 || SELECT degrees(pi());
+PostgreSQL関数 || div() || 整数の商を返す。 || SELECT div(9, 4);
+PostgreSQL関数 || factorial() || 階乗を返す。 || SELECT factorial(5);
+PostgreSQL関数 || gcd() || 最大公約数を返す。 || SELECT gcd(12, 18);
+PostgreSQL関数 || lcm() || 最小公倍数を返す。 || SELECT lcm(4, 6);
+PostgreSQL関数 || log10() || 常用対数を返す。 || SELECT log10(1000);
+PostgreSQL関数 || min_scale() || 必要な小数の桁数を返す。 || SELECT min_scale(1.500);
+PostgreSQL関数 || scale() || 小数部の桁数を返す。 || SELECT scale(1.234);
+PostgreSQL関数 || trim_scale() || 末尾の0を取り除く。 || SELECT trim_scale(1.500);
+PostgreSQL関数 || width_bucket() || 値を等間隔の区間に分ける。 || SELECT width_bucket(5, 0, 10, 5);
+PostgreSQL関数 || random_normal() || 正規分布の乱数を返す。 || SELECT random_normal();
+PostgreSQL関数 || btrim() || 前後の指定文字を取り除く。 || SELECT btrim('xxabcxx', 'x');
+PostgreSQL関数 || char_length() || 文字数を返す。 || SELECT char_length('あいう');
+PostgreSQL関数 || bit_length() || ビット数を返す。 || SELECT bit_length('a');
+PostgreSQL関数 || concat_ws() || 区切り文字でつなぐ。 || SELECT concat_ws(',', 'a', 'b');
+PostgreSQL関数 || format() || 書式指定で文字列を作る。 || SELECT format('%s さん', 'A');
+PostgreSQL関数 || initcap() || 単語の先頭を大文字にする。 || SELECT initcap('hello world');
+PostgreSQL関数 || left() / right() || 左・右から取り出す。 || SELECT left('abcdef', 2);
+PostgreSQL関数 || lpad() / rpad() || 左・右に詰める。 || SELECT lpad('5', 3, '0');
+PostgreSQL関数 || ltrim() / rtrim() || 左・右の指定文字を除く。 || SELECT ltrim('000123', '0');
+PostgreSQL関数 || md5() || MD5 のハッシュ値を返す。 || SELECT md5('abc');
+PostgreSQL関数 || parse_ident() || 識別子を分解する。 || SELECT parse_ident('a.b');
+PostgreSQL関数 || quote_ident() || 識別子を引用符で囲む。 || SELECT quote_ident('My Table');
+PostgreSQL関数 || quote_literal() || 文字列を引用符で囲む。 || SELECT quote_literal('it''s');
+PostgreSQL関数 || quote_nullable() || NULL なら NULL という文字にする。 || SELECT quote_nullable(NULL);
+PostgreSQL関数 || regexp_count() || 一致の回数を数える。 || SELECT regexp_count('abab', 'ab');
+PostgreSQL関数 || regexp_instr() || 一致の位置を返す。 || SELECT regexp_instr('abc123', '[0-9]');
+PostgreSQL関数 || regexp_like() || 正規表現に一致するか。 || SELECT regexp_like('abc', '^a');
+PostgreSQL関数 || regexp_match() || 一致した部分を配列で返す。 || SELECT regexp_match('a1', '[0-9]');
+PostgreSQL関数 || regexp_matches() || 一致した部分を行で返す。 || SELECT regexp_matches('a1b2', '[0-9]', 'g');
+PostgreSQL関数 || regexp_substr() || 一致した部分を返す。 || SELECT regexp_substr('abc123', '[0-9]+');
+PostgreSQL関数 || repeat() || 文字列をくり返す。 || SELECT repeat('ab', 3);
+PostgreSQL関数 || replace() || 文字列を置き換える。 || SELECT replace('abc', 'b', 'X');
+PostgreSQL関数 || reverse() || 文字列を逆にする。 || SELECT reverse('abc');
+PostgreSQL関数 || starts_with() || 先頭が一致するか。 || SELECT starts_with('abc', 'a');
+PostgreSQL関数 || strpos() || 部分文字列の位置。 || SELECT strpos('abc', 'c');
+PostgreSQL関数 || substr() || 部分文字列を返す。 || SELECT substr('abcdef', 2, 3);
+PostgreSQL関数 || to_ascii() || アクセント記号を除く。 || SELECT to_ascii('Karel');
+PostgreSQL関数 || to_hex() || 数を16進にする。 || SELECT to_hex(255);
+PostgreSQL関数 || translate() || 1文字ずつ置き換える。 || SELECT translate('abc', 'ab', 'xy');
+PostgreSQL関数 || unistr() || Unicode のエスケープを文字にする。 || SELECT unistr('\3042');
+PostgreSQL関数 || age() || 2つの日時の差を年月日で返す。 || SELECT age('2026-11-09', '2000-01-01');
+PostgreSQL関数 || clock_timestamp() || 実際の現在時刻。 || SELECT clock_timestamp();
+PostgreSQL関数 || date_bin() || 日時を等間隔に丸める。 || SELECT date_bin('15 minutes', now(), '2026-01-01');
+PostgreSQL関数 || date_part() || 日時の一部を取り出す。 || SELECT date_part('hour', now());
+PostgreSQL関数 || date_trunc() || 日時を指定の精度で切り捨てる。 || SELECT date_trunc('day', now());
+PostgreSQL関数 || extract() || 日時の一部を取り出す標準の関数。 || SELECT extract(year FROM now());
+PostgreSQL関数 || isfinite() || 有限の日時か調べる。 || SELECT isfinite(now());
+PostgreSQL関数 || justify_days() || 30日を1か月にまとめる。 || SELECT justify_days(interval '35 days');
+PostgreSQL関数 || justify_hours() || 24時間を1日にまとめる。 || SELECT justify_hours(interval '30 hours');
+PostgreSQL関数 || make_date() || 年月日から日付を作る。 || SELECT make_date(2026, 11, 9);
+PostgreSQL関数 || make_interval() || 期間を作る。 || SELECT make_interval(days => 7);
+PostgreSQL関数 || make_time() || 時分秒から時刻を作る。 || SELECT make_time(10, 30, 0);
+PostgreSQL関数 || make_timestamp() || 日時を作る。 || SELECT make_timestamp(2026, 11, 9, 10, 0, 0);
+PostgreSQL関数 || now() || 現在のトランザクションの開始時刻。 || SELECT now();
+PostgreSQL関数 || statement_timestamp() || 文の開始時刻。 || SELECT statement_timestamp();
+PostgreSQL関数 || timeofday() || 現在時刻を文字列で返す。 || SELECT timeofday();
+PostgreSQL関数 || to_timestamp (数値) || UNIX 秒から日時を作る。 || SELECT to_timestamp(0);
+PostgreSQL関数 || array_cat() || 配列をつなぐ。 || SELECT array_cat(ARRAY[1], ARRAY[2]);
+PostgreSQL関数 || array_dims() || 配列の次元を返す。 || SELECT array_dims(ARRAY[1,2]);
+PostgreSQL関数 || array_fill() || 同じ値で配列を作る。 || SELECT array_fill(0, ARRAY[3]);
+PostgreSQL関数 || array_lower() / array_upper() || 添字の下限・上限。 || SELECT array_upper(ARRAY[1,2,3], 1);
+PostgreSQL関数 || array_position() || 要素の位置を返す。 || SELECT array_position(ARRAY['a','b'], 'b');
+PostgreSQL関数 || array_positions() || 要素の位置をすべて返す。 || SELECT array_positions(ARRAY[1,2,1], 1);
+PostgreSQL関数 || array_prepend() || 配列の先頭に足す。 || SELECT array_prepend(0, ARRAY[1,2]);
+PostgreSQL関数 || array_remove() || 要素を取り除く。 || SELECT array_remove(ARRAY[1,2,1], 1);
+PostgreSQL関数 || array_replace() || 要素を置き換える。 || SELECT array_replace(ARRAY[1,2], 2, 9);
+PostgreSQL関数 || cardinality() || 配列の要素の総数。 || SELECT cardinality(ARRAY[1,2,3]);
+PostgreSQL関数 || trim_array() || 末尾の要素を削る。 || SELECT trim_array(ARRAY[1,2,3], 1);
+PostgreSQL関数 || json_build_object() || JSON オブジェクトを作る。 || SELECT json_build_object('a', 1);
+PostgreSQL関数 || json_build_array() || JSON 配列を作る。 || SELECT json_build_array(1, 'a');
+PostgreSQL関数 || json_each() || JSON のキーと値を行にする。 || SELECT * FROM json_each('{"a":1}');
+PostgreSQL関数 || json_object_keys() || JSON のキーの一覧。 || SELECT json_object_keys('{"a":1}');
+PostgreSQL関数 || json_populate_record() || JSON を行の形にする。 || SELECT * FROM json_populate_record(null::t, '{"a":1}');
+PostgreSQL関数 || json_typeof() || JSON の値の種類。 || SELECT json_typeof('1');
+PostgreSQL関数 || jsonb_build_object() || JSONB のオブジェクトを作る。 || SELECT jsonb_build_object('a', 1);
+PostgreSQL関数 || jsonb_insert() || JSONB に値を挿入する。 || SELECT jsonb_insert('{"a":[1]}', '{a,0}', '0');
+PostgreSQL関数 || jsonb_path_query() || JSON パスで検索する。 || SELECT jsonb_path_query('{"a":1}', '$.a');
+PostgreSQL関数 || jsonb_pretty() || JSONB を見やすく整形する。 || SELECT jsonb_pretty('{"a":1}');
+PostgreSQL関数 || jsonb_strip_nulls() || null の値を取り除く。 || SELECT jsonb_strip_nulls('{"a":null}');
+PostgreSQL関数 || to_json() / to_jsonb() || 値を JSON にする。 || SELECT to_json(row(1, 'a'));
+PostgreSQL関数 || row_to_json() || 行を JSON にする。 || SELECT row_to_json(t) FROM t;
+PostgreSQL関数 || json_agg() || 行を JSON 配列にまとめる。 || SELECT json_agg(t) FROM t;
+PostgreSQL関数 || jsonb_object_agg() || キーと値から JSON オブジェクトを作る。 || SELECT jsonb_object_agg(k, v) FROM t;
+PostgreSQL関数 || coalesce() || 最初の NULL でない値。 || SELECT coalesce(NULL, 1);
+PostgreSQL関数 || nullif() || 等しければ NULL を返す。 || SELECT nullif(1, 1);
+PostgreSQL関数 || greatest() / least() || 最大・最小の値。 || SELECT greatest(1, 2, 3);
+PostgreSQL関数 || current_setting() || 設定値を取得する。 || SELECT current_setting('timezone');
+PostgreSQL関数 || set_config() || 設定値を変更する。 || SELECT set_config('app.user', 'a', false);
+PostgreSQL関数 || pg_typeof() || 値の型名を返す。 || SELECT pg_typeof(1);
+PostgreSQL関数 || pg_table_size() || テーブルの大きさ。 || SELECT pg_table_size('t');
+PostgreSQL関数 || pg_database_size() || データベースの大きさ。 || SELECT pg_database_size(current_database());
+PostgreSQL関数 || pg_size_pretty() || 大きさを見やすい単位にする。 || SELECT pg_size_pretty(1048576);
+PostgreSQL関数 || pg_relation_size() || 表やインデックスの大きさ。 || SELECT pg_relation_size('t');
+PostgreSQL関数 || pg_terminate_backend() || 接続を強制終了する。 || SELECT pg_terminate_backend(123);
+PostgreSQL関数 || pg_backend_pid() || 自分の接続の ID。 || SELECT pg_backend_pid();
+PostgreSQL関数 || pg_is_in_recovery() || レプリカかどうか。 || SELECT pg_is_in_recovery();
+PostgreSQL関数 || txid_current() || 現在のトランザクション ID。 || SELECT txid_current();
+PostgreSQL関数 || lastval() || 直近の nextval の値。 || SELECT lastval();
+PostgreSQL関数 || currval() || シーケンスの現在値。 || SELECT currval('seq');
+PostgreSQL関数 || setval() || シーケンスの値を設定する。 || SELECT setval('seq', 100);
+PostgreSQL関数 || generate_series (数値) || 連続した数の行。 || SELECT generate_series(1, 5);
+PostgreSQL関数 || string_to_table() || 文字列を区切って行にする。 || SELECT string_to_table('a,b', ',');
+PostgreSQL関数 || ntile() || 行を n 個のグループに分ける。 || SELECT ntile(4) OVER (ORDER BY v) FROM t;
+PostgreSQL演算子 || ~ (正規表現一致) || 正規表現に一致するか。 || WHERE name ~ '^a'
+PostgreSQL演算子 || ~* (大小無視で一致) || 大文字小文字を無視して一致。 || WHERE name ~* 'abc'
+PostgreSQL演算子 || !~ (不一致) || 正規表現に一致しない。 || WHERE name !~ 'x'
+PostgreSQL演算子 || ^@ (前方一致) || 先頭が一致するか。 || WHERE name ^@ 'ab'
+PostgreSQL演算子 || ? (JSON キー存在) || JSONB にキーがあるか。 || WHERE data ? 'name'
+PostgreSQL演算子 || ?| / ?& (JSON キー) || いずれか・すべてのキーがあるか。 || WHERE data ?| ARRAY['a','b']
+PostgreSQL演算子 || <@ (含まれる) || 左が右に含まれるか。 || WHERE tags <@ ARRAY['a','b']
+PostgreSQL演算子 || #- (JSON 削除) || JSONB の指定パスを削除する。 || SELECT data #- '{a}'
+PostgreSQL演算子 || @? (JSON パス存在) || JSON パスに一致する値があるか。 || WHERE data @? '$.a'
+PostgreSQL演算子 || <-> (距離) || 距離を返す。 || ORDER BY embedding <-> '[1,2,3]'
+PostgreSQL演算子 || ||/ (立方根) || 立方根。 || SELECT ||/ 27;
+PostgreSQL演算子 || @ (絶対値) || 絶対値。 || SELECT @ -5;
+PostgreSQL演算子 || ! (階乗 旧) || 階乗（古い書き方）。 || factorial(5) を使う
+PostgreSQL演算子 || << >> (ビットシフト) || ビットをずらす。 || SELECT 1 << 4;
+PostgreSQL演算子 || # (ビット XOR) || ビット単位の排他的論理和。 || SELECT 5 # 3;
+PostgreSQL演算子 || + (期間の加算) || 日付に期間を足す。 || SELECT date '2026-11-09' + 7;
+PostgreSQL演算子 || OVERLAPS || 2つの期間が重なるか。 || SELECT (d1, d2) OVERLAPS (d3, d4);
+PostgreSQL演算子 || BETWEEN SYMMETRIC || 大小どちらの順でも範囲指定できる。 || WHERE x BETWEEN SYMMETRIC 10 AND 1
+PostgreSQL演算子 || IS DISTINCT FROM || NULL を考慮した不等。 || WHERE a IS DISTINCT FROM b
+PostgreSQL演算子 || IS NOT DISTINCT FROM || NULL を考慮した等しさ。 || WHERE a IS NOT DISTINCT FROM b
+PostgreSQL演算子 || SIMILAR TO (パターン) || SQL 正規表現でのパターン一致。 || WHERE name SIMILAR TO '(a|b)%'
+PostgreSQL演算子 || AT TIME ZONE (演算子) || タイムゾーンを変換する。 || SELECT ts AT TIME ZONE 'UTC'
+PostgreSQL演算子 || COLLATE (演算子) || 照合順序を指定する。 || ORDER BY name COLLATE "C"
+PostgreSQL演算子 || :: (キャスト演算子) || 型を変換する。 || SELECT '1'::int
+PostgreSQL設定 || shared_buffers || 共有バッファの大きさ。 || shared_buffers = 1GB
+PostgreSQL設定 || effective_cache_size || OS キャッシュを含めた目安量。 || effective_cache_size = 3GB
+PostgreSQL設定 || maintenance_work_mem || 保守作業で使うメモリ。 || maintenance_work_mem = 256MB
+PostgreSQL設定 || random_page_cost || ランダム読み込みのコスト。 || random_page_cost = 1.1
+PostgreSQL設定 || checkpoint_timeout || チェックポイントの間隔。 || checkpoint_timeout = 5min
+PostgreSQL設定 || max_wal_size || WAL の最大の大きさ。 || max_wal_size = 2GB
+PostgreSQL設定 || wal_level || WAL に記録する詳細さ。 || wal_level = replica
+PostgreSQL設定 || synchronous_commit || 書き込み完了まで待つか。 || synchronous_commit = on
+PostgreSQL設定 || fsync || ディスクへの確実な書き込み。 || fsync = on
+PostgreSQL設定 || max_worker_processes || バックグラウンドの数。 || max_worker_processes = 8
+PostgreSQL設定 || max_parallel_workers_per_gather || 並列実行の数。 || max_parallel_workers_per_gather = 2
+PostgreSQL設定 || idle_in_transaction_session_timeout || 放置されたトランザクションを切る時間。 || idle_in_transaction_session_timeout = 60s
+PostgreSQL設定 || statement_timeout || 1文の最大の実行時間。 || statement_timeout = 30s
+PostgreSQL設定 || lock_timeout || ロックを待つ最大の時間。 || lock_timeout = 5s
+PostgreSQL設定 || deadlock_timeout || デッドロック検出までの時間。 || deadlock_timeout = 1s
+PostgreSQL設定 || log_min_duration_statement || 遅い SQL を記録する基準。 || log_min_duration_statement = 500
+PostgreSQL設定 || log_statement || 記録する SQL の種類。 || log_statement = 'ddl'
+PostgreSQL設定 || log_connections || 接続をログに残す。 || log_connections = on
+PostgreSQL設定 || timezone (設定) || 表示のタイムゾーン。 || SET timezone = 'Asia/Tokyo';
+PostgreSQL設定 || client_encoding || クライアントの文字コード。 || SET client_encoding = 'UTF8';
+PostgreSQL設定 || default_transaction_isolation || 既定の分離レベル。 || default_transaction_isolation = 'read committed'
+PostgreSQL設定 || listen_addresses || 接続を待ち受けるアドレス。 || listen_addresses = '*'
+PostgreSQL設定 || port || 接続のポート番号。 || port = 5432
+PostgreSQL設定 || ssl || SSL 接続の有効化。 || ssl = on
+PostgreSQL設定 || password_encryption || パスワードの暗号方式。 || password_encryption = scram-sha-256
+PostgreSQL設定 || autovacuum_vacuum_scale_factor || 自動整理を始める割合。 || autovacuum_vacuum_scale_factor = 0.1
+PostgreSQL設定 || track_activity_query_size || 記録する SQL の長さ。 || track_activity_query_size = 4096
+PostgreSQL設定 || shared_preload_libraries || 起動時に読み込む拡張。 || shared_preload_libraries = 'pg_stat_statements'
+PostgreSQL設定 || search_path (設定) || スキーマの探索順。 || SET search_path = public;
+PostgreSQL設定 || row_security || 行レベルセキュリティの有効・無効。 || SET row_security = on;
+PostgreSQL設定 || application_name || 接続の名前。 || SET application_name = 'app';
+PostgreSQL設定 || max_prepared_transactions || 準備済みトランザクションの数。 || max_prepared_transactions = 0
+PostgreSQL設定 || hot_standby || レプリカでの読み取りを許す。 || hot_standby = on
+PostgreSQL設定 || archive_mode || WAL のアーカイブ。 || archive_mode = on
+MySQL設定 || innodb_buffer_pool_size || InnoDB のキャッシュの大きさ。 || innodb_buffer_pool_size = 1G
+MySQL設定 || max_connections (MySQL) || 同時接続の上限。 || max_connections = 200
+MySQL設定 || slow_query_log || 遅い SQL の記録。 || slow_query_log = 1
+MySQL設定 || long_query_time || 遅いとみなす時間。 || long_query_time = 1
+MySQL設定 || innodb_flush_log_at_trx_commit || ログの書き込み方式。 || innodb_flush_log_at_trx_commit = 1
+MySQL設定 || character_set_server || サーバーの文字コード。 || character_set_server = utf8mb4
+MySQL設定 || collation_server || サーバーの照合順序。 || collation_server = utf8mb4_0900_ai_ci
+MySQL設定 || default_storage_engine || 既定のストレージエンジン。 || default_storage_engine = InnoDB
+MySQL設定 || wait_timeout || 接続を切るまでの待ち時間。 || wait_timeout = 28800
+MySQL設定 || max_allowed_packet || 1回に送れるデータの最大。 || max_allowed_packet = 64M
+MySQL設定 || query_cache (廃止) || 古い版にあった問い合わせのキャッシュ。 || MySQL 8 で廃止
+MySQL設定 || time_zone (MySQL) || タイムゾーンの設定。 || SET time_zone = '+09:00';
+MySQL設定 || transaction_isolation || 分離レベルの設定。 || SET transaction_isolation = 'READ-COMMITTED';
+MySQL設定 || foreign_key_checks || 外部キーの確認の有効・無効。 || SET foreign_key_checks = 0;
+MySQL設定 || sql_safe_updates || WHERE なしの更新を防ぐ。 || SET sql_safe_updates = 1;
+MySQL設定 || lower_case_table_names || テーブル名の大文字小文字の扱い。 || lower_case_table_names = 1
+MySQL設定 || log_bin (設定) || バイナリログの有効化。 || log_bin = mysql-bin
+MySQL設定 || server_id || レプリケーションで使うサーバー番号。 || server_id = 1
+MySQL設定 || read_only || 読み取り専用にする。 || SET GLOBAL read_only = 1;
+MySQL設定 || innodb_lock_wait_timeout || 行ロックを待つ時間。 || innodb_lock_wait_timeout = 50
+MySQL設定 || tmp_table_size || 一時テーブルの大きさ。 || tmp_table_size = 64M
+MySQL設定 || sort_buffer_size || 並べ替えのバッファ。 || sort_buffer_size = 2M
+MySQL設定 || performance_schema || 性能情報の収集。 || performance_schema = ON
+MySQL設定 || sys スキーマ || 性能情報を見やすくするビュー群。 || SELECT * FROM sys.statement_analysis;
+MySQL設定 || SHOW ENGINE INNODB STATUS || InnoDB の詳しい状態。 || SHOW ENGINE INNODB STATUS;
