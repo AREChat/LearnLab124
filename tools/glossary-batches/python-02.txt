@@ -1,0 +1,51 @@
+外部ライブラリ || requests.get || HTTP の GET を送る。 || requests.get(url, timeout=10)
+外部ライブラリ || requests.post || HTTP の POST を送る。 || requests.post(url, json=d)
+外部ライブラリ || response.json || 応答を JSON として読む。 || r.json()
+外部ライブラリ || raise_for_status || エラー応答で例外にする。 || r.raise_for_status()
+外部ライブラリ || requests.Session || 接続や Cookie を使い回す。 || s = requests.Session()
+外部ライブラリ || numpy.array || 配列を作る。 || np.array([1,2,3])
+外部ライブラリ || numpy.arange || 連番の配列。 || np.arange(10)
+外部ライブラリ || numpy.linspace || 等間隔の配列。 || np.linspace(0, 1, 5)
+外部ライブラリ || numpy.reshape || 形を変える。 || a.reshape(2, 3)
+外部ライブラリ || numpy.zeros / ones || 0・1 で埋めた配列。 || np.zeros((2, 2))
+外部ライブラリ || numpy.dot || 内積・行列積。 || np.dot(a, b)
+外部ライブラリ || numpy.mean / std || 平均・標準偏差。 || a.mean()
+外部ライブラリ || ブロードキャスト || 形の違う配列を自動で拡張する。 || a + 1
+外部ライブラリ || ブールインデックス || 条件で要素を選ぶ。 || a[a > 0]
+外部ライブラリ || numpy.where || 条件で値を選ぶ。 || np.where(a > 0, 1, 0)
+外部ライブラリ || pandas.DataFrame || 表形式のデータ。 || pd.DataFrame(d)
+外部ライブラリ || pandas.read_csv || CSV を読む。 || pd.read_csv('a.csv')
+外部ライブラリ || DataFrame.head || 先頭の数行を見る。 || df.head()
+外部ライブラリ || DataFrame.groupby || グループごとに集計する。 || df.groupby('a').sum()
+外部ライブラリ || DataFrame.merge || 表を結合する。 || df.merge(o, on='id')
+外部ライブラリ || DataFrame.loc / iloc || ラベル・位置で選ぶ。 || df.loc[0, 'a']
+外部ライブラリ || DataFrame.apply || 行や列に関数を適用する。 || df.apply(f)
+外部ライブラリ || DataFrame.pivot_table || ピボット集計。 || df.pivot_table(...)
+外部ライブラリ || DataFrame.fillna || 欠損値を埋める。 || df.fillna(0)
+外部ライブラリ || DataFrame.dropna || 欠損値のある行を除く。 || df.dropna()
+外部ライブラリ || DataFrame.to_csv || CSV に書き出す。 || df.to_csv('a.csv', index=False)
+外部ライブラリ || DataFrame.to_excel || Excel に書き出す。 || df.to_excel('a.xlsx')
+外部ライブラリ || matplotlib.pyplot.plot || 折れ線を描く。 || plt.plot(x, y)
+外部ライブラリ || plt.show || グラフを表示する。 || plt.show()
+外部ライブラリ || plt.savefig || グラフを保存する。 || plt.savefig('a.png')
+外部ライブラリ || openpyxl.load_workbook || Excel ブックを読む。 || load_workbook('a.xlsx')
+外部ライブラリ || pytest || テストフレームワーク。 || pytest
+外部ライブラリ || pytest.fixture || テストの準備を共有する。 || @pytest.fixture
+外部ライブラリ || pytest.mark.parametrize || 入力を変えて繰り返しテスト。 || @pytest.mark.parametrize
+外部ライブラリ || pytest.raises || 例外が出ることを確認する。 || with pytest.raises(ValueError):
+外部ライブラリ || venv || 仮想環境を作る。 || python -m venv .venv
+外部ライブラリ || pip freeze || 入れたパッケージの一覧。 || pip freeze > requirements.txt
+外部ライブラリ || pyproject.toml || プロジェクトの設定ファイル。 || [project]
+外部ライブラリ || FastAPI || 型で作る Web API フレームワーク。 || app = FastAPI()
+外部ライブラリ || Flask || 軽量な Web フレームワーク。 || @app.route('/')
+外部ライブラリ || Django || 多機能な Web フレームワーク。 || django-admin startproject
+外部ライブラリ || pydantic || 型で入力を検証する。 || class M(BaseModel)
+外部ライブラリ || SQLAlchemy || O/R マッパー。 || create_engine(url)
+外部ライブラリ || Selenium || ブラウザを自動操作する。 || webdriver.Chrome()
+外部ライブラリ || Playwright || ブラウザ自動化。 || sync_playwright()
+外部ライブラリ || Pillow Image.open || 画像を開く。 || Image.open('a.png')
+外部ライブラリ || tqdm || 進捗バーを出す。 || for x in tqdm(a):
+外部ライブラリ || rich || 見やすい端末表示。 || from rich import print
+外部ライブラリ || click || コマンドライン作成。 || @click.command()
+外部ライブラリ || python-dotenv || .env を読み込む。 || load_dotenv()
+外部ライブラリ || schedule || 定期実行。 || schedule.every().day.at('10:00').do(f)

@@ -1,0 +1,169 @@
+ファイルとストリーム || File.ReadAllText || 全文を読む。 || File.ReadAllText(p)
+ファイルとストリーム || File.ReadAllLines || 行の配列で読む。 || File.ReadAllLines(p)
+ファイルとストリーム || File.ReadLines || 行を順に読む。 || File.ReadLines(p)
+ファイルとストリーム || File.WriteAllText || 全文を書く。 || File.WriteAllText(p, s)
+ファイルとストリーム || File.AppendAllText || 追記する。 || File.AppendAllText(p, s)
+ファイルとストリーム || File.Exists || あるか。 || File.Exists(p)
+ファイルとストリーム || File.Copy / Move / Delete || コピー・移動・削除。 || File.Copy(a, b, True)
+ファイルとストリーム || File.GetLastWriteTime || 更新日時。 || File.GetLastWriteTime(p)
+ファイルとストリーム || File.Open || ストリームで開く。 || File.Open(p, FileMode.Open)
+ファイルとストリーム || File.ReadAllBytes || バイナリで読む。 || File.ReadAllBytes(p)
+ファイルとストリーム || FileInfo || ファイルの情報。 || New FileInfo(p).Length
+ファイルとストリーム || Directory.GetFiles || ファイル一覧。 || Directory.GetFiles(d, "*.txt")
+ファイルとストリーム || Directory.EnumerateFiles || 順に列挙する。 || Directory.EnumerateFiles(d)
+ファイルとストリーム || Directory.CreateDirectory || フォルダを作る。 || Directory.CreateDirectory(d)
+ファイルとストリーム || Directory.Delete || フォルダを削除する。 || Directory.Delete(d, True)
+ファイルとストリーム || Directory.Exists || フォルダがあるか。 || Directory.Exists(d)
+ファイルとストリーム || DirectoryInfo || フォルダの情報。 || New DirectoryInfo(d)
+ファイルとストリーム || SearchOption || 検索の範囲。 || SearchOption.AllDirectories
+ファイルとストリーム || Path.Combine || パスを結合する。 || Path.Combine(a, b)
+ファイルとストリーム || Path.GetFileName || ファイル名を取る。 || Path.GetFileName(p)
+ファイルとストリーム || Path.GetExtension || 拡張子を取る。 || Path.GetExtension(p)
+ファイルとストリーム || Path.GetDirectoryName || フォルダ名を取る。 || Path.GetDirectoryName(p)
+ファイルとストリーム || Path.GetTempPath || 一時フォルダ。 || Path.GetTempPath()
+ファイルとストリーム || Path.GetRandomFileName || 乱数のファイル名。 || Path.GetRandomFileName()
+ファイルとストリーム || Path.ChangeExtension || 拡張子を変える。 || Path.ChangeExtension(p, ".bak")
+ファイルとストリーム || FileStream || ファイルのストリーム。 || New FileStream(p, FileMode.Create)
+ファイルとストリーム || FileMode || 開き方。 || FileMode.OpenOrCreate
+ファイルとストリーム || FileAccess || 読み書きの権限。 || FileAccess.Read
+ファイルとストリーム || FileShare || 共有の設定。 || FileShare.ReadWrite
+ファイルとストリーム || StreamReader || 文字を読む。 || New StreamReader(p, Encoding.UTF8)
+ファイルとストリーム || StreamWriter || 文字を書く。 || New StreamWriter(p, True)
+ファイルとストリーム || ReadLine / ReadToEnd || 1行・最後まで読む。 || sr.ReadToEnd()
+ファイルとストリーム || BinaryReader / BinaryWriter || バイナリの読み書き。 || New BinaryReader(fs)
+ファイルとストリーム || MemoryStream || メモリ上のストリーム。 || New MemoryStream()
+ファイルとストリーム || StringReader / StringWriter || 文字列のストリーム。 || New StringReader(s)
+ファイルとストリーム || BufferedStream || バッファつきのストリーム。 || New BufferedStream(fs)
+ファイルとストリーム || Stream.CopyTo || ストリームをコピーする。 || src.CopyTo(dst)
+ファイルとストリーム || Stream.Seek || 位置を移動する。 || fs.Seek(0, SeekOrigin.Begin)
+ファイルとストリーム || Stream.Flush || 書き込みを確定する。 || fs.Flush()
+ファイルとストリーム || GZipStream || gzip 圧縮。 || New GZipStream(fs, CompressionMode.Compress)
+ファイルとストリーム || ZipFile.CreateFromDirectory || フォルダを ZIP にする。 || ZipFile.CreateFromDirectory(d, z)
+ファイルとストリーム || ZipFile.ExtractToDirectory || ZIP を展開する。 || ZipFile.ExtractToDirectory(z, d)
+ファイルとストリーム || ZipArchive || ZIP の中身を扱う。 || New ZipArchive(fs)
+ファイルとストリーム || FileSystemWatcher || 変更を監視する。 || New FileSystemWatcher(d)
+ファイルとストリーム || NotifyFilter || 監視する変更の種類。 || NotifyFilters.LastWrite
+ファイルとストリーム || IOException || 入出力の例外。 || Catch ex As IOException
+ファイルとストリーム || FileNotFoundException || ファイルがない例外。 || FileNotFoundException
+ファイルとストリーム || UnauthorizedAccessException || 権限がない例外。 || UnauthorizedAccessException
+ファイルとストリーム || DirectoryNotFoundException || フォルダがない例外。 || DirectoryNotFoundException
+ファイルとストリーム || PathTooLongException || パスが長すぎる例外。 || PathTooLongException
+ファイルとストリーム || FileSystem.CopyFile (My) || VB の簡単なコピー。 || My.Computer.FileSystem.CopyFile(a, b)
+ファイルとストリーム || My.Computer.FileSystem || VB のファイル操作の窓口。 || My.Computer.FileSystem
+ファイルとストリーム || ReadAllText (My) || VB の簡単な読み込み。 || My.Computer.FileSystem.ReadAllText(p)
+ファイルとストリーム || FileOpen (VB6式) || 旧式のファイル操作。 || FileOpen(1, p, OpenMode.Input)
+ファイルとストリーム || LineInput || 旧式の行読み。 || LineInput(1)
+ファイルとストリーム || FreeFile || 空いている番号。 || FreeFile()
+ファイルとストリーム || SpecialDirectories || 特別なフォルダ。 || My.Computer.FileSystem.SpecialDirectories.Desktop
+ファイルとストリーム || 排他制御 (ファイル) || 同時書き込みを防ぐ。 || FileShare.None
+ファイルとストリーム || 一時ファイルの安全な書き込み || 別名に書いてから置き換える。 || File.Replace
+ファイルとストリーム || 文字コードの判定 || BOM などから推定する。 || StreamReader(p, True)
+ファイルとストリーム || 大きなファイルの読み方 || 全部読まず順に処理する。 || File.ReadLines
+ファイルとストリーム || メモリマップトファイル || ファイルをメモリのように扱う。 || MemoryMappedFile
+ファイルとストリーム || Pipe 通信 || プロセス間の通信。 || NamedPipeServerStream
+ネットワーク || HttpClient || HTTP の通信。 || New HttpClient()
+ネットワーク || GetStringAsync || 文字列で取得する。 || Await c.GetStringAsync(url)
+ネットワーク || GetAsync / PostAsync || GET・POST を送る。 || Await c.GetAsync(url)
+ネットワーク || HttpRequestMessage || 要求の詳細。 || New HttpRequestMessage(HttpMethod.Get, url)
+ネットワーク || HttpResponseMessage || 応答。 || resp.StatusCode
+ネットワーク || StringContent || 本文を文字列で送る。 || New StringContent(json, Encoding.UTF8, "application/json")
+ネットワーク || FormUrlEncodedContent || フォーム形式で送る。 || New FormUrlEncodedContent(d)
+ネットワーク || MultipartFormDataContent || ファイル送信。 || New MultipartFormDataContent()
+ネットワーク || EnsureSuccessStatusCode || 失敗なら例外にする。 || resp.EnsureSuccessStatusCode()
+ネットワーク || DefaultRequestHeaders || 共通ヘッダー。 || c.DefaultRequestHeaders.Add(...)
+ネットワーク || AuthenticationHeaderValue || 認証ヘッダー。 || New AuthenticationHeaderValue("Bearer", t)
+ネットワーク || HttpClient.Timeout || 制限時間。 || c.Timeout = TimeSpan.FromSeconds(10)
+ネットワーク || ReadFromJsonAsync || 応答を JSON で読む。 || Await resp.Content.ReadFromJsonAsync(Of T)()
+ネットワーク || PostAsJsonAsync || JSON で POST する。 || Await c.PostAsJsonAsync(url, obj)
+ネットワーク || HttpRequestException || 通信の例外。 || Catch ex As HttpRequestException
+ネットワーク || HttpListener || 簡易 Web サーバー。 || New HttpListener()
+ネットワーク || WebClient || 古い通信クラス。 || New WebClient()
+ネットワーク || WebRequest || 古い要求クラス。 || WebRequest.Create(url)
+ネットワーク || TcpClient || TCP のクライアント。 || New TcpClient(host, port)
+ネットワーク || TcpListener || TCP のサーバー。 || New TcpListener(IPAddress.Any, 8080)
+ネットワーク || NetworkStream || ネットワークのストリーム。 || client.GetStream()
+ネットワーク || UdpClient || UDP の通信。 || New UdpClient(5000)
+ネットワーク || Socket || ソケット通信。 || New Socket(...)
+ネットワーク || IPAddress || IP アドレス。 || IPAddress.Parse("127.0.0.1")
+ネットワーク || IPEndPoint || アドレスとポート。 || New IPEndPoint(ip, 80)
+ネットワーク || Dns.GetHostEntry || 名前を引く。 || Dns.GetHostEntry(name)
+ネットワーク || Ping || 疎通を確認する。 || New Ping().Send(host)
+ネットワーク || NetworkInterface || ネットワークの情報。 || NetworkInterface.GetAllNetworkInterfaces()
+ネットワーク || NetworkChange || 接続状態の変化を受ける。 || NetworkChange.NetworkAvailabilityChanged
+ネットワーク || WebSocket || 双方向通信。 || ClientWebSocket
+ネットワーク || ClientWebSocket || WebSocket のクライアント。 || New ClientWebSocket()
+ネットワーク || SmtpClient || メール送信（旧式）。 || New SmtpClient(host)
+ネットワーク || MailMessage || メールの内容。 || New MailMessage(from, to)
+ネットワーク || MailKit || 現行のメールライブラリ。 || SmtpClient.Connect
+ネットワーク || FtpWebRequest || FTP の操作。 || FtpWebRequest.Create(url)
+ネットワーク || SSH.NET || SSH の操作。 || SshClient
+ネットワーク || gRPC || 高速な RPC。 || Grpc.Net.Client
+ネットワーク || WCF || 旧来のサービス基盤。 || ServiceContract
+ネットワーク || ServiceContract / OperationContract || WCF の契約。 || <ServiceContract>
+ネットワーク || REST || URL でリソースを扱う設計。 || GET /users/1
+ネットワーク || OAuth 2.0 || 認可の仕組み。 || access_token
+ネットワーク || HTTP ステータス || 応答の状態番号。 || 200, 404, 500
+ネットワーク || リトライ処理 || 失敗時に再試行する。 || Polly
+ネットワーク || Polly || 再試行などの耐障害ライブラリ。 || Policy.Handle(...).Retry(3)
+ネットワーク || プロキシ設定 || 通信の経由先。 || HttpClientHandler.Proxy
+ネットワーク || 証明書検証 || 相手の証明書を確かめる。 || ServerCertificateCustomValidationCallback
+ネットワーク || Cookie 管理 || Cookie を保持する。 || CookieContainer
+ネットワーク || HtmlAgilityPack || HTML を解析する。 || HtmlDocument
+ネットワーク || AngleSharp || HTML 解析のライブラリ。 || BrowsingContext
+ネットワーク || WebView2 || 組み込みブラウザ。 || WebView2
+ネットワーク || Selenium (VB) || ブラウザの自動操作。 || New ChromeDriver()
+ネットワーク || Playwright (VB) || ブラウザの自動化。 || Playwright.CreateAsync()
+ネットワーク || RSS 読み込み || フィードを読む。 || SyndicationFeed.Load
+ネットワーク || QR コード生成 || QR を作る。 || QRCoder
+ネットワーク || メッセージキュー || 非同期のやり取り。 || RabbitMQ
+ネットワーク || Redis || 高速なキー・バリュー。 || StackExchange.Redis
+ネットワーク || MongoDB.Driver || MongoDB への接続。 || MongoClient
+テストと品質 || xUnit || テストフレームワーク。 || <Fact>
+テストと品質 || NUnit || テストフレームワーク。 || <Test>
+テストと品質 || MSTest || 標準のテスト。 || <TestMethod>
+テストと品質 || Fact / Theory || xUnit のテスト属性。 || <Theory>
+テストと品質 || InlineData || テストの入力値。 || <InlineData(1, 2)>
+テストと品質 || Assert.Equal || 等しいか確認する。 || Assert.Equal(1, x)
+テストと品質 || Assert.Throws || 例外を確認する。 || Assert.Throws(Of Exception)(...)
+テストと品質 || Assert.True / False || 真偽を確認する。 || Assert.True(x)
+テストと品質 || Assert.Null / NotNull || Nothing かを確認する。 || Assert.NotNull(x)
+テストと品質 || Assert.Contains || 含むか確認する。 || Assert.Contains(1, list)
+テストと品質 || Arrange / Act / Assert || テストの3段階。 || AAA
+テストと品質 || TestInitialize || 各テストの前処理。 || <TestInitialize>
+テストと品質 || TestCleanup || 各テストの後処理。 || <TestCleanup>
+テストと品質 || IClassFixture || 共有の前準備（xUnit）。 || IClassFixture(Of T)
+テストと品質 || Moq || モックライブラリ。 || New Mock(Of IRepo)()
+テストと品質 || NSubstitute || モックライブラリ。 || Substitute.For(Of IRepo)()
+テストと品質 || Setup / Returns || モックの動作を決める。 || mock.Setup(...).Returns(1)
+テストと品質 || Verify || 呼ばれたか確認する。 || mock.Verify(...)
+テストと品質 || FluentAssertions || 読みやすい検証。 || x.Should().Be(1)
+テストと品質 || Bogus || テストデータ生成。 || New Faker(Of T)()
+テストと品質 || AutoFixture || テストデータの自動生成。 || Fixture.Create(Of T)()
+テストと品質 || カバレッジ || テストが通った割合。 || coverlet
+テストと品質 || coverlet || カバレッジの計測。 || dotnet test --collect
+テストと品質 || ReportGenerator || カバレッジの報告書。 || reportgenerator
+テストと品質 || Stryker || 変異テスト。 || dotnet stryker
+テストと品質 || SpecFlow || 振る舞い駆動のテスト。 || Feature
+テストと品質 || 統合テスト || 複数部品を合わせて試す。 || WebApplicationFactory
+テストと品質 || WebApplicationFactory || Web アプリのテスト用の起動。 || New WebApplicationFactory(Of Program)
+テストと品質 || インメモリ DB || テスト用の DB。 || UseInMemoryDatabase
+テストと品質 || Testcontainers || コンテナでテスト環境を作る。 || Testcontainers
+テストと品質 || UI テスト || 画面を操作して試す。 || FlaUI
+テストと品質 || 回帰テスト || 変更で壊れていないか試す。 || regression test
+テストと品質 || スナップショットテスト || 出力を保存して比較する。 || Verify
+テストと品質 || プロパティベーステスト || 性質を多数の入力で試す。 || FsCheck
+テストと品質 || テストダブル || モックなどの総称。 || test double
+テストと品質 || テスト容易性 || テストしやすい設計。 || testability
+テストと品質 || StyleCop || 書式の規約チェック。 || StyleCop.Analyzers
+テストと品質 || SonarQube || 品質の静的解析。 || SonarQube
+テストと品質 || コードレビュー || 他者が確認する。 || pull request
+テストと品質 || ペアプログラミング || 2人で書く。 || pair programming
+テストと品質 || デバッガ || 実行を止めて調べる。 || F5, F9, F10, F11
+テストと品質 || ブレークポイント || 実行を止める位置。 || F9
+テストと品質 || ステップイン / オーバー || 1行ずつ進める。 || F11 / F10
+テストと品質 || ウォッチ式 || 変数を監視する。 || Watch
+テストと品質 || 条件付きブレークポイント || 条件で止める。 || Condition
+テストと品質 || ログポイント || 止めずにログを出す。 || Tracepoint
+テストと品質 || ダンプ解析 || クラッシュ時の状態を調べる。 || dotnet-dump
+テストと品質 || プロファイラー || 遅い箇所を調べる。 || dotnet-trace
+テストと品質 || メモリリーク調査 || 解放されない原因を探す。 || dotnet-gcdump

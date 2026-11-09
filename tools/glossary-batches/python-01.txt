@@ -1,0 +1,373 @@
+itertools || itertools.chain || 複数のイテラブルを連結する。 || list(chain([1], [2]))
+itertools || itertools.chain.from_iterable || 入れ子を平らに連結する。 || chain.from_iterable([[1],[2]])
+itertools || itertools.count || 無限に数え上げる。 || count(10, 2)
+itertools || itertools.cycle || 要素を無限に繰り返す。 || cycle('ab')
+itertools || itertools.repeat || 同じ値を繰り返す。 || repeat('x', 3)
+itertools || itertools.accumulate || 累積の結果を返す。 || list(accumulate([1,2,3]))
+itertools || itertools.groupby || 連続する同じキーでまとめる。 || groupby(data, key=len)
+itertools || itertools.islice || イテラブルをスライスする。 || islice(it, 5)
+itertools || itertools.product || 直積を作る。 || product('ab', [1,2])
+itertools || itertools.permutations || 順列を作る。 || permutations([1,2,3], 2)
+itertools || itertools.combinations || 組み合わせを作る。 || combinations([1,2,3], 2)
+itertools || itertools.combinations_with_replacement || 重複を許す組み合わせ。 || combinations_with_replacement('ab', 2)
+itertools || itertools.zip_longest || 長さが違っても最長に合わせて組にする。 || zip_longest([1,2], [3], fillvalue=0)
+itertools || itertools.starmap || 引数をほどいて関数を適用する。 || starmap(pow, [(2,3)])
+itertools || itertools.takewhile || 条件を満たす間だけ取る。 || takewhile(lambda x: x<3, [1,2,3,4])
+itertools || itertools.dropwhile || 条件を満たす間は捨てる。 || dropwhile(lambda x: x<3, [1,2,3,4])
+itertools || itertools.filterfalse || 条件が偽の要素だけ取る。 || filterfalse(None, [0,1,2])
+itertools || itertools.tee || イテレータを複製する。 || a, b = tee(it)
+itertools || itertools.pairwise || 隣り合う2要素の組を作る。 || pairwise([1,2,3])
+itertools || itertools.batched || n 個ずつに区切る。 || batched(range(7), 3)
+functools || functools.partial || 引数を一部固定した関数を作る。 || partial(int, base=2)
+functools || functools.reduce || 要素を畳み込む。 || reduce(add, [1,2,3])
+functools || functools.lru_cache || 結果をキャッシュする。 || @lru_cache(maxsize=128)
+functools || functools.cache || 上限なしのキャッシュ。 || @cache
+functools || functools.cached_property || 初回だけ計算する属性。 || @cached_property
+functools || functools.wraps || デコレータで元の情報を保つ。 || @wraps(func)
+functools || functools.total_ordering || 比較メソッドを補完する。 || @total_ordering
+functools || functools.singledispatch || 型で処理を切り替える。 || @singledispatch
+functools || functools.cmp_to_key || 比較関数をキーに変換する。 || sorted(a, key=cmp_to_key(cmp))
+functools || functools.partialmethod || メソッド用の partial。 || partialmethod(f, x=1)
+collections || collections.Counter || 要素の出現数を数える。 || Counter('abca')
+collections || Counter.most_common || 多い順に取り出す。 || c.most_common(3)
+collections || collections.defaultdict || 既定値つきの辞書。 || defaultdict(list)
+collections || collections.OrderedDict || 順序つきの辞書。 || OrderedDict()
+collections || collections.deque || 両端から高速に出し入れできる。 || deque([1,2,3])
+collections || deque.appendleft || 左端に追加する。 || d.appendleft(0)
+collections || deque.rotate || 要素を回転する。 || d.rotate(1)
+collections || collections.namedtuple || 名前つきのタプル。 || Point = namedtuple('Point', 'x y')
+collections || collections.ChainMap || 複数の辞書を重ねて見る。 || ChainMap(a, b)
+collections || collections.UserDict || 辞書を継承しやすくした型。 || class D(UserDict)
+collections || collections.abc || 抽象基底クラスの集まり。 || from collections.abc import Iterable
+collections || Mapping / Sequence || 抽象型。 || isinstance(x, Sequence)
+dataclasses || @dataclass || データ用クラスを簡単に作る。 || @dataclass class P: x: int
+dataclasses || field() || 項目の詳細を指定する。 || field(default_factory=list)
+dataclasses || frozen=True || 変更不可にする。 || @dataclass(frozen=True)
+dataclasses || slots=True || メモリを節約する。 || @dataclass(slots=True)
+dataclasses || order=True || 比較を自動で作る。 || @dataclass(order=True)
+dataclasses || asdict() || dataclass を辞書にする。 || asdict(p)
+dataclasses || astuple() || dataclass をタプルにする。 || astuple(p)
+dataclasses || replace() || 一部を変えた複製を作る。 || replace(p, x=1)
+dataclasses || __post_init__ || 初期化の後処理。 || def __post_init__(self):
+dataclasses || kw_only || キーワード専用の引数にする。 || @dataclass(kw_only=True)
+typing || typing.Optional || None を許す型。 || Optional[int]
+typing || typing.Union || いずれかの型。 || Union[int, str]
+typing || typing.List / Dict || 要素型つきのコンテナ。 || List[int]
+typing || typing.Tuple || 要素型つきのタプル。 || Tuple[int, str]
+typing || typing.Callable || 呼び出せる型。 || Callable[[int], str]
+typing || typing.Any || どんな型でもよい。 || x: Any
+typing || typing.TypeVar || 型変数。 || T = TypeVar('T')
+typing || typing.Generic || ジェネリッククラス。 || class Box(Generic[T])
+typing || typing.Protocol || 構造的な型の約束。 || class P(Protocol)
+typing || typing.Literal || 特定の値だけ許す。 || Literal['a', 'b']
+typing || typing.Final || 再代入しない印。 || X: Final = 1
+typing || typing.TypedDict || キーごとに型を決めた辞書。 || class M(TypedDict)
+typing || typing.NamedTuple || 型つきの名前つきタプル。 || class P(NamedTuple)
+typing || typing.cast || 型チェッカーに型を伝える。 || cast(int, x)
+typing || typing.TYPE_CHECKING || 型検査時だけ真。 || if TYPE_CHECKING:
+typing || typing.overload || 複数の型の組み合わせを宣言する。 || @overload
+typing || typing.Annotated || 型に付加情報を持たせる。 || Annotated[int, 'm']
+typing || typing.ParamSpec || 引数の型を引き継ぐ。 || P = ParamSpec('P')
+typing || typing.Self || 自分自身の型。 || def f(self) -> Self
+typing || typing.Never || 到達しない型。 || def f() -> Never
+typing || typing.NoReturn || 戻らない関数。 || -> NoReturn
+typing || 型ヒント || 型を注釈で示す。 || def f(x: int) -> str:
+typing || mypy || 静的な型チェッカー。 || mypy a.py
+typing || pyright || 型チェッカー。 || pyright
+typing || 型エイリアス || 型に別名をつける。 || Vector = list[float]
+typing || type 文 || 型エイリアスを宣言する（3.12）。 || type Vec = list[float]
+typing || X | Y 記法 || Union の簡単な書き方。 || int | None
+asyncio || async def || 非同期関数を定義する。 || async def f():
+asyncio || await || 非同期処理の完了を待つ。 || await f()
+asyncio || asyncio.run || 非同期処理を実行する。 || asyncio.run(main())
+asyncio || asyncio.sleep || 非同期で待つ。 || await asyncio.sleep(1)
+asyncio || asyncio.gather || 複数を並行実行する。 || await asyncio.gather(a(), b())
+asyncio || asyncio.create_task || タスクとして予約する。 || asyncio.create_task(f())
+asyncio || asyncio.TaskGroup || タスクをまとめて管理する。 || async with asyncio.TaskGroup() as tg:
+asyncio || asyncio.wait_for || 時間制限つきで待つ。 || await asyncio.wait_for(f(), 5)
+asyncio || asyncio.timeout || 時間制限のブロック。 || async with asyncio.timeout(5):
+asyncio || asyncio.Queue || 非同期のキュー。 || q = asyncio.Queue()
+asyncio || asyncio.Lock || 非同期のロック。 || async with lock:
+asyncio || asyncio.Semaphore || 同時実行数を制限する。 || asyncio.Semaphore(3)
+asyncio || asyncio.Event || 合図を送る。 || ev.set()
+asyncio || asyncio.to_thread || 別スレッドで同期処理を動かす。 || await asyncio.to_thread(f)
+asyncio || asyncio.as_completed || 終わった順に受け取る。 || for c in as_completed(tasks):
+asyncio || async for || 非同期で繰り返す。 || async for x in agen():
+asyncio || async with || 非同期のコンテキスト。 || async with s:
+asyncio || 非同期ジェネレータ || async 版のジェネレータ。 || async def g(): yield 1
+asyncio || イベントループ || 非同期処理の実行基盤。 || get_event_loop()
+asyncio || コルーチン || await できる関数の結果。 || coroutine
+asyncio || Future || 将来の結果を表す。 || asyncio.Future()
+asyncio || aiohttp || 非同期の HTTP ライブラリ。 || aiohttp.ClientSession()
+asyncio || httpx || 同期・非同期に対応した HTTP。 || httpx.get(url)
+並行処理 || threading.Thread || スレッドを作る。 || Thread(target=f).start()
+並行処理 || threading.Lock || 排他制御する。 || with lock:
+並行処理 || threading.Event || スレッド間の合図。 || ev.wait()
+並行処理 || threading.local || スレットごとの変数。 || local()
+並行処理 || GIL || 同時に1つのスレッドしか動かない仕組み。 || Global Interpreter Lock
+並行処理 || multiprocessing.Process || プロセスを作る。 || Process(target=f)
+並行処理 || multiprocessing.Pool || プロセスのプール。 || Pool(4).map(f, data)
+並行処理 || concurrent.futures || 並行処理の高水準の API。 || concurrent.futures
+並行処理 || ThreadPoolExecutor || スレッドプール。 || ThreadPoolExecutor(max_workers=4)
+並行処理 || ProcessPoolExecutor || プロセスプール。 || ProcessPoolExecutor()
+並行処理 || executor.submit || 処理を投入する。 || fut = ex.submit(f, 1)
+並行処理 || executor.map || 並行して map する。 || ex.map(f, data)
+並行処理 || Future.result || 結果を取得する。 || fut.result()
+並行処理 || queue.Queue || スレッド安全なキュー。 || q = Queue()
+並行処理 || multiprocessing.Queue || プロセス間のキュー。 || mp.Queue()
+並行処理 || multiprocessing.Manager || 共有オブジェクトを管理する。 || Manager().dict()
+並行処理 || subprocess.run || 外部コマンドを実行する。 || subprocess.run(['ls'], check=True)
+並行処理 || subprocess.Popen || プロセスを細かく制御する。 || Popen(['ls'])
+並行処理 || capture_output || 出力を取り込む。 || run(..., capture_output=True)
+並行処理 || signal モジュール || シグナルを扱う。 || signal.signal(SIGINT, h)
+並行処理 || sched || 簡単な予約実行。 || sched.scheduler()
+並行処理 || デッドロック || 互いに待って止まる状態。 || deadlock
+並行処理 || 競合状態 || 実行順で結果が変わる問題。 || race condition
+pathlib || pathlib.Path || パスをオブジェクトで扱う。 || Path('a/b.txt')
+pathlib || Path.cwd | 現在のフォルダ。 || Path.cwd()
+pathlib || Path.home || ホームフォルダ。 || Path.home()
+pathlib || Path.exists || 存在するか。 || p.exists()
+pathlib || Path.is_file / is_dir || ファイルか、フォルダか。 || p.is_file()
+pathlib || Path.mkdir || フォルダを作る。 || p.mkdir(parents=True, exist_ok=True)
+pathlib || Path.iterdir || 中身を列挙する。 || p.iterdir()
+pathlib || Path.glob || パターンで検索する。 || p.glob('*.py')
+pathlib || Path.rglob || 再帰的に検索する。 || p.rglob('*.py')
+pathlib || Path.read_text || 文字列として読む。 || p.read_text(encoding='utf-8')
+pathlib || Path.write_text || 文字列を書く。 || p.write_text('a')
+pathlib || Path.read_bytes || バイナリで読む。 || p.read_bytes()
+pathlib || Path.unlink || ファイルを削除する。 || p.unlink(missing_ok=True)
+pathlib || Path.rename || 名前を変える。 || p.rename('b')
+pathlib || Path.with_suffix || 拡張子を変える。 || p.with_suffix('.md')
+pathlib || Path.with_name || ファイル名を変える。 || p.with_name('a.txt')
+pathlib || Path.stem / suffix || 拡張子なしの名前と拡張子。 || p.stem
+pathlib || Path.parent || 親フォルダ。 || p.parent
+pathlib || Path.resolve || 絶対パスにする。 || p.resolve()
+pathlib || Path.stat || ファイルの情報。 || p.stat().st_size
+pathlib || / 演算子 (パス結合) || パスをつなぐ。 || Path('a') / 'b'
+pathlib || shutil.copy || ファイルをコピーする。 || shutil.copy(a, b)
+pathlib || shutil.copytree || フォルダごとコピーする。 || shutil.copytree(a, b)
+pathlib || shutil.move || 移動する。 || shutil.move(a, b)
+pathlib || shutil.rmtree || フォルダごと削除する。 || shutil.rmtree(p)
+pathlib || shutil.make_archive || アーカイブを作る。 || shutil.make_archive('a', 'zip', 'dir')
+pathlib || tempfile.TemporaryDirectory || 一時フォルダ。 || with TemporaryDirectory() as d:
+pathlib || tempfile.NamedTemporaryFile || 一時ファイル。 || NamedTemporaryFile()
+pathlib || zipfile.ZipFile || ZIP を扱う。 || ZipFile('a.zip')
+pathlib || tarfile.open || TAR を扱う。 || tarfile.open('a.tar.gz')
+pathlib || gzip.open || gzip を扱う。 || gzip.open('a.gz')
+pathlib || fnmatch || ワイルドカード照合。 || fnmatch('a.py', '*.py')
+pathlib || os.walk || フォルダを再帰的に歩く。 || os.walk('.')
+pathlib || os.environ || 環境変数。 || os.environ['HOME']
+pathlib || os.getenv || 環境変数を取得する。 || os.getenv('A', '')
+pathlib || os.path.join || パスを結合する。 || os.path.join('a', 'b')
+pathlib || os.makedirs || 階層フォルダを作る。 || os.makedirs(p, exist_ok=True)
+pathlib || os.listdir || 一覧を取得する。 || os.listdir('.')
+pathlib || os.remove || ファイルを削除する。 || os.remove(p)
+pathlib || os.getcwd || 現在のフォルダ。 || os.getcwd()
+pathlib || os.chdir || フォルダを移動する。 || os.chdir(p)
+pathlib || os.cpu_count || CPU の数。 || os.cpu_count()
+標準ライブラリ || datetime.datetime.now || 現在の日時。 || datetime.now()
+標準ライブラリ || datetime.date.today || 今日の日付。 || date.today()
+標準ライブラリ || datetime.timedelta || 時間の差。 || timedelta(days=7)
+標準ライブラリ || strftime | 日時を書式化する。 || now.strftime('%Y-%m-%d')
+標準ライブラリ || strptime || 文字から日時にする。 || datetime.strptime(s, '%Y-%m-%d')
+標準ライブラリ || isoformat || ISO 形式の文字。 || now.isoformat()
+標準ライブラリ || fromisoformat || ISO 形式から日時にする。 || datetime.fromisoformat(s)
+標準ライブラリ || zoneinfo.ZoneInfo || タイムゾーン。 || ZoneInfo('Asia/Tokyo')
+標準ライブラリ || datetime.timezone.utc || UTC。 || timezone.utc
+標準ライブラリ || time.sleep || 一定時間待つ。 || time.sleep(1)
+標準ライブラリ || time.perf_counter || 高精度の経過時間。 || time.perf_counter()
+標準ライブラリ || time.time || UNIX 時間。 || time.time()
+標準ライブラリ || calendar.monthrange || 月の日数など。 || calendar.monthrange(2026, 11)
+標準ライブラリ || json.dumps || JSON の文字列にする。 || json.dumps(d, ensure_ascii=False)
+標準ライブラリ || json.loads || JSON の文字列を読む。 || json.loads(s)
+標準ライブラリ || json.dump / load || ファイルで読み書きする。 || json.dump(d, f)
+標準ライブラリ || JSONDecodeError || JSON の読み込み失敗。 || except json.JSONDecodeError
+標準ライブラリ || csv.reader || CSV を行ごとに読む。 || csv.reader(f)
+標準ライブラリ || csv.DictReader || CSV を辞書で読む。 || csv.DictReader(f)
+標準ライブラリ || csv.writer || CSV を書く。 || csv.writer(f)
+標準ライブラリ || csv.DictWriter || 辞書から CSV を書く。 || csv.DictWriter(f, fieldnames=['a'])
+標準ライブラリ || sqlite3.connect || SQLite に接続する。 || sqlite3.connect('a.db')
+標準ライブラリ || cursor.execute || SQL を実行する。 || cur.execute('SELECT 1')
+標準ライブラリ || executemany || 複数行をまとめて実行する。 || cur.executemany(sql, rows)
+標準ライブラリ || conn.commit || 確定する。 || conn.commit()
+標準ライブラリ || sqlite3.Row || 列名で取り出す行。 || conn.row_factory = sqlite3.Row
+標準ライブラリ || pickle || オブジェクトを保存する。 || pickle.dumps(obj)
+標準ライブラリ || shelve || 辞書のように永続化する。 || shelve.open('a')
+標準ライブラリ || configparser || ini 形式の設定を扱う。 || ConfigParser()
+標準ライブラリ || tomllib || TOML を読む。 || tomllib.load(f)
+標準ライブラリ || argparse || コマンドライン引数の解析。 || ArgumentParser()
+標準ライブラリ || add_argument || 引数を定義する。 || p.add_argument('--n', type=int)
+標準ライブラリ || sys.argv || コマンドライン引数。 || sys.argv[1:]
+標準ライブラリ || sys.exit || 終了する。 || sys.exit(1)
+標準ライブラリ || sys.path || モジュールの検索パス。 || sys.path.append('.')
+標準ライブラリ || sys.stdin / stdout / stderr || 標準入出力。 || sys.stderr.write('x')
+標準ライブラリ || logging.basicConfig || ログの基本設定。 || logging.basicConfig(level=logging.INFO)
+標準ライブラリ || logging.getLogger || ロガーを取得する。 || logging.getLogger(__name__)
+標準ライブラリ || logging.Handler || 出力先。 || FileHandler('a.log')
+標準ライブラリ || logging.Formatter || 書式。 || Formatter('%(message)s')
+標準ライブラリ || RotatingFileHandler || ログを回転する。 || RotatingFileHandler('a.log', maxBytes=1000)
+標準ライブラリ || logger.exception || 例外をログに出す。 || logger.exception('error')
+標準ライブラリ || warnings.warn || 警告を出す。 || warnings.warn('x', DeprecationWarning)
+標準ライブラリ || contextlib.contextmanager || with 用の関数を作る。 || @contextmanager
+標準ライブラリ || contextlib.suppress || 例外を無視する。 || with suppress(FileNotFoundError):
+標準ライブラリ || contextlib.closing || close を保証する。 || with closing(x):
+標準ライブラリ || contextlib.ExitStack || 複数のコンテキストを動的に扱う。 || with ExitStack() as s:
+標準ライブラリ || re.search | 正規表現で検索する。 || re.search(r'\d+', s)
+標準ライブラリ || re.findall || すべて見つける。 || re.findall(r'\d+', s)
+標準ライブラリ || re.sub || 置換する。 || re.sub(r'\s+', ' ', s)
+標準ライブラリ || re.compile || 正規表現を事前に作る。 || re.compile(r'\d+')
+標準ライブラリ || re.fullmatch || 全体が一致するか。 || re.fullmatch(r'\d+', s)
+標準ライブラリ || re.split || 正規表現で分割する。 || re.split(r'[,;]', s)
+標準ライブラリ || re.finditer || 一致を順に返す。 || re.finditer(r'\d', s)
+標準ライブラリ || Match.group || 一致した部分を取る。 || m.group(1)
+標準ライブラリ || Match.groupdict || 名前つきグループを辞書で取る。 || m.groupdict()
+標準ライブラリ || re.IGNORECASE || 大文字小文字を無視する。 || re.I
+標準ライブラリ || re.MULTILINE || 複数行モード。 || re.M
+標準ライブラリ || re.VERBOSE || 読みやすく書ける。 || re.X
+標準ライブラリ || random.choice || 1つ選ぶ。 || random.choice(a)
+標準ライブラリ || random.sample || 重複なしで選ぶ。 || random.sample(a, 3)
+標準ライブラリ || random.shuffle || 並べ替える。 || random.shuffle(a)
+標準ライブラリ || random.randint || 範囲の整数。 || random.randint(1, 6)
+標準ライブラリ || random.seed || 乱数の種を決める。 || random.seed(0)
+標準ライブラリ || secrets.token_hex || 安全なトークン。 || secrets.token_hex(16)
+標準ライブラリ || hashlib.sha256 || ハッシュを作る。 || hashlib.sha256(b'a').hexdigest()
+標準ライブラリ || hmac.new || 鍵つきハッシュ。 || hmac.new(key, msg, 'sha256')
+標準ライブラリ || base64.b64encode || Base64 に変換する。 || base64.b64encode(b'a')
+標準ライブラリ || uuid.uuid4 || ランダムな UUID。 || uuid.uuid4()
+標準ライブラリ || statistics.mean || 平均を求める。 || statistics.mean(a)
+標準ライブラリ || statistics.median || 中央値。 || statistics.median(a)
+標準ライブラリ || statistics.stdev || 標準偏差。 || statistics.stdev(a)
+標準ライブラリ || math.floor / ceil || 切り捨て・切り上げ。 || math.ceil(1.2)
+標準ライブラリ || math.sqrt || 平方根。 || math.sqrt(4)
+標準ライブラリ || math.gcd || 最大公約数。 || math.gcd(12, 18)
+標準ライブラリ || math.lcm || 最小公倍数。 || math.lcm(4, 6)
+標準ライブラリ || math.isclose || ほぼ等しいか。 || math.isclose(a, b)
+標準ライブラリ || math.comb / perm || 組み合わせ・順列の数。 || math.comb(5, 2)
+標準ライブラリ || decimal.Decimal || 10進の正確な小数。 || Decimal('0.1')
+標準ライブラリ || fractions.Fraction || 分数。 || Fraction(1, 3)
+標準ライブラリ || bisect || 並んだリストへの挿入位置。 || bisect.bisect_left(a, x)
+標準ライブラリ || heapq || ヒープ（優先度キュー）。 || heapq.heappush(h, x)
+標準ライブラリ || operator.itemgetter || 要素の取り出し関数。 || itemgetter(1)
+標準ライブラリ || operator.attrgetter || 属性の取り出し関数。 || attrgetter('x')
+標準ライブラリ || string.ascii_letters || 英字の文字列。 || string.ascii_letters
+標準ライブラリ || string.Template || 置換用のテンプレート。 || Template('$a').substitute(a=1)
+標準ライブラリ || textwrap.dedent || 共通の字下げを除く。 || textwrap.dedent(s)
+標準ライブラリ || textwrap.wrap || 折り返す。 || textwrap.wrap(s, 20)
+標準ライブラリ || difflib || 差分を求める。 || difflib.unified_diff(a, b)
+標準ライブラリ || unicodedata.normalize || 文字を正規化する。 || unicodedata.normalize('NFKC', s)
+標準ライブラリ || locale || 地域の設定。 || locale.setlocale(locale.LC_ALL, '')
+標準ライブラリ || platform.system || OS の名前。 || platform.system()
+標準ライブラリ || urllib.request.urlopen || URL を開く。 || urlopen(url)
+標準ライブラリ || urllib.parse.urlparse || URL を分解する。 || urlparse(url)
+標準ライブラリ || urllib.parse.quote || URL エンコードする。 || quote('あ')
+標準ライブラリ || http.server || 簡易 Web サーバー。 || python -m http.server
+標準ライブラリ || socket || ソケット通信。 || socket.socket()
+標準ライブラリ || smtplib || メール送信。 || smtplib.SMTP('host')
+標準ライブラリ || email.message.EmailMessage || メールの作成。 || EmailMessage()
+標準ライブラリ || webbrowser.open || ブラウザで開く。 || webbrowser.open(url)
+標準ライブラリ || xml.etree.ElementTree || XML を扱う。 || ET.parse('a.xml')
+標準ライブラリ || html.escape || HTML のエスケープ。 || html.escape(s)
+標準ライブラリ || html.parser || HTML の解析。 || HTMLParser
+標準ライブラリ || inspect.signature || 関数の引数情報。 || inspect.signature(f)
+標準ライブラリ || inspect.getsource || ソースを取得する。 || inspect.getsource(f)
+標準ライブラリ || importlib.import_module || 名前でインポートする。 || importlib.import_module('os')
+標準ライブラリ || importlib.reload || 再読み込みする。 || importlib.reload(m)
+標準ライブラリ || pprint.pprint || 見やすく出力する。 || pprint(d)
+標準ライブラリ || timeit || 実行時間を測る。 || timeit.timeit('f()', number=100)
+標準ライブラリ || cProfile || 性能を計測する。 || python -m cProfile a.py
+標準ライブラリ || tracemalloc || メモリ割り当てを追跡する。 || tracemalloc.start()
+標準ライブラリ || gc.collect || ごみ集めを実行する。 || gc.collect()
+標準ライブラリ || weakref || 弱い参照。 || weakref.ref(obj)
+標準ライブラリ || copy.deepcopy || 深いコピー。 || copy.deepcopy(a)
+標準ライブラリ || copy.copy || 浅いコピー。 || copy.copy(a)
+標準ライブラリ || enum.Enum || 列挙型。 || class C(Enum): R = 1
+標準ライブラリ || enum.auto || 値を自動で振る。 || R = auto()
+標準ライブラリ || enum.IntEnum || 整数として扱える列挙。 || class C(IntEnum)
+標準ライブラリ || enum.Flag || ビットフラグの列挙。 || class P(Flag)
+標準ライブラリ || abc.ABC || 抽象基底クラス。 || class A(ABC)
+標準ライブラリ || abc.abstractmethod || 抽象メソッド。 || @abstractmethod
+標準ライブラリ || unittest.TestCase || 標準のテストクラス。 || class T(unittest.TestCase)
+標準ライブラリ || unittest.mock.patch || 差し替えてテストする。 || @patch('mod.f')
+標準ライブラリ || MagicMock || 何でも受けるモック。 || MagicMock()
+標準ライブラリ || doctest || docstring のテスト。 || doctest.testmod()
+標準ライブラリ || atexit.register || 終了時に実行する。 || atexit.register(f)
+標準ライブラリ || getpass.getpass || パスワードを入力する。 || getpass.getpass()
+標準ライブラリ || shlex.split || シェル風に分割する。 || shlex.split(cmd)
+標準ライブラリ || glob.glob || パターンでファイルを探す。 || glob.glob('*.txt')
+標準ライブラリ || io.StringIO || 文字列をファイルのように扱う。 || StringIO('a')
+標準ライブラリ || io.BytesIO || バイト列をファイルのように扱う。 || BytesIO(b'a')
+標準ライブラリ || struct.pack || バイナリにまとめる。 || struct.pack('<I', 1)
+標準ライブラリ || array.array || 数値の配列。 || array('i', [1,2])
+標準ライブラリ || memoryview || メモリを複製せず参照する。 || memoryview(b)
+標準ライブラリ || secrets.compare_digest || 定数時間で比較する。 || compare_digest(a, b)
+標準ライブラリ || ipaddress || IP アドレスを扱う。 || ip_address('1.2.3.4')
+標準ライブラリ || codecs.open || 文字コードを指定して開く。 || codecs.open(p, encoding='utf-8')
+標準ライブラリ || sys.getsizeof || オブジェクトの大きさ。 || sys.getsizeof(a)
+標準ライブラリ || sys.version_info || Python の版。 || sys.version_info >= (3, 12)
+標準ライブラリ || __name__ == '__main__' || 直接実行時だけ動かす。 || if __name__ == '__main__':
+標準ライブラリ || __all__ || 公開する名前の一覧。 || __all__ = ['f']
+標準ライブラリ || __slots__ || 属性を固定してメモリを節約する。 || __slots__ = ('x',)
+標準ライブラリ || __repr__ || 開発者向けの文字表現。 || def __repr__(self)
+標準ライブラリ || __str__ || 利用者向けの文字表現。 || def __str__(self)
+標準ライブラリ || __eq__ / __hash__ || 等価とハッシュ。 || def __eq__(self, o)
+標準ライブラリ || __lt__ || 小なりの比較。 || def __lt__(self, o)
+標準ライブラリ || __iter__ / __next__ || イテレータの実装。 || def __iter__(self)
+標準ライブラリ || __getitem__ || 添字アクセス。 || def __getitem__(self, i)
+標準ライブラリ || __len__ || 長さ。 || def __len__(self)
+標準ライブラリ || __enter__ / __exit__ || with 対応。 || def __enter__(self)
+標準ライブラリ || __getattr__ || 無い属性への参照。 || def __getattr__(self, n)
+標準ライブラリ || __init_subclass__ || 継承時のフック。 || def __init_subclass__(cls)
+標準ライブラリ || __class_getitem__ || クラスに [] を使う。 || def __class_getitem__(cls, k)
+標準ライブラリ || メタクラス || クラスを作るクラス。 || class M(type)
+標準ライブラリ || プロパティ || 属性のように使うメソッド。 || @property
+標準ライブラリ || classmethod || クラスを受けるメソッド。 || @classmethod
+標準ライブラリ || staticmethod || 自身を受けないメソッド。 || @staticmethod
+標準ライブラリ || super() || 親クラスを呼ぶ。 || super().__init__()
+標準ライブラリ || MRO || メソッド解決の順序。 || C.__mro__
+標準ライブラリ || 多重継承 || 複数の親を持つ。 || class C(A, B)
+標準ライブラリ || ミックスイン || 機能を足す小さなクラス。 || class LogMixin
+標準ライブラリ || ダックタイピング || 型でなく振る舞いで判断する。 || duck typing
+標準ライブラリ || EAFP || 試してから例外を処理する。 || try: ... except
+標準ライブラリ || LBYL || 先に確認してから行う。 || if x in d:
+標準ライブラリ || walrus 演算子 || 式の中で代入する。 || if (n := len(a)) > 3:
+標準ライブラリ || match 文 || 構造的パターンマッチ。 || match x: case 1: ...
+標準ライブラリ || f-string の = || 式と値を表示する。 || f'{x=}'
+標準ライブラリ || 位置専用引数 || / より前は位置のみ。 || def f(a, /, b)
+標準ライブラリ || キーワード専用引数 || * より後はキーワードのみ。 || def f(a, *, b)
+標準ライブラリ || *args / **kwargs || 可変長の引数。 || def f(*args, **kwargs)
+標準ライブラリ || アンパック (*) || 要素を展開する。 || f(*a)
+標準ライブラリ || 辞書のマージ演算子 || 辞書を統合する。 || a | b
+標準ライブラリ || ExceptionGroup || 複数の例外をまとめる。 || ExceptionGroup('m', [e1])
+標準ライブラリ || except* || 例外グループを処理する。 || except* ValueError:
+標準ライブラリ || raise from || 原因を明示して再送出する。 || raise B from e
+標準ライブラリ || add_note || 例外に注記を足す。 || e.add_note('x')
+標準ライブラリ || assert || 前提を確かめる。 || assert x > 0, 'msg'
+標準ライブラリ || del || 削除する。 || del a[0]
+標準ライブラリ || global / nonlocal || 外の変数を使う。 || nonlocal n
+標準ライブラリ || is / is not || 同一性の比較。 || x is None
+標準ライブラリ || pass / ... || 何もしない。 || def f(): ...
+標準ライブラリ || for-else || break しなかった時に実行。 || for ...: else:
+標準ライブラリ || while-else || ループが正常終了した時に実行。 || while ...: else:
+標準ライブラリ || try-else || 例外がなかった時に実行。 || try: ... else:
+標準ライブラリ || 条件式 || 1行の if。 || a if c else b
+標準ライブラリ || 内包表記 (集合) || 集合を作る。 || {x for x in a}
+標準ライブラリ || 内包表記 (辞書) || 辞書を作る。 || {k: v for k, v in a}
+標準ライブラリ || ジェネレータ式 || 遅延評価の式。 || sum(x for x in a)
+標準ライブラリ || yield from || 他のジェネレータに委譲する。 || yield from g()
+標準ライブラリ || send() || ジェネレータに値を送る。 || g.send(1)
+標準ライブラリ || sorted の key || 並べ替えの基準。 || sorted(a, key=len)
+標準ライブラリ || min / max の key || 比較の基準。 || max(a, key=len)
+標準ライブラリ || enumerate || 番号つきで繰り返す。 || enumerate(a, 1)
+標準ライブラリ || zip(strict=True) || 長さが違えば例外。 || zip(a, b, strict=True)
+標準ライブラリ || any / all || どれか・すべてが真。 || all(x > 0 for x in a)
+標準ライブラリ || divmod || 商と余り。 || divmod(7, 2)
+標準ライブラリ || round の丸め || 偶数への丸め。 || round(2.5)
+標準ライブラリ || int の桁区切り || 数値の見やすい書き方。 || 1_000_000
+標準ライブラリ || 複素数 || 複素数型。 || 1 + 2j
+標準ライブラリ || bytes と str || バイト列と文字列。 || s.encode()
+標準ライブラリ || removeprefix || 先頭を取り除く。 || s.removeprefix('a')
+標準ライブラリ || removesuffix || 末尾を取り除く。 || s.removesuffix('.py')
+標準ライブラリ || str.casefold || 大小無視の比較用に変える。 || s.casefold()
+標準ライブラリ || str.partition || 区切りで3分割する。 || s.partition(':')
+標準ライブラリ || str.translate || 文字を一括変換する。 || s.translate(table)
+標準ライブラリ || str.zfill || 0 で埋める。 || '5'.zfill(3)

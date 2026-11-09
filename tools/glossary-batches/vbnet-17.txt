@@ -1,0 +1,27 @@
+補足 || Option Strict Off の問題 || 遅延バインディングで実行時に失敗しうる。 || Option Strict On を推奨
+補足 || ByVal / ByRef || 値渡し・参照渡し。 || Sub F(ByRef x As Integer)
+補足 || Optional 引数 || 省略できる引数。 || Sub F(Optional n As Integer = 0)
+補足 || ParamArray || 可変長の引数。 || Sub F(ParamArray a() As Integer)
+補足 || 名前付き引数 || 名前で引数を渡す。 || F(n:=1)
+補足 || オーバーロード || 同名で引数違いのメソッド。 || Overloads Sub F()
+補足 || Overridable / Overrides || 上書き可能・上書き。 || Overridable Sub F()
+補足 || MustInherit / MustOverride || 抽象クラス・抽象メソッド。 || MustInherit Class A
+補足 || NotInheritable || 継承禁止。 || NotInheritable Class A
+補足 || MyBase / MyClass || 親・自分のクラスを指す。 || MyBase.New()
+補足 || Friend / Protected Friend || アセンブリ内・派生に公開。 || Friend Class A
+補足 || Implements || インターフェースを実装する。 || Implements IDisposable
+補足 || Property の Get / Set || プロパティの読み書き。 || Get : Return _x : End Get
+補足 || Default プロパティ || 添字で使える既定のプロパティ。 || Default Property Item(i)
+補足 || Structure || 値型の構造体。 || Structure P
+補足 || Enum の Flags || ビット演算の列挙。 || <Flags> Enum P
+補足 || Nullable(Of T) || Nothing を許す値型。 || Dim n As Integer?
+補足 || GetValueOrDefault || Nullable の値を取る。 || n.GetValueOrDefault()
+補足 || With ブロック || 同じ対象への連続操作。 || With obj : .A = 1 : End With
+補足 || GoTo / ラベル || 無条件の移動。 || GoTo Done
+補足 || On Error (旧式) || 旧式のエラー処理。 || On Error Resume Next
+補足 || Err オブジェクト || 旧式のエラー情報。 || Err.Description
+補足 || Stop / End || 実行の停止。 || End
+補足 || DoEvents || 画面の処理を回す。 || Application.DoEvents()
+補足 || Shell || 外部プログラムを起動する（旧式）。 || Shell("notepad")
+補足 || InputBox / MsgBox || 入力・メッセージの旧式の窓。 || MsgBox("a")
+補足 || MessageBox.Show || メッセージを表示する。 || MessageBox.Show("a")
