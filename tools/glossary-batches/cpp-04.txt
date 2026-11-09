@@ -1,0 +1,119 @@
+並行処理 || std::thread || スレッド。 || std::thread t(f);
+並行処理 || thread::join / detach || 待機・切り離し。 || t.join();
+並行処理 || std::jthread || 自動で join するスレッド。 || std::jthread t(f);
+並行処理 || std::stop_token || 停止要求の伝達。 || std::stop_token st
+並行処理 || std::mutex || 排他制御。 || std::mutex m;
+並行処理 || std::lock_guard || 範囲でロック。 || std::lock_guard<std::mutex> g(m);
+並行処理 || std::unique_lock || 柔軟なロック。 || std::unique_lock<std::mutex> l(m);
+並行処理 || std::scoped_lock || 複数ロックを安全に取得。 || std::scoped_lock l(a, b);
+並行処理 || std::shared_mutex || 読み書きロック。 || std::shared_mutex
+並行処理 || std::recursive_mutex || 再入可能なロック。 || std::recursive_mutex
+並行処理 || std::condition_variable || 条件待ち。 || cv.wait(l)
+並行処理 || std::atomic || 原子的な変数。 || std::atomic<int> n;
+並行処理 || memory_order || メモリ順序の指定。 || std::memory_order_acquire
+並行処理 || compare_exchange || 比較して交換。 || a.compare_exchange_strong(e, d)
+並行処理 || std::future / promise || 非同期結果の受け渡し。 || std::promise<int> p;
+並行処理 || std::async || 非同期実行。 || std::async(std::launch::async, f)
+並行処理 || std::packaged_task || 関数を future に結び付け。 || std::packaged_task<int()> t(f);
+並行処理 || std::latch / barrier || 同期の部品。 || std::latch l(3);
+並行処理 || std::counting_semaphore || 計数セマフォ。 || std::counting_semaphore<4> s(4);
+並行処理 || データ競合 || 排他なしの同時アクセス。 || data race
+並行処理 || デッドロック || 互いに待ち続ける。 || deadlock
+並行処理 || thread_local の利用 || スレッドごとの値。 || thread_local
+並行処理 || std::this_thread::sleep_for || 一定時間待つ。 || std::this_thread::sleep_for(100ms)
+並行処理 || std::this_thread::yield || 実行を譲る。 || std::this_thread::yield()
+並行処理 || hardware_concurrency || 並列数の目安。 || std::thread::hardware_concurrency()
+並行処理 || std::chrono || 時間の機能。 || std::chrono::seconds(1)
+並行処理 || chrono::steady_clock || 単調な時計。 || std::chrono::steady_clock::now()
+並行処理 || chrono::duration_cast || 時間の単位変換。 || duration_cast<milliseconds>(d)
+並行処理 || chrono リテラル || 時間のリテラル。 || 100ms, 1s
+並行処理 || OpenMP || 並列化の指示。 || #pragma omp parallel for
+並行処理 || TBB || 並列ライブラリ。 || tbb::parallel_for
+並行処理 || SIMD || 1 命令で複数データ。 || AVX
+並行処理 || std::simd || 標準の SIMD。 || std::simd
+例外 || try / catch || 例外の捕捉。 || try { } catch (const std::exception& e) { }
+例外 || throw || 例外を投げる。 || throw std::runtime_error("x");
+例外 || std::exception || 例外の基底。 || e.what()
+例外 || runtime_error / logic_error || 実行時・論理の例外。 || std::logic_error
+例外 || invalid_argument / out_of_range || 引数・範囲の例外。 || std::out_of_range
+例外 || bad_alloc || メモリ確保の失敗。 || std::bad_alloc
+例外 || catch (...) || すべての例外を捕捉。 || catch (...)
+例外 || 例外の再送出 || 捕捉して再度投げる。 || throw;
+例外 || 例外安全性 || 例外時も整合性を保つ。 || basic, strong
+例外 || スタックアンワインド || 例外で自動変数を破棄。 || unwinding
+例外 || std::terminate || 異常終了。 || std::terminate()
+例外 || std::nested_exception || 例外の入れ子。 || std::throw_with_nested
+例外 || std::error_code || エラーコード。 || std::error_code ec;
+例外 || エラーコードと例外の使い分け || 想定内か異常か。 || expected
+例外 || std::stacktrace || C++23 のスタックトレース。 || std::stacktrace::current()
+ビルド || コンパイラ || ソースを機械語に。 || g++, clang++
+ビルド || g++ || GNU のコンパイラ。 || g++ -std=c++20 a.cpp
+ビルド || clang++ || LLVM のコンパイラ。 || clang++ a.cpp
+ビルド || MSVC || Microsoft のコンパイラ。 || cl /EHsc a.cpp
+ビルド || -std オプション || 言語規格の指定。 || -std=c++23
+ビルド || -O2 / -O3 || 最適化レベル。 || -O2
+ビルド || -Wall -Wextra || 警告の有効化。 || -Wall -Wextra
+ビルド || -Werror || 警告をエラーに。 || -Werror
+ビルド || -g || デバッグ情報。 || -g
+ビルド || -I / -L / -l || ヘッダー・ライブラリの指定。 || -lm
+ビルド || プリプロセッサ || コンパイル前の処理。 || #include
+ビルド || 翻訳単位 || 1 つのソースとそのヘッダー。 || translation unit
+ビルド || リンカ || オブジェクトを結合。 || ld
+ビルド || 静的ライブラリ || 実行ファイルに埋め込む。 || .a, .lib
+ビルド || 動的ライブラリ || 実行時に読み込む。 || .so, .dll
+ビルド || ODR (単一定義規則) || 定義は 1 つだけ。 || One Definition Rule
+ビルド || ヘッダーとソースの分離 || 宣言と定義を分ける。 || .h, .cpp
+ビルド || モジュール (C++20) || ヘッダーの代替。 || import std;
+ビルド || export module || モジュールの定義。 || export module a;
+ビルド || Make || ビルド自動化。 || Makefile
+ビルド || CMake || ビルド生成ツール。 || CMakeLists.txt
+ビルド || cmake_minimum_required || CMake の最低版。 || cmake_minimum_required(VERSION 3.20)
+ビルド || add_executable || 実行ファイルの定義。 || add_executable(app main.cpp)
+ビルド || target_link_libraries || ライブラリの連結。 || target_link_libraries(app PRIVATE a)
+ビルド || Ninja || 高速ビルドツール。 || ninja
+ビルド || Conan / vcpkg || C++ のパッケージ管理。 || vcpkg install
+ビルド || clang-format || コード整形。 || clang-format -i a.cpp
+ビルド || clang-tidy || 静的解析。 || clang-tidy a.cpp
+ビルド || cppcheck || 静的解析ツール。 || cppcheck a.cpp
+ビルド || GDB / LLDB || デバッガ。 || gdb ./a.out
+ビルド || Google Test || テストフレームワーク。 || TEST(A, B)
+ビルド || Catch2 || テストフレームワーク。 || TEST_CASE
+ビルド || doctest || 軽量なテスト FW。 || TEST_CASE
+ビルド || Google Benchmark || 性能測定。 || BENCHMARK(f)
+ビルド || Doxygen || ドキュメント生成。 || /** @brief */
+ビルド || Boost || 汎用ライブラリ群。 || boost::
+ビルド || Qt || GUI フレームワーク。 || QWidget
+ビルド || fmt ライブラリ || 書式化ライブラリ。 || fmt::print
+ビルド || spdlog || ログライブラリ。 || spdlog::info
+ビルド || nlohmann/json || JSON ライブラリ。 || nlohmann::json
+ビルド || Eigen || 線形代数ライブラリ。 || Eigen::Matrix
+ビルド || SDL / SFML || ゲーム・描画ライブラリ。 || SDL_Init
+ビルド || OpenCV || 画像処理ライブラリ。 || cv::Mat
+ビルド || Unreal Engine (C++) || ゲームエンジン。 || UCLASS
+ビルド || C++98 / 03 || 初期の標準規格。 || C++98
+ビルド || C++11 || 現代 C++ の出発点。 || auto, lambda
+ビルド || C++14 || C++11 の改良。 || generic lambda
+ビルド || C++17 || 構造化束縛など。 || std::optional
+ビルド || C++20 || コンセプト・ranges。 || concepts
+ビルド || C++23 || expected・print など。 || std::expected
+ビルド || C++26 || 次期規格。 || reflection
+ビルド || 静的リフレクション || 型情報のコンパイル時取得。 || ^T
+ビルド || ABI || バイナリ互換の規約。 || ABI
+ビルド || extern "C" || C 言語のリンク指定。 || extern "C" { }
+ビルド || 名前修飾 (マングリング) || 関数名の符号化。 || mangling
+ビルド || ポインタ演算 || アドレスの加減算。 || p + 1
+ビルド || 配列とポインタ || 配列名は先頭を指す。 || a == &a[0]
+ビルド || 多次元配列 || 配列の配列。 || int a[3][3]
+ビルド || C 文字列 || ヌル終端の文字配列。 || char s[] = "a";
+ビルド || strlen / strcpy / strcmp || C 文字列の操作。 || strlen(s)
+ビルド || memcpy / memset || メモリ操作。 || memcpy(d, s, n)
+ビルド || qsort / bsearch || C の整列・探索。 || qsort(a, n, sz, cmp)
+ビルド || 構造体のパディング || メンバ間の空き。 || sizeof(struct)
+ビルド || ヘッダー <cstdio> など || C 互換ヘッダー。 || <cstdio>
+ビルド || <cmath> || 数学関数。 || std::sqrt(x)
+ビルド || <cstdlib> || 汎用関数。 || std::abs(x)
+ビルド || <numbers> || 数学定数。 || std::numbers::pi
+ビルド || <bit> || ビット操作。 || std::popcount(x)
+ビルド || <random> || 乱数。 || std::mt19937 rng(1);
+ビルド || uniform_int_distribution || 一様な整数乱数。 || std::uniform_int_distribution<int> d(1, 6);
+ビルド || std::random_device || 非決定的な乱数源。 || std::random_device rd;

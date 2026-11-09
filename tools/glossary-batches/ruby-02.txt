@@ -1,0 +1,187 @@
+配列 || Array.new || 配列の生成。 || Array.new(3, 0)
+配列 || push / << / append || 末尾に追加。 || a << 1
+配列 || pop / shift / unshift || 取り出しと先頭追加。 || a.shift
+配列 || first / last || 先頭・末尾の要素。 || a.first(2)
+配列 || length / size / count || 要素数。 || a.size
+配列 || empty? / any? / none? || 空・存在の判定。 || a.any?
+配列 || include? || 含むか判定。 || a.include?(1)
+配列 || index / find_index || 位置の検索。 || a.index(2)
+配列 || fetch || 範囲外で例外を出す取得。 || a.fetch(10, 0)
+配列 || dig || 入れ子の取得。 || a.dig(0, 1)
+配列 || values_at || 複数位置の取得。 || a.values_at(0, 2)
+配列 || slice / take / drop || 部分の取得。 || a.take(3)
+配列 || insert / delete / delete_at || 挿入と削除。 || a.delete_at(0)
+配列 || delete_if / reject! || 条件で削除。 || a.delete_if(&:odd?)
+配列 || compact || nil の除去。 || a.compact
+配列 || flatten || 入れ子の平坦化。 || a.flatten
+配列 || uniq || 重複の除去。 || a.uniq
+配列 || reverse / rotate || 逆順・回転。 || a.rotate
+配列 || sort / sort_by || 整列。 || a.sort_by { |x| -x }
+配列 || min / max / minmax || 最小・最大。 || a.max
+配列 || min_by / max_by || 基準による最小・最大。 || a.max_by(&:size)
+配列 || sum || 合計。 || a.sum
+配列 || zip || 配列の組み合わせ。 || a.zip(b)
+配列 || product / combination || 直積・組み合わせ。 || a.combination(2)
+配列 || permutation || 順列。 || a.permutation(2)
+配列 || transpose || 行列の転置。 || m.transpose
+配列 || each_slice / each_cons || 区切り・連続窓。 || a.each_cons(2)
+配列 || sample / shuffle || 乱択・シャッフル。 || a.sample
+配列 || 配列の演算 || + - & | による集合演算。 || a & b
+配列 || * による結合 || 繰り返し・join。 || [1] * 3
+配列 || fill / clear || 埋める・全削除。 || a.fill(0)
+配列 || bsearch || 二分探索。 || a.bsearch { |x| x >= 3 }
+配列 || pack || バイナリへ変換。 || a.pack("C*")
+配列 || assoc / rassoc || 組の検索。 || pairs.assoc(:a)
+配列 || to_h || ハッシュへ変換。 || pairs.to_h
+配列 || cycle || 繰り返し走査。 || a.cycle { }
+配列 || partition || 2 つに分割。 || a.partition(&:even?)
+配列 || group_by || グループ化。 || a.group_by(&:odd?)
+配列 || chunk_while / slice_when || 連続する塊で分割。 || a.slice_when { |x, y| y != x + 1 }
+配列 || tally || 出現数の集計。 || a.tally
+配列 || filter_map || 変換して nil を除く。 || a.filter_map { |x| x * 2 if x.odd? }
+配列 || each_with_index / each_with_object || 添字・累積付き走査。 || a.each_with_index
+配列 || inject / reduce || 畳み込み。 || a.inject(:+)
+配列 || map / collect || 変換。 || a.map { |x| x * 2 }
+配列 || select / filter / reject || 絞り込み。 || a.select(&:even?)
+配列 || find / detect || 最初の一致。 || a.find { |x| x > 2 }
+配列 || find_all || すべての一致。 || a.find_all(&:odd?)
+配列 || all? / one? || すべて・1 つだけ一致。 || a.all?(Integer)
+配列 || flat_map || 変換して平坦化。 || a.flat_map { |x| [x, x] }
+配列 || take_while / drop_while || 条件で取る・捨てる。 || a.take_while { |x| x < 3 }
+配列 || lazy || 遅延評価。 || (1..Float::INFINITY).lazy
+配列 || each_entry / step || 走査の種類。 || 1.step(10, 3)
+配列 || Array#sum の精度 || 小数は誤差補正がある。 || [0.1] * 10
+配列 || Set || 重複なしの集合。 || Set.new([1, 2])
+配列 || Set#add / include? || 追加と判定。 || s.add(1)
+配列 || Set の演算 || 和・積・差。 || a | b
+ハッシュ || Hash.new || ハッシュの生成。 || Hash.new(0)
+ハッシュ || リテラル記法 || キーと値の組。 || { a: 1, "b" => 2 }
+ハッシュ || fetch / dig || 取得。 || h.fetch(:a, 0)
+ハッシュ || key? / value? || キー・値の存在判定。 || h.key?(:a)
+ハッシュ || keys / values || キー・値の配列。 || h.keys
+ハッシュ || each / each_pair || 組の走査。 || h.each { |k, v| }
+ハッシュ || each_key / each_value || キー・値の走査。 || h.each_key
+ハッシュ || map / to_a || 配列へ変換。 || h.map { |k, v| v }
+ハッシュ || select / reject / filter_map || 絞り込み。 || h.select { |k, v| v > 1 }
+ハッシュ || transform_values / keys || 値・キーの変換。 || h.transform_values(&:to_s)
+ハッシュ || merge / update || 結合。 || h.merge(o)
+ハッシュ || delete / delete_if || 削除。 || h.delete(:a)
+ハッシュ || sort_by / min_by / max_by || 並べ替え・最大最小。 || h.sort_by { |k, v| v }
+ハッシュ || group_by / partition || 分類。 || h.partition
+ハッシュ || invert || キーと値の入れ替え。 || h.invert
+ハッシュ || slice / except || 一部のキーを取り出す・除く。 || h.slice(:a)
+ハッシュ || compact / compact! || nil の除去。 || h.compact
+ハッシュ || default / default_proc || 既定値の指定。 || Hash.new { |h, k| h[k] = [] }
+ハッシュ || compare_by_identity || 同一性でキー比較。 || h.compare_by_identity
+ハッシュ || any? / all? / count || 判定と件数。 || h.count
+ハッシュ || sum / min / max || 集計。 || h.values.sum
+ハッシュ || to_a / to_h || 変換。 || h.to_a
+ハッシュ || ハッシュ省略記法 || 同名の変数を省略。 || { x:, y: }
+ハッシュ || キーワード引数との変換 || ** で展開。 || f(**opts)
+ハッシュ || 深いマージ || 再帰的な結合。 || deep_merge
+ハッシュ || HashWithIndifferentAccess || 文字列・シンボル両対応。 || Rails
+ハッシュ || OpenStruct / Struct || 簡易なデータ構造。 || Struct.new(:a, :b)
+ハッシュ || Data.define || 不変の値オブジェクト。 || Data.define(:x, :y)
+ハッシュ || Struct の keyword_init || キーワードで初期化。 || Struct.new(:a, keyword_init: true)
+クラス || class || クラスの定義。 || class Dog; end
+クラス || initialize || 初期化メソッド。 || def initialize(name)
+クラス || new || インスタンス生成。 || Dog.new("a")
+クラス || attr_reader / writer / accessor || アクセサの生成。 || attr_accessor :name
+クラス || self || 自分自身。 || self.name
+クラス || インスタンスメソッド || インスタンスの処理。 || def bark
+クラス || クラスメソッド || クラスの処理。 || def self.create
+クラス || class << self || クラスメソッドをまとめて定義。 || class << self
+クラス || 継承 || < で拡張する。 || class B < A
+クラス || super || 親のメソッド呼出。 || super(name)
+クラス || オーバーライド || 子で上書き。 || def to_s
+クラス || to_s / inspect || 文字列表現。 || def to_s
+クラス || ==, eql?, hash の定義 || 等価性の定義。 || def ==(o)
+クラス || <=> と Comparable || 比較の実装。 || include Comparable
+クラス || each と Enumerable || 反復の実装。 || include Enumerable
+クラス || module || 機能のまとまり。 || module M; end
+クラス || include || インスタンスに機能追加。 || include M
+クラス || extend || クラスに機能追加。 || extend M
+クラス || prepend || 先頭に差し込む。 || prepend M
+クラス || 名前空間としての module || 名前の衝突を避ける。 || module A; class B; end; end
+クラス || module_function || モジュール関数にする。 || module_function
+クラス || Mixin || モジュールによる共通化。 || include
+クラス || ancestors || 継承チェーン。 || A.ancestors
+クラス || メソッド探索 || 呼び出し先の決定順。 || MRO
+クラス || public / private / protected || 公開範囲。 || private
+クラス || private_constant || 定数を非公開に。 || private_constant :X
+クラス || method_missing || 未定義メソッドの処理。 || def method_missing
+クラス || respond_to_missing? || 動的メソッドの宣言。 || def respond_to_missing?
+クラス || define_method || メソッドの動的定義。 || define_method(:a) { }
+クラス || instance_variable_get / set || 変数の動的操作。 || instance_variable_get(:@a)
+クラス || Object#inspect の定義 || デバッグ表示。 || def inspect
+クラス || Singleton モジュール || 唯一のインスタンス。 || include Singleton
+クラス || シングルトンメソッド || 特定のオブジェクトだけのメソッド。 || def obj.f
+クラス || Refinements || 局所的な拡張。 || refine String do
+クラス || Module#refine / using || 拡張の有効化。 || using M
+クラス || オープンクラス || 既存クラスの再オープン。 || class String
+クラス || モンキーパッチ || 既存挙動の書き換え。 || class Integer
+クラス || ObjectSpace::WeakMap || 弱参照のマップ。 || ObjectSpace::WeakMap
+クラス || Ractor || 並列実行の単位。 || Ractor.new { }
+クラス || Comparable#clamp || 範囲に収める。 || 5.clamp(1, 3)
+メソッド || def || メソッドの定義。 || def add(a, b)
+メソッド || 戻り値 || 最後の式が値。 || a + b
+メソッド || return || 明示的に返す。 || return 1
+メソッド || 引数の既定値 || 省略時の値。 || def f(a = 1)
+メソッド || キーワード引数 || 名前付き引数。 || def f(a:, b: 2)
+メソッド || 可変長引数 || 任意個の引数。 || def f(*args)
+メソッド || ブロック引数 || ブロックを受け取る。 || def f(&blk)
+メソッド || 引数の転送 || ... で全て転送。 || def f(...)
+メソッド || 無名ブロック転送 || & のみで転送。 || def f(&)
+メソッド || ?! で終わるメソッド || 真偽・破壊的な慣習。 || empty?, map!
+メソッド || メソッド参照 || method で取得。 || method(:puts)
+メソッド || エンドレスメソッド || 1 行定義。 || def sq(x) = x * x
+メソッド || alias / alias_method || 別名の定義。 || alias_method :a, :b
+メソッド || undef / remove_method || メソッドの削除。 || undef f
+メソッド || 再帰 || 自分を呼ぶ。 || fact(n - 1)
+メソッド || メモ化 || 結果を保存。 || @a ||= calc
+メソッド || ブロック || 処理の塊。 || [1].each { |x| }
+メソッド || yield || ブロックの呼び出し。 || yield(1)
+メソッド || block_given? || ブロックの有無。 || block_given?
+メソッド || Proc || ブロックをオブジェクト化。 || Proc.new { |x| }
+メソッド || lambda / -> || 厳密な引数の無名関数。 || ->(x) { x * 2 }
+メソッド || Proc と lambda の違い || return と引数の扱い。 || lambda
+メソッド || クロージャ || 外の変数を保持。 || counter
+メソッド || カリー化 || 引数を 1 つずつ適用。 || add.curry[1]
+メソッド || >> と << (合成) || 関数の合成。 || f >> g
+メソッド || Method#to_proc || メソッドを Proc に。 || &method(:f)
+メソッド || ブロックローカル変数 || ブロック内限定の変数。 || |x; y|
+メソッド || 番号付きブロック引数 || _1 で引数参照。 || map { _1 * 2 }
+メソッド || it (Ruby 3.4) || 暗黙のブロック引数。 || map { it * 2 }
+メソッド || Enumerator || 外部反復子。 || e = a.each
+メソッド || Enumerator::Lazy || 遅延列挙。 || lazy.map
+メソッド || Enumerator.new || 列挙器の生成。 || Enumerator.new { |y| y << 1 }
+メソッド || Fiber || 中断できる処理。 || Fiber.new { }
+メソッド || Thread || スレッド。 || Thread.new { }
+メソッド || Mutex || 排他制御。 || Mutex.new.synchronize
+メソッド || Queue || スレッド間のキュー。 || Queue.new
+メソッド || GVL || グローバル VM ロック。 || GVL
+メソッド || Timeout || 時間制限。 || Timeout.timeout(1)
+例外 || begin / rescue || 例外の捕捉。 || begin; rescue => e; end
+例外 || ensure || 必ず実行する処理。 || ensure
+例外 || else (例外) || 例外なしの場合の処理。 || else
+例外 || raise || 例外を発生させる。 || raise ArgumentError
+例外 || retry (例外) || やり直し。 || retry
+例外 || StandardError || 通常の例外の基底。 || rescue StandardError
+例外 || RuntimeError / ArgumentError || 基本的な例外。 || ArgumentError
+例外 || NoMethodError / NameError || メソッド・名前の未定義。 || NoMethodError
+例外 || TypeError / ZeroDivisionError || 型・ゼロ除算。 || 1 / 0
+例外 || KeyError / IndexError || キー・添字の誤り。 || h.fetch(:x)
+例外 || StopIteration || 反復の終了。 || e.next
+例外 || FrozenError || 凍結物の変更。 || "a".freeze << "b"
+例外 || Errno::ENOENT || ファイルがない。 || File.read("x")
+例外 || カスタム例外 || 独自の例外クラス。 || class MyError < StandardError
+例外 || メッセージ / backtrace || 例外の情報。 || e.backtrace
+例外 || cause || 原因の例外。 || e.cause
+例外 || exception の再送出 || 捕捉して再度投げる。 || raise
+例外 || メソッド全体の rescue || def 内で rescue。 || def f; rescue; end
+例外 || catch / throw || 大域脱出。 || catch(:done) { throw :done }
+例外 || warn || 標準エラーへの警告。 || warn "x"
+例外 || $stderr || 標準エラー出力。 || $stderr.puts "x"
+例外 || エラーメッセージの解読 || 行番号を手がかりに。 || file:line:in
+例外 || 例外の握りつぶし || 空の rescue は避ける。 || rescue; end
+例外 || Exception を rescue しない || 基底は避ける。 || rescue Exception

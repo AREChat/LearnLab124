@@ -1,0 +1,175 @@
+基本 || main 関数 || プログラムの開始点。 || int main() { return 0; }
+基本 || #include || ヘッダーの取り込み。 || #include <iostream>
+基本 || #define || マクロの定義。 || #define MAX 10
+基本 || #ifdef / #ifndef || 条件付きコンパイル。 || #ifdef DEBUG
+基本 || インクルードガード || 二重取り込みの防止。 || #ifndef A_H
+基本 || #pragma once || 二重取り込みの防止(簡易)。 || #pragma once
+基本 || 名前空間 || 名前の衝突を避ける。 || namespace a {}
+基本 || using 宣言 || 名前を取り込む。 || using std::cout;
+基本 || using namespace std || std を丸ごと取り込む。 || using namespace std;
+基本 || std::cout || 標準出力。 || std::cout << "hi";
+基本 || std::cin || 標準入力。 || std::cin >> n;
+基本 || std::cerr || 標準エラー出力。 || std::cerr << "err";
+基本 || std::endl || 改行してフラッシュ。 || std::cout << std::endl;
+基本 || std::print || C++23 の書式付き出力。 || std::print("{}", 1);
+基本 || std::format || C++20 の書式化。 || std::format("{:03}", 5)
+基本 || ストリーム演算子 || << と >> での入出力。 || cout << a
+基本 || printf (C 由来) || C の書式出力。 || printf("%d\n", n);
+基本 || scanf || C の書式入力。 || scanf("%d", &n);
+基本 || コメント || 説明文。 || // /* */
+基本 || 変数宣言 || 型と名前。 || int n = 0;
+基本 || 初期化 (波括弧) || 一様初期化。 || int n{5};
+基本 || auto || 型推論。 || auto x = 1.5;
+基本 || decltype || 式の型を得る。 || decltype(x) y;
+基本 || const || 変更不可。 || const int N = 5;
+基本 || constexpr || コンパイル時定数。 || constexpr int N = 5;
+基本 || consteval || 必ずコンパイル時に評価。 || consteval int f()
+基本 || constinit || 定数初期化の保証。 || constinit int n = 1;
+基本 || static 変数 || 寿命が長い変数。 || static int n;
+基本 || extern || 他の翻訳単位の宣言。 || extern int n;
+基本 || volatile || 最適化させない指定。 || volatile int n;
+基本 || mutable || const 内でも変更可能。 || mutable int c;
+基本 || thread_local || スレッドごとの変数。 || thread_local int n;
+基本 || inline 変数 || ヘッダーに定義できる変数。 || inline int n = 1;
+基本 || typedef || 型の別名。 || typedef unsigned int uint;
+基本 || using による型別名 || 型の別名(推奨)。 || using Vec = std::vector<int>;
+基本 || enum class || スコープ付き列挙型。 || enum class Color { Red };
+基本 || enum (C 形式) || 旧来の列挙型。 || enum Color { Red };
+基本 || struct || メンバが既定で公開。 || struct P { int x; };
+基本 || union || メンバがメモリを共有。 || union U { int i; float f; };
+基本 || std::variant || 型安全な共用体。 || std::variant<int, std::string>
+基本 || ビットフィールド || ビット幅を指定。 || unsigned a : 3;
+基本 || sizeof || 型の大きさ。 || sizeof(int)
+基本 || alignof / alignas || アラインメント。 || alignas(16) char b[16];
+基本 || nullptr || 空のポインタ。 || int* p = nullptr;
+基本 || NULL (旧) || 旧来の空ポインタ。 || NULL
+基本 || リテラル接尾辞 || 型を指定する。 || 10u, 1.5f, 10L
+基本 || ユーザー定義リテラル || 独自の接尾辞。 || operator""_km
+基本 || 生文字列リテラル || エスケープ不要の文字列。 || R"(a\b)"
+基本 || 2進リテラル || 0b で書く。 || 0b1010
+基本 || 桁区切り || アポストロフィで区切る。 || 1'000'000
+基本 || 文字型 || char や wchar_t。 || char c = 'a';
+基本 || char8_t / char16_t / char32_t || Unicode 用の文字型。 || char32_t c;
+基本 || bool || 真偽値。 || bool ok = true;
+基本 || short / int / long / long long || 整数型。 || long long n;
+基本 || unsigned || 符号なし整数。 || unsigned int u;
+基本 || float / double / long double || 浮動小数点型。 || double d;
+基本 || std::int32_t など || 幅が決まった整数型。 || std::int64_t
+基本 || size_t || サイズを表す型。 || size_t n = v.size();
+基本 || ptrdiff_t || ポインタの差の型。 || ptrdiff_t d;
+基本 || std::byte || バイト型。 || std::byte b{1};
+基本 || std::numeric_limits || 型の限界値。 || std::numeric_limits<int>::max()
+基本 || オーバーフロー || 符号付きは未定義動作。 || INT_MAX + 1
+基本 || 未定義動作 || 結果が保証されない。 || UB
+基本 || 実装定義の動作 || 処理系で異なる。 || implementation-defined
+基本 || 型変換 (暗黙) || 自動的な変換。 || int to double
+基本 || static_cast || 安全寄りの変換。 || static_cast<int>(d)
+基本 || dynamic_cast || 実行時に検査する変換。 || dynamic_cast<D*>(b)
+基本 || const_cast || const の除去。 || const_cast<int*>(p)
+基本 || reinterpret_cast || ビット列の再解釈。 || reinterpret_cast<char*>(p)
+基本 || C 形式キャスト || 旧来の変換。 || (int)d
+基本 || 関数形式キャスト || 型名で変換。 || int(d)
+基本 || std::bit_cast || ビットを保って変換。 || std::bit_cast<int>(f)
+基本 || 縮小変換の禁止 || 波括弧初期化で検出。 || int n{1.5};
+演算子 || 算術演算子 || 四則演算など。 || + - * / %
+演算子 || 整数除算 || 小数点以下は切り捨て。 || 7 / 2
+演算子 || 剰余 || 余り。 || 7 % 3
+演算子 || インクリメント / デクリメント || 1 増減する。 || ++i
+演算子 || 比較演算子 || 大小・等値の判定。 || == != < >
+演算子 || 三方比較演算子 || C++20 の <=>。 || a <=> b
+演算子 || 論理演算子 || 論理積・和・否定。 || && !
+演算子 || ビット演算子 || ビット単位の演算。 || & ^ ~
+演算子 || シフト演算子 || ビットのずらし。 || 1 << 3
+演算子 || 複合代入演算子 || 計算して代入。 || a += 2;
+演算子 || 条件演算子 || 条件で値を選ぶ。 || a > b ? a : b
+演算子 || カンマ演算子 || 順に評価して最後の値。 || (a, b)
+演算子 || アドレス演算子 || 変数のアドレス。 || &a
+演算子 || 間接参照演算子 || ポインタの指す先。 || *p
+演算子 || アロー演算子 || ポインタ経由のメンバ参照。 || p->x
+演算子 || ドット演算子 || メンバ参照。 || a.x
+演算子 || .* と ->* || メンバポインタ経由の参照。 || obj.*pm
+演算子 || スコープ解決演算子 || :: で名前を指定。 || std::string
+演算子 || sizeof... || パラメータパックの数。 || sizeof...(Args)
+演算子 || new / delete || 動的な生成と破棄。 || new int(5)
+演算子 || new[] / delete[] || 配列の動的確保。 || delete[] p;
+演算子 || placement new || 指定位置に生成。 || new (buf) T()
+演算子 || typeid || 実行時の型情報。 || typeid(x).name()
+演算子 || noexcept 演算子 || 例外を投げないか判定。 || noexcept(f())
+演算子 || 演算子の優先順位 || 評価の順序。 || a + b * c
+演算子 || 評価順序の未規定 || 引数の評価順は不定。 || f(i++, i++)
+演算子 || 短絡評価 || 結果が決まれば右辺を省略。 || p && p->x
+演算子 || 演算子オーバーロード || 演算子の意味を定義。 || operator+
+演算子 || 代入演算子の定義 || コピー・ムーブ代入。 || operator=
+演算子 || 添字演算子の定義 || [] の意味を定義。 || operator[]
+演算子 || 関数呼び出し演算子 || 関数オブジェクトを作る。 || operator()
+演算子 || ストリーム演算子の定義 || 入出力の対応。 || operator<<
+演算子 || 変換演算子 || 他の型へ変換。 || operator bool()
+演算子 || explicit 変換演算子 || 暗黙変換を禁止。 || explicit operator bool()
+制御構文 || if 文 || 条件分岐。 || if (a) {}
+制御構文 || if 文の初期化 || 条件の前に初期化。 || if (auto x = f(); x)
+制御構文 || if constexpr || コンパイル時の分岐。 || if constexpr (N > 0)
+制御構文 || if consteval || 定数評価かの分岐。 || if consteval
+制御構文 || switch 文 || 値による分岐。 || switch (n) { case 1: }
+制御構文 || [[fallthrough]] || 意図的な貫通。 || [[fallthrough]];
+制御構文 || for 文 || 回数指定の繰り返し。 || for (int i = 0; i < n; ++i)
+制御構文 || 範囲 for 文 || 範囲の要素を走査。 || for (auto& x : v)
+制御構文 || 範囲 for の初期化 || C++20 の初期化付き。 || for (auto v = f(); auto& x : v)
+制御構文 || while / do-while || 条件付きの繰り返し。 || while (n--)
+制御構文 || break / continue || ループの制御。 || break;
+制御構文 || goto || ラベルへ移動。 || goto end;
+制御構文 || return || 関数から戻る。 || return x;
+制御構文 || 構造化束縛 || 複数の値を分解。 || auto [a, b] = p;
+制御構文 || ラベル || goto の行き先。 || end:
+制御構文 || 無限ループ || 終わらない繰り返し。 || for (;;)
+制御構文 || 二重ループ || ループの入れ子。 || for for
+制御構文 || assert || 前提の検査。 || assert(n > 0);
+制御構文 || static_assert || コンパイル時の検査。 || static_assert(sizeof(int) == 4);
+制御構文 || [[likely]] / [[unlikely]] || 分岐予測のヒント。 || [[likely]]
+制御構文 || [[nodiscard]] || 戻り値の無視を警告。 || [[nodiscard]] int f();
+制御構文 || [[maybe_unused]] || 未使用の警告抑制。 || [[maybe_unused]] int x;
+制御構文 || [[deprecated]] || 非推奨の印。 || [[deprecated("x")]]
+制御構文 || [[noreturn]] || 戻らない関数。 || [[noreturn]] void f();
+制御構文 || [[assume]] || 最適化のための仮定。 || [[assume(x > 0)]]
+関数 || 関数宣言 || 型と引数の予告。 || int add(int, int);
+関数 || 関数定義 || 処理本体を書く。 || int add(int a, int b) { return a + b; }
+関数 || プロトタイプ宣言 || 使用前の宣言。 || void f();
+関数 || 引数の既定値 || 省略時の値。 || void f(int a = 1);
+関数 || 値渡し || コピーを渡す。 || void f(int a)
+関数 || 参照渡し || 本体を渡す。 || void f(int& a)
+関数 || const 参照渡し || コピーせず変更不可で渡す。 || void f(const T& a)
+関数 || ポインタ渡し || アドレスを渡す。 || void f(int* p)
+関数 || 右辺値参照 || 一時オブジェクトを受ける。 || void f(T&& a)
+関数 || 転送参照 || 値の種類を保って転送。 || template<class T> void f(T&&)
+関数 || std::forward || 完全転送。 || std::forward<T>(a)
+関数 || std::move || 所有権の移動を示す。 || std::move(a)
+関数 || 戻り値の最適化 || コピーを省略する。 || RVO
+関数 || 戻り値型の後置 || 後ろに型を書く。 || auto f() -> int
+関数 || 戻り値型の推論 || auto で推論。 || auto f() { return 1; }
+関数 || 関数のオーバーロード || 引数違いの同名関数。 || f(int), f(double)
+関数 || inline 関数 || 展開を許す関数。 || inline int f()
+関数 || constexpr 関数 || 定数式で使える関数。 || constexpr int sq(int x)
+関数 || noexcept || 例外を投げない宣言。 || void f() noexcept
+関数 || 関数ポインタ || 関数を指す値。 || int (*fp)(int);
+関数 || std::function || 呼び出し可能なものの入れ物。 || std::function<int(int)>
+関数 || std::bind || 引数の束縛。 || std::bind(f, 1, _1)
+関数 || ラムダ式 || 無名関数。 || [](int x) { return x; }
+関数 || キャプチャ || 外の変数の取り込み。 || [=], [&]
+関数 || 初期化キャプチャ || 式でキャプチャ。 || [v = std::move(a)]
+関数 || mutable ラムダ || コピーを変更可能に。 || [x]() mutable
+関数 || ジェネリックラムダ || auto 引数のラムダ。 || [](auto x)
+関数 || テンプレートラムダ || C++20 の明示的テンプレート。 || []<class T>(T x)
+関数 || 再帰関数 || 自分を呼ぶ。 || f(n - 1)
+関数 || 末尾再帰 || 最適化されることがある。 || tail call
+関数 || 可変長引数テンプレート || 任意個の引数。 || template<class... A>
+関数 || パラメータパック展開 || ... で展開。 || f(args...)
+関数 || 畳み込み式 || パックを演算で畳む。 || (args + ...)
+関数 || 関数オブジェクト || operator() を持つ型。 || struct F { int operator()(int); };
+関数 || std::invoke || 統一的な呼び出し。 || std::invoke(f, a)
+関数 || std::apply || タプルを引数に展開。 || std::apply(f, t)
+関数 || コルーチン || 中断・再開できる関数。 || co_await
+関数 || co_yield / co_return || コルーチンの値返し。 || co_yield 1;
+関数 || std::generator || C++23 の生成器。 || std::generator<int>
+関数 || main の引数 || コマンドライン引数。 || int main(int argc, char** argv)
+関数 || 終了コード || 戻り値で伝える。 || return 0;
+関数 || exit / abort || プログラムを終了。 || std::exit(1);
+関数 || atexit || 終了時の処理登録。 || std::atexit(f)

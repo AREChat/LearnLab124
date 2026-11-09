@@ -1,0 +1,149 @@
+基本 || puts || 改行付きで出力。 || puts "hi"
+基本 || print || 改行なしで出力。 || print "a"
+基本 || p || 内容を確認用に出力。 || p [1, 2]
+基本 || pp || 整形して出力。 || pp hash
+基本 || printf / format || 書式付き出力・文字列。 || format("%05.1f", 3.14)
+基本 || gets || 標準入力から 1 行。 || name = gets.chomp
+基本 || ARGV || コマンドライン引数。 || ARGV[0]
+基本 || ENV || 環境変数。 || ENV["HOME"]
+基本 || コメント || 説明文。 || # comment
+基本 || =begin / =end || 複数行コメント。 || =begin
+基本 || __FILE__ / $0 || 実行ファイル判定。 || if __FILE__ == $0
+基本 || require || ライブラリの読み込み。 || require "json"
+基本 || require_relative || 相対パスで読み込み。 || require_relative "a"
+基本 || load || 毎回読み込む。 || load "a.rb"
+基本 || 変数 || 小文字で始まる名前。 || count = 1
+基本 || 定数 || 大文字で始まる名前。 || MAX = 10
+基本 || グローバル変数 || $ で始まる変数。 || $debug = true
+基本 || インスタンス変数 || @ で始まる変数。 || @name
+基本 || クラス変数 || @@ で始まる変数。 || @@count
+基本 || クラスインスタンス変数 || クラス自身の変数。 || class A; @x = 1; end
+基本 || 擬似変数 || nil、true、false、self。 || self
+基本 || nil || 値なしを表すオブジェクト。 || x = nil
+基本 || 真偽値の扱い || nil と false が偽。 || if 0
+基本 || 多重代入 || 複数の値を同時に代入。 || a, b = 1, 2
+基本 || スプラット || 配列の展開・収集。 || a, *rest = [1, 2, 3]
+基本 || 変数の入れ替え || 多重代入で交換。 || a, b = b, a
+基本 || 条件付き代入 || nil のとき代入。 || x ||= 5
+基本 || 安全ナビゲーション || nil なら連鎖を止める。 || user&.name
+基本 || 整数 || 桁数無制限の整数。 || 2 ** 100
+基本 || 浮動小数点 || 小数。 || 3.14
+基本 || Rational / Complex || 有理数・複素数。 || Rational(1, 3)
+基本 || 数値の区切り || アンダースコア。 || 1_000_000
+基本 || 整数除算 || 整数同士は切り捨て。 || 7 / 2
+基本 || divmod || 商と余りを同時に。 || 7.divmod(2)
+基本 || 剰余 || 余りを求める。 || 7 % 3
+基本 || 累乗 || ** で累乗。 || 2 ** 10
+基本 || Integer#times || 回数分の繰り返し。 || 3.times { puts "a" }
+基本 || upto / downto / step || 範囲の繰り返し。 || 1.upto(5) { |i| }
+基本 || abs / round / ceil / floor || 数値の丸め。 || 3.7.round
+基本 || Integer.sqrt || 整数の平方根。 || Integer.sqrt(16)
+基本 || Math モジュール || 数学関数。 || Math.sqrt(16)
+基本 || Float::INFINITY || 無限大。 || Float::INFINITY
+基本 || BigDecimal || 精度の高い 10進数。 || BigDecimal("0.1")
+基本 || rand / srand || 乱数。 || rand(1..6)
+基本 || Random.new || 乱数生成器。 || Random.new(1)
+基本 || Kernel#sleep || 一定時間止まる。 || sleep 1
+基本 || Kernel#exit / abort || プログラムの終了。 || exit 1
+基本 || at_exit || 終了時の処理登録。 || at_exit { puts "bye" }
+基本 || if / elsif / else || 条件分岐。 || if a then b end
+基本 || unless || 条件が偽のとき。 || unless a
+基本 || 後置 if / unless || 文の後ろに条件。 || puts "a" if x
+基本 || case / when || 値による分岐。 || case x when 1 then ...
+基本 || case in (パターンマッチ) || 構造で分岐。 || case [1, 2] in [a, b]
+基本 || 三項演算子 || 条件で値を選ぶ。 || a ? 1 : 2
+基本 || while / until || 条件付きの繰り返し。 || while i < 5
+基本 || loop || 無限ループ。 || loop { break }
+基本 || for 文 || 範囲を走査。 || for i in 1..3
+基本 || break / next / redo || ループの制御。 || next if x.odd?
+基本 || retry || 再実行。 || retry
+基本 || begin ... end while || 先に実行する繰り返し。 || begin ... end while cond
+基本 || 範囲オブジェクト || 連続した値。 || 1..5, 1...5
+基本 || 無限範囲 || 終端のない範囲。 || (1..)
+基本 || Range#step / each_slice || 範囲の分割。 || (1..10).step(3)
+基本 || ===(case 等価) || case で使う比較。 || Integer === 1
+基本 || <=> 演算子 || 比較して -1,0,1。 || 1 <=> 2
+基本 || equal? / eql? / == || 同一性と等価性。 || a.equal?(b)
+基本 || and / or / not || 低優先度の論理演算。 || a and b
+基本 || defined? || 定義済みか調べる。 || defined?(x)
+基本 || BEGIN / END || 開始・終了ブロック。 || END { }
+基本 || 文字列リテラル (' と ") || 展開の有無。 || "a#{b}"
+基本 || 式展開 || 文字列に式を埋め込む。 || "#{x + 1}"
+基本 || ヒアドキュメント || 複数行文字列。 || <<~TEXT
+基本 || %w / %i || 配列の簡易記法。 || %w[a b c]
+基本 || %q / %Q || 文字列の簡易記法。 || %q(a b)
+基本 || シンボル || 軽量な識別子。 || :name
+基本 || Symbol#to_proc || メソッドをブロック化。 || map(&:to_s)
+基本 || to_s / to_i / to_f || 型変換。 || "12".to_i
+基本 || Integer() / Float() || 厳密な変換。 || Integer("12")
+基本 || to_a / to_h / to_sym || 他の型へ変換。 || [[1, 2]].to_h
+基本 || Array() || 配列への変換。 || Array(nil)
+基本 || freeze / frozen? || 変更不可にする。 || s.freeze
+基本 || dup / clone || 複製。 || a.dup
+基本 || Marshal による深いコピー || 完全な複製。 || Marshal.load(Marshal.dump(a))
+基本 || object_id || オブジェクトの ID。 || a.object_id
+基本 || nil? / empty? / blank? || 空判定(blank? は Rails)。 || s.empty?
+基本 || is_a? / kind_of? / instance_of? || 型の判定。 || x.is_a?(String)
+基本 || respond_to? || メソッドを持つか。 || x.respond_to?(:each)
+基本 || send / public_send || メソッドの動的呼出。 || obj.send(:foo)
+基本 || method / methods || メソッドの取得・一覧。 || obj.methods
+基本 || tap / then || 処理を挟む・変換する。 || x.tap { |v| p v }
+基本 || itself || 自分自身を返す。 || x.itself
+基本 || Comparable || 比較機能を追加。 || include Comparable
+基本 || Kernel#binding || 現在の環境の束縛。 || binding
+基本 || eval / instance_eval || 文字列の評価。 || eval("1 + 1")
+基本 || ObjectSpace || オブジェクトの検査。 || ObjectSpace.each_object
+基本 || GC || ガベージコレクション。 || GC.start
+基本 || irb || 対話型実行環境。 || irb
+基本 || ruby -e || 1 行を実行。 || ruby -e 'puts 1'
+基本 || ruby -v || バージョン確認。 || ruby -v
+基本 || ruby -c || 構文チェック。 || ruby -c a.rb
+基本 || ruby -w || 警告を表示。 || ruby -w a.rb
+基本 || rbenv / RVM / asdf || バージョン管理。 || rbenv install 3.3.0
+基本 || ruby-build || Ruby のビルド補助。 || ruby-build
+基本 || .ruby-version || 使用する版の指定。 || 3.3.0
+文字列 || String#length || 文字数。 || s.length
+文字列 || bytesize || バイト数。 || s.bytesize
+文字列 || upcase / downcase || 大文字・小文字化。 || s.upcase
+文字列 || capitalize / swapcase || 先頭大文字・反転。 || s.capitalize
+文字列 || strip / lstrip / rstrip || 空白の除去。 || s.strip
+文字列 || chomp / chop || 末尾の除去。 || s.chomp
+文字列 || chars / bytes / lines || 要素に分解。 || s.chars
+文字列 || split || 区切って配列に。 || s.split(",")
+文字列 || join || 配列を連結。 || a.join(",")
+文字列 || reverse || 反転。 || s.reverse
+文字列 || include? || 含むか判定。 || s.include?("a")
+文字列 || start_with? / end_with? || 前後の一致。 || s.start_with?("a")
+文字列 || index / rindex || 位置の検索。 || s.index("a")
+文字列 || [] による部分取得 || 範囲や正規表現で取得。 || s[0, 3]
+文字列 || slice / slice! || 部分の切り出し。 || s.slice(0, 2)
+文字列 || sub / gsub || 置換。 || s.gsub("a", "b")
+文字列 || sub! / gsub! || 破壊的な置換。 || s.gsub!("a", "b")
+文字列 || tr / delete / squeeze || 文字の変換・削除。 || s.tr("a-z", "A-Z")
+文字列 || count || 文字の出現数。 || s.count("a")
+文字列 || center / ljust / rjust || 幅を揃える。 || s.rjust(5, "0")
+文字列 || * と + || 繰り返しと連結。 || "ab" * 3
+文字列 || << || 破壊的な連結。 || s << "a"
+文字列 || concat / prepend / insert || 追加・挿入。 || s.prepend("a")
+文字列 || ord / chr || 文字コード変換。 || "a".ord
+文字列 || succ / next || 次の文字列。 || "a".succ
+文字列 || format の %s %d %f || 書式指定。 || "%d" % 5
+文字列 || scan || 正規表現で全抽出。 || s.scan(/\d+/)
+文字列 || match / match? || 正規表現の照合。 || s.match?(/a/)
+文字列 || =~ 演算子 || 正規表現の位置照合。 || s =~ /a/
+文字列 || encode / force_encoding || 文字コード変換。 || s.encode("UTF-8")
+文字列 || unicode_normalize || Unicode の正規化。 || s.unicode_normalize
+文字列 || valid_encoding? || 文字コードの妥当性。 || s.valid_encoding?
+文字列 || each_char / each_line || 文字・行の繰り返し。 || s.each_char
+文字列 || ljust の整形 || 表形式の出力。 || s.ljust(10)
+文字列 || String#% || 書式付き文字列。 || "%s" % a
+文字列 || 文字列の比較 || == と casecmp。 || a.casecmp?(b)
+文字列 || 文字列の不変化 || frozen_string_literal。 || # frozen_string_literal: true
+文字列 || StringIO || 文字列をストリームとして扱う。 || StringIO.new("a")
+文字列 || String#unpack / Array#pack || バイナリ変換。 || [1].pack("N")
+文字列 || Base64 || Base64 変換。 || Base64.encode64(s)
+文字列 || Digest || ハッシュ計算。 || Digest::SHA256.hexdigest(s)
+文字列 || SecureRandom || 安全な乱数。 || SecureRandom.hex(8)
+文字列 || URI / CGI.escape || URL 処理。 || URI.parse(u)
+文字列 || ERB || テンプレートエンジン。 || ERB.new(t).result
+文字列 || 日本語の文字数 || length は文字数を返す。 || "あい".length

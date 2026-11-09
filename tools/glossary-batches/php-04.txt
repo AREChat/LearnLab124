@@ -1,0 +1,192 @@
+数学 || abs || 絶対値。 || abs(-3)
+数学 || ceil / floor || 切り上げ・切り捨て。 || ceil(1.2)
+数学 || round || 四捨五入。 || round(1.555, 2)
+数学 || intdiv || 整数の除算。 || intdiv(7, 2)
+数学 || fmod || 浮動小数点の剰余。 || fmod(5.5, 2)
+数学 || 剰余演算子 || 余りを求める。 || 7 % 3
+数学 || pow || べき乗。 || pow(2, 8)
+数学 || sqrt || 平方根。 || sqrt(16)
+数学 || hypot || 斜辺の長さ。 || hypot(3, 4)
+数学 || pi / M_PI || 円周率。 || M_PI
+数学 || exp / log || 指数・対数。 || log(M_E)
+数学 || log10 / log2 || 常用・2 を底とする対数。 || log10(100)
+数学 || sin / cos / tan || 三角関数。 || sin(M_PI / 2)
+数学 || atan2 || 角度を求める。 || atan2($y, $x)
+数学 || deg2rad / rad2deg || 度とラジアンの変換。 || deg2rad(180)
+数学 || is_nan / is_infinite || 異常値の判定。 || is_nan($x)
+数学 || is_finite || 有限値の判定。 || is_finite($x)
+数学 || base_convert || 基数の変換。 || base_convert('ff', 16, 2)
+数学 || bindec / decbin || 2進数との変換。 || decbin(5)
+数学 || hexdec / dechex || 16進数との変換。 || dechex(255)
+数学 || octdec / decoct || 8進数との変換。 || decoct(8)
+数学 || PHP_FLOAT_EPSILON || 浮動小数点の最小差。 || PHP_FLOAT_EPSILON
+数学 || PHP_FLOAT_MAX || double の最大値。 || PHP_FLOAT_MAX
+数学 || PHP_INT_SIZE || 整数のバイト数。 || PHP_INT_SIZE
+数学 || BCMath || 任意精度の計算。 || bcadd('0.1', '0.2', 1)
+数学 || bcmul / bcdiv || 任意精度の乗除。 || bcdiv('1', '3', 5)
+数学 || bcpow / bcsqrt || 任意精度のべき乗・平方根。 || bcpow('2', '100')
+数学 || bccomp || 任意精度の比較。 || bccomp('1', '2')
+数学 || GMP || 巨大整数の拡張。 || gmp_add('1', '2')
+数学 || gmp_pow / gmp_mod || 巨大整数の計算。 || gmp_pow(2, 100)
+数学 || number_format の丸め || 表示用の丸め。 || number_format(2.5)
+数学 || 金額計算 || 整数か BCMath で扱う。 || bcadd
+数学 || 浮動小数点の比較 || 誤差を許容する。 || abs($a - $b) < 1e-9
+数学 || array_sum の精度 || 浮動小数点誤差に注意。 || array_sum($a)
+数学 || random_int の範囲 || 暗号用の乱数。 || random_int(0, 99)
+数学 || mt_getrandmax || 乱数の最大値。 || mt_getrandmax()
+数学 || Random\Randomizer || PHP 8.2 の乱数クラス。 || new Randomizer()
+数学 || 階乗の再帰 || 再帰で計算する。 || fact($n - 1)
+数学 || 素数判定 || 平方根まで割る。 || isPrime($n)
+数学 || 最大公約数 || ユークリッドの互除法。 || gcd($a, $b)
+数学 || 累積和 || 区間和の高速化。 || $prefix[$i]
+数学 || 統計の計算 || 平均・中央値・分散。 || array_sum($a) / count($a)
+SPL・拡張 || SPL || 標準 PHP ライブラリ。 || Spl*
+SPL・拡張 || SplDoublyLinkedList || 双方向リスト。 || new SplDoublyLinkedList()
+SPL・拡張 || SplHeap || ヒープの基底。 || extends SplHeap
+SPL・拡張 || SplTempFileObject || 一時ファイル。 || new SplTempFileObject()
+SPL・拡張 || SplSubject / SplObserver || オブザーバーの型。 || SplObserver
+SPL・拡張 || LimitIterator || 範囲を限定した反復。 || new LimitIterator($it, 0, 5)
+SPL・拡張 || CachingIterator || 先読みする反復子。 || new CachingIterator($it)
+SPL・拡張 || CallbackFilterIterator || 条件で絞る反復子。 || new CallbackFilterIterator($it, $f)
+SPL・拡張 || RegexIterator || 正規表現で絞る反復子。 || new RegexIterator($it, '/a/')
+SPL・拡張 || AppendIterator || 反復子の連結。 || new AppendIterator()
+SPL・拡張 || MultipleIterator || 複数の同時反復。 || new MultipleIterator()
+SPL・拡張 || InfiniteIterator || 無限に繰り返す。 || new InfiniteIterator($it)
+SPL・拡張 || NoRewindIterator || 巻き戻さない反復子。 || new NoRewindIterator($it)
+SPL・拡張 || RecursiveArrayIterator || 再帰的な配列反復。 || new RecursiveArrayIterator($a)
+SPL・拡張 || RecursiveIteratorIterator || 木を平坦に走査。 || new RecursiveIteratorIterator($it)
+SPL・拡張 || iterator_count / iterator_apply || 反復子の補助関数。 || iterator_count($it)
+SPL・拡張 || class_implements || 実装インターフェース一覧。 || class_implements($o)
+SPL・拡張 || spl_object_id || オブジェクトの ID。 || spl_object_id($o)
+SPL・拡張 || spl_object_hash || オブジェクトのハッシュ。 || spl_object_hash($o)
+SPL・拡張 || DOMDocument || XML・HTML の木構造。 || new DOMDocument()
+SPL・拡張 || DOMXPath || XPath での検索。 || new DOMXPath($doc)
+SPL・拡張 || loadHTML || HTML の読込。 || $doc->loadHTML($html)
+SPL・拡張 || SimpleXML || 簡易な XML 操作。 || simplexml_load_string($x)
+SPL・拡張 || XMLReader || ストリーム型の XML 読込。 || new XMLReader()
+SPL・拡張 || XMLWriter || XML の書き出し。 || new XMLWriter()
+SPL・拡張 || libxml_use_internal_errors || XML エラーの抑制。 || libxml_use_internal_errors(true)
+SPL・拡張 || XXE 対策 || 外部実体を無効にする。 || LIBXML_NONET
+SPL・拡張 || XSLTProcessor || XSLT 変換。 || new XSLTProcessor()
+SPL・拡張 || ZipArchive || zip の作成・展開。 || new ZipArchive()
+SPL・拡張 || gzcompress / gzencode || 圧縮。 || gzencode($s)
+SPL・拡張 || gzdecode || gzip の展開。 || gzdecode($s)
+SPL・拡張 || PharData / Phar || アーカイブ形式。 || new Phar('a.phar')
+SPL・拡張 || GD || 画像処理の拡張。 || imagecreatetruecolor(100, 100)
+SPL・拡張 || imagecreatefromjpeg || JPEG の読込。 || imagecreatefromjpeg($p)
+SPL・拡張 || imagejpeg / imagepng || 画像の出力。 || imagepng($im, 'a.png')
+SPL・拡張 || imagecopyresampled || リサイズして複写。 || imagecopyresampled(...)
+SPL・拡張 || imagettftext || 文字の描画。 || imagettftext(...)
+SPL・拡張 || imagedestroy || 画像の破棄。 || imagedestroy($im)
+SPL・拡張 || getimagesize || 画像サイズの取得。 || getimagesize($p)
+SPL・拡張 || Imagick || ImageMagick の拡張。 || new Imagick($p)
+SPL・拡張 || exif_read_data || EXIF の読込。 || exif_read_data($p)
+SPL・拡張 || intl 拡張 || 国際化の拡張。 || extension=intl
+SPL・拡張 || NumberFormatter || 数値の地域別書式。 || new NumberFormatter('ja_JP', NumberFormatter::CURRENCY)
+SPL・拡張 || IntlDateFormatter || 地域別の日付書式。 || new IntlDateFormatter('ja_JP', ...)
+SPL・拡張 || Collator || 地域別の並べ替え。 || new Collator('ja_JP')
+SPL・拡張 || Transliterator || 文字種の変換。 || Transliterator::create('Any-Latin')
+SPL・拡張 || Normalizer || Unicode 正規化。 || Normalizer::normalize($s)
+SPL・拡張 || gettext || 翻訳の仕組み。 || _('Hello')
+SPL・拡張 || mbstring 拡張 || マルチバイト文字列。 || extension=mbstring
+SPL・拡張 || ctype 拡張 || 文字種の判定。 || ctype_digit
+SPL・拡張 || openssl 拡張 || 暗号・証明書。 || openssl_*
+SPL・拡張 || sodium 拡張 || 現代的な暗号。 || sodium_*
+SPL・拡張 || sockets 拡張 || 低水準のソケット。 || socket_create
+SPL・拡張 || stream_socket_client || ストリームのソケット。 || stream_socket_client('tcp://h:80')
+SPL・拡張 || pcntl 拡張 || プロセス制御。 || pcntl_fork()
+SPL・拡張 || posix 拡張 || POSIX 関数。 || posix_getpid()
+SPL・拡張 || proc_open || プロセスの起動と入出力。 || proc_open($cmd, $d, $p)
+SPL・拡張 || exec / shell_exec || 外部コマンドの実行。 || shell_exec('ls')
+SPL・拡張 || system / passthru || コマンドの出力をそのまま返す。 || system('ls')
+SPL・拡張 || getmypid || 自プロセスの ID。 || getmypid()
+SPL・拡張 || gethostname || ホスト名。 || gethostname()
+SPL・拡張 || php_uname || OS 情報。 || php_uname('s')
+SPL・拡張 || sys_getloadavg || 負荷平均。 || sys_getloadavg()
+SPL・拡張 || disk_free_space || 空き容量。 || disk_free_space('/')
+SPL・拡張 || gc_collect_cycles || GC の実行。 || gc_collect_cycles()
+SPL・拡張 || 参照カウント || メモリ管理の方式。 || refcount
+SPL・拡張 || メモリリーク対策 || 大量データは逐次処理。 || yield
+SPL・拡張 || memory_get_peak_usage || ピークメモリ。 || memory_get_peak_usage()
+SPL・拡張 || ストリームラッパー || 独自の入出力方式。 || stream_wrapper_register
+SPL・拡張 || フィルタ付きストリーム || php://filter。 || php://filter/read=string.toupper
+SPL・拡張 || data: ストリーム || データ URI。 || data://text/plain;base64,...
+SPL・拡張 || SessionHandlerInterface || セッション保存先の独自化。 || session_set_save_handler
+SPL・拡張 || session_name / session_id || セッションの名前と ID。 || session_id()
+SPL・拡張 || session_set_cookie_params || クッキーの設定。 || session_set_cookie_params($o)
+SPL・拡張 || session.gc_maxlifetime || セッションの有効時間。 || 1440
+SPL・拡張 || session_write_close || セッションの早期解放。 || session_write_close()
+SPL・拡張 || ロック競合 (セッション) || 並行リクエストの待ち。 || session lock
+SPL・拡張 || フラッシュメッセージ || 1 度だけ表示する。 || $_SESSION['flash']
+SPL・拡張 || PRG パターン || POST 後にリダイレクト。 || Post Redirect Get
+SPL・拡張 || 二重送信防止 || トークンで防ぐ。 || one-time token
+SPL・拡張 || ページネーション実装 || 件数から計算。 || ceil($total / $per)
+SPL・拡張 || 検索フォーム実装 || GET と LIKE 検索。 || WHERE name LIKE :q
+SPL・拡張 || LIKE のエスケープ || ワイルドカードを退避。 || addcslashes($s, '%_')
+SPL・拡張 || CSV ダウンロード || ヘッダーを付けて出力。 || header('Content-Disposition: attachment')
+SPL・拡張 || BOM 付き CSV || Excel 向けの出力。 || "\xEF\xBB\xBF"
+SPL・拡張 || SplFileObject で CSV || CSV を行単位で処理。 || $f->setFlags(SplFileObject::READ_CSV)
+SPL・拡張 || 大きな CSV の処理 || 逐次読み込みを使う。 || fgetcsv
+SPL・拡張 || ファイルダウンロード || ヘッダーと readfile。 || readfile($p)
+SPL・拡張 || 画像アップロード実装 || 検証して保存。 || move_uploaded_file
+SPL・拡張 || サムネイル生成 || GD でリサイズ。 || imagescale
+SPL・拡張 || キャプチャ画像 || 画像で文字を出す。 || imagestring
+SPL・拡張 || QR コード生成 || ライブラリを使う。 || endroid/qr-code
+SPL・拡張 || PDF 生成 || ライブラリで出力。 || TCPDF, Dompdf
+SPL・拡張 || Excel 出力 || PhpSpreadsheet を使う。 || new Spreadsheet()
+SPL・拡張 || PhpSpreadsheet || Excel の読み書き。 || IOFactory::load($p)
+SPL・拡張 || ログイン機能の実装 || ハッシュ検証とセッション。 || password_verify
+SPL・拡張 || ログアウトの実装 || セッションの破棄。 || session_destroy
+SPL・拡張 || 会員登録の実装 || 検証とハッシュ保存。 || password_hash
+SPL・拡張 || パスワードリセット || 期限付きトークン。 || random_bytes
+SPL・拡張 || 掲示板の実装 || 投稿と一覧。 || INSERT, SELECT
+SPL・拡張 || 問い合わせフォーム || 確認画面と送信。 || mb_send_mail
+SPL・拡張 || カートの実装 || セッションに保存。 || $_SESSION['cart']
+SPL・拡張 || API クライアント実装 || cURL と JSON。 || curl_exec
+SPL・拡張 || Webhook の受信 || 本文と署名を検証。 || hash_hmac
+SPL・拡張 || CRON での実行 || 定期的な CLI 実行。 || php script.php
+SPL・拡張 || getopt || CLI の引数解析。 || getopt('a:')
+SPL・拡張 || $argv / $argc || CLI の引数。 || $argv[1]
+SPL・拡張 || readline || CLI の入力。 || readline('> ')
+SPL・拡張 || STDIN の読み取り || 標準入力から読む。 || fgets(STDIN)
+SPL・拡張 || 終了コード (CLI) || exit の値。 || exit(1)
+SPL・拡張 || シグナル処理 || pcntl_signal。 || pcntl_signal(SIGTERM, $f)
+SPL・拡張 || デーモン化 || 常駐プロセス。 || supervisor
+SPL・拡張 || Supervisor || プロセス管理ツール。 || supervisord
+SPL・拡張 || キュー処理 (PHP) || ジョブを非同期で実行。 || RabbitMQ
+SPL・拡張 || Gearman / Beanstalkd || ジョブキュー。 || Beanstalkd
+SPL・拡張 || メモリ制限の調整 || CLI で上書き。 || php -d memory_limit=-1
+SPL・拡張 || プロファイリング || 遅い箇所を探す。 || Xdebug, Blackfire
+SPL・拡張 || Blackfire || 性能計測ツール。 || blackfire
+SPL・拡張 || N+1 の検出 || クエリ数を数える。 || DB::listen
+SPL・拡張 || OPcache のプリロード || 起動時に読み込む。 || opcache.preload
+SPL・拡張 || realpath キャッシュ || パス解決の高速化。 || realpath_cache_size
+SPL・拡張 || autoload の最適化 || クラスマップを作る。 || composer dump-autoload -o
+SPL・拡張 || 文字列連結の性能 || 配列と implode。 || implode
+SPL・拡張 || 参照渡しの性能 || コピーオンライト。 || copy on write
+SPL・拡張 || ジェネレータでの省メモリ || 逐次処理。 || yield
+SPL・拡張 || Redis によるセッション || 共有セッション。 || session.save_handler=redis
+SPL・拡張 || キャッシュの無効化 || 更新時に消す。 || cache invalidation
+SPL・拡張 || HTTP キャッシュ || ETag と Cache-Control。 || header('ETag: ...')
+SPL・拡張 || 条件付きリクエスト || 304 を返す。 || http_response_code(304)
+SPL・拡張 || 圧縮出力 || gzip で転送量を減らす。 || zlib.output_compression
+SPL・拡張 || CDN 連携 || 静的資産の配信。 || CDN
+SPL・拡張 || ロードバランサ配下の IP || X-Forwarded-For を使う。 || $_SERVER['HTTP_X_FORWARDED_FOR']
+SPL・拡張 || プロキシ配下の HTTPS 判定 || X-Forwarded-Proto を見る。 || HTTP_X_FORWARDED_PROTO
+SPL・拡張 || .htaccess || Apache の設定。 || RewriteEngine On
+SPL・拡張 || mod_rewrite || URL の書き換え。 || RewriteRule
+SPL・拡張 || nginx の PHP 設定 || fastcgi_pass。 || fastcgi_pass unix:/run/php.sock
+SPL・拡張 || php-fpm のプール設定 || 同時処理数の調整。 || pm.max_children
+SPL・拡張 || pm = dynamic / static || プロセス管理方式。 || pm = dynamic
+SPL・拡張 || スローログ || 遅い処理の記録。 || request_slowlog_timeout
+SPL・拡張 || エラーログの場所 || error_log の設定。 || error_log=/var/log/php.log
+SPL・拡張 || 共用サーバーでの注意 || 設定変更が限られる。 || .user.ini
+SPL・拡張 || .user.ini || ディレクトリ別の設定。 || .user.ini
+SPL・拡張 || バージョンアップ対応 || 非推奨を確認する。 || E_DEPRECATED
+SPL・拡張 || 互換性チェック || PHPCompatibility。 || phpcs --standard=PHPCompatibility
+SPL・拡張 || register_globals (廃止) || 古い危険な機能。 || removed
+SPL・拡張 || magic_quotes (廃止) || 古い自動エスケープ。 || removed
+SPL・拡張 || mysql_* (廃止) || 古い MySQL 拡張。 || removed
+SPL・拡張 || create_function (廃止) || 古い無名関数作成。 || removed
+SPL・拡張 || each (廃止) || 古い配列走査。 || removed
+SPL・拡張 || 短縮 echo タグの注意 || 設定に依存しない記法。 || <?=

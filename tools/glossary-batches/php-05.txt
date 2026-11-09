@@ -1,0 +1,178 @@
+Laravel応用 || Eloquent の create || 一括作成。 || User::create($data)
+Laravel応用 || Eloquent の firstOrCreate || 無ければ作成。 || User::firstOrCreate($a)
+Laravel応用 || updateOrCreate || あれば更新、無ければ作成。 || User::updateOrCreate($a, $b)
+Laravel応用 || Eloquent の where || 条件の指定。 || User::where('age', '>', 20)
+Laravel応用 || orderBy / latest || 並べ替え。 || User::latest()->get()
+Laravel応用 || paginate || ページ分割。 || User::paginate(15)
+Laravel応用 || simplePaginate || 簡易ページ分割。 || simplePaginate(15)
+Laravel応用 || with (eager loading) || 関連を先読み。 || User::with('posts')->get()
+Laravel応用 || withCount || 関連件数を取得。 || withCount('posts')
+Laravel応用 || has / whereHas || 関連の存在で絞る。 || whereHas('posts')
+Laravel応用 || chunk / cursor || 大量データの逐次処理。 || User::cursor()
+Laravel応用 || lazy() || 遅延コレクション。 || User::lazy()
+Laravel応用 || SoftDeletes || 論理削除。 || use SoftDeletes;
+Laravel応用 || withTrashed / restore || 論理削除の取得と復元。 || withTrashed()
+Laravel応用 || timestamps || 作成・更新日時の自動管理。 || $timestamps
+Laravel応用 || casts || 属性の型変換。 || protected $casts
+Laravel応用 || Observer || モデルイベントの監視。 || UserObserver
+Laravel応用 || ファクトリ || テスト用データの生成。 || User::factory()->create()
+Laravel応用 || DB::transaction || トランザクション。 || DB::transaction(fn() => ...)
+Laravel応用 || DB::raw || 生の SQL を挿入。 || DB::raw('count(*)')
+Laravel応用 || DB::select || 生のクエリ実行。 || DB::select('select 1')
+Laravel応用 || Schema::create || テーブル作成。 || Schema::create('a', ...)
+Laravel応用 || Blueprint || 列定義の DSL。 || $table->string('name')
+Laravel応用 || 外部キー制約 (Laravel) || 関連の整合性。 || $table->foreignId('user_id')->constrained()
+Laravel応用 || migrate:rollback || マイグレーションの巻き戻し。 || php artisan migrate:rollback
+Laravel応用 || migrate:fresh --seed || 作り直して初期投入。 || migrate:fresh --seed
+Laravel応用 || route:list || ルート一覧。 || php artisan route:list
+Laravel応用 || ルートモデルバインディング || ID からモデルを自動取得。 || Route::get('/u/{user}')
+Laravel応用 || リソースコントローラ || CRUD の定型ルート。 || Route::resource('posts', C::class)
+Laravel応用 || ルートグループ || 共通設定の束ね。 || Route::prefix('admin')->group()
+Laravel応用 || 名前付きルート || 名前で URL 生成。 || route('home')
+Laravel応用 || redirect() || リダイレクト。 || redirect()->route('home')
+Laravel応用 || back() || 前の画面へ戻る。 || back()->withInput()
+Laravel応用 || session()->flash || 1 回だけの値。 || session()->flash('ok', 'x')
+Laravel応用 || old() || 直前の入力値。 || old('name')
+Laravel応用 || @csrf || CSRF トークンの埋め込み。 || @csrf
+Laravel応用 || @method || HTTP メソッドの偽装。 || @method('PUT')
+Laravel応用 || @error || 検証エラーの表示。 || @error('name')
+Laravel応用 || 検証ルール || required、max など。 || 'name' => 'required|max:50'
+Laravel応用 || カスタム検証ルール || 独自の検証。 || make:rule
+Laravel応用 || 検証メッセージの日本語化 || lang ファイル。 || lang/ja/validation.php
+Laravel応用 || API Resource || JSON 変換クラス。 || new UserResource($u)
+Laravel応用 || JsonResource || 応答の整形。 || toArray($request)
+Laravel応用 || response()->json || JSON 応答。 || response()->json($a)
+Laravel応用 || abort() || 例外で HTTP エラーを返す。 || abort(404)
+Laravel応用 || Handler (例外処理) || 例外の一括処理。 || bootstrap/app.php
+Laravel応用 || Log ファサード || ログ出力。 || Log::info('x')
+Laravel応用 || logging チャンネル || ログの出力先。 || config/logging.php
+Laravel応用 || Pipeline || 処理の連鎖。 || Pipeline::send($x)
+Laravel応用 || Macroable || メソッドの拡張。 || Collection::macro
+Laravel応用 || ヘルパ関数 || 便利なグローバル関数。 || str(), now()
+Laravel応用 || Str / Arr クラス || 文字列・配列の補助。 || Str::slug($s)
+Laravel応用 || Carbon の使い方 || 日時操作。 || now()->addDay()
+Laravel応用 || config:cache || 設定のキャッシュ。 || php artisan config:cache
+Laravel応用 || route:cache || ルートのキャッシュ。 || php artisan route:cache
+Laravel応用 || optimize || 最適化コマンド。 || php artisan optimize
+Laravel応用 || storage:link || 公開用のリンク作成。 || php artisan storage:link
+Laravel応用 || Vite (Laravel) || アセットのビルド。 || @vite
+Laravel応用 || Mix (旧) || 旧アセットビルド。 || webpack.mix.js
+Laravel応用 || Tailwind と Laravel || CSS の併用。 || tailwind.config.js
+Laravel応用 || Laravel Forge / Vapor || デプロイ・サーバーレス。 || Vapor
+Laravel応用 || Octane || 高速なアプリサーバー。 || php artisan octane:start
+Laravel応用 || Scout || 全文検索の連携。 || Searchable
+Laravel応用 || Cashier || 課金の連携。 || Billable
+Laravel応用 || Socialite || ソーシャルログイン。 || Socialite::driver('github')
+Laravel応用 || Echo / Broadcasting || リアルタイム配信。 || broadcast(new E)
+Laravel応用 || Pusher / Reverb || リアルタイム通信基盤。 || Reverb
+Laravel応用 || Feature テスト || 画面・API のテスト。 || $this->get('/')->assertOk()
+Laravel応用 || RefreshDatabase || テスト毎に DB を初期化。 || use RefreshDatabase;
+Laravel応用 || actingAs || ログイン状態でテスト。 || $this->actingAs($u)
+Laravel応用 || Http::fake || HTTP の疑似応答。 || Http::fake()
+Laravel応用 || Mail::fake / Queue::fake || 送信・投入の確認。 || Mail::fake()
+Laravel応用 || Dusk || ブラウザテスト。 || php artisan dusk
+Symfony || Symfony Flex || パッケージの自動設定。 || composer require
+Symfony || bin/console || Symfony のコマンド。 || php bin/console
+Symfony || Bundle || 機能の拡張単位。 || FrameworkBundle
+Symfony || services.yaml || サービスの定義。 || services.yaml
+Symfony || autowiring || 型から依存を自動注入。 || autowire: true
+Symfony || #[Route] || ルートの属性。 || #[Route('/a')]
+Symfony || AbstractController || コントローラの基底。 || extends AbstractController
+Symfony || Doctrine ORM || Symfony 標準の ORM。 || #[ORM\Entity]
+Symfony || #[ORM\Column] || 列の定義。 || #[ORM\Column]
+Symfony || Repository (Doctrine) || 検索用クラス。 || ServiceEntityRepository
+Symfony || QueryBuilder || クエリの組み立て。 || $qb->where()
+Symfony || DQL || Doctrine の問い合わせ言語。 || SELECT u FROM User u
+Symfony || Form コンポーネント || フォームの生成と検証。 || createForm()
+Symfony || Validator || 制約による検証。 || #[Assert\NotBlank]
+Symfony || Security コンポーネント || 認証・認可。 || security.yaml
+Symfony || Voter || 細かい認可判断。 || VoterInterface
+Symfony || EventDispatcher || イベントの仕組み。 || dispatch($event)
+Symfony || Messenger || メッセージ処理。 || MessageBusInterface
+Symfony || Serializer || オブジェクトと配列の変換。 || SerializerInterface
+Symfony || Process || 外部プロセスの実行。 || new Process(['ls'])
+Symfony || Finder || ファイル検索。 || Finder::create()
+Symfony || Filesystem || ファイル操作。 || new Filesystem()
+Symfony || Yaml || YAML の解析。 || Yaml::parse($s)
+Symfony || DotEnv || .env の読み込み。 || Dotenv
+Symfony || VarDumper || 見やすいダンプ。 || dump($x)
+Symfony || Profiler || デバッグ用ツールバー。 || web_profiler
+Symfony || Twig の継承 || ベーステンプレート。 || {% extends 'base.html.twig' %}
+Symfony || Twig のフィルター || 値の加工。 || {{ name|upper }}
+Symfony || Twig のエスケープ || 自動で行われる。 || autoescape
+Symfony || Symfony UX || フロント連携。 || Stimulus
+Symfony || API Platform || API 構築 FW。 || #[ApiResource]
+テンプレート || Smarty || 古典的なテンプレート。 || {$name}
+テンプレート || Plates || ネイティブ PHP テンプレート。 || new Engine()
+テンプレート || ネイティブテンプレート || PHP そのものを使う。 || <?= $a ?>
+テンプレート || レイアウトの分割 || header と footer の分離。 || require 'header.php'
+テンプレート || ビューへの変数渡し || extract を使う。 || extract($vars)
+テンプレート || エスケープ関数 (e) || 出力用の短縮関数。 || function e($s)
+WordPress || テーマ階層 || 表示テンプレートの選択規則。 || single.php
+WordPress || ループ || 投稿を順に表示。 || while (have_posts())
+WordPress || the_post / the_title || 投稿の表示。 || the_title()
+WordPress || the_content / the_excerpt || 本文と抜粋。 || the_content()
+WordPress || get_header / get_footer || 共通部分の読込。 || get_header()
+WordPress || get_template_part || 部品の読込。 || get_template_part('a')
+WordPress || wp_enqueue_script || スクリプトの登録。 || wp_enqueue_script('a')
+WordPress || wp_enqueue_style || CSS の登録。 || wp_enqueue_style('a')
+WordPress || add_theme_support || テーマ機能の有効化。 || add_theme_support('title-tag')
+WordPress || register_post_type || カスタム投稿タイプ。 || register_post_type('news')
+WordPress || register_taxonomy || カスタム分類。 || register_taxonomy('genre')
+WordPress || カスタムフィールド || 投稿の追加情報。 || get_post_meta($id, 'k', true)
+WordPress || update_post_meta || メタ情報の更新。 || update_post_meta($id, 'k', 'v')
+WordPress || ACF || カスタムフィールドの人気プラグイン。 || get_field('a')
+WordPress || wp_nonce_field || CSRF 対策のトークン。 || wp_nonce_field('a')
+WordPress || wp_verify_nonce || トークンの検証。 || wp_verify_nonce($n, 'a')
+WordPress || esc_html / esc_attr || 出力のエスケープ。 || esc_html($s)
+WordPress || esc_url || URL のエスケープ。 || esc_url($u)
+WordPress || sanitize_text_field || 入力の無害化。 || sanitize_text_field($s)
+WordPress || wp_kses || 許可タグ以外を除去。 || wp_kses($s, $allowed)
+WordPress || $wpdb->prepare || 安全な SQL。 || $wpdb->prepare($sql, $v)
+WordPress || wp_remote_get || HTTP 通信。 || wp_remote_get($url)
+WordPress || REST API (WP) || 標準の REST API。 || register_rest_route
+WordPress || AJAX (admin-ajax) || 非同期処理。 || wp_ajax_my_action
+WordPress || transient || 一時的なキャッシュ。 || set_transient('k', $v, 3600)
+WordPress || options API || 設定値の保存。 || get_option('a')
+WordPress || wp-config.php の定数 || DB 接続などの設定。 || WP_DEBUG
+WordPress || 管理画面メニュー || 設定画面の追加。 || add_menu_page
+WordPress || Settings API || 設定画面の部品。 || register_setting
+WordPress || WP-CLI || コマンドラインツール。 || wp plugin list
+WordPress || ブロックエディタ || Gutenberg のこと。 || block.json
+WordPress || 固定ページと投稿 || 種類の違い。 || page, post
+WordPress || パーマリンク || URL の構造。 || /%postname%/
+WordPress || 子テーマ || 親テーマを継承。 || style.css Template:
+WordPress || ウィジェット / サイドバー || 表示領域の部品。 || register_sidebar
+WordPress || ナビゲーションメニュー || メニューの登録。 || register_nav_menus
+WordPress || メディアライブラリ || 画像の管理。 || wp_get_attachment_image
+WordPress || アイキャッチ画像 || 投稿の代表画像。 || the_post_thumbnail()
+WordPress || マルチサイト || 複数サイトを管理。 || WP_ALLOW_MULTISITE
+WordPress || セキュリティ対策 (WP) || 更新と権限管理。 || wp_login
+設計 || 依存性注入 (PHP) || 外から依存を渡す。 || __construct(private Logger $l)
+設計 || DI コンテナ (PHP-DI) || 依存解決の仕組み。 || PHP-DI
+設計 || リポジトリパターン (PHP) || 永続化の抽象化。 || UserRepository
+設計 || サービス層 || 業務処理の置き場。 || UserService
+設計 || ドメインモデル || 業務概念のクラス。 || Order
+設計 || 値オブジェクト (PHP) || 値で同一性を判断。 || final readonly class Money
+設計 || DTO (PHP) || データ転送用のクラス。 || readonly class UserDto
+設計 || ユースケース層 || 1 処理 1 クラス。 || __invoke
+設計 || クリーンアーキテクチャ || 依存を内側へ向ける。 || Clean Architecture
+設計 || ヘキサゴナル (PHP) || ポートとアダプタ。 || Ports and Adapters
+設計 || Singleton (PHP) || 1 つだけのインスタンス。 || getInstance()
+設計 || Factory (PHP) || 生成を任せる。 || Factory::create()
+設計 || Strategy (PHP) || 方式を差し替える。 || interface Strategy
+設計 || Observer (PHP) || 変化を通知。 || SplSubject
+設計 || Decorator (PHP) || 機能を重ねる。 || Decorator
+設計 || Adapter (PHP) || 互換のない形をつなぐ。 || Adapter
+設計 || Null Object || 何もしない代役。 || NullLogger
+設計 || イミュータブル設計 || 変更せず新しく作る。 || with*()
+設計 || Fluent インターフェース || メソッドチェーン。 || return $this;
+設計 || 例外設計 || 意味のある例外を使う。 || DomainException
+設計 || 型宣言の活用 || バグの早期発見。 || strict_types
+設計 || 静的解析の導入 || PHPStan のレベル。 || level: max
+設計 || テスト容易性 || 依存を差し替えられる。 || interface
+設計 || マイクロサービス (PHP) || 小さなサービスの集合。 || REST, queue
+設計 || モノリス (PHP) || 1 つにまとまった構成。 || monolith
+設計 || レガシーコード改善 || 小さく安全に直す。 || characterization test
+設計 || リファクタリング (PHP) || 動作を保ち整理。 || Rector
+設計 || コードレビュー (PHP) || 規約と設計の確認。 || PSR-12

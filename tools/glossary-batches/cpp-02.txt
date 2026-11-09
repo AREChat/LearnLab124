@@ -1,0 +1,167 @@
+クラス || class || クラスの定義。 || class A {};
+クラス || メンバ変数 || クラスのデータ。 || int x;
+クラス || メンバ関数 || クラスの処理。 || void f();
+クラス || アクセス指定子 || public、protected、private。 || private:
+クラス || コンストラクタ || 初期化関数。 || A(int x) : x(x) {}
+クラス || メンバ初期化子リスト || 初期化を効率化。 || A() : x(0) {}
+クラス || デフォルトコンストラクタ || 引数なしの生成。 || A() = default;
+クラス || デストラクタ || 破棄時の処理。 || ~A()
+クラス || コピーコンストラクタ || コピーによる生成。 || A(const A&)
+クラス || ムーブコンストラクタ || 移動による生成。 || A(A&&) noexcept
+クラス || コピー代入演算子 || コピーによる代入。 || A& operator=(const A&)
+クラス || ムーブ代入演算子 || 移動による代入。 || A& operator=(A&&) noexcept
+クラス || = default / = delete || 既定の生成・削除。 || A(const A&) = delete;
+クラス || Rule of Zero || 特殊関数を書かない設計。 || RAII 部品を使う
+クラス || Rule of Three / Five || 特殊メンバの定義指針。 || ~A, copy, move
+クラス || explicit コンストラクタ || 暗黙変換の禁止。 || explicit A(int)
+クラス || 委譲コンストラクタ || 他のコンストラクタを呼ぶ。 || A() : A(0) {}
+クラス || 継承コンストラクタ || 親のコンストラクタを使う。 || using Base::Base;
+クラス || this ポインタ || 自分自身のアドレス。 || this->x
+クラス || *this の返却 || チェーンのため自分を返す。 || return *this;
+クラス || const メンバ関数 || 状態を変えない関数。 || int f() const;
+クラス || static メンバ || クラスで共有。 || static int count;
+クラス || static メンバ関数 || インスタンス不要の関数。 || static void f();
+クラス || inline static メンバ || ヘッダー内で定義。 || inline static int n = 0;
+クラス || friend || 非公開メンバへのアクセス許可。 || friend class B;
+クラス || 継承 || 親の性質を受け継ぐ。 || class B : public A
+クラス || public / protected / private 継承 || 継承の公開範囲。 || class B : private A
+クラス || 多重継承 || 複数の親を持つ。 || class C : public A, public B
+クラス || 仮想継承 || ダイヤモンド問題の対策。 || class B : virtual public A
+クラス || ダイヤモンド継承 || 共通の祖先が重複する。 || diamond problem
+クラス || 仮想関数 || 動的に呼び先を決める。 || virtual void f();
+クラス || 純粋仮想関数 || 実装を子に任せる。 || virtual void f() = 0;
+クラス || 抽象クラス || 純粋仮想関数を持つ型。 || abstract
+クラス || override || 上書きの明示。 || void f() override;
+クラス || final || 上書き・継承の禁止。 || class A final
+クラス || 仮想デストラクタ || 基底経由の破棄に必要。 || virtual ~A()
+クラス || vtable || 仮想関数の表。 || vptr
+クラス || オブジェクトスライシング || 派生部分が切り落とされる。 || A a = b;
+クラス || 多態性 || 基底型で派生の動作。 || A* p = new B;
+クラス || RTTI || 実行時の型情報。 || typeid
+クラス || ネストクラス || クラス内のクラス。 || class A { class B {}; };
+クラス || ローカルクラス || 関数内のクラス。 || void f() { struct L {}; }
+クラス || 匿名名前空間 || 翻訳単位内の限定公開。 || namespace { }
+クラス || ポインタ to メンバ || メンバを指す値。 || int A::*p = &A::x;
+クラス || 演算子の friend 定義 || 非メンバ演算子の定義。 || friend A operator+(A, A)
+クラス || 比較演算子の自動生成 || C++20 の default 比較。 || auto operator<=>(const A&) const = default;
+クラス || 集成体 (aggregate) || 単純な構造体。 || struct P { int x, y; };
+クラス || 指示付き初期化 || メンバ名で初期化。 || P{.x = 1, .y = 2}
+クラス || POD / 標準レイアウト || C 互換のデータ型。 || std::is_standard_layout
+クラス || EBO || 空基底の最適化。 || Empty Base Optimization
+クラス || [[no_unique_address]] || 空メンバの領域を省く。 || [[no_unique_address]]
+クラス || PIMPL || 実装を隠す手法。 || std::unique_ptr<Impl>
+クラス || RAII || 資源を寿命に結び付ける。 || std::lock_guard
+クラス || スコープガード || 終了時に処理を実行。 || scope_exit
+クラス || 不変クラス || 状態を変えない。 || const
+クラス || インターフェース (C++) || 純粋仮想のみのクラス。 || struct I { virtual ~I() = default; };
+クラス || CRTP || 派生型を基底に渡す手法。 || class A : public Base<A>
+クラス || ミックスイン || 機能を継承で追加。 || template<class T> class M
+クラス || Curiously Recurring || CRTP の正式名。 || CRTP
+クラス || 型消去 || 具体型を隠して扱う。 || std::function
+クラス || ポリシーベース設計 || 振る舞いをテンプレートで差し替え。 || template<class Policy>
+クラス || タグディスパッチ || 型で関数を選ぶ。 || std::true_type
+クラス || SFINAE || 置換失敗はエラーではない。 || std::enable_if_t
+クラス || コンセプト || テンプレートの制約。 || template<std::integral T>
+クラス || requires 式 || 要件の記述。 || requires(T a) { a + a; }
+クラス || concept 定義 || 制約に名前を付ける。 || concept C = requires ...
+クラス || 制約付き auto || auto にも制約。 || std::integral auto x
+テンプレート || 関数テンプレート || 型に依らない関数。 || template<class T> T max(T a, T b)
+テンプレート || クラステンプレート || 型に依らないクラス。 || template<class T> class Box
+テンプレート || テンプレート引数推論 || 型を自動で決める。 || max(1, 2)
+テンプレート || CTAD || クラスの引数推論。 || std::pair p{1, 2};
+テンプレート || 非型テンプレート引数 || 値をパラメータに。 || template<int N>
+テンプレート || テンプレートの特殊化 || 特定の型に別実装。 || template<> class A<int>
+テンプレート || 部分特殊化 || 一部の条件で特殊化。 || template<class T> class A<T*>
+テンプレート || 変数テンプレート || 型ごとの変数。 || template<class T> constexpr T pi
+テンプレート || エイリアステンプレート || 型の別名テンプレート。 || template<class T> using V = std::vector<T>;
+テンプレート || テンプレートテンプレート引数 || テンプレートを引数に。 || template<template<class> class C>
+テンプレート || 依存名 || typename が必要な名前。 || typename T::value_type
+テンプレート || typename || 型であることを示す。 || typename T::iterator
+テンプレート || template キーワード || 依存テンプレートの指定。 || t.template f<int>()
+テンプレート || 明示的インスタンス化 || 特定の型を生成。 || template class A<int>;
+テンプレート || extern template || インスタンス化の抑制。 || extern template class A<int>;
+テンプレート || テンプレートメタプログラミング || コンパイル時の計算。 || Fact<5>::value
+テンプレート || type_traits || 型の性質を調べる。 || std::is_same_v<A, B>
+テンプレート || std::enable_if || 条件付きで有効化。 || std::enable_if_t<cond>
+テンプレート || std::conditional || 型の選択。 || std::conditional_t<c, A, B>
+テンプレート || std::decay / remove_reference || 型の加工。 || std::decay_t<T>
+テンプレート || std::is_integral など || 型の分類。 || std::is_integral_v<T>
+テンプレート || std::void_t || 検出イディオムの補助。 || std::void_t<>
+テンプレート || std::declval || 疑似的な値の生成。 || std::declval<T>()
+テンプレート || 完全特殊化の関数 || 関数の特殊化。 || template<> void f<int>()
+テンプレート || ADL || 実引数依存の名前探索。 || swap(a, b)
+テンプレート || 二段階名前探索 || テンプレートの名前解決。 || two-phase lookup
+テンプレート || テンプレートのエラー || メッセージが長い。 || static_assert
+テンプレート || ヘッダーオンリー || ヘッダーだけで完結。 || header-only
+テンプレート || 明示的な型指定 || 引数を手で指定。 || f<int>(1)
+テンプレート || 非型パラメータに auto || 任意の値型。 || template<auto V>
+テンプレート || constexpr if でテンプレート分岐 || 型別の処理。 || if constexpr (std::is_integral_v<T>)
+テンプレート || パラメータパック || 任意個のテンプレート引数。 || typename... Ts
+テンプレート || std::tuple || 異種の値の組。 || std::tuple<int, char>
+テンプレート || std::get || タプルの要素取得。 || std::get<0>(t)
+テンプレート || std::tie || 参照のタプル。 || std::tie(a, b) = p;
+テンプレート || std::make_tuple || タプルの生成。 || std::make_tuple(1, 2)
+テンプレート || std::index_sequence || 添字列の生成。 || std::make_index_sequence<N>
+STL || STL || 標準テンプレートライブラリ。 || std::vector
+STL || std::vector || 可変長配列。 || std::vector<int> v;
+STL || vector::push_back || 末尾に追加。 || v.push_back(1);
+STL || vector::emplace_back || 直接構築して追加。 || v.emplace_back(1);
+STL || vector::size / empty || 要素数と空判定。 || v.size()
+STL || vector::reserve || 容量の確保。 || v.reserve(100);
+STL || vector::resize || 要素数の変更。 || v.resize(10);
+STL || vector::shrink_to_fit || 余剰容量の解放要求。 || v.shrink_to_fit();
+STL || vector::at || 範囲検査付きの参照。 || v.at(0)
+STL || vector::front / back || 先頭・末尾の要素。 || v.back()
+STL || vector::insert / erase || 挿入と削除。 || v.erase(v.begin())
+STL || vector::clear || 全削除。 || v.clear();
+STL || vector::data || 内部配列のポインタ。 || v.data()
+STL || vector<bool> の特殊性 || ビットで格納される。 || std::vector<bool>
+STL || erase-remove イディオム || 条件で要素を削除。 || v.erase(std::remove(...), v.end())
+STL || std::erase_if || C++20 の簡易削除。 || std::erase_if(v, pred)
+STL || std::array || 固定長配列。 || std::array<int, 3> a;
+STL || std::list || 双方向リスト。 || std::list<int>
+STL || std::forward_list || 片方向リスト。 || std::forward_list<int>
+STL || std::deque || 両端キュー。 || std::deque<int>
+STL || std::stack || スタック。 || std::stack<int>
+STL || std::queue || キュー。 || std::queue<int>
+STL || std::priority_queue || 優先度付きキュー。 || std::priority_queue<int>
+STL || std::set || 整列済みの集合。 || std::set<int>
+STL || std::multiset || 重複を許す集合。 || std::multiset<int>
+STL || std::map || 整列済みの連想配列。 || std::map<std::string, int>
+STL || std::multimap || 重複キーを許す map。 || std::multimap<int, int>
+STL || std::unordered_set || ハッシュの集合。 || std::unordered_set<int>
+STL || std::unordered_map || ハッシュの連想配列。 || std::unordered_map<int, int>
+STL || map::operator[] || 取得または挿入。 || m["a"]
+STL || map::find / count || 検索と存在確認。 || m.find(k)
+STL || map::contains || C++20 の存在確認。 || m.contains(k)
+STL || map::emplace / try_emplace || 構築して挿入。 || m.try_emplace(k, v)
+STL || map::insert_or_assign || 挿入または更新。 || m.insert_or_assign(k, v)
+STL || map::lower_bound / upper_bound || 範囲探索。 || m.lower_bound(k)
+STL || map::extract || ノードの取り出し。 || m.extract(k)
+STL || std::flat_map || C++23 の配列ベース map。 || std::flat_map
+STL || std::span || 連続領域の参照。 || std::span<int> s(v)
+STL || std::mdspan || 多次元の参照。 || std::mdspan
+STL || std::pair || 2 つの値の組。 || std::pair<int, int>
+STL || std::make_pair || ペアの生成。 || std::make_pair(1, 2)
+STL || std::optional || 値があるかもしれない型。 || std::optional<int>
+STL || std::expected || 値かエラーを返す型。 || std::expected<int, E>
+STL || std::any || 任意の型を保持。 || std::any a = 1;
+STL || std::bitset || ビット集合。 || std::bitset<8> b;
+STL || std::valarray || 数値配列。 || std::valarray<int>
+STL || イテレータ || 要素を指す抽象。 || v.begin()
+STL || begin / end || 範囲の先頭と末尾。 || std::begin(v)
+STL || cbegin / cend || const イテレータ。 || v.cbegin()
+STL || rbegin / rend || 逆順のイテレータ。 || v.rbegin()
+STL || イテレータの分類 || 入力・前進・双方向など。 || random access
+STL || std::advance / next / prev || イテレータの移動。 || std::next(it)
+STL || std::distance || イテレータ間の距離。 || std::distance(a, b)
+STL || back_inserter || 末尾挿入のイテレータ。 || std::back_inserter(v)
+STL || イテレータの無効化 || 操作で無効になる。 || invalidation
+STL || 範囲ライブラリ || C++20 の ranges。 || std::ranges
+STL || ビュー (views) || 遅延評価の範囲。 || std::views::filter
+STL || パイプ演算子 || ビューの連結。 || v | std::views::take(3)
+STL || views::transform || 要素の変換。 || std::views::transform(f)
+STL || views::iota || 連続した整数。 || std::views::iota(0, 5)
+STL || ranges::sort || 範囲のソート。 || std::ranges::sort(v)
+STL || ranges::to || C++23 のコンテナ化。 || std::ranges::to<std::vector>()
+STL || views::zip || 複数範囲の組。 || std::views::zip(a, b)

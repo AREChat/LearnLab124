@@ -1,0 +1,253 @@
+ファイル || File.read || ファイルを全部読む。 || File.read("a.txt")
+ファイル || File.write || ファイルに書く。 || File.write("a.txt", s)
+ファイル || File.open || ブロックで開閉。 || File.open("a") { |f| }
+ファイル || File.readlines || 全行を配列で読む。 || File.readlines("a")
+ファイル || File.foreach || 行ごとに処理。 || File.foreach("a") { |l| }
+ファイル || File.exist? / file? / directory? || 存在・種別の確認。 || File.exist?("a")
+ファイル || File.basename / dirname / extname || パスの分解。 || File.extname("a.rb")
+ファイル || File.join || パスの結合。 || File.join("a", "b")
+ファイル || File.expand_path || 絶対パスに変換。 || File.expand_path("a")
+ファイル || File.size / mtime || サイズと更新日時。 || File.size("a")
+ファイル || File.rename / delete || 名前変更・削除。 || File.delete("a")
+ファイル || File.stat / chmod || 権限と状態。 || File.chmod(0644, "a")
+ファイル || モード (r w a) || 開く方式。 || File.open("a", "a")
+ファイル || Dir.glob || パターンで一覧。 || Dir.glob("*.rb")
+ファイル || Dir.entries / children || 一覧の取得。 || Dir.children(".")
+ファイル || Dir.mkdir / Dir.exist? || ディレクトリ操作。 || Dir.mkdir("a")
+ファイル || FileUtils || ファイル操作の補助。 || FileUtils.mkdir_p("a/b")
+ファイル || FileUtils.cp / mv / rm_rf || 複写・移動・削除。 || FileUtils.rm_rf("a")
+ファイル || Pathname || パスのオブジェクト。 || Pathname.new("a")
+ファイル || Tempfile / Dir.mktmpdir || 一時ファイル。 || Tempfile.create("a")
+ファイル || IO.popen / Open3 || 外部コマンドの入出力。 || Open3.capture2("ls")
+ファイル || システムコマンド実行 || バッククォートや system。 || `ls`
+ファイル || system / exec / spawn || コマンドの起動。 || system("ls")
+ファイル || $? / Process::Status || 終了状態。 || $?.success?
+ファイル || STDIN / STDOUT / STDERR || 標準ストリーム。 || STDOUT.puts "a"
+ファイル || $stdout.sync || 出力の即時反映。 || $stdout.sync = true
+ファイル || ARGF || 引数のファイルまたは標準入力。 || ARGF.each_line
+ファイル || CSV || CSV の読み書き。 || CSV.read("a.csv", headers: true)
+ファイル || CSV.parse / generate || CSV の解析・生成。 || CSV.generate
+ファイル || JSON.parse / generate || JSON の解析・生成。 || JSON.parse(s)
+ファイル || JSON.pretty_generate || 整形した JSON。 || JSON.pretty_generate(h)
+ファイル || symbolize_names || キーをシンボルに。 || JSON.parse(s, symbolize_names: true)
+ファイル || YAML.load_file / dump || YAML の読み書き。 || YAML.load_file("a.yml")
+ファイル || YAML.safe_load || 安全な YAML 読込。 || YAML.safe_load(s)
+ファイル || Marshal || 独自のバイナリ直列化。 || Marshal.dump(o)
+ファイル || PStore / SQLite3 || 簡易な永続化。 || PStore.new("a")
+ファイル || Zlib / Zip || 圧縮・展開。 || Zlib::GzipWriter
+ファイル || Net::HTTP || 標準の HTTP クライアント。 || Net::HTTP.get(uri)
+ファイル || Net::HTTP.post_form || フォーム送信。 || Net::HTTP.post_form(uri, h)
+ファイル || OpenURI || URL を開く。 || URI.open(url)
+ファイル || Faraday / HTTParty || HTTP クライアント gem。 || Faraday.get(url)
+ファイル || Socket / TCPServer || ソケット通信。 || TCPServer.new(3000)
+ファイル || WEBrick || 簡易 Web サーバー。 || WEBrick::HTTPServer
+ファイル || Rack || Web サーバーとアプリの規約。 || Rack::Builder
+ファイル || Sinatra || 軽量 Web FW。 || get "/" do
+ファイル || Puma / Unicorn || アプリケーションサーバー。 || puma
+ファイル || Nokogiri || HTML・XML の解析。 || Nokogiri::HTML(html)
+ファイル || Mechanize || Web 操作の自動化。 || Mechanize.new
+ファイル || Selenium (Ruby) || ブラウザ自動操作。 || Selenium::WebDriver
+ファイル || Logger || ログ出力。 || Logger.new($stdout)
+ファイル || OptionParser || コマンドライン解析。 || OptionParser.new
+ファイル || Thor / Slop || CLI 構築 gem。 || Thor
+ファイル || Time.now || 現在時刻。 || Time.now
+ファイル || Time.new / Time.at || 時刻の生成。 || Time.new(2024, 1, 1)
+ファイル || Time#strftime || 書式化。 || t.strftime("%Y-%m-%d")
+ファイル || Time.parse / strptime || 文字列から時刻。 || Time.parse("2024-01-01")
+ファイル || Time の加減算 || 秒単位で計算。 || t + 3600
+ファイル || Date / DateTime || 日付クラス。 || Date.today
+ファイル || Date#>> / next_month || 月の加算。 || d >> 1
+ファイル || Date.parse / valid_date? || 解析・妥当性。 || Date.valid_date?(2024, 2, 30)
+ファイル || Date#wday / yday || 曜日・年内通算日。 || d.wday
+ファイル || Date#cwday / cweek || ISO の曜日・週。 || d.cweek
+ファイル || Date::MONTHNAMES || 月名の配列。 || Date::MONTHNAMES
+ファイル || タイムゾーン (TZInfo) || ゾーンの扱い。 || TZInfo::Timezone
+ファイル || Process.clock_gettime || 単調時計。 || Process.clock_gettime(Process::CLOCK_MONOTONIC)
+ファイル || Benchmark || 処理時間の計測。 || Benchmark.realtime { }
+正規表現 || 正規表現リテラル || スラッシュで囲む。 || /a+/
+正規表現 || Regexp.new / escape || 生成・エスケープ。 || Regexp.escape(s)
+正規表現 || match / =~ / match? || 照合。 || s.match(/a/)
+正規表現 || MatchData || 照合結果。 || m[1]
+正規表現 || 名前付きキャプチャ || 名前で取り出す。 || /(?<y>\d+)/
+正規表現 || $~ / $1 || 直前の照合結果。 || $1
+正規表現 || scan / gsub の使い分け || 抽出と置換。 || s.scan(/\d/)
+正規表現 || gsub とブロック || 一致をブロックで変換。 || s.gsub(/a/) { |m| m.upcase }
+正規表現 || gsub とハッシュ || 対応表で置換。 || s.gsub(/a/, "a" => "b")
+正規表現 || オプション i m x || 大小無視・複数行・拡張。 || /a/i
+正規表現 || \A \z ^ $ || 先頭・末尾の指定。 || /\Aa\z/
+正規表現 || 先読み・後読み || 条件付きの一致。 || (?=a)
+正規表現 || \p{Hiragana} || 文字種プロパティ。 || /\p{Hiragana}/
+正規表現 || Regexp.union || 複数パターンの結合。 || Regexp.union("a", "b")
+正規表現 || Regexp.timeout || 実行時間の制限。 || Regexp.timeout = 1.0
+正規表現 || ReDoS || 正規表現による負荷攻撃。 || catastrophic
+メタ || メタプログラミング || プログラムでプログラムを書く。 || define_method
+メタ || instance_eval / class_eval || 文脈を変えて評価。 || class_eval { }
+メタ || instance_exec / class_exec || 引数付きで評価。 || instance_exec(1) { }
+メタ || const_get / const_set || 定数の動的操作。 || Object.const_get(:A)
+メタ || Module.new / Class.new || 動的なクラス生成。 || Class.new(A)
+メタ || send と public_send の違い || private を呼べるか。 || obj.send(:x)
+メタ || hook メソッド || inherited、included など。 || def self.inherited(k)
+メタ || included / extended / prepended || 取り込み時の hook。 || def self.included(b)
+メタ || method_added || メソッド定義時の hook。 || def self.method_added(n)
+メタ || ObjectSpace.each_object || 全オブジェクトの走査。 || each_object(Class)
+メタ || singleton_class || 特異クラス。 || obj.singleton_class
+メタ || instance_methods / private_methods || メソッド一覧。 || A.instance_methods(false)
+メタ || Method#owner / source_location || メソッドの出所。 || method(:f).source_location
+メタ || TracePoint || 実行の追跡。 || TracePoint.new(:call)
+メタ || binding.irb / debug || デバッグの起点。 || binding.irb
+メタ || DSL || 領域特化言語。 || instance_eval
+メタ || Forwardable || 委譲の定義。 || def_delegators :@a, :size
+メタ || Delegator / SimpleDelegator || 委譲クラス。 || SimpleDelegator.new(o)
+メタ || Observable || オブザーバーの実装。 || include Observable
+メタ || ObjectSpace と GC || メモリの検査。 || GC.stat
+メタ || YJIT || Ruby の JIT コンパイラ。 || --yjit
+メタ || RBS / TypeProf || 型情報の記述と推論。 || sig/a.rbs
+メタ || Sorbet / Steep || 静的型検査。 || sig { }
+メタ || パターンマッチ (deconstruct) || 分解の定義。 || def deconstruct
+メタ || find パターン || 配列内の探索。 || in [*, 3, *]
+メタ || pin 演算子 || 変数の値で照合。 || in ^x
+メタ || 右代入 (=>) || パターンで代入。 || h => {a:}
+メタ || Ruby 2.7 の新機能 || パターンマッチの導入。 || case in
+メタ || Ruby 3.0 の新機能 || Ractor・RBS・Fiber Scheduler。 || Ractor
+メタ || Ruby 3.1 の新機能 || YJIT・ハッシュ省略。 || { x: }
+メタ || Ruby 3.2 の新機能 || Data・Set の組み込み。 || Data.define
+メタ || Ruby 3.3 の新機能 || YJIT の改善。 || Prism
+メタ || Ruby 3.4 の新機能 || it の導入。 || it
+メタ || Prism || 新しい構文解析器。 || Prism.parse
+メタ || Ruby 4.0 に向けて || 次の大きな版。 || roadmap
+ツール || gem || ライブラリの配布形式。 || gem install a
+ツール || gem list / uninstall || 一覧・削除。 || gem list
+ツール || gemspec || gem の定義。 || a.gemspec
+ツール || Bundler || 依存の管理。 || bundle install
+ツール || Gemfile / Gemfile.lock || 依存と固定版。 || gem "rails"
+ツール || bundle exec || 固定版で実行。 || bundle exec rspec
+ツール || bundle update / outdated || 更新と確認。 || bundle outdated
+ツール || グループ (:development) || 環境別の依存。 || group :test do
+ツール || RubyGems.org || gem の公開場所。 || rubygems.org
+ツール || Rake || ビルドタスクツール。 || rake db:migrate
+ツール || Rakefile || タスクの定義。 || task :a do
+ツール || RSpec || テストフレームワーク。 || describe A do
+ツール || describe / context / it || テストの構造。 || it "works" do
+ツール || expect(...).to || 期待値の検証。 || expect(x).to eq(1)
+ツール || let / before || テストの準備。 || let(:a) { 1 }
+ツール || shared_examples || テストの共通化。 || shared_examples "a"
+ツール || double / allow || モックとスタブ。 || allow(a).to receive(:f)
+ツール || Minitest || 標準のテスト FW。 || assert_equal
+ツール || Test::Unit || 旧標準のテスト FW。 || Test::Unit::TestCase
+ツール || FactoryBot || テストデータの生成。 || create(:user)
+ツール || SimpleCov || カバレッジ計測。 || SimpleCov.start
+ツール || VCR / WebMock || HTTP のテスト補助。 || stub_request
+ツール || Capybara || 画面テスト。 || visit "/"
+ツール || RuboCop || 静的解析・整形。 || rubocop -a
+ツール || Standard || 設定不要の整形。 || standardrb
+ツール || YARD || ドキュメント生成。 || @param [String] a
+ツール || RDoc || 標準のドキュメント。 || rdoc
+ツール || pry / byebug || デバッガ。 || binding.pry
+ツール || debug gem || 標準のデバッガ。 || debugger
+ツール || Guard || 変更監視と自動実行。 || guard
+ツール || Foreman / overmind || 複数プロセスの起動。 || foreman start
+ツール || Sidekiq || バックグラウンドジョブ。 || Sidekiq::Worker
+ツール || Resque / DelayedJob || ジョブキュー。 || Resque
+ツール || Redis (Ruby) || Redis 接続。 || Redis.new
+ツール || Capistrano || デプロイツール。 || cap production deploy
+ツール || Kamal || コンテナデプロイ。 || kamal deploy
+ツール || Docker (Ruby) || コンテナ。 || FROM ruby:3.3
+ツール || Heroku || PaaS のホスティング。 || git push heroku main
+Rails || Ruby on Rails || 代表的な Ruby FW。 || rails new
+Rails || rails new / server || 作成と起動。 || rails server
+Rails || rails generate || 雛形の生成。 || rails g model User
+Rails || rails console || 対話型操作。 || rails c
+Rails || rails routes || ルート一覧。 || rails routes
+Rails || rails db:migrate || マイグレーション実行。 || rails db:migrate
+Rails || rails db:seed / reset || 初期データ・初期化。 || rails db:seed
+Rails || CoC (設定より規約) || 規約による省力化。 || Convention over Configuration
+Rails || DRY (Rails) || 繰り返さない。 || Don't Repeat Yourself
+Rails || MVC (Rails) || 画面・処理・データの分離。 || app/models
+Rails || routes.rb || ルートの定義。 || resources :posts
+Rails || resources / resource || RESTful なルート。 || resources :users
+Rails || namespace / scope || ルートのグループ化。 || namespace :admin
+Rails || member / collection || 追加のルート。 || member do
+Rails || ActionController || コントローラの基盤。 || ApplicationController
+Rails || before_action || 前処理。 || before_action :set_user
+Rails || params / strong parameters || 入力の受け取りと許可。 || params.require(:a).permit(:b)
+Rails || render / redirect_to || 描画とリダイレクト。 || redirect_to root_path
+Rails || respond_to || 形式別の応答。 || format.json
+Rails || flash || 1 度だけの通知。 || flash[:notice]
+Rails || session / cookies || 状態の保持。 || session[:user_id]
+Rails || ActiveRecord || ORM。 || User.find(1)
+Rails || find / find_by / where || 検索。 || User.where(age: 20)
+Rails || order / limit / offset || 並べ替え・件数。 || User.order(:id).limit(10)
+Rails || includes / preload / eager_load || 関連の先読み。 || User.includes(:posts)
+Rails || joins / left_joins || 結合。 || User.joins(:posts)
+Rails || group / having / pluck || 集計・列抽出。 || User.pluck(:name)
+Rails || count / sum / average || 集計。 || User.count
+Rails || create / save / update / destroy || 作成・保存・更新・削除。 || user.update(name: "a")
+Rails || create! / save! || 失敗時に例外。 || user.save!
+Rails || find_or_create_by || あれば取得、無ければ作成。 || find_or_create_by(a: 1)
+Rails || update_all / delete_all || 一括更新・削除。 || User.update_all(a: 1)
+Rails || upsert_all / insert_all || 一括挿入・更新。 || insert_all(rows)
+Rails || find_each || 大量データの分割処理。 || User.find_each
+Rails || scope || 検索条件の名前付け。 || scope :active, -> { }
+Rails || default_scope || 既定の条件。 || default_scope
+Rails || validates || 検証。 || validates :name, presence: true
+Rails || カスタムバリデーション || 独自の検証。 || validate :check
+Rails || errors / valid? || エラーの確認。 || user.errors.full_messages
+Rails || コールバック || 保存前後の処理。 || before_save :a
+Rails || アソシエーション || モデル間の関連。 || has_many :posts
+Rails || belongs_to / has_one || 1 対多・1 対 1。 || belongs_to :user
+Rails || has_many :through || 中間表を介した関連。 || has_many :tags, through: :taggings
+Rails || has_and_belongs_to_many || 多対多(旧)。 || has_and_belongs_to_many
+Rails || dependent: :destroy || 親削除時の子の扱い。 || dependent: :destroy
+Rails || counter_cache || 件数の保持。 || counter_cache: true
+Rails || enum (Rails) || 状態の列挙。 || enum :status, [:a, :b]
+Rails || transaction || トランザクション。 || ActiveRecord::Base.transaction
+Rails || lock / with_lock || 排他ロック。 || user.with_lock
+Rails || 楽観的ロック || lock_version 列。 || lock_version
+Rails || migration || スキーマ変更。 || create_table :users
+Rails || add_column / add_index || 列・索引の追加。 || add_index :users, :email
+Rails || schema.rb || 現在のスキーマ。 || db/schema.rb
+Rails || has_secure_password || パスワードの保護。 || has_secure_password
+Rails || Active Storage || ファイル添付。 || has_one_attached :image
+Rails || Action Text / Mailbox || 本文編集・メール受信。 || has_rich_text
+Rails || Action Mailer || メール送信。 || UserMailer.welcome.deliver_later
+Rails || Active Job || ジョブの抽象化。 || perform_later
+Rails || Action Cable || WebSocket。 || ActionCable
+Rails || Turbo / Stimulus || Hotwire のフロント。 || data-turbo
+Rails || ERB ビュー || テンプレート。 || <%= @user.name %>
+Rails || partial || 部分テンプレート。 || render "form"
+Rails || ヘルパー || ビューの補助関数。 || link_to "a", path
+Rails || form_with / form_for || フォーム生成。 || form_with model: @user
+Rails || content_for / yield || レイアウトの差し込み。 || yield :head
+Rails || Asset Pipeline / Propshaft || アセット管理。 || app/assets
+Rails || importmap / esbuild || JS の取り込み。 || bin/importmap
+Rails || キャッシュ (Rails) || フラグメントなど。 || cache @user do
+Rails || Rails.cache / fetch || キャッシュの読み書き。 || Rails.cache.fetch("a")
+Rails || credentials || 機密情報の管理。 || rails credentials:edit
+Rails || environments || development、test、production。 || RAILS_ENV
+Rails || initializers || 起動時の設定。 || config/initializers
+Rails || concerns || 共通処理の切り出し。 || ActiveSupport::Concern
+Rails || ActiveSupport || 拡張メソッド群。 || 3.days.ago
+Rails || present? / blank? || 存在・空の判定。 || s.present?
+Rails || try / presence || nil 安全な呼び出し。 || x.try(:name)
+Rails || delegate || 委譲。 || delegate :a, to: :b
+Rails || API モード || API 専用の Rails。 || rails new --api
+Rails || serializer / jbuilder || JSON の整形。 || json.id @user.id
+Rails || CSRF 対策 (Rails) || トークンの検証。 || protect_from_forgery
+Rails || Devise || 認証 gem。 || devise_for :users
+Rails || Pundit / CanCanCan || 認可 gem。 || authorize @post
+Rails || kaminari / pagy || ページネーション。 || Post.page(1)
+Rails || Ransack || 検索フォーム。 || Post.ransack(params[:q])
+Rails || ActiveAdmin / RailsAdmin || 管理画面 gem。 || ActiveAdmin.register
+Rails || Spring / Bootsnap || 起動の高速化。 || bootsnap
+Rails || Zeitwerk || オートローダー。 || config.autoload_paths
+Rails || Rails エンジン || 機能を部品として分離。 || Rails::Engine
+Rails || Hanami / Roda || 別の Ruby FW。 || Hanami
+Rails || Jekyll || 静的サイトジェネレータ。 || jekyll build
+Rails || Middleman || 静的サイトの作成。 || middleman
+Rails || DragonRuby / Gosu || ゲーム開発。 || Gosu::Window
+Rails || mruby || 組み込み向けの Ruby。 || mruby
+Rails || Ruby Gems の権利 || ライセンスの確認。 || MIT
+Rails || Matz / まつもとゆきひろ || Ruby の作者。 || Matz
+Rails || Rubyist || Ruby を使う人。 || Rubyist
+Rails || RubyKaigi || 国際カンファレンス。 || RubyKaigi
+Rails || 達人プログラマー || Ruby 界隈の精神。 || DRY

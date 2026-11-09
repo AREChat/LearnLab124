@@ -1,0 +1,101 @@
+エラーと用語 || Parse error || 構文エラー。 || syntax error, unexpected
+エラーと用語 || Fatal error || 致命的エラー。 || Fatal error: Uncaught
+エラーと用語 || Warning || 警告。処理は続く。 || Warning: Undefined variable
+エラーと用語 || Notice || 注意。軽微な問題。 || Notice: Undefined index
+エラーと用語 || Deprecated || 非推奨の使用。 || Deprecated: Passing null
+エラーと用語 || Undefined variable || 未定義の変数。 || Warning: Undefined variable $a
+エラーと用語 || Undefined array key || 存在しない添字。 || Warning: Undefined array key
+エラーと用語 || Call to undefined function || 未定義の関数呼出。 || Fatal error
+エラーと用語 || Call to a member function on null || null のメソッド呼出。 || $a->f()
+エラーと用語 || Class not found || クラスが見つからない。 || Class "A" not found
+エラーと用語 || Allowed memory size exhausted || メモリ不足。 || memory_limit
+エラーと用語 || Maximum execution time exceeded || 実行時間超過。 || max_execution_time
+エラーと用語 || headers already sent || 出力後のヘッダー送信。 || BOM, echo
+エラーと用語 || Cannot modify header information || ヘッダー変更の失敗。 || header()
+エラーと用語 || Undefined offset || 添字の誤り(旧表記)。 || Notice
+エラーと用語 || Division by zero || ゼロ除算。 || DivisionByZeroError
+エラーと用語 || Unsupported operand types || 演算できない型。 || array + int
+エラーと用語 || Uncaught TypeError || 型エラー。 || must be of type int
+エラーと用語 || Too few arguments || 引数不足。 || ArgumentCountError
+エラーと用語 || Cannot redeclare function || 関数の二重定義。 || Fatal error
+エラーと用語 || Cannot instantiate abstract class || 抽象クラスの生成。 || new A
+エラーと用語 || Access level must be || 修飾子の矛盾。 || public/private
+エラーと用語 || Object of class could not be converted to string || 文字列化できない。 || __toString
+エラーと用語 || Array to string conversion || 配列の文字列化。 || echo $array
+エラーと用語 || Trying to access array offset on null || null の添字参照。 || $a['x']
+エラーと用語 || SQLSTATE エラー || DB のエラーコード。 || SQLSTATE[23000]
+エラーと用語 || Integrity constraint violation || 整合性制約違反。 || duplicate entry
+エラーと用語 || Connection refused || 接続の拒否。 || DB, cURL
+エラーと用語 || Permission denied || 権限不足。 || chmod
+エラーと用語 || failed to open stream || ファイルを開けない。 || file_get_contents
+エラーと用語 || White Screen of Death || 真っ白な画面。 || display_errors
+エラーと用語 || 500 Internal Server Error || サーバーエラー。 || error_log
+エラーと用語 || 文字化けの原因 || 文字コードの不一致。 || UTF-8
+エラーと用語 || BOM 問題 || 先頭の不可視文字。 || UTF-8 BOM
+エラーと用語 || 改行コードの違い || CRLF と LF。 || PHP_EOL
+エラーと用語 || デバッグ出力 || var_dump などで確認。 || var_dump
+エラーと用語 || dd / dump (Laravel) || 変数を出力して停止。 || dd($x)
+エラーと用語 || error_log でのデバッグ || ログへ書き出す。 || error_log(print_r($x, true))
+エラーと用語 || debug_backtrace || 呼び出し履歴。 || debug_backtrace()
+エラーと用語 || debug_print_backtrace || 履歴を出力。 || debug_print_backtrace()
+エラーと用語 || assert || 開発時の前提確認。 || assert($x > 0)
+エラーと用語 || zend.assertions || assert の有効化。 || zend.assertions=1
+用語 || PHP || Web 向けのスクリプト言語。 || php
+用語 || Hypertext Preprocessor || PHP の正式名。 || PHP
+用語 || Zend Engine || PHP の実行エンジン。 || Zend
+用語 || インタプリタ || 逐次解釈して実行。 || php a.php
+用語 || スクリプト言語 || ソースを直接実行。 || script
+用語 || 動的型付け || 実行時に型が決まる。 || $a = 1; $a = 'x';
+用語 || 弱い型付け || 暗黙の型変換がある。 || "1" + 1
+用語 || サーバーサイド || サーバー側で動く。 || server-side
+用語 || LAMP || Linux Apache MySQL PHP。 || LAMP
+用語 || LEMP || nginx を使う構成。 || LEMP
+用語 || CGI / FastCGI || 外部プログラムの実行方式。 || FastCGI
+用語 || SAPI || 実行インターフェース。 || cli, fpm
+用語 || 拡張モジュール || PHP の機能拡張。 || extension=
+用語 || PECL || 拡張の公開場所。 || pecl install
+用語 || PEAR || 旧パッケージ管理。 || pear
+用語 || PHP-FIG || 規約を決める団体。 || PSR
+用語 || PSR || PHP の標準勧告。 || PSR-4
+用語 || RFC (PHP) || 言語変更の提案。 || RFC
+用語 || ランタイム設定 || 実行時の設定。 || ini_set
+用語 || スーパーグローバル || どこからでも使える変数。 || $_GET
+用語 || 参照カウント GC || 循環参照は別途回収。 || gc_enable
+用語 || コピーオンライト || 変更時に複製する。 || copy-on-write
+用語 || 値渡し / 参照渡し || 引数の渡し方。 || &$x
+用語 || オブジェクトのハンドル || オブジェクトは参照的に渡る。 || $b = $a;
+用語 || 型ジャグリング || 自動的な型変換。 || type juggling
+用語 || falsy な値 || 偽とみなされる値。 || 0, "", "0", [], null
+用語 || truthy な値 || 真とみなされる値。 || "a", 1
+用語 || ヌルバイト || 文字列の危険な文字。 || "\0"
+用語 || 実行時間の測定 || microtime の差。 || microtime(true) - $s
+用語 || ベンチマーク (PHP) || 速度の比較。 || PHPBench
+用語 || 名前空間の区切り || バックスラッシュ。 || App\Models
+用語 || 完全修飾名 || 先頭にバックスラッシュ。 || \Exception
+用語 || グローバル名前空間 || 名前空間のない領域。 || \strlen
+用語 || 関数の名前空間 || 関数も分けられる。 || namespace A; function f()
+用語 || プロパティの動的作成 || 8.2 で非推奨。 || $o->x = 1;
+用語 || #[AllowDynamicProperties] || 動的プロパティを許可。 || #[AllowDynamicProperties]
+用語 || #[Override] || 上書きの明示。 || #[Override]
+用語 || #[SensitiveParameter] || 機密引数の隠蔽。 || #[SensitiveParameter]
+用語 || 型付きクラス定数 || 8.3 の機能。 || const int A = 1;
+用語 || json_validate || JSON の妥当性確認。 || json_validate($s)
+用語 || array_find / array_any || 8.4 の配列関数。 || array_find($a, $f)
+用語 || プロパティフック || get と set を定義。 || public string $n { set => ... }
+用語 || 非対称な可視性 || 読みと書きの範囲を分ける。 || public private(set) int $a
+用語 || new in initializers || 既定値で new を使う。 || function f(A $a = new A)
+用語 || 純粋な交差型 || 8.1 の型。 || A&B
+用語 || DNF 型 || 論理和標準形の型。 || (A&B)|null
+用語 || never 型の用途 || 戻らない関数。 || exit
+用語 || 8進数リテラル 0o || 明示的な 8進数。 || 0o17
+用語 || array_is_list の用途 || JSON 配列判定。 || array_is_list($a)
+用語 || str_contains の導入 || 8.0 の文字列関数。 || str_contains
+用語 || match と switch の違い || 厳密比較と式。 || match
+用語 || nullsafe の連鎖 || null で止まる。 || $a?->b?->c
+用語 || 名前付き引数の利点 || 順序に依存しない。 || f(b: 1)
+用語 || コンストラクタ昇格の利点 || 記述量の削減。 || private int $a
+用語 || ジェネレータの戻り値 || getReturn で取得。 || $g->getReturn()
+用語 || 可変引数のキー || 名前付きで受け取る。 || ...$args
+用語 || static クロージャ || $this を束縛しない。 || static fn() => 1
+用語 || 再帰的クロージャ || use で自分を参照。 || use (&$f)
+用語 || array_walk と参照 || 要素を書き換える。 || array_walk($a, fn(&$v) => ...)

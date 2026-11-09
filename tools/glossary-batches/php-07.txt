@@ -1,0 +1,38 @@
+補足 || array_map の複数配列 || 複数配列を同時に処理。 || array_map(fn($a, $b) => $a + $b, $x, $y)
+補足 || array_map と null || 配列を転置する。 || array_map(null, $a, $b)
+補足 || array_filter のモード || キーも渡せる。 || ARRAY_FILTER_USE_BOTH
+補足 || array_walk のキー引数 || キーも受け取る。 || fn(&$v, $k)
+補足 || usort の安定性 || 8.0 以降は安定。 || usort
+補足 || array_unique のフラグ || 比較方法の指定。 || SORT_REGULAR
+補足 || sort のフラグ || 比較方式の指定。 || SORT_STRING
+補足 || SORT_NATURAL | SORT_FLAG_CASE || 自然順・大小無視。 || sort($a, SORT_NATURAL | SORT_FLAG_CASE)
+補足 || array_slice の保持 || キーを維持する。 || array_slice($a, 1, 2, true)
+補足 || array_search の厳密 || 型も比較する。 || array_search(1, $a, true)
+補足 || in_array の落とし穴 || 緩い比較に注意。 || in_array("a", [0])
+補足 || str_replace の配列 || 複数を一度に置換。 || str_replace(['a', 'b'], ['x', 'y'], $s)
+補足 || str_replace の回数 || 置換数を取得。 || str_replace('a', 'b', $s, $n)
+補足 || substr の負数 || 末尾から数える。 || substr($s, -3)
+補足 || mb_substr の使い分け || 日本語は mb を使う。 || mb_substr
+補足 || trim の文字指定 || 除く文字を指定。 || trim($s, "/")
+補足 || ucwords の区切り || 区切り文字を指定。 || ucwords($s, "-")
+補足 || sprintf の位置指定 || 引数番号を指定。 || sprintf('%2$s %1$s', 'a', 'b')
+補足 || printf の戻り値 || 出力した長さ。 || printf("a")
+補足 || number_format の区切り || 小数点と桁区切り。 || number_format($n, 2, '.', ',')
+補足 || date の曜日 || D や l の書式。 || date('D')
+補足 || date の和暦的表記 || 自前で変換する。 || IntlDateFormatter
+補足 || strtotime の相対表記 || next monday など。 || strtotime('next monday')
+補足 || DateTime::setTimezone || ゾーンの変更。 || $d->setTimezone($tz)
+補足 || DateTime の比較 || 比較演算子が使える。 || $a < $b
+補足 || DateInterval の書式 || P1Y2M3D。 || new DateInterval('P1Y')
+補足 || diff の days || 日数の差。 || $diff->days
+補足 || last day of month || 月末の指定。 || modify('last day of this month')
+補足 || 月初・月末の取得 || first / last day of。 || modify('first day of next month')
+補足 || 営業日の計算 || 土日を除く。 || format('N')
+補足 || 祝日判定 || 配列で保持。 || in_array($d, $holidays)
+補足 || 年齢の計算 || diff の y。 || $birth->diff($now)->y
+補足 || json_decode の assoc || 配列で取得。 || json_decode($s, true)
+補足 || json_decode の depth || 深さの制限。 || json_decode($s, true, 512)
+補足 || JSON_NUMERIC_CHECK || 数値文字列を数値に。 || JSON_NUMERIC_CHECK
+補足 || JSON_FORCE_OBJECT || 配列をオブジェクトに。 || JSON_FORCE_OBJECT
+補足 || JSON_UNESCAPED_SLASHES || スラッシュを維持。 || JSON_UNESCAPED_SLASHES
+補足 || JSON の大きな整数 || 精度の問題に注意。 || JSON_BIGINT_AS_STRING

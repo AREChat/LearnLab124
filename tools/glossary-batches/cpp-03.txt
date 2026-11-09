@@ -1,0 +1,153 @@
+アルゴリズム || std::sort || 整列。 || std::sort(v.begin(), v.end())
+アルゴリズム || std::stable_sort || 安定な整列。 || std::stable_sort(b, e)
+アルゴリズム || std::partial_sort || 上位だけ整列。 || std::partial_sort(b, m, e)
+アルゴリズム || std::nth_element || n 番目を確定。 || std::nth_element(b, n, e)
+アルゴリズム || std::find || 値の検索。 || std::find(b, e, 3)
+アルゴリズム || std::find_if || 条件で検索。 || std::find_if(b, e, pred)
+アルゴリズム || std::count / count_if || 個数を数える。 || std::count(b, e, 1)
+アルゴリズム || std::binary_search || 二分探索。 || std::binary_search(b, e, x)
+アルゴリズム || std::lower_bound / upper_bound || 二分探索の境界。 || std::lower_bound(b, e, x)
+アルゴリズム || std::equal_range || 等しい範囲。 || std::equal_range(b, e, x)
+アルゴリズム || std::reverse || 逆順にする。 || std::reverse(b, e)
+アルゴリズム || std::rotate || 要素を回転。 || std::rotate(b, m, e)
+アルゴリズム || std::unique || 連続する重複を除く。 || std::unique(b, e)
+アルゴリズム || std::remove / remove_if || 条件の要素を詰める。 || std::remove_if(b, e, pred)
+アルゴリズム || std::replace || 値の置換。 || std::replace(b, e, 1, 2)
+アルゴリズム || std::fill / iota || 値で埋める・連番。 || std::iota(b, e, 0)
+アルゴリズム || std::copy / copy_if || 複写。 || std::copy(b, e, out)
+アルゴリズム || std::transform || 変換して出力。 || std::transform(b, e, out, f)
+アルゴリズム || std::for_each || 各要素に処理。 || std::for_each(b, e, f)
+アルゴリズム || std::accumulate || 総和・畳み込み。 || std::accumulate(b, e, 0)
+アルゴリズム || std::reduce || 並列可能な畳み込み。 || std::reduce(b, e)
+アルゴリズム || std::inner_product || 内積。 || std::inner_product(a, a2, b, 0)
+アルゴリズム || std::partial_sum || 累積和。 || std::partial_sum(b, e, out)
+アルゴリズム || std::adjacent_difference || 隣接差。 || std::adjacent_difference(b, e, out)
+アルゴリズム || std::min / max / minmax || 最小・最大。 || std::max(a, b)
+アルゴリズム || std::min_element / max_element || 最小・最大の位置。 || std::max_element(b, e)
+アルゴリズム || std::clamp || 範囲に収める。 || std::clamp(x, 0, 10)
+アルゴリズム || std::swap || 値の交換。 || std::swap(a, b)
+アルゴリズム || std::all_of / any_of / none_of || 条件の判定。 || std::all_of(b, e, pred)
+アルゴリズム || std::next_permutation || 次の順列。 || std::next_permutation(b, e)
+アルゴリズム || std::shuffle || 並びのシャッフル。 || std::shuffle(b, e, rng)
+アルゴリズム || std::sample || 無作為抽出。 || std::sample(b, e, out, n, rng)
+アルゴリズム || std::merge / inplace_merge || 整列済みの併合。 || std::merge(a, ae, b, be, out)
+アルゴリズム || std::set_union など || 集合演算。 || std::set_union
+アルゴリズム || std::includes || 部分集合の判定。 || std::includes(a, ae, b, be)
+アルゴリズム || std::make_heap / push_heap || ヒープ操作。 || std::make_heap(b, e)
+アルゴリズム || std::is_sorted || 整列済みか判定。 || std::is_sorted(b, e)
+アルゴリズム || std::equal / mismatch || 範囲の比較。 || std::equal(a, ae, b)
+アルゴリズム || std::search || 部分列の検索。 || std::search(b, e, pb, pe)
+アルゴリズム || 実行ポリシー || 並列実行の指定。 || std::execution::par
+アルゴリズム || std::ranges のアルゴリズム || 範囲版アルゴリズム。 || std::ranges::find
+アルゴリズム || プロジェクション || 比較前の変換。 || std::ranges::sort(v, {}, &P::x)
+アルゴリズム || 計算量 || 処理の増え方。 || O(n log n)
+アルゴリズム || 比較関数 || 厳密弱順序が必要。 || bool cmp(a, b)
+アルゴリズム || std::less / greater || 標準の比較関数。 || std::greater<int>()
+アルゴリズム || カスタムハッシュ || unordered 用のハッシュ。 || std::hash<T>
+アルゴリズム || 二分探索の自作 || 境界の更新で実装。 || lo, hi
+アルゴリズム || 動的計画法 || 部分問題の再利用。 || dp[i]
+アルゴリズム || 深さ優先探索 || 再帰で探索。 || dfs(v)
+アルゴリズム || 幅優先探索 || キューで探索。 || std::queue
+アルゴリズム || ダイクストラ法 || 最短経路。 || std::priority_queue
+アルゴリズム || Union-Find || 集合の併合・判定。 || find, unite
+アルゴリズム || 競技プログラミング || 高速入出力が鍵。 || ios::sync_with_stdio(false)
+アルゴリズム || ios::sync_with_stdio || C 入出力との同期を切る。 || std::ios::sync_with_stdio(false);
+アルゴリズム || cin.tie(nullptr) || 入出力の連動を切る。 || std::cin.tie(nullptr);
+文字列 || std::string || 文字列クラス。 || std::string s = "a";
+文字列 || string::size / length || 長さ。 || s.size()
+文字列 || string::substr || 部分文字列。 || s.substr(1, 2)
+文字列 || string::find || 検索。 || s.find("a")
+文字列 || string::rfind || 後ろから検索。 || s.rfind("a")
+文字列 || string::find_first_of || 文字集合の最初の位置。 || s.find_first_of("ab")
+文字列 || string::replace || 範囲の置換。 || s.replace(0, 1, "x")
+文字列 || string::append / += || 末尾に追加。 || s += "a";
+文字列 || string::insert / erase || 挿入と削除。 || s.erase(0, 1)
+文字列 || string::compare || 比較。 || s.compare(t)
+文字列 || string::c_str / data || C 文字列の取得。 || s.c_str()
+文字列 || string::starts_with / ends_with || C++20 の前後判定。 || s.starts_with("a")
+文字列 || string::contains || C++23 の包含判定。 || s.contains("a")
+文字列 || std::to_string || 数値を文字列に。 || std::to_string(12)
+文字列 || std::stoi / stod || 文字列を数値に。 || std::stoi("12")
+文字列 || std::from_chars / to_chars || 高速な数値変換。 || std::from_chars(b, e, n)
+文字列 || std::string_view || 文字列の読み取り専用ビュー。 || std::string_view sv = s;
+文字列 || std::getline || 1 行を読む。 || std::getline(std::cin, s)
+文字列 || std::stringstream || 文字列ストリーム。 || std::stringstream ss(s);
+文字列 || istringstream / ostringstream || 入力・出力用。 || std::ostringstream os;
+文字列 || std::wstring || ワイド文字列。 || std::wstring w;
+文字列 || std::u8string / u16string / u32string || Unicode 文字列。 || std::u8string
+文字列 || 文字列リテラル接尾辞 s || std::string のリテラル。 || "a"s
+文字列 || std::regex || 正規表現。 || std::regex re("a+");
+文字列 || regex_match / regex_search || 正規表現の照合。 || std::regex_match(s, re)
+文字列 || regex_replace || 正規表現で置換。 || std::regex_replace(s, re, "x")
+文字列 || std::toupper / tolower || 大文字・小文字化。 || std::toupper(c)
+文字列 || isalpha / isdigit || 文字種の判定。 || std::isdigit(c)
+文字列 || 文字列の分割 || stringstream で区切る。 || std::getline(ss, t, ',')
+文字列 || 文字列の結合 || + や join。 || a + b
+文字列 || 文字コードの注意 || UTF-8 は可変長。 || UTF-8
+文字列 || std::format_string || 書式文字列の検査。 || std::format("{}", x)
+文字列 || std::hash<std::string> || 文字列のハッシュ。 || std::hash<std::string>{}(s)
+入出力 || std::ifstream || ファイル入力。 || std::ifstream f("a.txt");
+入出力 || std::ofstream || ファイル出力。 || std::ofstream f("a.txt");
+入出力 || std::fstream || 入出力両用。 || std::fstream f;
+入出力 || ios::app / ios::binary || 追記・バイナリ。 || std::ios::binary
+入出力 || is_open / good / fail || 状態の確認。 || f.is_open()
+入出力 || eof || 終端の判定。 || f.eof()
+入出力 || read / write || バイナリ入出力。 || f.read(buf, n)
+入出力 || seekg / tellg || 位置の移動と取得。 || f.seekg(0)
+入出力 || std::filesystem || ファイル・パス操作。 || std::filesystem::exists(p)
+入出力 || filesystem::path || パスを表す型。 || std::filesystem::path p
+入出力 || directory_iterator || ディレクトリの走査。 || std::filesystem::directory_iterator(p)
+入出力 || create_directories || 階層ごと作成。 || std::filesystem::create_directories(p)
+入出力 || 入出力マニピュレータ || 書式の操作。 || std::setw(5)
+入出力 || std::setprecision / fixed || 小数の書式。 || std::fixed << std::setprecision(2)
+入出力 || std::hex / dec / oct || 基数の指定。 || std::cout << std::hex
+入出力 || std::boolalpha || bool を文字で出力。 || std::boolalpha
+入出力 || std::flush || 出力のフラッシュ。 || std::cout << std::flush
+入出力 || cin の失敗処理 || clear と ignore。 || std::cin.clear()
+入出力 || fopen / fclose (C) || C のファイル操作。 || fopen("a", "r")
+入出力 || fgets / fputs (C) || C の行入出力。 || fgets(buf, n, fp)
+入出力 || fread / fwrite (C) || C のバイナリ入出力。 || fread(buf, 1, n, fp)
+入出力 || stdin / stdout / stderr (C) || C の標準ストリーム。 || stderr
+入出力 || std::osyncstream || C++20 の同期出力。 || std::osyncstream(std::cout)
+入出力 || std::source_location || 呼び出し位置の情報。 || std::source_location::current()
+メモリ || スタック領域 || 自動変数の置き場。 || int a;
+メモリ || ヒープ領域 || 動的確保の置き場。 || new int
+メモリ || メモリリーク || 解放し忘れ。 || new なし delete
+メモリ || ダングリングポインタ || 解放済みを指すポインタ。 || use after free
+メモリ || 二重解放 || 同じ領域を 2 度解放。 || double free
+メモリ || バッファオーバーフロー || 領域外への書き込み。 || a[10]
+メモリ || 未初期化変数 || 値が不定。 || int x;
+メモリ || std::unique_ptr || 唯一の所有者。 || std::unique_ptr<int> p;
+メモリ || std::make_unique || unique_ptr の生成。 || std::make_unique<A>()
+メモリ || std::shared_ptr || 共有所有。 || std::shared_ptr<A>
+メモリ || std::make_shared || shared_ptr の生成。 || std::make_shared<A>()
+メモリ || std::weak_ptr || 所有しない参照。 || std::weak_ptr<A>
+メモリ || weak_ptr::lock || shared_ptr に昇格。 || w.lock()
+メモリ || 循環参照 || shared_ptr 同士で解放されない。 || weak_ptr で回避
+メモリ || enable_shared_from_this || this から shared_ptr。 || shared_from_this()
+メモリ || カスタムデリータ || 解放方法の指定。 || std::unique_ptr<T, D>
+メモリ || unique_ptr の move || 所有権の移動。 || std::move(p)
+メモリ || 生ポインタ (observer) || 所有しない参照。 || T*
+メモリ || std::auto_ptr (廃止) || 旧スマートポインタ。 || removed
+メモリ || malloc / free || C のメモリ確保。 || malloc(n)
+メモリ || calloc / realloc || ゼロ初期化・再確保。 || realloc(p, n)
+メモリ || operator new のオーバーロード || 確保の独自化。 || operator new
+メモリ || std::allocator || 標準のアロケータ。 || std::allocator<T>
+メモリ || std::pmr || ポリモーフィックなメモリ資源。 || std::pmr::vector<int>
+メモリ || monotonic_buffer_resource || 単調増加の資源。 || std::pmr::monotonic_buffer_resource
+メモリ || アラインメント || メモリ境界の揃え。 || alignas
+メモリ || メモリレイアウト || 配置とパディング。 || sizeof
+メモリ || パディング || 境界調整の空き。 || padding
+メモリ || キャッシュ局所性 || 連続アクセスが速い。 || cache friendly
+メモリ || 小さな文字列最適化 || SSO による確保回避。 || SSO
+メモリ || ムーブセマンティクス || 資源の移動。 || std::move
+メモリ || 完全転送 || 値の種類を保つ。 || std::forward
+メモリ || コピーエリジョン || コピーの省略。 || copy elision
+メモリ || 保証されたコピー省略 || C++17 の規則。 || return T{};
+メモリ || 左辺値と右辺値 || 値の分類。 || lvalue, rvalue
+メモリ || xvalue / prvalue || 値カテゴリ。 || xvalue
+メモリ || ダンプ解析 || クラッシュ原因の調査。 || core dump
+メモリ || AddressSanitizer || メモリ誤りの検出。 || -fsanitize=address
+メモリ || UBSanitizer || 未定義動作の検出。 || -fsanitize=undefined
+メモリ || ThreadSanitizer || データ競合の検出。 || -fsanitize=thread
+メモリ || Valgrind || メモリ検査ツール。 || valgrind ./a.out
