@@ -1,0 +1,59 @@
+補足 || 初期容量の指定 || 拡張の回数を減らす。 || new ArrayList<>(100)
+補足 || 負荷係数 || ハッシュ表の拡張基準。 || 0.75
+補足 || ハッシュ衝突 || 同じ位置に入る。 || collision
+補足 || ツリー化 (HashMap) || 衝突が多いと木になる。 || treeify
+補足 || fail-fast イテレータ || 変更を検出して例外。 || modCount
+補足 || fail-safe イテレータ || 変更を許す走査。 || CopyOnWriteArrayList
+補足 || ListIterator.add || 走査中の挿入。 || it.add(x)
+補足 || Arrays.asList の落とし穴 || 基本型配列は 1 要素になる。 || asList(new int[]{1})
+補足 || subList の副作用 || 元のリストに影響する。 || list.subList(0, 2).clear()
+補足 || removeIf の効率 || 一括削除に向く。 || list.removeIf(p)
+補足 || equals を使う contains || 比較は equals に依存。 || list.contains(x)
+補足 || Set のハッシュ要件 || hashCode を実装する。 || HashSet
+補足 || TreeSet の比較要件 || Comparable が必要。 || TreeSet<A>
+補足 || Map のキー不変性 || キーは変更しない。 || String
+補足 || null キーの扱い || 実装ごとに異なる。 || HashMap
+補足 || EnumSet.allOf || 全要素の集合。 || EnumSet.allOf(A.class)
+補足 || EnumSet.range || 範囲の集合。 || EnumSet.range(A, C)
+補足 || Collectors.toUnmodifiableList || 不変リストに集める。 || toUnmodifiableList()
+補足 || Collectors.groupingByConcurrent || 並行グループ化。 || groupingByConcurrent(f)
+補足 || Collectors.reducing || 畳み込みで集める。 || reducing(0, Integer::sum)
+補足 || Collectors.summarizingInt || 統計を集める。 || summarizingInt(f)
+補足 || Stream.concat || ストリームの連結。 || Stream.concat(a, b)
+補足 || Stream.ofNullable || null なら空の Stream。 || Stream.ofNullable(x)
+補足 || IntStream.iterate || 規則的な整数列。 || IntStream.iterate(0, i -> i + 2)
+補足 || IntStream.boxed || ラッパーに変換。 || boxed()
+補足 || IntStream.asLongStream || long に拡大。 || asLongStream()
+補足 || DoubleStream.average || 平均を求める。 || average()
+補足 || Stream の再利用不可 || 1 度しか使えない。 || IllegalStateException
+補足 || Stream の close || 資源を閉じる。 || try (var s = Files.lines(p))
+補足 || Collector.of || 独自の Collector。 || Collector.of(...)
+補足 || Optional の濫用 || フィールドには使わない。 || avoid
+補足 || OptionalDouble || double 用の Optional。 || OptionalDouble.of(1.0)
+補足 || Optional.stream || Stream に変換。 || o.stream()
+補足 || Optional.or || 代替の Optional。 || o.or(() -> other)
+補足 || Function.apply || 関数の適用。 || f.apply(x)
+補足 || Supplier.get || 値の取得。 || s.get()
+補足 || Predicate.test || 条件の判定。 || p.test(x)
+補足 || Consumer.accept || 値の消費。 || c.accept(x)
+補足 || Predicate.not || 否定の述語。 || Predicate.not(String::isBlank)
+補足 || Predicate.isEqual || 等しいかの述語。 || Predicate.isEqual(x)
+補足 || BiPredicate || 2 引数の述語。 || BiPredicate<A, B>
+補足 || BooleanSupplier || 真偽の供給。 || BooleanSupplier
+補足 || ObjIntConsumer || オブジェクトと int の消費。 || ObjIntConsumer<T>
+補足 || ラムダの this || 外側のインスタンスを指す。 || this
+補足 || ラムダと匿名クラスの違い || this と生成の扱い。 || new Runnable() {}
+補足 || invokedynamic || ラムダの実装基盤。 || bytecode
+補足 || ラムダのキャプチャ || 外の変数を使う。 || effectively final
+補足 || メソッド参照の種類 || static、束縛、非束縛、生成。 || String::valueOf
+補足 || 再帰ラムダ || 自分自身を呼ぶ工夫。 || Function<Integer, Integer> f
+補足 || ジェネリック配列の制限 || 直接作れない。 || (T[]) new Object[n]
+補足 || 型の安全でない警告 || unchecked の警告。 || @SuppressWarnings("unchecked")
+補足 || raw 型 || 型引数のない総称型。 || List
+補足 || 型推論の限界 || 明示が必要な場面。 || Collections.<String>emptyList()
+補足 || ジェネリックの静的メンバ制限 || 型パラメータは使えない。 || static T x
+補足 || instanceof とジェネリクス || 型引数は検査できない。 || o instanceof List<?>
+補足 || 交差型 || 複数の境界。 || <T extends A & B>
+補足 || Class<T> トークン || 型情報の受け渡し。 || Class<T> cls
+補足 || TypeReference || ジェネリック型の保持。 || new TypeReference<List<A>>() {}
+補足 || 型安全な異種コンテナ || Class をキーにする設計。 || Map<Class<?>, Object>

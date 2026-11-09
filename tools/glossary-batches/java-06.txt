@@ -1,0 +1,201 @@
+OOP用語 || オブジェクト指向 || 部品としての設計の考え方。 || class
+OOP用語 || クラス変数 || static で共有する変数。 || static int n;
+OOP用語 || インスタンス変数 || 実体ごとの変数。 || int age;
+OOP用語 || ローカル変数 || メソッド内の変数。 || int x = 1;
+OOP用語 || 引数と仮引数 || 渡す値と受ける変数。 || f(int a)
+OOP用語 || 戻り値 || メソッドが返す値。 || return 1;
+OOP用語 || void || 戻り値なし。 || void f() {}
+OOP用語 || 値渡し || 値のコピーを渡す。 || f(x)
+OOP用語 || 参照の値渡し || 参照のコピーを渡す。 || f(list)
+OOP用語 || メソッドチェーン || 続けて呼び出す。 || sb.append("a").append("b")
+OOP用語 || 流れるようなインターフェース || チェーン用に this を返す。 || return this;
+OOP用語 || 再帰メソッド || 自分を呼ぶ。 || fact(n - 1)
+OOP用語 || 末尾再帰 || Java では最適化されない。 || tail recursion
+OOP用語 || 抽象化 || 本質だけを取り出す。 || abstract
+OOP用語 || 継承 || 親の性質を引き継ぐ。 || extends
+OOP用語 || 汎化と特化 || 共通化と具体化。 || superclass
+OOP用語 || 委譲 || 他のオブジェクトに任せる。 || delegate
+OOP用語 || 集約 (UML) || 部分を持つ関係。 || has-a
+OOP用語 || コンポジション || 強い所有関係。 || has-a
+OOP用語 || is-a と has-a || 継承と所有の関係。 || is-a
+OOP用語 || 結合度 || 部品同士の依存の強さ。 || coupling
+OOP用語 || 凝集度 || 部品内の関連の強さ。 || cohesion
+OOP用語 || 情報隠蔽 || 内部を見せない。 || private
+OOP用語 || メッセージパッシング || メソッド呼び出しの考え方。 || obj.f()
+OOP用語 || 動的ディスパッチ || 実行時に呼ぶ先を決める。 || virtual call
+OOP用語 || 静的束縛 || コンパイル時に決まる。 || static, private
+OOP用語 || ダウンキャスト || 子の型へ変換。 || (Dog) animal
+OOP用語 || アップキャスト || 親の型へ変換。 || Animal a = dog;
+OOP用語 || 共変戻り値 || 子で戻り値を狭める。 || Dog get()
+OOP用語 || メソッド隠蔽 || static の再定義。 || static hiding
+OOP用語 || フィールド隠蔽 || 同名フィールドの再定義。 || field hiding
+OOP用語 || 初期化の順序 || 静的、インスタンス、コンストラクタ。 || init order
+OOP用語 || コンストラクタ内の上書きメソッド呼出 || 危険な書き方。 || avoid
+OOP用語 || 不変クラスの条件 || final、防御的コピー。 || immutable class
+OOP用語 || ビルダーによる不変生成 || 段階的に組み立てて固定。 || Builder
+OOP用語 || ファクトリメソッド || 名前付きの生成方法。 || of(), from()
+OOP用語 || 静的ファクトリの利点 || 名前、再利用、型の選択。 || valueOf
+OOP用語 || ユーティリティクラス || static メソッドの集まり。 || Math
+OOP用語 || private コンストラクタ || 生成を禁止する。 || private A() {}
+OOP用語 || シングルトン (enum) || enum による実装。 || enum A { INSTANCE }
+OOP用語 || ネストの深さ || 入れ子を浅くする。 || guard clause
+OOP用語 || マジックナンバー || 意味不明な数値。 || static final
+OOP用語 || 名前の付け方 || 意図が伝わる名前。 || userName
+OOP用語 || メソッドの長さ || 短く保つ。 || extract method
+OOP用語 || 副作用 || 外部状態の変更。 || side effect
+OOP用語 || 純粋関数 || 副作用のない関数。 || pure
+OOP用語 || 参照透過性 || 同じ入力で同じ結果。 || referential transparency
+OOP用語 || 契約による設計 || 事前・事後条件。 || precondition
+OOP用語 || 不変条件 || 常に成り立つ条件。 || invariant
+OOP用語 || ユースケース || 利用場面の記述。 || use case
+OOP用語 || UML || 統一モデリング言語。 || class diagram
+OOP用語 || クラス図 || 構造の図。 || UML
+OOP用語 || シーケンス図 || 時間順の図。 || UML
+OOP用語 || アジャイル || 反復的な開発手法。 || sprint
+OOP用語 || スクラム || 反復開発の枠組み。 || scrum
+OOP用語 || Git || バージョン管理。 || git commit
+OOP用語 || ブランチ戦略 || 作業の分け方。 || git flow
+OOP用語 || プルリクエスト || 変更の提案。 || PR
+OOP用語 || セマンティックバージョニング || 版番号の規則。 || 1.2.3
+OOP用語 || 後方互換性 || 古い利用が壊れない。 || backward compatible
+OOP用語 || API 設計 || 使いやすい公開面。 || public API
+OOP用語 || ドキュメントコメント || Javadoc の記述。 || @param
+OOP用語 || @param / @return || 引数と戻り値の説明。 || @return 結果
+OOP用語 || @throws || 例外の説明。 || @throws IOException
+OOP用語 || @see / @link || 関連の参照。 || {@link String}
+OOP用語 || @since / @deprecated || 版や非推奨の説明。 || @since 17
+ネットワーク(Java) || InetAddress || IP アドレス。 || InetAddress.getByName("a")
+ネットワーク(Java) || InetSocketAddress || アドレスとポート。 || new InetSocketAddress(80)
+ネットワーク(Java) || URL.openStream || URL から読む。 || url.openStream()
+ネットワーク(Java) || URLConnection || 古い HTTP 接続。 || url.openConnection()
+ネットワーク(Java) || HttpURLConnection || HTTP 用の接続。 || (HttpURLConnection) c
+ネットワーク(Java) || URLEncoder / URLDecoder || URL の符号化。 || URLEncoder.encode(s, UTF_8)
+ネットワーク(Java) || URI.resolve || URI の結合。 || base.resolve("a")
+ネットワーク(Java) || HttpClient.send || 同期の送信。 || client.send(req, h)
+ネットワーク(Java) || HttpClient.Version || HTTP/2 の指定。 || Version.HTTP_2
+ネットワーク(Java) || HttpRequest.BodyPublishers || 本文の送り方。 || BodyPublishers.ofString("a")
+ネットワーク(Java) || WebSocket (Java) || 双方向通信。 || client.newWebSocketBuilder()
+ネットワーク(Java) || DatagramSocket || UDP 通信。 || new DatagramSocket()
+ネットワーク(Java) || DatagramPacket || UDP のパケット。 || new DatagramPacket(b, n)
+ネットワーク(Java) || SocketChannel || NIO の TCP。 || SocketChannel.open()
+ネットワーク(Java) || Selector || 多重化した I/O。 || Selector.open()
+ネットワーク(Java) || ServerSocketChannel || NIO のサーバー。 || ServerSocketChannel.open()
+ネットワーク(Java) || AsynchronousSocketChannel || 非同期 I/O。 || AsynchronousSocketChannel.open()
+ネットワーク(Java) || Netty || 非同期ネットワーク FW。 || ServerBootstrap
+ネットワーク(Java) || Vert.x || リアクティブなツールキット。 || Vertx.vertx()
+ネットワーク(Java) || Apache HttpClient || 多機能な HTTP クライアント。 || HttpClients.createDefault()
+ネットワーク(Java) || OkHttp || 人気の HTTP クライアント。 || new OkHttpClient()
+ネットワーク(Java) || gRPC || 高速な RPC。 || ManagedChannelBuilder
+ネットワーク(Java) || Protocol Buffers || 効率的な直列化形式。 || .proto
+ネットワーク(Java) || Apache Thrift || RPC と直列化。 || thrift
+ネットワーク(Java) || JMS || メッセージングの標準。 || jakarta.jms
+ネットワーク(Java) || ActiveMQ || メッセージブローカー。 || ActiveMQ
+ネットワーク(Java) || RabbitMQ クライアント || キューの利用。 || ConnectionFactory
+ネットワーク(Java) || Kafka Streams || ストリーム処理。 || StreamsBuilder
+ネットワーク(Java) || Apache Camel || システム連携の FW。 || from("a").to("b")
+ネットワーク(Java) || Apache Spark (Java) || 大規模データ処理。 || JavaSparkContext
+ネットワーク(Java) || Hadoop || 分散処理基盤。 || MapReduce
+ネットワーク(Java) || Flink || ストリーム処理基盤。 || StreamExecutionEnvironment
+ネットワーク(Java) || Lucene || 全文検索ライブラリ。 || IndexWriter
+ネットワーク(Java) || Solr || 検索サーバー。 || solr
+ネットワーク(Java) || Cassandra ドライバ || 分散 DB の接続。 || CqlSession
+ネットワーク(Java) || SMTP と JavaMail || メール送信。 || jakarta.mail
+ネットワーク(Java) || Session / Transport || メール送信の部品。 || Transport.send(msg)
+ネットワーク(Java) || LDAP || ディレクトリサービス。 || InitialDirContext
+ネットワーク(Java) || JNDI || 名前サービスの API。 || InitialContext
+ネットワーク(Java) || JMX || 管理・監視の仕組み。 || ManagementFactory
+ネットワーク(Java) || MBean || 管理対象のオブジェクト。 || MBeanServer
+ネットワーク(Java) || Micrometer || 指標の収集。 || MeterRegistry
+ネットワーク(Java) || Prometheus || 指標の監視。 || /metrics
+ネットワーク(Java) || OpenTelemetry || 観測性の標準。 || Tracer
+ネットワーク(Java) || 分散トレーシング || 呼び出しの追跡。 || traceId
+ネットワーク(Java) || ヘルスチェック || 稼働確認。 || /health
+ネットワーク(Java) || Kubernetes (Java) || コンテナ運用。 || Deployment
+ネットワーク(Java) || AWS SDK for Java || AWS の利用。 || S3Client.create()
+ネットワーク(Java) || Google Cloud クライアント || GCP の利用。 || Storage
+ネットワーク(Java) || Azure SDK for Java || Azure の利用。 || BlobClient
+ネットワーク(Java) || Lambda (AWS) の Java || サーバーレス関数。 || RequestHandler
+ネットワーク(Java) || コールドスタート || 初回起動の遅延。 || SnapStart
+ネットワーク(Java) || ネイティブイメージ || 事前コンパイルで高速起動。 || native-image
+ネットワーク(Java) || Spring Native || ネイティブ化の支援。 || spring-aot
+言語連携 || Kotlin 連携 || Java と共存できる言語。 || Kotlin
+言語連携 || Scala || JVM 上の関数型言語。 || Scala
+言語連携 || Groovy || 動的な JVM 言語。 || Groovy
+言語連携 || Clojure || JVM 上の Lisp。 || Clojure
+言語連携 || JRuby / Jython || JVM 上の Ruby・Python。 || JRuby
+言語連携 || ScriptEngine || スクリプトの実行。 || ScriptEngineManager
+言語連携 || JNI の作り方 || ネイティブ関数の宣言。 || native
+言語連携 || JNA || 簡単なネイティブ呼び出し。 || Native.load
+言語連携 || Java と JSON Schema || 検証の仕様。 || json-schema-validator
+言語連携 || YAML (SnakeYAML) || YAML の読み書き。 || new Yaml()
+言語連携 || TOML や HOCON || 設定の記法。 || Typesafe Config
+言語連携 || Properties の読み込み || 設定ファイルの読込。 || props.load(in)
+言語連携 || ResourceBundle の properties || 多言語文言。 || messages_ja.properties
+言語連携 || getResourceAsStream || クラスパス上の読込。 || A.class.getResourceAsStream("/a")
+言語連携 || ClassLoader.getResource || リソースの取得。 || getResource("a")
+言語連携 || Java Agent || 実行時のコード変更。 || premain
+言語連携 || Instrumentation || バイトコードの変換。 || Instrumentation
+言語連携 || ASM / ByteBuddy || バイトコード生成。 || ByteBuddy
+言語連携 || CGLIB || 継承ベースのプロキシ。 || Enhancer
+言語連携 || Javassist || バイトコード編集。 || ClassPool
+言語連携 || Annotation の取得 || 実行時に読み取る。 || m.getAnnotation(A.class)
+言語連携 || 独自アノテーション処理 || 検証や生成に使う。 || @interface
+言語連携 || ServiceLoader の登録 || META-INF/services。 || META-INF/services
+言語連携 || SPI || 拡張のための仕組み。 || Service Provider Interface
+言語連携 || プラグイン構造 || 後から機能を追加。 || ServiceLoader
+言語連携 || OSGi || モジュール動的管理。 || bundle
+言語連携 || Java Web Start (廃止) || 配布技術。 || JNLP
+言語連携 || アプレット (廃止) || ブラウザ内実行。 || Applet
+言語連携 || CORBA (廃止) || 古い分散技術。 || removed
+言語連携 || RMI || 遠隔メソッド呼出。 || UnicastRemoteObject
+言語連携 || EJB || 企業向け部品モデル。 || @Stateless
+言語連携 || CDI || 文脈と依存性の注入。 || @Inject
+言語連携 || Bean Validation 実装 || 検証の実装。 || Hibernate Validator
+言語連携 || JTA || 分散トランザクション。 || UserTransaction
+言語連携 || JCA || 外部システム接続の仕様。 || ResourceAdapter
+言語連携 || WildFly || アプリケーションサーバー。 || WildFly
+言語連携 || Payara / GlassFish || Jakarta EE サーバー。 || Payara
+言語連携 || MicroProfile || マイクロサービス仕様。 || @ConfigProperty
+テスト応用 || テストピラミッド || 単体を多く統合を少なく。 || pyramid
+テスト応用 || 単体テスト || 小さな単位の検証。 || unit test
+テスト応用 || 結合テスト || 連携の検証。 || integration test
+テスト応用 || E2E テスト || 全体の流れの検証。 || Selenium
+テスト応用 || Selenium (Java) || ブラウザ操作の自動化。 || WebDriver
+テスト応用 || Playwright for Java || ブラウザ自動操作。 || Playwright.create()
+テスト応用 || Cucumber || 振る舞い駆動のテスト。 || Feature, Given
+テスト応用 || BDD || 振る舞い駆動開発。 || Given When Then
+テスト応用 || REST Assured || API テストの DSL。 || given().get("/a")
+テスト応用 || テストダブル || 代役のオブジェクト。 || stub, mock
+テスト応用 || スタブ || 決まった値を返す代役。 || stub
+テスト応用 || スパイ || 呼出を記録する代役。 || spy(obj)
+テスト応用 || ArgumentCaptor || 引数の捕捉。 || ArgumentCaptor.forClass(A.class)
+テスト応用 || @ExtendWith || 拡張の組み込み。 || @ExtendWith(MockitoExtension.class)
+テスト応用 || @RepeatedTest || 繰り返し実行。 || @RepeatedTest(3)
+テスト応用 || @Timeout || 時間制限。 || @Timeout(5)
+テスト応用 || assertTimeout || 時間内の完了を検証。 || assertTimeout(d, e)
+テスト応用 || assumeTrue || 前提を満たすときだけ実行。 || assumeTrue(x)
+テスト応用 || @Tag || テストの分類。 || @Tag("slow")
+テスト応用 || @DisplayName || 表示名の指定。 || @DisplayName("説明")
+テスト応用 || テストの命名 || 意図が伝わる名前。 || shouldReturnZero
+テスト応用 || AAA パターン || 準備・実行・検証。 || Arrange Act Assert
+テスト応用 || テストデータビルダー || テスト用の生成。 || aUser().build()
+テスト応用 || プロパティベーステスト || 性質を乱択で検証。 || jqwik
+テスト応用 || カバレッジ || テストの網羅率。 || line coverage
+テスト応用 || 分岐網羅 || すべての分岐を通す。 || branch coverage
+テスト応用 || フレーキーテスト || 結果が不安定なテスト。 || flaky
+テスト応用 || 契約テスト || サービス間の約束の検証。 || Pact
+テスト応用 || ArchUnit || 設計規約のテスト。 || ArchRule
+テスト応用 || 負荷テスト || 性能の検証。 || JMeter
+テスト応用 || Gatling || 負荷テストツール。 || Gatling
+テスト応用 || JMH のモード || 平均時間やスループット。 || @BenchmarkMode
+テスト応用 || プロファイラ || 負荷の原因を調べる。 || async-profiler
+テスト応用 || ヒープダンプ || メモリの一覧。 || -XX:+HeapDumpOnOutOfMemoryError
+テスト応用 || Eclipse MAT || ヒープ解析ツール。 || MAT
+テスト応用 || スレッドダンプの読み方 || 待ちや競合を探す。 || BLOCKED
+テスト応用 || GC ログ || GC の記録。 || -Xlog:gc
+テスト応用 || メモリ使用量の調査 || 原因を絞り込む。 || jcmd GC.heap_info
+テスト応用 || CPU 使用率の調査 || 重い処理を探す。 || top -H
+テスト応用 || StackOverflow の対処 || 再帰の見直し。 || -Xss
+テスト応用 || デバッグログの設計 || 必要な情報を残す。 || logger.debug
+テスト応用 || 構造化ログ || JSON 形式のログ。 || logstash-logback-encoder
+テスト応用 || ELK スタック || ログの収集と可視化。 || Elasticsearch

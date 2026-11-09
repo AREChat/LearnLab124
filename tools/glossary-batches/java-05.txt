@@ -1,0 +1,250 @@
+バージョン機能 || Java 8 の新機能 || ラムダと Stream、新日時 API。 || list.stream()
+バージョン機能 || Java 9 の新機能 || モジュール、List.of、jshell。 || List.of(1)
+バージョン機能 || Java 10 の新機能 || ローカル変数の型推論。 || var x = 1;
+バージョン機能 || Java 11 の新機能 || HttpClient、String の追加メソッド。 || "a".isBlank()
+バージョン機能 || Java 12 の新機能 || switch 式のプレビュー。 || preview
+バージョン機能 || Java 14 の新機能 || switch 式の正式化。 || switch ->
+バージョン機能 || Java 15 の新機能 || テキストブロック。 || """
+バージョン機能 || Java 16 の新機能 || record の正式化。 || record
+バージョン機能 || Java 17 の新機能 || sealed クラスの正式化。 || sealed
+バージョン機能 || Java 21 の新機能 || 仮想スレッド、パターン switch。 || virtual thread
+バージョン機能 || Java 22 の新機能 || 未使用変数の _ など。 || _
+バージョン機能 || 未名前付き変数 || 使わない変数を _ で表す。 || catch (Exception _)
+バージョン機能 || ラベル付きブロック || 名前付きの文のまとまり。 || label: { }
+バージョン機能 || 非推奨 API || 使用を避けるべき API。 || @Deprecated(forRemoval = true)
+バージョン機能 || forRemoval || 将来削除される印。 || forRemoval
+バージョン機能 || ローカル var の制限 || 初期化が必須。 || var x;
+バージョン機能 || ラムダ内の var || 引数に var を使う。 || (var x) -> x
+バージョン機能 || 入れ子の record || record の中に record。 || record A(B b)
+バージョン機能 || record の静的メソッド || ファクトリを書ける。 || static A of()
+バージョン機能 || record の implements || インターフェースを実装できる。 || record A() implements I
+バージョン機能 || Stream.toList || 不変リストを返す。 || s.toList()
+バージョン機能 || Math.clamp || 範囲に収める。 || Math.clamp(v, 0, 10)
+バージョン機能 || String.transform || 関数を適用する。 || s.transform(f)
+バージョン機能 || Collectors.flatMapping || 平坦化して集める。 || flatMapping
+バージョン機能 || Collectors.filtering || 絞ってから集める。 || filtering
+バージョン機能 || Objects.requireNonNullElse || null なら代替値。 || requireNonNullElse(a, b)
+バージョン機能 || Objects.checkIndex || 添字の検査。 || checkIndex(i, n)
+バージョン機能 || List.copyOf と Map.copyOf || 不変のコピー。 || Map.copyOf(m)
+バージョン機能 || InputStream.readAllBytes || 全バイトを読む。 || in.readAllBytes()
+バージョン機能 || InputStream.transferTo || 出力へ転送する。 || in.transferTo(out)
+バージョン機能 || Files.mismatch || 内容の違いの位置。 || Files.mismatch(a, b)
+バージョン機能 || Path.of || Path の簡易生成。 || Path.of("a")
+バージョン機能 || ProcessHandle || プロセス情報。 || ProcessHandle.current().pid()
+バージョン機能 || ProcessBuilder || 外部コマンドの実行。 || new ProcessBuilder("ls").start()
+バージョン機能 || StackWalker || スタックの走査。 || StackWalker.getInstance()
+バージョン機能 || HexFormat || 16進数の変換。 || HexFormat.of().formatHex(b)
+バージョン機能 || RandomGenerator || 乱数の共通インターフェース。 || RandomGenerator.getDefault()
+バージョン機能 || Vector API || SIMD 演算の API。 || jdk.incubator.vector
+バージョン機能 || Class-File API || クラスファイル操作。 || java.lang.classfile
+バージョン機能 || String Templates || 文字列への式の埋め込み案。 || STR."x"
+バージョン機能 || 暗黙のクラス || main だけの簡易プログラム。 || void main() {}
+バージョン機能 || Unnamed Classes || 初心者向けの簡易記述。 || void main()
+バージョン機能 || Stream Gatherers || 独自の中間操作。 || gather()
+バージョン機能 || Sequenced Collections || 順序付きコレクション。 || getFirst()
+バージョン機能 || getFirst / getLast || 先頭・末尾の取得。 || list.getLast()
+バージョン機能 || addFirst / addLast (List) || 両端の追加。 || list.addFirst(x)
+バージョン機能 || removeFirst / removeLast || 両端の削除。 || list.removeLast()
+バージョン機能 || Character.toString(int) || コードポイントから文字列。 || Character.toString(65)
+バージョン機能 || StringBuilder.repeat || 繰り返し追加。 || sb.repeat("a", 3)
+バージョン機能 || Thread.ofPlatform || 通常スレッドの生成器。 || Thread.ofPlatform().start(r)
+バージョン機能 || ExecutorService の close || try-with-resources で使える。 || try (var ex = ...)
+バージョン機能 || Charset の既定 UTF-8 || 既定の文字コードが UTF-8 に。 || Java 18
+バージョン機能 || 簡易 Web サーバー || jwebserver コマンド。 || jwebserver
+バージョン機能 || 非同期ログ || System.Logger。 || System.getLogger("a")
+バージョン機能 || Internet-Address Resolution SPI || 名前解決の拡張。 || InetAddressResolver
+バージョン機能 || Deprecation の警告 || -Xlint で表示。 || -Xlint:deprecation
+バージョン機能 || ソース互換 (--release) || 対象版の指定。 || javac --release 17
+バージョン機能 || Multi-File Source || 複数ファイルを直接実行。 || java Main.java
+バージョン機能 || 正規表現の新機能 || ブロックやフラグの追加。 || \\p{IsHan}
+GUI || Swing || 標準の GUI ライブラリ。 || JFrame
+GUI || JFrame || ウィンドウ。 || new JFrame("a")
+GUI || JPanel || 部品の入れ物。 || new JPanel()
+GUI || JButton || ボタン。 || new JButton("OK")
+GUI || JLabel || ラベル。 || new JLabel("a")
+GUI || JTextField || 1 行入力。 || new JTextField()
+GUI || JTextArea || 複数行入力。 || new JTextArea()
+GUI || JCheckBox || チェックボックス。 || new JCheckBox()
+GUI || JRadioButton || ラジオボタン。 || new JRadioButton()
+GUI || JComboBox || コンボボックス。 || new JComboBox<>()
+GUI || JList || 一覧表示。 || new JList<>()
+GUI || JTable || 表。 || new JTable()
+GUI || JTree || 木構造。 || new JTree()
+GUI || JScrollPane || スクロール枠。 || new JScrollPane(c)
+GUI || JTabbedPane || タブ。 || new JTabbedPane()
+GUI || JMenuBar || メニューバー。 || new JMenuBar()
+GUI || JOptionPane || ダイアログ。 || JOptionPane.showMessageDialog(null, "a")
+GUI || JFileChooser || ファイル選択。 || new JFileChooser()
+GUI || JDialog || 独立ダイアログ。 || new JDialog()
+GUI || レイアウトマネージャ || 配置の管理。 || setLayout
+GUI || BorderLayout || 5 領域の配置。 || BorderLayout.CENTER
+GUI || FlowLayout || 流れる配置。 || new FlowLayout()
+GUI || GridLayout || 格子の配置。 || new GridLayout(2, 2)
+GUI || GridBagLayout || 柔軟な格子。 || GridBagConstraints
+GUI || BoxLayout || 縦または横に並べる。 || BoxLayout.Y_AXIS
+GUI || ActionListener || 操作の受信。 || b.addActionListener(e -> {})
+GUI || MouseListener || マウスの受信。 || addMouseListener
+GUI || KeyListener || キーの受信。 || addKeyListener
+GUI || イベントディスパッチスレッド || GUI 専用のスレッド。 || EDT
+GUI || SwingUtilities.invokeLater || EDT で実行。 || SwingUtilities.invokeLater(r)
+GUI || SwingWorker || 時間のかかる処理。 || new SwingWorker<>()
+GUI || paintComponent || 描画のメソッド。 || protected void paintComponent(Graphics g)
+GUI || Graphics2D || 2D 描画。 || (Graphics2D) g
+GUI || repaint || 再描画の要求。 || repaint()
+GUI || Timer (Swing) || 定期的なイベント。 || new javax.swing.Timer(100, l)
+GUI || Look and Feel || 見た目の切り替え。 || UIManager.setLookAndFeel
+GUI || FlatLaf || 現代的な見た目。 || FlatLightLaf.setup()
+GUI || AWT || 基本の GUI 部品。 || java.awt
+GUI || Color / Font || 色と書体。 || new Color(255, 0, 0)
+GUI || BufferedImage || 画像データ。 || new BufferedImage(w, h, TYPE_INT_RGB)
+GUI || ImageIO || 画像の読み書き。 || ImageIO.read(file)
+GUI || Toolkit || 環境の情報。 || Toolkit.getDefaultToolkit()
+GUI || Robot || 入力の自動化。 || new Robot()
+GUI || JavaFX || 新しい GUI ライブラリ。 || javafx.application
+GUI || Application.start || JavaFX の入口。 || public void start(Stage s)
+GUI || Stage / Scene || 窓と中身。 || new Scene(root)
+GUI || FXML || 画面を XML で定義。 || a.fxml
+GUI || Scene Builder || 画面設計ツール。 || SceneBuilder
+GUI || @FXML || FXML との結び付け。 || @FXML Button b;
+GUI || Property と Binding || 値の連動。 || StringProperty
+GUI || ObservableList || 変更を通知するリスト。 || FXCollections.observableArrayList()
+GUI || TableView || JavaFX の表。 || new TableView<>()
+GUI || CSS (JavaFX) || 見た目の指定。 || -fx-background-color
+GUI || Platform.runLater || JavaFX スレッドで実行。 || Platform.runLater(r)
+GUI || Task (JavaFX) || バックグラウンド処理。 || new Task<>()
+GUI || Canvas (JavaFX) || 描画領域。 || new Canvas(300, 200)
+GUI || AnimationTimer || 毎フレームの処理。 || new AnimationTimer()
+GUI || MediaPlayer || 音声・動画の再生。 || new MediaPlayer(m)
+GUI || SWT || Eclipse の GUI 部品。 || org.eclipse.swt
+GUI || ゲームループ || 更新と描画の繰り返し。 || while (running)
+GUI || LibGDX || ゲーム開発 FW。 || ApplicationListener
+GUI || LWJGL || OpenGL の連携。 || org.lwjgl
+GUI || Java Sound API || 音の再生。 || AudioSystem.getClip()
+GUI || Clip || 短い音声の再生。 || clip.start()
+GUI || Minecraft Mod (Java) || Java で作る拡張。 || Fabric, Forge
+標準API補足 || Math.PI || 円周率の定数。 || Math.PI
+標準API補足 || Math.E || 自然対数の底。 || Math.E
+標準API補足 || Math.log / log10 || 対数。 || Math.log10(100)
+標準API補足 || Math.sin / cos / tan || 三角関数。 || Math.sin(x)
+標準API補足 || Math.atan2 || 角度を求める。 || Math.atan2(y, x)
+標準API補足 || Math.cbrt || 立方根。 || Math.cbrt(8)
+標準API補足 || Math.signum || 符号。 || Math.signum(-2.0)
+標準API補足 || Math.multiplyExact || あふれ検出の乗算。 || Math.multiplyExact(a, b)
+標準API補足 || Math.toIntExact || 安全な int 変換。 || Math.toIntExact(l)
+標準API補足 || Math.floorDiv || 切り下げの除算。 || Math.floorDiv(-7, 2)
+標準API補足 || Math.fma || 積和演算。 || Math.fma(a, b, c)
+標準API補足 || Random.nextInt || 範囲の整数。 || r.nextInt(10)
+標準API補足 || Random.nextDouble || 0〜1 の実数。 || r.nextDouble()
+標準API補足 || Random.nextGaussian || 正規分布の乱数。 || r.nextGaussian()
+標準API補足 || Random.ints || 乱数の Stream。 || r.ints(5, 0, 10)
+標準API補足 || UUID || 一意な識別子。 || UUID.randomUUID()
+標準API補足 || Objects.isNull / nonNull || null 判定の関数。 || Objects.nonNull(x)
+標準API補足 || Objects.compare || 比較器で比較。 || Objects.compare(a, b, c)
+標準API補足 || Objects.requireNonNullElseGet || null なら生成。 || requireNonNullElseGet(a, f)
+標準API補足 || System.setOut || 標準出力の差し替え。 || System.setOut(ps)
+標準API補足 || System.gc || GC の要求。 || System.gc()
+標準API補足 || System.getLogger || 標準ロガー。 || System.getLogger("a")
+標準API補足 || System.console || コンソールの取得。 || System.console()
+標準API補足 || System.clearProperty || プロパティの削除。 || System.clearProperty("a")
+標準API補足 || Runtime.addShutdownHook || 終了時の処理。 || Runtime.getRuntime().addShutdownHook(t)
+標準API補足 || Runtime.exec || 外部プロセスの起動。 || Runtime.getRuntime().exec("ls")
+標準API補足 || Runtime.version || 実行中の版。 || Runtime.version()
+標準API補足 || ProcessBuilder.inheritIO || 入出力を引き継ぐ。 || pb.inheritIO()
+標準API補足 || Process.waitFor || 終了を待つ。 || p.waitFor()
+標準API補足 || Process.exitValue || 終了コード。 || p.exitValue()
+標準API補足 || Thread.getStackTrace || 呼び出し履歴。 || Thread.currentThread().getStackTrace()
+標準API補足 || Thread.onSpinWait || 待機のヒント。 || Thread.onSpinWait()
+標準API補足 || Class.getName || クラス名。 || o.getClass().getName()
+標準API補足 || Class.getSimpleName || 単純名。 || o.getClass().getSimpleName()
+標準API補足 || Class.isInstance || 型の判定。 || cls.isInstance(o)
+標準API補足 || Class.getDeclaredFields || 宣言されたフィールド。 || cls.getDeclaredFields()
+標準API補足 || Class.getConstructor || コンストラクタの取得。 || cls.getConstructor()
+標準API補足 || Constructor.newInstance || 動的な生成。 || c.newInstance()
+標準API補足 || Modifier || 修飾子の判定。 || Modifier.isStatic(m)
+標準API補足 || Array.newInstance || 動的な配列生成。 || Array.newInstance(int.class, 3)
+標準API補足 || MethodHandle || 高速なメソッド呼び出し。 || MethodHandles.lookup()
+標準API補足 || VarHandle || 変数への低水準アクセス。 || MethodHandles.arrayElementVarHandle
+標準API補足 || InvocationHandler || プロキシの処理。 || invoke(proxy, m, args)
+標準API補足 || Record の reflection || 構成要素の取得。 || cls.getRecordComponents()
+標準API補足 || Enum.name || 定数名。 || RED.name()
+標準API補足 || Enum.compareTo || 定義順の比較。 || a.compareTo(b)
+標準API補足 || switch と enum || 網羅性の検査。 || case RED ->
+標準API補足 || Enum のインターフェース実装 || 振る舞いを持たせる。 || enum A implements I
+標準API補足 || enum の抽象メソッド || 定数ごとの実装。 || RED { ... }
+標準API補足 || Iterator の自作 || 順次取得を実装。 || implements Iterator<T>
+標準API補足 || Spliterator || 分割できるイテレータ。 || list.spliterator()
+標準API補足 || Stream.Builder || Stream の組み立て。 || Stream.builder()
+標準API補足 || Collection.stream || コレクションから Stream。 || c.stream()
+標準API補足 || Collection.removeIf || 条件で削除。 || c.removeIf(p)
+標準API補足 || Collection.toArray(IntFunction) || 型指定の配列化。 || c.toArray(String[]::new)
+標準API補足 || Map.ofEntries || 複数エントリから Map。 || Map.ofEntries(Map.entry("a", 1))
+標準API補足 || Map.copyOf || 不変の Map コピー。 || Map.copyOf(m)
+標準API補足 || Map.remove(key, value) || 値が一致したら削除。 || m.remove("a", 1)
+標準API補足 || Map.replace || 存在するキーだけ置換。 || m.replace("a", 2)
+標準API補足 || NavigableMap || 近傍探索できる Map。 || tm.ceilingEntry(5)
+標準API補足 || descendingMap || 逆順のビュー。 || tm.descendingMap()
+標準API補足 || pollFirstEntry || 最小を取り出す。 || tm.pollFirstEntry()
+標準API補足 || subMap || 範囲の部分 Map。 || tm.subMap(1, 5)
+標準API補足 || LinkedHashMap の LRU || アクセス順で古い物を削除。 || removeEldestEntry
+標準API補足 || EnumMap の順序 || 定義順に保持。 || EnumMap
+標準API補足 || Arrays.parallelSort || 並列整列。 || Arrays.parallelSort(a)
+標準API補足 || Arrays.mismatch || 最初の相違位置。 || Arrays.mismatch(a, b)
+標準API補足 || Arrays.compare || 辞書順の比較。 || Arrays.compare(a, b)
+標準API補足 || Arrays.stream の範囲 || 一部だけ Stream に。 || Arrays.stream(a, 0, 3)
+標準API補足 || Arrays.asList の制限 || 長さを変えられない。 || asList(1).add(2)
+標準API補足 || Collections.emptyMap || 空の Map。 || Collections.emptyMap()
+標準API補足 || Collections.reverseOrder || 逆順の比較器。 || Collections.reverseOrder()
+標準API補足 || Collections.checkedList || 型検査付きリスト。 || checkedList(l, String.class)
+標準API補足 || Collections.newSetFromMap || Map から Set。 || newSetFromMap(m)
+標準API補足 || Collections.fill / copy || 埋める・複写。 || Collections.fill(l, 0)
+標準API補足 || StringBuilder.capacity || 現在の容量。 || sb.capacity()
+標準API補足 || StringBuilder.replace || 範囲の置換。 || sb.replace(0, 1, "x")
+標準API補足 || StringBuilder.indexOf || 位置の検索。 || sb.indexOf("a")
+標準API補足 || StringBuilder.chars || 文字の Stream。 || sb.chars()
+標準API補足 || String.valueOf(char[]) || 配列から文字列。 || String.valueOf(arr)
+標準API補足 || String.CASE_INSENSITIVE_ORDER || 大小無視の比較器。 || String.CASE_INSENSITIVE_ORDER
+標準API補足 || String.regionMatches || 部分一致の比較。 || s.regionMatches(0, t, 0, 3)
+標準API補足 || String.codePoints || コードポイントの Stream。 || s.codePoints()
+標準API補足 || サロゲートペア || 2 つの char で 1 文字。 || "𠮷".length()
+標準API補足 || Character.isSurrogate || サロゲートの判定。 || Character.isSurrogate(c)
+標準API補足 || Character.charCount || char の個数。 || Character.charCount(cp)
+標準API補足 || Character.isWhitespace || 空白の判定。 || Character.isWhitespace(c)
+標準API補足 || Character.UnicodeBlock || 文字ブロックの判定。 || UnicodeBlock.of(c)
+標準API補足 || Collator || 言語別の並べ替え。 || Collator.getInstance(Locale.JAPAN)
+標準API補足 || BreakIterator || 単語・文の境界。 || BreakIterator.getWordInstance()
+標準API補足 || ChoiceFormat || 数値で文言を切り替え。 || new ChoiceFormat("0#no")
+標準API補足 || Currency || 通貨の情報。 || Currency.getInstance("JPY")
+標準API補足 || NumberFormat.getCurrencyInstance || 通貨の書式。 || getCurrencyInstance(Locale.JAPAN)
+標準API補足 || NumberFormat.getPercentInstance || 百分率の書式。 || getPercentInstance()
+標準API補足 || Locale.getDefault || 既定の地域。 || Locale.getDefault()
+標準API補足 || Locale.forLanguageTag || タグから地域。 || Locale.forLanguageTag("ja-JP")
+標準API補足 || TimeZone || 古いタイムゾーン。 || TimeZone.getDefault()
+標準API補足 || Preferences || 設定の保存。 || Preferences.userRoot()
+標準API補足 || Observable (非推奨) || 古い観察機構。 || deprecated
+標準API補足 || PropertyChangeListener || プロパティ変更の監視。 || PropertyChangeSupport
+標準API補足 || Cleaner と try-with-resources || 後始末の使い分け。 || AutoCloseable
+標準API補足 || Iterable.forEach || 全要素に処理。 || iterable.forEach(c)
+標準API補足 || Comparable の一貫性 || equals と整合させる。 || compareTo == 0
+標準API補足 || hashCode の再計算 || 変更可能キーに注意。 || mutable key
+標準API補足 || equals の契約 || 反射・対称・推移・一貫。 || equals contract
+標準API補足 || toString の実装 || デバッグ向けの表現。 || @Override toString
+標準API補足 || 防御的コピー || 内部を守るための複製。 || new ArrayList<>(list)
+標準API補足 || 例外の翻訳 || 低水準の例外を包む。 || throw new ServiceException(e)
+標準API補足 || インターン || 同値文字列の共有。 || s.intern()
+標準API補足 || Integer の == 比較の罠 || 128 以上は別の参照。 || Integer.valueOf(200)
+標準API補足 || float の精度 || 約 7 桁の精度。 || float
+標準API補足 || strictfp || 浮動小数点の厳密化。 || strictfp
+標準API補足 || char と int の演算 || 数値として計算される。 || 'a' + 1
+標準API補足 || 配列の共変性 || 親型配列に代入可能。 || Object[] o = new String[1]
+標準API補足 || ArrayStoreException || 配列への不正な格納。 || o[0] = 1
+標準API補足 || NegativeArraySizeException || 負の長さの配列。 || new int[-1]
+標準API補足 || StringIndexOutOfBoundsException || 文字列の範囲外。 || s.charAt(10)
+標準API補足 || InputMismatchException || 入力型の不一致。 || sc.nextInt()
+標準API補足 || UncheckedIOException || I/O 例外の包み。 || new UncheckedIOException(e)
+標準API補足 || CloneNotSupportedException || 複製不可。 || super.clone()
+標準API補足 || ExceptionInInitializerError || 静的初期化の失敗。 || static {}
+標準API補足 || NoClassDefFoundError || 実行時にクラスがない。 || NoClassDefFoundError
+標準API補足 || UnsupportedClassVersionError || 実行版が古い。 || class file version
+標準API補足 || LinkageError || リンクの異常。 || LinkageError
+標準API補足 || AssertionError || アサーション違反。 || throw new AssertionError()
+標準API補足 || VirtualMachineError || JVM の重大異常。 || VirtualMachineError
