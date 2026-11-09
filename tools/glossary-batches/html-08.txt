@@ -1,0 +1,58 @@
+CSS補足 || @media (min-width) || 幅の下限で切り替える。 || @media (min-width: 768px)
+CSS補足 || @media (max-width) || 幅の上限で切り替える。 || @media (max-width: 600px)
+CSS補足 || @media (aspect-ratio) || 縦横比で切り替える。 || @media (aspect-ratio: 16/9)
+CSS補足 || @media (display-mode) || PWA の表示形態。 || @media (display-mode: standalone)
+CSS補足 || @media (update) || 画面の更新頻度。 || @media (update: slow)
+CSS補足 || @media (scripting) || スクリプトの可否。 || @media (scripting: none)
+CSS補足 || @media (dynamic-range) || 高輝度の対応。 || @media (dynamic-range: high)
+CSS補足 || @media (color-gamut) || 色域。 || @media (color-gamut: p3)
+CSS補足 || @media (prefers-reduced-data) || データ節約の設定。 || @media (prefers-reduced-data: reduce)
+CSS補足 || @media (prefers-reduced-transparency) || 透過の軽減の設定。 || @media (prefers-reduced-transparency: reduce)
+CSS補足 || @media (inverted-colors) || 色反転の設定。 || @media (inverted-colors: inverted)
+CSS補足 || @media (any-hover / any-pointer) || いずれかの入力機器の性質。 || @media (any-hover: hover)
+CSS補足 || @media (resolution) || 解像度で切り替える。 || @media (resolution: 2dppx)
+CSS補足 || @media screen / print / all || メディアの種類。 || @media screen
+CSS補足 || @container style() || スタイル値で切り替える。 || @container style(--x: 1)
+CSS補足 || @container scroll-state() || スクロール状態で切り替える。 || @container scroll-state(stuck: top)
+CSS補足 || @view-transition || 画面遷移の設定。 || @view-transition { navigation: auto; }
+CSS補足 || @font-feature-values || フォントの字形の名前を決める。 || @font-feature-values
+CSS補足 || @viewport (旧) || 表示領域の指定（廃止）。 || 使わない
+CSS補足 || @document (旧) || URL ごとの指定（廃止）。 || 使わない
+CSS補足 || @-moz-document || Firefox 限定の指定。 || 使わない
+CSS補足 || @tailwind || Tailwind の指示。 || @tailwind base;
+CSS補足 || :root と :host の違い || 文書の根とシャドウの根。 || :host
+CSS補足 || currentcolor の活用 || 文字色を枠線などに流用する。 || border: 1px solid currentcolor;
+CSS補足 || inherit の活用 || 親の値をそのまま使う。 || font: inherit;
+CSS補足 || line-height の単位なし指定 || 子へ倍率で継承される。 || line-height: 1.6;
+CSS補足 || margin の相殺を防ぐ || padding や flow-root を使う。 || display: flow-root;
+CSS補足 || インライン要素の下の隙間 || 行の余白による隙間。 || vertical-align: top
+CSS補足 || height: 100% が効かない理由 || 親の高さが未指定。 || html, body { height: 100% }
+CSS補足 || 100vh とモバイル || アドレスバーでずれる。 || 100dvh
+CSS補足 || position: fixed が効かない場合 || 親に transform があると基準が変わる。 || transform の影響
+CSS補足 || z-index が効かない場合 || position が static のまま。 || position: relative
+CSS補足 || overflow: hidden と sticky || 祖先の overflow で効かなくなる。 || overflow: clip
+CSS補足 || overflow: clip || 描画だけ切る。 || overflow: clip;
+CSS補足 || min-width: 0 || フレックスの子の縮みを許す。 || min-width: 0;
+CSS補足 || flex: 1 の意味 || 均等に伸びる指定。 || flex: 1 1 0%
+CSS補足 || margin: auto in flex || 余白を押し付けて寄せる。 || margin-left: auto;
+CSS補足 || grid の minmax(0, 1fr) || はみ出しを防ぐ。 || minmax(0, 1fr)
+CSS補足 || gap と margin の違い || 外側に余白が出ない。 || gap
+CSS補足 || inset: 0 の意味 || 4辺を 0 にする。 || inset: 0;
+CSS補足 || all: unset の注意 || 継承も消える。 || all: unset;
+CSS補足 || will-change の注意 || 使いすぎると逆効果。 || will-change
+CSS補足 || content-visibility の注意 || 見えない部分の検索に影響する。 || content-visibility: auto
+CSS補足 || font-display: swap || 代替表示を先に出す。 || font-display: swap;
+CSS補足 || preload でフォント || フォントを先に読む。 || <link rel="preload" as="font">
+CSS補足 || size-adjust || 代替フォントの大きさを合わせる。 || size-adjust: 105%;
+CSS補足 || ascent-override || 代替フォントの上端を合わせる。 || ascent-override: 90%;
+CSS補足 || ブラウザごとの差 || 実機で確かめる。 || Can I use
+CSS補足 || Can I use || 対応状況を調べるサイト。 || caniuse.com
+CSS補足 || MDN Web Docs || Web 技術の資料。 || developer.mozilla.org
+CSS補足 || Baseline || 主要ブラウザの対応の目安。 || Baseline 2024
+CSS補足 || プログレッシブエンハンスメント || 基本を守り高機能を足す。 || @supports
+CSS補足 || グレースフルデグラデーション || 非対応でも崩さない。 || fallback
+CSS補足 || フォールバック値 || 古い環境向けの先行指定。 || width: 100%; width: stretch;
+CSS補足 || stretch (値) || 領域いっぱいに広げる。 || width: stretch;
+CSS補足 || fit-content (値) || 内容に合わせる。 || width: fit-content;
+CSS補足 || max-content / min-content || 内容の最大・最小幅。 || width: max-content;
+CSS補足 || text-wrap: pretty || 行末の孤立を避ける。 || text-wrap: pretty;
