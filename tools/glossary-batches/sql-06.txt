@@ -1,0 +1,74 @@
+# カテゴリ || 用語 || 説明 || コード例
+基本構文 || SELECT 式のみ || 表を使わずに計算や関数の結果を取り出す。 || SELECT 1 + 1;
+基本構文 || 列の別名 (AS を省略) || AS を省いて別名を付ける書き方。 || SELECT price p FROM items;
+基本構文 || テーブルの別名 || 表に短い名前を付ける。 || SELECT u.name FROM users u;
+基本構文 || 日本語の別名 || 引用符で囲めば日本語の別名も付けられる。 || SELECT price AS "価格" FROM items;
+基本構文 || 識別子の引用符 || 予約語や記号を含む名前を囲む（" や ` や []）。 || SELECT "order" FROM t;
+基本構文 || 大文字小文字の区別 || 識別子と文字列で、区別するかは DB により違う。 || WHERE name = 'abc'
+基本構文 || 文字列リテラルの引用 || 文字列は単一引用符で囲み、中の ' は2つ重ねる。 || SELECT 'it''s';
+基本構文 || 複数行コメント || /* */ で複数行をコメントにする。 || /* メモ */
+基本構文 || 条件の優先順位 || AND は OR より先に評価される。括弧で明確にする。 || WHERE a = 1 AND (b = 2 OR c = 3)
+基本構文 || BETWEEN の範囲 || 両端の値を含む。 || WHERE n BETWEEN 1 AND 10
+基本構文 || IN と NOT IN の NULL 注意 || NOT IN は NULL が含まれると結果が空になる。 || WHERE id NOT IN (SELECT id FROM t WHERE id IS NOT NULL)
+基本構文 || 列の位置で ORDER BY || SELECT の何番目の列かで並べる。 || ORDER BY 2 DESC
+基本構文 || 複数列の並べ替え || 最初の列が同じとき次の列で並べる。 || ORDER BY dept, salary DESC
+基本構文 || NULL の並び順 || NULL は最初か最後。DB により違う。 || ORDER BY v NULLS LAST
+基本構文 || DISTINCT と複数列 || 列の組み合わせの重複を除く。 || SELECT DISTINCT a, b FROM t;
+基本構文 || SELECT の処理順序 || FROM→WHERE→GROUP BY→HAVING→SELECT→ORDER BY の順で評価される。 || 別名は WHERE では使えない
+基本構文 || LIMIT と ORDER BY || 件数を絞るときは必ず並び順を指定する。 || ORDER BY id LIMIT 10
+基本構文 || 定数列の追加 || 固定の値の列を結果に加える。 || SELECT name, '会員' AS kind FROM t;
+基本構文 || 列の連結 || 列を文字列でつなげる。 || SELECT last || first FROM t;
+基本構文 || 計算列 || 列同士を計算して新しい列にする。 || SELECT price * qty AS total FROM t;
+結合の応用 || 3表以上の結合 || JOIN を続けて複数の表をつなぐ。 || FROM a JOIN b ON ... JOIN c ON ...
+結合の応用 || 結合条件と絞り込みの違い || 外部結合では ON と WHERE で結果が変わる。 || LEFT JOIN b ON a.id = b.id AND b.v > 1
+結合の応用 || 非等価結合 || = 以外の条件で結合する。 || JOIN r ON t.score BETWEEN r.lo AND r.hi
+結合の応用 || 結合による行の増殖 || 1対多の結合で、親の行が子の数だけ増える。 || 集計の前に結合の粒度を確認する
+結合の応用 || 反結合 (ANTI JOIN) || 相手にない行を取る。 || WHERE NOT EXISTS (SELECT 1 FROM b WHERE b.id = a.id)
+結合の応用 || 半結合 (SEMI JOIN) || 相手にある行だけを取り、重複させない。 || WHERE EXISTS (SELECT 1 FROM b WHERE b.id = a.id)
+結合の応用 || 結合順序とパフォーマンス || 絞り込んだ小さな表から結合すると速い。 || WHERE で先に絞る
+結合の応用 || JOIN と IN の使い分け || 結合は列を取れる、IN は存在確認向き。 || WHERE id IN (SELECT id FROM b)
+結合の応用 || 自己結合で親子関係 || 同じ表を2回使って親を引く。 || FROM emp e JOIN emp m ON e.mgr = m.id
+結合の応用 || FULL JOIN で差分確認 || 両方にあるもの・片方だけのものを調べる。 || FULL JOIN b ON a.id = b.id WHERE a.id IS NULL OR b.id IS NULL
+結合の応用 || CROSS JOIN で組み合わせ || すべての組み合わせを作る。 || SELECT * FROM sizes CROSS JOIN colors
+結合の応用 || USING の注意 || USING で結合した列は1つにまとまる。 || JOIN b USING (id)
+結合の応用 || NATURAL JOIN の注意 || 同名の列で自動結合する。意図せぬ結合に注意。 || a NATURAL JOIN b
+結合の応用 || 複数列での結合 || 複合キーで結合する。 || ON a.x = b.x AND a.y = b.y
+結合の応用 || 期間での結合 || 日付が期間に入る行を結合する。 || ON o.d BETWEEN p.start AND p.end
+サブクエリの応用 || 相関サブクエリの書き換え || ウィンドウ関数や結合で書き換えると速いことがある。 || MAX(v) OVER (PARTITION BY g)
+サブクエリの応用 || SELECT 句のサブクエリ || 1行ごとに値を1つ取る。 || SELECT (SELECT COUNT(*) FROM o WHERE o.uid = u.id) FROM u
+サブクエリの応用 || FROM 句のサブクエリ || 検索結果を表として使う。 || FROM (SELECT ...) AS x
+サブクエリの応用 || WITH で読みやすく || 複雑な問い合わせを段階に分ける。 || WITH a AS (...), b AS (...) SELECT ...
+サブクエリの応用 || CTE の再利用 || 同じ CTE を複数回参照できる。 || WITH x AS (...) SELECT * FROM x a JOIN x b ON ...
+サブクエリの応用 || MATERIALIZED / NOT MATERIALIZED || CTE を別に実行して保存するかの指定（PostgreSQL）。 || WITH x AS MATERIALIZED (...)
+サブクエリの応用 || ALL 演算子 || すべての値と比べる。 || WHERE v > ALL (SELECT v FROM t2)
+サブクエリの応用 || 行値比較 || 複数列をまとめて比べる。 || WHERE (a, b) IN (SELECT a, b FROM t2)
+サブクエリの応用 || 複数列を返すサブクエリ || 複数の列を返す副問い合わせ。 || WHERE (a, b) = (SELECT a, b FROM t2 LIMIT 1)
+サブクエリの応用 || UPDATE のサブクエリ || 別の表の値で更新する。 || UPDATE t SET v = (SELECT MAX(v) FROM s WHERE s.id = t.id)
+サブクエリの応用 || DELETE のサブクエリ || 条件に合う行を別の表から探して削除。 || DELETE FROM t WHERE id IN (SELECT id FROM s)
+サブクエリの応用 || INSERT のサブクエリ || 検索結果を追加する。 || INSERT INTO t SELECT ...
+サブクエリの応用 || 再帰CTEの終了条件 || 再帰が止まる条件を必ず入れる。 || WHERE depth < 10
+集計の応用 || 集計と NULL || COUNT(列) は NULL を数えない。 || SELECT COUNT(a), COUNT(*) FROM t;
+集計の応用 || SUM の NULL || 全部 NULL なら SUM も NULL。COALESCE で 0 にする。 || SELECT COALESCE(SUM(v), 0) FROM t;
+集計の応用 || AVG の NULL || NULL は平均に含まれない。 || SELECT AVG(v) FROM t;
+集計の応用 || GROUP BY の列の選択 || SELECT に書く列は GROUP BY か集計関数に含める。 || SELECT dept, MAX(sal) FROM emp GROUP BY dept
+集計の応用 || 集計の二段構え || 集計した結果をさらに集計する。 || SELECT AVG(c) FROM (SELECT COUNT(*) c FROM t GROUP BY g) x
+集計の応用 || HAVING の使いどころ || 集計後の値で絞り込む。 || HAVING SUM(v) > 100
+集計の応用 || 条件付き COUNT || CASE や FILTER で条件に合う行だけ数える。 || COUNT(CASE WHEN v > 0 THEN 1 END)
+集計の応用 || 小計・合計行 (ROLLUP) || 小計と総計の行を出す。 || GROUP BY ROLLUP (a, b)
+集計の応用 || 前の値との差 || LAG と引き算で変化を出す。 || v - LAG(v) OVER (ORDER BY d)
+集計の応用 || 移動合計 || 直近n行の合計を出す。 || SUM(v) OVER (ORDER BY d ROWS 6 PRECEDING)
+集計の応用 || 中央値の求め方 || PERCENTILE_CONT で中央値を出す。 || PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY v)
+集計の応用 || 重複の件数を数える || 同じ値が何件あるか。 || SELECT v, COUNT(*) FROM t GROUP BY v HAVING COUNT(*) > 1
+集計の応用 || 件数0も出す集計 || LEFT JOIN と COUNT(子の列) で0件も出す。 || SELECT u.id, COUNT(o.id) FROM u LEFT JOIN o ON o.uid = u.id GROUP BY u.id
+データ型の応用 || 型変換の注意 || 暗黙の型変換はインデックスが効かなくなる原因になる。 || WHERE id = 1 を WHERE id = '1' と書かない
+データ型の応用 || 文字列と数値の比較 || 型が違う比較は DB により挙動が違う。 || CAST で型をそろえる
+データ型の応用 || 日付型と文字列 || 日付は文字列でなく日付型で保存する。 || d DATE
+データ型の応用 || 真偽値の扱い || BOOLEAN がない DB では 0/1 や Y/N を使う。 || flag SMALLINT
+データ型の応用 || 固定長 CHAR の落とし穴 || CHAR は後ろに空白が付く。比較に注意。 || VARCHAR を基本にする
+データ型の応用 || 桁数の指定 || DECIMAL(精度, 位取り)。 || DECIMAL(10, 2)
+データ型の応用 || 自動採番の欠番 || ROLLBACK や失敗で番号に欠けが出ることがある。 || 欠番は気にしない
+データ型の応用 || UUID を主キーにする || 推測されにくいが、連番より大きい。 || id UUID DEFAULT gen_random_uuid()
+データ型の応用 || 大きな文字列・画像 || 画像は DB でなくファイルに置き、場所だけ保存することが多い。 || image_url TEXT
+データ型の応用 || 地理情報 (GEOMETRY) || 地図上の点や面を扱う型。 || POINT(139.7 35.6)
+データ型の応用 || XML 型 || XML を保存・検索できる型。 || data XML
+データ型の応用 || ENUM と CHECK の違い || ENUM は値の追加が大変なことがある。CHECK が柔軟。 || CHECK (status IN ('a','b'))

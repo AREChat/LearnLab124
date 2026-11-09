@@ -1,0 +1,119 @@
+# カテゴリ || 用語 || 説明 || コード例
+コレクション || Add (List) || リストの末尾に要素を追加する。 || list.Add(5)
+コレクション || AddRange || 複数の要素をまとめて追加する。 || list.AddRange({1, 2, 3})
+コレクション || Insert (List) || 指定した位置に要素を挿入する。 || list.Insert(0, 9)
+コレクション || Remove / RemoveAt || 要素や位置を指定して削除する。 || list.RemoveAt(0)
+コレクション || RemoveAll || 条件に合う要素をすべて削除する。 || list.RemoveAll(Function(x) x < 0)
+コレクション || Clear || すべての要素を削除する。 || list.Clear()
+コレクション || Count (List) || 要素の数を返す。 || list.Count
+コレクション || IndexOf (List) || 要素の位置を返す。 || list.IndexOf(5)
+コレクション || Contains (List) || 要素が含まれるか調べる。 || list.Contains(5)
+コレクション || Sort (List) || リストを並べ替える。 || list.Sort()
+コレクション || Reverse || 並びを逆にする。 || list.Reverse()
+コレクション || Find / FindAll || 条件に合う要素を探す。 || list.FindAll(Function(x) x > 3)
+コレクション || Exists || 条件に合う要素があるか調べる。 || list.Exists(Function(x) x > 3)
+コレクション || ForEach (List) || 各要素に処理を行う。 || list.ForEach(Sub(x) Console.WriteLine(x))
+コレクション || GetRange || 一部の範囲を取り出す。 || list.GetRange(0, 3)
+コレクション || ToArray (List) || リストを配列にする。 || list.ToArray()
+コレクション || Dictionary の Add / TryGetValue || キーと値の追加と、安全な取得。 || dic.TryGetValue("a", v)
+コレクション || ContainsKey / ContainsValue || キーや値があるか調べる。 || dic.ContainsKey("a")
+コレクション || Dictionary の Keys / Values || キーの一覧・値の一覧を取り出す。 || dic.Keys
+コレクション || SortedDictionary / SortedList || キーの順に並ぶ辞書。 || Dim d As New SortedDictionary(Of String, Integer)
+コレクション || LinkedList || 要素の追加・削除が速い連結リスト。 || Dim l As New LinkedList(Of Integer)
+コレクション || Queue の Enqueue / Dequeue || 先に入れたものから取り出す（先入れ先出し）。 || q.Enqueue(1)
+コレクション || Stack の Push / Pop || 後に入れたものから取り出す（後入れ先出し）。 || s.Push(1)
+コレクション || Peek || 取り出さずに先頭を見る。 || q.Peek()
+コレクション || ArrayList (旧式) || 型を決めない古いリスト。新規は List を使う。 || Dim a As New ArrayList
+コレクション || Hashtable (旧式) || 古い辞書型。新規は Dictionary を使う。 || Dim h As New Hashtable
+コレクション || ReadOnlyCollection || 変更できないコレクション。 || list.AsReadOnly()
+コレクション || ObservableCollection || 変更を画面に通知できるコレクション。 || New ObservableCollection(Of String)
+コレクション || ConcurrentDictionary || 複数のスレッドから安全に使える辞書。 || New ConcurrentDictionary(Of String, Integer)
+コレクション || 多次元配列 || 行と列のある配列。 || Dim a(2, 3) As Integer
+コレクション || ジャグ配列 || 配列の配列。長さが行ごとに違える。 || Dim a(2)() As Integer
+コレクション || Array.Sort / Array.Reverse || 配列の並べ替え・反転。 || Array.Sort(arr)
+コレクション || Array.IndexOf || 配列の要素の位置を返す。 || Array.IndexOf(arr, 5)
+コレクション || Array.Copy / Clone || 配列を複製する。 || arr.Clone()
+コレクション || Array.Resize || 配列の大きさを変える。 || Array.Resize(arr, 10)
+コレクション || UBound / LBound || 配列の最大・最小の添字を返す。 || UBound(arr)
+コレクション || Span / Memory || 配列の一部を高速に扱う型。 || Dim s As Span(Of Integer)
+LINQ || Skip / Take || 先頭を飛ばす・先頭から取る（ページ分けに使う）。 || q.Skip(10).Take(10)
+LINQ || Distinct || 重複を除く。 || q.Distinct()
+LINQ || OrderByDescending || 降順に並べる。 || q.OrderByDescending(Function(x) x.Age)
+LINQ || ThenBy || 2番目の並べ替えキー。 || q.OrderBy(Function(x) x.A).ThenBy(Function(x) x.B)
+LINQ || Max / Min || 最大・最小を求める。 || q.Max()
+LINQ || Last / LastOrDefault || 最後の要素を取る。 || q.LastOrDefault()
+LINQ || Single / SingleOrDefault || ちょうど1件の要素を取る。 || q.Single(Function(x) x.Id = 1)
+LINQ || ElementAt || 位置を指定して取る。 || q.ElementAt(2)
+LINQ || Contains (LINQ) || 要素が含まれるか調べる。 || q.Contains(5)
+LINQ || Concat / Union / Intersect / Except || 2つの列の連結・和集合・共通・差。 || a.Union(b)
+LINQ || Join (LINQ) || 2つの列を結合する。 || From a In xs Join b In ys On a.Id Equals b.Id
+LINQ || GroupJoin || グループ化しながら結合する。 || xs.GroupJoin(ys, ...)
+LINQ || SelectMany || 入れ子の列を1つに平らにする。 || q.SelectMany(Function(x) x.Items)
+LINQ || Zip || 2つの列を組にする。 || a.Zip(b, Function(x, y) x + y)
+LINQ || Aggregate || 独自の集計を行う。 || q.Aggregate(Function(a, b) a + b)
+LINQ || ToDictionary || 列を辞書にする。 || q.ToDictionary(Function(x) x.Id)
+LINQ || ToLookup || キーごとのグループを持つ辞書にする。 || q.ToLookup(Function(x) x.Type)
+LINQ || Cast / OfType || 型を変換・絞り込みする。 || list.OfType(Of String)()
+LINQ || Reverse (LINQ) || 並びを逆にする。 || q.Reverse()
+LINQ || DefaultIfEmpty || 空のときの既定値を返す。 || q.DefaultIfEmpty(0)
+LINQ || Range / Repeat || 連続した数や、同じ値の繰り返しを作る。 || Enumerable.Range(1, 10)
+LINQ || 遅延実行 || ToList などで実際に使うまで実行されない。 || Dim q = list.Where(...)
+LINQ || Let 句 || クエリの途中で値に名前を付ける。 || From x In xs Let y = x * 2 Select y
+LINQ || Order By ... Descending (クエリ式) || クエリ式での降順。 || Order By x.Age Descending
+LINQ || Group By ... Into || クエリ式でのグループ化。 || Group x By x.Type Into g = Group
+LINQ || Aggregate ... Into || クエリ式での集計。 || Aggregate x In xs Into Sum(x.V)
+LINQ || LINQ to XML || XML を LINQ で検索する。 || doc.Descendants("item")
+LINQ || XML リテラル || VB.NET 独自の、XML を直接書く機能。 || Dim x = <item id="1"/>
+LINQ || AsEnumerable / AsQueryable || LINQ の実行場所を切り替える。 || dt.AsEnumerable()
+ファイルと入出力 || File.Exists / Directory.Exists || ファイルやフォルダがあるか調べる。 || File.Exists("a.txt")
+ファイルと入出力 || File.Copy / Move / Delete || ファイルのコピー・移動・削除。 || File.Copy("a.txt", "b.txt", True)
+ファイルと入出力 || File.AppendAllText || ファイルの末尾に追記する。 || File.AppendAllText("a.txt", "追記")
+ファイルと入出力 || File.ReadLines || 大きなファイルを1行ずつ読む。 || For Each l In File.ReadLines("a.txt")
+ファイルと入出力 || Directory.GetFiles || フォルダの中のファイル一覧を取る。 || Directory.GetFiles(dir, "*.txt")
+ファイルと入出力 || Directory.CreateDirectory || フォルダを作る。 || Directory.CreateDirectory(dir)
+ファイルと入出力 || Path.Combine || パスを安全につなぐ。 || Path.Combine(dir, "a.txt")
+ファイルと入出力 || Path.GetFileName / GetExtension || ファイル名・拡張子を取り出す。 || Path.GetExtension("a.txt")
+ファイルと入出力 || FileInfo / DirectoryInfo || ファイルやフォルダの詳細な情報を扱う。 || New FileInfo("a.txt").Length
+ファイルと入出力 || FileStream || ファイルをバイト単位で読み書きする。 || New FileStream("a.bin", FileMode.Open)
+ファイルと入出力 || BinaryReader / BinaryWriter || バイナリデータを型ごとに読み書きする。 || New BinaryWriter(fs)
+ファイルと入出力 || MemoryStream || メモリ上のストリーム。 || New MemoryStream()
+ファイルと入出力 || Environment.GetFolderPath || デスクトップなど特別なフォルダの場所を取る。 || Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+ファイルと入出力 || SaveFileDialog || 保存先をユーザーに選ばせる。 || New SaveFileDialog()
+ファイルと入出力 || FolderBrowserDialog || フォルダをユーザーに選ばせる。 || New FolderBrowserDialog()
+ファイルと入出力 || FileSystemWatcher || フォルダの変更を監視する。 || New FileSystemWatcher(dir)
+ファイルと入出力 || CSV の読み込み (TextFieldParser) || CSV を安全に読む。 || New Microsoft.VisualBasic.FileIO.TextFieldParser(path)
+ファイルと入出力 || XML のシリアル化 || オブジェクトを XML に保存する。 || New XmlSerializer(GetType(P))
+ファイルと入出力 || JsonSerializer || オブジェクトと JSON を相互変換する。 || JsonSerializer.Serialize(obj)
+ファイルと入出力 || Process.Start || 他のアプリやファイルを開く。 || Process.Start("notepad.exe")
+ファイルと入出力 || Clipboard || クリップボードの読み書き。 || Clipboard.SetText("hi")
+ファイルと入出力 || 圧縮 (ZipFile) || zip を作る・展開する。 || ZipFile.CreateFromDirectory(dir, "a.zip")
+ファイルと入出力 || File.GetLastWriteTime || ファイルの更新日時を取る。 || File.GetLastWriteTime("a.txt")
+Windowsフォーム || PictureBox || 画像を表示する。 || pic.Image = Image.FromFile("a.png")
+Windowsフォーム || NumericUpDown || 数値を上下ボタンで入力する。 || num.Value
+Windowsフォーム || DateTimePicker || 日付を選ばせる。 || dtp.Value
+Windowsフォーム || MonthCalendar || カレンダーを表示する。 || cal.SelectionStart
+Windowsフォーム || TabControl || タブで画面を切り替える。 || tab.SelectedIndex
+Windowsフォーム || GroupBox / Panel || 部品をまとめる枠。 || New Panel()
+Windowsフォーム || ProgressBar || 進み具合を表示する。 || bar.Value = 50
+Windowsフォーム || TreeView || 階層をツリーで表示する。 || tree.Nodes.Add("root")
+Windowsフォーム || ListView || 一覧を詳細表示などで見せる。 || lv.Items.Add("a")
+Windowsフォーム || RichTextBox || 書式付きの文字を編集できる。 || rtb.SelectionColor = Color.Red
+Windowsフォーム || ToolTip || マウスを乗せると説明を出す。 || tip.SetToolTip(btn, "保存")
+Windowsフォーム || ContextMenuStrip || 右クリックのメニュー。 || Me.ContextMenuStrip = cms
+Windowsフォーム || StatusStrip || 画面下の状態表示バー。 || status.Items.Add("準備完了")
+Windowsフォーム || NotifyIcon || タスクトレイのアイコン。 || New NotifyIcon()
+Windowsフォーム || Form.Show / ShowDialog || 画面を開く。ShowDialog は閉じるまで待つ。 || f.ShowDialog()
+Windowsフォーム || DialogResult || ダイアログの結果（OK・キャンセル）。 || If f.ShowDialog() = DialogResult.OK Then
+Windowsフォーム || Me.Close / Hide || 画面を閉じる・隠す。 || Me.Close()
+Windowsフォーム || FormClosing || 閉じる直前に呼ばれる。キャンセルもできる。 || e.Cancel = True
+Windowsフォーム || KeyPreview / KeyDown || キーの入力を受け取る。 || Private Sub Form1_KeyDown(...)
+Windowsフォーム || MouseClick / MouseMove || マウスの操作を受け取る。 || Private Sub pic_MouseClick(...)
+Windowsフォーム || Paint イベント / Graphics || 図形や文字を自分で描く。 || e.Graphics.DrawLine(Pens.Black, 0, 0, 100, 100)
+Windowsフォーム || TableLayoutPanel / FlowLayoutPanel || 部品を自動で並べる。 || New FlowLayoutPanel()
+Windowsフォーム || Tab 順 (TabIndex) || Tab キーで移動する順番。 || txt.TabIndex = 1
+Windowsフォーム || Enabled / Visible || 使えるか・見えるかを切り替える。 || btn.Enabled = False
+Windowsフォーム || データバインド || 部品とデータを結び付ける。 || txt.DataBindings.Add("Text", obj, "Name")
+Windowsフォーム || BindingSource || データの現在行などを管理する。 || dgv.DataSource = bs
+Windowsフォーム || DPI 対応 || 高解像度の画面でも表示が崩れないようにする。 || AutoScaleMode = Font
+Windowsフォーム || Application.DoEvents || 処理中に画面を更新させる（使いすぎ注意）。 || Application.DoEvents()
+Windowsフォーム || Control.Tag || 部品に好きな情報を持たせる。 || btn.Tag = 5
