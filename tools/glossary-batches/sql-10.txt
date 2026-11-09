@@ -1,0 +1,77 @@
+# カテゴリ || 用語 || 説明 || コード例
+PostgreSQL詳細 || SELECT ... INTO || 結果を新しいテーブルに入れる。 || SELECT * INTO t2 FROM t1;
+PostgreSQL詳細 || CREATE INDEX CONCURRENTLY || 止めずにインデックスを作る。 || CREATE INDEX CONCURRENTLY ix ON t(a);
+PostgreSQL詳細 || CLUSTER || 指定したインデックスの順に表を並べ替える。 || CLUSTER t USING ix;
+PostgreSQL詳細 || pg_sleep || 指定の秒数だけ待つ。 || SELECT pg_sleep(1);
+PostgreSQL詳細 || generate_subscripts || 配列の添字を行にする。 || SELECT generate_subscripts(ARRAY[10,20], 1);
+PostgreSQL詳細 || WITH ORDINALITY || 展開した行に連番を付ける。 || SELECT * FROM unnest(ARRAY['a','b']) WITH ORDINALITY;
+PostgreSQL詳細 || ROWS FROM || 複数の関数を並べて表にする。 || SELECT * FROM ROWS FROM (f1(), f2());
+PostgreSQL詳細 || VALUES リスト || 定数の表を作る。 || SELECT * FROM (VALUES (1, 'a'), (2, 'b')) AS t(id, name);
+PostgreSQL詳細 || ARRAY の添字 || 配列の要素は 1 から数える。 || SELECT (ARRAY[10,20,30])[2];
+PostgreSQL詳細 || ROW コンストラクタ || 複数の値をまとめた行値を作る。 || SELECT ROW(1, 'a');
+PostgreSQL詳細 || 複合型 || 複数の列をまとめた型。 || CREATE TYPE pt AS (x INT, y INT);
+PostgreSQL詳細 || テーブル継承 || 親テーブルの列を引き継ぐ。 || CREATE TABLE child () INHERITS (parent);
+PostgreSQL詳細 || ON CONFLICT ON CONSTRAINT || 制約名を指定して重複を処理する。 || ON CONFLICT ON CONSTRAINT uq DO NOTHING
+PostgreSQL詳細 || EXCLUDED || 重複時に追加しようとした値を指す。 || SET v = EXCLUDED.v
+PostgreSQL詳細 || COPY TO || 検索結果をファイルに書き出す。 || COPY (SELECT * FROM t) TO STDOUT WITH CSV HEADER;
+PostgreSQL詳細 || \copy (psql) || クライアント側のファイルと入出力する。 || \copy t FROM 'a.csv' CSV HEADER
+PostgreSQL詳細 || \x (拡張表示) || 結果を縦に表示する psql の設定。 || \x
+PostgreSQL詳細 || \timing || 実行時間を表示する psql の設定。 || \timing on
+PostgreSQL詳細 || \i (ファイル実行) || ファイルの SQL を実行する。 || \i script.sql
+PostgreSQL詳細 || \df / \dv / \di || 関数・ビュー・インデックスの一覧。 || \df
+PostgreSQL詳細 || \dn / \du || スキーマ・ユーザーの一覧。 || \dn
+PostgreSQL詳細 || \e (エディタ) || エディタで SQL を編集する。 || \e
+PostgreSQL詳細 || pg_restore || pg_dump の形式のバックアップを戻す。 || pg_restore -d shop shop.dump
+PostgreSQL詳細 || WAL (先行書き込みログ) || 変更を先にログへ書き、障害に備える仕組み。 || wal_level
+PostgreSQL詳細 || MVCC || 読む人と書く人が互いを待たない仕組み。 || 古い版の行を残す
+PostgreSQL詳細 || autovacuum || 不要な領域を自動で整理する。 || autovacuum = on
+PostgreSQL詳細 || TOAST || 大きな値を別の場所に保存する仕組み。 || 自動で行われる
+PostgreSQL詳細 || EXPLAIN (BUFFERS) || 読み込んだブロック数を表示する。 || EXPLAIN (ANALYZE, BUFFERS) SELECT ...
+PostgreSQL詳細 || work_mem || 並べ替えなどに使うメモリの量。 || SET work_mem = '64MB';
+PostgreSQL詳細 || shared_buffers || データをキャッシュする共有メモリ。 || shared_buffers = 256MB
+PostgreSQL詳細 || max_connections || 同時接続数の上限。 || max_connections = 100
+PostgreSQL詳細 || pg_hba.conf || 接続を許可する条件を書く設定ファイル。 || host all all 0.0.0.0/0 scram-sha-256
+PostgreSQL詳細 || SCRAM-SHA-256 || パスワードを安全に確認する認証方式。 || password_encryption
+PostgreSQL詳細 || ビューの権限 || ビューの所有者の権限で元の表を読む。 || security_invoker
+PostgreSQL詳細 || ALTER DEFAULT PRIVILEGES || 今後作る表の権限を決めておく。 || ALTER DEFAULT PRIVILEGES IN SCHEMA s GRANT SELECT ON TABLES TO r;
+PostgreSQL詳細 || SET LOCAL || トランザクションの間だけ設定を変える。 || SET LOCAL statement_timeout = '3s';
+PostgreSQL詳細 || advisory lock || アプリが自由に使えるロック。 || SELECT pg_advisory_lock(1);
+PostgreSQL詳細 || LATERAL JOIN || 左の行ごとに右の副問い合わせを実行する。 || FROM t, LATERAL (SELECT ... WHERE x = t.id) s
+PostgreSQL詳細 || FILTER と窓関数 || 窓関数に条件付き集計を使う。 || COUNT(*) FILTER (WHERE a) OVER ()
+PostgreSQL詳細 || GROUPING SETS の使い方 || 複数のグループ化を1文で行う。 || GROUP BY GROUPING SETS ((a), (b), ())
+PostgreSQL詳細 || 部分一致の高速化 (GIN trgm) || LIKE '%x%' を速くする。 || CREATE INDEX ON t USING gin (name gin_trgm_ops);
+PostgreSQL詳細 || 範囲型の演算 || 期間の重なりを調べる。 || tsrange(a, b) && tsrange(c, d)
+PostgreSQL詳細 || 日付の無限大 || infinity を日付として使える。 || SELECT 'infinity'::date;
+PostgreSQL詳細 || 型のキャスト (::) || 値の型を変える短い書き方。 || '5'::int
+PostgreSQL詳細 || ダラー引用符 ($$) || 文字列を $$ で囲む書き方。 || $$it's$$
+PostgreSQL詳細 || 識別子の長さ上限 || 名前は63バイトまで。 || 63
+MySQL詳細 || SHOW COLUMNS || 列の情報を表示する。 || SHOW COLUMNS FROM t;
+MySQL詳細 || SHOW STATUS || サーバーの状態を表示する。 || SHOW STATUS LIKE 'Threads%';
+MySQL詳細 || SHOW WARNINGS || 直前の警告を表示する。 || SHOW WARNINGS;
+MySQL詳細 || EXPLAIN FORMAT=JSON || 実行計画を JSON で見る。 || EXPLAIN FORMAT=JSON SELECT ...
+MySQL詳細 || OPTIMIZE TABLE || 表の領域を整理する。 || OPTIMIZE TABLE t;
+MySQL詳細 || ANALYZE TABLE || 統計情報を更新する。 || ANALYZE TABLE t;
+MySQL詳細 || CHECK TABLE / REPAIR TABLE || 表の検査・修復。 || CHECK TABLE t;
+MySQL詳細 || FLUSH PRIVILEGES || 権限の変更を反映する。 || FLUSH PRIVILEGES;
+MySQL詳細 || CURDATE / CURTIME || 現在の日付・時刻。 || SELECT CURDATE();
+MySQL詳細 || DATE_FORMAT の書式 || 日付を書式指定で文字列にする。 || DATE_FORMAT(d, '%Y/%m/%d')
+MySQL詳細 || TIMESTAMPDIFF || 日付の差を指定の単位で求める。 || TIMESTAMPDIFF(DAY, a, b)
+MySQL詳細 || LAST_DAY (MySQL) || 月末の日付。 || LAST_DAY('2026-11-09')
+MySQL詳細 || CONCAT_WS || 区切り文字でつなぐ。 || CONCAT_WS('-', a, b)
+MySQL詳細 || LPAD / RPAD || 左・右に文字を詰める。 || LPAD(n, 5, '0')
+MySQL詳細 || REGEXP_REPLACE (MySQL 8) || 正規表現で置き換える。 || REGEXP_REPLACE(s, '[0-9]', '')
+MySQL詳細 || JSON_SET / JSON_REMOVE || JSON の値を変更・削除する。 || JSON_SET(j, '$.a', 1)
+MySQL詳細 || JSON_ARRAYAGG / JSON_OBJECTAGG || 行を JSON の配列・オブジェクトにまとめる。 || JSON_ARRAYAGG(name)
+MySQL詳細 || ROW_NUMBER (MySQL 8) || MySQL 8 から窓関数が使える。 || ROW_NUMBER() OVER (ORDER BY id)
+MySQL詳細 || WITH RECURSIVE (MySQL 8) || MySQL 8 から再帰 CTE が使える。 || WITH RECURSIVE t AS (...)
+MySQL詳細 || AUTO_INCREMENT の初期値 || 自動採番の開始値を変える。 || ALTER TABLE t AUTO_INCREMENT = 1000;
+MySQL詳細 || ON UPDATE CASCADE (MySQL) || 親の更新を子に反映する。 || FOREIGN KEY ... ON UPDATE CASCADE
+MySQL詳細 || sql_mode || SQL の厳しさを決める設定。 || SET sql_mode = 'STRICT_ALL_TABLES';
+MySQL詳細 || ONLY_FULL_GROUP_BY || GROUP BY の厳密な検査。 || sql_mode
+MySQL詳細 || InnoDB のロック || 行ロックを使う。 || SELECT ... FOR UPDATE
+MySQL詳細 || ギャップロック || 範囲にかかるロック。 || REPEATABLE READ で発生
+MySQL詳細 || binlog (バイナリログ) || 変更の記録。複製やリカバリに使う。 || log_bin
+MySQL詳細 || EXPLAIN の type 列 || 検索の方法（const, ref, ALL など）。 || ALL は全件読み
+MySQL詳細 || utf8 と utf8mb4 || utf8 は3バイトまで。絵文字には utf8mb4。 || CHARSET utf8mb4
+MySQL詳細 || 照合順序 utf8mb4_general_ci || 大文字小文字を区別しない比較。 || COLLATE utf8mb4_general_ci
+MySQL詳細 || 大文字小文字を区別する比較 (BINARY) || 比較で区別する。 || WHERE BINARY name = 'A'

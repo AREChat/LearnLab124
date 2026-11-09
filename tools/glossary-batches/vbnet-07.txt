@@ -1,0 +1,101 @@
+# カテゴリ || 用語 || 説明 || コード例
+VB組み込み関数 || Len || 文字列の長さを返す。 || Len("abc")
+VB組み込み関数 || Left / Right / Mid || 文字列の左・右・途中を取り出す。 || Left("abcdef", 3)
+VB組み込み関数 || UCase / LCase || 大文字・小文字にする。 || UCase("abc")
+VB組み込み関数 || Trim / LTrim / RTrim || 空白を取り除く。 || Trim("  a ")
+VB組み込み関数 || Space || 空白をつくる。 || Space(5)
+VB組み込み関数 || String (関数) || 同じ文字をくり返す。 || New String("*"c, 5)
+VB組み込み関数 || Replace (関数) || 文字列を置き換える。 || Replace("abc", "b", "X")
+VB組み込み関数 || Split (関数) || 文字列を区切って配列にする。 || Split("a,b,c", ",")
+VB組み込み関数 || Join (関数) || 配列を文字列にする。 || Join(arr, ",")
+VB組み込み関数 || Asc / Chr || 文字と文字コードを変換する。 || Asc("A")
+VB組み込み関数 || AscW / ChrW || Unicode の文字コードと文字を変換する。 || ChrW(&H3042)
+VB組み込み関数 || Val || 文字列の先頭の数値を取り出す。 || Val("12abc")
+VB組み込み関数 || Str || 数値を文字列にする。 || Str(5)
+VB組み込み関数 || Hex / Oct || 16進・8進の文字列にする。 || Hex(255)
+VB組み込み関数 || Int / Fix || 整数部分を返す。Int は負の数で切り下げ。 || Int(-2.5)
+VB組み込み関数 || Abs / Sgn || 絶対値・符号。 || Abs(-5)
+VB組み込み関数 || Sqr / Exp / Log || 平方根・指数・自然対数。 || Sqr(16)
+VB組み込み関数 || Sin / Cos / Tan / Atn || 三角関数。 || Sin(0)
+VB組み込み関数 || Round (関数) || 丸める（偶数丸め）。 || Round(2.5)
+VB組み込み関数 || Rnd / Randomize || 乱数を作る古い方法。 || Randomize() : Rnd()
+VB組み込み関数 || Now / Date / TimeOfDay || 現在の日時・日付・時刻。 || Now
+VB組み込み関数 || Year / Month / Day || 日付の年・月・日。 || Year(Now)
+VB組み込み関数 || Hour / Minute / Second || 時刻の時・分・秒。 || Hour(Now)
+VB組み込み関数 || Weekday / WeekdayName || 曜日の番号と名前。 || WeekdayName(Weekday(Now))
+VB組み込み関数 || MonthName || 月の名前。 || MonthName(11)
+VB組み込み関数 || DateSerial / TimeSerial || 年月日・時分秒から日時を作る。 || DateSerial(2026, 11, 9)
+VB組み込み関数 || DateValue / TimeValue || 文字列から日付・時刻を取り出す。 || DateValue("2026/11/09")
+VB組み込み関数 || DatePart || 日付の一部を取り出す。 || DatePart(DateInterval.Quarter, Now)
+VB組み込み関数 || IsNumeric / IsDate || 数値・日付として使えるか調べる。 || IsNumeric("12")
+VB組み込み関数 || IsNothing / IsDBNull || Nothing・DBNull か調べる。 || IsNothing(obj)
+VB組み込み関数 || IsArray || 配列か調べる。 || IsArray(x)
+VB組み込み関数 || TypeName / VarType || 型の名前や種類を返す。 || TypeName(x)
+VB組み込み関数 || Choose || 番号で値を選ぶ。 || Choose(2, "A", "B", "C")
+VB組み込み関数 || Switch || 条件に合う最初の値を返す。 || Switch(n < 0, "負", n = 0, "零")
+VB組み込み関数 || IIf || 条件で値を選ぶ（両方を評価する）。 || IIf(n > 0, "正", "負")
+VB組み込み関数 || Shell || 外部のプログラムを実行する。 || Shell("notepad.exe")
+VB組み込み関数 || InputBox || 入力ダイアログを表示する。 || InputBox("名前は？")
+VB組み込み関数 || MsgBox || メッセージを表示する。 || MsgBox("こんにちは")
+VB組み込み関数 || Environ || 環境変数を取得する。 || Environ("USERNAME")
+VB組み込み関数 || CurDir / ChDir || カレントフォルダの取得・変更。 || CurDir()
+VB組み込み関数 || Dir || ファイルを探す。 || Dir("*.txt")
+VB組み込み関数 || FileCopy / Kill / Name || 古い形式のファイル操作。 || FileCopy(a, b)
+VB組み込み関数 || FreeFile / FileOpen || 古い形式のファイル入出力。 || FileOpen(1, p, OpenMode.Input)
+VB組み込み関数 || LineInput / PrintLine || 古い形式の1行入出力。 || LineInput(1)
+VB組み込み関数 || Format の書式 || 数値や日付の書式を指定する。 || Format(Now, "yyyy/MM/dd")
+VB組み込み関数 || FormatNumber / FormatCurrency || 数値・通貨の書式。 || FormatCurrency(1234)
+VB組み込み関数 || FormatDateTime || 日時の書式。 || FormatDateTime(Now, DateFormat.ShortDate)
+VB組み込み関数 || FormatPercent || パーセント表示。 || FormatPercent(0.25)
+VB組み込み関数 || CBool / CByte / CDbl / CDate || 型を変換する関数。 || CDbl("1.5")
+VB組み込み関数 || CType の使い方 || 型を指定して変換する。 || CType(o, String)
+VB組み込み関数 || StrComp / InStrRev || 比較・後ろから探す。 || InStrRev("a/b/c", "/")
+VB組み込み関数 || Filter / Array || 配列を絞り込む・作る。 || Filter(arr, "a")
+VB組み込み関数 || LBound / UBound || 配列の添字の下限・上限。 || UBound(arr)
+VB組み込み関数 || Erase || 配列の中身を消す。 || Erase arr
+VB組み込み関数 || RGB / QBColor || 色を作る古い関数。 || RGB(255, 0, 0)
+VB組み込み関数 || Partition || 数値を範囲に分類する。 || Partition(n, 0, 100, 10)
+VB組み込み関数 || Beep || ビープ音を鳴らす。 || Beep()
+VB組み込み関数 || DDB / SLN / Pmt || 減価償却・ローンの計算。 || Pmt(0.05 / 12, 36, -100000)
+VB組み込み関数 || IPmt / PPmt || ローン返済の利息分・元金分。 || IPmt(0.05 / 12, 1, 36, -100000)
+VB組み込み関数 || FV / PV / NPer / Rate || 将来価値・現在価値などの金融計算。 || FV(0.03, 10, -1000)
+コントロール詳細 || Text プロパティ || 部品の表示文字を取得・設定する。 || lbl.Text = "こんにちは"
+コントロール詳細 || Font / ForeColor / BackColor || 文字の書体・色・背景色。 || lbl.ForeColor = Color.Red
+コントロール詳細 || Location / Size || 位置と大きさ。 || btn.Location = New Point(10, 10)
+コントロール詳細 || Width / Height / Left / Top || 部品の幅・高さ・位置。 || btn.Width = 100
+コントロール詳細 || Name プロパティ || 部品の名前（コードで使う）。 || btn.Name
+コントロール詳細 || Enabled と ReadOnly || 無効にするか、読み取り専用にするか。 || txt.ReadOnly = True
+コントロール詳細 || Focus / Select || 部品にフォーカスを当てる。 || txt.Focus()
+コントロール詳細 || SelectAll / SelectionStart || 文字の選択範囲を操作する。 || txt.SelectAll()
+コントロール詳細 || MaxLength / PasswordChar || 最大文字数・パスワード用の伏せ字。 || txt.PasswordChar = "*"c
+コントロール詳細 || Multiline / ScrollBars || 複数行・スクロールバー。 || txt.Multiline = True
+コントロール詳細 || TextAlign / AutoSize || 文字の位置・大きさの自動調整。 || lbl.AutoSize = True
+コントロール詳細 || Checked / CheckState || チェックの状態。 || chk.Checked
+コントロール詳細 || SelectedIndex / SelectedItem || 選ばれた項目の位置・項目。 || cmb.SelectedItem
+コントロール詳細 || Items.AddRange || 項目をまとめて追加する。 || cmb.Items.AddRange({"A", "B"})
+コントロール詳細 || DropDownStyle || ドロップダウンの種類（入力可・不可）。 || cmb.DropDownStyle = ComboBoxStyle.DropDownList
+コントロール詳細 || SelectionMode || リストボックスの複数選択。 || lst.SelectionMode = SelectionMode.MultiExtended
+コントロール詳細 || SelectedItems / SelectedIndices || 複数選択された項目。 || lst.SelectedItems
+コントロール詳細 || Sorted || リストを自動で並べ替える。 || lst.Sorted = True
+コントロール詳細 || Image / ImageList || 画像を持たせる。 || btn.Image = img
+コントロール詳細 || SizeMode || 画像の表示方法。 || pic.SizeMode = PictureBoxSizeMode.Zoom
+コントロール詳細 || Value / Minimum / Maximum || 数値の現在値・最小・最大。 || bar.Maximum = 100
+コントロール詳細 || Interval / Start / Stop || タイマーの間隔・開始・停止。 || tmr.Start()
+コントロール詳細 || Cursor || マウスカーソルの形。 || Me.Cursor = Cursors.WaitCursor
+コントロール詳細 || StartPosition || 画面の最初の位置。 || Me.StartPosition = FormStartPosition.CenterScreen
+コントロール詳細 || FormBorderStyle || 画面の枠の種類。 || Me.FormBorderStyle = FormBorderStyle.FixedDialog
+コントロール詳細 || MaximizeBox / MinimizeBox || 最大化・最小化ボタン。 || Me.MaximizeBox = False
+コントロール詳細 || WindowState || 通常・最大化・最小化。 || Me.WindowState = FormWindowState.Maximized
+コントロール詳細 || AcceptButton / CancelButton || Enter・Esc に対応するボタン。 || Me.AcceptButton = btnOk
+コントロール詳細 || Icon || 画面のアイコン。 || Me.Icon = New Icon(p)
+コントロール詳細 || ShowInTaskbar || タスクバーに表示するか。 || Me.ShowInTaskbar = False
+コントロール詳細 || Owner / MdiParent || 親の画面。 || f.Owner = Me
+コントロール詳細 || Controls.Add / Remove || 実行中に部品を追加・削除する。 || Me.Controls.Add(btn)
+コントロール詳細 || 部品の配列 (Controls) || 同種の部品をまとめて扱う。 || For Each c In Me.Controls.OfType(Of TextBox)()
+コントロール詳細 || Click / DoubleClick || クリック・ダブルクリックの操作。 || Private Sub btn_Click(...)
+コントロール詳細 || TextChanged || 文字が変わるたびに動く。 || Private Sub txt_TextChanged(...)
+コントロール詳細 || SelectedIndexChanged || 選択が変わったときに動く。 || Private Sub cmb_SelectedIndexChanged(...)
+コントロール詳細 || CheckedChanged || チェックが変わったときに動く。 || Private Sub chk_CheckedChanged(...)
+コントロール詳細 || Resize / Move || 大きさ・位置が変わったときに動く。 || Private Sub Form1_Resize(...)
+コントロール詳細 || Enter / Leave || フォーカスが入った・出たとき。 || Private Sub txt_Leave(...)
+コントロール詳細 || KeyPress / KeyUp || キー入力のイベント。 || Private Sub txt_KeyPress(...)
