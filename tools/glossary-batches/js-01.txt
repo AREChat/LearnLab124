@@ -1,0 +1,358 @@
+Arrayメソッド || push / pop || 末尾に追加・取り出し。 || a.push(1)
+Arrayメソッド || shift / unshift || 先頭の取り出し・追加。 || a.shift()
+Arrayメソッド || slice || 部分配列を作る（元は変えない）。 || a.slice(1, 3)
+Arrayメソッド || concat || 配列を連結する。 || a.concat(b)
+Arrayメソッド || join || 区切って文字列にする。 || a.join(',')
+Arrayメソッド || reverse || 逆順にする（元を変える）。 || a.reverse()
+Arrayメソッド || toReversed || 逆順の複製を返す。 || a.toReversed()
+Arrayメソッド || sort || 並べ替える（元を変える）。 || a.sort((x, y) => x - y)
+Arrayメソッド || toSorted || 並べ替えた複製を返す。 || a.toSorted()
+Arrayメソッド || toSpliced / with || 変更した複製を返す。 || a.with(0, 9)
+Arrayメソッド || indexOf / lastIndexOf || 位置を探す。 || a.indexOf(1)
+Arrayメソッド || find / findIndex || 条件で最初の要素・位置。 || a.find(x => x > 1)
+Arrayメソッド || findLast / findLastIndex || 後ろから探す。 || a.findLast(x => x > 1)
+Arrayメソッド || some / every || どれか・すべて満たすか。 || a.every(x => x > 0)
+Arrayメソッド || map || 各要素を変換する。 || a.map(x => x * 2)
+Arrayメソッド || flatMap || 変換して平らにする。 || a.flatMap(x => [x, x])
+Arrayメソッド || flat || 入れ子を平らにする。 || a.flat(2)
+Arrayメソッド || reduce / reduceRight || 畳み込む。 || a.reduce((s, x) => s + x, 0)
+Arrayメソッド || forEach || 各要素に処理する。 || a.forEach(x => log(x))
+Arrayメソッド || fill || 値で埋める。 || new Array(3).fill(0)
+Arrayメソッド || copyWithin || 内部でコピーする。 || a.copyWithin(0, 2)
+Arrayメソッド || Array.from || 配列に変換する。 || Array.from('abc')
+Arrayメソッド || Array.of || 引数から配列を作る。 || Array.of(1, 2)
+Arrayメソッド || Array.isArray || 配列かを調べる。 || Array.isArray(x)
+Arrayメソッド || keys / values / entries || 反復用のイテレータ。 || a.entries()
+Arrayメソッド || Object.groupBy || 条件でグループ化する。 || Object.groupBy(a, f)
+Arrayメソッド || Array.fromAsync || 非同期の列から配列を作る。 || await Array.fromAsync(it)
+Arrayメソッド || スプレッド構文 (...) || 展開する。 || [...a, ...b]
+Arrayメソッド || 分割代入 (配列) || 要素を変数に取り出す。 || const [x, y] = a;
+Arrayメソッド || length の操作 || 長さを変えて切り詰める。 || a.length = 0
+Arrayメソッド || 疎な配列 || 抜けのある配列。 || [1, , 3]
+Arrayメソッド || TypedArray || 型つきの数値配列。 || new Uint8Array(8)
+Arrayメソッド || ArrayBuffer || 生のバイト列。 || new ArrayBuffer(16)
+Arrayメソッド || DataView || バイト列の読み書き。 || new DataView(buf)
+Arrayメソッド || SharedArrayBuffer || スレッド間で共有する領域。 || new SharedArrayBuffer(8)
+Arrayメソッド || Atomics || 共有メモリの原子操作。 || Atomics.add(ta, 0, 1)
+Stringメソッド || charAt / charCodeAt || 文字・文字コード。 || s.charAt(0)
+Stringメソッド || codePointAt / fromCodePoint || コードポイントの扱い。 || s.codePointAt(0)
+Stringメソッド || indexOf / lastIndexOf (文字列) || 位置を探す。 || s.indexOf('a')
+Stringメソッド || slice / substring / substr || 部分文字列。 || s.slice(1, 3)
+Stringメソッド || split || 分割する。 || s.split(',')
+Stringメソッド || trim / trimStart / trimEnd || 空白を除く。 || s.trim()
+Stringメソッド || padStart / padEnd || 文字で埋める。 || '5'.padStart(3, '0')
+Stringメソッド || repeat || 繰り返す。 || 'ab'.repeat(3)
+Stringメソッド || replace / replaceAll || 置換する。 || s.replaceAll('a', 'b')
+Stringメソッド || match / matchAll || 正規表現で一致を探す。 || s.match(/\d+/g)
+Stringメソッド || search || 一致の位置を返す。 || s.search(/\d/)
+Stringメソッド || toUpperCase / toLowerCase || 大文字・小文字にする。 || s.toUpperCase()
+Stringメソッド || localeCompare || 言語に応じた比較。 || a.localeCompare(b, 'ja')
+Stringメソッド || normalize || Unicode を正規化する。 || s.normalize('NFC')
+Stringメソッド || isWellFormed / toWellFormed || 正しい Unicode か。 || s.isWellFormed()
+Stringメソッド || at (文字列) || 位置の文字（負も可）。 || s.at(-1)
+Stringメソッド || String.raw || エスケープを解釈しない。 || String.raw`a\n`
+Stringメソッド || テンプレートリテラル || 式を埋め込む文字列。 || `a${b}`
+Stringメソッド || タグ付きテンプレート || 関数で文字列を加工する。 || tag`a${b}`
+Stringメソッド || エスケープシーケンス || 特殊文字の表記。 || \n \t あ
+Stringメソッド || サロゲートペア || 2つで1文字の表現。 || '😀'.length
+Stringメソッド || Intl.Segmenter || 文字・語の区切り。 || new Intl.Segmenter('ja')
+Stringメソッド || TextEncoder / TextDecoder || 文字列とバイト列の変換。 || new TextEncoder().encode(s)
+Stringメソッド || encodeURIComponent || URL 用に変換する。 || encodeURIComponent(s)
+Stringメソッド || decodeURIComponent || URL 用の変換を戻す。 || decodeURIComponent(s)
+Stringメソッド || btoa / atob || Base64 の変換。 || btoa('a')
+Objectと組み込み || Object.keys / values / entries || キー・値・組の配列。 || Object.entries(o)
+Objectと組み込み || Object.fromEntries || 組からオブジェクトを作る。 || Object.fromEntries(a)
+Objectと組み込み || Object.freeze / isFrozen || 変更を禁止する。 || Object.freeze(o)
+Objectと組み込み || Object.seal / preventExtensions || 追加や削除を禁止する。 || Object.seal(o)
+Objectと組み込み || Object.defineProperty || プロパティを詳しく定義する。 || Object.defineProperty(o, 'a', {value: 1})
+Objectと組み込み || Object.getOwnPropertyNames || 自身の名前の一覧。 || Object.getOwnPropertyNames(o)
+Objectと組み込み || Object.getPrototypeOf || プロトタイプを取る。 || Object.getPrototypeOf(o)
+Objectと組み込み || Object.create || プロトタイプを指定して作る。 || Object.create(p)
+Objectと組み込み || Object.is || 同値の比較。 || Object.is(NaN, NaN)
+Objectと組み込み || Object.hasOwn || 自身のプロパティか。 || Object.hasOwn(o, 'a')
+Objectと組み込み || structuredClone || 深い複製。 || structuredClone(o)
+Objectと組み込み || プロトタイプチェーン || 継承の連なり。 || __proto__
+Objectと組み込み || プロパティ記述子 || writable / enumerable など。 || {writable: false}
+Objectと組み込み || getter / setter || 取得・設定の関数。 || get x() { }
+Objectと組み込み || 省略記法 (ショートハンド) || 変数名をキーにする。 || {a, b}
+Objectと組み込み || 計算されたプロパティ名 || 式をキーにする。 || {[k]: 1}
+Objectと組み込み || オブジェクトのスプレッド || 展開してコピーする。 || {...o, a: 1}
+Objectと組み込み || 分割代入 (オブジェクト) || プロパティを変数に取り出す。 || const {a, b} = o;
+Objectと組み込み || 既定値つき分割代入 || 無ければ既定値。 || const {a = 1} = o;
+Objectと組み込み || オプショナルチェーン || 存在しなければ undefined。 || o?.a?.b
+Objectと組み込み || Null 合体演算子 || null か undefined なら代替。 || a ?? b
+Objectと組み込み || 論理代入 (&&= ||= ??=) || 条件つき代入。 || a ??= 1
+Objectと組み込み || Map || キーと値の組（任意の型のキー）。 || new Map()
+Objectと組み込み || Map.get / set / has / delete || Map の基本操作。 || m.set('a', 1)
+Objectと組み込み || WeakMap / WeakSet || 弱い参照の集まり。 || new WeakMap()
+Objectと組み込み || WeakRef / FinalizationRegistry || 弱い参照と後始末。 || new WeakRef(o)
+Objectと組み込み || Set || 重複しない集まり。 || new Set([1, 2])
+Objectと組み込み || Set の集合演算 || union / intersection など。 || a.union(b)
+Objectと組み込み || Symbol.iterator || 反復の定義。 || [Symbol.iterator]() { }
+Objectと組み込み || Symbol.asyncIterator || 非同期の反復の定義。 || [Symbol.asyncIterator]
+Objectと組み込み || Symbol.toPrimitive || 型変換の定義。 || [Symbol.toPrimitive](hint)
+Objectと組み込み || Symbol.toStringTag || toString の表示名。 || get [Symbol.toStringTag]()
+Objectと組み込み || Proxy || 操作を横取りする。 || new Proxy(o, handler)
+Objectと組み込み || Reflect || 操作をメソッドで行う。 || Reflect.get(o, 'a')
+Objectと組み込み || Proxy のトラップ || get / set / has など。 || get(t, k) { }
+Objectと組み込み || BigInt || 任意精度の整数。 || 10n
+Objectと組み込み || globalThis || 環境共通のグローバル。 || globalThis
+Objectと組み込み || Date || 日時。 || new Date()
+Objectと組み込み || Date.now || 現在の UNIX ミリ秒。 || Date.now()
+Objectと組み込み || toISOString || ISO 形式の文字列。 || d.toISOString()
+Objectと組み込み || getFullYear / getMonth / getDate || 年・月・日。 || d.getMonth()
+Objectと組み込み || getDay / getHours / getMinutes || 曜日・時・分。 || d.getDay()
+Objectと組み込み || setDate / setMonth || 日付を変更する。 || d.setDate(1)
+Objectと組み込み || toLocaleDateString || 地域の書式で日付。 || d.toLocaleDateString('ja-JP')
+Objectと組み込み || Intl.DateTimeFormat || 日時の書式。 || new Intl.DateTimeFormat('ja')
+Objectと組み込み || Intl.NumberFormat || 数値の書式。 || new Intl.NumberFormat('ja-JP', {style:'currency', currency:'JPY'})
+Objectと組み込み || Intl.RelativeTimeFormat || 「3日前」などの表現。 || new Intl.RelativeTimeFormat('ja')
+Objectと組み込み || Intl.PluralRules || 複数形の規則。 || new Intl.PluralRules('en')
+Objectと組み込み || Intl.ListFormat || 列挙の書式。 || new Intl.ListFormat('ja')
+Objectと組み込み || Intl.Collator || 並べ替えの規則。 || new Intl.Collator('ja')
+Objectと組み込み || Temporal || 新しい日時 API。 || Temporal.Now.instant()
+Objectと組み込み || JSON.stringify || JSON 文字列にする。 || JSON.stringify(o, null, 2)
+Objectと組み込み || JSON.parse || JSON を読む。 || JSON.parse(s)
+Objectと組み込み || toJSON || JSON 化の方法を決める。 || toJSON() { }
+Objectと組み込み || replacer / reviver || JSON 変換の加工関数。 || JSON.parse(s, (k, v) => v)
+Objectと組み込み || RegExp || 正規表現。 || new RegExp('\\d+', 'g')
+Objectと組み込み || 正規表現フラグ g i m s u y d v || 検索の設定。 || /a/gi
+Objectと組み込み || 名前つきキャプチャ || グループに名前を付ける。 || /(?<y>\d{4})/
+Objectと組み込み || 先読み・後読み || 条件つき一致。 || /(?<=\$)\d+/
+Objectと組み込み || lastIndex || 次の検索開始位置。 || re.lastIndex
+Objectと組み込み || RegExp.test / exec || 一致の確認・結果取得。 || re.test(s)
+Objectと組み込み || Number.isInteger / isFinite / isNaN || 数値の判定。 || Number.isInteger(1)
+Objectと組み込み || Number.EPSILON / MAX_SAFE_INTEGER || 数値の定数。 || Number.MAX_SAFE_INTEGER
+Objectと組み込み || parseInt / parseFloat || 文字を数値にする。 || parseInt('12', 10)
+Objectと組み込み || toString(進数) || 基数変換。 || (255).toString(16)
+Objectと組み込み || toPrecision / toExponential || 桁数・指数の表記。 || x.toPrecision(3)
+Objectと組み込み || Math.floor / ceil / round / trunc || 丸め。 || Math.round(1.5)
+Objectと組み込み || Math.max / min || 最大・最小。 || Math.max(...a)
+Objectと組み込み || Math.random || 乱数。 || Math.random()
+Objectと組み込み || Math.abs / sign / sqrt / pow || 基本の数学関数。 || Math.sqrt(4)
+Objectと組み込み || Math.hypot / cbrt / log2 || 距離・立方根・対数。 || Math.hypot(3, 4)
+Objectと組み込み || Math.sin / cos / atan2 || 三角関数。 || Math.atan2(y, x)
+Objectと組み込み || Math.clz32 / fround || 低水準の数値関数。 || Math.fround(5.5)
+Objectと組み込み || NaN の扱い || 数でない値。 || Number.isNaN(x)
+Objectと組み込み || Infinity || 無限大。 || 1 / 0
+Objectと組み込み || 浮動小数点の誤差 || 0.1 + 0.2 の問題。 || 0.1 + 0.2 !== 0.3
+関数と構文 || 関数宣言 || 巻き上げされる関数。 || function f() { }
+関数と構文 || 関数式 || 式としての関数。 || const f = function() { }
+関数と構文 || アロー関数 || 短い関数。this を束縛しない。 || const f = x => x * 2
+関数と構文 || 既定値引数 || 省略時の値。 || function f(a = 1) { }
+関数と構文 || 残余引数 (...) || 残りをまとめる。 || function f(...a) { }
+関数と構文 || arguments || 引数の疑似配列。 || arguments.length
+関数と構文 || this の決まり方 || 呼び出し方で変わる。 || obj.f()
+関数と構文 || call / apply / bind || this を指定して呼ぶ。 || f.call(obj, 1)
+関数と構文 || クロージャ || 外の変数を保持する関数。 || function counter() { let n = 0; return () => ++n }
+関数と構文 || IIFE || 即時実行関数。 || (() => { })()
+関数と構文 || 高階関数 || 関数を受け取る・返す関数。 || a.map(f)
+関数と構文 || カリー化 || 引数を1つずつ受ける形。 || a => b => a + b
+関数と構文 || 部分適用 || 一部の引数を固定する。 || f.bind(null, 1)
+関数と構文 || メモ化 || 結果をキャッシュする。 || memoize(f)
+関数と構文 || デバウンス || 連続呼び出しを間引く（最後だけ）。 || debounce(f, 300)
+関数と構文 || スロットル || 一定間隔で呼ぶ。 || throttle(f, 300)
+関数と構文 || ジェネレータ関数 || yield で順に返す。 || function* g() { yield 1 }
+関数と構文 || yield* || 他のジェネレータに委譲する。 || yield* g()
+関数と構文 || async function || 非同期関数。 || async function f() { }
+関数と構文 || await || 完了を待つ。 || await fetch(url)
+関数と構文 || トップレベル await || モジュール直下で await。 || const d = await load();
+関数と構文 || for await...of || 非同期の反復。 || for await (const x of it)
+関数と構文 || for...of / for...in || 値・キーの反復。 || for (const x of a)
+関数と構文 || ラベル付き文 || break の対象を指定する。 || outer: for (...)
+関数と構文 || 三項演算子 || 条件式。 || a ? b : c
+関数と構文 || カンマ演算子 || 式を連ねる。 || (a, b)
+関数と構文 || void 演算子 || 値を undefined にする。 || void 0
+関数と構文 || typeof / instanceof || 型・インスタンスの判定。 || typeof x
+関数と構文 || in 演算子 || プロパティがあるか。 || 'a' in o
+関数と構文 || delete 演算子 || プロパティを削除する。 || delete o.a
+関数と構文 || 厳格モード || 曖昧な書き方を禁じる。 || 'use strict';
+関数と構文 || 巻き上げ (hoisting) || 宣言が先頭へ移る挙動。 || var, function
+関数と構文 || TDZ || let の宣言前に触れない領域。 || temporal dead zone
+関数と構文 || スコープ || 変数の有効範囲。 || block scope
+関数と構文 || 暗黙の型変換 || 自動で型が変わる。 || '1' + 1
+関数と構文 || Truthy / Falsy || 真偽の扱い。 || if (x)
+関数と構文 || 等価演算子の違い || == と === の違い。 || 0 == '0'
+関数と構文 || using 宣言 || スコープ終了で自動解放する。 || using f = open()
+関数と構文 || Error の種類 || TypeError / RangeError など。 || new TypeError('x')
+関数と構文 || Error.cause || 原因を持たせる。 || new Error('x', {cause: e})
+関数と構文 || AggregateError || 複数のエラー。 || new AggregateError([e1])
+関数と構文 || finally || 必ず実行する後処理。 || try { } finally { }
+関数と構文 || catch の省略 || 変数を省いた catch。 || catch { }
+クラスとモジュール || class || クラスを定義する。 || class A { }
+クラスとモジュール || constructor || 生成時の処理。 || constructor(x) { }
+クラスとモジュール || extends / super || 継承と親の呼び出し。 || class B extends A { }
+クラスとモジュール || static ブロック || クラス初期化処理。 || static { }
+クラスとモジュール || #private フィールド || 外から触れない項目。 || #x = 1
+クラスとモジュール || #private メソッド || 外から呼べないメソッド。 || #f() { }
+クラスとモジュール || accessor || 自動の getter/setter。 || accessor x = 1
+クラスとモジュール || new.target || new で呼ばれたか。 || new.target
+クラスとモジュール || instanceof とクラス || 継承関係の判定。 || a instanceof A
+クラスとモジュール || mixin || 機能を足す関数。 || const M = Base => class extends Base { }
+クラスとモジュール || ES Modules || 標準のモジュール。 || import a from './a.js'
+クラスとモジュール || export / import || 公開・取り込み。 || export const a = 1
+クラスとモジュール || default export || 既定の公開。 || export default f
+クラスとモジュール || import * as || 名前空間として取り込む。 || import * as m from './m.js'
+クラスとモジュール || 動的 import || 実行時に読み込む。 || await import('./a.js')
+クラスとモジュール || import.meta || モジュールの情報。 || import.meta.url
+クラスとモジュール || import attributes || 種類を指定して読み込む。 || import a from './a.json' with { type: 'json' }
+クラスとモジュール || 再エクスポート || 他のモジュールを公開する。 || export * from './a.js'
+クラスとモジュール || CommonJS || Node の従来方式。 || require('a')
+クラスとモジュール || module.exports || CommonJS の公開。 || module.exports = f
+クラスとモジュール || UMD / AMD || 古いモジュール形式。 || define([], f)
+クラスとモジュール || import maps || モジュール名の対応表。 || <script type="importmap">
+クラスとモジュール || 循環参照 || 相互に取り込む問題。 || circular import
+クラスとモジュール || ツリーシェイキング || 使わない部分を除く。 || tree-shaking
+クラスとモジュール || バンドル || 1つにまとめる。 || bundle.js
+クラスとモジュール || コード分割 || 必要な分だけ読み込む。 || code splitting
+非同期とイベント || Promise || 非同期の結果。 || new Promise((res, rej) => { })
+非同期とイベント || then / catch / finally || Promise の後続処理。 || p.then(f)
+非同期とイベント || Promise.all || すべて成功を待つ。 || await Promise.all([a, b])
+非同期とイベント || Promise.allSettled || すべての結果を待つ。 || Promise.allSettled(a)
+非同期とイベント || Promise.race / any || 最初の完了・成功。 || Promise.race(a)
+非同期とイベント || Promise.withResolvers || 解決関数を取り出す。 || Promise.withResolvers()
+非同期とイベント || Promise.try || 同期・非同期を統一して包む。 || Promise.try(f)
+非同期とイベント || イベントループ || 非同期処理の仕組み。 || event loop
+非同期とイベント || マイクロタスク || Promise 後続の優先処理。 || queueMicrotask(f)
+非同期とイベント || マクロタスク || タイマーなどの処理。 || setTimeout
+非同期とイベント || コールバック地獄 || 入れ子の深い非同期。 || callback hell
+非同期とイベント || setImmediate / nextTick || Node の実行順制御。 || process.nextTick(f)
+非同期とイベント || AbortSignal.timeout || 時間切れで中断する。 || AbortSignal.timeout(5000)
+非同期とイベント || EventTarget / Event || イベントの基盤。 || new EventTarget()
+非同期とイベント || EventEmitter (Node) || Node のイベント。 || emitter.on('a', f)
+非同期とイベント || ReadableStream || 読み取りストリーム。 || response.body
+非同期とイベント || WritableStream / TransformStream || 書き込み・変換。 || new TransformStream()
+非同期とイベント || 非同期イテレータ || 非同期の列。 || async function*
+非同期とイベント || Observable 風の設計 || 値の流れを購読する。 || subscribe
+非同期とイベント || Web Locks API || 排他制御。 || navigator.locks.request()
+非同期とイベント || Scheduler API || 優先度つきの実行。 || scheduler.postTask()
+非同期とイベント || requestIdleCallback || 暇な時に実行。 || requestIdleCallback(f)
+TypeScript || interface || オブジェクトの型。 || interface A { x: number }
+TypeScript || type エイリアス || 型に名前を付ける。 || type ID = string | number
+TypeScript || ユニオン型 || いずれかの型。 || string | number
+TypeScript || インターセクション型 || 複数の型を合わせる。 || A & B
+TypeScript || リテラル型 || 特定の値だけの型。 || 'a' | 'b'
+TypeScript || ジェネリクス || 型を引数にする。 || function f<T>(x: T): T
+TypeScript || 型制約 (extends) || 型引数の条件。 || <T extends object>
+TypeScript || keyof / typeof || キー・値の型を取る。 || keyof A
+TypeScript || インデックスアクセス型 || プロパティの型を取る。 || A['x']
+TypeScript || マップ型 || 型を変換して作る。 || { [K in keyof A]: string }
+TypeScript || 条件型 || 条件で型を選ぶ。 || T extends U ? X : Y
+TypeScript || infer || 型を推論して取り出す。 || T extends Array<infer U>
+TypeScript || テンプレートリテラル型 || 文字列の型を組み立てる。 || `on${string}`
+TypeScript || Partial / Required / Readonly || 型の変換。 || Partial<A>
+TypeScript || Pick / Omit || 項目の選択・除外。 || Pick<A, 'x'>
+TypeScript || Record || キーと値の型の辞書。 || Record<string, number>
+TypeScript || Exclude / Extract / NonNullable || 型の絞り込み。 || NonNullable<T>
+TypeScript || ReturnType / Parameters || 関数の型情報。 || ReturnType<typeof f>
+TypeScript || Awaited || Promise の中の型。 || Awaited<Promise<number>>
+TypeScript || satisfies || 型を満たすか検査する。 || const a = {} satisfies A
+TypeScript || as 型アサーション || 型を指定する。 || x as string
+TypeScript || as const || リテラルとして固定する。 || [1, 2] as const
+TypeScript || 非 null アサーション (!) || null でないと主張する。 || x!.a
+TypeScript || 型ガード || 条件で型を絞る。 || typeof x === 'string'
+TypeScript || ユーザー定義型ガード || 型述語で絞る。 || x is string
+TypeScript || アサーション関数 || 条件を満たすと保証する。 || asserts x is string
+TypeScript || 判別可能なユニオン || タグで型を区別する。 || {kind: 'a'} | {kind: 'b'}
+TypeScript || never 型 || 到達しない型。 || never
+TypeScript || unknown 型 || 型が不明な値。 || unknown
+TypeScript || any 型 || 型検査を無効にする。 || any
+TypeScript || void / undefined / null || 値がない型。 || void
+TypeScript || enum || 列挙型。 || enum A { X, Y }
+TypeScript || const enum || 展開される列挙。 || const enum A { X }
+TypeScript || namespace || 名前空間。 || namespace N { }
+TypeScript || declare || 型だけを宣言する。 || declare const a: number
+TypeScript || 型定義ファイル .d.ts || 型の宣言ファイル。 || a.d.ts
+TypeScript || @types/* || 型定義のパッケージ。 || @types/node
+TypeScript || デコレータ || 宣言に機能を足す。 || @Component
+TypeScript || abstract class || 抽象クラス。 || abstract class A
+TypeScript || implements || インターフェースを実装する。 || class A implements I
+TypeScript || readonly 修飾子 || 変更不可の項目。 || readonly x: number
+TypeScript || オプショナルプロパティ || 省略できる項目。 || x?: number
+TypeScript || インデックスシグネチャ || 任意のキーを許す。 || [key: string]: number
+TypeScript || strict モード || 厳格な型検査。 || "strict": true
+TypeScript || noImplicitAny || 暗黙の any を禁じる。 || "noImplicitAny": true
+TypeScript || strictNullChecks || null を厳密に扱う。 || "strictNullChecks": true
+TypeScript || tsc || TypeScript のコンパイラ。 || tsc --noEmit
+TypeScript || ts-node / tsx || TS を直接実行する。 || tsx a.ts
+TypeScript || 型だけの import || 実行時に消える import。 || import type { A } from './a'
+TypeScript || verbatimModuleSyntax || import の扱いを厳密にする。 || "verbatimModuleSyntax": true
+TypeScript || project references || 複数プロジェクトの参照。 || "references": []
+Node.js || process.argv || 起動引数。 || process.argv.slice(2)
+Node.js || process.env || 環境変数。 || process.env.HOME
+Node.js || process.exit || 終了する。 || process.exit(1)
+Node.js || process.cwd || 現在のフォルダ。 || process.cwd()
+Node.js || __dirname / __filename || 現在のファイルの場所。 || __dirname
+Node.js || fs.readFile / writeFile || ファイルの読み書き。 || fs.readFile(p, 'utf8', cb)
+Node.js || fs/promises || Promise 版のファイル操作。 || await fs.readFile(p, 'utf8')
+Node.js || fs.readdir / stat / mkdir || 一覧・情報・作成。 || fs.readdir(d)
+Node.js || fs.createReadStream || ストリームで読む。 || fs.createReadStream(p)
+Node.js || path.join / resolve || パスの結合・絶対化。 || path.join('a', 'b')
+Node.js || path.basename / extname / dirname || パスの部分を取る。 || path.extname(p)
+Node.js || os.platform / cpus / homedir || OS の情報。 || os.cpus().length
+Node.js || child_process.spawn / exec || 外部コマンドを実行する。 || exec('ls', cb)
+Node.js || http.createServer || HTTP サーバーを作る。 || http.createServer(handler)
+Node.js || https.request || HTTPS の要求。 || https.get(url)
+Node.js || fetch (Node) || 標準の通信。 || await fetch(url)
+Node.js || Buffer || バイナリのデータ。 || Buffer.from('a')
+Node.js || stream.pipeline || ストリームをつなぐ。 || pipeline(a, b, cb)
+Node.js || worker_threads || スレッドで処理する。 || new Worker('w.js')
+Node.js || cluster || プロセスを複数起動する。 || cluster.fork()
+Node.js || events.once / on || イベントを Promise で待つ。 || await once(e, 'a')
+Node.js || util.promisify || コールバックを Promise にする。 || promisify(fs.readFile)
+Node.js || util.inspect / format || 値の文字表現。 || util.inspect(o, {depth: 5})
+Node.js || crypto.randomUUID / createHash || UUID・ハッシュ。 || crypto.randomUUID()
+Node.js || readline || 行ごとの入力。 || readline.createInterface()
+Node.js || zlib || 圧縮と展開。 || zlib.gzip(buf, cb)
+Node.js || url.URL / URLSearchParams || URL の解析。 || new URL(s)
+Node.js || node:test || 標準のテスト機能。 || import test from 'node:test'
+Node.js || assert || 標準の検証。 || assert.strictEqual(a, b)
+Node.js || --watch / --env-file || 開発用のオプション。 || node --watch a.js
+Node.js || package.json || プロジェクトの設定。 || "scripts"
+Node.js || "type": "module" || ES Modules にする。 || "type": "module"
+Node.js || dependencies / devDependencies || 依存の区分。 || devDependencies
+Node.js || npm install / ci || インストール。 || npm ci
+Node.js || package-lock.json || 版の固定。 || lockfileVersion
+Node.js || npx || パッケージを実行する。 || npx vite
+Node.js || nvm / fnm / Volta || Node の版管理。 || nvm use 22
+Node.js || pnpm / yarn || 別のパッケージ管理。 || pnpm add a
+Node.js || Express || 定番の Web フレームワーク。 || app.get('/', (req, res) => { })
+Node.js || Fastify / Hono || 軽量な Web フレームワーク。 || new Hono()
+Node.js || Deno || 別の JS 実行環境。 || deno run a.ts
+Node.js || Bun || 高速な JS 実行環境。 || bun run a.ts
+フレームワーク || React || UI ライブラリ。 || function App() { return <div/> }
+フレームワーク || JSX || JS に書く HTML 風の記法。 || <div className="a">
+フレームワーク || useState || 状態を持つ Hook。 || const [n, setN] = useState(0)
+フレームワーク || useEffect || 副作用を実行する Hook。 || useEffect(() => { }, [])
+フレームワーク || useRef / useMemo / useCallback || 参照・計算・関数のキャッシュ。 || useMemo(f, [a])
+フレームワーク || useContext || 共有の値を取り出す。 || useContext(Ctx)
+フレームワーク || useReducer || 状態遷移を関数で管理する。 || useReducer(r, init)
+フレームワーク || props / children || 部品の引数・子要素。 || function A({children})
+フレームワーク || key 属性 || 要素の識別子。 || <li key={id}>
+フレームワーク || 仮想 DOM || 差分で更新する仕組み。 || virtual DOM
+フレームワーク || Next.js || React のフレームワーク。 || app/page.tsx
+フレームワーク || Server Components || サーバーで描く部品。 || 'use server'
+フレームワーク || Vue || UI フレームワーク。 || createApp(App)
+フレームワーク || ref / reactive (Vue) || リアクティブな値。 || const n = ref(0)
+フレームワーク || computed / watch (Vue) || 算出値・監視。 || computed(() => n.value * 2)
+フレームワーク || v-if / v-for / v-model (Vue) || テンプレートの指示。 || v-model="a"
+フレームワーク || Nuxt || Vue のフレームワーク。 || nuxt dev
+フレームワーク || Svelte || コンパイル型の UI。 || let n = $state(0)
+フレームワーク || Angular || 総合的なフレームワーク。 || @Component
+フレームワーク || Solid / Preact / Lit || 軽量な UI ライブラリ。 || Lit
+フレームワーク || Astro || 静的中心のフレームワーク。 || .astro
+フレームワーク || jQuery || 昔ながらの DOM ライブラリ。 || $('.a').hide()
+フレームワーク || Alpine.js || HTML に書く軽量な動き。 || x-data="{ open: false }"
+フレームワーク || htmx || HTML 属性で通信する。 || hx-get="/a"
+フレームワーク || Redux / Zustand / Pinia || 状態管理。 || create((set) => ({}))
+フレームワーク || TanStack Query || サーバー状態の管理。 || useQuery()
+フレームワーク || Zod || 型と実行時の検証。 || z.object({})
+フレームワーク || Axios || HTTP クライアント。 || axios.get(url)
+フレームワーク || Lodash || 便利関数の集まり。 || _.debounce(f)
+フレームワーク || date-fns / Day.js || 日付のライブラリ。 || dayjs()
+フレームワーク || Chart.js / D3 || グラフ描画。 || new Chart(ctx, cfg)
+フレームワーク || Three.js || 3D 描画。 || new THREE.Scene()
+フレームワーク || Jest / Vitest || テストフレームワーク。 || test('a', () => { })
+フレームワーク || Playwright / Cypress || ブラウザテスト。 || await page.goto(url)
+フレームワーク || Testing Library || 画面を使う側から試す。 || screen.getByRole('button')
+フレームワーク || WebAssembly || 高速なバイナリ実行。 || WebAssembly.instantiate()

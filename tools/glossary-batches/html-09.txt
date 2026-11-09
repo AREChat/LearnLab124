@@ -1,0 +1,179 @@
+CSS値 || cursor: pointer / default / text || 標準的なカーソル。 || cursor: text;
+CSS値 || cursor: grab / grabbing || つかむカーソル。 || cursor: grab;
+CSS値 || cursor: not-allowed || 禁止のカーソル。 || cursor: not-allowed;
+CSS値 || cursor: zoom-in / zoom-out || 拡大・縮小のカーソル。 || cursor: zoom-in;
+CSS値 || cursor: wait / progress || 待機のカーソル。 || cursor: wait;
+CSS値 || cursor: crosshair || 十字のカーソル。 || cursor: crosshair;
+CSS値 || cursor: move || 移動のカーソル。 || cursor: move;
+CSS値 || cursor: help || ヘルプのカーソル。 || cursor: help;
+CSS値 || cursor: col-resize / row-resize || 列・行の大きさ変更。 || cursor: col-resize;
+CSS値 || border-style: solid / dashed / dotted || 実線・破線・点線。 || border-style: dotted;
+CSS値 || border-style: double / groove / ridge || 二重線・溝・隆起。 || border-style: double;
+CSS値 || border-style: inset / outset || 内側・外側に立体的に見せる。 || border-style: inset;
+CSS値 || list-style-type: disc / circle / square || 箇条書きの印。 || list-style-type: square;
+CSS値 || list-style-type: decimal-leading-zero || 01, 02 の連番。 || list-style-type: decimal-leading-zero;
+CSS値 || list-style-type: lower-alpha / upper-roman || 英字・ローマ数字の連番。 || list-style-type: upper-roman;
+CSS値 || list-style-type: cjk-ideographic || 漢数字の連番。 || list-style-type: cjk-ideographic;
+CSS値 || list-style-type: hiragana / katakana || 五十音の連番。 || list-style-type: hiragana;
+CSS値 || text-decoration-line || 線の位置（下・上・中）。 || text-decoration-line: line-through;
+CSS値 || text-decoration-thickness || 線の太さ。 || text-decoration-thickness: 2px;
+CSS値 || text-decoration-skip-ink || 下線が文字を避ける。 || text-decoration-skip-ink: auto;
+CSS値 || text-transform: capitalize || 単語の先頭を大文字に。 || text-transform: capitalize;
+CSS値 || text-transform: full-width || 全角に変換する。 || text-transform: full-width;
+CSS値 || white-space: pre-wrap / pre-line || 空白を保って折り返す。 || white-space: pre-wrap;
+CSS値 || white-space: break-spaces || 空白を保ち折り返す。 || white-space: break-spaces;
+CSS値 || word-break: keep-all || 語の途中で改行しない。 || word-break: keep-all;
+CSS値 || overflow-wrap: break-word || 長い語を折り返す。 || overflow-wrap: break-word;
+CSS値 || vertical-align: baseline / top / bottom || 行内の縦位置。 || vertical-align: bottom;
+CSS値 || vertical-align: sub / super || 下付き・上付き。 || vertical-align: super;
+CSS値 || font-weight: bold / lighter / bolder || 太さの名前。 || font-weight: bolder;
+CSS値 || font-weight: 100〜900 || 数値の太さ。 || font-weight: 300;
+CSS値 || font-style: oblique || 傾いた字形。 || font-style: oblique 10deg;
+CSS値 || font-variant: small-caps || 小さな大文字。 || font-variant: small-caps;
+CSS値 || font-size: smaller / larger || 相対的な大きさ。 || font-size: smaller;
+CSS値 || font-size: xx-small〜xx-large || 名前つきの大きさ。 || font-size: large;
+CSS値 || font-family: serif / sans-serif || 総称ファミリー。 || font-family: serif;
+CSS値 || font-family: monospace || 等幅の書体。 || font-family: monospace;
+CSS値 || font-family: cursive / fantasy || 装飾的な書体。 || font-family: cursive;
+CSS値 || font-family: system-ui || OS の標準書体。 || font-family: system-ui;
+CSS値 || font-family: ui-monospace / ui-rounded || OS の等幅・丸ゴシック。 || font-family: ui-monospace;
+CSS値 || background-repeat: repeat-x / space / round || 繰り返しの種類。 || background-repeat: space;
+CSS値 || background-position: top right || 角に置く。 || background-position: right top;
+CSS値 || background-size: contain || 収まるように拡大する。 || background-size: contain;
+CSS値 || object-fit: contain / fill / none / scale-down || 画像の収まり方。 || object-fit: contain;
+CSS値 || display: table / table-cell || 表のように表示する。 || display: table-cell;
+CSS値 || display: list-item || リスト項目として表示する。 || display: list-item;
+CSS値 || display: inline-flex / inline-grid || 行内のフレックス・グリッド。 || display: inline-flex;
+CSS値 || display: ruby || ルビとして表示する。 || display: ruby;
+CSS値 || position: -webkit-sticky || 旧 Safari の sticky。 || position: -webkit-sticky;
+CSS値 || float: none / right || 回り込みの指定。 || float: right;
+CSS値 || clear: left / right / both || 回り込みの解除。 || clear: left;
+CSS値 || overflow: visible / hidden / scroll / auto / clip || はみ出しの扱い。 || overflow: scroll;
+CSS値 || resize: both / horizontal / none || 大きさ変更の可否。 || resize: none;
+CSS値 || user-select: all / text / auto || 選択の可否。 || user-select: all;
+CSS値 || pointer-events: auto / none || マウス操作の受け取り。 || pointer-events: auto;
+CSS値 || visibility: collapse || 表の行や列を折りたたむ。 || visibility: collapse;
+CSS値 || mix-blend-mode: screen / overlay || 合成の種類。 || mix-blend-mode: screen;
+CSS値 || transition-timing-function: ease-in-out || 速度曲線の名前。 || ease-in-out
+CSS値 || animation-fill-mode: both / backwards || 前後の状態の保持。 || animation-fill-mode: both;
+CSS値 || animation-direction: reverse / alternate-reverse || 再生の向き。 || animation-direction: reverse;
+CSS値 || align-items: stretch / baseline || 交差軸の揃え。 || align-items: baseline;
+CSS値 || justify-content: space-around / space-evenly || 主軸の揃え。 || justify-content: space-evenly;
+CSS値 || flex-direction: row-reverse / column-reverse || 逆向きに並べる。 || flex-direction: row-reverse;
+CSS値 || flex-wrap: wrap-reverse || 逆向きに折り返す。 || flex-wrap: wrap-reverse;
+CSS値 || grid-auto-flow: column / row dense || 自動配置の向き。 || grid-auto-flow: column;
+CSS値 || box-sizing: content-box || 内容の幅だけを数える。 || box-sizing: content-box;
+CSS値 || writing-mode: vertical-lr / sideways-rl || 縦書きの向き。 || writing-mode: vertical-lr;
+CSS値 || direction: ltr / rtl || 左から右・右から左。 || direction: ltr;
+CSS値 || unicode-bidi || 双方向テキストの扱い。 || unicode-bidi: isolate;
+CSS値 || color-scheme: only light || 明るい配色に固定する。 || color-scheme: only light;
+CSS値 || scroll-snap-align: center / end || 吸着する位置。 || scroll-snap-align: center;
+CSS値 || scroll-snap-stop: always || 通り過ぎさせない。 || scroll-snap-stop: always;
+CSS値 || touch-action: pan-y / pinch-zoom || 許可するタッチ操作。 || touch-action: pan-y;
+CSS値 || appearance: auto / textfield || 部品の見た目。 || appearance: textfield;
+CSS値 || content: "" / none / open-quote || 疑似要素の内容。 || content: "";
+CSS値 || content: url() / attr() / counter() || 画像・属性・連番を表示。 || content: url(a.png);
+CSS値 || quotes: auto || 言語に合う引用符。 || quotes: auto;
+CSS値 || hyphens: manual / none || ハイフネーションの制御。 || hyphens: manual;
+CSS値 || tab-size: 2 || タブの幅。 || tab-size: 2;
+CSS値 || zoom || 拡大率（非標準だが広く対応）。 || zoom: 1.2;
+CSS値 || text-size-adjust || スマホの文字の自動拡大。 || -webkit-text-size-adjust: 100%;
+Webフォントと書体 || Noto Sans JP || Google の日本語ゴシック体。 || font-family: "Noto Sans JP"
+Webフォントと書体 || Noto Serif JP || Google の日本語明朝体。 || font-family: "Noto Serif JP"
+Webフォントと書体 || M PLUS 1p || 日本語のゴシック体。 || font-family: "M PLUS 1p"
+Webフォントと書体 || Zen Kaku Gothic New || 日本語ゴシック体。 || font-family: "Zen Kaku Gothic New"
+Webフォントと書体 || Zen Maru Gothic || 日本語の丸ゴシック。 || font-family: "Zen Maru Gothic"
+Webフォントと書体 || Shippori Mincho || 日本語の明朝体。 || font-family: "Shippori Mincho"
+Webフォントと書体 || BIZ UDPGothic || 読みやすさ重視の書体。 || font-family: "BIZ UDPGothic"
+Webフォントと書体 || Hiragino Sans || macOS 標準の日本語書体。 || font-family: "Hiragino Sans"
+Webフォントと書体 || Hiragino Kaku Gothic ProN || macOS のゴシック。 || font-family: "Hiragino Kaku Gothic ProN"
+Webフォントと書体 || Yu Gothic / Yu Mincho || 游書体。 || font-family: "Yu Gothic"
+Webフォントと書体 || Meiryo || Windows のメイリオ。 || font-family: Meiryo
+Webフォントと書体 || MS Gothic / MS PGothic || 旧来のゴシック。 || font-family: "MS PGothic"
+Webフォントと書体 || Roboto || Android 標準の欧文書体。 || font-family: Roboto
+Webフォントと書体 || Inter || 画面向けの欧文書体。 || font-family: Inter
+Webフォントと書体 || Open Sans / Lato / Montserrat || 定番の欧文書体。 || font-family: "Open Sans"
+Webフォントと書体 || Segoe UI || Windows の標準書体。 || font-family: "Segoe UI"
+Webフォントと書体 || San Francisco (-apple-system) || Apple の標準書体。 || font-family: -apple-system
+Webフォントと書体 || Arial / Helvetica || 定番のゴシック体。 || font-family: Arial
+Webフォントと書体 || Times New Roman / Georgia || 定番の明朝系。 || font-family: Georgia
+Webフォントと書体 || Courier New / Consolas || 等幅の書体。 || font-family: Consolas
+Webフォントと書体 || Fira Code / JetBrains Mono || コード用の等幅書体。 || font-family: "JetBrains Mono"
+Webフォントと書体 || Google Fonts || 無料の Web フォント配信。 || fonts.googleapis.com
+Webフォントと書体 || Adobe Fonts || Adobe の Web フォント。 || use.typekit.net
+Webフォントと書体 || fontsource || フォントを npm で自前配信する。 || @fontsource/inter
+Webフォントと書体 || サブセット化 || 使う文字だけにして軽くする。 || pyftsubset
+Webフォントと書体 || 可変フォント || 太さ等を連続的に変える。 || font-variation-settings
+Webフォントと書体 || アイコンフォント || 文字としてアイコンを使う。 || Font Awesome
+Webフォントと書体 || Font Awesome || 定番のアイコンセット。 || <i class="fa-solid fa-star">
+Webフォントと書体 || Material Symbols || Google のアイコン。 || class="material-symbols-outlined"
+Webフォントと書体 || Feather / Lucide || 軽量な線のアイコン。 || lucide
+Webフォントと書体 || Emoji の表示 || 絵文字の描画は環境で異なる。 || font-family: "Noto Color Emoji"
+Webフォントと書体 || 異体字セレクタ || 字形を選ぶ。 || U+FE0F
+Webフォントと書体 || 合字 (リガチャ) || 文字を組み合わせて表示する。 || font-variant-ligatures
+Webフォントと書体 || プロポーショナルメトリクス || 文字ごとの幅で詰める。 || font-feature-settings: "palt"
+UI部品 || ハンバーガーメニュー || 3本線で開くメニュー。 || <button aria-expanded>
+UI部品 || ドロワー || 横から出るパネル。 || transform: translateX
+UI部品 || モーダル || 重ねて表示する窓。 || <dialog>
+UI部品 || トースト || 一時的な通知。 || role="status"
+UI部品 || ツールチップ || 補足の吹き出し。 || role="tooltip"
+UI部品 || ドロップダウン || 選択肢が開く部品。 || <select>
+UI部品 || コンボボックス || 入力と候補の組み合わせ。 || role="combobox"
+UI部品 || アコーディオン || 開閉する見出し。 || <details>
+UI部品 || タブ || 切り替える表示。 || role="tablist"
+UI部品 || カルーセル || 横に流れるスライド。 || scroll-snap
+UI部品 || ページネーション || ページ送り。 || <nav aria-label>
+UI部品 || パンくずリスト || 現在位置の階層。 || <ol>
+UI部品 || ステッパー || 手順の進行表示。 || aria-current="step"
+UI部品 || プログレスバー || 進捗の表示。 || <progress>
+UI部品 || スケルトンスクリーン || 読み込み前の仮表示。 || animation: pulse
+UI部品 || スピナー || 回転する待機表示。 || animation: spin
+UI部品 || スイッチ || オン・オフの切り替え。 || role="switch"
+UI部品 || チップ / タグ || 小さな絞り込みの印。 || .chip
+UI部品 || バッジ || 件数などの小さな印。 || .badge
+UI部品 || アバター || 利用者の画像。 || border-radius: 50%
+UI部品 || カード || 情報のまとまり。 || .card
+UI部品 || ヒーローセクション || 先頭の大きな見せ場。 || .hero
+UI部品 || フッターナビ || 下部のリンク集。 || <footer>
+UI部品 || スティッキーヘッダー || 追従するヘッダー。 || position: sticky
+UI部品 || 検索ボックス || 検索の入力欄。 || <input type="search">
+UI部品 || 無限スクロール || 末尾で追加読み込みする。 || IntersectionObserver
+UI部品 || ライトボックス || 画像を拡大表示する。 || <dialog>
+UI部品 || スライダー (範囲) || 値を滑らせて選ぶ。 || <input type="range">
+UI部品 || 日付ピッカー || 日付を選ぶ。 || <input type="date">
+UI部品 || カラーピッカー || 色を選ぶ。 || <input type="color">
+UI部品 || ファイルドロップ領域 || ドラッグで受け取る。 || ondrop
+UI部品 || コンテキストメニュー || 右クリックの一覧。 || oncontextmenu
+UI部品 || スクロールトップボタン || 先頭へ戻るボタン。 || scrollTo(0,0)
+UI部品 || 目次 (TOC) || 見出しへのリンク集。 || <nav>
+UI部品 || アラートバナー || 重要な知らせ。 || role="alert"
+UI部品 || 空状態 (empty state) || データがない時の表示。 || .empty
+UI部品 || フォームステップ || 分割された入力。 || fieldset
+UI部品 || ツールバー || 操作ボタンの並び。 || role="toolbar"
+UI部品 || ブレッドクラム構造化データ || 検索結果に階層を伝える。 || BreadcrumbList
+UI部品 || FAQ の構造化データ || 質問と回答を伝える。 || FAQPage
+HTML歴史 || HTML 4.01 || 2000年前後の標準。 || <!DOCTYPE HTML PUBLIC>
+HTML歴史 || XHTML || XML 準拠の HTML。 || <html xmlns>
+HTML歴史 || HTML5 || 2014年勧告の大きな更新。 || <!doctype html>
+HTML歴史 || HTML Living Standard || 常に更新される現行の仕様。 || WHATWG
+HTML歴史 || W3C || ウェブ標準の団体。 || w3.org
+HTML歴史 || WHATWG || ブラウザベンダーによる仕様の団体。 || whatwg.org
+HTML歴史 || ECMAScript || JavaScript の仕様。 || ES2024
+HTML歴史 || CSS3 以降のモジュール化 || 機能ごとに仕様が進む。 || CSS Modules Level
+HTML歴史 || ブラウザ戦争 || 互換性が乱れた歴史。 || IE vs Netscape
+HTML歴史 || Internet Explorer || 終了した旧ブラウザ。 || IE11
+HTML歴史 || Chromium || 多くのブラウザの基盤。 || Chrome, Edge
+HTML歴史 || Blink / WebKit / Gecko || ブラウザの描画エンジン。 || Blink
+HTML歴史 || Flash の終了 || プラグインの廃止。 || 2020年
+HTML歴史 || レスポンシブ以前の固定幅 || 960px などの固定レイアウト。 || 960 grid
+HTML歴史 || テーブルレイアウト || 表で配置した古い手法。 || <table>
+HTML歴史 || float レイアウト || 回り込みで配置した手法。 || float
+HTML歴史 || Flexbox の登場 || 柔軟な1次元配置。 || display: flex
+HTML歴史 || Grid の登場 || 2次元の配置。 || display: grid
+HTML歴史 || Web Components の登場 || 標準の部品化。 || customElements
+HTML歴史 || JAMstack || 静的生成と API の構成。 || static + API
+HTML歴史 || ジオシティーズ時代 || 個人サイトの古い文化。 || ホームページ
+HTML歴史 || ホームページビルダー || 旧来の制作ソフト。 || HPB
+HTML歴史 || CMS || 内容を管理する仕組み。 || WordPress
+HTML歴史 || 静的サイトジェネレーター || ビルドで HTML を作る。 || Jekyll, Hugo
+HTML歴史 || ヘッドレス CMS || API で内容を配信する。 || microCMS

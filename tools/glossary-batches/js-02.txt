@@ -1,0 +1,97 @@
+ES仕様の歩み || ES5 (2009) || 厳格モードや JSON、配列の高階関数。 || 'use strict'
+ES仕様の歩み || ES2015 (ES6) || let/const、クラス、Promise、モジュールなど大改訂。 || class, let, =>
+ES仕様の歩み || ES2016 || ** 演算子、Array.includes。 || 2 ** 3
+ES仕様の歩み || ES2017 || async/await、Object.entries。 || async function
+ES仕様の歩み || ES2018 || 非同期イテレータ、オブジェクトのスプレッド。 || {...o}
+ES仕様の歩み || ES2019 || flat、flatMap、fromEntries。 || a.flat()
+ES仕様の歩み || ES2020 || ?.、??、BigInt、動的 import。 || a?.b ?? c
+ES仕様の歩み || ES2021 || replaceAll、論理代入、Promise.any。 || s.replaceAll()
+ES仕様の歩み || ES2022 || クラスの private、at、トップレベル await。 || #x
+ES仕様の歩み || ES2023 || toSorted、findLast、Hashbang。 || a.toSorted()
+ES仕様の歩み || ES2024 || groupBy、Promise.withResolvers。 || Object.groupBy
+ES仕様の歩み || ES2025 || Set 演算、Iterator ヘルパーなど。 || a.union(b)
+ES仕様の歩み || TC39 || 仕様を決める委員会。 || tc39.es
+ES仕様の歩み || Stage 0〜4 || 提案の成熟度。 || Stage 4 で採用
+ES仕様の歩み || Babel || 新しい構文を変換する。 || @babel/preset-env
+ES仕様の歩み || ポリフィル || 古い環境に機能を補う。 || core-js
+ES仕様の歩み || トランスパイル || 構文を別の構文に変換する。 || transpile
+ES仕様の歩み || core-js || ポリフィルの集まり。 || core-js
+ES仕様の歩み || Iterator ヘルパー || 反復に map や filter を使う。 || it.map(f).take(3)
+ES仕様の歩み || Decorators (標準) || 標準化されたデコレータ。 || @dec
+ES仕様の歩み || Records & Tuples (提案) || 不変の複合値。 || #{a: 1}
+ES仕様の歩み || パイプライン演算子 (提案) || 関数を連ねる。 || x |> f
+ES仕様の歩み || パターンマッチ (提案) || 構造で分岐する。 || match (x)
+設計と作法 || 関数型プログラミング || 純粋関数と不変データ。 || pure function
+設計と作法 || 純粋関数 || 同じ入力に同じ出力。 || f(x)
+設計と作法 || 副作用 || 外部の状態を変える処理。 || side effect
+設計と作法 || 不変性 (イミュータブル) || 値を変更せず新しく作る。 || {...o}
+設計と作法 || 宣言的 / 命令的 || 何を・どうやるかの書き方。 || map vs for
+設計と作法 || モジュールパターン || クロージャで隠蔽する。 || IIFE
+設計と作法 || シングルトン (JS) || 1つのモジュールで共有する。 || export const store
+設計と作法 || オブザーバーパターン || 変更を通知する。 || addEventListener
+設計と作法 || pub/sub || 発行と購読。 || emit / on
+設計と作法 || 依存性の注入 || 部品を外から渡す。 || constructor(dep)
+設計と作法 || ファクトリ関数 || オブジェクトを返す関数。 || function create() { return {} }
+設計と作法 || コンポジション || 小さな部品を組み合わせる。 || compose(f, g)
+設計と作法 || 継承よりコンポジション || 継承に頼らない設計。 || composition over inheritance
+設計と作法 || ガード節 || 早めに戻る。 || if (!x) return
+設計と作法 || 早期リターン || ネストを浅くする。 || return
+設計と作法 || マジックナンバーの回避 || 定数に名前を付ける。 || const MAX = 10
+設計と作法 || 命名規則 || camelCase が基本。 || camelCase
+設計と作法 || JSDoc || コメントで型や説明を書く。 || /** @param {number} a */
+設計と作法 || 非同期のエラー処理 || await を try で囲む。 || try { await f() }
+設計と作法 || エラーバウンダリ || 画面の一部の失敗を閉じ込める。 || componentDidCatch
+設計と作法 || グローバル汚染の回避 || 変数を閉じる。 || module
+設計と作法 || イベント委譲の活用 || 親でまとめて受ける。 || e.target.closest
+設計と作法 || 状態管理の考え方 || 単一の情報源にする。 || single source of truth
+設計と作法 || 単方向データフロー || データは上から下へ。 || props down, events up
+設計と作法 || 楽観的更新 || 先に画面を更新する。 || optimistic update
+設計と作法 || 冪等性 || 何度実行しても同じ結果。 || idempotent
+セキュリティ || XSS || スクリプト注入の攻撃。 || innerHTML の危険
+セキュリティ || textContent の使用 || 文字として安全に入れる。 || el.textContent = s
+セキュリティ || DOMPurify || HTML を無害化する。 || DOMPurify.sanitize(h)
+セキュリティ || eval の危険 || 文字列をコードとして実行する。 || eval(s) を避ける
+セキュリティ || new Function の危険 || 同じく危険。 || new Function(s)
+セキュリティ || CSRF || 偽造した要求。 || SameSite, token
+セキュリティ || CORS の仕組み || 別オリジンの許可。 || preflight
+セキュリティ || Same-Origin Policy || 同一オリジンの制限。 || origin
+セキュリティ || Content Security Policy || 読み込みの制限。 || script-src 'self'
+セキュリティ || HttpOnly Cookie || JS から読めない Cookie。 || HttpOnly
+セキュリティ || localStorage に秘密を置かない || 盗まれやすい。 || token の保管
+セキュリティ || プロトタイプ汚染 || Object.prototype の改ざん。 || __proto__
+セキュリティ || ReDoS || 正規表現による停止攻撃。 || catastrophic backtracking
+セキュリティ || サプライチェーン攻撃 || 依存パッケージ経由の攻撃。 || npm audit
+セキュリティ || npm audit || 脆弱性の検査。 || npm audit fix
+セキュリティ || Subresource Integrity || 読み込むファイルの検証。 || integrity
+セキュリティ || postMessage の origin 確認 || 送信元を確かめる。 || e.origin
+セキュリティ || crypto.getRandomValues || 安全な乱数。 || crypto.getRandomValues(a)
+セキュリティ || Web Crypto API || 暗号の機能。 || crypto.subtle.digest()
+セキュリティ || JWT の扱い || 署名と有効期限を確認する。 || exp
+性能 || 再描画の抑制 || DOM 操作をまとめる。 || DocumentFragment
+性能 || DocumentFragment || 一時的な DOM の入れ物。 || document.createDocumentFragment()
+性能 || レイアウトスラッシング || 読み書きの交互による遅延。 || offsetHeight
+性能 || passive リスナー || スクロールを妨げない。 || {passive: true}
+性能 || 遅延読み込み || 必要になるまで読まない。 || import()
+性能 || Web Worker で重い処理 || メインを塞がない。 || new Worker
+性能 || メモリリーク || 解放されない参照。 || removeEventListener
+性能 || ガベージコレクション || 不要なメモリの回収。 || GC
+性能 || 計測 (performance.mark) || 区間を計測する。 || performance.mark('a')
+性能 || performance.measure || 2点間の時間を測る。 || performance.measure('m', 'a', 'b')
+性能 || ループの最適化 || 無駄な処理を外に出す。 || const n = a.length
+性能 || 仮想スクロール || 見える分だけ描く。 || virtual list
+性能 || バンドルサイズの削減 || 不要なコードを除く。 || bundle analyzer
+性能 || requestAnimationFrame の活用 || 描画に合わせて処理する。 || rAF
+性能 || Core Web Vitals と JS || INP を悪化させない。 || long task
+性能 || long task || 50ms を超える処理。 || PerformanceObserver
+性能 || Idle Until Urgent || 暇なときに実行する考え方。 || requestIdleCallback
+デバッグと検査 || console.log デバッグ || 値を出力して調べる。 || console.log
+デバッグと検査 || debugger による停止 || コードで停止する。 || debugger
+デバッグと検査 || ソースマップ || 変換前のコードを対応づける。 || //# sourceMappingURL
+デバッグと検査 || スタックトレース || 呼び出しの履歴。 || err.stack
+デバッグと検査 || window.onerror || 未処理エラーを受ける。 || window.onerror
+デバッグと検査 || unhandledrejection の監視 || Promise の失敗を拾う。 || addEventListener('unhandledrejection')
+デバッグと検査 || Error.captureStackTrace || スタックを記録する（V8）。 || Error.captureStackTrace(this)
+デバッグと検査 || Sentry || エラー収集サービス。 || Sentry.init()
+デバッグと検査 || React DevTools / Vue DevTools || 部品の検査。 || browser extension
+デバッグと検査 || Node の --inspect || デバッガに接続する。 || node --inspect a.js
+デバッグと検査 || VS Code のデバッグ || エディタで止めて調べる。 || launch.json

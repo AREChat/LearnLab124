@@ -1,0 +1,132 @@
+開発ツール || Elements パネル || DOM と CSS を調べる。 || DevTools > Elements
+開発ツール || Console パネル || ログとコマンド実行。 || DevTools > Console
+開発ツール || Network パネル || 通信を調べる。 || DevTools > Network
+開発ツール || Sources パネル || ソースとデバッグ。 || DevTools > Sources
+開発ツール || Performance パネル || 性能を記録する。 || DevTools > Performance
+開発ツール || Memory パネル || メモリを調べる。 || DevTools > Memory
+開発ツール || Application パネル || 保存データや SW を調べる。 || DevTools > Application
+開発ツール || Lighthouse パネル || 品質の診断。 || DevTools > Lighthouse
+開発ツール || Rendering パネル || 描画の設定を切り替える。 || Paint flashing
+開発ツール || Device Mode || スマホ表示の再現。 || Ctrl+Shift+M
+開発ツール || Computed タブ || 最終的な値を見る。 || Computed
+開発ツール || Styles タブ || 適用中の規則を見る。 || Styles
+開発ツール || :hov 状態の強制 || ホバー状態を再現する。 || :hov
+開発ツール || Layout タブ || Grid・Flex の可視化。 || Layout
+開発ツール || Flexbox インスペクター || Flex の配置を見る。 || flex badge
+開発ツール || Grid インスペクター || グリッド線を表示する。 || grid badge
+開発ツール || コンテナクエリの表示 || container の印を見る。 || container badge
+開発ツール || Coverage || 使われない CSS/JS を調べる。 || Ctrl+Shift+P > Coverage
+開発ツール || スクリーンショット取得 || 全体を画像にする。 || Capture full size screenshot
+開発ツール || Network throttling || 回線を遅くして試す。 || Slow 3G
+開発ツール || Disable cache || キャッシュを無効にする。 || Network > Disable cache
+開発ツール || Preserve log || 遷移後もログを残す。 || Preserve log
+開発ツール || ブレークポイント (DOM) || 変更時に止める。 || Break on subtree modifications
+開発ツール || debugger 文 || コードで止める。 || debugger;
+開発ツール || console.log / warn / error || ログの出力。 || console.log(x)
+開発ツール || console.table || 表で出力する。 || console.table(a)
+開発ツール || console.group || ログをまとめる。 || console.group('a')
+開発ツール || console.time / timeEnd || 時間を測る。 || console.time('a')
+開発ツール || console.assert || 偽なら出力する。 || console.assert(x > 0)
+開発ツール || console.dir || オブジェクトを展開して出す。 || console.dir(el)
+開発ツール || console.trace || 呼び出し経路を出す。 || console.trace()
+開発ツール || $0 / $_ || 選択中の要素・直前の結果。 || $0
+開発ツール || $ / $$ (Console) || querySelector の略記。 || $$('li')
+開発ツール || copy() || 結果をコピーする。 || copy(obj)
+開発ツール || monitorEvents || イベントを監視する。 || monitorEvents($0, 'click')
+開発ツール || Safari Web Inspector || Safari の開発者ツール。 || Develop メニュー
+開発ツール || Firefox 開発者ツール || Firefox の開発者ツール。 || F12
+開発ツール || リモートデバッグ || 実機を PC から調べる。 || chrome://inspect
+開発ツール || BrowserStack || 実機・ブラウザの検証サービス。 || browserstack.com
+開発ツール || Live Server || 保存で自動更新するサーバー。 || VS Code 拡張
+開発ツール || Prettier || 書式の自動整形。 || prettier --write
+開発ツール || ESLint || JS の静的解析。 || eslint .
+開発ツール || Stylelint || CSS の静的解析。 || stylelint "*.css"
+開発ツール || HTMLHint || HTML の静的解析。 || htmlhint
+開発ツール || Vite || 高速な開発・ビルドツール。 || vite
+開発ツール || webpack || モジュールのバンドラー。 || webpack.config.js
+開発ツール || esbuild || 高速なバンドラー。 || esbuild
+開発ツール || Parcel || 設定の少ないバンドラー。 || parcel
+開発ツール || npm scripts || 作業をコマンド化する。 || "build": "vite build"
+開発ツール || Browserslist || 対象ブラウザの指定。 || > 0.5%, last 2 versions
+開発ツール || Lightning CSS || 高速な CSS 変換。 || lightningcss
+開発ツール || cssnano || CSS の圧縮。 || cssnano
+開発ツール || PurgeCSS || 不要な CSS を除く。 || purgecss
+開発ツール || SVGO || SVG の最適化。 || svgo
+開発ツール || Squoosh || 画像の圧縮ツール。 || squoosh.app
+開発ツール || ImageMagick / sharp || 画像の変換。 || sharp
+開発ツール || Figma || デザインツール。 || figma.com
+開発ツール || Storybook || 部品の確認・文書化。 || storybook
+開発ツール || Chromatic / Percy || 見た目の差分テスト。 || visual regression
+開発ツール || axe / WAVE || アクセシビリティの検査。 || axe DevTools
+開発ツール || Pa11y || 自動のアクセシビリティ検査。 || pa11y
+開発ツール || W3C Validator || 文法の検査。 || validator.w3.org
+開発ツール || PageSpeed Insights || 速度の診断。 || pagespeed.web.dev
+開発ツール || WebPageTest || 詳細な速度の検査。 || webpagetest.org
+開発ツール || Search Console || 検索の状況を見る。 || search.google.com/search-console
+開発ツール || Rich Results Test || 構造化データの検査。 || search.google.com/test/rich-results
+画像と形式 || JPEG || 写真向けの非可逆形式。 || image/jpeg
+画像と形式 || PNG || 可逆で透過できる形式。 || image/png
+画像と形式 || GIF || 簡易アニメーションの形式。 || image/gif
+画像と形式 || WebP || 軽い高機能の形式。 || image/webp
+画像と形式 || AVIF || 非常に軽い新しい形式。 || image/avif
+画像と形式 || SVG || ベクター画像。 || image/svg+xml
+画像と形式 || ICO || アイコン用の形式。 || favicon.ico
+画像と形式 || APNG || アニメ対応の PNG。 || image/apng
+画像と形式 || JPEG XL || 新しい高効率の形式。 || image/jxl
+画像と形式 || HEIC || iPhone の写真形式。 || image/heic
+画像と形式 || ロスレス / ロッシー || 可逆・非可逆の圧縮。 || lossless, lossy
+画像と形式 || 画像の最適な大きさ || 表示サイズの2倍程度まで。 || 2x
+画像と形式 || レティナ対応 || 高密度画面向けの画像。 || srcset 2x
+画像と形式 || LQIP || 低品質の仮画像を先に出す。 || blur-up
+画像と形式 || ブラーハッシュ || 短い文字列で仮画像を作る。 || BlurHash
+画像と形式 || 画像 CDN || 変換と配信を任せる。 || Cloudinary
+画像と形式 || OGP 画像のサイズ || 共有用は 1200×630 が目安。 || 1200x630
+画像と形式 || favicon のサイズ || 32px・180px など。 || 32x32
+画像と形式 || data URI || 画像を文字で埋め込む。 || data:image/png;base64,...
+画像と形式 || Base64 画像の注意 || 大きいと逆効果。 || data URI
+画像と形式 || 画像のメタ情報 (EXIF) || 撮影情報を含む。 || EXIF
+画像と形式 || 画像の著作権 || 利用条件を確認する。 || license
+画像と形式 || スプライト画像 || 複数画像を1枚にまとめる。 || background-position
+画像と形式 || CSS だけの図形 || 画像を使わず描く。 || clip-path
+画像と形式 || 背景の模様 (CSS) || グラデーションで模様を作る。 || repeating-linear-gradient
+画像と形式 || ノイズ・テクスチャ || 質感を足す。 || feTurbulence
+画像と形式 || 動画形式 mp4 / webm || 動画の形式。 || video/webm
+画像と形式 || H.264 / VP9 / AV1 || 動画の符号化方式。 || AV1
+画像と形式 || 動画の自動再生の条件 || 消音なら許される。 || autoplay muted
+画像と形式 || HLS / DASH || 動画の配信方式。 || .m3u8
+画像と形式 || 音声形式 mp3 / aac / ogg || 音声の形式。 || audio/mpeg
+SEOと公開 || title タグの長さ || 30字前後が目安。 || <title>
+SEOと公開 || meta description の長さ || 120字前後が目安。 || <meta name="description">
+SEOと公開 || 見出し構造と SEO || 内容を階層で伝える。 || h1, h2
+SEOと公開 || 内部リンク || サイト内のリンク。 || <a href="/a">
+SEOと公開 || 外部リンク || 他のサイトへのリンク。 || rel="noopener"
+SEOと公開 || アンカーテキスト || リンクの文字。 || <a>説明</a>
+SEOと公開 || クローラー || 巡回するプログラム。 || Googlebot
+SEOと公開 || インデックス || 検索に登録されること。 || indexed
+SEOと公開 || noindex / nofollow || 登録・追跡を拒む。 || content="noindex,nofollow"
+SEOと公開 || X-Robots-Tag || ヘッダーで指示する。 || X-Robots-Tag: noindex
+SEOと公開 || 301 / 302 リダイレクト || 恒久・一時の転送。 || 301
+SEOと公開 || 404 ページ || 見つからない時の画面。 || 404.html
+SEOと公開 || ソフト 404 || 内容がないのに 200 を返す。 || soft 404
+SEOと公開 || モバイルフレンドリー || スマホで使いやすい。 || viewport
+SEOと公開 || モバイルファーストインデックス || スマホ版を基準に登録する。 || mobile-first
+SEOと公開 || サイトマップの送信 || 検索に伝える。 || sitemap.xml
+SEOと公開 || 構造化データの種類 || Article, Product など。 || schema.org/Article
+SEOと公開 || リッチリザルト || 装飾つきの検索結果。 || rich results
+SEOと公開 || OGP の設定 || 共有時の見た目。 || og:title, og:image
+SEOと公開 || Twitter / X カード || X での表示。 || twitter:card
+SEOと公開 || 正規化 (canonical) || 重複の統合。 || rel="canonical"
+SEOと公開 || hreflang || 言語の対応づけ。 || hreflang="ja"
+SEOと公開 || ページの表示速度 || 評価に影響する。 || Core Web Vitals
+SEOと公開 || E-E-A-T || 経験・専門性・権威性・信頼性。 || E-E-A-T
+SEOと公開 || ドメインの取得 || 独自ドメインを用意する。 || お名前.com
+SEOと公開 || SSL 証明書 || HTTPS の証明書。 || Let's Encrypt
+SEOと公開 || DNS レコード || 名前の対応表。 || A, CNAME, MX, TXT
+SEOと公開 || CNAME ファイル (Pages) || GitHub Pages の独自ドメイン。 || CNAME
+SEOと公開 || .htaccess || Apache の設定。 || RewriteRule
+SEOと公開 || _redirects / _headers || Netlify などの設定。 || _redirects
+SEOと公開 || Netlify / Vercel || 静的サイトの公開サービス。 || netlify.toml
+SEOと公開 || Cloudflare Pages || 静的サイトの公開サービス。 || pages.dev
+SEOと公開 || FTP でアップロード || ファイルを転送する。 || FileZilla
+SEOと公開 || レンタルサーバー || 共有のサーバー。 || ConoHa, さくら
+SEOと公開 || 公開前のチェック || リンク・表示・速度を確認する。 || checklist
