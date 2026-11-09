@@ -1,0 +1,143 @@
+HTML属性 || href || リンク先。 || <a href="a.html">
+HTML属性 || target || リンクを開く場所。 || target="_blank"
+HTML属性 || rel || リンクの関係。 || rel="noopener noreferrer"
+HTML属性 || download || ダウンロードさせる。 || <a download>
+HTML属性 || hreflang || リンク先の言語。 || hreflang="en"
+HTML属性 || ping || クリックを通知する先。 || ping="/log"
+HTML属性 || referrerpolicy || 参照元の送り方。 || referrerpolicy="no-referrer"
+HTML属性 || src || 読み込む先。 || <img src="a.png">
+HTML属性 || srcset || 解像度ごとの画像。 || srcset="a.png 1x, b.png 2x"
+HTML属性 || sizes || 表示の大きさの目安。 || sizes="(min-width:600px) 50vw, 100vw"
+HTML属性 || alt || 画像の代替文。 || alt="ロゴ"
+HTML属性 || loading || 読み込みの時機。 || loading="lazy"
+HTML属性 || decoding || 画像の復号方法。 || decoding="async"
+HTML属性 || fetchpriority || 取得の優先度。 || fetchpriority="high"
+HTML属性 || width / height || 幅と高さ。 || width="300" height="200"
+HTML属性 || crossorigin || 別オリジンの扱い。 || crossorigin="anonymous"
+HTML属性 || integrity || ファイルの改ざん検査。 || integrity="sha384-..."
+HTML属性 || async || 非同期に読み込む。 || <script async>
+HTML属性 || defer || 解析後に実行する。 || <script defer>
+HTML属性 || type="module" || ES モジュール。 || <script type="module">
+HTML属性 || nomodule || 非対応のブラウザ向け。 || <script nomodule>
+HTML属性 || nonce || CSP 用の使い捨て値。 || nonce="abc"
+HTML属性 || media || 条件つきの読み込み。 || media="(min-width:600px)"
+HTML属性 || as || プリロードの種類。 || as="style"
+HTML属性 || preload || 先に読み込む。 || rel="preload"
+HTML属性 || prefetch || 次に使うものを先読みする。 || rel="prefetch"
+HTML属性 || preconnect || 先に接続しておく。 || rel="preconnect"
+HTML属性 || dns-prefetch || 名前解決を先に行う。 || rel="dns-prefetch"
+HTML属性 || modulepreload || モジュールを先読みする。 || rel="modulepreload"
+HTML属性 || canonical || 正規の URL。 || rel="canonical"
+HTML属性 || alternate || 別の版へのリンク。 || rel="alternate"
+HTML属性 || nofollow || 評価を渡さないリンク。 || rel="nofollow"
+HTML属性 || sponsored / ugc || 広告・投稿のリンク。 || rel="sponsored"
+HTML属性 || noopener || 開いた先から操作されない。 || rel="noopener"
+HTML属性 || sandbox || iframe の制限。 || sandbox="allow-scripts"
+HTML属性 || allow (iframe) || 機能の許可。 || allow="fullscreen"
+HTML属性 || allowfullscreen || 全画面を許す。 || <iframe allowfullscreen>
+HTML属性 || srcdoc || iframe に直接書く内容。 || srcdoc="<p>hi</p>"
+HTML属性 || name || 名前。 || name="email"
+HTML属性 || value || 値。 || value="1"
+HTML属性 || placeholder || 入力例の表示。 || placeholder="名前"
+HTML属性 || required || 必須入力。 || required
+HTML属性 || disabled || 無効にする。 || disabled
+HTML属性 || readonly || 読み取り専用。 || readonly
+HTML属性 || checked || 選択済み。 || checked
+HTML属性 || selected || 選択済みの選択肢。 || selected
+HTML属性 || multiple || 複数選択を許す。 || multiple
+HTML属性 || min / max / step || 数値の範囲と刻み。 || min="0" max="10" step="1"
+HTML属性 || minlength / maxlength || 文字数の範囲。 || maxlength="20"
+HTML属性 || pattern || 正規表現による検証。 || pattern="[0-9]{3}"
+HTML属性 || autocomplete || 自動入力の種類。 || autocomplete="email"
+HTML属性 || autofocus || 自動でフォーカスする。 || autofocus
+HTML属性 || inputmode || 表示するキーボードの種類。 || inputmode="numeric"
+HTML属性 || enterkeyhint || 確定キーの表示。 || enterkeyhint="search"
+HTML属性 || list || 候補の一覧を指す。 || list="names"
+HTML属性 || accept || 受け付けるファイル。 || accept="image/*"
+HTML属性 || capture || カメラの使用。 || capture="environment"
+HTML属性 || form (属性) || 外にあるフォームへ関連づける。 || form="f1"
+HTML属性 || formaction / formmethod || ボタンごとの送信設定。 || formaction="/b"
+HTML属性 || formnovalidate || 検証を省く。 || formnovalidate
+HTML属性 || novalidate || フォームの検証を省く。 || <form novalidate>
+HTML属性 || action / method || 送信先と方法。 || method="post"
+HTML属性 || enctype || 送信データの形式。 || enctype="multipart/form-data"
+HTML属性 || accept-charset || 送信の文字コード。 || accept-charset="UTF-8"
+HTML属性 || for (label) || ラベルの対象。 || <label for="a">
+HTML属性 || colspan / rowspan || セルの結合。 || colspan="2"
+HTML属性 || scope (th) || 見出しの範囲。 || scope="col"
+HTML属性 || headers || セルと見出しの関連。 || headers="h1"
+HTML属性 || controls || 再生操作を表示する。 || <video controls>
+HTML属性 || autoplay / loop / muted || 自動再生・繰り返し・消音。 || autoplay muted
+HTML属性 || poster || 動画の代表画像。 || poster="a.jpg"
+HTML属性 || preload (メディア) || 先読みの程度。 || preload="metadata"
+HTML属性 || playsinline || 全画面にせず再生する。 || playsinline
+HTML属性 || kind / srclang || 字幕の種類・言語。 || <track kind="subtitles" srclang="ja">
+HTML属性 || open || 開いた状態。 || <details open>
+HTML属性 || popover || ポップオーバーにする。 || popover
+HTML属性 || popovertarget || ポップオーバーを操作する。 || popovertarget="p1"
+HTML属性 || inert || 操作と読み上げを無効にする。 || inert
+HTML属性 || hidden || 非表示にする。 || hidden
+HTML属性 || contenteditable || 編集可能にする。 || contenteditable
+HTML属性 || draggable || ドラッグを許す。 || draggable="true"
+HTML属性 || tabindex || キーボード移動の順序。 || tabindex="0"
+HTML属性 || accesskey || ショートカットキー。 || accesskey="s"
+HTML属性 || lang (属性) || 言語を指定する。 || lang="ja"
+HTML属性 || dir (属性) || 文字の向き。 || dir="rtl"
+HTML属性 || translate || 翻訳の可否。 || translate="no"
+HTML属性 || title (属性) || 補足の説明。 || title="説明"
+HTML属性 || class / id || 分類と一意の名前。 || id="main"
+HTML属性 || style (属性) || 直接スタイルを書く。 || style="color:red"
+HTML属性 || data-* || 独自のデータ属性。 || data-id="1"
+HTML属性 || slot || シャドウ DOM の差し込み先。 || slot="title"
+HTML属性 || is || 拡張する要素。 || is="x-button"
+HTML属性 || itemscope / itemprop || マイクロデータ。 || itemprop="name"
+HTML属性 || part || 外から装飾できる部品。 || part="label"
+HTML属性 || enterkeyhint || 確定キーの表示。 || enterkeyhint="done"
+HTML属性 || autocapitalize || 自動の大文字化。 || autocapitalize="none"
+HTML属性 || writingsuggestions || 入力の候補表示。 || writingsuggestions="false"
+入力タイプ || type=text || 1行の文字入力。 || <input type="text">
+入力タイプ || type=password || 伏せ字の入力。 || <input type="password">
+入力タイプ || type=email || メールアドレス。 || <input type="email">
+入力タイプ || type=tel || 電話番号。 || <input type="tel">
+入力タイプ || type=url || URL の入力。 || <input type="url">
+入力タイプ || type=number || 数値の入力。 || <input type="number">
+入力タイプ || type=range || スライダー。 || <input type="range">
+入力タイプ || type=date || 日付。 || <input type="date">
+入力タイプ || type=time || 時刻。 || <input type="time">
+入力タイプ || type=datetime-local || 日時。 || <input type="datetime-local">
+入力タイプ || type=month / week || 年月・年週。 || <input type="month">
+入力タイプ || type=color || 色の選択。 || <input type="color">
+入力タイプ || type=file || ファイル選択。 || <input type="file">
+入力タイプ || type=checkbox || チェックボックス。 || <input type="checkbox">
+入力タイプ || type=radio || ラジオボタン。 || <input type="radio">
+入力タイプ || type=hidden || 隠しの値。 || <input type="hidden">
+入力タイプ || type=search || 検索欄。 || <input type="search">
+入力タイプ || type=submit / reset / button || ボタン類。 || <input type="submit">
+入力タイプ || type=image || 画像の送信ボタン。 || <input type="image" src="a.png">
+フォーム補助 || <fieldset> / <legend> || 項目のグループと見出し。 || <fieldset><legend>
+フォーム補助 || <datalist> || 入力候補の一覧。 || <datalist id="names">
+フォーム補助 || <output> || 計算結果の表示。 || <output>
+フォーム補助 || <optgroup> || 選択肢のグループ。 || <optgroup label="A">
+フォーム補助 || <progress> || 進捗の表示。 || <progress value="50" max="100">
+フォーム補助 || Constraint Validation API || 入力検証の API。 || input.checkValidity()
+フォーム補助 || setCustomValidity || 独自の検証メッセージ。 || input.setCustomValidity("x")
+フォーム補助 || FormData || フォームの値を扱う。 || new FormData(form)
+フォーム補助 || reportValidity || 検証して表示する。 || form.reportValidity()
+メタ情報 || <meta charset> || 文字コードの宣言。 || <meta charset="UTF-8">
+メタ情報 || meta viewport || 表示領域の設定。 || width=device-width, initial-scale=1
+メタ情報 || meta description || 検索結果の説明文。 || <meta name="description" content="...">
+メタ情報 || meta robots || 検索エンジンへの指示。 || content="noindex"
+メタ情報 || meta theme-color || ブラウザの色。 || <meta name="theme-color" content="#000">
+メタ情報 || meta color-scheme || 明暗の対応。 || content="light dark"
+メタ情報 || meta http-equiv || HTTP ヘッダー相当の指定。 || http-equiv="refresh"
+メタ情報 || Open Graph || SNS 共有用の情報。 || property="og:title"
+メタ情報 || Twitter Card || X での表示設定。 || name="twitter:card"
+メタ情報 || favicon || タブのアイコン。 || <link rel="icon" href="a.ico">
+メタ情報 || apple-touch-icon || ホーム画面用アイコン。 || rel="apple-touch-icon"
+メタ情報 || manifest.webmanifest || PWA の設定。 || <link rel="manifest">
+メタ情報 || <base> || 相対パスの基準。 || <base href="/">
+メタ情報 || JSON-LD || 構造化データ。 || <script type="application/ld+json">
+メタ情報 || 構造化データ || 検索に意味を伝える。 || schema.org
+メタ情報 || sitemap.xml || 検索エンジン向けの一覧。 || sitemap.xml
+メタ情報 || robots.txt || クロールの指示。 || User-agent: *
+メタ情報 || Content-Security-Policy || 読み込みの制限。 || default-src 'self'

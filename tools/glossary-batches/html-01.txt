@@ -1,0 +1,391 @@
+CSSボックス || margin || 外側の余白。 || margin: 0 auto;
+CSSボックス || margin-top / right / bottom / left || 各辺の外側の余白。 || margin-top: 10px;
+CSSボックス || margin-inline || 横方向（書字方向）の外余白。 || margin-inline: auto;
+CSSボックス || margin-block || 縦方向（書字方向）の外余白。 || margin-block: 1rem;
+CSSボックス || margin collapse || 縦の余白が重なって相殺される。 || 上下の margin が大きい方になる
+CSSボックス || padding || 内側の余白。 || padding: 8px 16px;
+CSSボックス || padding-inline / block || 書字方向に沿った内余白。 || padding-inline: 1rem;
+CSSボックス || border || 枠線。 || border: 1px solid #ccc;
+CSSボックス || border-width || 枠線の太さ。 || border-width: 2px;
+CSSボックス || border-style || 枠線の種類。 || border-style: dashed;
+CSSボックス || border-color || 枠線の色。 || border-color: red;
+CSSボックス || border-radius || 角丸。 || border-radius: 8px;
+CSSボックス || border-collapse || 表の枠線を重ねる。 || border-collapse: collapse;
+CSSボックス || border-spacing || 表のセル間隔。 || border-spacing: 0;
+CSSボックス || border-image || 枠線に画像を使う。 || border-image: url(a.png) 30;
+CSSボックス || outline || 外側の輪郭線。 || outline: 2px solid blue;
+CSSボックス || outline-offset || 輪郭線の間隔。 || outline-offset: 2px;
+CSSボックス || box-sizing || 幅の計算方法。 || box-sizing: border-box;
+CSSボックス || box-shadow || 影をつける。 || box-shadow: 0 2px 4px rgba(0,0,0,.2);
+CSSボックス || width / height || 幅と高さ。 || width: 100%;
+CSSボックス || min-width / max-width || 幅の下限・上限。 || max-width: 600px;
+CSSボックス || min-height / max-height || 高さの下限・上限。 || min-height: 100vh;
+CSSボックス || aspect-ratio || 縦横比。 || aspect-ratio: 16 / 9;
+CSSボックス || overflow || はみ出した内容の扱い。 || overflow: auto;
+CSSボックス || overflow-x / overflow-y || 横・縦のはみ出し。 || overflow-x: hidden;
+CSSボックス || overflow-wrap || 長い語の折り返し。 || overflow-wrap: anywhere;
+CSSボックス || text-overflow || はみ出した文字の表現。 || text-overflow: ellipsis;
+CSSボックス || resize || 利用者による大きさ変更。 || resize: vertical;
+CSSボックス || display || 表示方法。 || display: flex;
+CSSボックス || display: none || 表示しない（領域も消える）。 || display: none;
+CSSボックス || display: block || ブロックとして表示。 || display: block;
+CSSボックス || display: inline || 行内として表示。 || display: inline;
+CSSボックス || display: inline-block || 行内だが幅や高さを指定できる。 || display: inline-block;
+CSSボックス || display: contents || 要素自身の箱を作らない。 || display: contents;
+CSSボックス || display: flow-root || 浮動を内包する新しい整形文脈。 || display: flow-root;
+CSSボックス || visibility || 見えるかどうか（領域は残る）。 || visibility: hidden;
+CSSボックス || opacity || 透明度。 || opacity: .5;
+CSSボックス || float || 左右に回り込ませる。 || float: left;
+CSSボックス || clear || 回り込みを解除する。 || clear: both;
+CSSボックス || vertical-align || 行内の縦位置。 || vertical-align: middle;
+CSSボックス || object-fit || 画像などの収まり方。 || object-fit: cover;
+CSSボックス || object-position || 画像の表示位置。 || object-position: center top;
+CSSボックス || cursor || マウスカーソルの形。 || cursor: pointer;
+CSSボックス || pointer-events || マウス操作の受け取り。 || pointer-events: none;
+CSSボックス || user-select || テキスト選択の可否。 || user-select: none;
+CSSボックス || content-visibility || 画面外の描画を省く。 || content-visibility: auto;
+CSSボックス || contain || 影響範囲を限定する。 || contain: layout;
+CSSボックス || isolation || 重なりの文脈を独立させる。 || isolation: isolate;
+CSSボックス || mix-blend-mode || 重なりの合成方法。 || mix-blend-mode: multiply;
+CSSボックス || clip-path || 切り抜く。 || clip-path: circle(50%);
+CSSボックス || mask-image || マスクの画像。 || mask-image: linear-gradient(#000, transparent);
+CSSボックス || filter || 画像効果をかける。 || filter: blur(4px);
+CSSボックス || backdrop-filter || 背面に効果をかける。 || backdrop-filter: blur(8px);
+CSSボックス || appearance || 部品の標準の見た目。 || appearance: none;
+CSSボックス || accent-color || 部品の強調色。 || accent-color: #09f;
+CSSボックス || caret-color || 入力位置の色。 || caret-color: red;
+CSSボックス || scroll-behavior || スクロールの動き。 || scroll-behavior: smooth;
+CSSボックス || scroll-snap-type || スクロールの吸着。 || scroll-snap-type: x mandatory;
+CSSボックス || scroll-margin || 吸着・ジャンプ時の余白。 || scroll-margin-top: 80px;
+CSSボックス || overscroll-behavior || 端でのスクロールの連鎖。 || overscroll-behavior: contain;
+CSSボックス || scrollbar-width || スクロールバーの太さ。 || scrollbar-width: thin;
+CSSボックス || scrollbar-gutter || スクロールバーの領域を確保する。 || scrollbar-gutter: stable;
+CSS配置 || position || 配置方法。 || position: relative;
+CSS配置 || position: static || 通常の配置。 || position: static;
+CSS配置 || position: relative || 元の位置を基準にずらす。 || position: relative;
+CSS配置 || position: absolute || 親を基準に配置する。 || position: absolute;
+CSS配置 || position: fixed || 画面に固定する。 || position: fixed;
+CSS配置 || position: sticky || 条件でスクロールに追従する。 || position: sticky; top: 0;
+CSS配置 || top / right / bottom / left || 配置の位置。 || top: 0;
+CSS配置 || inset || 4辺の位置を一度に指定する。 || inset: 0;
+CSS配置 || z-index || 重なりの順序。 || z-index: 10;
+CSS配置 || 重ね合わせコンテキスト || z-index の範囲を決める単位。 || stacking context
+CSS配置 || transform || 変形する。 || transform: rotate(45deg);
+CSS配置 || translate / rotate / scale || 個別の変形プロパティ。 || scale: 1.2;
+CSS配置 || transform-origin || 変形の基点。 || transform-origin: top left;
+CSS配置 || perspective || 3D の奥行き。 || perspective: 800px;
+CSS配置 || backface-visibility || 裏面の表示。 || backface-visibility: hidden;
+CSS配置 || transform-style || 3D 空間を保つか。 || transform-style: preserve-3d;
+CSS配置 || will-change || 変化を事前に伝える。 || will-change: transform;
+CSS配置 || translate() || 平行移動の関数。 || translate(10px, 20px)
+CSS配置 || rotate() || 回転の関数。 || rotate(30deg)
+CSS配置 || scale() || 拡大縮小の関数。 || scale(1.5)
+CSS配置 || skew() || 傾ける関数。 || skew(10deg)
+CSS配置 || matrix() || 行列による変形。 || matrix(1,0,0,1,0,0)
+CSSフレックス || display: flex || フレックスボックスにする。 || display: flex;
+CSSフレックス || flex-direction || 並べる向き。 || flex-direction: column;
+CSSフレックス || flex-wrap || 折り返し。 || flex-wrap: wrap;
+CSSフレックス || flex-flow || 向きと折り返しの一括指定。 || flex-flow: row wrap;
+CSSフレックス || justify-content || 主軸方向の揃え。 || justify-content: space-between;
+CSSフレックス || align-items || 交差軸方向の揃え。 || align-items: center;
+CSSフレックス || align-content || 複数行の揃え。 || align-content: flex-start;
+CSSフレックス || align-self || 個別の交差軸の揃え。 || align-self: flex-end;
+CSSフレックス || flex-grow || 余白の分配（伸びる）。 || flex-grow: 1;
+CSSフレックス || flex-shrink || 縮み方。 || flex-shrink: 0;
+CSSフレックス || flex-basis || 基準の大きさ。 || flex-basis: 200px;
+CSSフレックス || flex || 伸縮の一括指定。 || flex: 1 1 0;
+CSSフレックス || order || 並び順を変える。 || order: -1;
+CSSフレックス || gap || 要素の間隔。 || gap: 1rem;
+CSSフレックス || row-gap / column-gap || 行・列の間隔。 || column-gap: 8px;
+CSSフレックス || place-items || align と justify の一括指定。 || place-items: center;
+CSSフレックス || place-content || 内容の揃えの一括指定。 || place-content: center;
+CSSフレックス || place-self || 個別の揃えの一括指定。 || place-self: center;
+CSSグリッド || display: grid || グリッドにする。 || display: grid;
+CSSグリッド || grid-template-columns || 列の定義。 || grid-template-columns: 1fr 2fr;
+CSSグリッド || grid-template-rows || 行の定義。 || grid-template-rows: auto 1fr;
+CSSグリッド || grid-template-areas || 領域の名前で配置する。 || grid-template-areas: "h h" "s m";
+CSSグリッド || grid-area || 領域を指定する。 || grid-area: header;
+CSSグリッド || grid-column || 列の範囲。 || grid-column: 1 / 3;
+CSSグリッド || grid-row || 行の範囲。 || grid-row: 2 / 4;
+CSSグリッド || grid-auto-flow || 自動配置の向き。 || grid-auto-flow: dense;
+CSSグリッド || grid-auto-columns / rows || 暗黙の列・行の大きさ。 || grid-auto-rows: 100px;
+CSSグリッド || fr 単位 || 余白を分け合う割合。 || 1fr
+CSSグリッド || repeat() || 繰り返しを指定する。 || repeat(3, 1fr)
+CSSグリッド || minmax() || 最小と最大の範囲。 || minmax(100px, 1fr)
+CSSグリッド || auto-fill / auto-fit || 列数を自動で決める。 || repeat(auto-fit, minmax(200px, 1fr))
+CSSグリッド || fit-content() || 内容に合わせて上限つきの幅。 || fit-content(300px)
+CSSグリッド || subgrid || 親のグリッドを引き継ぐ。 || grid-template-columns: subgrid;
+CSSグリッド || masonry レイアウト || 石積みのような配置。 || grid-template-rows: masonry;
+CSSグリッド || justify-items || 各項目の横揃え。 || justify-items: center;
+CSSグリッド || justify-self || 個別の横揃え。 || justify-self: end;
+CSS文字 || font-family || 書体。 || font-family: "Noto Sans JP", sans-serif;
+CSS文字 || font-size || 文字の大きさ。 || font-size: 16px;
+CSS文字 || font-weight || 文字の太さ。 || font-weight: 700;
+CSS文字 || font-style || 斜体など。 || font-style: italic;
+CSS文字 || font-stretch || 字幅。 || font-stretch: condensed;
+CSS文字 || font-display || Web フォント読み込み中の表示。 || font-display: swap;
+CSS文字 || font-feature-settings || 字形の機能を指定する。 || font-feature-settings: "palt";
+CSS文字 || font-kerning || 字詰め。 || font-kerning: normal;
+CSS文字 || font-optical-sizing || 大きさに応じた字形。 || font-optical-sizing: auto;
+CSS文字 || font-synthesis || 合成の太字・斜体。 || font-synthesis: none;
+CSS文字 || font (一括) || 文字の一括指定。 || font: 16px/1.5 sans-serif;
+CSS文字 || line-height || 行の高さ。 || line-height: 1.6;
+CSS文字 || letter-spacing || 文字の間隔。 || letter-spacing: .05em;
+CSS文字 || word-spacing || 単語の間隔。 || word-spacing: 2px;
+CSS文字 || text-align || 文字の揃え。 || text-align: center;
+CSS文字 || text-align-last || 最終行の揃え。 || text-align-last: justify;
+CSS文字 || text-indent || 字下げ。 || text-indent: 1em;
+CSS文字 || text-decoration || 下線などの装飾。 || text-decoration: underline;
+CSS文字 || text-decoration-color / style || 装飾の色・種類。 || text-decoration-style: wavy;
+CSS文字 || text-underline-offset || 下線の位置。 || text-underline-offset: 4px;
+CSS文字 || text-transform || 大文字・小文字の変換。 || text-transform: uppercase;
+CSS文字 || text-shadow || 文字の影。 || text-shadow: 1px 1px 2px #000;
+CSS文字 || text-wrap || 折り返しの方法。 || text-wrap: balance;
+CSS文字 || white-space || 空白と改行の扱い。 || white-space: nowrap;
+CSS文字 || word-break || 語の改行の規則。 || word-break: break-all;
+CSS文字 || line-break || 禁則処理の強さ。 || line-break: strict;
+CSS文字 || hyphens || ハイフネーション。 || hyphens: auto;
+CSS文字 || tab-size || タブの幅。 || tab-size: 4;
+CSS文字 || direction || 文字の向き。 || direction: rtl;
+CSS文字 || writing-mode || 縦書き・横書き。 || writing-mode: vertical-rl;
+CSS文字 || text-orientation || 縦書き時の文字の向き。 || text-orientation: upright;
+CSS文字 || text-combine-upright || 縦中横。 || text-combine-upright: all;
+CSS文字 || ruby-position || ルビの位置。 || ruby-position: over;
+CSS文字 || quotes || 引用符。 || quotes: "「" "」";
+CSS文字 || list-style || リストの印。 || list-style: none;
+CSS文字 || list-style-type || 印の種類。 || list-style-type: decimal;
+CSS文字 || list-style-position || 印の位置。 || list-style-position: inside;
+CSS文字 || counter-reset / counter-increment || 連番の初期化・加算。 || counter-increment: item;
+CSS文字 || counter() || 連番を表示する。 || content: counter(item);
+CSS文字 || -webkit-line-clamp || 指定行数で省略する。 || -webkit-line-clamp: 3;
+CSS文字 || initial-letter || ドロップキャップ。 || initial-letter: 3;
+CSS背景と色 || color || 文字色。 || color: #333;
+CSS背景と色 || background || 背景の一括指定。 || background: #fff url(a.png) no-repeat;
+CSS背景と色 || background-color || 背景色。 || background-color: #f5f5f5;
+CSS背景と色 || background-image || 背景画像。 || background-image: url(a.png);
+CSS背景と色 || background-repeat || 背景の繰り返し。 || background-repeat: no-repeat;
+CSS背景と色 || background-position || 背景の位置。 || background-position: center;
+CSS背景と色 || background-size || 背景の大きさ。 || background-size: cover;
+CSS背景と色 || background-attachment || 背景の固定。 || background-attachment: fixed;
+CSS背景と色 || background-clip || 背景の描画範囲。 || background-clip: text;
+CSS背景と色 || background-origin || 背景の基準位置。 || background-origin: border-box;
+CSS背景と色 || background-blend-mode || 背景の合成。 || background-blend-mode: multiply;
+CSS背景と色 || linear-gradient() || 直線のグラデーション。 || linear-gradient(90deg, red, blue)
+CSS背景と色 || radial-gradient() || 円形のグラデーション。 || radial-gradient(circle, red, blue)
+CSS背景と色 || conic-gradient() || 円錐形のグラデーション。 || conic-gradient(red, blue)
+CSS背景と色 || repeating-linear-gradient() || 繰り返しのグラデーション。 || repeating-linear-gradient(45deg, #000 0 10px, #fff 10px 20px)
+CSS背景と色 || rgb() / rgba() || 赤緑青で色を指定。 || rgb(255 0 0 / 50%)
+CSS背景と色 || hsl() / hsla() || 色相・彩度・明度で指定。 || hsl(200 80% 50%)
+CSS背景と色 || hwb() || 色相・白・黒で指定。 || hwb(200 20% 10%)
+CSS背景と色 || lab() / lch() || 知覚に近い色空間。 || lch(50% 40 200)
+CSS背景と色 || oklch() || 均一に近い色空間。 || oklch(70% .1 200)
+CSS背景と色 || color-mix() || 色を混ぜる。 || color-mix(in srgb, red 30%, blue)
+CSS背景と色 || color() || 色空間を指定する。 || color(display-p3 1 0 0)
+CSS背景と色 || 相対色構文 || 既存の色から導く。 || oklch(from red l c h)
+CSS背景と色 || currentColor || 現在の文字色。 || border-color: currentColor;
+CSS背景と色 || transparent || 透明色。 || background: transparent;
+CSS背景と色 || 16進カラー || # で指定する色。 || #ff8800
+CSS背景と色 || 名前つきカラー || 色の名前。 || tomato
+CSS背景と色 || color-scheme || 明暗の対応を宣言する。 || color-scheme: light dark;
+CSS背景と色 || light-dark() || 明暗で値を切り替える。 || light-dark(#000, #fff)
+CSS背景と色 || forced-colors || 強制カラーモード。 || @media (forced-colors: active)
+CSS背景と色 || prefers-color-scheme || 利用者の明暗の設定。 || @media (prefers-color-scheme: dark)
+CSS背景と色 || prefers-reduced-motion || 動きの軽減の設定。 || @media (prefers-reduced-motion: reduce)
+CSS背景と色 || prefers-contrast || コントラストの設定。 || @media (prefers-contrast: more)
+CSSアニメーション || transition || 状態変化を滑らかにする。 || transition: all .3s ease;
+CSSアニメーション || transition-property || 対象のプロパティ。 || transition-property: opacity;
+CSSアニメーション || transition-duration || 所要時間。 || transition-duration: .3s;
+CSSアニメーション || transition-delay || 開始までの遅れ。 || transition-delay: .1s;
+CSSアニメーション || transition-timing-function || 変化の速度曲線。 || ease-in-out
+CSSアニメーション || transition-behavior || 離散値の遷移を許す。 || transition-behavior: allow-discrete;
+CSSアニメーション || animation || アニメーションの一括指定。 || animation: spin 1s infinite;
+CSSアニメーション || animation-name || キーフレームの名前。 || animation-name: fade;
+CSSアニメーション || animation-duration || 1回の長さ。 || animation-duration: 2s;
+CSSアニメーション || animation-iteration-count || 繰り返し回数。 || animation-iteration-count: infinite;
+CSSアニメーション || animation-direction || 再生の向き。 || animation-direction: alternate;
+CSSアニメーション || animation-fill-mode || 前後の状態の保持。 || animation-fill-mode: forwards;
+CSSアニメーション || animation-play-state || 再生・停止。 || animation-play-state: paused;
+CSSアニメーション || animation-delay || 開始までの遅れ。 || animation-delay: 1s;
+CSSアニメーション || animation-timing-function || 速度曲線。 || linear
+CSSアニメーション || animation-timeline || スクロールなどに連動させる。 || animation-timeline: scroll();
+CSSアニメーション || animation-composition || 重ねたときの合成。 || animation-composition: add;
+CSSアニメーション || @keyframes || アニメーションの途中状態を定義する。 || @keyframes fade { to { opacity: 0 } }
+CSSアニメーション || ease / ease-in / ease-out || 速度曲線の名前。 || ease-out
+CSSアニメーション || cubic-bezier() || 速度曲線を自分で決める。 || cubic-bezier(.4, 0, .2, 1)
+CSSアニメーション || steps() || 段階的に変化させる。 || steps(4)
+CSSアニメーション || linear() || 折れ線で速度を決める。 || linear(0, .5, 1)
+CSSアニメーション || scroll() || スクロール位置に連動する。 || animation-timeline: scroll(root)
+CSSアニメーション || view() || 表示位置に連動する。 || animation-timeline: view()
+CSSアニメーション || View Transitions || 画面遷移を滑らかにする。 || document.startViewTransition()
+CSSアニメーション || view-transition-name || 遷移で対応づける名前。 || view-transition-name: hero;
+CSSアニメーション || @starting-style || 出現時の開始状態。 || @starting-style { opacity: 0 }
+CSSアニメーション || @property || カスタムプロパティの型を宣言する。 || @property --x { syntax: '<length>' }
+CSSアニメーション || offset-path || 経路に沿って動かす。 || offset-path: path('M0 0 L100 100');
+CSSアニメーション || Web Animations API || JavaScript でアニメーションする。 || el.animate(keyframes, options)
+CSS関数と単位 || px || 画面の点の単位。 || 16px
+CSS関数と単位 || em || 親の文字サイズに対する倍率。 || 1.5em
+CSS関数と単位 || rem || ルートの文字サイズに対する倍率。 || 1rem
+CSS関数と単位 || % || 親に対する割合。 || width: 50%
+CSS関数と単位 || vw / vh || 画面の幅・高さの割合。 || 100vh
+CSS関数と単位 || dvh / svh / lvh || 動的・最小・最大の画面高さ。 || 100dvh
+CSS関数と単位 || vmin / vmax || 短辺・長辺の割合。 || 50vmin
+CSS関数と単位 || ch || 「0」の幅。 || max-width: 60ch
+CSS関数と単位 || ex || x の高さ。 || 1ex
+CSS関数と単位 || lh / rlh || 行の高さの単位。 || 1lh
+CSS関数と単位 || cqw / cqh || コンテナの幅・高さの割合。 || 50cqw
+CSS関数と単位 || pt / pc / cm / mm / in || 印刷向けの単位。 || 12pt
+CSS関数と単位 || deg / rad / turn || 角度の単位。 || 0.5turn
+CSS関数と単位 || s / ms || 時間の単位。 || 300ms
+CSS関数と単位 || dpi / dppx || 解像度の単位。 || 2dppx
+CSS関数と単位 || calc() || 計算する。 || calc(100% - 20px)
+CSS関数と単位 || min() / max() || 小さい・大きい方。 || min(100%, 600px)
+CSS関数と単位 || clamp() || 範囲内に収める。 || clamp(1rem, 2vw, 2rem)
+CSS関数と単位 || var() || カスタムプロパティを使う。 || var(--main, blue)
+CSS関数と単位 || env() || 環境の値（安全領域など）。 || env(safe-area-inset-top)
+CSS関数と単位 || attr() || 属性の値を取り出す。 || content: attr(data-label);
+CSS関数と単位 || url() || ファイルの場所。 || url("a.png")
+CSS関数と単位 || image-set() || 解像度ごとの画像。 || image-set("a.png" 1x, "b.png" 2x)
+CSS関数と単位 || round() / mod() / rem() || 丸め・剰余の関数。 || round(up, 10px, 4px)
+CSS関数と単位 || sin() / cos() / tan() || 三角関数。 || sin(30deg)
+CSS関数と単位 || pow() / sqrt() / hypot() || 数学の関数。 || sqrt(16)
+CSS関数と単位 || abs() / sign() || 絶対値・符号。 || abs(-5px)
+CSS関数と単位 || カスタムプロパティ || -- で始まる変数。 || --main: #09f;
+CSS関数と単位 || :root || 文書の根の要素。 || :root { --a: 1 }
+CSS関数と単位 || !important || 優先度を最大にする。 || color: red !important;
+CSS関数と単位 || initial / inherit / unset || 値のリセット。 || color: inherit;
+CSS関数と単位 || revert / revert-layer || 元の値に戻す。 || all: revert-layer;
+CSS関数と単位 || all || すべてのプロパティを指定する。 || all: unset;
+CSS関数と単位 || 詳細度 || セレクタの優先順位。 || ID > クラス > 要素
+CSS関数と単位 || カスケード || 複数の規則から値を決める仕組み。 || cascade
+CSS関数と単位 || 継承 || 親の値を引き継ぐ。 || inheritance
+CSS関数と単位 || @layer || 優先順位の層。 || @layer base, components;
+CSS関数と単位 || @scope || 適用範囲を限定する。 || @scope (.card) { ... }
+CSS関数と単位 || @import || 別の CSS を読み込む。 || @import url("a.css");
+CSS関数と単位 || @charset || 文字コードを宣言する。 || @charset "UTF-8";
+CSS関数と単位 || @font-face || Web フォントを定義する。 || @font-face { font-family: X; src: url(x.woff2) }
+CSS関数と単位 || unicode-range || フォントを使う文字の範囲。 || unicode-range: U+3000-30FF;
+CSS関数と単位 || @supports || 機能の対応で切り替える。 || @supports (display: grid)
+CSS関数と単位 || @media || 条件で切り替える。 || @media (min-width: 768px)
+CSS関数と単位 || @container || コンテナの大きさで切り替える。 || @container (min-width: 400px)
+CSS関数と単位 || container-type || コンテナとして扱う。 || container-type: inline-size;
+CSS関数と単位 || container-name || コンテナの名前。 || container-name: card;
+CSS関数と単位 || @page || 印刷のページ設定。 || @page { size: A4; margin: 1cm }
+CSS関数と単位 || @namespace || 名前空間の宣言。 || @namespace svg url(...);
+CSS関数と単位 || @counter-style || 独自の連番を定義する。 || @counter-style thumbs
+CSS関数と単位 || @font-palette-values || フォントのパレットを定義する。 || @font-palette-values
+CSS関数と単位 || @position-try || アンカー配置の代替。 || @position-try --a
+CSS関数と単位 || アンカー配置 || 別の要素を基準に置く。 || anchor-name: --a;
+CSS関数と単位 || @media print || 印刷時のスタイル。 || @media print
+CSS関数と単位 || @media (hover) || ホバーできる環境。 || @media (hover: hover)
+CSS関数と単位 || @media (pointer) || ポインターの精度。 || @media (pointer: coarse)
+CSS関数と単位 || orientation || 縦横の向き。 || @media (orientation: landscape)
+CSS関数と単位 || min-resolution || 解像度の条件。 || @media (min-resolution: 2dppx)
+CSS関数と単位 || メディアクエリ範囲構文 || 比較演算子で書く。 || @media (400px <= width <= 800px)
+CSS関数と単位 || CSS ネスト || 規則を入れ子で書く。 || .a { & .b { ... } }
+CSS関数と単位 || & (ネストセレクタ) || 親のセレクタを指す。 || &:hover
+CSSセレクタ || * (全称セレクタ) || すべての要素。 || * { box-sizing: border-box }
+CSSセレクタ || 要素セレクタ || タグ名で選ぶ。 || p { }
+CSSセレクタ || クラスセレクタ || クラスで選ぶ。 || .card { }
+CSSセレクタ || 子孫セレクタ || 内側のすべて。 || div p
+CSSセレクタ || 子セレクタ (>) || 直下の子。 || ul > li
+CSSセレクタ || 隣接兄弟セレクタ (+) || すぐ後ろの兄弟。 || h1 + p
+CSSセレクタ || 一般兄弟セレクタ (~) || 後ろのすべての兄弟。 || h1 ~ p
+CSSセレクタ || グループ化 (,) || 複数をまとめる。 || h1, h2 { }
+CSSセレクタ || [attr] || 属性があるもの。 || [disabled]
+CSSセレクタ || [attr=value] || 属性が一致するもの。 || [type="text"]
+CSSセレクタ || [attr^=value] || 前方一致。 || [href^="https"]
+CSSセレクタ || [attr$=value] || 後方一致。 || [href$=".pdf"]
+CSSセレクタ || [attr*=value] || 部分一致。 || [class*="col-"]
+CSSセレクタ || [attr~=value] || 単語として含む。 || [class~="on"]
+CSSセレクタ || [attr|=value] || ハイフン区切りの先頭。 || [lang|="en"]
+CSSセレクタ || [attr=value i] || 大文字小文字を無視する。 || [type="TEXT" i]
+CSSセレクタ || :hover || マウスが乗っている。 || a:hover
+CSSセレクタ || :active || 押している間。 || button:active
+CSSセレクタ || :focus || フォーカス中。 || input:focus
+CSSセレクタ || :focus-visible || キーボードでのフォーカス。 || :focus-visible
+CSSセレクタ || :focus-within || 内側にフォーカスがある。 || form:focus-within
+CSSセレクタ || :visited / :link || 訪問済み・未訪問のリンク。 || a:visited
+CSSセレクタ || :any-link || リンクである要素。 || :any-link
+CSSセレクタ || :target || URL の # が指す要素。 || :target
+CSSセレクタ || :checked || チェックされている。 || input:checked
+CSSセレクタ || :disabled / :enabled || 無効・有効。 || input:disabled
+CSSセレクタ || :required / :optional || 必須・任意。 || input:required
+CSSセレクタ || :read-only / :read-write || 編集できない・できる。 || :read-only
+CSSセレクタ || :valid / :invalid || 入力の検証結果。 || input:invalid
+CSSセレクタ || :in-range / :out-of-range || 範囲内・外。 || :out-of-range
+CSSセレクタ || :placeholder-shown || プレースホルダー表示中。 || :placeholder-shown
+CSSセレクタ || :indeterminate || 不確定の状態。 || :indeterminate
+CSSセレクタ || :default || 既定の選択。 || :default
+CSSセレクタ || :user-invalid || 操作後に不正な入力。 || :user-invalid
+CSSセレクタ || :first-child / :last-child || 最初・最後の子。 || li:first-child
+CSSセレクタ || :only-child || 唯一の子。 || :only-child
+CSSセレクタ || :nth-child() || n 番目の子。 || li:nth-child(odd)
+CSSセレクタ || :nth-last-child() || 後ろから n 番目。 || li:nth-last-child(2)
+CSSセレクタ || :nth-of-type() || 同じ種類の n 番目。 || p:nth-of-type(2)
+CSSセレクタ || :first-of-type / :last-of-type || 同じ種類の最初・最後。 || p:first-of-type
+CSSセレクタ || :only-of-type || 同じ種類で唯一。 || :only-of-type
+CSSセレクタ || :empty || 中身が空。 || p:empty
+CSSセレクタ || :not() || 否定。 || :not(.a)
+CSSセレクタ || :is() || いずれかに一致。 || :is(h1, h2)
+CSSセレクタ || :where() || 詳細度 0 でまとめる。 || :where(h1, h2)
+CSSセレクタ || :has() || 子や後続を条件にする。 || a:has(img)
+CSSセレクタ || :root || 文書の根。 || :root
+CSSセレクタ || :lang() || 言語で選ぶ。 || :lang(ja)
+CSSセレクタ || :dir() || 文字の向きで選ぶ。 || :dir(rtl)
+CSSセレクタ || :fullscreen || 全画面表示中。 || :fullscreen
+CSSセレクタ || :modal || モーダル表示中。 || dialog:modal
+CSSセレクタ || :popover-open || ポップオーバー表示中。 || :popover-open
+CSSセレクタ || :open || 開いている状態。 || details:open
+CSSセレクタ || :playing / :paused || 再生中・停止中。 || video:playing
+CSSセレクタ || :defined || 定義済みの要素。 || :defined
+CSSセレクタ || :host / :host() || シャドウホスト。 || :host
+CSSセレクタ || :host-context() || ホストの外の文脈。 || :host-context(.dark)
+CSSセレクタ || ::before / ::after || 前後に内容を足す。 || ::before { content: "★" }
+CSSセレクタ || ::first-line || 最初の行。 || p::first-line
+CSSセレクタ || ::first-letter || 最初の文字。 || p::first-letter
+CSSセレクタ || ::selection || 選択範囲。 || ::selection { background: yellow }
+CSSセレクタ || ::placeholder || プレースホルダー。 || input::placeholder
+CSSセレクタ || ::marker || リストの印。 || li::marker
+CSSセレクタ || ::backdrop || ダイアログの背面。 || dialog::backdrop
+CSSセレクタ || ::file-selector-button || ファイル選択のボタン。 || input::file-selector-button
+CSSセレクタ || ::cue || 字幕。 || ::cue
+CSSセレクタ || ::part() || シャドウ内の部品。 || x-a::part(label)
+CSSセレクタ || ::slotted() || スロットの内容。 || ::slotted(p)
+CSSセレクタ || ::highlight() || ハイライト範囲。 || ::highlight(search)
+CSSセレクタ || ::view-transition-* || 遷移の疑似要素。 || ::view-transition-old(root)
+CSSセレクタ || ::scroll-marker || スクロールの目印。 || ::scroll-marker
+CSSセレクタ || ::details-content || details の内容部分。 || ::details-content
+CSS設計 || BEM || ブロック・要素・修飾子の命名。 || .card__title--big
+CSS設計 || OOCSS || オブジェクト指向の CSS。 || OOCSS
+CSS設計 || SMACSS || 分類で整理する設計。 || SMACSS
+CSS設計 || ITCSS || 詳細度の順に層を作る。 || ITCSS
+CSS設計 || FLOCSS || 日本発の設計指針。 || FLOCSS
+CSS設計 || CSS Modules || ファイルごとに名前を閉じる。 || styles.title
+CSS設計 || CSS-in-JS || JS の中でスタイルを書く。 || styled-components
+CSS設計 || Tailwind CSS || ユーティリティ指向のフレームワーク。 || class="p-4 flex"
+CSS設計 || Bootstrap || 広く使われる UI フレームワーク。 || class="btn btn-primary"
+CSS設計 || Sass / SCSS || CSS を拡張した言語。 || $color: red;
+CSS設計 || Less || CSS 拡張言語。 || @color: red;
+CSS設計 || PostCSS || CSS を変換するツール。 || postcss.config.js
+CSS設計 || Autoprefixer || ベンダー接頭辞を自動付与する。 || autoprefixer
+CSS設計 || ベンダープレフィックス || ブラウザ固有の接頭辞。 || -webkit-
+CSS設計 || リセット CSS || 既定の見た目を揃える。 || reset.css
+CSS設計 || Normalize.css || 差を整える CSS。 || normalize.css
+CSS設計 || モバイルファースト || 小さい画面から設計する。 || min-width
+CSS設計 || レスポンシブデザイン || 画面に合わせて変化する。 || responsive
+CSS設計 || ブレークポイント || レイアウトを切り替える幅。 || 768px
+CSS設計 || フルードタイポグラフィ || 画面幅に応じた文字サイズ。 || clamp()
+CSS設計 || ダークモード対応 || 暗い配色に対応する。 || prefers-color-scheme
+CSS設計 || 印刷用 CSS || 印刷時の体裁。 || @media print
+CSS設計 || クリティカル CSS || 初期表示に必要な CSS。 || inline style
+CSS設計 || CSS 最適化 || 不要な規則を減らす。 || purge
+CSS設計 || レイアウトシフト (CLS) || 表示中のずれ。 || width と height を指定
+CSS設計 || 中央揃え || 要素を中央に置く方法。 || display:grid; place-items:center;
+CSS設計 || 等高カラム || 高さの揃った列。 || display:flex
+CSS設計 || スティッキーフッター || 内容が少なくても下に置く。 || min-height: 100vh
+CSS設計 || 疑似要素の装飾 || 飾りを CSS で足す。 || ::before
+CSS設計 || ハンバーガーメニュー || 3本線のメニュー。 || checkbox hack
+CSS設計 || スケルトン表示 || 読み込み中の枠。 || animation: pulse
+CSS設計 || テキストの省略表示 || 長い文字を ... にする。 || text-overflow: ellipsis
+CSS設計 || 画像の比率維持 || 縦横比を保つ。 || aspect-ratio
+CSS設計 || カードレイアウト || 枠で情報をまとめる。 || grid + gap
