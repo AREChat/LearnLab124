@@ -2079,10 +2079,10 @@ var Python_verybasic =
     "difficulty": "basic"
   },
   {
-    "question_text": "my_dict という辞書に `{'name': 'Bob'}` というデータが入っています。 `'name'` というキーを使って、値である `'Bob'` を取り出したいとき、正しい書き方はどれですか？",
+    "question_text": "my_dict という辞書に `{'name': 'Momo'}` というデータが入っています。 `'name'` というキーを使って、値である `'Momo'` を取り出したいとき、正しい書き方はどれですか？",
     "choice_a": "my_dict('name')",
     "choice_b": "my_dict['name']",
-    "choice_c": "my_dict.get('Bob')",
+    "choice_c": "my_dict.get('Momo')",
     "choice_d": "my_dict{'name'}",
     "correct_answer": "b",
     "explanation": "辞書では、キーを角括弧 `[]` の中に指定することで、それに対応する値を取り出すことができます。",
@@ -2482,7 +2482,7 @@ var Python_verybasic =
     "difficulty": "basic"
   },
   {
-    "question_text": "関数を呼び出すとき、`func(name=\"Taro\", age=20)`のように、引数の名前を指定して値を渡す方法を何と呼びますか？",
+    "question_text": "関数を呼び出すとき、`func(name=\"Pico\", age=20)`のように、引数の名前を指定して値を渡す方法を何と呼びますか？",
     "choice_a": "位置引数",
     "choice_b": "キーワード引数",
     "choice_c": "あだ名引数",
@@ -3343,11 +3343,11 @@ var Python_verybasic =
     "difficulty": "basic"
   },
   {
-    "question_text": "辞書 `my_dict` に、`'name'` というキーで `'Taro'` という値を追加する正しい書き方はどれですか？",
-    "choice_a": "my_dict.add('name', 'Taro')",
-    "choice_b": "my_dict['name'] = 'Taro'",
-    "choice_c": "my_dict.append('name': 'Taro')",
-    "choice_d": "my_dict.put('name', 'Taro')",
+    "question_text": "辞書 `my_dict` に、`'name'` というキーで `'Pico'` という値を追加する正しい書き方はどれですか？",
+    "choice_a": "my_dict.add('name', 'Pico')",
+    "choice_b": "my_dict['name'] = 'Pico'",
+    "choice_c": "my_dict.append('name': 'Pico')",
+    "choice_d": "my_dict.put('name', 'Pico')",
     "correct_answer": "b",
     "explanation": "辞書では `辞書[キー] = 値` という書き方で、新しいキーと値のペアを追加したり、既にあるキーの値を更新したりできます。",
     "category": "辞書操作",
@@ -4220,12 +4220,12 @@ var Python_veryhard =
   },
   {
     "question_text": "オブジェクトの属性に、属性名を文字列で指定して新しい値を設定（代入）する組み込み関数はどれですか？",
-    "choice_a": "getattr(obj, 'name', 'Taro')",
-    "choice_b": "hasattr(obj, 'name', 'Taro')",
-    "choice_c": "setattr(obj, 'name', 'Taro')",
-    "choice_d": "writeattr(obj, 'name', 'Taro')",
+    "choice_a": "getattr(obj, 'name', 'Pico')",
+    "choice_b": "hasattr(obj, 'name', 'Pico')",
+    "choice_c": "setattr(obj, 'name', 'Pico')",
+    "choice_d": "writeattr(obj, 'name', 'Pico')",
     "correct_answer": "c",
-    "explanation": "`setattr`は「set attribute（属性を設定する）」の略です。`obj.name = 'Taro'`と書くのと同じ意味になります。",
+    "explanation": "`setattr`は「set attribute（属性を設定する）」の略です。`obj.name = 'Pico'`と書くのと同じ意味になります。",
     "category": "Python (組み込み関数)",
     "difficulty": "basic"
   },
@@ -6333,10 +6333,10 @@ var Python_veryrandom =
     "difficulty": "basic"
   },
   {
-    "question_text": "my_dict という辞書に `{'name': 'Bob'}` というデータが入っています。 `'name'` というキーを使って、値である `'Bob'` を取り出したいとき、正しい書き方はどれですか？",
+    "question_text": "my_dict という辞書に `{'name': 'Momo'}` というデータが入っています。 `'name'` というキーを使って、値である `'Momo'` を取り出したいとき、正しい書き方はどれですか？",
     "choice_a": "my_dict('name')",
     "choice_b": "my_dict['name']",
-    "choice_c": "my_dict.get('Bob')",
+    "choice_c": "my_dict.get('Momo')",
     "choice_d": "my_dict{'name'}",
     "correct_answer": "b",
     "explanation": "辞書では、キーを角括弧 `[]` の中に指定することで、それに対応する値を取り出すことができます。",
@@ -6736,7 +6736,7 @@ var Python_veryrandom =
     "difficulty": "basic"
   },
   {
-    "question_text": "関数を呼び出すとき、`func(name=\"Taro\", age=20)`のように、引数の名前を指定して値を渡す方法を何と呼びますか？",
+    "question_text": "関数を呼び出すとき、`func(name=\"Pico\", age=20)`のように、引数の名前を指定して値を渡す方法を何と呼びますか？",
     "choice_a": "位置引数",
     "choice_b": "キーワード引数",
     "choice_c": "あだ名引数",
@@ -7597,11 +7597,11 @@ var Python_veryrandom =
     "difficulty": "basic"
   },
   {
-    "question_text": "辞書 `my_dict` に、`'name'` というキーで `'Taro'` という値を追加する正しい書き方はどれですか？",
-    "choice_a": "my_dict.add('name', 'Taro')",
-    "choice_b": "my_dict['name'] = 'Taro'",
-    "choice_c": "my_dict.append('name': 'Taro')",
-    "choice_d": "my_dict.put('name', 'Taro')",
+    "question_text": "辞書 `my_dict` に、`'name'` というキーで `'Pico'` という値を追加する正しい書き方はどれですか？",
+    "choice_a": "my_dict.add('name', 'Pico')",
+    "choice_b": "my_dict['name'] = 'Pico'",
+    "choice_c": "my_dict.append('name': 'Pico')",
+    "choice_d": "my_dict.put('name', 'Pico')",
     "correct_answer": "b",
     "explanation": "辞書では `辞書[キー] = 値` という書き方で、新しいキーと値のペアを追加したり、既にあるキーの値を更新したりできます。",
     "category": "辞書操作",
@@ -8472,12 +8472,12 @@ var Python_veryrandom =
   },
   {
     "question_text": "オブジェクトの属性に、属性名を文字列で指定して新しい値を設定（代入）する組み込み関数はどれですか？",
-    "choice_a": "getattr(obj, 'name', 'Taro')",
-    "choice_b": "hasattr(obj, 'name', 'Taro')",
-    "choice_c": "setattr(obj, 'name', 'Taro')",
-    "choice_d": "writeattr(obj, 'name', 'Taro')",
+    "choice_a": "getattr(obj, 'name', 'Pico')",
+    "choice_b": "hasattr(obj, 'name', 'Pico')",
+    "choice_c": "setattr(obj, 'name', 'Pico')",
+    "choice_d": "writeattr(obj, 'name', 'Pico')",
     "correct_answer": "c",
-    "explanation": "`setattr`は「set attribute（属性を設定する）」の略です。`obj.name = 'Taro'`と書くのと同じ意味になります。",
+    "explanation": "`setattr`は「set attribute（属性を設定する）」の略です。`obj.name = 'Pico'`と書くのと同じ意味になります。",
     "category": "Python (組み込み関数)",
     "difficulty": "basic"
   },
@@ -9094,7 +9094,7 @@ var Python_easy =
     "difficulty": "easy"
   },
   {
-    "question_text": "`self.name = 'Taro'` のように、インスタンスに保存される変数を「インスタンス変数」と呼びますか？",
+    "question_text": "`self.name = 'Pico'` のように、インスタンスに保存される変数を「インスタンス変数」と呼びますか？",
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
@@ -9233,7 +9233,7 @@ var Python_easy =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "`user = User('Taro')` のように引数を渡すと、`__init__(self, name)` の `name` 引数に値が渡され、インスタンスの初期化に使えます。",
+    "explanation": "`user = User('Pico')` のように引数を渡すと、`__init__(self, name)` の `name` 引数に値が渡され、インスタンスの初期化に使えます。",
     "category": "クラス",
     "difficulty": "easy"
   },
@@ -9649,7 +9649,7 @@ var Python_easy =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "辞書は `{'name': 'Taro', 'age': 20}` のように、特定のキーに対応する値を格納するデータ構造です。",
+    "explanation": "辞書は `{'name': 'Pico', 'age': 20}` のように、特定のキーに対応する値を格納するデータ構造です。",
     "category": "辞書",
     "difficulty": "easy"
   },
@@ -9856,7 +9856,7 @@ var Python_easy =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "異なるキーが同じ値を持つことは全く問題ありません。例えば `{'Taro': 20, 'Jiro': 20}` のように、値 `20` は重複できます。",
+    "explanation": "異なるキーが同じ値を持つことは全く問題ありません。例えば `{'Pico': 20, 'Jiro': 20}` のように、値 `20` は重複できます。",
     "category": "辞書",
     "difficulty": "easy"
   }
@@ -15938,7 +15938,7 @@ var Python_Basic =
     "difficulty": "basic"
   },
   {
-    "question_text": "関数を呼び出す際に、`my_func(name='Taro', age=20)` のように引数名を指定して値を渡す方法を何と呼びますか？",
+    "question_text": "関数を呼び出す際に、`my_func(name='Pico', age=20)` のように引数名を指定して値を渡す方法を何と呼びますか？",
     "choice_a": "位置引数",
     "choice_b": "キーワード引数",
     "choice_c": "名前付き引数",
@@ -17129,7 +17129,7 @@ var Python_Basic =
     "difficulty": "basic"
   },
   {
-    "question_text": "変数 `name = 'Alice'` を文字列に埋め込むためのf-string（フォーマット済み文字列リテラル）の正しい構文はどれですか？",
+    "question_text": "変数 `name = 'Lumi'` を文字列に埋め込むためのf-string（フォーマット済み文字列リテラル）の正しい構文はどれですか？",
     "choice_a": "f'Hello, {name}'",
     "choice_b": "'Hello, %s' % name",
     "choice_c": "'Hello, {}'.format(name)",
@@ -24263,7 +24263,7 @@ var Python_hard =
     "difficulty": "hard"
   },
   {
-    "question_text": "`'My name is {}.'.format('Taro')` のように、文字列に値を埋め込むためのメソッドは ( A ) です。",
+    "question_text": "`'My name is {}.'.format('Pico')` のように、文字列に値を埋め込むためのメソッドは ( A ) です。",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -24936,7 +24936,7 @@ var Python_hard =
     "difficulty": "hard"
   },
   {
-    "question_text": "関数呼び出しの際に `my_func(name='Taro')` のように引数名を指定して値を渡す引数を ( A ) と呼びます。",
+    "question_text": "関数呼び出しの際に `my_func(name='Pico')` のように引数名を指定して値を渡す引数を ( A ) と呼びます。",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -29751,7 +29751,7 @@ var Python =
     "difficulty": "easy"
   },
   {
-    "question_text": "`self.name = 'Taro'` のように、インスタンスに保存される変数を「インスタンス変数」と呼びますか？",
+    "question_text": "`self.name = 'Pico'` のように、インスタンスに保存される変数を「インスタンス変数」と呼びますか？",
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
@@ -29890,7 +29890,7 @@ var Python =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "`user = User('Taro')` のように引数を渡すと、`__init__(self, name)` の `name` 引数に値が渡され、インスタンスの初期化に使えます。",
+    "explanation": "`user = User('Pico')` のように引数を渡すと、`__init__(self, name)` の `name` 引数に値が渡され、インスタンスの初期化に使えます。",
     "category": "クラス",
     "difficulty": "easy"
   },
@@ -30306,7 +30306,7 @@ var Python =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "辞書は `{'name': 'Taro', 'age': 20}` のように、特定のキーに対応する値を格納するデータ構造です。",
+    "explanation": "辞書は `{'name': 'Pico', 'age': 20}` のように、特定のキーに対応する値を格納するデータ構造です。",
     "category": "辞書",
     "difficulty": "easy"
   },
@@ -30513,7 +30513,7 @@ var Python =
     "choice_a": "yes",
     "choice_b": "no",
     "correct_answer": "a",
-    "explanation": "異なるキーが同じ値を持つことは全く問題ありません。例えば `{'Taro': 20, 'Jiro': 20}` のように、値 `20` は重複できます。",
+    "explanation": "異なるキーが同じ値を持つことは全く問題ありません。例えば `{'Pico': 20, 'Jiro': 20}` のように、値 `20` は重複できます。",
     "category": "辞書",
     "difficulty": "easy"
   }
@@ -31753,7 +31753,7 @@ var Python =
     "difficulty": "basic"
   },
   {
-    "question_text": "関数を呼び出す際に、`my_func(name='Taro', age=20)` のように引数名を指定して値を渡す方法を何と呼びますか？",
+    "question_text": "関数を呼び出す際に、`my_func(name='Pico', age=20)` のように引数名を指定して値を渡す方法を何と呼びますか？",
     "choice_a": "位置引数",
     "choice_b": "キーワード引数",
     "choice_c": "名前付き引数",
@@ -33020,7 +33020,7 @@ var Python =
     "difficulty": "hard"
   },
   {
-    "question_text": "`'My name is {}.'.format('Taro')` のように、文字列に値を埋め込むためのメソッドは ( A ) です。",
+    "question_text": "`'My name is {}.'.format('Pico')` のように、文字列に値を埋め込むためのメソッドは ( A ) です。",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -33693,7 +33693,7 @@ var Python =
     "difficulty": "hard"
   },
   {
-    "question_text": "関数呼び出しの際に `my_func(name='Taro')` のように引数名を指定して値を渡す引数を ( A ) と呼びます。",
+    "question_text": "関数呼び出しの際に `my_func(name='Pico')` のように引数名を指定して値を渡す引数を ( A ) と呼びます。",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -39346,7 +39346,7 @@ var Python =
     "difficulty": "basic"
   },
   {
-    "question_text": "変数 `name = 'Alice'` を文字列に埋め込むためのf-string（フォーマット済み文字列リテラル）の正しい構文はどれですか？",
+    "question_text": "変数 `name = 'Lumi'` を文字列に埋め込むためのf-string（フォーマット済み文字列リテラル）の正しい構文はどれですか？",
     "choice_a": "f'Hello, {name}'",
     "choice_b": "'Hello, %s' % name",
     "choice_c": "'Hello, {}'.format(name)",
@@ -50330,13 +50330,13 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "`name` 列が `'Taro'` で始まるすべてのユーザーを検索するための `LIKE` 演算子のパターンはどれですか？",
-        "choice_a": "LIKE 'Taro_'",
-        "choice_b": "LIKE '%Taro'",
-        "choice_c": "LIKE 'Taro%'",
-        "choice_d": "LIKE '_Taro_'",
+        "question_text": "`name` 列が `'Pico'` で始まるすべてのユーザーを検索するための `LIKE` 演算子のパターンはどれですか？",
+        "choice_a": "LIKE 'Pico_'",
+        "choice_b": "LIKE '%Pico'",
+        "choice_c": "LIKE 'Pico%'",
+        "choice_d": "LIKE '_Pico_'",
         "correct_answer": "c",
-        "explanation": "ワイルドカード `%` は0文字以上の任意の文字列にマッチするため、`'Taro%'` は `'Taro'` で始まるすべての文字列にマッチします。",
+        "explanation": "ワイルドカード `%` は0文字以上の任意の文字列にマッチするため、`'Pico%'` は `'Pico'` で始まるすべての文字列にマッチします。",
         "category": "DQL",
         "difficulty": "basic"
     },
@@ -51228,7 +51228,7 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "`UPDATE users SET name = 'Taro', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
+        "question_text": "`UPDATE users SET name = 'Pico', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -51237,7 +51237,7 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Taro'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
+        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Pico'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -51809,7 +51809,7 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "`UPDATE users SET name = 'Taro', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
+        "question_text": "`UPDATE users SET name = 'Pico', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -51818,7 +51818,7 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Taro'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
+        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Pico'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -52967,7 +52967,7 @@ var SQL_Basic =
         "difficulty": "intermediate"
     },
     {
-        "question_text": "私は探偵。名前に「木」という文字が含まれる人を探しています。「鈴木」「木村」「佐々木」さんを見つけたい場合、`=`ではなく、どんな演算子を使えば良いでしょう？",
+        "question_text": "私は探偵。名前に「木」という文字が含まれる人を探しています。「もり木」「木のこ」「ささ木」さんを見つけたい場合、`=`ではなく、どんな演算子を使えば良いでしょう？",
         "choice_a": "MATCH",
         "choice_b": "LIKE",
         "choice_c": "CONTAINS",
@@ -53077,13 +53077,13 @@ var SQL_Basic =
         "difficulty": "basic"
     },
     {
-        "question_text": "私は選挙の投票管理者。東京、大阪、福岡のいずれかに住んでいる有権者をリストアップしたいです。この「リストのいずれかに一致」という条件に最適な演算子は何でしょう？",
+        "question_text": "私は選挙の投票管理者。あおぞら、ひかり、はなぞののいずれかに住んでいる有権者をリストアップしたいです。この「リストのいずれかに一致」という条件に最適な演算子は何でしょう？",
         "choice_a": "OR",
         "choice_b": "IN",
         "choice_c": "ANY",
         "choice_d": "MATCH",
         "correct_answer": "b",
-        "explanation": "`IN`演算子は、指定した値のリストの中に一致するものがある行を検索します。`WHERE City = '東京' OR City = '大阪' ...`と書くよりも簡潔です。",
+        "explanation": "`IN`演算子は、指定した値のリストの中に一致するものがある行を検索します。`WHERE City = 'あおぞら' OR City = 'ひかり' ...`と書くよりも簡潔です。",
         "category": "DQL",
         "difficulty": "basic"
     },
@@ -55149,7 +55149,7 @@ var SQL_easy =
         "difficulty": "easy"
     },
     {
-        "question_text": "ボブはユーザーテーブルから自分の情報だけを取得できます。これはDCL（データ制御言語）によって実現されています。",
+        "question_text": "ミミはユーザーテーブルから自分の情報だけを取得できます。これはDCL（データ制御言語）によって実現されています。",
         "choice_a": "YES",
         "choice_b": "NO",
         "correct_answer": "a",
@@ -56906,7 +56906,7 @@ var SQL_easy =
         "difficulty": "easy"
     },
     {
-        "question_text": "鈴木さんの電話番号を更新するため、私は`UPDATE 社員 SET 電話番号 = '新しい番号' WHERE 名前 = '鈴木';`と命令しました。もし`WHERE`句を書き忘れたら、鈴木さんだけが更新されますか？",
+        "question_text": "もり木さんの電話番号を更新するため、私は`UPDATE 社員 SET 電話番号 = '新しい番号' WHERE 名前 = 'もり木';`と命令しました。もし`WHERE`句を書き忘れたら、もり木さんだけが更新されますか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "b",
@@ -57095,7 +57095,7 @@ var SQL_easy =
         "difficulty": "easy"
     },
     {
-        "question_text": "東京、神奈川、千葉に住む顧客を抽出したい。`WHERE 都道府県 IN ('東京', '神奈川', '千葉')`と書きました。`IN`はリストの中のいずれかの値と一致するかを調べる演算子ですか？",
+        "question_text": "あおぞら、ゆうやけ、にじに住む顧客を抽出したい。`WHERE 都道府県 IN ('あおぞら', 'ゆうやけ', 'にじ')`と書きました。`IN`はリストの中のいずれかの値と一致するかを調べる演算子ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -57347,7 +57347,7 @@ var SQL_easy =
         "difficulty": "easy"
     },
     {
-        "question_text": "`INSERT INTO users (id, name) VALUES (1, '田中'), (2, '佐藤');`のように、1つの`INSERT`文で複数行のデータを追加することはできますか？",
+        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'そらまめ'), (2, 'ぱんだ');`のように、1つの`INSERT`文で複数行のデータを追加することはできますか？",
         "choice_a": "できます",
         "choice_b": "できません",
         "correct_answer": "a",
@@ -57437,7 +57437,7 @@ var SQL_easy =
         "difficulty": "easy"
     },
     {
-        "question_text": "`WHERE句`で列の別名（エイリアス）を使うことはできますか？ 例えば、`SELECT name AS 名前 FROM users WHERE 名前 = '田中';` のように。",
+        "question_text": "`WHERE句`で列の別名（エイリアス）を使うことはできますか？ 例えば、`SELECT name AS 名前 FROM users WHERE 名前 = 'そらまめ';` のように。",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "b",
@@ -57499,7 +57499,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "テーブルに新しい行を追加するために使用する構文を完成させてください。\n`[ ] INTO users (id, name) VALUES (1, 'Taro');`",
+        "question_text": "テーブルに新しい行を追加するために使用する構文を完成させてください。\n`[ ] INTO users (id, name) VALUES (1, 'Pico');`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -58863,7 +58863,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "文字列 `'Taro'` の文字数を返す関数は何ですか？ `[ ]('Taro')`",
+        "question_text": "文字列 `'Pico'` の文字数を返す関数は何ですか？ `[ ]('Pico')`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -60102,7 +60102,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "【RPG風問題】プレイヤー名に `'ken'` という文字列を含むプレイヤー（例: `'Ken'`, `'Kenshi'`）を検索する `WHERE` 句を完成させてください。\n`WHERE name LIKE '%[ ]%';`",
+        "question_text": "【RPG風問題】プレイヤー名に `'kiro'` という文字列を含むプレイヤー（例: `'Kiro'`, `'Kirono'`）を検索する `WHERE` 句を完成させてください。\n`WHERE name LIKE '%[ ]%';`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -60278,7 +60278,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "【RPG風問題】`player_name` 列の `'Taro'` という値を `'Taro-dono'` に置換して表示する関数は何ですか？\n`SELECT [ ](player_name, 'Taro', 'Taro-dono') FROM players;`",
+        "question_text": "【RPG風問題】`player_name` 列の `'Pico'` という値を `'Pico-dono'` に置換して表示する関数は何ですか？\n`SELECT [ ](player_name, 'Pico', 'Pico-dono') FROM players;`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -60343,7 +60343,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "【探偵】容疑者リストの中から、「田中」という姓を持つ人物だけを絞り込みたい。この「絞り込み条件」を指定するための句は何でしょう？",
+        "question_text": "【探偵】容疑者リストの中から、「そらまめ」という姓を持つ人物だけを絞り込みたい。この「絞り込み条件」を指定するための句は何でしょう？",
         "correct_answer": "WHERE",
         "explanation": "`WHERE`句は、`SELECT`、`UPDATE`、`DELETE`文で、処理対象の行を特定の条件でフィルタリングするために使用します。",
         "category": "DQL",
@@ -60490,7 +60490,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "【選挙管理者】東京、大阪、福岡のいずれかに住んでいる有権者をリストアップしたい。複数の値をリストで指定して、そのいずれかに一致するかを調べる演算子は何ですか？",
+        "question_text": "【選挙管理者】あおぞら、ひかり、はなぞののいずれかに住んでいる有権者をリストアップしたい。複数の値をリストで指定して、そのいずれかに一致するかを調べる演算子は何ですか？",
         "correct_answer": "IN",
         "explanation": "`IN`演算子は、指定した値のリストの中に一致するものがある行を検索します。",
         "category": "DQL",
@@ -61205,7 +61205,7 @@ var SQL_hard =
         "difficulty": "hard"
     },
     {
-        "question_text": "【行から列へのピルエット】`PIVOT` の逆の操作で、`'東京', '大阪', '福岡'` のように列になっているデータを、`'都市名', '売上'` のような行形式に変換する操作を何と呼びますか？",
+        "question_text": "【行から列へのピルエット】`PIVOT` の逆の操作で、`'あおぞら', 'ひかり', 'はなぞの'` のように列になっているデータを、`'都市名', '売上'` のような行形式に変換する操作を何と呼びますか？",
         "correct_answer": "UNPIVOT",
         "explanation": "`UNPIVOT` 演算子は、複数の列を複数の行に変換し、クロス集計されたデータを正規化された形式に戻すのに役立ちます。",
         "category": "高度なSQL",
@@ -62830,7 +62830,7 @@ var SQL =
         "difficulty": "easy"
     },
     {
-        "question_text": "ボブはユーザーテーブルから自分の情報だけを取得できます。これはDCL（データ制御言語）によって実現されています。",
+        "question_text": "ミミはユーザーテーブルから自分の情報だけを取得できます。これはDCL（データ制御言語）によって実現されています。",
         "choice_a": "YES",
         "choice_b": "NO",
         "correct_answer": "YES",
@@ -64413,13 +64413,13 @@ var SQL =
         "difficulty": "basic"
     },
     {
-        "question_text": "`name` 列が `'Taro'` で始まるすべてのユーザーを検索するための `LIKE` 演算子のパターンはどれですか？",
-        "choice_a": "LIKE 'Taro_'",
-        "choice_b": "LIKE '%Taro'",
-        "choice_c": "LIKE 'Taro%'",
-        "choice_d": "LIKE '_Taro_'",
+        "question_text": "`name` 列が `'Pico'` で始まるすべてのユーザーを検索するための `LIKE` 演算子のパターンはどれですか？",
+        "choice_a": "LIKE 'Pico_'",
+        "choice_b": "LIKE '%Pico'",
+        "choice_c": "LIKE 'Pico%'",
+        "choice_d": "LIKE '_Pico_'",
         "correct_answer": "c",
-        "explanation": "ワイルドカード `%` は0文字以上の任意の文字列にマッチするため、`'Taro%'` は `'Taro'` で始まるすべての文字列にマッチします。",
+        "explanation": "ワイルドカード `%` は0文字以上の任意の文字列にマッチするため、`'Pico%'` は `'Pico'` で始まるすべての文字列にマッチします。",
         "category": "DQL",
         "difficulty": "basic"
     },
@@ -65311,7 +65311,7 @@ var SQL =
         "difficulty": "basic"
     },
     {
-        "question_text": "`UPDATE users SET name = 'Taro', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
+        "question_text": "`UPDATE users SET name = 'Pico', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -65320,7 +65320,7 @@ var SQL =
         "difficulty": "basic"
     },
     {
-        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Taro'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
+        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Pico'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -65892,7 +65892,7 @@ var SQL =
         "difficulty": "basic"
     },
     {
-        "question_text": "`UPDATE users SET name = 'Taro', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
+        "question_text": "`UPDATE users SET name = 'Pico', age = 30 WHERE id = 1` のように、`UPDATE` 文で複数の列を一度に更新することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -65901,7 +65901,7 @@ var SQL =
         "difficulty": "basic"
     },
     {
-        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Taro'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
+        "question_text": "`INSERT INTO users (id, name) VALUES (1, 'Pico'), (2, 'Jiro')` のように、`INSERT` 文で複数の行を一度に挿入することは可能ですか？",
         "choice_a": "はい",
         "choice_b": "いいえ",
         "correct_answer": "a",
@@ -66918,7 +66918,7 @@ var SQL =
         "difficulty": "hard"
     },
     {
-        "question_text": "テーブルに新しい行を追加するために使用する構文を完成させてください。\n`[ ] INTO users (id, name) VALUES (1, 'Taro');`",
+        "question_text": "テーブルに新しい行を追加するために使用する構文を完成させてください。\n`[ ] INTO users (id, name) VALUES (1, 'Pico');`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -68282,7 +68282,7 @@ var SQL =
         "difficulty": "hard"
     },
     {
-        "question_text": "文字列 `'Taro'` の文字数を返す関数は何ですか？ `[ ]('Taro')`",
+        "question_text": "文字列 `'Pico'` の文字数を返す関数は何ですか？ `[ ]('Pico')`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -69521,7 +69521,7 @@ var SQL =
         "difficulty": "hard"
     },
     {
-        "question_text": "【RPG風問題】プレイヤー名に `'ken'` という文字列を含むプレイヤー（例: `'Ken'`, `'Kenshi'`）を検索する `WHERE` 句を完成させてください。\n`WHERE name LIKE '%[ ]%';`",
+        "question_text": "【RPG風問題】プレイヤー名に `'kiro'` という文字列を含むプレイヤー（例: `'Kiro'`, `'Kirono'`）を検索する `WHERE` 句を完成させてください。\n`WHERE name LIKE '%[ ]%';`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -69697,7 +69697,7 @@ var SQL =
         "difficulty": "hard"
     },
     {
-        "question_text": "【RPG風問題】`player_name` 列の `'Taro'` という値を `'Taro-dono'` に置換して表示する関数は何ですか？\n`SELECT [ ](player_name, 'Taro', 'Taro-dono') FROM players;`",
+        "question_text": "【RPG風問題】`player_name` 列の `'Pico'` という値を `'Pico-dono'` に置換して表示する関数は何ですか？\n`SELECT [ ](player_name, 'Pico', 'Pico-dono') FROM players;`",
         "choice_a": "",
         "choice_b": "",
         "choice_c": "",
@@ -80236,7 +80236,7 @@ var WEB_hard =
     "difficulty": "hard"
   },
   {
-    "question_text": "文書や記事の作者の連絡先情報を示すためのセマンティックなタグは何ですか？\n`<[ ]>\n  <p>書いた人: John Doe</p>\n</[ ]>`",
+    "question_text": "文書や記事の作者の連絡先情報を示すためのセマンティックなタグは何ですか？\n`<[ ]>\n  <p>書いた人: Nemo Doe</p>\n</[ ]>`",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -81031,7 +81031,7 @@ var WEB_hard =
     "difficulty": "hard"
   },
   {
-    "question_text": "入力欄にフォーカスが当たっていない時に、その入力欄に何を入力すべきかを示す短いヒントは何ですか？\n`<input type=\"text\" [ ]=\"例: 山田太郎\">`",
+    "question_text": "入力欄にフォーカスが当たっていない時に、その入力欄に何を入力すべきかを示す短いヒントは何ですか？\n`<input type=\"text\" [ ]=\"例: ぽこ ぴこ\">`",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -84515,7 +84515,7 @@ var WEB_hard =
     "choice_c": "",
     "choice_d": "",
     "correct_answer": "オブジェクト (Object)",
-    "explanation": "オブジェクトは `{ name: \"John\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
+    "explanation": "オブジェクトは `{ name: \"Nemo\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
     "category": "JavaScript (データ型)",
     "difficulty": "hard"
   },
@@ -86420,7 +86420,7 @@ var WEB_hard =
     "choice_c": "",
     "choice_d": "",
     "correct_answer": "オブジェクト (Object)",
-    "explanation": "オブジェクトは `{ name: \"John\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
+    "explanation": "オブジェクトは `{ name: \"Nemo\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
     "category": "JavaScript (データ型)",
     "difficulty": "hard"
   },
@@ -97331,7 +97331,7 @@ var WEB =
     "difficulty": "hard"
   },
   {
-    "question_text": "文書や記事の作者の連絡先情報を示すためのセマンティックなタグは何ですか？\n`<[ ]>\n  <p>書いた人: John Doe</p>\n</[ ]>`",
+    "question_text": "文書や記事の作者の連絡先情報を示すためのセマンティックなタグは何ですか？\n`<[ ]>\n  <p>書いた人: Nemo Doe</p>\n</[ ]>`",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -98137,7 +98137,7 @@ var WEB =
     "difficulty": "hard"
   },
   {
-    "question_text": "入力欄にフォーカスが当たっていない時に、その入力欄に何を入力すべきかを示す短いヒントは何ですか？\n`<input type=\"text\" [ ]=\"例: 山田太郎\">`",
+    "question_text": "入力欄にフォーカスが当たっていない時に、その入力欄に何を入力すべきかを示す短いヒントは何ですか？\n`<input type=\"text\" [ ]=\"例: ぽこ ぴこ\">`",
     "choice_a": "",
     "choice_b": "",
     "choice_c": "",
@@ -101621,7 +101621,7 @@ var WEB =
     "choice_c": "",
     "choice_d": "",
     "correct_answer": "オブジェクト (Object)",
-    "explanation": "オブジェクトは `{ name: \"John\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
+    "explanation": "オブジェクトは `{ name: \"Nemo\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
     "category": "JavaScript (データ型)",
     "difficulty": "hard"
   },
@@ -103526,7 +103526,7 @@ var WEB =
     "choice_c": "",
     "choice_d": "",
     "correct_answer": "オブジェクト (Object)",
-    "explanation": "オブジェクトは `{ name: \"John\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
+    "explanation": "オブジェクトは `{ name: \"Nemo\", age: 30 }` のように、名前（キー）と値のペアでプロパティを定義します。キーを使って値にアクセスします。",
     "category": "JavaScript (データ型)",
     "difficulty": "hard"
   },
