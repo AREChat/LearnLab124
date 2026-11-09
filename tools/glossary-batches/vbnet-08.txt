@@ -1,0 +1,84 @@
+# カテゴリ || 用語 || 説明 || コード例
+基本の補足 || 変数のスコープ || 変数が使える範囲（ブロック・プロシージャ・クラス・モジュール）。 || Dim x As Integer
+基本の補足 || Public / Private 変数 || クラスの外から使えるか。 || Public Name As String
+基本の補足 || 命名規則 (Hungarian) || 型を表す接頭辞を付ける古い書き方。 || strName, intCount
+基本の補足 || 予約語 || 名前に使えない言葉。使うときは [ ] で囲む。 || Dim [End] As Integer
+基本の補足 || 大文字小文字の自動修正 || VB.NET は大文字小文字を区別せず、エディタが整える。 || dim → Dim
+基本の補足 || 暗黙の行継続 || カンマやピリオドの後なら _ なしで改行できる。 || Dim a = {1,
+基本の補足 || ソリューションエクスプローラー || プロジェクトのファイルを管理するウィンドウ。 || Visual Studio
+基本の補足 || プロパティウィンドウ || 部品の設定を変える画面。 || F4
+基本の補足 || ツールボックス || 配置する部品の一覧。 || Visual Studio
+基本の補足 || デザイナー (Form1.Designer.vb) || 部品の配置を自動で書くファイル。 || 手で編集しない
+基本の補足 || イベントハンドラの自動生成 || 部品をダブルクリックして作る。 || btn_Click
+基本の補足 || 参照の追加 || 外部のライブラリを使えるようにする。 || プロジェクト → 参照の追加
+基本の補足 || アセンブリ || .NET の部品の単位（dll や exe）。 || MyApp.dll
+基本の補足 || 名前空間の階層 || 名前空間を . でつないで整理する。 || System.IO.File
+基本の補足 || ルート名前空間 || プロジェクトの最上位の名前空間。 || プロジェクトのプロパティ
+基本の補足 || エントリポイント || 実行を始める場所。 || Sub Main
+基本の補足 || ターゲットフレームワーク || 動かす .NET のバージョン。 || net8.0-windows
+基本の補足 || ビルド構成 (Debug/Release) || 開発用・配布用の設定。 || Release
+基本の補足 || プロジェクトの種類 || WinForms, WPF, コンソール, クラスライブラリなど。 || 新しいプロジェクト
+基本の補足 || アプリケーションフレームワーク || 起動処理を自動で行う VB の仕組み。 || My.Application
+基本の補足 || スタートアップオブジェクト || 最初に開く画面や Main。 || Form1
+基本の補足 || 暗黙のインポート || プロジェクトで自動的に Imports される名前空間。 || System, System.IO など
+基本の補足 || メモリ管理 (GC) || 使われなくなったオブジェクトを自動で回収する。 || Garbage Collector
+基本の補足 || 値型と参照型 || 値型は値そのものを、参照型は場所を持つ。 || Integer / Class
+基本の補足 || ボックス化 || 値型をオブジェクトとして扱う変換。 || Dim o As Object = 5
+基本の補足 || 文字列は不変 || 文字列は変更せず、新しい文字列を作る。 || s = s & "a"
+基本の補足 || 文字列プール (インターン) || 同じ文字列を共有してメモリを節約する。 || String.Intern(s)
+基本の補足 || 等価と同一性 || 値が等しいか、同じ実体かの違い。 || Equals / Is
+基本の補足 || 浮動小数点の比較 || 誤差があるので = で比べない。 || Math.Abs(a - b) < 0.0001
+基本の補足 || Decimal で金額 || 金額の計算には Decimal を使う。 || Dim price As Decimal = 100D
+基本の補足 || 型文字 (%, &, !, #, @, $) || 型を表す古い記号。 || Dim n% = 5
+基本の補足 || リテラル接尾辞 (D, F, L, R) || 数値リテラルの型を決める。 || 1.5D
+基本の補足 || 日付リテラル (#...#) || 日付を直接書く。 || #11/9/2026#
+基本の補足 || Char と String の違い || 1文字と文字列。 || "a"c
+基本の補足 || 文字列の比較 (=) || = は大文字小文字を区別して比較する。 || "a" = "A"
+基本の補足 || 配列の宣言と初期化 || 要素の数と中身を指定する。 || Dim a() As Integer = {1, 2, 3}
+基本の補足 || 配列の長さ (Length) || 要素数。 || a.Length
+基本の補足 || 配列の最後の要素 || Length - 1 の添字。 || a(a.Length - 1)
+基本の補足 || 配列のコピー (参照) || 代入すると参照が同じになる。 || Dim b = a
+基本の補足 || 変数の入れ替え || 一時変数やタプルで入れ替える。 || (a, b) = (b, a)
+基本の補足 || 範囲の添字 (Range) || 配列の一部を取り出す（.NET Core）。 || arr(1 To 3)
+基本の補足 || 入力値の検証 || ユーザーの入力は必ず確認する。 || Integer.TryParse
+基本の補足 || コメントの書き方 || ' で説明を書く。 || ' メモ
+基本の補足 || TODO コメント || あとでやることの印。 || ' TODO: 修正
+基本の補足 || マジックナンバーを避ける || 意味のある名前の定数を使う。 || Const TaxRate = 0.1
+基本の補足 || DRY 原則 || 同じコードをくり返さない。 || 関数にまとめる
+基本の補足 || KISS 原則 || できるだけ単純に書く。 || 複雑にしない
+基本の補足 || コードレビュー || 他の人にコードを見てもらう。 || 品質を保つ
+基本の補足 || リファクタリング || 動きを変えずにコードを整理する。 || 関数の分割
+基本の補足 || バージョン管理 (Git) || 変更の履歴を管理する。 || git commit
+基本の補足 || .gitignore || 管理に含めないファイル。 || bin/, obj/
+基本の補足 || ビルドエラーの読み方 || エラー一覧で場所と内容を確認する。 || BC30451
+基本の補足 || BC30451 (名前が宣言されていません) || 宣言していない名前を使ったエラー。 || BC30451
+基本の補足 || BC30002 (型が定義されていません) || 型が見つからないエラー。 || Imports を確認
+基本の補足 || BC30311 (型変換できません) || 型の違いによるエラー。 || CInt などで変換
+基本の補足 || BC42024 (未使用変数) || 使っていない変数の警告。 || 削除する
+基本の補足 || BC42104 (未代入の使用) || 値を入れる前に使う警告。 || 初期値を入れる
+Windows連携 || Registry || レジストリの読み書き。 || My.Computer.Registry
+Windows連携 || SendKeys || 他のアプリへキー入力を送る。 || SendKeys.Send("^c")
+Windows連携 || Process.GetProcesses || 動いているプログラムの一覧。 || Process.GetProcessesByName("notepad")
+Windows連携 || Process.Kill || プロセスを終了させる。 || p.Kill()
+Windows連携 || ProcessStartInfo || 起動方法を詳しく指定する。 || New ProcessStartInfo("cmd.exe")
+Windows連携 || 標準出力のリダイレクト || 実行したプログラムの出力を取得する。 || RedirectStandardOutput = True
+Windows連携 || Environment.Exit || プログラムを終了する。 || Environment.Exit(0)
+Windows連携 || ショートカットの作成 || .lnk を作る。 || WScript.Shell
+Windows連携 || スタートアップ登録 || Windows 起動時に自動で動かす。 || Run キー
+Windows連携 || タスクトレイ常駐 || NotifyIcon で常駐する。 || NotifyIcon.Visible = True
+Windows連携 || トースト通知 || Windows の通知を出す。 || ToastNotificationManager
+Windows連携 || グローバルホットキー || どのアプリからでも反応するキー。 || RegisterHotKey
+Windows連携 || クリップボード監視 || コピーされた内容を取得する。 || Clipboard.GetText()
+Windows連携 || ディスプレイ情報 (Screen) || 画面の大きさなどを取得する。 || Screen.PrimaryScreen.Bounds
+Windows連携 || SystemInformation || システムの情報を取得する。 || SystemInformation.WorkingArea
+Windows連携 || ネットワーク接続の確認 || ネットワークがつながっているか調べる。 || NetworkInterface.GetIsNetworkAvailable()
+Windows連携 || Ping || 相手に届くか調べる。 || New Ping().Send("8.8.8.8")
+Windows連携 || DNS 検索 || ホスト名から IP を調べる。 || Dns.GetHostAddresses("example.com")
+Windows連携 || TcpClient / Socket || TCP で通信する。 || New TcpClient(host, port)
+Windows連携 || SerialPort || シリアル通信をする。 || New SerialPort("COM3")
+Windows連携 || USB / HID の操作 || 外部機器と通信する。 || ライブラリを使う
+Windows連携 || プリンタ一覧 || インストール済みのプリンタを取得する。 || PrinterSettings.InstalledPrinters
+Windows連携 || 管理者権限で起動 || 昇格して実行する。 || Verb = "runas"
+Windows連携 || UAC マニフェスト || 管理者権限が必要なことを宣言する。 || requireAdministrator
+Windows連携 || 高 DPI 対応 || 拡大表示で崩れないようにする。 || DpiAwareness
+Windows連携 || ダークモード対応 || テーマに合わせて色を変える。 || Application.SetColorMode

@@ -1,0 +1,95 @@
+# カテゴリ || 用語 || 説明 || コード例
+SQL Server詳細 || SSMS || SQL Server を操作する公式の管理ツール。 || SQL Server Management Studio
+SQL Server詳細 || GO || SSMS などでバッチの区切りを示す命令。 || SELECT 1; GO
+SQL Server詳細 || sp_help || テーブルなどの情報を表示する。 || EXEC sp_help 'users';
+SQL Server詳細 || sp_who || 接続中のユーザーを表示する。 || EXEC sp_who;
+SQL Server詳細 || DBCC CHECKDB || データベースの整合性を検査する。 || DBCC CHECKDB('shop');
+SQL Server詳細 || SET STATISTICS IO / TIME || 読み込み量・実行時間を表示する。 || SET STATISTICS TIME ON;
+SQL Server詳細 || 実行プラン (SSMS) || 実行計画を図で表示する。 || Ctrl+M
+SQL Server詳細 || OFFSET FETCH (SQL Server) || ページ分けを行う。 || ORDER BY id OFFSET 20 ROWS FETCH NEXT 10 ROWS ONLY
+SQL Server詳細 || ISNULL と COALESCE || NULL を置き換える。COALESCE は標準。 || ISNULL(a, 0)
+SQL Server詳細 || LEN と DATALENGTH || 文字数とバイト数。 || DATALENGTH('あ')
+SQL Server詳細 || CHARINDEX の使い方 || 文字列の位置を返す。 || CHARINDEX('b', 'abc')
+SQL Server詳細 || SUBSTRING (SQL Server) || 文字列の一部。長さの指定が必須。 || SUBSTRING('abcdef', 2, 3)
+SQL Server詳細 || FORMAT (SQL Server) || 書式指定で文字列にする。 || FORMAT(GETDATE(), 'yyyy/MM/dd')
+SQL Server詳細 || CONCAT (SQL Server) || NULL を空にして連結する。 || CONCAT('a', NULL)
+SQL Server詳細 || DATEDIFF の単位 || 指定した単位で日付の差を数える。 || DATEDIFF(DAY, a, b)
+SQL Server詳細 || DATEPART / DATENAME || 日付の一部（数値・名前）。 || DATENAME(WEEKDAY, GETDATE())
+SQL Server詳細 || DATEFROMPARTS || 年月日から日付を作る。 || DATEFROMPARTS(2026, 11, 9)
+SQL Server詳細 || IIF と CHOOSE || 条件・番号で値を選ぶ。 || IIF(a > b, 'a', 'b')
+SQL Server詳細 || TRY_CONVERT / TRY_PARSE || 変換に失敗したら NULL。 || TRY_CONVERT(INT, 'abc')
+SQL Server詳細 || STRING_AGG (SQL Server) || 文字列をまとめる。 || STRING_AGG(name, ',')
+SQL Server詳細 || 一時テーブル (##t) || 全接続から見える一時テーブル。 || CREATE TABLE ##t (id INT)
+SQL Server詳細 || @@IDENTITY / SCOPE_IDENTITY || 直前に採番した値。SCOPE_IDENTITY が安全。 || SELECT SCOPE_IDENTITY()
+SQL Server詳細 || SEQUENCE (SQL Server) || 連番の発行元。 || NEXT VALUE FOR seq
+SQL Server詳細 || MERGE (SQL Server) || 追加・更新・削除を1文で行う。 || MERGE t USING s ON ...
+SQL Server詳細 || OUTPUT INTO || 更新した行の内容を別の表に入れる。 || OUTPUT inserted.id INTO @ids
+SQL Server詳細 || TABLESAMPLE (SQL Server) || ランダムに一部を取り出す。 || TABLESAMPLE (10 PERCENT)
+SQL Server詳細 || WITH (ROWLOCK) など || ロックの粒度を指定するヒント。 || WITH (ROWLOCK)
+SQL Server詳細 || SNAPSHOT 分離レベル || 読み取りがロックされない分離レベル。 || SET TRANSACTION ISOLATION LEVEL SNAPSHOT
+SQL Server詳細 || インクルード列 || インデックスに含めるが並べ替えには使わない列。 || CREATE INDEX ix ON t(a) INCLUDE (b)
+SQL Server詳細 || フィルター付きインデックス || 条件に合う行だけのインデックス。 || CREATE INDEX ix ON t(a) WHERE a IS NOT NULL
+SQL Server詳細 || 列ストアインデックス || 分析向けの列指向インデックス。 || CREATE COLUMNSTORE INDEX
+SQL Server詳細 || テンポラルテーブル || 過去の状態を自動で保存する表。 || WITH (SYSTEM_VERSIONING = ON)
+SQL Server詳細 || ストアドプロシージャの出力パラメータ || 結果を引数で返す。 || @out INT OUTPUT
+SQL Server詳細 || トリガー inserted / deleted || 変更後・変更前の行を持つ特別な表。 || SELECT * FROM inserted
+SQL Server詳細 || SQL Server Agent || ジョブを定期的に実行する機能。 || ジョブのスケジュール
+SQL Server詳細 || 動的管理ビュー (DMV) || サーバーの状態を調べるビュー。 || sys.dm_exec_requests
+SQL Server詳細 || 照合順序 Japanese_CI_AS || 日本語の並べ方。大文字小文字を区別しない。 || COLLATE Japanese_CI_AS
+SQL Server詳細 || Always Encrypted || 列を暗号化したまま扱う機能。 || ENCRYPTED WITH
+SQL Server詳細 || LocalDB / Express || 無料で使える SQL Server。 || SQL Server Express
+Oracle詳細 || SQL*Plus || Oracle のコマンドラインのツール。 || sqlplus user/pass
+Oracle詳細 || DESC (Oracle) || 表の構造を表示する。 || DESC emp;
+Oracle詳細 || SELECT ... FROM DUAL || 表のない式を計算するための表。 || SELECT SYSDATE FROM DUAL;
+Oracle詳細 || ROWNUM の落とし穴 || ORDER BY の前に付くので、並べ替え後は副問い合わせにする。 || SELECT * FROM (SELECT * FROM t ORDER BY v) WHERE ROWNUM <= 5
+Oracle詳細 || 空文字は NULL || Oracle では空文字が NULL として扱われる。 || '' IS NULL
+Oracle詳細 || TO_CHAR の書式 || 日付・数値を書式で文字列にする。 || TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS')
+Oracle詳細 || TRUNC (日付) || 日付の時刻部分を切り捨てる。 || TRUNC(SYSDATE)
+Oracle詳細 || NEXT_DAY / LAST_DAY || 次の曜日・月末の日付。 || NEXT_DAY(SYSDATE, '月曜')
+Oracle詳細 || LISTAGG の使い方 || 文字列をまとめる。 || LISTAGG(name, ',') WITHIN GROUP (ORDER BY id)
+Oracle詳細 || DECODE と CASE || 値による分岐。CASE が標準。 || DECODE(a, 1, 'x', 'y')
+Oracle詳細 || NVL / NVL2 / COALESCE || NULL を置き換える。 || NVL(a, 0)
+Oracle詳細 || REGEXP_LIKE / REGEXP_SUBSTR || 正規表現での判定・取り出し。 || REGEXP_LIKE(s, '^a')
+Oracle詳細 || MINUS (Oracle) || 差集合を求める。 || SELECT a FROM t1 MINUS SELECT a FROM t2
+Oracle詳細 || MERGE (Oracle) || 追加・更新を1文で行う。 || MERGE INTO t USING s ON (...)
+Oracle詳細 || INSERT ALL || 複数の表に一度に追加する。 || INSERT ALL INTO a VALUES (1) INTO b VALUES (2) SELECT 1 FROM DUAL
+Oracle詳細 || RETURNING INTO || 追加・更新した値を変数に受け取る。 || RETURNING id INTO v_id
+Oracle詳細 || バインド変数 (:name) || 値を後から渡す。 || WHERE id = :id
+Oracle詳細 || 実行計画 (EXPLAIN PLAN) || 実行計画を調べる。 || EXPLAIN PLAN FOR SELECT ...
+Oracle詳細 || DBMS_XPLAN.DISPLAY || 実行計画を表示する。 || SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY)
+Oracle詳細 || ANALYZE / DBMS_STATS || 統計情報を集める。 || DBMS_STATS.GATHER_TABLE_STATS
+Oracle詳細 || パッケージ (PL/SQL) || 関連する手続きをまとめたもの。 || CREATE PACKAGE pk AS ...
+Oracle詳細 || カーソル FOR ループ || 結果を1行ずつ処理する PL/SQL の書き方。 || FOR r IN (SELECT * FROM t) LOOP
+Oracle詳細 || %TYPE / %ROWTYPE || 列・行と同じ型を使う。 || v emp.sal%TYPE
+Oracle詳細 || EXCEPTION WHEN (PL/SQL) || 例外を処理する。 || WHEN NO_DATA_FOUND THEN
+Oracle詳細 || RAISE_APPLICATION_ERROR || 独自のエラーを発生させる。 || RAISE_APPLICATION_ERROR(-20001, 'bad')
+Oracle詳細 || COMMIT と自動コミットなし || Oracle は明示的に COMMIT するまで確定しない。 || COMMIT;
+Oracle詳細 || UNDO と REDO || 取り消し用と、やり直し用のログ。 || UNDO テーブルスペース
+Oracle詳細 || ORA-00001 (一意制約違反) || 一意制約に反したエラー。 || ORA-00001
+Oracle詳細 || ORA-01403 (データなし) || 該当する行がないエラー。 || NO_DATA_FOUND
+Oracle詳細 || ORA-00942 (表がない) || 表またはビューが存在しないエラー。 || ORA-00942
+Oracle詳細 || ORA-01722 (数値が無効) || 数値に変換できない文字のエラー。 || ORA-01722
+Oracle詳細 || ORA-00904 (識別子が無効) || 列名が不正のエラー。 || ORA-00904
+Oracle詳細 || ORA-01017 (パスワード不正) || ユーザー名かパスワードが違うエラー。 || ORA-01017
+Oracle詳細 || ORA-12154 (接続識別子) || 接続先が見つからないエラー。 || ORA-12154
+Oracle詳細 || 表領域 (TABLESPACE) || データを保存する論理的な領域。 || USERS
+Oracle詳細 || SGA / PGA || Oracle が使う共有メモリ・個別メモリ。 || SGA_TARGET
+Oracle詳細 || AWR レポート || 性能の統計をまとめたレポート。 || awrrpt.sql
+Oracle詳細 || Data Pump (expdp/impdp) || データの出力・取り込みツール。 || expdp scott/tiger DIRECTORY=d DUMPFILE=a.dmp
+Oracle詳細 || RMAN || バックアップ・復旧のツール。 || RMAN> BACKUP DATABASE;
+Oracle詳細 || RAC || 複数のサーバーで1つの DB を動かす構成。 || Real Application Clusters
+Oracle詳細 || Oracle Database XE || 無料で使える Oracle。 || Express Edition
+標準SQL補足 || SELECT の別名と WHERE || 別名は WHERE では使えないことが多い。 || サブクエリで包む
+標準SQL補足 || 比較と NULL (三値論理) || NULL との = は UNKNOWN になる。 || WHERE a IS NULL
+標準SQL補足 || ESCAPE の使い方 || % や _ そのものを検索する。 || LIKE '100\%' ESCAPE '\'
+標準SQL補足 || 暗黙の結合 (カンマ結合) || FROM a, b WHERE の古い書き方。 || FROM a, b WHERE a.id = b.id
+標準SQL補足 || 文字列の比較 (大文字小文字) || 照合順序で決まる。 || COLLATE
+標準SQL補足 || ORDER BY と別名 || ORDER BY では別名が使える。 || SELECT a AS x FROM t ORDER BY x
+標準SQL補足 || UNION の列数・型 || 列数と型がそろっている必要がある。 || SELECT a, b FROM t1 UNION SELECT c, d FROM t2
+標準SQL補足 || EXCEPT ALL / INTERSECT ALL || 重複を残す集合演算。 || EXCEPT ALL
+標準SQL補足 || VALUES だけの問い合わせ || 定数の行を返す。 || VALUES (1), (2)
+標準SQL補足 || TABLE 文 || 表の中身をそのまま返す短縮形。 || TABLE t;
+標準SQL補足 || CURRENT_ROLE / SESSION_USER || 現在のロール・ユーザー。 || SELECT SESSION_USER;
+標準SQL補足 || ASSERTION || DB全体の条件を決める標準（実装は少ない）。 || CREATE ASSERTION
+標準SQL補足 || SQL/PSM || 手続き型の標準。 || CREATE PROCEDURE ... BEGIN ... END
+標準SQL補足 || SQL:2016 / SQL:2023 || SQL 標準の版。JSON などが追加された。 || SQL:2023
