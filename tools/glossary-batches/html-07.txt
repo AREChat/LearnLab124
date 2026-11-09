@@ -1,0 +1,169 @@
+DOMイベント || click || クリックされた。 || el.onclick
+DOMイベント || dblclick || ダブルクリック。 || ondblclick
+DOMイベント || contextmenu || 右クリックメニュー。 || oncontextmenu
+DOMイベント || mousedown / mouseup || ボタンを押す・離す。 || onmousedown
+DOMイベント || mousemove || マウスが動いた。 || onmousemove
+DOMイベント || mouseenter / mouseleave || 領域に入る・出る。 || onmouseenter
+DOMイベント || mouseover / mouseout || 要素に乗る・外れる（伝播する）。 || onmouseover
+DOMイベント || wheel || ホイール操作。 || onwheel
+DOMイベント || keydown / keyup || キーを押す・離す。 || onkeydown
+DOMイベント || keypress (旧) || 文字キーの入力（非推奨）。 || 使わない
+DOMイベント || input || 入力値が変わった。 || oninput
+DOMイベント || change || 値が確定した。 || onchange
+DOMイベント || focus / blur || フォーカスを得る・失う。 || onfocus
+DOMイベント || focusin / focusout || 伝播するフォーカス。 || onfocusin
+DOMイベント || submit || フォームの送信。 || onsubmit
+DOMイベント || reset (イベント) || フォームのリセット。 || onreset
+DOMイベント || invalid || 検証に失敗した。 || oninvalid
+DOMイベント || select (イベント) || 文字が選択された。 || onselect
+DOMイベント || paste / copy / cut || 貼り付け・コピー・切り取り。 || onpaste
+DOMイベント || compositionstart / end || 日本語入力の変換の開始・終了。 || oncompositionend
+DOMイベント || beforeinput || 入力の直前。 || onbeforeinput
+DOMイベント || touchstart / touchmove / touchend || タッチ操作。 || ontouchstart
+DOMイベント || pointerdown / pointermove / pointerup || マウス・タッチ・ペンの共通操作。 || onpointerdown
+DOMイベント || pointercancel || 操作が取り消された。 || onpointercancel
+DOMイベント || gesturestart || iOS のジェスチャー。 || ongesturestart
+DOMイベント || dragstart / dragover / drop || ドラッグ操作。 || ondrop
+DOMイベント || scroll || スクロールした。 || onscroll
+DOMイベント || scrollend || スクロールが終わった。 || onscrollend
+DOMイベント || resize || 画面の大きさが変わった。 || onresize
+DOMイベント || load || 読み込みが完了した。 || window.onload
+DOMイベント || DOMContentLoaded || HTML の解析が完了した。 || document.addEventListener('DOMContentLoaded', f)
+DOMイベント || readystatechange || 読み込み状態の変化。 || document.readyState
+DOMイベント || beforeunload || ページを離れる前。 || onbeforeunload
+DOMイベント || unload / pagehide || ページを離れた。 || onpagehide
+DOMイベント || pageshow || ページが表示された。 || onpageshow
+DOMイベント || visibilitychange || 表示・非表示の切り替え。 || document.onvisibilitychange
+DOMイベント || online / offline || 接続状態の変化。 || ononline
+DOMイベント || hashchange || URL の # が変わった。 || onhashchange
+DOMイベント || popstate || 履歴の移動。 || onpopstate
+DOMイベント || storage || localStorage の変更。 || onstorage
+DOMイベント || message || postMessage の受信。 || onmessage
+DOMイベント || error (イベント) || エラーが起きた。 || onerror
+DOMイベント || unhandledrejection || 処理されない Promise の失敗。 || onunhandledrejection
+DOMイベント || animationstart / end || CSS アニメの開始・終了。 || onanimationend
+DOMイベント || transitionend || CSS 遷移の終了。 || ontransitionend
+DOMイベント || toggle || details や popover の開閉。 || ontoggle
+DOMイベント || close / cancel || ダイアログの終了・取消。 || dialog.onclose
+DOMイベント || canplay / play / pause / ended || メディアの状態。 || onended
+DOMイベント || timeupdate || 再生位置の更新。 || ontimeupdate
+DOMイベント || loadedmetadata || メディアの情報を取得した。 || onloadedmetadata
+DOMイベント || fullscreenchange || 全画面の切り替え。 || onfullscreenchange
+DOMイベント || devicemotion / deviceorientation || 端末の動き・向き。 || ondeviceorientation
+DOMイベント || event.target || イベントの発生元。 || e.target
+DOMイベント || event.currentTarget || 受け取った要素。 || e.currentTarget
+DOMイベント || event.key / event.code || 押したキー。 || e.key
+DOMイベント || event.clientX / clientY || 画面上の座標。 || e.clientX
+DOMイベント || once / passive / capture || リスナーの設定。 || addEventListener('scroll', f, {passive:true})
+DOMイベント || バブリング || 子から親へ伝わる。 || bubbles
+DOMイベント || キャプチャ || 親から子へ伝わる。 || capture: true
+DOMイベント || stopImmediatePropagation || 同じ要素の他の処理も止める。 || e.stopImmediatePropagation()
+DOMプロパティ || document.documentElement || html 要素。 || document.documentElement
+DOMプロパティ || document.body / head || body・head 要素。 || document.body
+DOMプロパティ || document.title || 題名。 || document.title
+DOMプロパティ || document.cookie || Cookie。 || document.cookie
+DOMプロパティ || document.referrer || 参照元。 || document.referrer
+DOMプロパティ || document.forms / images / links || 文書内の集合。 || document.forms
+DOMプロパティ || document.activeElement || フォーカス中の要素。 || document.activeElement
+DOMプロパティ || document.readyState || 読み込みの状態。 || document.readyState
+DOMプロパティ || document.hidden || 非表示か。 || document.hidden
+DOMプロパティ || document.fonts || フォントの読み込み状況。 || document.fonts.ready
+DOMプロパティ || document.designMode || 文書全体を編集可能にする。 || document.designMode = 'on'
+DOMプロパティ || element.id / className || id・クラス名。 || el.className
+DOMプロパティ || element.style || インラインスタイル。 || el.style.color = 'red'
+DOMプロパティ || element.innerText || 見た目の文字。 || el.innerText
+DOMプロパティ || element.outerHTML || 自身を含む HTML。 || el.outerHTML
+DOMプロパティ || element.children || 子の要素。 || el.children
+DOMプロパティ || element.parentElement || 親の要素。 || el.parentElement
+DOMプロパティ || element.nextElementSibling || 次の兄弟。 || el.nextElementSibling
+DOMプロパティ || element.firstElementChild || 最初の子。 || el.firstElementChild
+DOMプロパティ || element.closest || 祖先から探す。 || el.closest('.a')
+DOMプロパティ || element.matches || セレクタに一致するか。 || el.matches('.a')
+DOMプロパティ || element.contains || 含んでいるか。 || el.contains(x)
+DOMプロパティ || element.remove || 自分を削除する。 || el.remove()
+DOMプロパティ || element.replaceWith || 置き換える。 || el.replaceWith(x)
+DOMプロパティ || element.cloneNode || 複製する。 || el.cloneNode(true)
+DOMプロパティ || element.before / after || 前後に挿入する。 || el.before(x)
+DOMプロパティ || element.prepend || 先頭に追加する。 || el.prepend(x)
+DOMプロパティ || element.toggleAttribute || 属性を切り替える。 || el.toggleAttribute('hidden')
+DOMプロパティ || element.hasAttribute || 属性があるか。 || el.hasAttribute('a')
+DOMプロパティ || element.scrollTop / scrollHeight || スクロール位置・全体の高さ。 || el.scrollTop
+DOMプロパティ || element.clientWidth / offsetWidth || 内側・外側の幅。 || el.offsetWidth
+DOMプロパティ || element.animate || アニメーションを実行する。 || el.animate(kf, 300)
+DOMプロパティ || element.attachInternals || フォーム部品として振る舞わせる。 || this.attachInternals()
+DOMプロパティ || element.requestPointerLock || ポインターを固定する。 || el.requestPointerLock()
+DOMプロパティ || element.showPopover / hidePopover || ポップオーバー操作。 || el.showPopover()
+DOMプロパティ || window.innerWidth / innerHeight || 表示領域の大きさ。 || window.innerWidth
+DOMプロパティ || window.scrollTo / scrollBy || スクロールする。 || window.scrollTo(0, 0)
+DOMプロパティ || window.open / close || 窓を開く・閉じる。 || window.open(url)
+DOMプロパティ || window.location || 現在の URL。 || location.href
+DOMプロパティ || location.assign / replace / reload || 遷移・置換・再読込。 || location.reload()
+DOMプロパティ || window.history || 履歴。 || history.back()
+DOMプロパティ || window.navigator || ブラウザの情報。 || navigator.userAgent
+DOMプロパティ || navigator.language || 言語の設定。 || navigator.language
+DOMプロパティ || navigator.onLine || オンラインか。 || navigator.onLine
+DOMプロパティ || window.devicePixelRatio || 画素の密度。 || devicePixelRatio
+DOMプロパティ || window.screen || 画面の情報。 || screen.width
+DOMプロパティ || window.getSelection || 選択範囲を取る。 || getSelection().toString()
+DOMプロパティ || window.print || 印刷する。 || window.print()
+DOMプロパティ || window.matchMedia || メディアクエリを評価する。 || matchMedia('(hover)')
+DOMプロパティ || window.setTimeout / setInterval || 遅延・定期実行。 || setTimeout(f, 100)
+DOMプロパティ || window.requestAnimationFrame || 描画の前に呼ぶ。 || requestAnimationFrame(f)
+DOMプロパティ || window.alert / confirm / prompt || 標準のダイアログ。 || confirm('よいですか')
+DOMプロパティ || window.parent / top || 親窓・最上位窓。 || window.top
+DOMプロパティ || window.opener || 開いた元の窓。 || window.opener
+DOMプロパティ || window.isSecureContext || 安全な文脈か。 || isSecureContext
+DOMプロパティ || window.crypto || 暗号の機能。 || crypto.randomUUID()
+DOMプロパティ || window.btoa / atob || Base64 の変換。 || btoa('a')
+DOMプロパティ || window.CSS.supports || CSS の対応を調べる。 || CSS.supports('display','grid')
+DOMプロパティ || CSS.escape || セレクタ用にエスケープする。 || CSS.escape('a.b')
+DOMプロパティ || CSSStyleSheet / adoptedStyleSheets || スタイルシートを操作する。 || new CSSStyleSheet()
+DOMプロパティ || CSSOM || CSS のオブジェクトモデル。 || document.styleSheets
+DOMプロパティ || CSS Typed OM || 型つきで CSS を操作する。 || el.attributeStyleMap
+DOMプロパティ || CSS Houdini || CSS の拡張 API。 || CSS.paintWorklet
+CSS用語 || ボックスモデル || 内容・余白・枠・外余白の構造。 || content, padding, border, margin
+CSS用語 || ブロック要素 || 前後で改行される要素。 || <div>
+CSS用語 || インライン要素 || 行内に並ぶ要素。 || <span>
+CSS用語 || 置換要素 || 外部の内容で置き換わる要素。 || <img>
+CSS用語 || 整形文脈 (FC) || 並べ方の規則の単位。 || block formatting context
+CSS用語 || BFC || ブロック整形文脈。 || display: flow-root
+CSS用語 || 通常フロー || 既定の並び方。 || normal flow
+CSS用語 || ストラット || 行の高さを決める見えない文字。 || strut
+CSS用語 || 含まれるブロック || 配置の基準となる箱。 || containing block
+CSS用語 || 主軸・交差軸 || フレックスの方向の軸。 || main axis, cross axis
+CSS用語 || グリッドライン || グリッドの区切り線。 || grid line
+CSS用語 || グリッドトラック || 行や列。 || track
+CSS用語 || グリッドセル / エリア || 区画。 || grid area
+CSS用語 || 暗黙のグリッド || 自動で作られる行・列。 || implicit grid
+CSS用語 || 論理プロパティ || 書字方向に沿った指定。 || margin-inline
+CSS用語 || 計算値 / 使用値 || 最終的に使われる値。 || computed value
+CSS用語 || 初期値 || 何も指定しない時の値。 || initial value
+CSS用語 || 指定値 || 書かれた値。 || specified value
+CSS用語 || 相対単位 || 基準に対する単位。 || em, %
+CSS用語 || 絶対単位 || 固定の単位。 || px, cm
+CSS用語 || 一括指定 (ショートハンド) || 複数をまとめて書く。 || margin: 1px 2px
+CSS用語 || 個別指定 (ロングハンド) || 1つずつ書く。 || margin-top
+CSS用語 || ベンダー拡張 || ブラウザ独自の機能。 || -webkit-appearance
+CSS用語 || 疑似クラス || 状態で選ぶ。 || :hover
+CSS用語 || 疑似要素 || 一部分を選ぶ。 || ::before
+CSS用語 || 結合子 || セレクタをつなぐ記号。 || >, +, ~
+CSS用語 || 型セレクタ || 要素名のセレクタ。 || div
+CSS用語 || 宣言ブロック || { } の中身。 || { color: red }
+CSS用語 || 宣言 || プロパティと値の組。 || color: red
+CSS用語 || ルールセット || セレクタと宣言のまとまり。 || p { color: red }
+CSS用語 || アットルール || @ で始まる規則。 || @media
+CSS用語 || ユーザーエージェントスタイル || ブラウザの既定のスタイル。 || UA stylesheet
+CSS用語 || 作者スタイル || サイト製作者のスタイル。 || author styles
+CSS用語 || ユーザースタイル || 利用者が設定するスタイル。 || user styles
+CSS用語 || 描画順序 || 重なりの描画の順。 || paint order
+CSS用語 || リフロー / リペイント || 配置の再計算・再描画。 || reflow, repaint
+CSS用語 || コンポジット || 層を合成する処理。 || compositing
+CSS用語 || GPU アクセラレーション || GPU で描く。 || transform, opacity
+CSS用語 || レンダーツリー || 描画用の構造。 || render tree
+CSS用語 || DOM ツリー || 文書の構造。 || DOM
+CSS用語 || CSSOM ツリー || スタイルの構造。 || CSSOM
+CSS用語 || クリティカルレンダリングパス || 表示までの道筋。 || critical rendering path
+CSS用語 || FOUC || スタイル適用前の一瞬の表示。 || flash of unstyled content
+CSS用語 || FOIT / FOUT || フォント読み込み中の表示の問題。 || font-display
+CSS用語 || サブピクセルレンダリング || 画素の一部で文字を滑らかに描く。 || subpixel
+CSS用語 || ダークパターンの CSS || 誤解させる表示（避ける）。 || dark pattern

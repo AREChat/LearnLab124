@@ -1,0 +1,280 @@
+Tailwindクラス || flex (tw) || フレックスにする。 || class="flex"
+Tailwindクラス || grid (tw) || グリッドにする。 || class="grid grid-cols-3"
+Tailwindクラス || hidden (tw) || 非表示にする。 || class="hidden"
+Tailwindクラス || block / inline-block (tw) || 表示方法。 || class="block"
+Tailwindクラス || p-4 / px-4 / py-2 || 内余白。 || class="p-4"
+Tailwindクラス || m-4 / mx-auto / mt-2 || 外余白。 || class="mx-auto"
+Tailwindクラス || space-x-4 / space-y-2 || 子の間隔。 || class="space-y-2"
+Tailwindクラス || gap-4 (tw) || グリッド・フレックスの間隔。 || class="gap-4"
+Tailwindクラス || w-full / w-1/2 / w-64 || 幅。 || class="w-full"
+Tailwindクラス || h-screen / h-full / h-10 || 高さ。 || class="h-screen"
+Tailwindクラス || max-w-md / max-w-screen-lg || 最大幅。 || class="max-w-md"
+Tailwindクラス || min-h-screen || 最小高さ。 || class="min-h-screen"
+Tailwindクラス || text-sm / text-lg / text-2xl || 文字の大きさ。 || class="text-lg"
+Tailwindクラス || font-bold / font-medium || 文字の太さ。 || class="font-bold"
+Tailwindクラス || text-center / text-left || 文字揃え。 || class="text-center"
+Tailwindクラス || text-gray-700 / text-blue-500 || 文字色。 || class="text-gray-700"
+Tailwindクラス || bg-white / bg-blue-500 || 背景色。 || class="bg-white"
+Tailwindクラス || bg-gradient-to-r || グラデーション背景。 || class="bg-gradient-to-r from-a to-b"
+Tailwindクラス || border / border-2 / border-gray-300 || 枠線。 || class="border"
+Tailwindクラス || rounded / rounded-lg / rounded-full || 角丸。 || class="rounded-lg"
+Tailwindクラス || shadow / shadow-md / shadow-lg || 影。 || class="shadow-md"
+Tailwindクラス || opacity-50 || 透明度。 || class="opacity-50"
+Tailwindクラス || items-center / justify-between || フレックスの揃え。 || class="items-center"
+Tailwindクラス || flex-col / flex-row / flex-wrap || フレックスの向き・折り返し。 || class="flex-col"
+Tailwindクラス || grow / shrink || 伸縮。 || class="grow"
+Tailwindクラス || relative / absolute / fixed / sticky || 配置。 || class="absolute"
+Tailwindクラス || inset-0 / top-0 / left-0 || 位置。 || class="inset-0"
+Tailwindクラス || z-10 / z-50 || 重なり順。 || class="z-10"
+Tailwindクラス || overflow-hidden / overflow-auto || はみ出しの扱い。 || class="overflow-hidden"
+Tailwindクラス || truncate || 1行で省略する。 || class="truncate"
+Tailwindクラス || line-clamp-3 || 3行で省略する。 || class="line-clamp-3"
+Tailwindクラス || cursor-pointer || ポインターのカーソル。 || class="cursor-pointer"
+Tailwindクラス || transition / duration-300 || 遷移の設定。 || class="transition duration-300"
+Tailwindクラス || hover:bg-blue-600 || ホバー時の指定。 || class="hover:bg-blue-600"
+Tailwindクラス || focus:ring-2 || フォーカス時の輪。 || class="focus:ring-2"
+Tailwindクラス || md: / lg: (レスポンシブ) || 画面幅ごとの指定。 || class="md:flex"
+Tailwindクラス || dark: (ダークモード) || 暗い配色の指定。 || class="dark:bg-black"
+Tailwindクラス || group / group-hover || 親の状態で子を変える。 || class="group-hover:block"
+Tailwindクラス || peer / peer-checked || 兄弟の状態で変える。 || class="peer-checked:block"
+Tailwindクラス || first: / last: / odd: / even: || 位置による指定。 || class="odd:bg-gray-50"
+Tailwindクラス || sr-only || 視覚的に隠す。 || class="sr-only"
+Tailwindクラス || aspect-video || 16:9 の比率。 || class="aspect-video"
+Tailwindクラス || object-cover || 画像を覆うように表示。 || class="object-cover"
+Tailwindクラス || animate-spin / animate-pulse || 回転・脈動のアニメ。 || class="animate-spin"
+Tailwindクラス || container (tw) || 幅を制限するコンテナ。 || class="container mx-auto"
+Tailwindクラス || tailwind.config.js || 設定ファイル。 || theme.extend
+Tailwindクラス || @apply || ユーティリティをまとめる。 || @apply px-4 py-2;
+Tailwindクラス || 任意の値 [] || 好きな値を指定する。 || class="w-[300px]"
+Tailwindクラス || JIT モード || 使うクラスだけ生成する。 || just-in-time
+Bootstrapクラス || container / container-fluid || 幅を制限・全幅のコンテナ。 || class="container"
+Bootstrapクラス || row / col-* || 12 分割のグリッド。 || class="col-md-6"
+Bootstrapクラス || btn / btn-primary || ボタン。 || class="btn btn-primary"
+Bootstrapクラス || btn-outline-* || 枠線だけのボタン。 || class="btn btn-outline-secondary"
+Bootstrapクラス || navbar / nav-link || ナビゲーションバー。 || class="navbar navbar-expand-lg"
+Bootstrapクラス || card / card-body || カード。 || class="card"
+Bootstrapクラス || alert / alert-danger || 通知。 || class="alert alert-warning"
+Bootstrapクラス || badge || 小さな印。 || class="badge bg-primary"
+Bootstrapクラス || modal || ダイアログ。 || class="modal fade"
+Bootstrapクラス || dropdown || ドロップダウン。 || class="dropdown-menu"
+Bootstrapクラス || collapse / accordion || 開閉。 || class="accordion"
+Bootstrapクラス || carousel || スライドショー。 || class="carousel slide"
+Bootstrapクラス || form-control / form-label || フォームの部品。 || class="form-control"
+Bootstrapクラス || form-check || チェックの部品。 || class="form-check-input"
+Bootstrapクラス || table / table-striped || 表。 || class="table table-striped"
+Bootstrapクラス || list-group || リストの部品。 || class="list-group"
+Bootstrapクラス || pagination || ページ送り。 || class="pagination"
+Bootstrapクラス || breadcrumb || パンくず。 || class="breadcrumb"
+Bootstrapクラス || toast || 一時的な通知。 || class="toast"
+Bootstrapクラス || spinner-border || 読み込み表示。 || class="spinner-border"
+Bootstrapクラス || d-flex / d-none / d-md-block || 表示のユーティリティ。 || class="d-flex"
+Bootstrapクラス || justify-content-between || 揃えのユーティリティ。 || class="justify-content-between"
+Bootstrapクラス || p-3 / m-2 / mt-4 || 余白のユーティリティ。 || class="p-3"
+Bootstrapクラス || text-center / text-muted || 文字のユーティリティ。 || class="text-muted"
+Bootstrapクラス || bg-light / bg-dark || 背景のユーティリティ。 || class="bg-light"
+Bootstrapクラス || rounded / shadow-sm || 角丸・影。 || class="shadow-sm"
+Bootstrapクラス || ブレークポイント (sm/md/lg/xl) || 画面幅の区切り。 || 576, 768, 992, 1200
+Bootstrapクラス || data-bs-toggle || JavaScript の動作指定。 || data-bs-toggle="modal"
+Bootstrapクラス || Bootstrap Icons || アイコンのセット。 || <i class="bi bi-star">
+Sass || 変数 ($) || 値を変数にする。 || $main: #09f;
+Sass || ネスト || 規則を入れ子で書く。 || .a { .b { } }
+Sass || & (親セレクタ) || 親を参照する。 || &:hover
+Sass || @mixin / @include || 規則のまとまりを再利用する。 || @include center;
+Sass || @extend || 他の規則を継承する。 || @extend %base;
+Sass || プレースホルダ (%) || 継承専用の規則。 || %base { }
+Sass || @use / @forward || モジュールを読み込む。 || @use 'a';
+Sass || @import (旧) || 古い読み込み。 || @import 'a';
+Sass || パーシャル (_) || 単独で出力しないファイル。 || _vars.scss
+Sass || @function / @return || 関数を定義する。 || @function double($n)
+Sass || @if / @else || 条件分岐。 || @if $a == 1 { }
+Sass || @each / @for / @while || 繰り返し。 || @each $c in a, b { }
+Sass || マップ || キーと値の集まり。 || $m: (a: 1, b: 2);
+Sass || map-get() || マップから値を取る。 || map-get($m, a)
+Sass || lighten() / darken() || 明るく・暗くする。 || darken($c, 10%)
+Sass || math.div() || 除算する。 || math.div(10px, 2)
+Sass || 補間 (#{}) || 値や名前に埋め込む。 || .a-#{$n}
+Sass || @media のネスト || メディアクエリを内側に書く。 || .a { @media (...) { } }
+Sass || コメント (//) || 出力されないコメント。 || // メモ
+Sass || dart-sass || 現行の Sass 処理系。 || sass input.scss out.css
+Emmet || ! (Emmet) || HTML5 のひな形を展開する。 || !
+Emmet || div.class#id || クラスと ID つきの要素。 || div.box#main
+Emmet || ul>li*3 || 子を3つ作る。 || ul>li*3
+Emmet || a+b || 兄弟の要素。 || h1+p
+Emmet || ^ (上の階層へ) || 親の兄弟に戻る。 || div>p^span
+Emmet || () グループ || まとめて繰り返す。 || (dt+dd)*2
+Emmet || $ (連番) || 番号を振る。 || li.item$*3
+Emmet || {テキスト} || 中身の文字。 || a{リンク}
+Emmet || [属性] || 属性を付ける。 || a[href=#]
+Emmet || lorem || ダミー文を出す。 || p>lorem10
+Emmet || m10 / p20 (CSS) || CSS の省略記法。 || m10
+Emmet || link:css / script:src || よくある記述の略記。 || link:css
+MIMEタイプ || text/html || HTML。 || Content-Type: text/html
+MIMEタイプ || text/css || CSS。 || text/css
+MIMEタイプ || text/javascript || JavaScript。 || text/javascript
+MIMEタイプ || text/plain || プレーンテキスト。 || text/plain
+MIMEタイプ || text/csv || CSV。 || text/csv
+MIMEタイプ || application/json || JSON。 || application/json
+MIMEタイプ || application/xml || XML。 || application/xml
+MIMEタイプ || application/pdf || PDF。 || application/pdf
+MIMEタイプ || application/zip || ZIP。 || application/zip
+MIMEタイプ || application/octet-stream || 種類不明のバイナリ。 || application/octet-stream
+MIMEタイプ || application/x-www-form-urlencoded || フォームの既定の送信形式。 || application/x-www-form-urlencoded
+MIMEタイプ || multipart/form-data || ファイル送信の形式。 || multipart/form-data
+MIMEタイプ || image/png / jpeg / gif || 画像の種類。 || image/png
+MIMEタイプ || image/svg+xml || SVG 画像。 || image/svg+xml
+MIMEタイプ || image/webp / avif || 軽い画像形式。 || image/webp
+MIMEタイプ || audio/mpeg / ogg / wav || 音声の種類。 || audio/mpeg
+MIMEタイプ || video/mp4 / webm || 動画の種類。 || video/mp4
+MIMEタイプ || font/woff2 / ttf || フォントの種類。 || font/woff2
+MIMEタイプ || application/manifest+json || Web アプリのマニフェスト。 || application/manifest+json
+MIMEタイプ || application/ld+json || 構造化データ。 || application/ld+json
+MIMEタイプ || charset=utf-8 || 文字コードの指定。 || text/html; charset=utf-8
+CSS実践 || 水平中央揃え (margin auto) || 幅を決めて左右 auto。 || margin: 0 auto;
+CSS実践 || 縦横中央 (grid) || grid の 1 行で中央にする。 || display: grid; place-items: center;
+CSS実践 || 縦横中央 (flex) || flex で中央にする。 || display: flex; justify-content: center; align-items: center;
+CSS実践 || 絶対配置で中央 || translate で中央に置く。 || top:50%; left:50%; transform: translate(-50%,-50%);
+CSS実践 || 固定ヘッダー || 上に固定して重ねる。 || position: sticky; top: 0;
+CSS実践 || 3カラムレイアウト || グリッドで3列にする。 || grid-template-columns: 1fr 2fr 1fr;
+CSS実践 || 聖杯レイアウト || ヘッダー・本文3列・フッター。 || grid-template-areas
+CSS実践 || 自動で折り返すカード || auto-fit で列数を自動に。 || repeat(auto-fit, minmax(240px, 1fr))
+CSS実践 || 正方形の要素 || aspect-ratio で比率を保つ。 || aspect-ratio: 1;
+CSS実践 || 円形の画像 || 角丸 50% にする。 || border-radius: 50%;
+CSS実践 || 画像の下の隙間を消す || block にする。 || img { display: block; }
+CSS実践 || 三角形 (border) || 枠線で三角を作る。 || border: 10px solid transparent;
+CSS実践 || 吹き出し || 疑似要素で矢印をつける。 || .bubble::after
+CSS実践 || ボタンのホバー効果 || 変化を滑らかにする。 || transition: .2s;
+CSS実践 || 下線のアニメーション || 疑似要素を伸ばす。 || transform: scaleX(0)
+CSS実践 || グラデーション文字 || 背景を文字で切り抜く。 || background-clip: text; color: transparent;
+CSS実践 || すりガラス表現 || 背景をぼかす。 || backdrop-filter: blur(10px);
+CSS実践 || 半透明の黒い膜 || オーバーレイを作る。 || background: rgba(0,0,0,.5);
+CSS実践 || 全画面の背景 || 画面全体に敷く。 || position: fixed; inset: 0;
+CSS実践 || スクロールで固定 || sticky で追従させる。 || position: sticky;
+CSS実践 || スクロールの吸着 || snap でぴたっと止める。 || scroll-snap-align: start;
+CSS実践 || 横スクロール || はみ出しを許す。 || overflow-x: auto;
+CSS実践 || 表のゼブラ || 偶数行を塗る。 || tr:nth-child(even)
+CSS実践 || 表の固定ヘッダー || thead を固定する。 || thead th { position: sticky; top: 0; }
+CSS実践 || 表をスマホで崩す || 画面幅で block にする。 || @media (max-width:600px)
+CSS実践 || 長い英単語の折り返し || はみ出しを防ぐ。 || overflow-wrap: anywhere;
+CSS実践 || 複数行の省略 || 3行で … にする。 || -webkit-line-clamp: 3;
+CSS実践 || 入力欄の見た目を整える || 標準の見た目を外す。 || appearance: none;
+CSS実践 || チェックボックスを装飾 || 疑似要素で描く。 || input:checked + label::before
+CSS実践 || スイッチ UI || checkbox で切り替えを作る。 || input[type=checkbox]
+CSS実践 || アコーディオン || details で開閉する。 || <details>
+CSS実践 || タブ UI (CSS のみ) || radio と :checked で切り替える。 || input:checked ~ .panel
+CSS実践 || モーダル (dialog) || dialog 要素で作る。 || dialog.showModal()
+CSS実践 || ツールチップ || 疑似要素で表示する。 || [data-tip]::after { content: attr(data-tip) }
+CSS実践 || プログレスバー || 幅で進捗を示す。 || width: 60%;
+CSS実践 || ローディング回転 || 回転を繰り返す。 || animation: spin 1s linear infinite;
+CSS実践 || フェードイン || 透明度を変える。 || @keyframes fade { from { opacity: 0 } }
+CSS実践 || スライドイン || 位置を動かして現れる。 || transform: translateX(-100%)
+CSS実践 || 点滅 || 透明度を往復させる。 || animation: blink 1s infinite;
+CSS実践 || 跳ねる動き || 縦に動かす。 || @keyframes bounce
+CSS実践 || スクロール連動の出現 || view() で現れる。 || animation-timeline: view();
+CSS実践 || ダークモード切替 || 変数で色を替える。 || [data-theme=dark] { --bg: #000 }
+CSS実践 || 色のテーマ変数 || 色を変数にまとめる。 || :root { --primary: #09f }
+CSS実践 || レスポンシブな余白 || clamp で可変にする。 || padding: clamp(1rem, 4vw, 3rem)
+CSS実践 || 読みやすい行の長さ || ch で幅を制限する。 || max-width: 65ch
+CSS実践 || フォントの切り替え || システムフォントを使う。 || font-family: system-ui
+CSS実践 || 日本語向けのフォント指定 || 和文フォントを並べる。 || font-family: "Hiragino Sans", "Meiryo", sans-serif
+CSS実践 || 游ゴシックの指定 || 太さに注意する。 || font-family: "Yu Gothic"
+CSS実践 || 縦書きのレイアウト || 縦書きにする。 || writing-mode: vertical-rl;
+CSS実践 || 禁則処理 || 行頭・行末の約物を制御する。 || line-break: strict;
+CSS実践 || 印刷で非表示 || 印刷時に隠す。 || @media print { .no-print { display: none } }
+CSS実践 || 印刷の改ページ制御 || 要素の途中で切らない。 || break-inside: avoid;
+CSS実践 || クリアフィックス || 回り込みを内包する。 || display: flow-root;
+CSS実践 || リセットの定番 || box-sizing を揃える。 || *, *::before, *::after { box-sizing: border-box }
+CSS実践 || 画像をレスポンシブに || 幅を親に合わせる。 || img { max-width: 100%; height: auto; }
+CSS実践 || 動画の比率維持 || 比率を指定する。 || aspect-ratio: 16/9
+CSS実践 || iframe のレスポンシブ || 比率を保って広げる。 || width: 100%; aspect-ratio: 16/9;
+CSS実践 || 背景画像の全面表示 || 覆うように拡大する。 || background-size: cover;
+CSS実践 || 固定背景 || スクロールしても動かさない。 || background-attachment: fixed;
+CSS実践 || 複数の背景 || 背景を重ねる。 || background: url(a.png), url(b.png);
+CSS実践 || 複数の影 || 影を重ねる。 || box-shadow: 0 1px 2px #000, 0 4px 8px #000;
+CSS実践 || 内側の影 || 内側に影をつける。 || box-shadow: inset 0 2px 4px #000;
+CSS実践 || 枠線だけ角丸の矢印 || 疑似要素と回転で作る。 || transform: rotate(45deg)
+CSS実践 || ハンバーガーアイコン || 3本線を描く。 || box-shadow で線を足す
+CSS実践 || クリックできる範囲の拡大 || 疑似要素で広げる。 || a::after { position:absolute; inset:0 }
+CSS実践 || フォーカスの見た目 || キーボード操作の強調。 || :focus-visible { outline: 2px solid }
+CSS実践 || 選択範囲の色 || 選択時の色を変える。 || ::selection
+CSS実践 || スクロールバーの装飾 || 見た目を調整する。 || scrollbar-color: #888 #eee;
+CSS実践 || スムーススクロール || ゆっくり移動する。 || scroll-behavior: smooth;
+CSS実践 || アンカーのずれ補正 || 固定ヘッダー分を空ける。 || scroll-margin-top: 80px;
+CSS実践 || 要素の重なり順の整理 || z-index を変数にする。 || --z-modal: 100
+CSS実践 || 子要素の等間隔 || gap を使う。 || display:flex; gap:1rem;
+CSS実践 || 最後の要素だけ余白なし || :last-child で外す。 || li:last-child { margin: 0 }
+CSS実践 || 兄弟の区切り線 || 隣接で線を引く。 || li + li { border-top: 1px solid }
+CSS実践 || 空の要素を隠す || :empty を使う。 || p:empty { display: none }
+CSS実践 || 外部リンクに印 || href で判定する。 || a[href^="http"]::after
+CSS実践 || PDF リンクにアイコン || 末尾で判定する。 || a[href$=".pdf"]::before
+CSS実践 || 子の数で変える || :has と :nth-child を組み合わせる。 || li:first-child:nth-last-child(3)
+CSS実践 || ホバーできる環境だけ || hover の有無で分ける。 || @media (hover:hover)
+CSS実践 || タッチ向けの大きさ || 押しやすい大きさにする。 || min-height: 44px
+CSS実践 || コンテナクエリでカード || 親の幅で変える。 || @container (min-width: 400px)
+CSS実践 || 親の状態で子を変える || :has で親を装飾する。 || .card:has(:checked)
+CSS実践 || ネストで整理 || 規則を入れ子にする。 || .card { & h2 { } }
+CSS実践 || レイヤーで優先度管理 || @layer で順序を決める。 || @layer reset, base;
+CSS実践 || カスタムプロパティで余白 || スペースの規則を統一する。 || --space: 8px
+CSS実践 || デザイントークン || 色や余白を名前で管理する。 || design tokens
+CSS実践 || 色のコントラスト確認 || 比を計算して確かめる。 || 4.5:1
+HTML実践 || HTML5 の最小の雛形 || 最低限の構成。 || <!doctype html>
+HTML実践 || lang の付け方 || 言語を宣言する。 || <html lang="ja">
+HTML実践 || 文字コードは最初に || charset を先頭で宣言する。 || <meta charset="utf-8">
+HTML実践 || viewport の指定 || スマホ表示の基本。 || width=device-width, initial-scale=1
+HTML実践 || 見出しの使い方 || 文書の構造を表す。 || h1 は1つが目安
+HTML実践 || 段落と改行 || p と br の使い分け。 || <p> を使う
+HTML実践 || リストの使い分け || 順序の有無で選ぶ。 || ul と ol
+HTML実践 || 表の正しい使い方 || レイアウトに使わない。 || data table
+HTML実践 || 表の見出しセル || th と scope。 || <th scope="col">
+HTML実践 || リンクの文言 || 「こちら」を避ける。 || 何があるかを書く
+HTML実践 || 別タブで開く注意 || rel を併用する。 || target="_blank" rel="noopener"
+HTML実践 || 画像の代替テキスト || 目的を短く書く。 || alt="説明"
+HTML実践 || 画像のサイズ指定 || ずれを防ぐ。 || width と height
+HTML実践 || レスポンシブ画像 || srcset で切り替える。 || srcset sizes
+HTML実践 || picture で形式切替 || 新しい形式を優先する。 || <source type="image/avif">
+HTML実践 || アートディレクション || 画面ごとに画像を変える。 || <source media>
+HTML実践 || 動画の埋め込み || video と字幕。 || <video controls>
+HTML実践 || YouTube の埋め込み || iframe で埋め込む。 || <iframe src="https://www.youtube.com/embed/...">
+HTML実践 || 地図の埋め込み || iframe で埋め込む。 || <iframe src="https://maps...">
+HTML実践 || フォームのラベル || 必ず関連づける。 || <label for>
+HTML実践 || フォームの入力補助 || type と autocomplete。 || type="email" autocomplete="email"
+HTML実践 || フォームのエラー表示 || 近くに文言を出す。 || aria-describedby
+HTML実践 || 送信ボタンの二重押し防止 || 送信中は無効にする。 || button.disabled = true
+HTML実践 || CSRF トークン || 偽造要求を防ぐ。 || <input type="hidden" name="_token">
+HTML実践 || ハニーポット || 機械の投稿を見分ける。 || 隠し入力欄
+HTML実践 || reCAPTCHA || 人間か確かめる。 || g-recaptcha
+HTML実践 || コメントの書き方 || HTML のコメント。 || <!-- メモ -->
+HTML実践 || 条件付きコメント (旧) || 古い IE 向けの記法。 || <!--[if IE]>
+HTML実践 || インデントの流儀 || 読みやすく整える。 || 2 スペース
+HTML実践 || 属性の引用符 || 二重引用符で囲む。 || class="a"
+HTML実践 || 閉じタグの省略 || 一部は省略できる。 || <li> の終了タグ
+HTML実践 || 空要素 || 閉じタグがない要素。 || <br>, <img>, <input>
+HTML実践 || ブール属性 || 書くだけで有効。 || disabled
+HTML実践 || id の重複禁止 || id は1つだけ。 || id="main"
+HTML実践 || class の複数指定 || 空白で区切る。 || class="a b"
+HTML実践 || data 属性の活用 || JS と値を共有する。 || data-id
+HTML実践 || HTML のバリデーション || 文法を検査する。 || validator.w3.org
+HTML実践 || セマンティック HTML || 意味に合った要素を使う。 || <nav>, <main>
+HTML実践 || div 乱用の回避 || 適切な要素を選ぶ。 || divitis
+HTML実践 || ページのアウトライン || 見出しで構造を作る。 || h1〜h6
+HTML実践 || パンくずリスト || 階層を示す。 || <nav aria-label="breadcrumb">
+HTML実践 || ページネーション || ページ送りの構造。 || <nav aria-label="pagination">
+HTML実践 || ソーシャルボタン || 共有のリンク。 || intent URL
+HTML実践 || favicon の用意 || タブのアイコン。 || <link rel="icon">
+HTML実践 || ホーム画面追加 || manifest を用意する。 || <link rel="manifest">
+HTML実践 || 外部 CSS の読み込み || link で読む。 || <link rel="stylesheet" href="a.css">
+HTML実践 || 外部 JS の読み込み || defer を付ける。 || <script src="a.js" defer>
+HTML実践 || インライン CSS の使いどころ || 初期表示の最小限に。 || <style>
+HTML実践 || HTML メール || テーブルとインライン CSS。 || <table role="presentation">
+HTML実践 || mailto リンク || メールを作成する。 || <a href="mailto:a@b.c">
+HTML実践 || tel リンク || 電話をかける。 || <a href="tel:0312345678">
+HTML実践 || sms リンク || SMS を作成する。 || <a href="sms:0312345678">
+HTML実践 || ページ内リンク || id へ移動する。 || <a href="#top">
+HTML実践 || 印刷ボタン || 印刷を呼び出す。 || onclick="window.print()"
+HTML実践 || 自動リダイレクト || meta refresh で移す。 || <meta http-equiv="refresh" content="0;url=/a">
+HTML実践 || 検索エンジンに載せない || noindex を指定する。 || <meta name="robots" content="noindex">
+HTML実践 || 正規 URL の指定 || 重複を避ける。 || <link rel="canonical">
+HTML実践 || 多言語ページの関連づけ || hreflang を付ける。 || <link rel="alternate" hreflang="en">
+HTML実践 || アクセス解析タグ || 計測のスクリプト。 || gtag.js
+HTML実践 || Cookie 同意 || 同意を得る仕組み。 || consent banner
+HTML実践 || 著作権表示 || フッターに載せる。 || &copy; 2026
+HTML実践 || ライセンス表記 || 利用条件を示す。 || rel="license"
