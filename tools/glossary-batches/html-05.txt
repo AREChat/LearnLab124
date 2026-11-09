@@ -1,0 +1,80 @@
+CSS論理プロパティ || inline-size || 文字の流れ方向の大きさ（横書きなら幅）。 || inline-size: 50%;
+CSS論理プロパティ || block-size || ブロック方向の大きさ（横書きなら高さ）。 || block-size: 100px;
+CSS論理プロパティ || min-inline-size / max-inline-size || 幅の下限・上限（論理）。 || max-inline-size: 60ch;
+CSS論理プロパティ || min-block-size / max-block-size || 高さの下限・上限（論理）。 || min-block-size: 100vh;
+CSS論理プロパティ || margin-inline-start / end || 文字の流れの始め・終わりの外余白。 || margin-inline-start: 1rem;
+CSS論理プロパティ || margin-block-start / end || ブロック方向の始め・終わりの外余白。 || margin-block-end: 1rem;
+CSS論理プロパティ || padding-inline-start / end || 文字の流れの始め・終わりの内余白。 || padding-inline-end: 8px;
+CSS論理プロパティ || padding-block-start / end || ブロック方向の内余白。 || padding-block-start: 8px;
+CSS論理プロパティ || border-inline / border-block || 論理方向の枠線。 || border-block-end: 1px solid;
+CSS論理プロパティ || border-start-start-radius || 論理方向の角丸。 || border-start-start-radius: 8px;
+CSS論理プロパティ || inset-inline / inset-block || 論理方向の位置。 || inset-inline-start: 0;
+CSS論理プロパティ || text-align: start / end || 論理方向の文字揃え。 || text-align: start;
+CSS論理プロパティ || float: inline-start || 論理方向の回り込み。 || float: inline-start;
+CSS論理プロパティ || overflow-inline / block || 論理方向のはみ出し。 || overflow-block: auto;
+CSS論理プロパティ || scroll-padding || スクロール吸着の内側余白。 || scroll-padding-top: 80px;
+CSS論理プロパティ || overscroll-behavior-inline || 論理方向の端の動作。 || overscroll-behavior-inline: contain;
+CSS論理プロパティ || contain-intrinsic-size || 描画省略時の仮の大きさ。 || contain-intrinsic-size: auto 500px;
+CSS論理プロパティ || field-sizing || 入力欄を内容に合わせる。 || field-sizing: content;
+CSS論理プロパティ || interpolate-size || auto への補間を許す。 || interpolate-size: allow-keywords;
+CSS論理プロパティ || text-box-trim || 余白の文字枠を削る。 || text-box-trim: trim-both;
+CSS論理プロパティ || text-box-edge || 文字枠の基準。 || text-box-edge: cap alphabetic;
+CSS論理プロパティ || hanging-punctuation || 句読点のぶら下げ。 || hanging-punctuation: first;
+CSS論理プロパティ || font-variant-numeric || 数字の字形。 || font-variant-numeric: tabular-nums;
+CSS論理プロパティ || font-variant-east-asian || 東アジア文字の字形。 || font-variant-east-asian: jis90;
+CSS論理プロパティ || font-variation-settings || 可変フォントの軸を指定する。 || font-variation-settings: "wght" 600;
+CSS論理プロパティ || font-size-adjust || 書体が変わっても見た目の大きさを揃える。 || font-size-adjust: .5;
+CSS論理プロパティ || text-spacing-trim || 約物の間隔を詰める。 || text-spacing-trim: trim-start;
+CSS論理プロパティ || text-autospace || 和文と欧文の間に空きを入れる。 || text-autospace: normal;
+CSS論理プロパティ || word-break: auto-phrase || 文節で改行する。 || word-break: auto-phrase;
+CSS論理プロパティ || line-clamp || 指定行数で省略する（標準）。 || line-clamp: 3;
+CSS論理プロパティ || text-emphasis || 圏点（傍点）。 || text-emphasis: dot;
+CSS論理プロパティ || text-justify || 両端揃えの方式。 || text-justify: inter-character;
+CSS論理プロパティ || shape-outside || 回り込みの形。 || shape-outside: circle(50%);
+CSS論理プロパティ || column-count / column-width || 段組みの数・幅。 || column-count: 2;
+CSS論理プロパティ || column-rule || 段の区切り線。 || column-rule: 1px solid #ccc;
+CSS論理プロパティ || column-span || 段をまたぐ。 || column-span: all;
+CSS論理プロパティ || break-inside / break-before || 分割（改ページや段）の制御。 || break-inside: avoid;
+CSS論理プロパティ || orphans / widows || ページ末・先頭に残す行数。 || widows: 2;
+CSS論理プロパティ || page-break-after || 改ページの指定（旧）。 || page-break-after: always;
+CSS論理プロパティ || print-color-adjust || 印刷時の背景色の扱い。 || print-color-adjust: exact;
+CSS論理プロパティ || image-rendering || 拡大時の画素の見え方。 || image-rendering: pixelated;
+CSS論理プロパティ || image-orientation || 画像の向き。 || image-orientation: from-image;
+CSS論理プロパティ || mask-size / mask-position || マスクの大きさ・位置。 || mask-size: cover;
+CSS論理プロパティ || shape-rendering || SVG の図形の描画品質。 || shape-rendering: crispEdges;
+CSS論理プロパティ || paint-order || 塗りと線の描画順。 || paint-order: stroke fill;
+CSS論理プロパティ || vector-effect || SVG の線の拡縮の扱い。 || vector-effect: non-scaling-stroke;
+CSS論理プロパティ || stroke-linecap / linejoin || 線の端・つなぎの形。 || stroke-linecap: round;
+CSS論理プロパティ || fill-opacity / stroke-opacity || 塗り・線の透明度。 || fill-opacity: .5;
+CSS論理プロパティ || mix-blend-mode: difference || 差の合成。 || mix-blend-mode: difference;
+CSS論理プロパティ || drop-shadow() || 形に沿った影。 || filter: drop-shadow(2px 2px 2px #000)
+CSS論理プロパティ || grayscale() / sepia() || 白黒・セピアの効果。 || filter: grayscale(1)
+CSS論理プロパティ || brightness() / contrast() || 明るさ・コントラスト。 || filter: brightness(1.2)
+CSS論理プロパティ || hue-rotate() / saturate() || 色相・彩度の変更。 || filter: hue-rotate(90deg)
+CSS論理プロパティ || invert() || 色の反転。 || filter: invert(1)
+CSS論理プロパティ || touch-action || タッチ操作の扱い。 || touch-action: manipulation;
+CSS論理プロパティ || -webkit-tap-highlight-color || タップ時の強調色。 || -webkit-tap-highlight-color: transparent;
+CSS論理プロパティ || -webkit-overflow-scrolling || iOS の慣性スクロール（旧）。 || -webkit-overflow-scrolling: touch;
+CSS論理プロパティ || safe-area-inset-* || ノッチなどの安全領域。 || env(safe-area-inset-bottom)
+CSS論理プロパティ || viewport-fit || 表示領域の使い方。 || viewport-fit=cover
+CSS論理プロパティ || interactive-widget || キーボード表示時の挙動。 || interactive-widget=resizes-content
+CSS論理プロパティ || anchor-name / position-anchor || アンカー配置の名前と基準。 || position-anchor: --a;
+CSS論理プロパティ || position-area || アンカーの周りの位置。 || position-area: top;
+CSS論理プロパティ || anchor() || アンカーの端を参照する。 || top: anchor(bottom);
+CSS論理プロパティ || popover-target 配置 || ポップオーバーの基準。 || popover + anchor
+CSS論理プロパティ || timeline-scope || タイムラインの範囲。 || timeline-scope: --t;
+CSS論理プロパティ || scroll-timeline || スクロールの時間軸。 || scroll-timeline: --t block;
+CSS論理プロパティ || animation-range || アニメーションの範囲。 || animation-range: entry 0% cover 50%;
+CSS論理プロパティ || reading-flow || 読み順の指定。 || reading-flow: flex-visual;
+CSS論理プロパティ || corner-shape || 角の形。 || corner-shape: squircle;
+CSS論理プロパティ || sibling-index() || 兄弟の順番を得る。 || calc(sibling-index() * 50ms)
+CSS論理プロパティ || if() 関数 || 条件で値を決める。 || if(media(...): a; else: b)
+CSS論理プロパティ || @function || CSS の関数を定義する。 || @function --f()
+CSS論理プロパティ || @mixin 相当 || 規則の再利用（Sass）。 || @mixin center { ... }
+CSS論理プロパティ || :nth-child(of S) || 条件に合う中で n 番目。 || :nth-child(2 of .a)
+CSS論理プロパティ || :has() の活用 || 親を条件で装飾する。 || .card:has(img)
+CSS論理プロパティ || :target-within || 内側が target の要素。 || :target-within
+CSS論理プロパティ || :autofill || 自動入力された欄。 || input:autofill
+CSS論理プロパティ || :blank || 空の入力欄。 || input:blank
+CSS論理プロパティ || :local-link || 同じサイト内のリンク。 || :local-link
+CSS論理プロパティ || :heading || 見出しの要素。 || :heading

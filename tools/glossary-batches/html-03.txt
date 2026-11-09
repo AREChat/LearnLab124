@@ -1,0 +1,267 @@
+ARIA || role=button || ボタンとして扱う。 || <div role="button">
+ARIA || role=navigation || ナビゲーション領域。 || role="navigation"
+ARIA || role=main / banner / contentinfo || 主要領域・ヘッダー・フッター。 || role="main"
+ARIA || role=dialog / alertdialog || ダイアログ。 || role="dialog"
+ARIA || role=alert / status || 通知・状態の読み上げ。 || role="alert"
+ARIA || role=tab / tablist / tabpanel || タブ UI。 || role="tablist"
+ARIA || role=menu / menuitem || メニュー。 || role="menu"
+ARIA || role=listbox / option || 選択リスト。 || role="listbox"
+ARIA || role=combobox || 入力と候補の組み合わせ。 || role="combobox"
+ARIA || role=tree / treeitem || 木構造。 || role="tree"
+ARIA || role=grid / row / gridcell || 表形式の操作部品。 || role="grid"
+ARIA || role=slider / spinbutton || スライダー・数値入力。 || role="slider"
+ARIA || role=switch || オン・オフの切り替え。 || role="switch"
+ARIA || role=progressbar || 進捗バー。 || role="progressbar"
+ARIA || role=tooltip || ツールチップ。 || role="tooltip"
+ARIA || role=search / form / region || 検索・フォーム・領域。 || role="search"
+ARIA || role=presentation / none || 意味を持たせない。 || role="presentation"
+ARIA || role=img || 画像として扱う。 || role="img"
+ARIA || aria-label || 見えない名前を付ける。 || aria-label="閉じる"
+ARIA || aria-labelledby || 別の要素を名前にする。 || aria-labelledby="t1"
+ARIA || aria-describedby || 説明を関連づける。 || aria-describedby="d1"
+ARIA || aria-hidden || 支援技術から隠す。 || aria-hidden="true"
+ARIA || aria-expanded || 開閉の状態。 || aria-expanded="false"
+ARIA || aria-controls || 操作対象を示す。 || aria-controls="menu1"
+ARIA || aria-haspopup || ポップアップを持つ。 || aria-haspopup="menu"
+ARIA || aria-selected || 選択状態。 || aria-selected="true"
+ARIA || aria-checked || チェック状態。 || aria-checked="mixed"
+ARIA || aria-pressed || 押された状態。 || aria-pressed="true"
+ARIA || aria-disabled || 無効の状態。 || aria-disabled="true"
+ARIA || aria-current || 現在の位置。 || aria-current="page"
+ARIA || aria-live || 更新を読み上げる。 || aria-live="polite"
+ARIA || aria-atomic || まとめて読み上げる。 || aria-atomic="true"
+ARIA || aria-busy || 更新中。 || aria-busy="true"
+ARIA || aria-invalid || 入力が不正。 || aria-invalid="true"
+ARIA || aria-required || 必須入力。 || aria-required="true"
+ARIA || aria-errormessage || エラー文を示す。 || aria-errormessage="e1"
+ARIA || aria-modal || モーダルであること。 || aria-modal="true"
+ARIA || aria-owns || 所有関係を示す。 || aria-owns="x"
+ARIA || aria-activedescendant || 現在の子を示す。 || aria-activedescendant="o2"
+ARIA || aria-valuenow / min / max || 値の現在・範囲。 || aria-valuenow="50"
+ARIA || aria-orientation || 縦横の向き。 || aria-orientation="vertical"
+ARIA || aria-sort || 並べ替えの状態。 || aria-sort="ascending"
+ARIA || aria-level / posinset / setsize || 階層・位置・総数。 || aria-level="2"
+ARIA || aria-roledescription || 役割の説明を変える。 || aria-roledescription="スライド"
+ARIA || aria-keyshortcuts || ショートカットキー。 || aria-keyshortcuts="Alt+S"
+ARIA || ランドマーク || ページの主要な領域。 || <nav>, <main>
+ARIA || スキップリンク || 本文へ飛ぶリンク。 || <a href="#main">本文へ</a>
+ARIA || フォーカス管理 || 操作の位置を制御する。 || el.focus()
+ARIA || フォーカストラップ || ダイアログ内に留める。 || focus trap
+ARIA || ロービング tabindex || 部品内の移動で tabindex を切り替える。 || tabindex="-1"
+ARIA || スクリーンリーダー || 画面を音声で読み上げる。 || NVDA, VoiceOver
+ARIA || WCAG || ウェブの利用しやすさの基準。 || WCAG 2.2
+ARIA || 達成基準 A/AA/AAA || 適合のレベル。 || AA
+ARIA || コントラスト比 || 文字と背景の明暗差。 || 4.5:1
+ARIA || 代替テキストの書き方 || 画像の目的を言葉で伝える。 || alt
+ARIA || 装飾画像 || 意味のない画像。 || alt=""
+ARIA || キーボード操作 || マウスなしで操作できる。 || Tab, Enter, Space
+ARIA || フォーカスリング || フォーカスの輪郭。 || :focus-visible
+ARIA || ターゲットサイズ || 押せる領域の大きさ。 || 24px 以上
+ARIA || 視覚的に隠す || 読み上げ用に見えなくする。 || .sr-only
+ARIA || prefers-reduced-motion 対応 || 動きを減らす。 || @media
+ARIA || ライブリージョン || 動的な更新を伝える。 || aria-live
+ARIA || 色だけに頼らない || 色以外でも情報を示す。 || アイコンや文字を併用
+ARIA || 見出しの階層 || h1 から順に使う。 || h1 > h2 > h3
+ARIA || lang の指定 || 読み上げの言語を決める。 || <html lang="ja">
+ARIA || ヘッダーのスキップ || 繰り返しを飛ばす。 || skip link
+HTML要素 || <html> || 文書の根。 || <html lang="ja">
+HTML要素 || <head> / <body> || 見出し部と本体。 || <body>
+HTML要素 || <title> || 文書の題名。 || <title>題名</title>
+HTML要素 || <header> / <footer> || 頭部・足部。 || <header>
+HTML要素 || <main> || 主な内容。 || <main>
+HTML要素 || <nav> || ナビゲーション。 || <nav>
+HTML要素 || <section> || 節。 || <section>
+HTML要素 || <article> || 独立した記事。 || <article>
+HTML要素 || <aside> || 補足の内容。 || <aside>
+HTML要素 || <h1>〜<h6> || 見出し。 || <h2>
+HTML要素 || <hgroup> || 見出しと副題。 || <hgroup>
+HTML要素 || <address> || 連絡先。 || <address>
+HTML要素 || <search> || 検索の領域。 || <search>
+HTML要素 || <p> || 段落。 || <p>
+HTML要素 || <blockquote> || 長い引用。 || <blockquote cite="...">
+HTML要素 || <cite> || 作品の名前。 || <cite>
+HTML要素 || <pre> || 整形済みテキスト。 || <pre>
+HTML要素 || <code> / <kbd> / <samp> / <var> || コード・キー・出力・変数。 || <kbd>Ctrl</kbd>
+HTML要素 || <abbr> || 略語。 || <abbr title="HTML">
+HTML要素 || <dfn> || 定義する語。 || <dfn>
+HTML要素 || <mark> || ハイライト。 || <mark>
+HTML要素 || <small> || 注釈の小さな文字。 || <small>
+HTML要素 || <sub> / <sup> || 下付き・上付き。 || H<sub>2</sub>O
+HTML要素 || <s> / <del> / <ins> || 取り消し・削除・挿入。 || <del>
+HTML要素 || <time> || 日時。 || <time datetime="2026-11-09">
+HTML要素 || <data> || 機械可読な値。 || <data value="1">
+HTML要素 || <ruby> / <rt> / <rp> || ルビ。 || <ruby>漢<rt>かん</rt></ruby>
+HTML要素 || <bdi> / <bdo> || 双方向テキスト。 || <bdi>
+HTML要素 || <wbr> || 改行してよい位置。 || <wbr>
+HTML要素 || <hr> || 区切り線。 || <hr>
+HTML要素 || <ul> / <ol> / <li> || 箇条書き。 || <ol>
+HTML要素 || <dl> / <dt> / <dd> || 定義リスト。 || <dl>
+HTML要素 || <menu> || 操作の一覧。 || <menu>
+HTML要素 || <figure> / <figcaption> || 図と説明。 || <figure>
+HTML要素 || <picture> / <source> || 条件で画像を切り替える。 || <picture>
+HTML要素 || <video> / <audio> || 動画・音声。 || <video controls>
+HTML要素 || <track> || 字幕。 || <track>
+HTML要素 || <canvas> || 描画領域。 || <canvas>
+HTML要素 || <svg> || ベクター画像。 || <svg>
+HTML要素 || <math> || 数式（MathML）。 || <math>
+HTML要素 || <iframe> || 他のページの埋め込み。 || <iframe>
+HTML要素 || <embed> / <object> || 外部の内容の埋め込み。 || <object>
+HTML要素 || <map> / <area> || 画像の領域リンク。 || <map>
+HTML要素 || <table> 関連 || 表の構成要素。 || <thead>, <tbody>, <tfoot>
+HTML要素 || <caption> || 表の題。 || <caption>
+HTML要素 || <colgroup> / <col> || 列のまとまり。 || <colgroup>
+HTML要素 || <form> || 入力フォーム。 || <form>
+HTML要素 || <label> || 入力のラベル。 || <label>
+HTML要素 || <button> || ボタン。 || <button type="button">
+HTML要素 || <select> / <option> || 選択式の入力。 || <select>
+HTML要素 || <textarea> || 複数行の入力。 || <textarea rows="4">
+HTML要素 || <meter> || 範囲内の量。 || <meter value=".6">
+HTML要素 || <details> / <summary> || 開閉できる説明。 || <details>
+HTML要素 || <dialog> || ダイアログ。 || <dialog>
+HTML要素 || <template> || 複製用のひな形。 || <template>
+HTML要素 || <slot> || 差し込み口。 || <slot>
+HTML要素 || <noscript> || スクリプトが使えない時。 || <noscript>
+HTML要素 || <script> / <style> / <link> || スクリプト・スタイル・関連づけ。 || <link rel="stylesheet">
+HTML要素 || <portal> || 別ページの埋め込み（廃止）。 || 非推奨
+HTML要素 || <center> / <font> || 廃止された表示要素。 || 使わない
+HTML要素 || <marquee> || 廃止された流れる文字。 || 使わない
+HTML要素 || <frameset> || 廃止されたフレーム。 || 使わない
+SVGとCanvas || viewBox || 描画座標の範囲。 || viewBox="0 0 100 100"
+SVGとCanvas || <circle> / <rect> / <ellipse> || 基本図形。 || <circle cx="50" cy="50" r="40"/>
+SVGとCanvas || <line> / <polyline> / <polygon> || 線と多角形。 || <polygon points="..."/>
+SVGとCanvas || <path> || 自由な線。 || <path d="M0 0 L10 10"/>
+SVGとCanvas || path の d 属性 || 描画の命令列。 || M, L, C, Z
+SVGとCanvas || <text> / <tspan> || 文字。 || <text x="0" y="10">
+SVGとCanvas || <g> || 図形をまとめる。 || <g>
+SVGとCanvas || <defs> / <use> || 部品の定義と再利用。 || <use href="#a"/>
+SVGとCanvas || <symbol> || 再利用する部品。 || <symbol id="icon">
+SVGとCanvas || <linearGradient> / <radialGradient> || グラデーション。 || <linearGradient id="g">
+SVGとCanvas || <clipPath> / <mask> || 切り抜き・マスク。 || <clipPath>
+SVGとCanvas || <filter> || 効果。 || <feGaussianBlur>
+SVGとCanvas || fill / stroke || 塗りと線の色。 || fill="red"
+SVGとCanvas || stroke-width / dasharray || 線の太さ・破線。 || stroke-dasharray="4"
+SVGとCanvas || preserveAspectRatio || 縦横比の扱い。 || preserveAspectRatio="xMidYMid meet"
+SVGとCanvas || SVG スプライト || 複数のアイコンをまとめる。 || <use href="sprite.svg#a">
+SVGとCanvas || インライン SVG || HTML に直接書く。 || <svg>…</svg>
+SVGとCanvas || SMIL || SVG のアニメーション。 || <animate>
+SVGとCanvas || getContext('2d') || 2D 描画の準備。 || canvas.getContext('2d')
+SVGとCanvas || fillRect / strokeRect || 四角を描く。 || ctx.fillRect(0,0,10,10)
+SVGとCanvas || beginPath / moveTo / lineTo || 経路を作る。 || ctx.lineTo(10,10)
+SVGとCanvas || arc || 円弧を描く。 || ctx.arc(50,50,40,0,Math.PI*2)
+SVGとCanvas || fillText || 文字を描く。 || ctx.fillText('a',10,10)
+SVGとCanvas || drawImage || 画像を描く。 || ctx.drawImage(img,0,0)
+SVGとCanvas || getImageData || 画素を取る。 || ctx.getImageData(0,0,w,h)
+SVGとCanvas || toDataURL / toBlob || 画像として書き出す。 || canvas.toDataURL()
+SVGとCanvas || requestAnimationFrame || 描画の度に呼ぶ。 || requestAnimationFrame(draw)
+SVGとCanvas || OffscreenCanvas || 画面外の描画。 || new OffscreenCanvas(100,100)
+SVGとCanvas || WebGL || 3D 描画。 || getContext('webgl')
+SVGとCanvas || WebGPU || 新しい描画 API。 || navigator.gpu
+Web API || document.querySelector || CSS セレクタで1つ取る。 || document.querySelector('.a')
+Web API || querySelectorAll || すべて取る。 || document.querySelectorAll('li')
+Web API || getElementById || id で取る。 || document.getElementById('a')
+Web API || createElement || 要素を作る。 || document.createElement('div')
+Web API || appendChild / append || 子を追加する。 || parent.append(el)
+Web API || insertAdjacentHTML || 位置を指定して HTML を挿入。 || el.insertAdjacentHTML('beforeend', h)
+Web API || classList || クラスを操作する。 || el.classList.toggle('on')
+Web API || dataset || data 属性を扱う。 || el.dataset.id
+Web API || getAttribute / setAttribute || 属性を読み書きする。 || el.setAttribute('a', '1')
+Web API || textContent / innerHTML || 内容を読み書きする。 || el.textContent = 'a'
+Web API || addEventListener || イベントを受ける。 || el.addEventListener('click', f)
+Web API || イベント委譲 || 親でまとめて受ける。 || e.target.closest('li')
+Web API || preventDefault / stopPropagation || 既定動作・伝播を止める。 || e.preventDefault()
+Web API || CustomEvent || 独自のイベント。 || new CustomEvent('a')
+Web API || IntersectionObserver || 画面内に入ったか監視する。 || new IntersectionObserver(cb)
+Web API || ResizeObserver || 大きさの変化を監視する。 || new ResizeObserver(cb)
+Web API || MutationObserver || DOM の変更を監視する。 || new MutationObserver(cb)
+Web API || matchMedia || メディアクエリを調べる。 || matchMedia('(min-width:600px)').matches
+Web API || getComputedStyle || 実際のスタイルを取る。 || getComputedStyle(el)
+Web API || getBoundingClientRect || 位置と大きさを取る。 || el.getBoundingClientRect()
+Web API || scrollIntoView || 見える位置へスクロールする。 || el.scrollIntoView()
+Web API || fetch || 通信する。 || fetch(url)
+Web API || AbortController || 通信を中断する。 || new AbortController()
+Web API || localStorage / sessionStorage || ブラウザに保存する。 || localStorage.setItem('a','1')
+Web API || IndexedDB || ブラウザ内のデータベース。 || indexedDB.open('db')
+Web API || Cookie || 小さなデータの保存。 || document.cookie
+Web API || History API || 履歴を操作する。 || history.pushState()
+Web API || URL / URLSearchParams || URL とクエリを扱う。 || new URLSearchParams(location.search)
+Web API || Clipboard API || コピーと貼り付け。 || navigator.clipboard.writeText('a')
+Web API || Web Share API || 共有する。 || navigator.share({url})
+Web API || Geolocation API || 位置情報。 || navigator.geolocation
+Web API || Notification API || 通知を出す。 || new Notification('a')
+Web API || Fullscreen API || 全画面表示。 || el.requestFullscreen()
+Web API || Drag and Drop API || ドラッグ操作。 || ondragstart
+Web API || File API / FileReader || ファイルを読む。 || new FileReader()
+Web API || Blob / URL.createObjectURL || データを URL にする。 || URL.createObjectURL(blob)
+Web API || Web Workers || 別スレッドで処理する。 || new Worker('w.js')
+Web API || Service Worker || 通信を仲介する。 || navigator.serviceWorker.register('sw.js')
+Web API || Cache API || 応答を保存する。 || caches.open('v1')
+Web API || Push API || サーバーからの通知。 || pushManager.subscribe()
+Web API || Web Audio API || 音を扱う。 || new AudioContext()
+Web API || MediaDevices || カメラ・マイクを使う。 || navigator.mediaDevices.getUserMedia()
+Web API || Web Speech API || 音声認識・合成。 || speechSynthesis.speak()
+Web API || Web Components || 再利用できる部品。 || customElements.define()
+Web API || Shadow DOM || 内部を隔離する。 || el.attachShadow({mode:'open'})
+Web API || Custom Elements || 独自の要素を作る。 || class X extends HTMLElement
+Web API || Popover API || ポップオーバーの操作。 || el.showPopover()
+Web API || Dialog API || ダイアログの操作。 || dialog.showModal()
+Web API || View Transition API || 遷移を滑らかにする。 || startViewTransition
+Web API || Intl API || 言語に応じた書式。 || new Intl.DateTimeFormat('ja')
+Web API || Performance API || 性能を測る。 || performance.now()
+Web API || PerformanceObserver || 性能指標を監視する。 || new PerformanceObserver(cb)
+Web API || Page Visibility API || タブが見えるかを調べる。 || document.visibilityState
+Web API || Battery / Network Information || 端末の状態を調べる。 || navigator.connection
+Web API || Screen Orientation API || 画面の向き。 || screen.orientation
+Web API || Vibration API || 振動させる。 || navigator.vibrate(100)
+Web API || Wake Lock API || 画面の消灯を防ぐ。 || navigator.wakeLock.request()
+Web API || BroadcastChannel || タブ間の通信。 || new BroadcastChannel('a')
+Web API || postMessage || 窓どうしのメッセージ。 || win.postMessage(m, origin)
+Web API || WebSocket || 双方向通信。 || new WebSocket(url)
+Web API || Server-Sent Events || サーバーからの一方向通信。 || new EventSource(url)
+Web API || WebRTC || 端末間の通信。 || new RTCPeerConnection()
+Web API || Payment Request API || 支払いの画面。 || new PaymentRequest()
+Web API || Web Authentication || パスキー等の認証。 || navigator.credentials.create()
+Web API || File System Access API || ファイルの読み書き。 || showOpenFilePicker()
+Web API || Structured Clone || 深い複製。 || structuredClone(obj)
+Web API || queueMicrotask || マイクロタスクを予約する。 || queueMicrotask(f)
+Web API || requestIdleCallback || 暇な時に実行する。 || requestIdleCallback(f)
+Web API || Trusted Types || DOM 操作の安全策。 || trustedTypes
+Web API || Sanitizer API || HTML を安全にする。 || new Sanitizer()
+Web API || Navigation API || 画面遷移の制御。 || navigation.navigate()
+Web API || Speculation Rules || 次ページの先読み規則。 || <script type="speculationrules">
+Web API || Declarative Shadow DOM || HTML だけで書く Shadow DOM。 || <template shadowrootmode="open">
+HTTPと配信 || HTTP メソッド || 要求の種類。 || GET, POST, PUT, DELETE
+HTTPと配信 || ステータスコード || 応答の結果番号。 || 200, 301, 404
+HTTPと配信 || Content-Type || 内容の種類。 || text/html; charset=utf-8
+HTTPと配信 || Cache-Control || キャッシュの指示。 || max-age=3600
+HTTPと配信 || ETag || 内容の識別子。 || ETag: "abc"
+HTTPと配信 || CORS || 別オリジンの許可。 || Access-Control-Allow-Origin
+HTTPと配信 || Strict-Transport-Security || HTTPS を強制する。 || HSTS
+HTTPと配信 || X-Content-Type-Options || 種類の推測を止める。 || nosniff
+HTTPと配信 || Referrer-Policy || 参照元の送り方。 || strict-origin-when-cross-origin
+HTTPと配信 || Permissions-Policy || 機能の許可の制御。 || camera=()
+HTTPと配信 || SameSite Cookie || 外部サイトからの送信制御。 || SameSite=Lax
+HTTPと配信 || HTTPS || 暗号化された通信。 || https://
+HTTPと配信 || HTTP/2 || 多重化された通信。 || h2
+HTTPと配信 || HTTP/3 || QUIC 上の通信。 || h3
+HTTPと配信 || CDN || 各地から配信する仕組み。 || CDN
+HTTPと配信 || gzip / Brotli || 圧縮方式。 || Content-Encoding: br
+HTTPと配信 || WebP / AVIF || 軽い画像形式。 || image/avif
+HTTPと配信 || WOFF2 || 軽い Web フォント形式。 || font/woff2
+HTTPと配信 || SVG 画像の最適化 || 不要な情報を減らす。 || svgo
+HTTPと配信 || 画像の遅延読み込み || 必要になるまで読まない。 || loading="lazy"
+HTTPと配信 || レンダリングブロック || 表示を妨げる読み込み。 || <script> の位置
+HTTPと配信 || Core Web Vitals || 体験の主要な指標。 || LCP, INP, CLS
+HTTPと配信 || LCP || 最大の要素の表示時間。 || Largest Contentful Paint
+HTTPと配信 || INP || 操作への応答の速さ。 || Interaction to Next Paint
+HTTPと配信 || CLS || 表示のずれ。 || Cumulative Layout Shift
+HTTPと配信 || Lighthouse || 品質の自動検査。 || lighthouse
+HTTPと配信 || PWA || アプリのように使える Web。 || manifest + service worker
+HTTPと配信 || SSR / SSG || サーバー・ビルド時に生成。 || static site generation
+HTTPと配信 || SPA || 1ページで動くアプリ。 || single page application
+HTTPと配信 || ハイドレーション || 生成済み HTML を動かす。 || hydration
+HTTPと配信 || Web サーバー || ページを配信するソフト。 || nginx, Apache
+HTTPと配信 || ドメイン / DNS || 名前から場所を引く。 || example.com
+HTTPと配信 || SEO || 検索で見つけやすくする。 || title, description
+HTTPと配信 || OGP 画像 || 共有時の画像。 || og:image
+HTTPと配信 || GitHub Pages || 静的サイトの公開。 || https://user.github.io
+HTTPと配信 || ブラウザの開発者ツール || 検査とデバッグ。 || F12
