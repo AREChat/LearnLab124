@@ -150,4 +150,30 @@
       QuizApp.quiz.__lenientText = true;
     }
   } catch (_e) {}
+
+  // 7：選択肢・正解・解説に「<p>」「<input>」「&lt;」のような HTML の書き方の文字が入った問題が、
+  //   画面で HTML として読まれてしまい、タグが消える不具合を直す。
+  //   （例：「<mark>」「<span>」の選択肢が、「A.」「B.」だけの空白になる／解説の途中が欠ける／「正解は「」です」になる。
+  //     「<」と「&lt;」の選択肢が、どちらも「<」に見える問題もあった）
+  //   元のデータは変えずに、画面に出す直前の控えの中で、& < > を文字として置きかえて渡す。
+  function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  var SHOWN = ['a', 'b', 'c', 'd', 'choice_a', 'choice_b', 'choice_c', 'choice_d', 'explanation', 'explain', 'correct_answer', 'answer'];
+  function shownCopy(q) {
+    if (!q || typeof q !== 'object') return q;
+    var c = Object.assign({}, q);
+    SHOWN.forEach(function (f) { if (typeof c[f] === 'string') c[f] = escHtml(c[f]); });
+    return c;
+  }
+  try {
+    if (typeof QuizApp !== 'undefined' && QuizApp && QuizApp.ui && !QuizApp.ui.__plainText) {
+      var origChoices = QuizApp.ui.renderChoices, origFeedback = QuizApp.ui.showFeedback;
+      if (typeof origChoices === 'function') {
+        QuizApp.ui.renderChoices = function (question) { return origChoices.call(this, shownCopy(question)); };
+      }
+      if (typeof origFeedback === 'function') {
+        QuizApp.ui.showFeedback = function (isCorrect, question) { return origFeedback.call(this, isCorrect, shownCopy(question)); };
+      }
+      QuizApp.ui.__plainText = true;
+    }
+  } catch (_e) {}
 })();

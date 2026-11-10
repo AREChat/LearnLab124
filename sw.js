@@ -5,6 +5,6 @@
 // ・GET 以外／ほかのサイト（Neon など）には さわらない
 // ・ファイルを足す・消す・変えたら  node tools/gen-precache.js  を実行し、下の CACHE の数字を上げる
 importScripts("precache-manifest.js", "sw-core.js");
-const CACHE = "study-cache-v19-" + (self.ARE_MANIFEST ? self.ARE_MANIFEST.v : "0");
+const CACHE = "study-cache-v20-" + (self.ARE_MANIFEST ? self.ARE_MANIFEST.v : "0");
 const core = self.areCore({shell: CACHE, root: "./", precache: true, swr: true, owns: (k) => k.indexOf("study-cache-") === 0});
 self.addEventListener("install", () => { self.skipWaiting(); });
