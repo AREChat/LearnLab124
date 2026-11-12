@@ -72,11 +72,14 @@
 
     // デバッグ検出（開発者ツールが開かれているかチェック）
     const detectDevTools = function() {
-        const threshold = 160;
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        // ブラウザの拡大（110%など）や、タブレットの画面の変化では、幅の差と高さの差が「そろって」大きくなる。
+        // 開発者ツールを横に出したときは幅の差だけ、下に出したときは高さの差だけが大きい。そろって大きいときは警告しない。
+        const dw = window.outerWidth - window.innerWidth;
+        const dh = window.outerHeight - window.innerHeight;
+        const widthThreshold = dw > 260 && dh < 175;
+        const heightThreshold = dh > 300 && dw < 100;
         
-        if (widthThreshold || heightThreshold) {
+        if ((widthThreshold || heightThreshold) && window.outerWidth > 0 && window.outerHeight > 0) {
             alert('⚠️ 開発者ツールの使用を検出しました。利用規約違反です。');
             // 必要に応じて、ページをリロードまたは別ページへリダイレクト
             // window.location.href = 'about:blank';
