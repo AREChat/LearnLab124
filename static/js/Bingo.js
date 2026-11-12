@@ -54,6 +54,7 @@
         function updateMaxNumber() {
             const input = document.getElementById('maxNumber');
             let value = parseInt(input.value);
+            if (!Number.isFinite(value)) value = 75;   // 空っぽ・数字でないときは、はじめの 75 にもどす
             
             if (value < 10) value = 10;
             if (value > 100) value = 100;
@@ -63,7 +64,8 @@
             
             // 表示を更新
             document.getElementById('maxCount').textContent = maxNumber;
-            document.getElementById('maxNumberInfo').textContent = maxNumber;
+            const maxNumberInfo = document.getElementById('maxNumberInfo');   // 画面にこの表示が無くても、あとの「ゲームをリセット」まで必ず進める
+            if (maxNumberInfo) maxNumberInfo.textContent = maxNumber;
             
             // ゲームをリセット
             drawnNumbers = [];
@@ -81,8 +83,9 @@
         function updateMaxNumberPlayer() {
             const input = document.getElementById('maxNumberPlayer');
             let value = parseInt(input.value);
+            if (!Number.isFinite(value)) value = 75;   // 空っぽ・数字でないときは、はじめの 75 にもどす
             
-            if (value < 10) value = 10;
+            if (value < 25) value = 25;   // カードは25マス（真ん中だけ FREE）。数字が25個より少ないと、マスが足りなくなる
             if (value > 100) value = 100;
             
             input.value = value;
