@@ -176,4 +176,41 @@
       QuizApp.ui.__plainText = true;
     }
   } catch (_e) {}
+  // 8：4択（多択）の選択肢の ならびを、問題を出すたびに ランダムに する（答えが いつも 同じ場所に ならないように）。
+  //   正解の判定は、ボタンに ついている キー（a〜d）で 行っているので、ならびを かえても 正誤は かわらない。
+  //   ただし「Aと Bの 両方」「すべて」「上記」「選択肢c は…」のように、ほかの選択肢の 場所に 頼る 問題は、ならびを かえない。
+  var REF_CHOICE = /(すべて|全て|どれも|いずれも|上記|両方|どちらも|選択肢|^[A-Da-dア-エ①-④]$|[A-Da-dア-エ][、と・&＆,][A-Da-dア-エ]|[A-D]のみ|のうち|以外のすべて)/;
+  var REF_EXPLAIN = /(選択肢\s*[a-dA-DＡ-Ｄ]|正解は\s*[a-dA-DＡ-Ｄ]\b|[a-dA-DＡ-Ｄ]が正解|[（(][a-dA-DＡ-Ｄ][）)]|[a-dA-D]\))/;
+  function keepOrder(q) {
+    try {
+      var keys = ['a', 'b', 'c', 'd'];
+      for (var i = 0; i < keys.length; i++) {
+        var t = q[keys[i]] != null ? q[keys[i]] : q['choice_' + keys[i]];
+        if (typeof t === 'string' && REF_CHOICE.test(t.trim())) return true;
+      }
+      var ex = String(q.explanation != null ? q.explanation : (q.explain != null ? q.explain : ''));
+      return REF_EXPLAIN.test(ex);
+    } catch (_e) { return true; }
+  }
+  try {
+    if (typeof QuizApp !== 'undefined' && QuizApp && QuizApp.ui && typeof QuizApp.ui.renderChoices === 'function' && !QuizApp.ui.__shuffleChoices) {
+      var origRender = QuizApp.ui.renderChoices;
+      QuizApp.ui.renderChoices = function (question) {
+        var r = origRender.apply(this, arguments);
+        try {
+          var area = QuizApp.dom && QuizApp.dom.choicesArea;
+          if (!area || !question || keepOrder(question)) return r;
+          var btns = Array.prototype.slice.call(area.querySelectorAll('.choice-btn'));
+          if (btns.length < 3) return r;
+          for (var i = btns.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = btns[i]; btns[i] = btns[j]; btns[j] = t; }
+          btns.forEach(function (b, k) {
+            b.innerHTML = b.innerHTML.replace(/^(\s*)[A-D]\.(\s)/, '$1' + String.fromCharCode(65 + k) + '.$2');
+            area.appendChild(b);
+          });
+        } catch (_e) {}
+        return r;
+      };
+      QuizApp.ui.__shuffleChoices = true;
+    }
+  } catch (_e) {}
 })();

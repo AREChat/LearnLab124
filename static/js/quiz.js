@@ -43,7 +43,19 @@
 
         function getRandomQuestions(data, count) {
             const shuffled = data.sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
+            return shuffled.slice(0, count).map(shuffleOptions);
+        }
+
+        // 3つ以上ある選択肢は、問題を出すたびに ならびを ランダムに する（答えが いつも 同じ場所に ならないように）。
+        // 正解は 文字（answer）で 見ているので、ならびを かえても 正誤は かわらない。
+        // 「すべて」「両方」「上記」など、ほかの選択肢の 場所に 頼る 問題は、そのままに する。2択（〇×）も そのまま。
+        function shuffleOptions(q) {
+            const o = q && q.options;
+            if (!Array.isArray(o) || o.length < 3) return q;
+            if (o.some(t => /(すべて|全て|どれも|いずれも|上記|両方|どちらも|選択肢|^[A-Da-dア-エ①-④]$|[A-Da-dア-エ][、と・&＆,][A-Da-dア-エ]|のうち)/.test(String(t).trim()))) return q;
+            const a = o.slice();
+            for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; }
+            return Object.assign({}, q, { options: a });
         }
 
         function showQuestion() {
