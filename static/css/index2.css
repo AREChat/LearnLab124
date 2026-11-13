@@ -556,9 +556,10 @@ body::before {
 }
 
 .choice-btn.selected {
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    background: linear-gradient(135deg, #3d7bff, #2457d6);
     color: var(--text-light);
-    border-color: #66a6ff;
+    border-color: #2457d6;
+    font-weight: 700;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(102, 166, 255, 0.3);
 }
