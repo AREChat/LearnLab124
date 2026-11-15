@@ -59,7 +59,8 @@ function showPointsModal() {
     }
 
     const rank = pointsManager.getPointsRank();
-    const streak = parseInt(localStorage.getItem('loginStreak') || '0');
+    let streak = 0;
+    try { streak = parseInt(localStorage.getItem('loginStreak') || '0'); } catch (_e) {}
     const timeBonus = pointsManager.checkTimeBonus();
 
     const modal = document.createElement('div');

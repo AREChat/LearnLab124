@@ -16,7 +16,8 @@ class PointsManager {
     }
 
     getPoints() {
-        const v = parseInt(localStorage.getItem('userPoints'), 10);
+        let v = NaN;
+        try { v = parseInt(localStorage.getItem('userPoints'), 10); } catch (_e) { /* 保存が使えない環境でも落とさない */ }
         return Number.isFinite(v) ? v : this.INITIAL_POINTS;
     }
 
