@@ -53,14 +53,16 @@
 
         // eラーニングアクセスでポイント付与
         if (typeof pointsManager !== 'undefined') {
-            // 1日1回のみポイント付与
-            const today = new Date().toDateString();
-            const lastAccess = localStorage.getItem('learningLastAccess');
-            
-            if (lastAccess !== today) {
-                pointsManager.onLearningAccess();
-                localStorage.setItem('learningLastAccess', today);
-            }
+            try {
+                // 1日1回のみポイント付与
+                const today = new Date().toDateString();
+                const lastAccess = localStorage.getItem('learningLastAccess');
+
+                if (lastAccess !== today) {
+                    pointsManager.onLearningAccess();
+                    localStorage.setItem('learningLastAccess', today);
+                }
+            } catch (e) { /* storageが使えない環境でも落とさない */ }
         }
 
         // ポイントモーダル表示

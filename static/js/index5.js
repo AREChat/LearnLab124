@@ -27,14 +27,16 @@ if ('serviceWorker' in navigator) {
 
             // マニュアル閲覧ポイント付与（1日1回）
             if (typeof pointsManager !== 'undefined') {
-                const today = new Date().toDateString();
-                const lastManualAccess = localStorage.getItem('lastManualAccess');
-                
-                if (lastManualAccess !== today) {
-                    setTimeout(() => {
-                        pointsManager.onManualAccess();
-                        localStorage.setItem('lastManualAccess', today);
-                    }, 10000); // 10秒間閲覧でポイント付与
-                }
+                try {
+                    const today = new Date().toDateString();
+                    const lastManualAccess = localStorage.getItem('lastManualAccess');
+
+                    if (lastManualAccess !== today) {
+                        setTimeout(() => {
+                            pointsManager.onManualAccess();
+                            try { localStorage.setItem('lastManualAccess', today); } catch (e) { /* storageが使えない環境でも落とさない */ }
+                        }, 10000); // 10秒間閲覧でポイント付与
+                    }
+                } catch (e) { /* storageが使えない環境でも落とさない */ }
             }
         });

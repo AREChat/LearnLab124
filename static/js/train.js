@@ -141,14 +141,16 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&am
 
 			// 電車情報確認ポイント付与（1日1回）
 			if (typeof pointsManager !== 'undefined') {
-				const today = new Date().toDateString();
-				const lastTrainCheck = localStorage.getItem('lastTrainCheck');
-				
-				if (lastTrainCheck !== today) {
-					setTimeout(() => {
-						pointsManager.onTrainCheck();
-						localStorage.setItem('lastTrainCheck', today);
-					}, 5000); // 5秒間ページに滞在でポイント付与
-				}
+				try {
+					const today = new Date().toDateString();
+					const lastTrainCheck = localStorage.getItem('lastTrainCheck');
+
+					if (lastTrainCheck !== today) {
+						setTimeout(() => {
+							pointsManager.onTrainCheck();
+							try { localStorage.setItem('lastTrainCheck', today); } catch (e) { /* storageが使えない環境でも落とさない */ }
+						}, 5000); // 5秒間ページに滞在でポイント付与
+					}
+				} catch (e) { /* storageが使えない環境でも落とさない */ }
 			}
 		});

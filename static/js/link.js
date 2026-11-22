@@ -9,12 +9,14 @@
 
             // クリックカウントを保存・読み込み
             function getClickCounts() {
-                const counts = localStorage.getItem('linkClickCounts');
-                return counts ? JSON.parse(counts) : {};
+                try {
+                    const counts = localStorage.getItem('linkClickCounts');
+                    return counts ? JSON.parse(counts) : {};
+                } catch (e) { return {}; } // storageが使えない環境でも落とさない
             }
 
             function saveClickCounts(counts) {
-                localStorage.setItem('linkClickCounts', JSON.stringify(counts));
+                try { localStorage.setItem('linkClickCounts', JSON.stringify(counts)); } catch (e) { /* storageが使えない環境でも落とさない */ }
             }
 
             // クリック数は Neon に保存（画面表示用にローカルへキャッシュ）
@@ -87,7 +89,7 @@
             // 履歴削除関数
             function clearHistory() {
                 if (confirm('よく見るサイトの履歴を削除しますか？')) {
-                    localStorage.removeItem('linkClickCounts');
+                    try { localStorage.removeItem('linkClickCounts'); } catch (e) { /* storageが使えない環境でも落とさない */ }
                     if (typeof Study !== 'undefined') Study.clearLinkClicks().catch(function () {});
                     updateFrequentSites();
                 }

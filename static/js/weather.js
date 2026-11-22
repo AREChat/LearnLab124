@@ -172,14 +172,16 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&am
 
 			// 天気情報確認ポイント付与（1日1回）
 			if (typeof pointsManager !== 'undefined') {
-				const today = new Date().toDateString();
-				const lastWeatherCheck = localStorage.getItem('lastWeatherCheck');
-				
-				if (lastWeatherCheck !== today) {
-					setTimeout(() => {
-						pointsManager.onWeatherCheck();
-						localStorage.setItem('lastWeatherCheck', today);
-					}, 5000); // 5秒間ページに滞在でポイント付与
-				}
+				try {
+					const today = new Date().toDateString();
+					const lastWeatherCheck = localStorage.getItem('lastWeatherCheck');
+
+					if (lastWeatherCheck !== today) {
+						setTimeout(() => {
+							pointsManager.onWeatherCheck();
+							try { localStorage.setItem('lastWeatherCheck', today); } catch (e) { /* storageが使えない環境でも落とさない */ }
+						}, 5000); // 5秒間ページに滞在でポイント付与
+					}
+				} catch (e) { /* storageが使えない環境でも落とさない */ }
 			}
 		});
