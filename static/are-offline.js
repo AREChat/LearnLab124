@@ -11,7 +11,8 @@
 
   // ---- サービスワーカー ----
   if("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")){
-    window.addEventListener("load", function(){ try{ navigator.serviceWorker.register(ROOT + "sw.js", {scope: ROOT}).catch(function(){}); }catch(_e){} });
+    // updateViaCache:"none" → 更新確認のときは、GitHub Pages側の sw.js キャッシュ（10分）を無視して、必ず最新を取りに行く
+    window.addEventListener("load", function(){ try{ navigator.serviceWorker.register(ROOT + "sw.js", {scope: ROOT, updateViaCache: "none"}).catch(function(){}); }catch(_e){} });
   }
 
   // ---- 右上の表示 ----
@@ -90,8 +91,37 @@
     var b = document.createElement("button"); b.id = "areOffFab"; b.type = "button"; b.textContent = "📥 オフライン準備";
     b.style.cssText = "position:fixed;left:max(6px,env(safe-area-inset-left));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147483000;padding:6px 12px;border:1px solid #6b7cff;border-radius:999px;background:rgba(16,22,46,.9);color:#fff;font:700 12px system-ui,sans-serif;cursor:pointer";
     b.onclick = open; document.body.appendChild(b);
+    // ほかの ボタン（ハンバーガー・ポイント表示など）の上に のらないよう、空いている角へ動かす。4つの角がぜんぶ ふさがっていたら かくす
+    // （ふつうの ページでは、スクロールで ずらせる 本文には かまわず、画面に はりついた ボタンだけを よける）
+    var CORNERS = [["left", "bottom"], ["right", "bottom"], ["right", "top"], ["left", "top"]], cur = 0, timer = 0;
+    function put(c){ b.style.left = b.style.right = b.style.top = b.style.bottom = "auto"; b.style[c[0]] = "max(6px,env(safe-area-inset-" + c[0] + "))"; b.style[c[1]] = "max(6px,env(safe-area-inset-" + c[1] + "))"; }
+    function pinned(e){ for(var n = e; n && n.nodeType === 1; n = n.parentElement){ var p = getComputedStyle(n).position; if(p === "fixed" || p === "sticky") return true; } return false; }
+    function hits(){
+      var r = b.getBoundingClientRect(), scrolls = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) > innerHeight + 24;
+      var list = document.querySelectorAll('button,a[href],input,select,textarea,summary,[role="button"],#hud,#hudr');
+      for(var i = 0; i < list.length; i++){
+        var e = list[i]; if(e === b || (panel && panel.contains(e))) continue;
+        var q = e.getBoundingClientRect();
+        if(q.width < 4 || q.height < 4 || q.left >= r.right - 2 || q.right <= r.left + 2 || q.top >= r.bottom - 2 || q.bottom <= r.top + 2) continue;
+        var cs = getComputedStyle(e);
+        if(cs.visibility === "hidden" || cs.display === "none" || +cs.opacity === 0) continue;
+        if(cs.pointerEvents === "none" && !/^hud/.test(e.id)) continue;
+        if(scrolls && !pinned(e)) continue;
+        return true;
+      }
+      return false;
+    }
+    function settle(){
+      if(!b.isConnected){ clearInterval(timer); return; }
+      b.style.display = ""; put(CORNERS[cur]);
+      if(!hits()) return;
+      for(var k = 1; k < CORNERS.length; k++){ var n = (cur + k) % CORNERS.length; put(CORNERS[n]); if(!hits()){ cur = n; return; } }
+      put(CORNERS[cur]); b.style.display = "none";
+    }
+    setTimeout(settle, 400); timer = setInterval(settle, 1500);
+    addEventListener("resize", settle); addEventListener("orientationchange", settle);
   }
   window.areOfflinePanel = open;
-  function init(){ paint(); }
+  function init(){ paint(); fab(); }
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
