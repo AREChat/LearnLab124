@@ -3654,6 +3654,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-0406"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の基本概念",
+      "summary": "Microsoft Streamの動画共有の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0407"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの基本概念",
+      "summary": "Streamの動画の文字起こしの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0408"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の基本概念",
+      "summary": "Clipchampの動画編集の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0409"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の基本概念",
+      "summary": "Microsoft Designerでの画像生成の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0410"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の基本概念",
+      "summary": "Microsoft Bookingsの予約管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0411"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの基本概念",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0412"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の基本概念",
+      "summary": "Viva Insightsの分析の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0413"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの基本概念",
+      "summary": "Viva Learningの学習コンテンツの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0414"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの基本概念",
+      "summary": "Viva Engageのコミュニティの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0415"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の基本概念",
+      "summary": "Viva Goalsの目標管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0416"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの基本概念",
+      "summary": "Microsoft 365管理センターのダッシュボードの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0417"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の基本概念",
+      "summary": "ユーザーの一括作成の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0418"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての基本概念",
+      "summary": "ライセンスのグループベース割り当ての基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0419"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の基本概念",
+      "summary": "サービス状態の確認の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0420"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の基本概念",
+      "summary": "メッセージセンターの通知の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0421"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの基本概念",
+      "summary": "Microsoft 365のロードマップの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0422"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての基本概念",
+      "summary": "管理者ロールの割り当ての基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0423"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の基本概念",
+      "summary": "管理単位(Administrative Units)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0424"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの基本概念",
+      "summary": "Microsoft Entra IDの条件付きアクセスの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0425"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の基本概念",
+      "summary": "グループベースのライセンス管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0426"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)の基本概念",
+      "summary": "Azure ADとの連携(現Entra ID)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0427"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境の基本概念",
+      "summary": "ハイブリッドID環境の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0428"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期の基本概念",
+      "summary": "パスワードハッシュ同期の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0429"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証の基本概念",
+      "summary": "フェデレーション認証の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0430"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成の基本概念",
+      "summary": "シングルサインオンの構成の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0431"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開の基本概念",
+      "summary": "Microsoft 365 Appsの展開の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0432"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールの基本概念",
+      "summary": "Officeデプロイメントツールの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0433"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)の基本概念",
+      "summary": "構成済みファイル(Configuration.xml)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0434"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新の基本概念",
+      "summary": "クリックツーラン形式の更新の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0435"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理の基本概念",
+      "summary": "Officeのバージョン管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0436"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーの基本概念",
+      "summary": "Microsoft 365 Appsのサポートポリシーの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0437"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)の基本概念",
+      "summary": "Office カスタマイズツール(ODT)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0438"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理の基本概念",
+      "summary": "グループポリシーによるOffice管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0439"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスの基本概念",
+      "summary": "クラウドポリシーサービスの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0440"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターの基本概念",
+      "summary": "Microsoft 365 Apps管理センターの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0441"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートの基本概念",
+      "summary": "セキュリティとコンプライアンスのレポートの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0442"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreの基本概念",
+      "summary": "Microsoft Secure Scoreの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0443"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応の基本概念",
+      "summary": "データ保持要件への対応の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0444"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能の基本概念",
+      "summary": "GDPR対応機能の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0445"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能の基本概念",
+      "summary": "業界別コンプライアンス機能の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0446"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)の基本概念",
+      "summary": "Microsoft 365 バックアップ(サードパーティ連携)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0447"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーの基本概念",
+      "summary": "クラウドバックアップポリシーの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0448"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能の基本概念",
+      "summary": "ランサムウェア対策機能の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0449"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)の基本概念",
+      "summary": "ファイル復旧機能(OneDrive)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0450"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定の基本概念",
+      "summary": "監査ログの保持期間設定の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0451"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のサービス間連携の基本概念",
+      "summary": "Microsoft 365のサービス間連携の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0452"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platformとの統合の基本概念",
+      "summary": "Power Platformとの統合の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0453"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Dataverseとの連携の基本概念",
+      "summary": "Dataverseとの連携の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0454"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタムコネクタの作成の基本概念",
+      "summary": "カスタムコネクタの作成の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0455"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Graph APIの利用の基本概念",
+      "summary": "Microsoft Graph APIの利用の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0456"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Graph APIを使ったアプリ開発の基本概念",
+      "summary": "Graph APIを使ったアプリ開発の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0457"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365開発者プログラムの基本概念",
+      "summary": "Microsoft 365開発者プログラムの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0458"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サンドボックス環境の利用の基本概念",
+      "summary": "サンドボックス環境の利用の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0459"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アドインの開発(Office Add-ins)の基本概念",
+      "summary": "アドインの開発(Office Add-ins)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0460"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの開発の基本概念",
+      "summary": "Teamsアプリの開発の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0461"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザー研修(アダプションキット)の基本概念",
+      "summary": "ユーザー研修(アダプションキット)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0462"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "変更管理(チェンジマネジメント)の基本概念",
+      "summary": "変更管理(チェンジマネジメント)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0463"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "利用状況レポートの分析の基本概念",
+      "summary": "利用状況レポートの分析の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0464"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "採用状況の可視化(Adoption Score)の基本概念",
+      "summary": "採用状況の可視化(Adoption Score)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0465"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "社内ヘルプデスクの運用の基本概念",
+      "summary": "社内ヘルプデスクの運用の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0466"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンス最適化の検討の基本概念",
+      "summary": "ライセンス最適化の検討の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0467"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コスト管理とレポートの基本概念",
+      "summary": "コスト管理とレポートの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0468"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "契約更新時の見直しの基本概念",
+      "summary": "契約更新時の見直しの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0469"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サブスクリプションの一時停止の基本概念",
+      "summary": "サブスクリプションの一時停止の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0470"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "未使用ライセンスの回収の基本概念",
+      "summary": "未使用ライセンスの回収の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0471"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シャドーITへの対応の基本概念",
+      "summary": "シャドーITへの対応の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0472"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "BYOD環境でのセキュリティの基本概念",
+      "summary": "BYOD環境でのセキュリティの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0473"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部ゲストアクセスの管理の基本概念",
+      "summary": "外部ゲストアクセスの管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0474"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ゲストユーザーの有効期限設定の基本概念",
+      "summary": "ゲストユーザーの有効期限設定の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0475"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "テナント間コラボレーション(B2B)の基本概念",
+      "summary": "テナント間コラボレーション(B2B)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0476"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドID基盤の統合の基本概念",
+      "summary": "クラウドID基盤の統合の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0477"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "レガシー認証の無効化の基本概念",
+      "summary": "レガシー認証の無効化の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0478"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティ既定値群(Security Defaults)の基本概念",
+      "summary": "セキュリティ既定値群(Security Defaults)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0479"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "特権アクセス管理(PAM)の基本概念",
+      "summary": "特権アクセス管理(PAM)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0480"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Just-In-Timeアクセスの基本概念",
+      "summary": "Just-In-Timeアクセスの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0481"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタマーロックボックスの基本概念",
+      "summary": "カスタマーロックボックスの基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0482"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "顧客データの地理的保存場所の基本概念",
+      "summary": "顧客データの地理的保存場所の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0483"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データレジデンシー要件の基本概念",
+      "summary": "データレジデンシー要件の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0484"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービスレベルアグリーメント(SLA)の基本概念",
+      "summary": "サービスレベルアグリーメント(SLA)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0485"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "可用性ゾーンの構成の基本概念",
+      "summary": "可用性ゾーンの構成の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0486"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)の基本概念",
+      "summary": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0487"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "帯域幅の管理の基本概念",
+      "summary": "帯域幅の管理の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0488"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "QoS設定(Teams音声品質)の基本概念",
+      "summary": "QoS設定(Teams音声品質)の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0489"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "VPN経由アクセスの最適化の基本概念",
+      "summary": "VPN経由アクセスの最適化の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0490"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウド移行計画の策定の基本概念",
+      "summary": "クラウド移行計画の策定の基本的な仕組みと役割。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0491"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange Onlineの設定手順",
+      "summary": "Exchange Onlineを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0492"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange管理センターの設定手順",
+      "summary": "Exchange管理センターを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0493"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールボックスの移行の設定手順",
+      "summary": "メールボックスの移行を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0494"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有メールボックスの設定手順",
+      "summary": "共有メールボックスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0495"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "配布グループの設定手順",
+      "summary": "配布グループを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0496"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365グループの設定手順",
+      "summary": "Microsoft 365グループを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0497"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "動的配布グループの設定手順",
+      "summary": "動的配布グループを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0498"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールフロールールの設定手順",
+      "summary": "メールフロールールを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0499"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "トランスポートルールの設定手順",
+      "summary": "トランスポートルールを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0500"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールの転送設定の設定手順",
+      "summary": "メールの転送設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0501"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "迷惑メール対策(EOP)の設定手順",
+      "summary": "迷惑メール対策(EOP)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0502"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "添付ファイルのセキュリティ対策の設定手順",
+      "summary": "添付ファイルのセキュリティ対策を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0503"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全な添付ファイル(ATP)の設定手順",
+      "summary": "安全な添付ファイル(ATP)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0504"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全なリンク(ATP)の設定手順",
+      "summary": "安全なリンク(ATP)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0505"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フィッシング対策ポリシーの設定手順",
+      "summary": "フィッシング対策ポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0506"
     }
   ]
 }
