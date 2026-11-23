@@ -9954,6 +9954,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1106"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)に関するセキュリティ上の注意点",
+      "summary": "Teams電話(Phone System)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1107"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターに関するセキュリティ上の注意点",
+      "summary": "Teams管理センターを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1108"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理に関するセキュリティ上の注意点",
+      "summary": "Teamsアプリの管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1109"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージに関するセキュリティ上の注意点",
+      "summary": "Teamsポリシーパッケージを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1110"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果に関するセキュリティ上の注意点",
+      "summary": "Teamsのバックグラウンド効果を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1111"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定に関するセキュリティ上の注意点",
+      "summary": "Outlookのルール設定を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1112"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有に関するセキュリティ上の注意点",
+      "summary": "Outlookの予定表共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1113"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースに関するセキュリティ上の注意点",
+      "summary": "Outlookの会議室リソースを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1114"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループに関するセキュリティ上の注意点",
+      "summary": "Outlookの連絡先グループを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1115"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱に関するセキュリティ上の注意点",
+      "summary": "フォーカス収件箱を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1116"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作に関するセキュリティ上の注意点",
+      "summary": "Outlookのクイック操作を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1117"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定に関するセキュリティ上の注意点",
+      "summary": "Outlookの遅延送信設定を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1118"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けに関するセキュリティ上の注意点",
+      "summary": "Outlookのカテゴリ分けを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1119"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリに関するセキュリティ上の注意点",
+      "summary": "Outlookモバイルアプリを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1120"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定に関するセキュリティ上の注意点",
+      "summary": "予定表の委任設定を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1121"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットに関するセキュリティ上の注意点",
+      "summary": "Plannerのバケットを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1122"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当てに関するセキュリティ上の注意点",
+      "summary": "Plannerのタスク割り当てを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1123"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有に関するセキュリティ上の注意点",
+      "summary": "To Doのタスクリスト共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1124"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成に関するセキュリティ上の注意点",
+      "summary": "Microsoft Listsの作成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1125"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートに関するセキュリティ上の注意点",
+      "summary": "Microsoft Listsのテンプレートを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1126"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成に関するセキュリティ上の注意点",
+      "summary": "Power Automateのフロー作成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1127"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローに関するセキュリティ上の注意点",
+      "summary": "Power Automateの承認フローを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1128"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタに関するセキュリティ上の注意点",
+      "summary": "Power Automateのコネクタを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1129"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスに関するセキュリティ上の注意点",
+      "summary": "Power Appsのキャンバスアプスを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1130"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリに関するセキュリティ上の注意点",
+      "summary": "Power Appsのモデル駆動型アプリを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1131"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成に関するセキュリティ上の注意点",
+      "summary": "Power BIのダッシュボード作成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1132"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有に関するセキュリティ上の注意点",
+      "summary": "Power BIのレポート共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1133"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新に関するセキュリティ上の注意点",
+      "summary": "Power BIデータセットの更新を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1134"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsに関するセキュリティ上の注意点",
+      "summary": "Power Virtual Agentsを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1135"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターに関するセキュリティ上の注意点",
+      "summary": "Power Platform管理センターを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1136"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能に関するセキュリティ上の注意点",
+      "summary": "Microsoft Forms クイズ機能を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1137"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定に関するセキュリティ上の注意点",
+      "summary": "Formsの分岐設定を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1138"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力に関するセキュリティ上の注意点",
+      "summary": "Formsの回答のExcel出力を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1139"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートに関するセキュリティ上の注意点",
+      "summary": "Microsoft Whiteboardのテンプレートを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1140"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集に関するセキュリティ上の注意点",
+      "summary": "Whiteboardの共同編集を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1141"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースに関するセキュリティ上の注意点",
+      "summary": "Microsoft Loopのワークスペースを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1142"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有に関するセキュリティ上の注意点",
+      "summary": "Loopコンポーネントの共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1143"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有に関するセキュリティ上の注意点",
+      "summary": "OneNoteのノートブック共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1144"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集に関するセキュリティ上の注意点",
+      "summary": "OneNoteの共同編集を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1145"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能に関するセキュリティ上の注意点",
+      "summary": "OneNoteのタグ機能を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1146"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有に関するセキュリティ上の注意点",
+      "summary": "Microsoft Streamの動画共有を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1147"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしに関するセキュリティ上の注意点",
+      "summary": "Streamの動画の文字起こしを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1148"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集に関するセキュリティ上の注意点",
+      "summary": "Clipchampの動画編集を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1149"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成に関するセキュリティ上の注意点",
+      "summary": "Microsoft Designerでの画像生成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1150"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理に関するセキュリティ上の注意点",
+      "summary": "Microsoft Bookingsの予約管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1151"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスに関するセキュリティ上の注意点",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1152"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析に関するセキュリティ上の注意点",
+      "summary": "Viva Insightsの分析を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1153"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツに関するセキュリティ上の注意点",
+      "summary": "Viva Learningの学習コンテンツを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1154"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティに関するセキュリティ上の注意点",
+      "summary": "Viva Engageのコミュニティを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1155"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理に関するセキュリティ上の注意点",
+      "summary": "Viva Goalsの目標管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1156"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードに関するセキュリティ上の注意点",
+      "summary": "Microsoft 365管理センターのダッシュボードを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1157"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成に関するセキュリティ上の注意点",
+      "summary": "ユーザーの一括作成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1158"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当てに関するセキュリティ上の注意点",
+      "summary": "ライセンスのグループベース割り当てを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1159"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認に関するセキュリティ上の注意点",
+      "summary": "サービス状態の確認を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1160"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知に関するセキュリティ上の注意点",
+      "summary": "メッセージセンターの通知を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1161"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップに関するセキュリティ上の注意点",
+      "summary": "Microsoft 365のロードマップを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1162"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当てに関するセキュリティ上の注意点",
+      "summary": "管理者ロールの割り当てを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1163"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)に関するセキュリティ上の注意点",
+      "summary": "管理単位(Administrative Units)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1164"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスに関するセキュリティ上の注意点",
+      "summary": "Microsoft Entra IDの条件付きアクセスを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1165"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理に関するセキュリティ上の注意点",
+      "summary": "グループベースのライセンス管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1166"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)に関するセキュリティ上の注意点",
+      "summary": "Azure ADとの連携(現Entra ID)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1167"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境に関するセキュリティ上の注意点",
+      "summary": "ハイブリッドID環境を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1168"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期に関するセキュリティ上の注意点",
+      "summary": "パスワードハッシュ同期を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1169"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証に関するセキュリティ上の注意点",
+      "summary": "フェデレーション認証を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1170"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成に関するセキュリティ上の注意点",
+      "summary": "シングルサインオンの構成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1171"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開に関するセキュリティ上の注意点",
+      "summary": "Microsoft 365 Appsの展開を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1172"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールに関するセキュリティ上の注意点",
+      "summary": "Officeデプロイメントツールを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1173"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)に関するセキュリティ上の注意点",
+      "summary": "構成済みファイル(Configuration.xml)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1174"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新に関するセキュリティ上の注意点",
+      "summary": "クリックツーラン形式の更新を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1175"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理に関するセキュリティ上の注意点",
+      "summary": "Officeのバージョン管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1176"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーに関するセキュリティ上の注意点",
+      "summary": "Microsoft 365 Appsのサポートポリシーを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1177"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)に関するセキュリティ上の注意点",
+      "summary": "Office カスタマイズツール(ODT)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1178"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理に関するセキュリティ上の注意点",
+      "summary": "グループポリシーによるOffice管理を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1179"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスに関するセキュリティ上の注意点",
+      "summary": "クラウドポリシーサービスを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1180"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターに関するセキュリティ上の注意点",
+      "summary": "Microsoft 365 Apps管理センターを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1181"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートに関するセキュリティ上の注意点",
+      "summary": "セキュリティとコンプライアンスのレポートを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1182"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreに関するセキュリティ上の注意点",
+      "summary": "Microsoft Secure Scoreを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1183"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応に関するセキュリティ上の注意点",
+      "summary": "データ保持要件への対応を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1184"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能に関するセキュリティ上の注意点",
+      "summary": "GDPR対応機能を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1185"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能に関するセキュリティ上の注意点",
+      "summary": "業界別コンプライアンス機能を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1186"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)に関するセキュリティ上の注意点",
+      "summary": "Microsoft 365 バックアップ(サードパーティ連携)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1187"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーに関するセキュリティ上の注意点",
+      "summary": "クラウドバックアップポリシーを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1188"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能に関するセキュリティ上の注意点",
+      "summary": "ランサムウェア対策機能を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1189"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)に関するセキュリティ上の注意点",
+      "summary": "ファイル復旧機能(OneDrive)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1190"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定に関するセキュリティ上の注意点",
+      "summary": "監査ログの保持期間設定を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1191"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のサービス間連携に関するセキュリティ上の注意点",
+      "summary": "Microsoft 365のサービス間連携を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1192"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platformとの統合に関するセキュリティ上の注意点",
+      "summary": "Power Platformとの統合を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1193"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Dataverseとの連携に関するセキュリティ上の注意点",
+      "summary": "Dataverseとの連携を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1194"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタムコネクタの作成に関するセキュリティ上の注意点",
+      "summary": "カスタムコネクタの作成を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1195"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Graph APIの利用に関するセキュリティ上の注意点",
+      "summary": "Microsoft Graph APIの利用を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1196"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Graph APIを使ったアプリ開発に関するセキュリティ上の注意点",
+      "summary": "Graph APIを使ったアプリ開発を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1197"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365開発者プログラムに関するセキュリティ上の注意点",
+      "summary": "Microsoft 365開発者プログラムを使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1198"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サンドボックス環境の利用に関するセキュリティ上の注意点",
+      "summary": "サンドボックス環境の利用を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1199"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アドインの開発(Office Add-ins)に関するセキュリティ上の注意点",
+      "summary": "アドインの開発(Office Add-ins)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1200"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの開発に関するセキュリティ上の注意点",
+      "summary": "Teamsアプリの開発を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1201"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザー研修(アダプションキット)に関するセキュリティ上の注意点",
+      "summary": "ユーザー研修(アダプションキット)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1202"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "変更管理(チェンジマネジメント)に関するセキュリティ上の注意点",
+      "summary": "変更管理(チェンジマネジメント)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1203"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "利用状況レポートの分析に関するセキュリティ上の注意点",
+      "summary": "利用状況レポートの分析を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1204"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "採用状況の可視化(Adoption Score)に関するセキュリティ上の注意点",
+      "summary": "採用状況の可視化(Adoption Score)を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1205"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "社内ヘルプデスクの運用に関するセキュリティ上の注意点",
+      "summary": "社内ヘルプデスクの運用を使う際に留意すべきセキュリティ上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1206"
     }
   ]
 }
