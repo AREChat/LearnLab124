@@ -12654,6 +12654,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1406"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタマーロックボックスのトラブルシューティング",
+      "summary": "カスタマーロックボックスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1407"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "顧客データの地理的保存場所のトラブルシューティング",
+      "summary": "顧客データの地理的保存場所でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1408"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データレジデンシー要件のトラブルシューティング",
+      "summary": "データレジデンシー要件でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1409"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービスレベルアグリーメント(SLA)のトラブルシューティング",
+      "summary": "サービスレベルアグリーメント(SLA)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1410"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "可用性ゾーンの構成のトラブルシューティング",
+      "summary": "可用性ゾーンの構成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1411"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)のトラブルシューティング",
+      "summary": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1412"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "帯域幅の管理のトラブルシューティング",
+      "summary": "帯域幅の管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1413"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "QoS設定(Teams音声品質)のトラブルシューティング",
+      "summary": "QoS設定(Teams音声品質)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1414"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "VPN経由アクセスの最適化のトラブルシューティング",
+      "summary": "VPN経由アクセスの最適化でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1415"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウド移行計画の策定のトラブルシューティング",
+      "summary": "クラウド移行計画の策定でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1416"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange Onlineのライセンス要件",
+      "summary": "Exchange Onlineを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1417"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange管理センターのライセンス要件",
+      "summary": "Exchange管理センターを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1418"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールボックスの移行のライセンス要件",
+      "summary": "メールボックスの移行を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1419"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有メールボックスのライセンス要件",
+      "summary": "共有メールボックスを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1420"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "配布グループのライセンス要件",
+      "summary": "配布グループを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1421"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365グループのライセンス要件",
+      "summary": "Microsoft 365グループを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1422"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "動的配布グループのライセンス要件",
+      "summary": "動的配布グループを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1423"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールフロールールのライセンス要件",
+      "summary": "メールフロールールを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1424"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "トランスポートルールのライセンス要件",
+      "summary": "トランスポートルールを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1425"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールの転送設定のライセンス要件",
+      "summary": "メールの転送設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1426"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "迷惑メール対策(EOP)のライセンス要件",
+      "summary": "迷惑メール対策(EOP)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1427"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "添付ファイルのセキュリティ対策のライセンス要件",
+      "summary": "添付ファイルのセキュリティ対策を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1428"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全な添付ファイル(ATP)のライセンス要件",
+      "summary": "安全な添付ファイル(ATP)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1429"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全なリンク(ATP)のライセンス要件",
+      "summary": "安全なリンク(ATP)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1430"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フィッシング対策ポリシーのライセンス要件",
+      "summary": "フィッシング対策ポリシーを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1431"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "条件付きアクセスポリシーのライセンス要件",
+      "summary": "条件付きアクセスポリシーを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1432"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra ID Protectionのライセンス要件",
+      "summary": "Microsoft Entra ID Protectionを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1433"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セルフサービスパスワードリセットのライセンス要件",
+      "summary": "セルフサービスパスワードリセットを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1434"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオン(SSO)のライセンス要件",
+      "summary": "シングルサインオン(SSO)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1435"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "多要素認証の設定のライセンス要件",
+      "summary": "多要素認証の設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1436"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Authenticatorアプリのライセンス要件",
+      "summary": "Microsoft Authenticatorアプリを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1437"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードレス認証のライセンス要件",
+      "summary": "パスワードレス認証を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1438"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "デバイス管理(Intune)のライセンス要件",
+      "summary": "デバイス管理(Intune)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1439"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "モバイルデバイス管理(MDM)のライセンス要件",
+      "summary": "モバイルデバイス管理(MDM)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1440"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アプリ保護ポリシーのライセンス要件",
+      "summary": "アプリ保護ポリシーを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1441"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Windows Autopilotのライセンス要件",
+      "summary": "Windows Autopilotを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1442"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Endpointのライセンス要件",
+      "summary": "Microsoft Defender for Endpointを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1443"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Office 365のライセンス要件",
+      "summary": "Microsoft Defender for Office 365を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1444"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Cloud Appsのライセンス要件",
+      "summary": "Microsoft Defender for Cloud Appsを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1445"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティスコアのライセンス要件",
+      "summary": "セキュリティスコアを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1446"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コンプライアンスセンターのライセンス要件",
+      "summary": "コンプライアンスセンターを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1447"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "情報保護(ラベル付け)のライセンス要件",
+      "summary": "情報保護(ラベル付け)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1448"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ損失防止ポリシーのライセンス要件",
+      "summary": "データ損失防止ポリシーを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1449"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ラベルのライセンス要件",
+      "summary": "保持ラベルを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1450"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ポリシーの適用のライセンス要件",
+      "summary": "保持ポリシーの適用を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1451"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "電子情報開示(eDiscovery)のライセンス要件",
+      "summary": "電子情報開示(eDiscovery)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1452"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "法的ホールドのライセンス要件",
+      "summary": "法的ホールドを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1453"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの検索のライセンス要件",
+      "summary": "監査ログの検索を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1454"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "内部リスク管理のライセンス要件",
+      "summary": "内部リスク管理を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1455"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コミュニケーションコンプライアンスのライセンス要件",
+      "summary": "コミュニケーションコンプライアンスを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1456"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointサイトコレクションのライセンス要件",
+      "summary": "SharePointサイトコレクションを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1457"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointチームサイトのライセンス要件",
+      "summary": "SharePointチームサイトを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1458"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointコミュニケーションサイトのライセンス要件",
+      "summary": "SharePointコミュニケーションサイトを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1459"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointリストのライセンス要件",
+      "summary": "SharePointリストを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1460"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointライブラリの権限設定のライセンス要件",
+      "summary": "SharePointライブラリの権限設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1461"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定のライセンス要件",
+      "summary": "OneDrive for Businessの同期設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1462"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動のライセンス要件",
+      "summary": "OneDriveの既知のフォルダー移動を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1463"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定のライセンス要件",
+      "summary": "OneDriveの共有設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1464"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンのライセンス要件",
+      "summary": "OneDriveのリサイクルビンを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1465"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定のライセンス要件",
+      "summary": "外部共有の設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1466"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成のライセンス要件",
+      "summary": "Teamsチームの作成を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1467"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類のライセンス要件",
+      "summary": "Teamsチャネルの種類を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1468"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルのライセンス要件",
+      "summary": "プライベートチャネルを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1469"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルのライセンス要件",
+      "summary": "共有チャネルを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1470"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定のライセンス要件",
+      "summary": "Teams会議の設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1471"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能のライセンス要件",
+      "summary": "Teams会議のロビー機能を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1472"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画のライセンス要件",
+      "summary": "Teams会議の録画を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1473"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしのライセンス要件",
+      "summary": "Teams会議の文字起こしを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1474"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントのライセンス要件",
+      "summary": "Teamsのライブイベントを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1475"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーのライセンス要件",
+      "summary": "Teamsウェビナーを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1476"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)のライセンス要件",
+      "summary": "Teams電話(Phone System)を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1477"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターのライセンス要件",
+      "summary": "Teams管理センターを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1478"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理のライセンス要件",
+      "summary": "Teamsアプリの管理を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1479"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージのライセンス要件",
+      "summary": "Teamsポリシーパッケージを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1480"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果のライセンス要件",
+      "summary": "Teamsのバックグラウンド効果を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1481"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定のライセンス要件",
+      "summary": "Outlookのルール設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1482"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有のライセンス要件",
+      "summary": "Outlookの予定表共有を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1483"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースのライセンス要件",
+      "summary": "Outlookの会議室リソースを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1484"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループのライセンス要件",
+      "summary": "Outlookの連絡先グループを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1485"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱のライセンス要件",
+      "summary": "フォーカス収件箱を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1486"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作のライセンス要件",
+      "summary": "Outlookのクイック操作を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1487"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定のライセンス要件",
+      "summary": "Outlookの遅延送信設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1488"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けのライセンス要件",
+      "summary": "Outlookのカテゴリ分けを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1489"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリのライセンス要件",
+      "summary": "Outlookモバイルアプリを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1490"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定のライセンス要件",
+      "summary": "予定表の委任設定を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1491"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットのライセンス要件",
+      "summary": "Plannerのバケットを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1492"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当てのライセンス要件",
+      "summary": "Plannerのタスク割り当てを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1493"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有のライセンス要件",
+      "summary": "To Doのタスクリスト共有を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1494"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成のライセンス要件",
+      "summary": "Microsoft Listsの作成を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1495"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートのライセンス要件",
+      "summary": "Microsoft Listsのテンプレートを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1496"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成のライセンス要件",
+      "summary": "Power Automateのフロー作成を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1497"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローのライセンス要件",
+      "summary": "Power Automateの承認フローを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1498"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタのライセンス要件",
+      "summary": "Power Automateのコネクタを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1499"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスのライセンス要件",
+      "summary": "Power Appsのキャンバスアプスを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1500"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリのライセンス要件",
+      "summary": "Power Appsのモデル駆動型アプリを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1501"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成のライセンス要件",
+      "summary": "Power BIのダッシュボード作成を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1502"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有のライセンス要件",
+      "summary": "Power BIのレポート共有を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1503"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新のライセンス要件",
+      "summary": "Power BIデータセットの更新を利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1504"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsのライセンス要件",
+      "summary": "Power Virtual Agentsを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1505"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターのライセンス要件",
+      "summary": "Power Platform管理センターを利用するために必要なライセンス上の要件。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1506"
     }
   ]
 }
