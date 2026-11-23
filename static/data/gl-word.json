@@ -11079,6 +11079,483 @@
       "examples": [],
       "pages": [],
       "id": "word-1231"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "縦棒グラフ(Word)",
+      "summary": "カテゴリごとの数値を縦方向のバーの高さで比較するグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1232"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "横棒グラフ(Word)",
+      "summary": "カテゴリごとの数値を横方向のバーの長さで比較するグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1233"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "折れ線グラフ(Word)",
+      "summary": "時間経過などに沿った数値の変化を線で表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1234"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "円グラフ(Word)",
+      "summary": "全体に対する各項目の割合を扇形の大きさで表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1235"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "面グラフ(Word)",
+      "summary": "折れ線グラフの下を塗りつぶして、数値の変化と量感を強調するグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1236"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "散布図(Word)",
+      "summary": "2つの数値データの関係性を点の分布で表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1237"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "株価チャート(Word)",
+      "summary": "始値・終値・高値・安値など株価の変動を表現する専用のグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1238"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "等高線グラフ(Word)",
+      "summary": "2つの要素の組み合わせによる数値の変化を色の濃淡で表す3D的なグラフ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1239"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "レーダーチャート(Word)",
+      "summary": "複数の評価項目を放射状の軸で表し、バランスを視覚化するグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1240"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "ツリーマップ(Word)",
+      "summary": "階層データを入れ子になった長方形の面積で表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1241"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "サンバースト(Word)",
+      "summary": "階層データを同心円状に配置して表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1242"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "ヒストグラム(Word)",
+      "summary": "データを一定の範囲ごとに区切り、その度数を棒グラフで表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1243"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "箱ひげ図(Word)",
+      "summary": "データの分布を四分位数を用いて要約表示するグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1244"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "ウォーターフォール(Word)",
+      "summary": "増減の積み重ねによって最終的な値に至る過程を表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1245"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "じょうごグラフ(Word)",
+      "summary": "工程ごとに数値が減少していく様子を台形の連なりで表すグラフの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1246"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類",
+      "term": "複合グラフ(Word)",
+      "summary": "棒グラフと折れ線グラフなど、異なる種類のグラフを1つにまとめた表現方法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1247"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "明確さ(エディターの提案カテゴリ)",
+      "summary": "文章がわかりにくい、または冗長な表現になっていないかを提案するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1248"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "簡潔さ(エディターの提案カテゴリ)",
+      "summary": "不要な繰り返しや冗長な言い回しを簡潔にするよう提案するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1249"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "語彙(エディターの提案カテゴリ)",
+      "summary": "より適切な、または多様な単語の使用を提案するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1250"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "formality(文体の硬さ)の提案",
+      "summary": "カジュアルすぎる、または硬すぎる表現をビジネス文書向けに調整する提案。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1251"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "包括的な言語(エディターの提案カテゴリ)",
+      "summary": "特定の属性に偏らない、より包括的な表現を提案するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1252"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "句読点の慣例(エディターの提案カテゴリ)",
+      "summary": "カンマの使い方など、句読点に関する一般的な慣例からの逸脱を指摘するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1253"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのエディター(文章チェック)分類項目",
+      "term": "文章の見直し採点(エディタースコア)",
+      "summary": "文書全体の書き方の品質をパーセンテージで示す総合評価。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1254"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "マクロの記録",
+      "summary": "一連の操作を自動的にVBAコードとして記録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1255"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "マクロの実行",
+      "summary": "記録または作成したマクロを呼び出して、処理を一括実行する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1256"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "マクロのセキュリティ設定",
+      "summary": "マクロを含む文書を開く際の警告表示やブロックの挙動を設定する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1257"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "Visual Basic Editorの起動",
+      "summary": "マクロのコードを直接編集・確認するためのエディターを開くコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1258"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "コントロールの挿入(開発タブ)",
+      "summary": "チェックボックスやドロップダウンリストなど、入力フォーム用のコントロールを配置する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1259"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "デザインモード(開発タブ)",
+      "summary": "コンテンツコントロールのプロパティを編集できる状態に切り替えるモード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1260"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "XMLマッピングパネル",
+      "summary": "XMLデータソースの要素を文書内のコンテンツコントロールに結び付けるパネル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1261"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "テンプレートとアドイン(開発タブ)",
+      "summary": "文書に適用されているテンプレートや、追加されたアドインを管理する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1262"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "信頼済み文書(トラストセンター)",
+      "summary": "マクロの警告を再表示せずに開けるよう登録した、信頼できる文書の一覧。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1263"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細2",
+      "term": "ActiveXコントロールの挿入",
+      "summary": "Webフォームのような高度な入力機能を提供するコントロールを文書に挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1264"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "音声で読み上げ(読み上げ機能)",
+      "summary": "文書のテキストを音声で読み上げる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1265"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "読み上げ速度の調整",
+      "summary": "音声読み上げの速さを調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1266"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "イマーシブリーダー",
+      "summary": "読みやすさを高めるために、行間や文字間隔を広げ、1語ずつの発音も確認できる学習支援表示モード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1267"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "音節に分割して表示(学習ツール)",
+      "summary": "単語を音節ごとに区切って表示し、読みやすくする学習支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1268"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "品詞の色分け表示(学習ツール)",
+      "summary": "名詞・動詞・形容詞などを色分けして表示し、文法学習を助ける機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1269"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能",
+      "term": "ディクテーション(音声入力)",
+      "summary": "マイクに向かって話した内容を自動的に文字として入力する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1270"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのリサーチ・情報収集支援機能",
+      "term": "Smart Lookup(スマート検索)",
+      "summary": "選択した単語や文章についての情報をオンラインで検索し、画面内に表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1271"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのリサーチ・情報収集支援機能",
+      "term": "リサーチャー",
+      "summary": "信頼できる情報源を検索し、資料として文書に取り込める調査支援ツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1272"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのリサーチ・情報収集支援機能",
+      "term": "オンライン画像の検索(挿入)",
+      "summary": "Bing画像検索などを利用して、インターネット上の画像を文書に挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1273"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのリサーチ・情報収集支援機能",
+      "term": "Wikipedia(リサーチツール)",
+      "summary": "選択した語句に関連するWikipediaの情報をパネル内に表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1274"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの履歴書・実務テンプレート要素",
+      "term": "職務要約(履歴書テンプレート)",
+      "summary": "履歴書の冒頭に置く、自分の経歴やスキルを簡潔にまとめた文章部分。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1275"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの履歴書・実務テンプレート要素",
+      "term": "職務経歴(履歴書テンプレート)",
+      "summary": "これまでの勤務先や担当業務を時系列で記載するセクション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1276"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの履歴書・実務テンプレート要素",
+      "term": "スキルセクション(履歴書テンプレート)",
+      "summary": "保有しているスキルや資格を箇条書きでまとめるセクション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1277"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの履歴書・実務テンプレート要素",
+      "term": "Resume Assistant(履歴書アシスタント)",
+      "summary": "LinkedInと連携し、職務内容の書き方例や関連スキルを提案する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1278"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの履歴書・実務テンプレート要素",
+      "term": "カバーレターのテンプレート",
+      "summary": "職務応募の際に添える、自己紹介や志望理由をまとめた文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1279"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのヘッダー・フッターギャラリーの種類",
+      "term": "空白(ヘッダーギャラリー)",
+      "summary": "文字やデザインがなく、自由に入力できる単純なヘッダーのスタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1280"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのヘッダー・フッターギャラリーの種類",
+      "term": "空白(3か所)(ヘッダーギャラリー)",
+      "summary": "左・中央・右の3つの位置にタブで区切って情報を配置できるヘッダーのスタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1281"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのヘッダー・フッターギャラリーの種類",
+      "term": "積み重ね(ヘッダーギャラリー)",
+      "summary": "タイトルと副題などを縦に重ねて配置するヘッダーのスタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1282"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのヘッダー・フッターギャラリーの種類",
+      "term": "帯(フッターギャラリー)",
+      "summary": "帯状の色や線を使ってページ番号などを目立たせるフッターのスタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1283"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのヘッダー・フッターギャラリーの種類",
+      "term": "二重線(フッターギャラリー)",
+      "summary": "2本の線でページ番号の区切りを表現するフッターのスタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1284"
     }
   ]
 }
