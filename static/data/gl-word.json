@@ -14850,6 +14850,789 @@
       "examples": [],
       "pages": [],
       "id": "word-1650"
+    },
+    {
+      "lang": "word",
+      "category": "リサーチャー機能",
+      "term": "リサーチ機能(Word)",
+      "summary": "トピックを入力すると関連資料や画像をWord内に取り込める調査支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1651"
+    },
+    {
+      "lang": "word",
+      "category": "リサーチャー機能",
+      "term": "出典の自動挿入(リサーチ)",
+      "summary": "リサーチ機能で見つけた情報を文書に挿入する際、出典情報を自動で付加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1652"
+    },
+    {
+      "lang": "word",
+      "category": "エディターの詳細機能",
+      "term": "エディターのスコアカード",
+      "summary": "文章の正確さ・明確さ・簡潔さなどを総合的に評価するエディター機能の表示。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1653"
+    },
+    {
+      "lang": "word",
+      "category": "エディターの詳細機能",
+      "term": "文章の多様性チェック",
+      "summary": "性別や属性に偏らない表現を推奨するエディターのチェック項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1654"
+    },
+    {
+      "lang": "word",
+      "category": "エディターの詳細機能",
+      "term": "フォーマルな文体チェック",
+      "summary": "ビジネス文書として適切な、よりフォーマルな言い回しを提案するエディター機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1655"
+    },
+    {
+      "lang": "word",
+      "category": "自動要約機能",
+      "term": "文書の要約(自動要約)",
+      "summary": "文章全体から主要な内容を抽出し短く要約する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1656"
+    },
+    {
+      "lang": "word",
+      "category": "文書テーマの詳細2",
+      "term": "テーマの色の編集",
+      "summary": "文書テーマに含まれる配色パターンを独自の色に変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1657"
+    },
+    {
+      "lang": "word",
+      "category": "文書テーマの詳細2",
+      "term": "テーマのフォントの編集",
+      "summary": "見出し用・本文用のフォントの組み合わせをカスタマイズする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1658"
+    },
+    {
+      "lang": "word",
+      "category": "ページの色・透かし詳細2",
+      "term": "ページの色(グラデーション)",
+      "summary": "ページ背景にグラデーションを設定する機能。画面表示用途が主。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1659"
+    },
+    {
+      "lang": "word",
+      "category": "ページの色・透かし詳細2",
+      "term": "ユーザー設定の透かし",
+      "summary": "任意の文字列や画像を使って独自の透かしを作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1660"
+    },
+    {
+      "lang": "word",
+      "category": "表のデザイン詳細2",
+      "term": "表の背景色(セルの塗りつぷし)",
+      "summary": "表の特定セルに任意の背景色を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1661"
+    },
+    {
+      "lang": "word",
+      "category": "表のデザイン詳細2",
+      "term": "表のセルの配置(垂直方向)",
+      "summary": "セル内の文字を上下方向で上揃え・中央揃え・下揃えに設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1662"
+    },
+    {
+      "lang": "word",
+      "category": "表のデザイン詳細2",
+      "term": "表のテキストの方向",
+      "summary": "セル内の文字列を縦書き・横書きに切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1663"
+    },
+    {
+      "lang": "word",
+      "category": "表の計算機能詳細",
+      "term": "表内の数式(Formulaフィールド)",
+      "summary": "表のセルに合計や平均などの計算式を挿入するフィールド機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1664"
+    },
+    {
+      "lang": "word",
+      "category": "表の計算機能詳細",
+      "term": "セル参照(表内数式)",
+      "summary": "表内の数式で「A1」のようにセルの位置を指定して参照する記法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1665"
+    },
+    {
+      "lang": "word",
+      "category": "表の分割・結合詳細",
+      "term": "表の結合(2つの表を1つに)",
+      "summary": "隣接する2つの表の間の段落を削除して1つの表にまとめる操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1666"
+    },
+    {
+      "lang": "word",
+      "category": "罫線機能の詳細2",
+      "term": "罫線のスタイル(手動罫線)",
+      "summary": "鉛筆アイコンを使って表に手動で線を描き加える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1667"
+    },
+    {
+      "lang": "word",
+      "category": "罫線機能の詳細2",
+      "term": "罫線の消しゴム",
+      "summary": "表の罫線をドラッグして消す、消しゴムツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1668"
+    },
+    {
+      "lang": "word",
+      "category": "図形の書式詳細2",
+      "term": "図形の枠線の種類(破線)",
+      "summary": "図形の輪郭線を実線以外に破線・点線に変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1669"
+    },
+    {
+      "lang": "word",
+      "category": "画像の詳細編集2",
+      "term": "画像のトリミング(図形に合わせて)",
+      "summary": "画像を任意の図形の輪郭でトリミングする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1670"
+    },
+    {
+      "lang": "word",
+      "category": "画像の詳細編集2",
+      "term": "画像の圧縮",
+      "summary": "文書内の画像の解像度を下げ、ファイルサイズを削減する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1671"
+    },
+    {
+      "lang": "word",
+      "category": "画像の詳細編集2",
+      "term": "画像のアート効果",
+      "summary": "鉛筆画やモザイクなど絵画風のフィルターを画像に適用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1672"
+    },
+    {
+      "lang": "word",
+      "category": "画像の詳細編集2",
+      "term": "画像の背景の削除",
+      "summary": "画像の主題以外の背景部分を自動検出して透明にする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1673"
+    },
+    {
+      "lang": "word",
+      "category": "SmartArtの詳細2",
+      "term": "SmartArtの図形の追加",
+      "summary": "既存のSmartArtに新しい図形(ノード)を追加する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1674"
+    },
+    {
+      "lang": "word",
+      "category": "SmartArtの詳細2",
+      "term": "SmartArtのテキストウィンドウ",
+      "summary": "SmartArt内の各図形のテキストを箇条書き形式で一括編集できるウィンドウ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1675"
+    },
+    {
+      "lang": "word",
+      "category": "SmartArtの詳細2",
+      "term": "SmartArtから図形に変換",
+      "summary": "SmartArtグラフィックを個別の図形オブジェクトに変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1676"
+    },
+    {
+      "lang": "word",
+      "category": "グラフ機能の詳細2",
+      "term": "グラフの種類の変更(Word)",
+      "summary": "挿入済みのグラフを棒グラフから円グラフなど別の種類に変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1677"
+    },
+    {
+      "lang": "word",
+      "category": "グラフ機能の詳細2",
+      "term": "グラフデータの編集(Excelウィンドウ)",
+      "summary": "Word内のグラフの元データを、埋め込まれたExcelシートで編集する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1678"
+    },
+    {
+      "lang": "word",
+      "category": "数式機能の詳細2",
+      "term": "数式オートコレクト",
+      "summary": "特定の文字列を数式記号に自動変換する入力支援機能。例:\\alphaをα に変換。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1679"
+    },
+    {
+      "lang": "word",
+      "category": "数式機能の詳細2",
+      "term": "インライン数式と別行数式",
+      "summary": "数式を文中に表示するか、独立した行に大きく表示するかの切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1680"
+    },
+    {
+      "lang": "word",
+      "category": "記号と特殊文字の詳細2",
+      "term": "特殊文字の挿入(改ページ記号)",
+      "summary": "記号と特殊文字ダイアログから直接改ページなどの特殊文字を挿入するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1681"
+    },
+    {
+      "lang": "word",
+      "category": "記号と特殊文字の詳細2",
+      "term": "Unicode文字コードでの記号入力",
+      "summary": "文字コードを入力してAltキーと組み合わせ、任意のUnicode文字を挿入する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1682"
+    },
+    {
+      "lang": "word",
+      "category": "入力支援機能の詳細2",
+      "term": "単語の予測入力",
+      "summary": "入力中の単語の続きを予測して候補を表示する入力支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1683"
+    },
+    {
+      "lang": "word",
+      "category": "入力支援機能の詳細2",
+      "term": "自動スペルチェックの言語別設定",
+      "summary": "文書内の言語ごとにスペルチェックの辞書を切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1684"
+    },
+    {
+      "lang": "word",
+      "category": "オートコレクトの詳細2",
+      "term": "オートコレクトの例外設定",
+      "summary": "特定の単語や頭文字に対してオートコレクトを適用しないよう例外登録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1685"
+    },
+    {
+      "lang": "word",
+      "category": "オートコレクトの詳細2",
+      "term": "入力時にオートフォーマットする項目",
+      "summary": "ハイパーリンクの自動変換や箇条書きの自動作成など、入力中に自動適用する書式の一覧。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1686"
+    },
+    {
+      "lang": "word",
+      "category": "検索と置換の詳細2",
+      "term": "特殊文字の検索(改行記号など)",
+      "summary": "検索と置換ダイアログで改行やタブなどの制御文字を検索対象に指定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1687"
+    },
+    {
+      "lang": "word",
+      "category": "検索と置換の詳細2",
+      "term": "書式を指定した置換",
+      "summary": "特定の書式が設定された文字列だけを検索し、別の書式に置き換える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1688"
+    },
+    {
+      "lang": "word",
+      "category": "印刷設定の詳細2",
+      "term": "両面印刷(手動)",
+      "summary": "片面印刷後に用紙を裏返して再セットし、裏面を印刷する手動両面印刷の方法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1689"
+    },
+    {
+      "lang": "word",
+      "category": "印刷設定の詳細2",
+      "term": "用紙に合わせて拡大縮小印刷",
+      "summary": "文書のページサイズを変えずに、指定した用紙サイズに合わせて自動的に拡大縮小する印刷設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1690"
+    },
+    {
+      "lang": "word",
+      "category": "PDF出力の詳細2",
+      "term": "PDFとして発行(オプション)",
+      "summary": "PDF変換時にページ範囲や画質、ブックマークの有無などを指定するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1691"
+    },
+    {
+      "lang": "word",
+      "category": "PDF出力の詳細2",
+      "term": "最小サイズでPDF発行",
+      "summary": "印刷品質を落としてファイルサイズを最小限に抑えてPDFを作成するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1692"
+    },
+    {
+      "lang": "word",
+      "category": "電子メール送信機能",
+      "term": "電子メールとして送信(Word)",
+      "summary": "文書を電子メールの本文または添付ファイルとして直接送信する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1693"
+    },
+    {
+      "lang": "word",
+      "category": "電子メール送信機能",
+      "term": "PDFとして電子メール送信",
+      "summary": "文書をPDFに変換した状態でメールに添付して送信する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1694"
+    },
+    {
+      "lang": "word",
+      "category": "ファイルの回復機能",
+      "term": "保存されていない文書の回復",
+      "summary": "保存せずに閉じてしまった文書を一時ファイルから復元する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1695"
+    },
+    {
+      "lang": "word",
+      "category": "ファイルの回復機能",
+      "term": "自動保存されたバージョンの表示",
+      "summary": "ファイルタブの履歴から、過去に自動保存された複数の版を参照する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1696"
+    },
+    {
+      "lang": "word",
+      "category": "既定の設定変更詳細",
+      "term": "既定のフォントの変更",
+      "summary": "新規文書で最初から使用されるフォントとサイズを変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1697"
+    },
+    {
+      "lang": "word",
+      "category": "既定の設定変更詳細",
+      "term": "既定の保存場所の変更",
+      "summary": "ファイルを保存する際に最初に表示されるフォルダーを変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1698"
+    },
+    {
+      "lang": "word",
+      "category": "既定の設定変更詳細",
+      "term": "既定の表示モードの変更",
+      "summary": "Word起動時や新規文書作成時の表示モード(印刷レイアウトなど)を変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1699"
+    },
+    {
+      "lang": "word",
+      "category": "リボンのカスタマイズ詳細2",
+      "term": "ユーザー設定のタブの作成",
+      "summary": "リボンに独自のタブを追加し、よく使うコマンドをまとめる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1700"
+    },
+    {
+      "lang": "word",
+      "category": "リボンのカスタマイズ詳細2",
+      "term": "リボンのインポート・エクスポート",
+      "summary": "カスタマイズしたリボン設定をファイルに保存し、別のPCへ読み込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1701"
+    },
+    {
+      "lang": "word",
+      "category": "クイックアクセスツールバー詳細2",
+      "term": "クイックアクセスツールバーの表示位置",
+      "summary": "リボンの上または下にクイックアクセスツールバーを表示する位置を切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1702"
+    },
+    {
+      "lang": "word",
+      "category": "クイックアクセスツールバー詳細2",
+      "term": "クイックアクセスツールバーのリセット",
+      "summary": "追加したボタンを削除し、初期状態に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1703"
+    },
+    {
+      "lang": "word",
+      "category": "ステータスバーのカスタマイズ",
+      "term": "ステータスバーの表示項目設定",
+      "summary": "文字数、言語、挿入/上書きモードなど画面下部に表示する情報を選べる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1704"
+    },
+    {
+      "lang": "word",
+      "category": "表示モードの詳細3",
+      "term": "focus(集中モード)",
+      "summary": "リボンやステータスバーを隠し、文章そのものに集中できる表示モード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1705"
+    },
+    {
+      "lang": "word",
+      "category": "表示モードの詳細3",
+      "term": "イミ―シブリーダー",
+      "summary": "文字の間隔を広げたり音声読み上げを行ったりして読解を支援する表示モード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1706"
+    },
+    {
+      "lang": "word",
+      "category": "イミ―シブリーダー詳細",
+      "term": "行フォーカス(イミ―シブリーダー)",
+      "summary": "読んでいる行だけを強調表示し、他の行を薄く表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1707"
+    },
+    {
+      "lang": "word",
+      "category": "イミ―シブリーダー詳細",
+      "term": "音節に分割(イミ―シブリーダー)",
+      "summary": "単語を音節ごとに区切って表示し、読みを補助する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1708"
+    },
+    {
+      "lang": "word",
+      "category": "共同編集機能の詳細3",
+      "term": "ロックされた作成者の編集範囲",
+      "summary": "共同編集時に他のユーザーが編集中の段落に一時的なロックがかかる仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1709"
+    },
+    {
+      "lang": "word",
+      "category": "共同編集機能の詳細3",
+      "term": "共同編集時のアバター表示",
+      "summary": "文書を同時に開いているユーザーのアイコンを画面右上に表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1710"
+    },
+    {
+      "lang": "word",
+      "category": "共同編集機能の詳細3",
+      "term": "@メンション",
+      "summary": "コメント内で特定のユーザーを@記号付きで指定し、通知を送る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1711"
+    },
+    {
+      "lang": "word",
+      "category": "OneDrive連携の詳細2",
+      "term": "OneDrive上のファイルの共有設定",
+      "summary": "OneDriveに保存した文書に対して閲覧者・編集者の権限を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1712"
+    },
+    {
+      "lang": "word",
+      "category": "OneDrive連携の詳細2",
+      "term": "バージョン履歴(OneDrive)",
+      "summary": "OneDrive上の文書で過去の保存状態を一覧し、復元できる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1713"
+    },
+    {
+      "lang": "word",
+      "category": "Officeアドインの詳細",
+      "term": "アドインの挿入(Office用アドイン)",
+      "summary": "Microsoft Storeなどから配布される拡張機能をWordに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1714"
+    },
+    {
+      "lang": "word",
+      "category": "Officeアドインの詳細",
+      "term": "アドインの管理(COMアドイン)",
+      "summary": "Wordに組み込まれたプログラム拡張を有効化・無効化するオプション画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1715"
+    },
+    {
+      "lang": "word",
+      "category": "ファイルの比較と保護の詳細2",
+      "term": "編集を制限する(書式の制限)",
+      "summary": "利用できるスタイルの種類を限定し、書式の変更を制限する保護機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1716"
+    },
+    {
+      "lang": "word",
+      "category": "ファイルの比較と保護の詳細2",
+      "term": "特定のユーザーにのみ編集を許可",
+      "summary": "文書の一部分に対して、指定したユーザーだけ編集可能にする保護設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1717"
+    },
+    {
+      "lang": "word",
+      "category": "ドキュメント検査の詳細2",
+      "term": "個人情報の検査(ドキュメント検査)",
+      "summary": "作成者名やコメントなど個人を特定できる情報を検出し削除候補を示す検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1718"
+    },
+    {
+      "lang": "word",
+      "category": "長文書管理の詳細3",
+      "term": "マスター文書の作成",
+      "summary": "複数の文書を1つの大きな文書として統合管理するための機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1719"
+    },
+    {
+      "lang": "word",
+      "category": "長文書管理の詳細3",
+      "term": "ブックマークへのジャンプ",
+      "summary": "文書内に設定したブックマーク名を指定して該当箇所へ移動する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1720"
+    },
+    {
+      "lang": "word",
+      "category": "長文書管理の詳細3",
+      "term": "ブックマークの表示設定",
+      "summary": "文書内のブックマーク位置をグレーの角括弧で画面に表示するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1721"
+    },
+    {
+      "lang": "word",
+      "category": "文書構造の実務",
+      "term": "見出しスタイルによるナビゲーション連動",
+      "summary": "見出しスタイルを適切に適用することでナビゲーションウィンドウや目次が自動構築される仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1722"
+    },
+    {
+      "lang": "word",
+      "category": "文書構造の実務",
+      "term": "文書マップ(旧称)",
+      "summary": "ナビゲーションウィンドウの前身となった、文書の見出し構造を表示する機能の旧名称。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1723"
+    },
+    {
+      "lang": "word",
+      "category": "封筒・ラベル詳細3",
+      "term": "封筒のオプション(フォントの変更)",
+      "summary": "封筒印刷時に宛先・差出人の文字のフォントを個別に指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1724"
+    },
+    {
+      "lang": "word",
+      "category": "封筒・ラベル詳細3",
+      "term": "ラベルの用紙情報の登録",
+      "summary": "市販のラベル用紙の製品番号を選択して、自動的にレイアウト寸法を適用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1725"
+    },
+    {
+      "lang": "word",
+      "category": "英語文書作成支援詳細",
+      "term": "文法チェック(英語)の詳細設定",
+      "summary": "英文特有の冠詞や時制の誤りを検出するためのエディターの詳細設定項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1726"
+    },
+    {
+      "lang": "word",
+      "category": "英語文書作成支援詳細",
+      "term": "類義語辞典(英語)",
+      "summary": "英単語に対して類義語の候補を表示する辞書機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1727"
+    },
+    {
+      "lang": "word",
+      "category": "日本語入力支援詳細2",
+      "term": "文字種変換(ひらがな/カタカナ/半角)",
+      "summary": "IMEの変換候補から文字の種類を切り替えて確定する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1728"
+    },
+    {
+      "lang": "word",
+      "category": "日本語入力支援詳細2",
+      "term": "単語登録(IME)",
+      "summary": "よく使う読みと表記のペアをIMEの辞書に登録し、入力を効率化する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1729"
+    },
+    {
+      "lang": "word",
+      "category": "ページレイアウトの実務応用3",
+      "term": "見開きページのレイアウト",
+      "summary": "製本を想定し左右のページで内側・外側のマージンを調整するレイアウト設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1730"
+    },
+    {
+      "lang": "word",
+      "category": "ページレイアウトの実務応用3",
+      "term": "とじ込み印刷(小冊子スタイル)",
+      "summary": "ページを2つ折りにして冊子として仕上がるよう自動的に並べ替えて印刷する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1731"
+    },
+    {
+      "lang": "word",
+      "category": "Wordと他ツールとの連携詳細",
+      "term": "Excelの表の貼り付け(リンク貼り付け)",
+      "summary": "Excelの表をコピーし、元データと連動するリンクとしてWordに貼り付ける機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1732"
+    },
+    {
+      "lang": "word",
+      "category": "Wordと他ツールとの連携詳細",
+      "term": "PowerPointへのアウトライン送信",
+      "summary": "Wordの見出し構成をそのままPowerPointのスライドタイトルとして送る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1733"
+    },
+    {
+      "lang": "word",
+      "category": "Wordと他ツールとの連携詳細",
+      "term": "Outlookとの差し込みメール連携",
+      "summary": "差し込み印刷機能を使ってOutlookから一括でメールを送信する連携機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1734"
+    },
+    {
+      "lang": "word",
+      "category": "テキストボックスの詳細機能2",
+      "term": "テキストボックスのリンク(次へ)",
+      "summary": "複数のテキストボックスを連結し、文章が自動的に次のボックスへ続くようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1735"
+    },
+    {
+      "lang": "word",
+      "category": "ページ罫線詳細2",
+      "term": "ページ罫線のアートスタイル",
+      "summary": "線ではなく絵柄(イラスト)を使ってページの周囲を装飾する罫線スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1736"
+    },
+    {
+      "lang": "word",
+      "category": "ページ罫線詳細2",
+      "term": "ページ罫線の適用範囲(このセクションのみ)",
+      "summary": "文書全体ではなく特定のセクションだけにページ罫線を適用する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1737"
     }
   ]
 }
