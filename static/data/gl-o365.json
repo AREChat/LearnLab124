@@ -15354,6 +15354,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1706"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの他サービスとの連携",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1707"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の他サービスとの連携",
+      "summary": "Viva Insightsの分析を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1708"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの他サービスとの連携",
+      "summary": "Viva Learningの学習コンテンツを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1709"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの他サービスとの連携",
+      "summary": "Viva Engageのコミュニティを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1710"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の他サービスとの連携",
+      "summary": "Viva Goalsの目標管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1711"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの他サービスとの連携",
+      "summary": "Microsoft 365管理センターのダッシュボードを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1712"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の他サービスとの連携",
+      "summary": "ユーザーの一括作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1713"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての他サービスとの連携",
+      "summary": "ライセンスのグループベース割り当てを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1714"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の他サービスとの連携",
+      "summary": "サービス状態の確認を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1715"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の他サービスとの連携",
+      "summary": "メッセージセンターの通知を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1716"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの他サービスとの連携",
+      "summary": "Microsoft 365のロードマップを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1717"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての他サービスとの連携",
+      "summary": "管理者ロールの割り当てを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1718"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の他サービスとの連携",
+      "summary": "管理単位(Administrative Units)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1719"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの他サービスとの連携",
+      "summary": "Microsoft Entra IDの条件付きアクセスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1720"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の他サービスとの連携",
+      "summary": "グループベースのライセンス管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1721"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)の他サービスとの連携",
+      "summary": "Azure ADとの連携(現Entra ID)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1722"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境の他サービスとの連携",
+      "summary": "ハイブリッドID環境を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1723"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期の他サービスとの連携",
+      "summary": "パスワードハッシュ同期を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1724"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証の他サービスとの連携",
+      "summary": "フェデレーション認証を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1725"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成の他サービスとの連携",
+      "summary": "シングルサインオンの構成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1726"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開の他サービスとの連携",
+      "summary": "Microsoft 365 Appsの展開を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1727"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールの他サービスとの連携",
+      "summary": "Officeデプロイメントツールを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1728"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)の他サービスとの連携",
+      "summary": "構成済みファイル(Configuration.xml)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1729"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新の他サービスとの連携",
+      "summary": "クリックツーラン形式の更新を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1730"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理の他サービスとの連携",
+      "summary": "Officeのバージョン管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1731"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーの他サービスとの連携",
+      "summary": "Microsoft 365 Appsのサポートポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1732"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)の他サービスとの連携",
+      "summary": "Office カスタマイズツール(ODT)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1733"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理の他サービスとの連携",
+      "summary": "グループポリシーによるOffice管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1734"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスの他サービスとの連携",
+      "summary": "クラウドポリシーサービスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1735"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターの他サービスとの連携",
+      "summary": "Microsoft 365 Apps管理センターを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1736"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートの他サービスとの連携",
+      "summary": "セキュリティとコンプライアンスのレポートを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1737"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreの他サービスとの連携",
+      "summary": "Microsoft Secure Scoreを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1738"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応の他サービスとの連携",
+      "summary": "データ保持要件への対応を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1739"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能の他サービスとの連携",
+      "summary": "GDPR対応機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1740"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能の他サービスとの連携",
+      "summary": "業界別コンプライアンス機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1741"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)の他サービスとの連携",
+      "summary": "Microsoft 365 バックアップ(サードパーティ連携)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1742"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーの他サービスとの連携",
+      "summary": "クラウドバックアップポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1743"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能の他サービスとの連携",
+      "summary": "ランサムウェア対策機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1744"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)の他サービスとの連携",
+      "summary": "ファイル復旧機能(OneDrive)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1745"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定の他サービスとの連携",
+      "summary": "監査ログの保持期間設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1746"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のサービス間連携の他サービスとの連携",
+      "summary": "Microsoft 365のサービス間連携を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1747"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platformとの統合の他サービスとの連携",
+      "summary": "Power Platformとの統合を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1748"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Dataverseとの連携の他サービスとの連携",
+      "summary": "Dataverseとの連携を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1749"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタムコネクタの作成の他サービスとの連携",
+      "summary": "カスタムコネクタの作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1750"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Graph APIの利用の他サービスとの連携",
+      "summary": "Microsoft Graph APIの利用を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1751"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Graph APIを使ったアプリ開発の他サービスとの連携",
+      "summary": "Graph APIを使ったアプリ開発を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1752"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365開発者プログラムの他サービスとの連携",
+      "summary": "Microsoft 365開発者プログラムを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1753"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サンドボックス環境の利用の他サービスとの連携",
+      "summary": "サンドボックス環境の利用を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1754"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アドインの開発(Office Add-ins)の他サービスとの連携",
+      "summary": "アドインの開発(Office Add-ins)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1755"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの開発の他サービスとの連携",
+      "summary": "Teamsアプリの開発を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1756"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザー研修(アダプションキット)の他サービスとの連携",
+      "summary": "ユーザー研修(アダプションキット)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1757"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "変更管理(チェンジマネジメント)の他サービスとの連携",
+      "summary": "変更管理(チェンジマネジメント)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1758"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "利用状況レポートの分析の他サービスとの連携",
+      "summary": "利用状況レポートの分析を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1759"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "採用状況の可視化(Adoption Score)の他サービスとの連携",
+      "summary": "採用状況の可視化(Adoption Score)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1760"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "社内ヘルプデスクの運用の他サービスとの連携",
+      "summary": "社内ヘルプデスクの運用を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1761"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンス最適化の検討の他サービスとの連携",
+      "summary": "ライセンス最適化の検討を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1762"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コスト管理とレポートの他サービスとの連携",
+      "summary": "コスト管理とレポートを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1763"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "契約更新時の見直しの他サービスとの連携",
+      "summary": "契約更新時の見直しを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1764"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サブスクリプションの一時停止の他サービスとの連携",
+      "summary": "サブスクリプションの一時停止を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1765"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "未使用ライセンスの回収の他サービスとの連携",
+      "summary": "未使用ライセンスの回収を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1766"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シャドーITへの対応の他サービスとの連携",
+      "summary": "シャドーITへの対応を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1767"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "BYOD環境でのセキュリティの他サービスとの連携",
+      "summary": "BYOD環境でのセキュリティを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1768"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部ゲストアクセスの管理の他サービスとの連携",
+      "summary": "外部ゲストアクセスの管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1769"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ゲストユーザーの有効期限設定の他サービスとの連携",
+      "summary": "ゲストユーザーの有効期限設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1770"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "テナント間コラボレーション(B2B)の他サービスとの連携",
+      "summary": "テナント間コラボレーション(B2B)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1771"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドID基盤の統合の他サービスとの連携",
+      "summary": "クラウドID基盤の統合を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1772"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "レガシー認証の無効化の他サービスとの連携",
+      "summary": "レガシー認証の無効化を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1773"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティ既定値群(Security Defaults)の他サービスとの連携",
+      "summary": "セキュリティ既定値群(Security Defaults)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1774"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "特権アクセス管理(PAM)の他サービスとの連携",
+      "summary": "特権アクセス管理(PAM)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1775"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Just-In-Timeアクセスの他サービスとの連携",
+      "summary": "Just-In-Timeアクセスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1776"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタマーロックボックスの他サービスとの連携",
+      "summary": "カスタマーロックボックスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1777"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "顧客データの地理的保存場所の他サービスとの連携",
+      "summary": "顧客データの地理的保存場所を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1778"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データレジデンシー要件の他サービスとの連携",
+      "summary": "データレジデンシー要件を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1779"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービスレベルアグリーメント(SLA)の他サービスとの連携",
+      "summary": "サービスレベルアグリーメント(SLA)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1780"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "可用性ゾーンの構成の他サービスとの連携",
+      "summary": "可用性ゾーンの構成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1781"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)の他サービスとの連携",
+      "summary": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1782"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "帯域幅の管理の他サービスとの連携",
+      "summary": "帯域幅の管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1783"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "QoS設定(Teams音声品質)の他サービスとの連携",
+      "summary": "QoS設定(Teams音声品質)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1784"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "VPN経由アクセスの最適化の他サービスとの連携",
+      "summary": "VPN経由アクセスの最適化を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1785"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウド移行計画の策定の他サービスとの連携",
+      "summary": "クラウド移行計画の策定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1786"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange Onlineの導入時の検討事項",
+      "summary": "Exchange Onlineを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1787"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange管理センターの導入時の検討事項",
+      "summary": "Exchange管理センターを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1788"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールボックスの移行の導入時の検討事項",
+      "summary": "メールボックスの移行を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1789"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有メールボックスの導入時の検討事項",
+      "summary": "共有メールボックスを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1790"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "配布グループの導入時の検討事項",
+      "summary": "配布グループを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1791"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365グループの導入時の検討事項",
+      "summary": "Microsoft 365グループを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1792"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "動的配布グループの導入時の検討事項",
+      "summary": "動的配布グループを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1793"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールフロールールの導入時の検討事項",
+      "summary": "メールフロールールを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1794"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "トランスポートルールの導入時の検討事項",
+      "summary": "トランスポートルールを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1795"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールの転送設定の導入時の検討事項",
+      "summary": "メールの転送設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1796"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "迷惑メール対策(EOP)の導入時の検討事項",
+      "summary": "迷惑メール対策(EOP)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1797"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "添付ファイルのセキュリティ対策の導入時の検討事項",
+      "summary": "添付ファイルのセキュリティ対策を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1798"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全な添付ファイル(ATP)の導入時の検討事項",
+      "summary": "安全な添付ファイル(ATP)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1799"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全なリンク(ATP)の導入時の検討事項",
+      "summary": "安全なリンク(ATP)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1800"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フィッシング対策ポリシーの導入時の検討事項",
+      "summary": "フィッシング対策ポリシーを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1801"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "条件付きアクセスポリシーの導入時の検討事項",
+      "summary": "条件付きアクセスポリシーを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1802"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra ID Protectionの導入時の検討事項",
+      "summary": "Microsoft Entra ID Protectionを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1803"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セルフサービスパスワードリセットの導入時の検討事項",
+      "summary": "セルフサービスパスワードリセットを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1804"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオン(SSO)の導入時の検討事項",
+      "summary": "シングルサインオン(SSO)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1805"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "多要素認証の設定の導入時の検討事項",
+      "summary": "多要素認証の設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1806"
     }
   ]
 }
