@@ -11556,6 +11556,420 @@
       "examples": [],
       "pages": [],
       "id": "word-1284"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "名前を付けて保存(バックステージ)",
+      "summary": "ファイル名・保存場所・ファイル形式を指定して文書を新規に保存する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1285"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "エクスポート(バックステージ)",
+      "summary": "PDF/XPS形式への変換やファイル形式の変更を行う画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1286"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "共有(バックステージ)",
+      "summary": "文書をクラウド上で他のユーザーと共有するためのリンク作成や招待を行う画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1287"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "印刷(バックステージ)",
+      "summary": "印刷プレビューと印刷設定を1つの画面でまとめて確認・設定する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1288"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "アカウント(バックステージ)",
+      "summary": "Microsoftアカウントのログイン状態やOfficeの更新状況を確認する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1289"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "フィードバック(バックステージ)",
+      "summary": "Wordの使用感に関する意見や不満をMicrosoftに送信する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1290"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "オプション(バックステージ)",
+      "summary": "言語設定や保存形式の既定値など、Word全体の動作を設定するダイアログへの入口。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1291"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "閲覧済み(最近使ったアイテム)",
+      "summary": "直近に開いたファイルや開いたフォルダーの一覧を表示する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1292"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "ピン留め(最近使ったアイテム)",
+      "summary": "よく使う文書を一覧の先頭に固定表示しておく機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1293"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能",
+      "term": "新規(バックステージ)",
+      "summary": "白紙の文書やオンラインテンプレートから新しい文書を作成する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1294"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "見積書テンプレート",
+      "summary": "商品やサービスの価格・数量・合計金額を記載するビジネス文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1295"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "請求書テンプレート",
+      "summary": "取引内容と請求金額、支払期限などを記載するビジネス文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1296"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "発注書テンプレート",
+      "summary": "注文する商品や数量、納期を取引先に伝えるためのひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1297"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "始末書テンプレート",
+      "summary": "業務上の問題について経緯と再発防止策を報告する社内文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1298"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "社内報テンプレート",
+      "summary": "社内の出来事やお知らせをまとめて配布するニュースレター形式のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1299"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "プレスリリーステンプレート",
+      "summary": "報道機関向けに新製品や取り組みを発表する文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1300"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "出張報告書テンプレート",
+      "summary": "出張の目的・訪問先・成果を上司に報告するための文書のひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1301"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "賞状テンプレート",
+      "summary": "表彰の対象者名や功績を記載する装飾的なひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1302"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレートの種類(実務用途別)2",
+      "term": "チラシテンプレート",
+      "summary": "イベントや商品の告知を目的とした、画像と文字を組み合わせたひな形。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1303"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+F9(フィールドの解除)",
+      "summary": "選択したフィールドを、計算結果などの固定テキストに変換するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1304"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "F9(フィールドの更新)",
+      "summary": "選択したフィールドの表示内容を最新の情報に更新するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1305"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Alt+Shift+D(日付フィールドの挿入)",
+      "summary": "現在の日付を自動更新されるフィールドとして挿入するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1306"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Alt+Shift+T(時刻フィールドの挿入)",
+      "summary": "現在の時刻を自動更新されるフィールドとして挿入するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1307"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+F9(フィールドの挿入)",
+      "summary": "空のフィールドコードの枠(中括弧)を挿入するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1308"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Shift+F3(文字種の変換)",
+      "summary": "選択した文字列の大文字・小文字・先頭大文字を順番に切り替えるショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1309"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+C(書式のコピー)",
+      "summary": "選択範囲の書式のみをコピーするショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1310"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+V(書式の貼り付け)",
+      "summary": "コピーした書式を別の範囲に適用するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1311"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Alt+Ctrl+1(見出し1の適用)",
+      "summary": "選択した段落に見出し1スタイルを即座に適用するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1312"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Alt+Ctrl+2(見出し2の適用)",
+      "summary": "選択した段落に見出し2スタイルを即座に適用するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1313"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+N(標準スタイルの適用)",
+      "summary": "選択した段落のスタイルを標準に戻すショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1314"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Alt+Shift+矢印キー(アウトライン上下移動)",
+      "summary": "アウトライン表示で見出しとその内容を上下に並べ替えるショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1315"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+Enter(段区切りの挿入)",
+      "summary": "段組み内で現在位置から次の段へ文章を送るショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1316"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+=(下付き文字)",
+      "summary": "選択した文字を下付き文字に変換するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1317"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)",
+      "term": "Ctrl+Shift+=(上付き文字)",
+      "summary": "選択した文字を上付き文字に変換するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1318"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "単語の登録(IME)",
+      "summary": "よく使う単語を辞書に登録し、入力しやすくするIMEの機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1319"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "オートコレクトのオプション(詳細)",
+      "summary": "入力ミスを自動修正する機能の、具体的な修正対象を設定するダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1320"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "入力中にオートフォーマットする",
+      "summary": "箇条書きの自動変換やハイパーリンクの自動設定など、入力と同時に書式を整える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1321"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "日付の自動入力の候補表示",
+      "summary": "日付の一部を入力すると、続きを自動的に推測して候補表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1322"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "単語の予測入力(フレーズ候補)",
+      "summary": "入力中の文脈に応じて、続く単語や文章の候補を提示する入力支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1323"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能",
+      "term": "自動書式設定(あらかじめ適用)",
+      "summary": "入力した瞬間にWebアドレスをハイパーリンクに変換するなど、即時適用される書式調整。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1324"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "既定のファイル形式(保存の既定値)",
+      "summary": "名前を付けて保存するときに最初から選択されているファイル形式の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1325"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "自動回復用データの保存間隔",
+      "summary": "編集中の内容を一定時間ごとに自動保存し、クラッシュ時の復旧に備える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1326"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "自動回復ファイルの保存場所",
+      "summary": "自動保存されたバックアップファイルが格納されるフォルダーのパス設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1327"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "既定のローカルファイルの保存場所",
+      "summary": "「名前を付けて保存」で最初に表示されるフォルダーの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1328"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "サーバーの下書きの既定の保存場所",
+      "summary": "SharePointなどのサーバーに保存する際の下書きの格納場所設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1329"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの既定の保存形式とファイル管理",
+      "term": "ファイルを開くときの互換性チェック",
+      "summary": "古い形式の文書を開く際に、機能の制限について警告するかどうかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1330"
     }
   ]
 }
