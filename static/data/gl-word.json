@@ -12753,6 +12753,501 @@
       "examples": [],
       "pages": [],
       "id": "word-1417"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "情報アシスタント(校閲タブ)",
+      "summary": "スペルミスや文法の問題点数を文書下部に集計表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1418"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "アクセシビリティチェック(校閲タブ)",
+      "summary": "障害のある人にも読みやすい文書になっているかを自動診断するコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1419"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "類義語辞典の起動(校閲タブ)",
+      "summary": "選択した単語の言い換え表現をパネルで調べるコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1420"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "文字カウント(校閲タブ)",
+      "summary": "文書全体や選択範囲の文字数・単語数・行数を表示するコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1421"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "翻訳の選択(校閲タブ)",
+      "summary": "選択範囲を翻訳するか文書全体を翻訳するかを切り替えるメニュー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1422"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "言語の設定(校閲タブ)",
+      "summary": "文章校正の対象言語を指定するコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1423"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "変更履歴の記録の開始/終了(校閲タブ)",
+      "summary": "編集内容を記録するかどうかを切り替えるトグルコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1424"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "インクを変換(校閲タブ)",
+      "summary": "手書きのインク注釈を通常のテキストに変換するコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1425"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブ全般の補足コマンド",
+      "term": "保護(校閲タブ)",
+      "summary": "編集の制限や文書の保護を設定するコマンドグループ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1426"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "下線の種類の選択(ホームタブ)",
+      "summary": "一重線・二重線・波線など、下線のスタイルを選べるドロップダウン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1427"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "囲い文字(ホームタブ)",
+      "summary": "選択した1文字を丸や四角で囲んで強調するコマンド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1428"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "文字の拡大/縮小ボタン(ホームタブ)",
+      "summary": "選択した文字のフォントサイズを1段階ずつ大きく、または小さくするボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1429"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "ルビボタン(ホームタブ)",
+      "summary": "選択した文字列にふりがなを付けるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1430"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "文字の網かけ(ホームタブ)",
+      "summary": "選択した文字の背景に薄い網状の模様を付けるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1431"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "並べ替えボタン(ホームタブ)",
+      "summary": "選択した段落や表の行をあいうえお順・数値順などに並べ替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1432"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "編集記号の表示/非表示(ホームタブ)",
+      "summary": "改行記号やタブ記号などを画面上に表示するかどうかを切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1433"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "選択(ホームタブのドロップダウン)",
+      "summary": "書式が似ているテキストやオブジェクトをまとめて選択するメニュー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1434"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのホームタブ全般の補足コマンド",
+      "term": "Dictate(音声入力ボタン)",
+      "summary": "ホームタブに配置された、マイクを使った音声入力を開始するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1435"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "パーツギャラリー(挿入タブ)",
+      "summary": "クイックパーツや文書プロパティなどの再利用可能な部品を呼び出すメニュー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1436"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "アイコンの挿入(挿入タブ)",
+      "summary": "人物や矢印などを表現したシンプルな線画アイコンを文書に挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1437"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "3Dモデルの挿入(挿入タブ)",
+      "summary": "立体的な3Dオブジェクトを文書内に挿入し、角度を変えて表示できる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1438"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "スクリーンショットの挿入(挿入タブ)",
+      "summary": "現在開いている他のウィンドウの画面を画像として取り込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1439"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "画面の領域(挿入タブ)",
+      "summary": "画面の一部分だけをドラッグで選択して画像として取り込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1440"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "署名欄の挿入(挿入タブ)",
+      "summary": "手書きまたは電子的な署名を行うための専用の欄を挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1441"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "日付と時刻の挿入(挿入タブ)",
+      "summary": "現在の日付や時刻を様々な表記形式で挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1442"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "オブジェクトの挿入(挿入タブ)",
+      "summary": "他のアプリケーションで作成したファイルを文書内に埋め込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1443"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの挿入タブ全般の補足コマンド",
+      "term": "アドインの入手(挿入タブ)",
+      "summary": "Office向けの追加機能(アドイン)をストアから検索・インストールする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1444"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "余白のユーザー設定(レイアウトタブ)",
+      "summary": "あらかじめ用意された余白候補にない、独自の数値を余白として設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1445"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "印刷の向きボタン(レイアウトタブ)",
+      "summary": "用紙の向きを縦または横に切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1446"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "サイズボタン(レイアウトタブ)",
+      "summary": "用紙サイズをA4やB5などから選択するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1447"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "段組みボタン(レイアウトタブ)",
+      "summary": "文章を複数の縦列に分けるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1448"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "区切りボタン(レイアウトタブ)",
+      "summary": "改ページやセクション区切りを挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1449"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "行番号ボタン(レイアウトタブ)",
+      "summary": "各行の左側に連番を表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1450"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "ハイフネーションボタン(レイアウトタブ)",
+      "summary": "行末で単語が改行される際にハイフンを自動挿入するかを設定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1451"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "インデントの数値設定(レイアウトタブ)",
+      "summary": "左右のインデント幅を数値で直接入力できるスピンボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1452"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "間隔の数値設定(レイアウトタブ)",
+      "summary": "段落前後の間隔を数値で直接入力できるスピンボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1453"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "配置ボタン(レイアウトタブ)",
+      "summary": "選択したオブジェクトをページに対して揃えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1454"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "グループ化ボタン(レイアウトタブ)",
+      "summary": "複数の図形やオブジェクトを1つのまとまりとしてグループ化するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1455"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド",
+      "term": "オブジェクトの回転ボタン(レイアウトタブ)",
+      "summary": "選択したオブジェクトを90度単位や自由な角度で回転させるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1456"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "目次の更新ボタン(参考資料タブ)",
+      "summary": "見出しの変更を反映させるため、目次のページ番号や項目を更新するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1457"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "脚注の挿入ボタン(参考資料タブ)",
+      "summary": "カーソル位置に新しい脚注を挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1458"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "次の脚注ボタン(参考資料タブ)",
+      "summary": "文書内の脚注・文末脚注を順番にたどって移動するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1459"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "脚注の表示ボタン(参考資料タブ)",
+      "summary": "脚注が参照されている本文の位置、または脚注欄にジャンプするボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1460"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "引用文献の挿入ボタン(参考資料タブ)",
+      "summary": "登録済みの資料から引用文献をカーソル位置に挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1461"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "スタイルの選択(参考資料タブ)",
+      "summary": "APAやMLAなど、引用文献の表記スタイルを切り替えるドロップダウン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1462"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "索引登録ボタン(参考資料タブ)",
+      "summary": "選択した語句を索引の見出し語として登録するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1463"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "索引の挿入ボタン(参考資料タブ)",
+      "summary": "登録済みの索引語をもとに、索引一覧を文書内に生成するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1464"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "図表番号の挿入ボタン(参考資料タブ)",
+      "summary": "画像や表に連番付きのラベルを挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1465"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド",
+      "term": "図表目次の挿入ボタン(参考資料タブ)",
+      "summary": "文書内のすべての図表番号を集めた一覧を生成するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1466"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "ドキュメントの書式設定ギャラリー(デザインタブ)",
+      "summary": "見出しと本文のフォント・配色をまとめて切り替えられるスタイルセットのギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1467"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "色の変更ボタン(デザインタブ)",
+      "summary": "文書に適用する配色パターンを切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1468"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "フォントの変更ボタン(デザインタブ)",
+      "summary": "見出し用・本文用のフォントの組み合わせを切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1469"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "段落の間隔ボタン(デザインタブ)",
+      "summary": "文書全体の行間や段落間の広さをまとめて調整するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1470"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "効果の変更ボタン(デザインタブ)",
+      "summary": "図形や表に適用される質感の効果セットを切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1471"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのデザインタブ全般の補足コマンド",
+      "term": "既定として設定ボタン(デザインタブ)",
+      "summary": "現在のデザイン設定を、新規文書作成時の標準として保存するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1472"
     }
   ]
 }
