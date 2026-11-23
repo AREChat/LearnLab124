@@ -8154,6 +8154,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-0906"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定の利用者向け活用例",
+      "summary": "一般利用者がOneDrive for Businessの同期設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0907"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動の利用者向け活用例",
+      "summary": "一般利用者がOneDriveの既知のフォルダー移動を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0908"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定の利用者向け活用例",
+      "summary": "一般利用者がOneDriveの共有設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0909"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンの利用者向け活用例",
+      "summary": "一般利用者がOneDriveのリサイクルビンを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0910"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定の利用者向け活用例",
+      "summary": "一般利用者が外部共有の設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0911"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成の利用者向け活用例",
+      "summary": "一般利用者がTeamsチームの作成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0912"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類の利用者向け活用例",
+      "summary": "一般利用者がTeamsチャネルの種類を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0913"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルの利用者向け活用例",
+      "summary": "一般利用者がプライベートチャネルを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0914"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルの利用者向け活用例",
+      "summary": "一般利用者が共有チャネルを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0915"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定の利用者向け活用例",
+      "summary": "一般利用者がTeams会議の設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0916"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能の利用者向け活用例",
+      "summary": "一般利用者がTeams会議のロビー機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0917"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画の利用者向け活用例",
+      "summary": "一般利用者がTeams会議の録画を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0918"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしの利用者向け活用例",
+      "summary": "一般利用者がTeams会議の文字起こしを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0919"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントの利用者向け活用例",
+      "summary": "一般利用者がTeamsのライブイベントを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0920"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーの利用者向け活用例",
+      "summary": "一般利用者がTeamsウェビナーを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0921"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)の利用者向け活用例",
+      "summary": "一般利用者がTeams電話(Phone System)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0922"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターの利用者向け活用例",
+      "summary": "一般利用者がTeams管理センターを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0923"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理の利用者向け活用例",
+      "summary": "一般利用者がTeamsアプリの管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0924"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージの利用者向け活用例",
+      "summary": "一般利用者がTeamsポリシーパッケージを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0925"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果の利用者向け活用例",
+      "summary": "一般利用者がTeamsのバックグラウンド効果を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0926"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定の利用者向け活用例",
+      "summary": "一般利用者がOutlookのルール設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0927"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有の利用者向け活用例",
+      "summary": "一般利用者がOutlookの予定表共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0928"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースの利用者向け活用例",
+      "summary": "一般利用者がOutlookの会議室リソースを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0929"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループの利用者向け活用例",
+      "summary": "一般利用者がOutlookの連絡先グループを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0930"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱の利用者向け活用例",
+      "summary": "一般利用者がフォーカス収件箱を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0931"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作の利用者向け活用例",
+      "summary": "一般利用者がOutlookのクイック操作を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0932"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定の利用者向け活用例",
+      "summary": "一般利用者がOutlookの遅延送信設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0933"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けの利用者向け活用例",
+      "summary": "一般利用者がOutlookのカテゴリ分けを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0934"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリの利用者向け活用例",
+      "summary": "一般利用者がOutlookモバイルアプリを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0935"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定の利用者向け活用例",
+      "summary": "一般利用者が予定表の委任設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0936"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットの利用者向け活用例",
+      "summary": "一般利用者がPlannerのバケットを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0937"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当ての利用者向け活用例",
+      "summary": "一般利用者がPlannerのタスク割り当てを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0938"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有の利用者向け活用例",
+      "summary": "一般利用者がTo Doのタスクリスト共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0939"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Listsの作成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0940"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Listsのテンプレートを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0941"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成の利用者向け活用例",
+      "summary": "一般利用者がPower Automateのフロー作成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0942"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローの利用者向け活用例",
+      "summary": "一般利用者がPower Automateの承認フローを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0943"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタの利用者向け活用例",
+      "summary": "一般利用者がPower Automateのコネクタを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0944"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスの利用者向け活用例",
+      "summary": "一般利用者がPower Appsのキャンバスアプスを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0945"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリの利用者向け活用例",
+      "summary": "一般利用者がPower Appsのモデル駆動型アプリを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0946"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成の利用者向け活用例",
+      "summary": "一般利用者がPower BIのダッシュボード作成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0947"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有の利用者向け活用例",
+      "summary": "一般利用者がPower BIのレポート共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0948"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新の利用者向け活用例",
+      "summary": "一般利用者がPower BIデータセットの更新を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0949"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsの利用者向け活用例",
+      "summary": "一般利用者がPower Virtual Agentsを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0950"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターの利用者向け活用例",
+      "summary": "一般利用者がPower Platform管理センターを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0951"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Forms クイズ機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0952"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定の利用者向け活用例",
+      "summary": "一般利用者がFormsの分岐設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0953"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力の利用者向け活用例",
+      "summary": "一般利用者がFormsの回答のExcel出力を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0954"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Whiteboardのテンプレートを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0955"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集の利用者向け活用例",
+      "summary": "一般利用者がWhiteboardの共同編集を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0956"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Loopのワークスペースを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0957"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有の利用者向け活用例",
+      "summary": "一般利用者がLoopコンポーネントの共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0958"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有の利用者向け活用例",
+      "summary": "一般利用者がOneNoteのノートブック共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0959"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集の利用者向け活用例",
+      "summary": "一般利用者がOneNoteの共同編集を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0960"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能の利用者向け活用例",
+      "summary": "一般利用者がOneNoteのタグ機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0961"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Streamの動画共有を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0962"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの利用者向け活用例",
+      "summary": "一般利用者がStreamの動画の文字起こしを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0963"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の利用者向け活用例",
+      "summary": "一般利用者がClipchampの動画編集を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0964"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Designerでの画像生成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0965"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Bookingsの予約管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0966"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Vivaの従業員エクスペリエンスを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0967"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の利用者向け活用例",
+      "summary": "一般利用者がViva Insightsの分析を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0968"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの利用者向け活用例",
+      "summary": "一般利用者がViva Learningの学習コンテンツを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0969"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの利用者向け活用例",
+      "summary": "一般利用者がViva Engageのコミュニティを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0970"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の利用者向け活用例",
+      "summary": "一般利用者がViva Goalsの目標管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0971"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365管理センターのダッシュボードを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0972"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の利用者向け活用例",
+      "summary": "一般利用者がユーザーの一括作成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0973"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての利用者向け活用例",
+      "summary": "一般利用者がライセンスのグループベース割り当てを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0974"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の利用者向け活用例",
+      "summary": "一般利用者がサービス状態の確認を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0975"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の利用者向け活用例",
+      "summary": "一般利用者がメッセージセンターの通知を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0976"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365のロードマップを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0977"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての利用者向け活用例",
+      "summary": "一般利用者が管理者ロールの割り当てを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0978"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の利用者向け活用例",
+      "summary": "一般利用者が管理単位(Administrative Units)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0979"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Entra IDの条件付きアクセスを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0980"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の利用者向け活用例",
+      "summary": "一般利用者がグループベースのライセンス管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0981"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)の利用者向け活用例",
+      "summary": "一般利用者がAzure ADとの連携(現Entra ID)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0982"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境の利用者向け活用例",
+      "summary": "一般利用者がハイブリッドID環境を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0983"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期の利用者向け活用例",
+      "summary": "一般利用者がパスワードハッシュ同期を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0984"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証の利用者向け活用例",
+      "summary": "一般利用者がフェデレーション認証を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0985"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成の利用者向け活用例",
+      "summary": "一般利用者がシングルサインオンの構成を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0986"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365 Appsの展開を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0987"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールの利用者向け活用例",
+      "summary": "一般利用者がOfficeデプロイメントツールを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0988"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)の利用者向け活用例",
+      "summary": "一般利用者が構成済みファイル(Configuration.xml)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0989"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新の利用者向け活用例",
+      "summary": "一般利用者がクリックツーラン形式の更新を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0990"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理の利用者向け活用例",
+      "summary": "一般利用者がOfficeのバージョン管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0991"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365 Appsのサポートポリシーを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0992"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)の利用者向け活用例",
+      "summary": "一般利用者がOffice カスタマイズツール(ODT)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0993"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理の利用者向け活用例",
+      "summary": "一般利用者がグループポリシーによるOffice管理を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0994"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスの利用者向け活用例",
+      "summary": "一般利用者がクラウドポリシーサービスを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0995"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365 Apps管理センターを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0996"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートの利用者向け活用例",
+      "summary": "一般利用者がセキュリティとコンプライアンスのレポートを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0997"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreの利用者向け活用例",
+      "summary": "一般利用者がMicrosoft Secure Scoreを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0998"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応の利用者向け活用例",
+      "summary": "一般利用者がデータ保持要件への対応を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0999"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能の利用者向け活用例",
+      "summary": "一般利用者がGDPR対応機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1000"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能の利用者向け活用例",
+      "summary": "一般利用者が業界別コンプライアンス機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1001"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)の利用者向け活用例",
+      "summary": "一般利用者がMicrosoft 365 バックアップ(サードパーティ連携)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1002"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーの利用者向け活用例",
+      "summary": "一般利用者がクラウドバックアップポリシーを業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1003"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能の利用者向け活用例",
+      "summary": "一般利用者がランサムウェア対策機能を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1004"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)の利用者向け活用例",
+      "summary": "一般利用者がファイル復旧機能(OneDrive)を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1005"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定の利用者向け活用例",
+      "summary": "一般利用者が監査ログの保持期間設定を業務で活用する例。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1006"
     }
   ]
 }
