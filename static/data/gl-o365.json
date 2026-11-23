@@ -14454,6 +14454,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1606"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365グループの他サービスとの連携",
+      "summary": "Microsoft 365グループを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1607"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "動的配布グループの他サービスとの連携",
+      "summary": "動的配布グループを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1608"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールフロールールの他サービスとの連携",
+      "summary": "メールフロールールを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1609"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "トランスポートルールの他サービスとの連携",
+      "summary": "トランスポートルールを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1610"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールの転送設定の他サービスとの連携",
+      "summary": "メールの転送設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1611"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "迷惑メール対策(EOP)の他サービスとの連携",
+      "summary": "迷惑メール対策(EOP)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1612"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "添付ファイルのセキュリティ対策の他サービスとの連携",
+      "summary": "添付ファイルのセキュリティ対策を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1613"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全な添付ファイル(ATP)の他サービスとの連携",
+      "summary": "安全な添付ファイル(ATP)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1614"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全なリンク(ATP)の他サービスとの連携",
+      "summary": "安全なリンク(ATP)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1615"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フィッシング対策ポリシーの他サービスとの連携",
+      "summary": "フィッシング対策ポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1616"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "条件付きアクセスポリシーの他サービスとの連携",
+      "summary": "条件付きアクセスポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1617"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra ID Protectionの他サービスとの連携",
+      "summary": "Microsoft Entra ID Protectionを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1618"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セルフサービスパスワードリセットの他サービスとの連携",
+      "summary": "セルフサービスパスワードリセットを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1619"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオン(SSO)の他サービスとの連携",
+      "summary": "シングルサインオン(SSO)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1620"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "多要素認証の設定の他サービスとの連携",
+      "summary": "多要素認証の設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1621"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Authenticatorアプリの他サービスとの連携",
+      "summary": "Microsoft Authenticatorアプリを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1622"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードレス認証の他サービスとの連携",
+      "summary": "パスワードレス認証を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1623"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "デバイス管理(Intune)の他サービスとの連携",
+      "summary": "デバイス管理(Intune)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1624"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "モバイルデバイス管理(MDM)の他サービスとの連携",
+      "summary": "モバイルデバイス管理(MDM)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1625"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アプリ保護ポリシーの他サービスとの連携",
+      "summary": "アプリ保護ポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1626"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Windows Autopilotの他サービスとの連携",
+      "summary": "Windows Autopilotを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1627"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Endpointの他サービスとの連携",
+      "summary": "Microsoft Defender for Endpointを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1628"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Office 365の他サービスとの連携",
+      "summary": "Microsoft Defender for Office 365を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1629"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Cloud Appsの他サービスとの連携",
+      "summary": "Microsoft Defender for Cloud Appsを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1630"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティスコアの他サービスとの連携",
+      "summary": "セキュリティスコアを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1631"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コンプライアンスセンターの他サービスとの連携",
+      "summary": "コンプライアンスセンターを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1632"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "情報保護(ラベル付け)の他サービスとの連携",
+      "summary": "情報保護(ラベル付け)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1633"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ損失防止ポリシーの他サービスとの連携",
+      "summary": "データ損失防止ポリシーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1634"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ラベルの他サービスとの連携",
+      "summary": "保持ラベルを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1635"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ポリシーの適用の他サービスとの連携",
+      "summary": "保持ポリシーの適用を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1636"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "電子情報開示(eDiscovery)の他サービスとの連携",
+      "summary": "電子情報開示(eDiscovery)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1637"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "法的ホールドの他サービスとの連携",
+      "summary": "法的ホールドを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1638"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの検索の他サービスとの連携",
+      "summary": "監査ログの検索を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1639"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "内部リスク管理の他サービスとの連携",
+      "summary": "内部リスク管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1640"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コミュニケーションコンプライアンスの他サービスとの連携",
+      "summary": "コミュニケーションコンプライアンスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1641"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointサイトコレクションの他サービスとの連携",
+      "summary": "SharePointサイトコレクションを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1642"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointチームサイトの他サービスとの連携",
+      "summary": "SharePointチームサイトを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1643"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointコミュニケーションサイトの他サービスとの連携",
+      "summary": "SharePointコミュニケーションサイトを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1644"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointリストの他サービスとの連携",
+      "summary": "SharePointリストを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1645"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointライブラリの権限設定の他サービスとの連携",
+      "summary": "SharePointライブラリの権限設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1646"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定の他サービスとの連携",
+      "summary": "OneDrive for Businessの同期設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1647"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動の他サービスとの連携",
+      "summary": "OneDriveの既知のフォルダー移動を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1648"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定の他サービスとの連携",
+      "summary": "OneDriveの共有設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1649"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンの他サービスとの連携",
+      "summary": "OneDriveのリサイクルビンを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1650"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定の他サービスとの連携",
+      "summary": "外部共有の設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1651"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成の他サービスとの連携",
+      "summary": "Teamsチームの作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1652"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類の他サービスとの連携",
+      "summary": "Teamsチャネルの種類を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1653"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルの他サービスとの連携",
+      "summary": "プライベートチャネルを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1654"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルの他サービスとの連携",
+      "summary": "共有チャネルを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1655"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定の他サービスとの連携",
+      "summary": "Teams会議の設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1656"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能の他サービスとの連携",
+      "summary": "Teams会議のロビー機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1657"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画の他サービスとの連携",
+      "summary": "Teams会議の録画を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1658"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしの他サービスとの連携",
+      "summary": "Teams会議の文字起こしを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1659"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントの他サービスとの連携",
+      "summary": "Teamsのライブイベントを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1660"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーの他サービスとの連携",
+      "summary": "Teamsウェビナーを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1661"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)の他サービスとの連携",
+      "summary": "Teams電話(Phone System)を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1662"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターの他サービスとの連携",
+      "summary": "Teams管理センターを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1663"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理の他サービスとの連携",
+      "summary": "Teamsアプリの管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1664"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージの他サービスとの連携",
+      "summary": "Teamsポリシーパッケージを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1665"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果の他サービスとの連携",
+      "summary": "Teamsのバックグラウンド効果を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1666"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定の他サービスとの連携",
+      "summary": "Outlookのルール設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1667"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有の他サービスとの連携",
+      "summary": "Outlookの予定表共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1668"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースの他サービスとの連携",
+      "summary": "Outlookの会議室リソースを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1669"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループの他サービスとの連携",
+      "summary": "Outlookの連絡先グループを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1670"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱の他サービスとの連携",
+      "summary": "フォーカス収件箱を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1671"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作の他サービスとの連携",
+      "summary": "Outlookのクイック操作を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1672"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定の他サービスとの連携",
+      "summary": "Outlookの遅延送信設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1673"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けの他サービスとの連携",
+      "summary": "Outlookのカテゴリ分けを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1674"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリの他サービスとの連携",
+      "summary": "Outlookモバイルアプリを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1675"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定の他サービスとの連携",
+      "summary": "予定表の委任設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1676"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットの他サービスとの連携",
+      "summary": "Plannerのバケットを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1677"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当ての他サービスとの連携",
+      "summary": "Plannerのタスク割り当てを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1678"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有の他サービスとの連携",
+      "summary": "To Doのタスクリスト共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1679"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成の他サービスとの連携",
+      "summary": "Microsoft Listsの作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1680"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートの他サービスとの連携",
+      "summary": "Microsoft Listsのテンプレートを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1681"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成の他サービスとの連携",
+      "summary": "Power Automateのフロー作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1682"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローの他サービスとの連携",
+      "summary": "Power Automateの承認フローを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1683"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタの他サービスとの連携",
+      "summary": "Power Automateのコネクタを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1684"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスの他サービスとの連携",
+      "summary": "Power Appsのキャンバスアプスを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1685"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリの他サービスとの連携",
+      "summary": "Power Appsのモデル駆動型アプリを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1686"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成の他サービスとの連携",
+      "summary": "Power BIのダッシュボード作成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1687"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有の他サービスとの連携",
+      "summary": "Power BIのレポート共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1688"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新の他サービスとの連携",
+      "summary": "Power BIデータセットの更新を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1689"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsの他サービスとの連携",
+      "summary": "Power Virtual Agentsを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1690"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターの他サービスとの連携",
+      "summary": "Power Platform管理センターを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1691"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能の他サービスとの連携",
+      "summary": "Microsoft Forms クイズ機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1692"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定の他サービスとの連携",
+      "summary": "Formsの分岐設定を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1693"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力の他サービスとの連携",
+      "summary": "Formsの回答のExcel出力を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1694"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートの他サービスとの連携",
+      "summary": "Microsoft Whiteboardのテンプレートを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1695"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集の他サービスとの連携",
+      "summary": "Whiteboardの共同編集を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1696"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースの他サービスとの連携",
+      "summary": "Microsoft Loopのワークスペースを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1697"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有の他サービスとの連携",
+      "summary": "Loopコンポーネントの共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1698"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有の他サービスとの連携",
+      "summary": "OneNoteのノートブック共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1699"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集の他サービスとの連携",
+      "summary": "OneNoteの共同編集を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1700"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能の他サービスとの連携",
+      "summary": "OneNoteのタグ機能を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1701"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の他サービスとの連携",
+      "summary": "Microsoft Streamの動画共有を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1702"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの他サービスとの連携",
+      "summary": "Streamの動画の文字起こしを他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1703"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の他サービスとの連携",
+      "summary": "Clipchampの動画編集を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1704"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の他サービスとの連携",
+      "summary": "Microsoft Designerでの画像生成を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1705"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の他サービスとの連携",
+      "summary": "Microsoft Bookingsの予約管理を他のMicrosoft 365サービスと連携させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1706"
     }
   ]
 }
