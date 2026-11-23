@@ -17055,6 +17055,789 @@
       "examples": [],
       "pages": [],
       "id": "word-1895"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校正支援用語",
+      "term": "文章の簡潔さチェック",
+      "summary": "冗長な表現を検出し、より簡潔な言い回しを提案するエディター機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1896"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校正支援用語",
+      "term": "専門用語の一貫性チェック",
+      "summary": "同じ概念に対して異なる用語が混在していないかを確認するチェック項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1897"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの画面構成要素",
+      "term": "タイトルバー",
+      "summary": "画面最上部に表示される、現在開いているファイル名とアプリ名の表示領域。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1898"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの画面構成要素",
+      "term": "ミニツールバー",
+      "summary": "文字を選択した際に近くに表示される、よく使う書式ボタンの簡易ツールバー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1899"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの画面構成要素",
+      "term": "縦スクロールバー",
+      "summary": "画面の右端に表示される、文書を上下にスクロールするための操作バー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1900"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの画面構成要素",
+      "term": "水平ルーラー",
+      "summary": "ページ上部に表示され、インデントやタブ位置を視覚的に確認・調整できる目盛り。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1901"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの画面構成要素",
+      "term": "垂直ルーラー",
+      "summary": "ページ左側に表示され、上下のマージンやページ位置を確認できる目盛り。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1902"
+    },
+    {
+      "lang": "word",
+      "category": "文書作成の基本操作2",
+      "term": "段落の選択(行の左でクリック)",
+      "summary": "行の左端をクリックすることで1行を選択するマウス操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1903"
+    },
+    {
+      "lang": "word",
+      "category": "文書作成の基本操作2",
+      "term": "段落全体の選択(左端をダブルクリック)",
+      "summary": "行の左端をダブルクリックして段落全体を選択するマウス操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1904"
+    },
+    {
+      "lang": "word",
+      "category": "文書作成の基本操作2",
+      "term": "単語の選択(ダブルクリック)",
+      "summary": "単語の上でダブルクリックしてその単語全体を選択する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1905"
+    },
+    {
+      "lang": "word",
+      "category": "文書作成の基本操作2",
+      "term": "文の選択(Ctrl+クリック)",
+      "summary": "Ctrlキーを押しながらクリックすることで、その文全体を選択する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1906"
+    },
+    {
+      "lang": "word",
+      "category": "表の作成実務パターン2",
+      "term": "見積書の表レイアウト",
+      "summary": "品番・数量・単価・金額の列で構成される、見積書作成に適した表の組み方。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1907"
+    },
+    {
+      "lang": "word",
+      "category": "文書デザインの基本原則2",
+      "term": "余白の一貫性",
+      "summary": "文書全体で余白の取り方を統一し、見た目のまとまりを保つデザイン上の原則。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1908"
+    },
+    {
+      "lang": "word",
+      "category": "文書デザインの基本原則2",
+      "term": "フォントの使い分け原則",
+      "summary": "見出しと本文で異なるフォントを使い分け、視認性と階層を明確にする原則。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1909"
+    },
+    {
+      "lang": "word",
+      "category": "契約書・公式文書の作成実務2",
+      "term": "条項番号の自動付番",
+      "summary": "契約書の各条項に見出し番号機能を使って自動的に番号を振る実務手法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1910"
+    },
+    {
+      "lang": "word",
+      "category": "契約書・公式文書の作成実務2",
+      "term": "甲乙の表記統一",
+      "summary": "契約書内で当事者を示す「甲」「乙」の表記を文書全体で統一する実務上の注意点。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1911"
+    },
+    {
+      "lang": "word",
+      "category": "Wordと他ツールとの連携詳細2",
+      "term": "クリップボードの履行機能",
+      "summary": "直前にコピーした複数の項目を履歴として保持し、選んで貼り付けられる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1912"
+    },
+    {
+      "lang": "word",
+      "category": "Wordと他ツールとの連携詳細2",
+      "term": "OneNoteへのリンク貼り付け",
+      "summary": "Word文書の内容をOneNoteのページにリンクとして貼り付ける連携機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1913"
+    },
+    {
+      "lang": "word",
+      "category": "長文書編集の実務テクニック2",
+      "term": "見出しのみ表示して編集する",
+      "summary": "アウトライン表示で本文を折りたたみ、見出し構成だけを見ながら章立てを編集する手法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1914"
+    },
+    {
+      "lang": "word",
+      "category": "長文書編集の実務テクニック2",
+      "term": "複数章のPDF一括出力",
+      "summary": "マスター文書機能やセクション区切りを利用して、章ごとに分けてPDFを出力する実務手法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1915"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細2",
+      "term": "図表番号の連番の崩れ対策",
+      "summary": "図表を削除・追加した際に連番がずれないよう、フィールドの更新を徹底する実務上の対策。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1916"
+    },
+    {
+      "lang": "word",
+      "category": "文書のレイアウト微調整3",
+      "term": "図形の正確な位置指定(詳細設定ダイアログ)",
+      "summary": "図形の書式設定でX軸・Y軸の座標値を数値入力して正確に配置する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1917"
+    },
+    {
+      "lang": "word",
+      "category": "文書のレイアウト微調整3",
+      "term": "複数オブジェクトの一括サイズ変更",
+      "summary": "複数の図形を選択し、まとめてサイズを揃えて変更する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1918"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別実務用語(長文書の構成管理)2",
+      "term": "付録(アペンディックス)の構成",
+      "summary": "本文とは別に資料や補足データをまとめる、長文書末尾の構成要素。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1919"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別実務用語(長文書の構成管理)2",
+      "term": "凡例一覧の作成",
+      "summary": "文書内で使用した記号や略語の意味をまとめて示す一覧表の作成。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1920"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別実務用語(文書作成の留意点)2",
+      "term": "版数管理(改訂番号)の記載",
+      "summary": "文書の改訂履歴を明確にするため、表紙や footer に版数を記載する運用上の留意点。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1921"
+    },
+    {
+      "lang": "word",
+      "category": "図写真編集タブの個別ボタン名3",
+      "term": "色の調整ボタン(図の書式)",
+      "summary": "画像の彩度や色調(トーン)を変更するためのプリセットを選べるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1922"
+    },
+    {
+      "lang": "word",
+      "category": "図写真編集タブの個別ボタン名3",
+      "term": "透明色を指定ボタン",
+      "summary": "画像内の特定の色をクリックして透明にするボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1923"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作2",
+      "term": "フリーフォーム図形の描画",
+      "summary": "複数の頂点をクリックして任意の多角形や曲線を作成する描画機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1924"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの配置・整列詳細2",
+      "term": "左右中央揃え(複数オブジェクト)",
+      "summary": "選択した複数の図形を水平方向の中心で揃える整列機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1925"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの配置・整列詳細2",
+      "term": "上下に整列(複数オブジェクト)",
+      "summary": "選択した複数の図形を垂直方向に等間隔で配置する整列機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1926"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ2",
+      "term": "文書の作成日時プロパティ",
+      "summary": "ファイルが最初に作成された日時を記録する自動メタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1927"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ2",
+      "term": "文書のキーワードプロパティ",
+      "summary": "検索しやすくするために文書に付与する任意のキーワードのメタデータ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1928"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの日本語入力・組版機能2",
+      "term": "文字詰め(カーニング、日本語)",
+      "summary": "句読点やカッコの前後の不要な空白を詰めて見た目を整える日本語組版機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1929"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細2",
+      "term": "辞書の追加(ユーザー辞書)",
+      "summary": "専門用語や固有名詞をスペルチェックの対象外として追加登録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1930"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能2",
+      "term": "スタイルの保護(このテンプレートまたは文書のみ)",
+      "summary": "作成したスタイルを現在の文書だけに限定して保存する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1931"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの開発タブとマクロ機能の詳細3",
+      "term": "イベントプロシージャ(VBA)",
+      "summary": "文書を開く、保存するなど特定の操作をきっかけに自動実行されるVBAコード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1932"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイルタブ(バックステージビュー)の機能2",
+      "term": "情報(バックステージ)",
+      "summary": "文書のプロパティや保護状態、バージョン履歴などを確認できるバックステージの画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1933"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの参考資料タブ全般の補足コマンド2",
+      "term": "資料文献の管理(スタイルの切替)",
+      "summary": "参考資料タブで引用スタイル(APA、MLAなど)を一覧から切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1934"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別フィールドコード詳細2",
+      "term": "SAVEDATEフィールド",
+      "summary": "文書が最後に保存された日時を表示するフィールドコード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1935"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのファイル形式一覧詳細2",
+      "term": "XML形式(.xml)",
+      "summary": "構造化データとして文書を保存する汎用のマークアップ言語形式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1936"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの検索と置換の詳細オプション2",
+      "term": "ワイルドカードを使用した検索",
+      "summary": "*や?などの記号を使ってパターンにマッチする文字列を検索する高度な検索オプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1937"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの検索と置換の詳細オプション2",
+      "term": "完全に一致する単語のみ検索",
+      "summary": "指定した文字列が単語全体として一致する場合だけを検索対象にするオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1938"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別ショートカットキー補足2",
+      "term": "元の書式に戻す(Ctrl+Shift+N)",
+      "summary": "選択した段落を標準スタイルに戻すショートカットキー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1939"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのキーボードショートカット(応用操作)2",
+      "term": "ウィンドウの分割切替(Alt+Ctrl+S)",
+      "summary": "文書ウィンドウを上下に分割する、または分割を解除するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1940"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの組み込みスタイル名詳細2",
+      "term": "強調参照スタイル",
+      "summary": "文中で特に重要な語句を目立たせるために用意された組み込みの文字スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1941"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの組み込みスタイル名詳細2",
+      "term": "引用文スタイル",
+      "summary": "長い引用部分をインデントし、本文と視覚的に区別するための組み込み段落スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1942"
+    },
+    {
+      "lang": "word",
+      "category": "組み込みスタイル一覧(Word)2",
+      "term": "書名スタイル",
+      "summary": "書籍や作品のタイトルを斜体で強調表示するための組み込み文字スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1943"
+    },
+    {
+      "lang": "word",
+      "category": "組み込みスタイル一覧(Word)2",
+      "term": "強調(太字)スタイル",
+      "summary": "文中の語句を太字で強く目立たせる組み込みの文字スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1944"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別書式設定機能の詳細2",
+      "term": "文字の間隔(カーニング)の自動調整",
+      "summary": "指定したポイントサイズ以上の文字に対して自動的にペアカーニングを適用する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1945"
+    },
+    {
+      "lang": "word",
+      "category": "WordのWordのオプションダイアログ詳細設定項目2",
+      "term": "リボンのユーザー設定カテゴリ",
+      "summary": "リボンに表示するタブやコマンドを自由に追加・削除できる設定カテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1946"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造2",
+      "term": "数式の構造(べき乗と添字)",
+      "summary": "数式ツールで指数や下付き添字を入れ子構造として配置するテンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1947"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツール・数式構造ギャラリー詳細2",
+      "term": "積分の構造(数式ツール)",
+      "summary": "積分記号と上限・下限を組み合わせたテンプレートを挿入する数式構造。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1948"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷設定詳細2",
+      "term": "グレースケールで印刷",
+      "summary": "カラー文書を白黒の濃淡で印刷するよう指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1949"
+    },
+    {
+      "lang": "word",
+      "category": "ページ設定・印刷(Word詳細)2",
+      "term": "原稿用紙の設定",
+      "summary": "文字数・行数を指定したマス目のレイアウトで文書を作成する日本語向けの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1950"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細2",
+      "term": "変更履歴の作成者名の変更",
+      "summary": "オプションで表示されるユーザー名を変更し、変更履歴に記録される名前を切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1951"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの校閲タブの個別ボタン名補足2",
+      "term": "変更履歴の記録ボタン(校閲タブ)",
+      "summary": "以降の編集内容を変更履歴として記録するかどうかを切り替えるトグルボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1952"
+    },
+    {
+      "lang": "word",
+      "category": "Word開発タブの個別ボタン名2",
+      "term": "ドキュメントパネルの表示",
+      "summary": "文書プロパティを編集するためのパネルをリボン下に表示する開発タブのボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1953"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの個別リボンボタン名(挿入タブ補足)2",
+      "term": "ヘッダーとフッターの編集を閉じるボタン",
+      "summary": "ヘッダー・フッター編集モードを終了し、本文編集に戻るためのボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1954"
+    },
+    {
+      "lang": "word",
+      "category": "リボンの個別ボタン名(Word 挿入タブ)2",
+      "term": "テキストボックスの描画ボタン(挿入タブ)",
+      "summary": "ドラッグして自由な位置・サイズのテキストボックスを作成するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1955"
+    },
+    {
+      "lang": "word",
+      "category": "リボンの個別ボタン名(Word 校閲タブ)2",
+      "term": "翻訳ボタン(校閲タブ)",
+      "summary": "選択範囲または文書全体を他言語に翻訳する機能を開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1956"
+    },
+    {
+      "lang": "word",
+      "category": "リボンの個別ボタン名(Word レイアウトタブ)2",
+      "term": "行番号の表示ボタン(レイアウトタブ)",
+      "summary": "ページまたは文書全体の各行に行番号を表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1957"
+    },
+    {
+      "lang": "word",
+      "category": "リボンの個別ボタン名(Word)2",
+      "term": "ズームスライダー",
+      "summary": "画面右下にあり、ドラッグして表示倍率を連続的に変更できるスライダー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1958"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのレイアウトタブ全般の補足コマンド2",
+      "term": "ハイフネーションの自動設定",
+      "summary": "行末の単語を自動的にハイフンで区切り、折り返しを調整する英文向け機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1959"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのフォントの詳細設定2",
+      "term": "フォントの既定値として設定",
+      "summary": "現在選択しているフォントと書式をNormalスタイルの既定値として保存する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1960"
+    },
+    {
+      "lang": "word",
+      "category": "リボンのタブとグループ2",
+      "term": "表ツールのコンテキストタブ",
+      "summary": "表の中にカーソルがある時だけリボンに表示される専用タブ群。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1961"
+    },
+    {
+      "lang": "word",
+      "category": "リボンのタブとグループ2",
+      "term": "描画ツールのコンテキストタブ",
+      "summary": "図形や図を選択した時だけリボンに表示される専用タブ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1962"
+    },
+    {
+      "lang": "word",
+      "category": "挿入と図表2",
+      "term": "グラフィックの挿入(アイコン/3Dモデル/SmartArt)",
+      "summary": "挿入タブに用意された、文字情報以外の視覚要素を追加する機能の総称。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1963"
+    },
+    {
+      "lang": "word",
+      "category": "Wordで挿入できるグラフの種類2",
+      "term": "複合グラフ",
+      "summary": "棒グラフと線グラフなど異なる種類のグラフを1つのグラフ内で組み合わせる形式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1964"
+    },
+    {
+      "lang": "word",
+      "category": "画像・図形の詳細操作2",
+      "term": "図形の結合(型抜き/接合)",
+      "summary": "複数の図形を組み合わせて1つの新しい形状を作る図形の結合機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1965"
+    },
+    {
+      "lang": "word",
+      "category": "表の操作詳細2",
+      "term": "表の自動調整(ウィンドウサイズに合わせる)",
+      "summary": "表の幅をウィンドウの表示幅に自動的に合わせるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1966"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定2",
+      "term": "セルの余白の個別設定",
+      "summary": "表全体の設定とは別に、特定のセルだけ内部の余白を変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1967"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書比較・変更履歴機能詳細2",
+      "term": "比較結果の新規文書での表示",
+      "summary": "文書比較の結果を元の文書を変更せず、別の新しい文書として出力するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1968"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作2",
+      "term": "最近閲覧した場所へ移動(Shift+F5)",
+      "summary": "直前に編集やスクロールをしていた場所を順にたどって戻るショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1969"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒・ラベル作成機能詳細2",
+      "term": "封筒サイズの選択(洋形長形)",
+      "summary": "封筒印刷ダイアログで用紙の規格サイズを選択する設定項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1970"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの単語登録・入力支援機能2",
+      "term": "変換候補の学習機能(IME)",
+      "summary": "よく選択する変換候補を学習し、次回以降優先的に表示するIMEの機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1971"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読み上げ・学習支援機能2",
+      "term": "読み上げの声の選択",
+      "summary": "音声読み上げで使用する音声エンジンや話者を選べる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1972"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文章校正・読みやすさ機能詳細2",
+      "term": "文の長さの警告",
+      "summary": "一文が極端に長い場合に読みにくさの指摘として表示されるチェック項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1973"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文字・言語処理詳細2",
+      "term": "言語バーの表示(IME)",
+      "summary": "現在の入力言語や変換モードを画面上に表示するバー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1974"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブの個別ボタン名補足2",
+      "term": "新しいウィンドウを開くボタン(表示タブ)",
+      "summary": "同一文書を別のウィンドウでもう1つ開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1975"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用2",
+      "term": "ビルディングブロックの整理",
+      "summary": "登録済みのクイックパーツやオートテキストを整理・編集・削除するダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1976"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのリボンのユーザー設定の詳細2",
+      "term": "新しいグループの作成(リボンのユーザー設定)",
+      "summary": "既存のタブの中に独自のコマンドグループを追加する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1977"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細2",
+      "term": "Accessデータベースとの差し込み連携",
+      "summary": "Accessのテーブルやクエリを差し込み印刷のデータソースとして使用する連携機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1978"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "コントラスト比の不足の検出",
+      "summary": "文字色と背景色のコントラストが低く読みにくい箇所を検出するルール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1979"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベル・マスター文書機能詳細2",
+      "term": "サブドキュメントの解除",
+      "summary": "マスター文書内のサブドキュメントのリンクを解除し、通常の文書として分離する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1980"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの翻訳・言語ツール詳細2",
+      "term": "ミニ翻訳ツール",
+      "summary": "単語を選択した際にポップアップで簡易的な翻訳を表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1981"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書テンプレート実務活用詳細2",
+      "term": "FAX送付状テンプレート",
+      "summary": "送信先・枚数などの項目が整理されたFAX送付状用のテンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1982"
     }
   ]
 }
