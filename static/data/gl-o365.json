@@ -4554,6 +4554,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-0506"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "条件付きアクセスポリシーの設定手順",
+      "summary": "条件付きアクセスポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0507"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra ID Protectionの設定手順",
+      "summary": "Microsoft Entra ID Protectionを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0508"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セルフサービスパスワードリセットの設定手順",
+      "summary": "セルフサービスパスワードリセットを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0509"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオン(SSO)の設定手順",
+      "summary": "シングルサインオン(SSO)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0510"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "多要素認証の設定の設定手順",
+      "summary": "多要素認証の設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0511"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Authenticatorアプリの設定手順",
+      "summary": "Microsoft Authenticatorアプリを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0512"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードレス認証の設定手順",
+      "summary": "パスワードレス認証を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0513"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "デバイス管理(Intune)の設定手順",
+      "summary": "デバイス管理(Intune)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0514"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "モバイルデバイス管理(MDM)の設定手順",
+      "summary": "モバイルデバイス管理(MDM)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0515"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アプリ保護ポリシーの設定手順",
+      "summary": "アプリ保護ポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0516"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Windows Autopilotの設定手順",
+      "summary": "Windows Autopilotを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0517"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Endpointの設定手順",
+      "summary": "Microsoft Defender for Endpointを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0518"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Office 365の設定手順",
+      "summary": "Microsoft Defender for Office 365を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0519"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Cloud Appsの設定手順",
+      "summary": "Microsoft Defender for Cloud Appsを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0520"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティスコアの設定手順",
+      "summary": "セキュリティスコアを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0521"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コンプライアンスセンターの設定手順",
+      "summary": "コンプライアンスセンターを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0522"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "情報保護(ラベル付け)の設定手順",
+      "summary": "情報保護(ラベル付け)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0523"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ損失防止ポリシーの設定手順",
+      "summary": "データ損失防止ポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0524"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ラベルの設定手順",
+      "summary": "保持ラベルを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0525"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ポリシーの適用の設定手順",
+      "summary": "保持ポリシーの適用を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0526"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "電子情報開示(eDiscovery)の設定手順",
+      "summary": "電子情報開示(eDiscovery)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0527"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "法的ホールドの設定手順",
+      "summary": "法的ホールドを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0528"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの検索の設定手順",
+      "summary": "監査ログの検索を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0529"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "内部リスク管理の設定手順",
+      "summary": "内部リスク管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0530"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コミュニケーションコンプライアンスの設定手順",
+      "summary": "コミュニケーションコンプライアンスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0531"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointサイトコレクションの設定手順",
+      "summary": "SharePointサイトコレクションを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0532"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointチームサイトの設定手順",
+      "summary": "SharePointチームサイトを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0533"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointコミュニケーションサイトの設定手順",
+      "summary": "SharePointコミュニケーションサイトを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0534"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointリストの設定手順",
+      "summary": "SharePointリストを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0535"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointライブラリの権限設定の設定手順",
+      "summary": "SharePointライブラリの権限設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0536"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定の設定手順",
+      "summary": "OneDrive for Businessの同期設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0537"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動の設定手順",
+      "summary": "OneDriveの既知のフォルダー移動を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0538"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定の設定手順",
+      "summary": "OneDriveの共有設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0539"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンの設定手順",
+      "summary": "OneDriveのリサイクルビンを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0540"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定の設定手順",
+      "summary": "外部共有の設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0541"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成の設定手順",
+      "summary": "Teamsチームの作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0542"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類の設定手順",
+      "summary": "Teamsチャネルの種類を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0543"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルの設定手順",
+      "summary": "プライベートチャネルを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0544"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルの設定手順",
+      "summary": "共有チャネルを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0545"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定の設定手順",
+      "summary": "Teams会議の設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0546"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能の設定手順",
+      "summary": "Teams会議のロビー機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0547"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画の設定手順",
+      "summary": "Teams会議の録画を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0548"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしの設定手順",
+      "summary": "Teams会議の文字起こしを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0549"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントの設定手順",
+      "summary": "Teamsのライブイベントを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0550"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーの設定手順",
+      "summary": "Teamsウェビナーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0551"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)の設定手順",
+      "summary": "Teams電話(Phone System)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0552"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターの設定手順",
+      "summary": "Teams管理センターを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0553"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理の設定手順",
+      "summary": "Teamsアプリの管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0554"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージの設定手順",
+      "summary": "Teamsポリシーパッケージを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0555"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果の設定手順",
+      "summary": "Teamsのバックグラウンド効果を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0556"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定の設定手順",
+      "summary": "Outlookのルール設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0557"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有の設定手順",
+      "summary": "Outlookの予定表共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0558"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースの設定手順",
+      "summary": "Outlookの会議室リソースを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0559"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループの設定手順",
+      "summary": "Outlookの連絡先グループを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0560"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱の設定手順",
+      "summary": "フォーカス収件箱を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0561"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作の設定手順",
+      "summary": "Outlookのクイック操作を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0562"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定の設定手順",
+      "summary": "Outlookの遅延送信設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0563"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けの設定手順",
+      "summary": "Outlookのカテゴリ分けを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0564"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリの設定手順",
+      "summary": "Outlookモバイルアプリを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0565"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定の設定手順",
+      "summary": "予定表の委任設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0566"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットの設定手順",
+      "summary": "Plannerのバケットを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0567"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当ての設定手順",
+      "summary": "Plannerのタスク割り当てを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0568"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有の設定手順",
+      "summary": "To Doのタスクリスト共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0569"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成の設定手順",
+      "summary": "Microsoft Listsの作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0570"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートの設定手順",
+      "summary": "Microsoft Listsのテンプレートを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0571"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成の設定手順",
+      "summary": "Power Automateのフロー作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0572"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローの設定手順",
+      "summary": "Power Automateの承認フローを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0573"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタの設定手順",
+      "summary": "Power Automateのコネクタを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0574"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスの設定手順",
+      "summary": "Power Appsのキャンバスアプスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0575"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリの設定手順",
+      "summary": "Power Appsのモデル駆動型アプリを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0576"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成の設定手順",
+      "summary": "Power BIのダッシュボード作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0577"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有の設定手順",
+      "summary": "Power BIのレポート共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0578"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新の設定手順",
+      "summary": "Power BIデータセットの更新を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0579"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsの設定手順",
+      "summary": "Power Virtual Agentsを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0580"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターの設定手順",
+      "summary": "Power Platform管理センターを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0581"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能の設定手順",
+      "summary": "Microsoft Forms クイズ機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0582"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定の設定手順",
+      "summary": "Formsの分岐設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0583"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力の設定手順",
+      "summary": "Formsの回答のExcel出力を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0584"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートの設定手順",
+      "summary": "Microsoft Whiteboardのテンプレートを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0585"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集の設定手順",
+      "summary": "Whiteboardの共同編集を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0586"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースの設定手順",
+      "summary": "Microsoft Loopのワークスペースを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0587"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有の設定手順",
+      "summary": "Loopコンポーネントの共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0588"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有の設定手順",
+      "summary": "OneNoteのノートブック共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0589"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集の設定手順",
+      "summary": "OneNoteの共同編集を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0590"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能の設定手順",
+      "summary": "OneNoteのタグ機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0591"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の設定手順",
+      "summary": "Microsoft Streamの動画共有を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0592"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの設定手順",
+      "summary": "Streamの動画の文字起こしを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0593"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の設定手順",
+      "summary": "Clipchampの動画編集を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0594"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の設定手順",
+      "summary": "Microsoft Designerでの画像生成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0595"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の設定手順",
+      "summary": "Microsoft Bookingsの予約管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0596"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの設定手順",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0597"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の設定手順",
+      "summary": "Viva Insightsの分析を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0598"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの設定手順",
+      "summary": "Viva Learningの学習コンテンツを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0599"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの設定手順",
+      "summary": "Viva Engageのコミュニティを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0600"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の設定手順",
+      "summary": "Viva Goalsの目標管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0601"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの設定手順",
+      "summary": "Microsoft 365管理センターのダッシュボードを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0602"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の設定手順",
+      "summary": "ユーザーの一括作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0603"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての設定手順",
+      "summary": "ライセンスのグループベース割り当てを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0604"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の設定手順",
+      "summary": "サービス状態の確認を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0605"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の設定手順",
+      "summary": "メッセージセンターの通知を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0606"
     }
   ]
 }
