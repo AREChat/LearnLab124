@@ -6354,6 +6354,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-0706"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コンプライアンスセンターの管理者向け運用",
+      "summary": "管理者がコンプライアンスセンターを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0707"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "情報保護(ラベル付け)の管理者向け運用",
+      "summary": "管理者が情報保護(ラベル付け)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0708"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ損失防止ポリシーの管理者向け運用",
+      "summary": "管理者がデータ損失防止ポリシーを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0709"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ラベルの管理者向け運用",
+      "summary": "管理者が保持ラベルを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0710"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ポリシーの適用の管理者向け運用",
+      "summary": "管理者が保持ポリシーの適用を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0711"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "電子情報開示(eDiscovery)の管理者向け運用",
+      "summary": "管理者が電子情報開示(eDiscovery)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0712"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "法的ホールドの管理者向け運用",
+      "summary": "管理者が法的ホールドを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0713"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの検索の管理者向け運用",
+      "summary": "管理者が監査ログの検索を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0714"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "内部リスク管理の管理者向け運用",
+      "summary": "管理者が内部リスク管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0715"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コミュニケーションコンプライアンスの管理者向け運用",
+      "summary": "管理者がコミュニケーションコンプライアンスを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0716"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointサイトコレクションの管理者向け運用",
+      "summary": "管理者がSharePointサイトコレクションを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0717"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointチームサイトの管理者向け運用",
+      "summary": "管理者がSharePointチームサイトを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0718"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointコミュニケーションサイトの管理者向け運用",
+      "summary": "管理者がSharePointコミュニケーションサイトを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0719"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointリストの管理者向け運用",
+      "summary": "管理者がSharePointリストを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0720"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointライブラリの権限設定の管理者向け運用",
+      "summary": "管理者がSharePointライブラリの権限設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0721"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定の管理者向け運用",
+      "summary": "管理者がOneDrive for Businessの同期設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0722"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動の管理者向け運用",
+      "summary": "管理者がOneDriveの既知のフォルダー移動を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0723"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定の管理者向け運用",
+      "summary": "管理者がOneDriveの共有設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0724"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンの管理者向け運用",
+      "summary": "管理者がOneDriveのリサイクルビンを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0725"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定の管理者向け運用",
+      "summary": "管理者が外部共有の設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0726"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成の管理者向け運用",
+      "summary": "管理者がTeamsチームの作成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0727"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類の管理者向け運用",
+      "summary": "管理者がTeamsチャネルの種類を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0728"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルの管理者向け運用",
+      "summary": "管理者がプライベートチャネルを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0729"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルの管理者向け運用",
+      "summary": "管理者が共有チャネルを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0730"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定の管理者向け運用",
+      "summary": "管理者がTeams会議の設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0731"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能の管理者向け運用",
+      "summary": "管理者がTeams会議のロビー機能を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0732"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画の管理者向け運用",
+      "summary": "管理者がTeams会議の録画を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0733"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしの管理者向け運用",
+      "summary": "管理者がTeams会議の文字起こしを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0734"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントの管理者向け運用",
+      "summary": "管理者がTeamsのライブイベントを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0735"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーの管理者向け運用",
+      "summary": "管理者がTeamsウェビナーを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0736"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)の管理者向け運用",
+      "summary": "管理者がTeams電話(Phone System)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0737"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターの管理者向け運用",
+      "summary": "管理者がTeams管理センターを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0738"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理の管理者向け運用",
+      "summary": "管理者がTeamsアプリの管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0739"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージの管理者向け運用",
+      "summary": "管理者がTeamsポリシーパッケージを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0740"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果の管理者向け運用",
+      "summary": "管理者がTeamsのバックグラウンド効果を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0741"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定の管理者向け運用",
+      "summary": "管理者がOutlookのルール設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0742"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有の管理者向け運用",
+      "summary": "管理者がOutlookの予定表共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0743"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースの管理者向け運用",
+      "summary": "管理者がOutlookの会議室リソースを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0744"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループの管理者向け運用",
+      "summary": "管理者がOutlookの連絡先グループを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0745"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱の管理者向け運用",
+      "summary": "管理者がフォーカス収件箱を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0746"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作の管理者向け運用",
+      "summary": "管理者がOutlookのクイック操作を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0747"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定の管理者向け運用",
+      "summary": "管理者がOutlookの遅延送信設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0748"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けの管理者向け運用",
+      "summary": "管理者がOutlookのカテゴリ分けを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0749"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリの管理者向け運用",
+      "summary": "管理者がOutlookモバイルアプリを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0750"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定の管理者向け運用",
+      "summary": "管理者が予定表の委任設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0751"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットの管理者向け運用",
+      "summary": "管理者がPlannerのバケットを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0752"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当ての管理者向け運用",
+      "summary": "管理者がPlannerのタスク割り当てを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0753"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有の管理者向け運用",
+      "summary": "管理者がTo Doのタスクリスト共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0754"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成の管理者向け運用",
+      "summary": "管理者がMicrosoft Listsの作成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0755"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートの管理者向け運用",
+      "summary": "管理者がMicrosoft Listsのテンプレートを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0756"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成の管理者向け運用",
+      "summary": "管理者がPower Automateのフロー作成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0757"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローの管理者向け運用",
+      "summary": "管理者がPower Automateの承認フローを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0758"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタの管理者向け運用",
+      "summary": "管理者がPower Automateのコネクタを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0759"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスの管理者向け運用",
+      "summary": "管理者がPower Appsのキャンバスアプスを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0760"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリの管理者向け運用",
+      "summary": "管理者がPower Appsのモデル駆動型アプリを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0761"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成の管理者向け運用",
+      "summary": "管理者がPower BIのダッシュボード作成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0762"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有の管理者向け運用",
+      "summary": "管理者がPower BIのレポート共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0763"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新の管理者向け運用",
+      "summary": "管理者がPower BIデータセットの更新を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0764"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsの管理者向け運用",
+      "summary": "管理者がPower Virtual Agentsを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0765"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターの管理者向け運用",
+      "summary": "管理者がPower Platform管理センターを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0766"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能の管理者向け運用",
+      "summary": "管理者がMicrosoft Forms クイズ機能を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0767"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定の管理者向け運用",
+      "summary": "管理者がFormsの分岐設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0768"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力の管理者向け運用",
+      "summary": "管理者がFormsの回答のExcel出力を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0769"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートの管理者向け運用",
+      "summary": "管理者がMicrosoft Whiteboardのテンプレートを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0770"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集の管理者向け運用",
+      "summary": "管理者がWhiteboardの共同編集を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0771"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースの管理者向け運用",
+      "summary": "管理者がMicrosoft Loopのワークスペースを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0772"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有の管理者向け運用",
+      "summary": "管理者がLoopコンポーネントの共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0773"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有の管理者向け運用",
+      "summary": "管理者がOneNoteのノートブック共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0774"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集の管理者向け運用",
+      "summary": "管理者がOneNoteの共同編集を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0775"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能の管理者向け運用",
+      "summary": "管理者がOneNoteのタグ機能を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0776"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の管理者向け運用",
+      "summary": "管理者がMicrosoft Streamの動画共有を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0777"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの管理者向け運用",
+      "summary": "管理者がStreamの動画の文字起こしを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0778"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の管理者向け運用",
+      "summary": "管理者がClipchampの動画編集を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0779"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の管理者向け運用",
+      "summary": "管理者がMicrosoft Designerでの画像生成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0780"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の管理者向け運用",
+      "summary": "管理者がMicrosoft Bookingsの予約管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0781"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの管理者向け運用",
+      "summary": "管理者がMicrosoft Vivaの従業員エクスペリエンスを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0782"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の管理者向け運用",
+      "summary": "管理者がViva Insightsの分析を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0783"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの管理者向け運用",
+      "summary": "管理者がViva Learningの学習コンテンツを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0784"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの管理者向け運用",
+      "summary": "管理者がViva Engageのコミュニティを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0785"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の管理者向け運用",
+      "summary": "管理者がViva Goalsの目標管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0786"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの管理者向け運用",
+      "summary": "管理者がMicrosoft 365管理センターのダッシュボードを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0787"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の管理者向け運用",
+      "summary": "管理者がユーザーの一括作成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0788"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての管理者向け運用",
+      "summary": "管理者がライセンスのグループベース割り当てを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0789"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の管理者向け運用",
+      "summary": "管理者がサービス状態の確認を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0790"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の管理者向け運用",
+      "summary": "管理者がメッセージセンターの通知を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0791"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの管理者向け運用",
+      "summary": "管理者がMicrosoft 365のロードマップを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0792"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての管理者向け運用",
+      "summary": "管理者が管理者ロールの割り当てを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0793"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の管理者向け運用",
+      "summary": "管理者が管理単位(Administrative Units)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0794"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの管理者向け運用",
+      "summary": "管理者がMicrosoft Entra IDの条件付きアクセスを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0795"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の管理者向け運用",
+      "summary": "管理者がグループベースのライセンス管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0796"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)の管理者向け運用",
+      "summary": "管理者がAzure ADとの連携(現Entra ID)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0797"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境の管理者向け運用",
+      "summary": "管理者がハイブリッドID環境を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0798"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期の管理者向け運用",
+      "summary": "管理者がパスワードハッシュ同期を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0799"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証の管理者向け運用",
+      "summary": "管理者がフェデレーション認証を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0800"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成の管理者向け運用",
+      "summary": "管理者がシングルサインオンの構成を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0801"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開の管理者向け運用",
+      "summary": "管理者がMicrosoft 365 Appsの展開を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0802"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールの管理者向け運用",
+      "summary": "管理者がOfficeデプロイメントツールを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0803"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)の管理者向け運用",
+      "summary": "管理者が構成済みファイル(Configuration.xml)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0804"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新の管理者向け運用",
+      "summary": "管理者がクリックツーラン形式の更新を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0805"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理の管理者向け運用",
+      "summary": "管理者がOfficeのバージョン管理を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0806"
     }
   ]
 }
