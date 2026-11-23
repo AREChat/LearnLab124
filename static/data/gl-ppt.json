@@ -1,1 +1,3605 @@
-{"version":1,"entries":[{"lang":"ppt","category":"基本用語","term":"スライド","summary":"プレゼンテーションの1枚の画面。","examples":[],"pages":[],"id":"ppt-0001"},{"lang":"ppt","category":"基本用語","term":"プレゼンテーション","summary":"PowerPoint で作るファイル全体（.pptx）。","examples":[],"pages":[],"id":"ppt-0002"},{"lang":"ppt","category":"基本用語","term":"サムネイルウィンドウ","summary":"左側に並ぶスライドの一覧。ドラッグで順番を入れ替えられる。","examples":[],"pages":[],"id":"ppt-0003"},{"lang":"ppt","category":"基本用語","term":"ノートペイン","summary":"スライドの下にある、発表者用のメモ欄。","examples":[],"pages":[],"id":"ppt-0004"},{"lang":"ppt","category":"基本用語","term":"プレースホルダー","summary":"タイトルや本文を入力する枠。レイアウトで決まる。","examples":[],"pages":[],"id":"ppt-0005"},{"lang":"ppt","category":"基本用語","term":"スライドマスター","summary":"全スライドの共通デザイン（フォント・色・ロゴ）を管理する。","examples":[],"pages":[],"id":"ppt-0006"},{"lang":"ppt","category":"基本用語","term":"レイアウト","summary":"タイトルのみ・2つのコンテンツなど、スライドの配置パターン。","examples":[],"pages":[],"id":"ppt-0007"},{"lang":"ppt","category":"基本用語","term":"テーマ","summary":"デザイン、色、フォントのセット。","examples":[],"pages":[],"id":"ppt-0008"},{"lang":"ppt","category":"基本用語","term":"バリエーション","summary":"テーマの配色違い。","examples":[],"pages":[],"id":"ppt-0009"},{"lang":"ppt","category":"基本用語","term":"表示モード","summary":"標準・スライド一覧・閲覧表示・発表者ツールなど。","examples":[],"pages":[],"id":"ppt-0010"},{"lang":"ppt","category":"基本用語","term":"拡張子 .pptx / .ppsx / .potx","summary":"通常／スライドショー専用／テンプレート。","examples":[],"pages":[],"id":"ppt-0011"},{"lang":"ppt","category":"基本用語","term":"アウトライン表示","summary":"文字だけで構成を組み立てる画面。","examples":[],"pages":[],"id":"ppt-0012"},{"lang":"ppt","category":"スライド操作","term":"新しいスライド","summary":"スライドを追加する。Ctrl+M。","examples":[],"pages":[],"id":"ppt-0013"},{"lang":"ppt","category":"スライド操作","term":"スライドの複製・削除","summary":"選んだスライドをコピー／削除。","examples":[],"pages":[],"id":"ppt-0014"},{"lang":"ppt","category":"スライド操作","term":"セクション","summary":"スライドをグループに分けて整理する。","examples":[],"pages":[],"id":"ppt-0015"},{"lang":"ppt","category":"スライド操作","term":"スライドの非表示","summary":"発表時に飛ばすスライドを設定。","examples":[],"pages":[],"id":"ppt-0016"},{"lang":"ppt","category":"スライド操作","term":"スライドのサイズ","summary":"16:9 と 4:3 など。16:9 が標準。","examples":[],"pages":[],"id":"ppt-0017"},{"lang":"ppt","category":"スライド操作","term":"レイアウトのリセット","summary":"配置が崩れたとき元に戻す。","examples":[],"pages":[],"id":"ppt-0018"},{"lang":"ppt","category":"スライド操作","term":"スライドの再利用","summary":"別のファイルのスライドを取り込む。","examples":[],"pages":[],"id":"ppt-0019"},{"lang":"ppt","category":"スライド操作","term":"背景の書式設定","summary":"背景色、画像、グラデーション。","examples":[],"pages":[],"id":"ppt-0020"},{"lang":"ppt","category":"スライド操作","term":"ヘッダーとフッター","summary":"スライド番号、日付、フッター文字を挿入。","examples":[],"pages":[],"id":"ppt-0021"},{"lang":"ppt","category":"文字と図形","term":"テキストボックス","summary":"自由な位置に文字を入れる枠。","examples":[],"pages":[],"id":"ppt-0022"},{"lang":"ppt","category":"文字と図形","term":"箇条書き","summary":"要点を短く並べる。レベル(階層)で整理できる。","examples":[],"pages":[],"id":"ppt-0023"},{"lang":"ppt","category":"文字と図形","term":"段落番号","summary":"手順などに番号を付ける。","examples":[],"pages":[],"id":"ppt-0024"},{"lang":"ppt","category":"文字と図形","term":"フォント / フォントサイズ","summary":"読みやすい大きさにする。本文は18pt以上が目安。","examples":[],"pages":[],"id":"ppt-0025"},{"lang":"ppt","category":"文字と図形","term":"ワードアート","summary":"装飾した文字。","examples":[],"pages":[],"id":"ppt-0026"},{"lang":"ppt","category":"文字と図形","term":"テキストの配置と方向","summary":"中央揃え、縦書きなど。","examples":[],"pages":[],"id":"ppt-0027"},{"lang":"ppt","category":"文字と図形","term":"自動調整","summary":"枠に収まるよう文字サイズを自動調整。","examples":[],"pages":[],"id":"ppt-0028"},{"lang":"ppt","category":"文字と図形","term":"図形","summary":"四角・矢印・吹き出しなど。","examples":[],"pages":[],"id":"ppt-0029"},{"lang":"ppt","category":"文字と図形","term":"図形の書式","summary":"塗りつぶし、枠線、効果（影など）。","examples":[],"pages":[],"id":"ppt-0030"},{"lang":"ppt","category":"文字と図形","term":"ガイドとグリッド線","summary":"位置をそろえるための補助線。","examples":[],"pages":[],"id":"ppt-0031"},{"lang":"ppt","category":"文字と図形","term":"配置・整列","summary":"複数の図形を左揃えや均等な間隔にそろえる。","examples":[],"pages":[],"id":"ppt-0032"},{"lang":"ppt","category":"文字と図形","term":"グループ化","summary":"複数の図形を1つにまとめる。Ctrl+G。","examples":[],"pages":[],"id":"ppt-0033"},{"lang":"ppt","category":"文字と図形","term":"重なり順（前面・背面）","summary":"図形が重なったときの上下。","examples":[],"pages":[],"id":"ppt-0034"},{"lang":"ppt","category":"文字と図形","term":"スポイト","summary":"画面上の色を取り出して使う。","examples":[],"pages":[],"id":"ppt-0035"},{"lang":"ppt","category":"文字と図形","term":"図形の結合","summary":"図形を合体・型抜きして新しい形を作る。","examples":[],"pages":[],"id":"ppt-0036"},{"lang":"ppt","category":"文字と図形","term":"コネクタ","summary":"図形同士をつなぐ線。図形を動かしても追従する。","examples":[],"pages":[],"id":"ppt-0037"},{"lang":"ppt","category":"画像・図表","term":"画像の挿入","summary":"写真やイラストを挿入する。","examples":[],"pages":[],"id":"ppt-0038"},{"lang":"ppt","category":"画像・図表","term":"トリミング","summary":"画像の不要な部分を切り取る。","examples":[],"pages":[],"id":"ppt-0039"},{"lang":"ppt","category":"画像・図表","term":"背景の削除","summary":"画像の背景を透明にする。","examples":[],"pages":[],"id":"ppt-0040"},{"lang":"ppt","category":"画像・図表","term":"アート効果","summary":"画像に絵画風などの効果を付ける。","examples":[],"pages":[],"id":"ppt-0041"},{"lang":"ppt","category":"画像・図表","term":"代替テキスト","summary":"画像の内容を説明する文字。読み上げ用に設定する。","examples":[],"pages":[],"id":"ppt-0042"},{"lang":"ppt","category":"画像・図表","term":"SmartArt","summary":"手順・階層・循環などを図にする。","examples":[],"pages":[],"id":"ppt-0043"},{"lang":"ppt","category":"画像・図表","term":"表","summary":"行と列で情報を整理。","examples":[],"pages":[],"id":"ppt-0044"},{"lang":"ppt","category":"画像・図表","term":"グラフ","summary":"データをグラフにする。","examples":[],"pages":[],"id":"ppt-0045"},{"lang":"ppt","category":"画像・図表","term":"アイコン","summary":"ベクター形式の簡単な絵。色や大きさを自由に変えられる。","examples":[],"pages":[],"id":"ppt-0046"},{"lang":"ppt","category":"画像・図表","term":"ビデオ・オーディオ","summary":"動画や音声を埋め込む。","examples":[],"pages":[],"id":"ppt-0047"},{"lang":"ppt","category":"画像・図表","term":"画面録画","summary":"画面操作を録画してスライドに挿入。","examples":[],"pages":[],"id":"ppt-0048"},{"lang":"ppt","category":"画像・図表","term":"フォトアルバム","summary":"たくさんの写真を一度にスライドにする。","examples":[],"pages":[],"id":"ppt-0049"},{"lang":"ppt","category":"画像・図表","term":"3Dモデル","summary":"3Dのモデルを挿入して回転表示できる。","examples":[],"pages":[],"id":"ppt-0050"},{"lang":"ppt","category":"画像・図表","term":"リンクとアクション","summary":"図形に別スライドや Web ページへのリンクを設定。","examples":[],"pages":[],"id":"ppt-0051"},{"lang":"ppt","category":"アニメーションと切り替え","term":"アニメーション","summary":"文字や図形に動きを付ける。","examples":[],"pages":[],"id":"ppt-0052"},{"lang":"ppt","category":"アニメーションと切り替え","term":"開始・強調・終了・軌跡","summary":"アニメーションの4種類。","examples":[],"pages":[],"id":"ppt-0053"},{"lang":"ppt","category":"アニメーションと切り替え","term":"アニメーションウィンドウ","summary":"動きの順番やタイミングを管理。","examples":[],"pages":[],"id":"ppt-0054"},{"lang":"ppt","category":"アニメーションと切り替え","term":"クリック時 / 直前 / 直後","summary":"動きを始めるタイミング。","examples":[],"pages":[],"id":"ppt-0055"},{"lang":"ppt","category":"アニメーションと切り替え","term":"アニメーションの軌跡","summary":"図形を指定した道筋に沿って動かす。","examples":[],"pages":[],"id":"ppt-0056"},{"lang":"ppt","category":"アニメーションと切り替え","term":"トリガー","summary":"特定の図形をクリックしたときに動かす。","examples":[],"pages":[],"id":"ppt-0057"},{"lang":"ppt","category":"アニメーションと切り替え","term":"画面切り替え","summary":"スライドが替わるときの動き。","examples":[],"pages":[],"id":"ppt-0058"},{"lang":"ppt","category":"アニメーションと切り替え","term":"モーフ","summary":"前後のスライドの図形を滑らかに変形させる切り替え。","examples":[],"pages":[],"id":"ppt-0059"},{"lang":"ppt","category":"アニメーションと切り替え","term":"ズーム","summary":"スライドや節を拡大して移動する。","examples":[],"pages":[],"id":"ppt-0060"},{"lang":"ppt","category":"アニメーションと切り替え","term":"アニメーションのコピー","summary":"動きの設定を他の図形にコピー。","examples":[],"pages":[],"id":"ppt-0061"},{"lang":"ppt","category":"アニメーションと切り替え","term":"アニメーションは控えめに","summary":"多用すると内容が伝わりにくくなる。","examples":[],"pages":[],"id":"ppt-0062"},{"lang":"ppt","category":"スライドショー","term":"スライドショーの開始","summary":"F5 で最初から、Shift+F5 で現在のスライドから。","examples":[],"pages":[],"id":"ppt-0063"},{"lang":"ppt","category":"スライドショー","term":"発表者ツール","summary":"発表者だけにノートや次のスライドを表示する画面。","examples":[],"pages":[],"id":"ppt-0064"},{"lang":"ppt","category":"スライドショー","term":"リハーサル","summary":"話す時間を記録してタイミングを設定。","examples":[],"pages":[],"id":"ppt-0065"},{"lang":"ppt","category":"スライドショー","term":"レーザーポインター","summary":"Ctrl を押しながらクリックで画面上に赤い点を出す。","examples":[],"pages":[],"id":"ppt-0066"},{"lang":"ppt","category":"スライドショー","term":"ペンと蛍光ペン","summary":"発表中にスライドへ書き込む。","examples":[],"pages":[],"id":"ppt-0067"},{"lang":"ppt","category":"スライドショー","term":"目的別スライドショー","summary":"必要なスライドだけを選んだ別バージョン。","examples":[],"pages":[],"id":"ppt-0068"},{"lang":"ppt","category":"スライドショー","term":"自動再生","summary":"一定間隔で自動的に進む設定。","examples":[],"pages":[],"id":"ppt-0069"},{"lang":"ppt","category":"スライドショー","term":"ナレーションの録音","summary":"説明を録音してスライドに保存。","examples":[],"pages":[],"id":"ppt-0070"},{"lang":"ppt","category":"スライドショー","term":"字幕","summary":"話した内容を画面に字幕表示。","examples":[],"pages":[],"id":"ppt-0071"},{"lang":"ppt","category":"スライドショー","term":"ブラックアウト","summary":"B キーで画面を暗転、W で白に。","examples":[],"pages":[],"id":"ppt-0072"},{"lang":"ppt","category":"書き出しと共有","term":"PDF として保存","summary":"配布用に PDF にする。","examples":[],"pages":[],"id":"ppt-0073"},{"lang":"ppt","category":"書き出しと共有","term":"ビデオの作成","summary":"スライドショーを動画(.mp4)にする。","examples":[],"pages":[],"id":"ppt-0074"},{"lang":"ppt","category":"書き出しと共有","term":"配布資料","summary":"1枚の紙に複数のスライドを印刷する。","examples":[],"pages":[],"id":"ppt-0075"},{"lang":"ppt","category":"書き出しと共有","term":"画像として保存","summary":"スライドを PNG/JPEG として保存。","examples":[],"pages":[],"id":"ppt-0076"},{"lang":"ppt","category":"書き出しと共有","term":"共有・共同編集","summary":"リンクで共有して複数人で編集。","examples":[],"pages":[],"id":"ppt-0077"},{"lang":"ppt","category":"書き出しと共有","term":"コメント","summary":"スライドに意見を残す。","examples":[],"pages":[],"id":"ppt-0078"},{"lang":"ppt","category":"書き出しと共有","term":"フォントの埋め込み","summary":"他のパソコンでも同じ書体で表示できるようにファイルに含める。","examples":[],"pages":[],"id":"ppt-0079"},{"lang":"ppt","category":"書き出しと共有","term":"ファイルサイズの削減","summary":"画像の圧縮や不要データの削除。","examples":[],"pages":[],"id":"ppt-0080"},{"lang":"ppt","category":"書き出しと共有","term":"スライドショー形式で保存","summary":"開くとすぐ再生されるファイル(.ppsx)。","examples":[],"pages":[],"id":"ppt-0081"},{"lang":"ppt","category":"デザインのコツ","term":"1スライド1メッセージ","summary":"伝えたいことを1つに絞る。","examples":[],"pages":[],"id":"ppt-0082"},{"lang":"ppt","category":"デザインのコツ","term":"余白を取る","summary":"要素を詰め込みすぎない。","examples":[],"pages":[],"id":"ppt-0083"},{"lang":"ppt","category":"デザインのコツ","term":"色は3色程度","summary":"ベースカラー・メインカラー・アクセントカラー。","examples":[],"pages":[],"id":"ppt-0084"},{"lang":"ppt","category":"デザインのコツ","term":"コントラスト","summary":"背景と文字の色差を十分に取る。","examples":[],"pages":[],"id":"ppt-0085"},{"lang":"ppt","category":"デザインのコツ","term":"そろえる・近づける","summary":"位置をそろえ、関連する要素をまとめる。","examples":[],"pages":[],"id":"ppt-0086"},{"lang":"ppt","category":"デザインのコツ","term":"図解を使う","summary":"文章より図やグラフで見せる。","examples":[],"pages":[],"id":"ppt-0087"},{"lang":"ppt","category":"デザインのコツ","term":"デザイナー（デザインアイデア）","summary":"AI が配置のデザイン案を提案する機能。","examples":[],"pages":[],"id":"ppt-0088"},{"lang":"ppt","category":"ショートカット","term":"F5 / Shift+F5","summary":"スライドショーを最初から／今のスライドから開始。","examples":[],"pages":[],"id":"ppt-0089"},{"lang":"ppt","category":"ショートカット","term":"Ctrl+M","summary":"新しいスライドを追加。","examples":[],"pages":[],"id":"ppt-0090"},{"lang":"ppt","category":"ショートカット","term":"Ctrl+D","summary":"選択した図形やスライドを複製。","examples":[],"pages":[],"id":"ppt-0091"},{"lang":"ppt","category":"ショートカット","term":"Ctrl+Shift+ドラッグ","summary":"図形を水平・垂直を保ってコピー。","examples":[],"pages":[],"id":"ppt-0092"},{"lang":"ppt","category":"ショートカット","term":"矢印キー / Ctrl+矢印","summary":"図形を少しずつ／細かく動かす。","examples":[],"pages":[],"id":"ppt-0093"},{"lang":"ppt","category":"ショートカット","term":"Ctrl+Shift+C / V","summary":"書式のコピー／貼り付け。","examples":[],"pages":[],"id":"ppt-0094"},{"lang":"ppt","category":"ショートカット","term":"Ctrl+Z / Y","summary":"元に戻す／やり直す。","examples":[],"pages":[],"id":"ppt-0095"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"ホームタブ（PowerPoint）","summary":"フォントや段落、図形の書式を設定するリボンの基本タブ。","examples":[],"pages":[],"id":"ppt-0096"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"挿入タブ（PowerPoint）","summary":"表・画像・動画などをスライドに挿入するタブ。","examples":[],"pages":[],"id":"ppt-0097"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"デザインタブ（PowerPoint）","summary":"テーマやスライドのサイズを設定するタブ。","examples":[],"pages":[],"id":"ppt-0098"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"画面切り替えタブ","summary":"スライド間のトランジション効果を設定するタブ。","examples":[],"pages":[],"id":"ppt-0099"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"アニメーションタブ","summary":"スライド内のオブジェクトにアニメーションを設定するタブ。","examples":[],"pages":[],"id":"ppt-0100"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"スライドショータブ","summary":"発表に関する設定やリハーサル機能を扱うタブ。","examples":[],"pages":[],"id":"ppt-0101"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"校閲タブ（PowerPoint）","summary":"スペルチェックやコメントを扱うタブ。","examples":[],"pages":[],"id":"ppt-0102"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"表示タブ（PowerPoint）","summary":"表示モードやマスター編集画面を扱うタブ。","examples":[],"pages":[],"id":"ppt-0103"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"録画タブ","summary":"画面の録画やプレゼンテーションの録画を行うタブ。","examples":[],"pages":[],"id":"ppt-0104"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"描画タブ（PowerPoint）","summary":"手書きの注釈やインク機能を扱うタブ。","examples":[],"pages":[],"id":"ppt-0105"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"ヘルプタブ（PowerPoint）","summary":"PowerPointのヘルプにアクセスするタブ。","examples":[],"pages":[],"id":"ppt-0106"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"フォントグループ（PowerPoint）","summary":"文字の種類やサイズを設定する領域。","examples":[],"pages":[],"id":"ppt-0107"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"段落グループ（PowerPoint）","summary":"箇条書きや配置を設定する領域。","examples":[],"pages":[],"id":"ppt-0108"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"図形描画グループ","summary":"基本図形を挿入し書式設定する領域。","examples":[],"pages":[],"id":"ppt-0109"},{"lang":"ppt","category":"リボンのタブとグループ（PowerPoint）","term":"編集グループ（PowerPoint）","summary":"検索・置換・選択を行う領域。","examples":[],"pages":[],"id":"ppt-0110"},{"lang":"ppt","category":"スライドマスターの詳細","term":"スライドマスター表示","summary":"すべてのレイアウトの基になるデザインを編集する画面。","examples":[],"pages":[],"id":"ppt-0111"},{"lang":"ppt","category":"スライドマスターの詳細","term":"タイトルスライドレイアウト","summary":"プレゼンテーションの最初に使う専用のレイアウト。","examples":[],"pages":[],"id":"ppt-0112"},{"lang":"ppt","category":"スライドマスターの詳細","term":"タイトルとコンテンツレイアウト","summary":"見出しと本文を配置する最も基本的なレイアウト。","examples":[],"pages":[],"id":"ppt-0113"},{"lang":"ppt","category":"スライドマスターの詳細","term":"セクション見出しレイアウト","summary":"章の区切りを示すためのレイアウト。","examples":[],"pages":[],"id":"ppt-0114"},{"lang":"ppt","category":"スライドマスターの詳細","term":"2つのコンテンツレイアウト","summary":"画面を左右に分けて2つの内容を配置するレイアウト。","examples":[],"pages":[],"id":"ppt-0115"},{"lang":"ppt","category":"スライドマスターの詳細","term":"比較レイアウト","summary":"2つの項目を見出し付きで比較するレイアウト。","examples":[],"pages":[],"id":"ppt-0116"},{"lang":"ppt","category":"スライドマスターの詳細","term":"タイトルのみレイアウト","summary":"タイトルだけを配置し本文を自由に作れるレイアウト。","examples":[],"pages":[],"id":"ppt-0117"},{"lang":"ppt","category":"スライドマスターの詳細","term":"白紙レイアウト","summary":"プレースホルダーを一切含まない完全に自由なレイアウト。","examples":[],"pages":[],"id":"ppt-0118"},{"lang":"ppt","category":"スライドマスターの詳細","term":"コンテンツとキャプションレイアウト","summary":"画像などと短い説明文を組み合わせるレイアウト。","examples":[],"pages":[],"id":"ppt-0119"},{"lang":"ppt","category":"スライドマスターの詳細","term":"マスタータイトルの書式設定","summary":"すべてのスライドのタイトルに共通する書式を一括変更する機能。","examples":[],"pages":[],"id":"ppt-0120"},{"lang":"ppt","category":"スライドマスターの詳細","term":"レイアウトの挿入（マスター編集）","summary":"スライドマスターに新しいレイアウトを追加する操作。","examples":[],"pages":[],"id":"ppt-0121"},{"lang":"ppt","category":"スライドマスターの詳細","term":"プレースホルダーの挿入（マスター編集）","summary":"レイアウトに新しいプレースホルダー枠を追加する操作。","examples":[],"pages":[],"id":"ppt-0122"},{"lang":"ppt","category":"スライドマスターの詳細","term":"マスターの保存","summary":"カスタマイズしたスライドマスターをテンプレートとして保存する操作。","examples":[],"pages":[],"id":"ppt-0123"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"箇条書きの行頭文字の変更","summary":"箇条書きの記号を別の記号やアイコンに変更する機能。","examples":[],"pages":[],"id":"ppt-0124"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"段落番号の開始番号","summary":"連番の箇条書きで始まりの番号を指定する機能。","examples":[],"pages":[],"id":"ppt-0125"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"インデントレベルの変更（Tab/Shift+Tab）","summary":"箇条書きの階層を上げ下げする操作。","examples":[],"pages":[],"id":"ppt-0126"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"行間の設定（PowerPoint）","summary":"箇条書きの行と行の間隔を調整する設定。","examples":[],"pages":[],"id":"ppt-0127"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"段落前後の間隔（PowerPoint）","summary":"箇条書きの項目と項目の間に空ける余白の設定。","examples":[],"pages":[],"id":"ppt-0128"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"テキストの均等割り付け（PowerPoint）","summary":"テキストボックス内で文字を均等に配置する設定。","examples":[],"pages":[],"id":"ppt-0129"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"文字の影（PowerPoint）","summary":"文字に影を付けて視認性を高める書式設定。","examples":[],"pages":[],"id":"ppt-0130"},{"lang":"ppt","category":"テキスト・箇条書きの詳細","term":"文字の輪郭","summary":"文字の外枠に線を付ける書式設定。","examples":[],"pages":[],"id":"ppt-0131"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"開始効果：フェード","summary":"対象がゆっくり現れる基本的な開始アニメーション。","examples":[],"pages":[],"id":"ppt-0132"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"開始効果：スライドイン","summary":"対象が画面の外から滑り込んでくる開始アニメーション。","examples":[],"pages":[],"id":"ppt-0133"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"開始効果：ワイプ","summary":"対象が一方向から徐々に現れる開始アニメーション。","examples":[],"pages":[],"id":"ppt-0134"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"開始効果：ズーム","summary":"対象が小さい状態から拡大しながら現れる開始アニメーション。","examples":[],"pages":[],"id":"ppt-0135"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"開始効果：バウンド","summary":"対象が弾むように現れる開始アニメーション。","examples":[],"pages":[],"id":"ppt-0136"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"強調効果：パルス","summary":"対象が一瞬拡大縮小して注意を引く強調アニメーション。","examples":[],"pages":[],"id":"ppt-0137"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"強調効果：スピン","summary":"対象がその場で回転する強調アニメーション。","examples":[],"pages":[],"id":"ppt-0138"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"強調効果：シーソー","summary":"対象が左右に揺れる強調アニメーション。","examples":[],"pages":[],"id":"ppt-0139"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"終了効果：フェードアウト","summary":"対象がゆっくり消えていく終了アニメーション。","examples":[],"pages":[],"id":"ppt-0140"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"終了効果：スライドアウト","summary":"対象が画面の外へ滑り出ていく終了アニメーション。","examples":[],"pages":[],"id":"ppt-0141"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"軌跡：直線","summary":"指定した方向に直線的に動く動作パスの軌跡。","examples":[],"pages":[],"id":"ppt-0142"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"軌跡：円","summary":"円を描くように動く動作パスの軌跡。","examples":[],"pages":[],"id":"ppt-0143"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"軌跡：ユーザー設定パス","summary":"自分で自由に線を描いて指定する動作パスの軌跡。","examples":[],"pages":[],"id":"ppt-0144"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"アニメーションの継続時間","summary":"アニメーションが完了するまでの時間の長さの設定。","examples":[],"pages":[],"id":"ppt-0145"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"アニメーションの遅延","summary":"アニメーションが開始されるまでの待ち時間の設定。","examples":[],"pages":[],"id":"ppt-0146"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"効果のオプション（方向など）","summary":"アニメーションの方向や形状を細かく調整する設定。","examples":[],"pages":[],"id":"ppt-0147"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替え：フェード（PowerPoint）","summary":"次のスライドが徐々に現れる基本的な切り替え効果。","examples":[],"pages":[],"id":"ppt-0148"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替え：プッシュ","summary":"現在のスライドを押し出すように次のスライドが現れる効果。","examples":[],"pages":[],"id":"ppt-0149"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替え：ワイプ（切り替え）","summary":"一方向から次のスライドが現れる切り替え効果。","examples":[],"pages":[],"id":"ppt-0150"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替え：キューブ","summary":"立方体が回転するように切り替わる効果。","examples":[],"pages":[],"id":"ppt-0151"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替え：ページカール","summary":"ページがめくれるように切り替わる効果。","examples":[],"pages":[],"id":"ppt-0152"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替えの効果のオプション","summary":"切り替え効果の方向やパターンを調整する設定。","examples":[],"pages":[],"id":"ppt-0153"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替えのサウンド","summary":"スライド切り替え時に再生する効果音の設定。","examples":[],"pages":[],"id":"ppt-0154"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"画面切り替えのタイミング（クリック時/自動）","summary":"次のスライドへ進むタイミングを手動・自動で設定する機能。","examples":[],"pages":[],"id":"ppt-0155"},{"lang":"ppt","category":"アニメーション・切り替え詳細","term":"すべてに適用（画面切り替え）","summary":"設定した切り替え効果をすべてのスライドへ一括適用する機能。","examples":[],"pages":[],"id":"ppt-0156"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"最初から（スライドショー）","summary":"プレゼンテーションの最初のスライドからショーを開始する操作。","examples":[],"pages":[],"id":"ppt-0157"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"現在のスライドから（スライドショー）","summary":"表示中のスライドからショーを開始する操作。","examples":[],"pages":[],"id":"ppt-0158"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"スライドショーの設定","summary":"ループ再生やペンの色など詳細な表示方法を設定するダイアログ。","examples":[],"pages":[],"id":"ppt-0159"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"発表者ツールの表示","summary":"発表者だけに見えるノートや次のスライドを表示する機能。","examples":[],"pages":[],"id":"ppt-0160"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"発表者ツールのタイマー","summary":"発表時間を計測するための時計表示。","examples":[],"pages":[],"id":"ppt-0161"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"すべてのスライドを表示（発表者ツール）","summary":"発表中にスライド一覧から任意のスライドへジャンプする機能。","examples":[],"pages":[],"id":"ppt-0162"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"画面の切り替え（発表者ツール）","summary":"表示するモニターを切り替える機能。","examples":[],"pages":[],"id":"ppt-0163"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"スライドショーの記録","summary":"ナレーションやタイミングを含めてスライドショーを録画する機能。","examples":[],"pages":[],"id":"ppt-0164"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"スポットライト効果（ペン）","summary":"発表中に画面の一部を強調するポインター効果。","examples":[],"pages":[],"id":"ppt-0165"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"すべてのインクを消去","summary":"発表中に描いた手書きの注釈をまとめて消す機能。","examples":[],"pages":[],"id":"ppt-0166"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"スライドショーの終了","summary":"Escキーなどでスライドショーを終了する操作。","examples":[],"pages":[],"id":"ppt-0167"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"目的別スライドショーの作成","summary":"特定の聴衆向けに一部のスライドだけを表示する機能。","examples":[],"pages":[],"id":"ppt-0168"},{"lang":"ppt","category":"スライドショー・発表機能詳細","term":"非表示スライドの扱い","summary":"発表中にスキップされるよう設定されたスライド。","examples":[],"pages":[],"id":"ppt-0169"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：リスト","summary":"項目を並べて示すシンプルな構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0170"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：手順","summary":"時系列やステップを示す構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0171"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：循環","summary":"繰り返しのプロセスを示す構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0172"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：階層構造","summary":"組織図のような上下関係を示す構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0173"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：集合関係","summary":"要素同士の関連性を示す構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0174"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：マトリックス","summary":"4象限などで要素を分類する構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0175"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtの種類：ピラミッド","summary":"階層や優先順位を三角形で示す構成のSmartArt。","examples":[],"pages":[],"id":"ppt-0176"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtへのテキスト入力ウィンドウ","summary":"図形に直接入力する代わりにテキストをまとめて編集する機能。","examples":[],"pages":[],"id":"ppt-0177"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtのデザインの変更","summary":"配色やスタイルをまとめて変更する機能。","examples":[],"pages":[],"id":"ppt-0178"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"SmartArtから図形への変換","summary":"SmartArtを通常の図形の集まりに変換する機能。","examples":[],"pages":[],"id":"ppt-0179"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"図形の頂点の編集","summary":"図形の形状を細かく変形させる編集機能。","examples":[],"pages":[],"id":"ppt-0180"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"図形への文字の追加","summary":"図形の内部に直接文字を入力する機能。","examples":[],"pages":[],"id":"ppt-0181"},{"lang":"ppt","category":"図形・SmartArtの詳細（PowerPoint）","term":"既定の図形に設定","summary":"よく使う書式を新規図形の標準として登録する機能。","examples":[],"pages":[],"id":"ppt-0182"},{"lang":"ppt","category":"スライドのデザイン原則","term":"近接の原則","summary":"関連する要素を近くに配置して関係性を伝えるデザインの原則。","examples":[],"pages":[],"id":"ppt-0183"},{"lang":"ppt","category":"スライドのデザイン原則","term":"整列の原則","summary":"要素の端をそろえて整然とした印象を作るデザインの原則。","examples":[],"pages":[],"id":"ppt-0184"},{"lang":"ppt","category":"スライドのデザイン原則","term":"反復の原則","summary":"同じデザイン要素を繰り返し使い統一感を出す原則。","examples":[],"pages":[],"id":"ppt-0185"},{"lang":"ppt","category":"スライドのデザイン原則","term":"対比（コントラスト）の原則","summary":"大きさや色の差を付けて重要な部分を目立たせる原則。","examples":[],"pages":[],"id":"ppt-0186"},{"lang":"ppt","category":"スライドのデザイン原則","term":"余白の活用","summary":"情報を詰め込みすぎず余白を残して見やすくする工夫。","examples":[],"pages":[],"id":"ppt-0187"},{"lang":"ppt","category":"スライドのデザイン原則","term":"フォントの統一","summary":"資料全体で使うフォントの種類を揃える工夫。","examples":[],"pages":[],"id":"ppt-0188"},{"lang":"ppt","category":"スライドのデザイン原則","term":"配色の統一（3色ルール）","summary":"使用する色数を絞り一貫した印象を与える工夫。","examples":[],"pages":[],"id":"ppt-0189"},{"lang":"ppt","category":"スライドのデザイン原則","term":"グリッドレイアウト","summary":"見えない格子線に沿って要素を配置する整理手法。","examples":[],"pages":[],"id":"ppt-0190"},{"lang":"ppt","category":"スライドのデザイン原則","term":"視線誘導","summary":"見る人の目の動きを意識して情報を配置する手法。","examples":[],"pages":[],"id":"ppt-0191"},{"lang":"ppt","category":"PowerPointのオプション画面","term":"基本設定（PowerPointのオプション）","summary":"ユーザー名やユーザーインターフェースのオプション設定ページ。","examples":[],"pages":[],"id":"ppt-0192"},{"lang":"ppt","category":"PowerPointのオプション画面","term":"文章校正（PowerPointのオプション）","summary":"オートコレクトやスペルチェックの設定ページ。","examples":[],"pages":[],"id":"ppt-0193"},{"lang":"ppt","category":"PowerPointのオプション画面","term":"保存（PowerPointのオプション）","summary":"既定の保存形式や自動回復の設定ページ。","examples":[],"pages":[],"id":"ppt-0194"},{"lang":"ppt","category":"PowerPointのオプション画面","term":"詳細設定（PowerPointのオプション）","summary":"編集・表示・印刷に関する詳細な動作設定ページ。","examples":[],"pages":[],"id":"ppt-0195"},{"lang":"ppt","category":"PowerPointのオプション画面","term":"リボンのユーザー設定（PowerPoint）","summary":"リボンに表示するタブやコマンドを編集する設定ページ。","examples":[],"pages":[],"id":"ppt-0196"},{"lang":"ppt","category":"スライドのサイズと互換性","term":"4:3のスライドサイズ","summary":"従来の画面比率に合わせたスライドのサイズ設定。","examples":[],"pages":[],"id":"ppt-0197"},{"lang":"ppt","category":"スライドのサイズと互換性","term":"16:9のスライドサイズ","summary":"現在標準的なワイド画面向けのスライドサイズ設定。","examples":[],"pages":[],"id":"ppt-0198"},{"lang":"ppt","category":"スライドのサイズと互換性","term":"コンテンツのサイズ調整（スライドサイズ変更時）","summary":"サイズ変更時に既存の内容を拡大・縮小する設定。","examples":[],"pages":[],"id":"ppt-0199"},{"lang":"ppt","category":"スライドのサイズと互換性","term":"カスタムスライドサイズ","summary":"印刷物やデジタル看板など独自の比率に合わせるサイズ設定。","examples":[],"pages":[],"id":"ppt-0200"},{"lang":"ppt","category":"スライドのサイズと互換性","term":"互換モード（PowerPoint）","summary":"古い形式で保存した際に一部機能が制限される状態。","examples":[],"pages":[],"id":"ppt-0201"},{"lang":"ppt","category":"テーマ・配色のカスタマイズ（PowerPoint）","term":"テーマの色の編集","summary":"テーマで使う色のセットを独自に作成・変更する機能。","examples":[],"pages":[],"id":"ppt-0202"},{"lang":"ppt","category":"テーマ・配色のカスタマイズ（PowerPoint）","term":"テーマのフォントの編集","summary":"見出し・本文のフォントの組み合わせを独自に作成する機能。","examples":[],"pages":[],"id":"ppt-0203"},{"lang":"ppt","category":"テーマ・配色のカスタマイズ（PowerPoint）","term":"配色パターンの保存","summary":"作成した配色をテーマとして他のプレゼンテーションでも使えるよう保存する機能。","examples":[],"pages":[],"id":"ppt-0204"},{"lang":"ppt","category":"テーマ・配色のカスタマイズ（PowerPoint）","term":"背景のグラデーション設定","summary":"スライドの背景に段階的に変化する色を設定する機能。","examples":[],"pages":[],"id":"ppt-0205"},{"lang":"ppt","category":"テーマ・配色のカスタマイズ（PowerPoint）","term":"背景の画像塗りつぶし","summary":"スライドの背景全体に画像を設定する機能。","examples":[],"pages":[],"id":"ppt-0206"},{"lang":"ppt","category":"ノート・配布資料の活用","term":"ノートの表示/非表示","summary":"発表用のメモを画面に表示するかどうかを切り替える設定。","examples":[],"pages":[],"id":"ppt-0207"},{"lang":"ppt","category":"ノート・配布資料の活用","term":"ノートマスター","summary":"配布資料として印刷する際のノートページのレイアウトを編集する画面。","examples":[],"pages":[],"id":"ppt-0208"},{"lang":"ppt","category":"ノート・配布資料の活用","term":"配布資料マスター","summary":"1枚に複数スライドを印刷する配布資料のレイアウトを編集する画面。","examples":[],"pages":[],"id":"ppt-0209"},{"lang":"ppt","category":"ノート・配布資料の活用","term":"配布資料の印刷（1/4/6/9スライド）","summary":"1ページに印刷するスライド数を指定する設定。","examples":[],"pages":[],"id":"ppt-0210"},{"lang":"ppt","category":"ノート・配布資料の活用","term":"配布資料の罫線の有無","summary":"配布資料にスライドを区切る枠線を表示するかの設定。","examples":[],"pages":[],"id":"ppt-0211"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+N（PowerPoint）","summary":"新しいプレゼンテーションを作成するショートカット。","examples":[],"pages":[],"id":"ppt-0212"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+O（PowerPoint）","summary":"既存のプレゼンテーションを開くショートカット。","examples":[],"pages":[],"id":"ppt-0213"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+S（PowerPoint）","summary":"プレゼンテーションを上書き保存するショートカット。","examples":[],"pages":[],"id":"ppt-0214"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+B / I / U（PowerPoint）","summary":"太字・斜体・下線を切り替えるショートカット。","examples":[],"pages":[],"id":"ppt-0215"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+E / L / R（PowerPoint）","summary":"文字の中央揃え・左揃え・右揃えを設定するショートカット。","examples":[],"pages":[],"id":"ppt-0216"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Tab/Shift+Tab（箇条書きレベル）","summary":"箇条書きのインデントレベルを上げ下げするショートカット。","examples":[],"pages":[],"id":"ppt-0217"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+G（グループ化）","summary":"複数の図形をグループ化するショートカット。","examples":[],"pages":[],"id":"ppt-0218"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+Shift+G（グループ化解除）","summary":"グループ化された図形を解除するショートカット。","examples":[],"pages":[],"id":"ppt-0219"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+K（PowerPoint）","summary":"ハイパーリンクを挿入するショートカット。","examples":[],"pages":[],"id":"ppt-0220"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Home/End（スライド移動）","summary":"最初・最後のスライドへ移動するショートカット。","examples":[],"pages":[],"id":"ppt-0221"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Page Up/Down（スライド切替）","summary":"前後のスライドへ移動するショートカット。","examples":[],"pages":[],"id":"ppt-0222"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Ctrl+A（PowerPoint）","summary":"スライド内のすべてのオブジェクトを選択するショートカット。","examples":[],"pages":[],"id":"ppt-0223"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"Esc（スライドショー終了）","summary":"実行中のスライドショーを終了するショートカット。","examples":[],"pages":[],"id":"ppt-0224"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"B（画面を黒くする）","summary":"スライドショー中に画面を黒くするショートカット。","examples":[],"pages":[],"id":"ppt-0225"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"W（画面を白くする）","summary":"スライドショー中に画面を白くするショートカット。","examples":[],"pages":[],"id":"ppt-0226"},{"lang":"ppt","category":"ショートカットキー追加（PowerPoint）","term":"数字キー+Enter（スライド番号指定）","summary":"スライドショー中に番号を入力して指定スライドへジャンプする操作。","examples":[],"pages":[],"id":"ppt-0227"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"左揃え（図形の整列）","summary":"複数の図形の左端を揃える機能。","examples":[],"pages":[],"id":"ppt-0228"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"上下中央揃え（図形の整列）","summary":"複数の図形の垂直方向の中心を揃える機能。","examples":[],"pages":[],"id":"ppt-0229"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"左右等間隔に配置","summary":"複数の図形の水平方向の間隔を均等にする機能。","examples":[],"pages":[],"id":"ppt-0230"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"上下等間隔に配置","summary":"複数の図形の垂直方向の間隔を均等にする機能。","examples":[],"pages":[],"id":"ppt-0231"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"スライドに合わせて配置","summary":"図形をスライド全体を基準に整列させる設定。","examples":[],"pages":[],"id":"ppt-0232"},{"lang":"ppt","category":"図形の整列・配置の詳細","term":"選択した図形に合わせて配置","summary":"複数図形の中の1つを基準に他を整列させる設定。","examples":[],"pages":[],"id":"ppt-0233"},{"lang":"ppt","category":"スライドのレビュー・フィードバック","term":"コメントの追加（PowerPoint）","summary":"スライドの特定の位置にフィードバックを書き込む機能。","examples":[],"pages":[],"id":"ppt-0234"},{"lang":"ppt","category":"スライドのレビュー・フィードバック","term":"コメントの返信（PowerPoint）","summary":"既存のコメントに返答する機能。","examples":[],"pages":[],"id":"ppt-0235"},{"lang":"ppt","category":"スライドのレビュー・フィードバック","term":"コメントの解決（PowerPoint）","summary":"対応済みのコメントを解決済みにする機能。","examples":[],"pages":[],"id":"ppt-0236"},{"lang":"ppt","category":"スライドのレビュー・フィードバック","term":"比較（PowerPoint）","summary":"2つのバージョンのプレゼンテーションの違いを確認する機能。","examples":[],"pages":[],"id":"ppt-0237"},{"lang":"ppt","category":"スライドのテキスト効果詳細","term":"文字のグラデーション塗り","summary":"文字の内部に段階的な色の変化を付ける書式設定。","examples":[],"pages":[],"id":"ppt-0238"},{"lang":"ppt","category":"スライドのテキスト効果詳細","term":"文字の面取り効果","summary":"文字に立体的な縁取りを付ける書式設定。","examples":[],"pages":[],"id":"ppt-0239"},{"lang":"ppt","category":"スライドのテキスト効果詳細","term":"文字の3-D回転","summary":"文字を立体的に回転させて見せる書式設定。","examples":[],"pages":[],"id":"ppt-0240"},{"lang":"ppt","category":"スライドのテキスト効果詳細","term":"WordArtのスタイルギャラリー","summary":"あらかじめ用意された装飾文字のデザイン一覧。","examples":[],"pages":[],"id":"ppt-0241"},{"lang":"ppt","category":"スライドのテキスト効果詳細","term":"テキストの変形（文字を曲線に沿わせる）","summary":"文字を波型や円形などの形に沿わせる書式効果。","examples":[],"pages":[],"id":"ppt-0242"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"オーディオの再生オプション","summary":"自動再生・クリック時再生などの音声の再生方法設定。","examples":[],"pages":[],"id":"ppt-0243"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"オーディオのトリミング","summary":"音声ファイルの不要な部分を切り取る編集機能。","examples":[],"pages":[],"id":"ppt-0244"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"ビデオのトリミング","summary":"動画ファイルの不要な部分を切り取る編集機能。","examples":[],"pages":[],"id":"ppt-0245"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"ビデオのブックマーク","summary":"動画内の特定の時点に印を付けジャンプできるようにする機能。","examples":[],"pages":[],"id":"ppt-0246"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"ビデオのフェードイン・フェードアウト","summary":"動画の始まりと終わりを滑らかにする設定。","examples":[],"pages":[],"id":"ppt-0247"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"ビデオのポスターフレーム","summary":"再生前に表示される動画のサムネイル画像の設定。","examples":[],"pages":[],"id":"ppt-0248"},{"lang":"ppt","category":"スライドのオーディオ・ビデオ詳細","term":"オンラインビデオの挿入","summary":"YouTubeなど外部サービスの動画をスライドに埋め込む機能。","examples":[],"pages":[],"id":"ppt-0249"},{"lang":"ppt","category":"配布・共有の実務（PowerPoint）","term":"プレゼンテーションパック（CD用配布）","summary":"必要なファイルをまとめてパッケージ化する機能。","examples":[],"pages":[],"id":"ppt-0250"},{"lang":"ppt","category":"配布・共有の実務（PowerPoint）","term":"リンクファイルの埋め込み","summary":"外部参照していた動画や音声をファイル内に埋め込む設定。","examples":[],"pages":[],"id":"ppt-0251"},{"lang":"ppt","category":"配布・共有の実務（PowerPoint）","term":"配布前のファイルサイズ削減","summary":"画像の圧縮などでファイルを軽量化する実務。","examples":[],"pages":[],"id":"ppt-0252"},{"lang":"ppt","category":"配布・共有の実務（PowerPoint）","term":"プレゼンテーションの読み取り専用配布","summary":"編集されないよう読み取り専用で配布する設定。","examples":[],"pages":[],"id":"ppt-0253"},{"lang":"ppt","category":"プレゼン資料作成の実務知識","term":"エレベーターピッチ形式のスライド構成","summary":"短時間で要点を伝えるための簡潔なスライド構成法。","examples":[],"pages":[],"id":"ppt-0254"},{"lang":"ppt","category":"プレゼン資料作成の実務知識","term":"ストーリーテリング型のスライド構成","summary":"起承転結を意識して聴衆を引き込む構成法。","examples":[],"pages":[],"id":"ppt-0255"},{"lang":"ppt","category":"プレゼン資料作成の実務知識","term":"1スライド30秒ルール","summary":"1枚あたりの説明時間を意識してスライド枚数を決める目安。","examples":[],"pages":[],"id":"ppt-0256"},{"lang":"ppt","category":"プレゼン資料作成の実務知識","term":"タイトルスライドの要点","summary":"プレゼン全体の印象を決める最初のスライドの作り方。","examples":[],"pages":[],"id":"ppt-0257"},{"lang":"ppt","category":"プレゼン資料作成の実務知識","term":"まとめスライドの重要性","summary":"最後に要点を再確認させるスライドの役割。","examples":[],"pages":[],"id":"ppt-0258"},{"lang":"ppt","category":"スライドの視覚表現技法","term":"アイコンを使った視覚化","summary":"文章よりも直感的に伝わるアイコンを活用する技法。","examples":[],"pages":[],"id":"ppt-0259"},{"lang":"ppt","category":"スライドの視覚表現技法","term":"ビフォーアフターの比較表現","summary":"変化を印象づけるための対比構成の技法。","examples":[],"pages":[],"id":"ppt-0260"},{"lang":"ppt","category":"スライドの視覚表現技法","term":"数字を大きく見せる表現","summary":"重要な数値を強調して視線を集める技法。","examples":[],"pages":[],"id":"ppt-0261"},{"lang":"ppt","category":"スライドの視覚表現技法","term":"タイムラインでの経過表現","summary":"出来事を時系列で分かりやすく示す表現技法。","examples":[],"pages":[],"id":"ppt-0262"},{"lang":"ppt","category":"スライドの視覚表現技法","term":"プロセス図での流れの表現","summary":"手順や工程を矢印でつないで示す表現技法。","examples":[],"pages":[],"id":"ppt-0263"},{"lang":"ppt","category":"スライドマスターの実務応用","term":"会社ロゴの全スライド配置","summary":"マスターにロゴを配置しすべてのスライドに反映させる方法。","examples":[],"pages":[],"id":"ppt-0264"},{"lang":"ppt","category":"スライドマスターの実務応用","term":"フッターへの機密区分表示","summary":"社外秘などの表示をマスターで一括設定する方法。","examples":[],"pages":[],"id":"ppt-0265"},{"lang":"ppt","category":"スライドマスターの実務応用","term":"独自レイアウトの作成","summary":"既存のレイアウトを基に自社専用のレイアウトを作る方法。","examples":[],"pages":[],"id":"ppt-0266"},{"lang":"ppt","category":"スライドマスターの実務応用","term":"マスタースライドの保護","summary":"レイアウトが誤って変更されないようにする運用上の工夫。","examples":[],"pages":[],"id":"ppt-0267"},{"lang":"ppt","category":"プレゼン進行の実務技術","term":"アイスブレイクの活用","summary":"本題前に聴衆の緊張を和らげる導入の工夫。","examples":[],"pages":[],"id":"ppt-0268"},{"lang":"ppt","category":"プレゼン進行の実務技術","term":"質疑応答の時間配分","summary":"発表後の質疑応答にどれだけ時間を割くかの設計。","examples":[],"pages":[],"id":"ppt-0269"},{"lang":"ppt","category":"プレゼン進行の実務技術","term":"リハーサルタイミングの記録確認","summary":"本番前に各スライドの所要時間を把握する準備。","examples":[],"pages":[],"id":"ppt-0270"},{"lang":"ppt","category":"プレゼン進行の実務技術","term":"想定質問への準備スライド","summary":"本編には含めず質問が出た際だけ表示する補足スライド。","examples":[],"pages":[],"id":"ppt-0271"},{"lang":"ppt","category":"プレゼン進行の実務技術","term":"緊張時の話し方の工夫（間の取り方）","summary":"聴衆に伝わりやすくするための話す速度や間の調整。","examples":[],"pages":[],"id":"ppt-0272"},{"lang":"ppt","category":"スライドの数値表現の工夫","term":"数値の桁区切り表示（スライド）","summary":"大きな数字を読みやすく桁区切りで表示する工夫。","examples":[],"pages":[],"id":"ppt-0273"},{"lang":"ppt","category":"スライドの数値表現の工夫","term":"単位の明示（万円・百万円など）","summary":"誤解を避けるため数値の単位を明記する工夫。","examples":[],"pages":[],"id":"ppt-0274"},{"lang":"ppt","category":"スライドの数値表現の工夫","term":"変化率の矢印表現","summary":"増加・減少を矢印の向きと色で直感的に示す工夫。","examples":[],"pages":[],"id":"ppt-0275"},{"lang":"ppt","category":"スライドの数値表現の工夫","term":"小数点以下の桁数統一","summary":"資料全体で小数点の桁数をそろえる体裁上の工夫。","examples":[],"pages":[],"id":"ppt-0276"},{"lang":"ppt","category":"スライドの配布後利用","term":"配布資料のフォローアップ活用","summary":"発表後に資料を参照してもらうための工夫。","examples":[],"pages":[],"id":"ppt-0277"},{"lang":"ppt","category":"スライドの配布後利用","term":"アーカイブ用プレゼンテーションの整理","summary":"過去の発表資料を検索しやすく整理する実務。","examples":[],"pages":[],"id":"ppt-0278"},{"lang":"ppt","category":"スライドの配布後利用","term":"社内ナレッジとしてのスライド共有","summary":"良い構成のスライドをテンプレートとして共有知にする実務。","examples":[],"pages":[],"id":"ppt-0279"},{"lang":"ppt","category":"リモート発表の実務","term":"画面共有でのプレゼンテーション","summary":"オンライン会議ツールでスライドを画面共有する発表形式。","examples":[],"pages":[],"id":"ppt-0280"},{"lang":"ppt","category":"リモート発表の実務","term":"発表者ビューのみ共有する設定","summary":"聴衆には見せたくない情報を隠しつつ発表する方法。","examples":[],"pages":[],"id":"ppt-0281"},{"lang":"ppt","category":"リモート発表の実務","term":"リモート環境での音声・映像確認","summary":"発表前に音声と映像の映りを確認する準備作業。","examples":[],"pages":[],"id":"ppt-0282"},{"lang":"ppt","category":"PowerPointの表・グラフ詳細","term":"スライド内の表のスタイル変更","summary":"表全体の配色やデザインをまとめて変更する機能。","examples":[],"pages":[],"id":"ppt-0283"},{"lang":"ppt","category":"PowerPointの表・グラフ詳細","term":"スライド内の表の行・列操作","summary":"表に行や列を追加・削除する基本操作。","examples":[],"pages":[],"id":"ppt-0284"},{"lang":"ppt","category":"PowerPointの表・グラフ詳細","term":"Excelデータの貼り付け(埋め込み/リンク)","summary":"Excelの表をそのまま編集可能な形で貼り付ける方法。","examples":[],"pages":[],"id":"ppt-0285"},{"lang":"ppt","category":"PowerPointの表・グラフ詳細","term":"グラフデータの編集(Excel起動)","summary":"スライド内のグラフの元データをExcelで編集する操作。","examples":[],"pages":[],"id":"ppt-0286"},{"lang":"ppt","category":"PowerPointの表・グラフ詳細","term":"グラフの要素のアニメーション化","summary":"グラフの系列ごとに表示タイミングを分けるアニメーション。","examples":[],"pages":[],"id":"ppt-0287"},{"lang":"ppt","category":"スライドのテンプレート・資産管理","term":"社内標準テンプレートの配布","summary":"全社で統一したデザインのテンプレートを配布する運用。","examples":[],"pages":[],"id":"ppt-0288"},{"lang":"ppt","category":"スライドのテンプレート・資産管理","term":"テンプレートのバージョン管理","summary":"更新されたテンプレートを周知し古い版の利用を防ぐ運用。","examples":[],"pages":[],"id":"ppt-0289"},{"lang":"ppt","category":"スライドのテンプレート・資産管理","term":"スライドライブラリの構築","summary":"再利用可能なスライドを部門で共有する仕組み。","examples":[],"pages":[],"id":"ppt-0290"},{"lang":"ppt","category":"スライドのテンプレート・資産管理","term":"ブランドガイドラインとの整合性確認","summary":"企業のデザインルールにスライドが準拠しているかの確認。","examples":[],"pages":[],"id":"ppt-0291"},{"lang":"ppt","category":"スライドの校正記号・表記統一","term":"用語の表記統一（PowerPoint）","summary":"同じ意味の言葉の表記ゆれを防ぐルールの適用。","examples":[],"pages":[],"id":"ppt-0292"},{"lang":"ppt","category":"スライドの校正記号・表記統一","term":"数字と単位の表記ルール","summary":"半角・全角や単位の書き方を統一するルール。","examples":[],"pages":[],"id":"ppt-0293"},{"lang":"ppt","category":"スライドの校正記号・表記統一","term":"句読点の使用ルール（スライド）","summary":"箇条書きでは句点を省略するなどのスライド特有の慣習。","examples":[],"pages":[],"id":"ppt-0294"},{"lang":"ppt","category":"教育・研修でのPowerPoint活用","term":"研修用スライドの構成","summary":"学習目標から演習、まとめまでの典型的な構成。","examples":[],"pages":[],"id":"ppt-0295"},{"lang":"ppt","category":"教育・研修でのPowerPoint活用","term":"反転授業向けスライドの作成","summary":"事前学習用に自習しやすい説明を加えたスライド作成。","examples":[],"pages":[],"id":"ppt-0296"},{"lang":"ppt","category":"教育・研修でのPowerPoint活用","term":"eラーニング用スライドのナレーション","summary":"受講者が自習できるよう音声解説を付ける活用法。","examples":[],"pages":[],"id":"ppt-0297"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"新しいスライドボタン","summary":"現在のスライドの後に新しいスライドを追加するボタン。","examples":[],"pages":[],"id":"ppt-0298"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"レイアウトボタン","summary":"選択したスライドのレイアウトを変更するボタン。","examples":[],"pages":[],"id":"ppt-0299"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"リセットボタン（スライド）","summary":"プレースホルダーの位置・書式を初期状態に戻すボタン。","examples":[],"pages":[],"id":"ppt-0300"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"セクションボタン","summary":"スライドをグループに分けて管理するボタン。","examples":[],"pages":[],"id":"ppt-0301"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"図形の塗りつぶしボタン","summary":"選択した図形の内部の色を変更するボタン。","examples":[],"pages":[],"id":"ppt-0302"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"図形の枠線ボタン","summary":"選択した図形の輪郭の色・太さを変更するボタン。","examples":[],"pages":[],"id":"ppt-0303"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"図形の効果ボタン","summary":"影や反射などの視覚効果を図形に追加するボタン。","examples":[],"pages":[],"id":"ppt-0304"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"配置ボタン（ホームタブ）","summary":"複数の図形をページ内で整列させるボタン。","examples":[],"pages":[],"id":"ppt-0305"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint ホームタブ）","term":"選択ボタン（PowerPoint）","summary":"複数のオブジェクトをまとめて選択するボタン。","examples":[],"pages":[],"id":"ppt-0306"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"新しいフォトアルバムボタン","summary":"複数の画像からアルバム形式のスライドを作成するボタン。","examples":[],"pages":[],"id":"ppt-0307"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"図形の挿入ボタン（PowerPoint）","summary":"基本図形を描画するボタン。","examples":[],"pages":[],"id":"ppt-0308"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"SmartArtの挿入ボタン（PowerPoint）","summary":"図解表現のSmartArtを追加するボタン。","examples":[],"pages":[],"id":"ppt-0309"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"グラフの挿入ボタン（PowerPoint）","summary":"データを示すグラフを追加するボタン。","examples":[],"pages":[],"id":"ppt-0310"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"表の挿入ボタン（PowerPoint）","summary":"行数・列数を指定して表を追加するボタン。","examples":[],"pages":[],"id":"ppt-0311"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"テキストボックスの挿入ボタン（PowerPoint）","summary":"自由な位置に文字を配置する枠を追加するボタン。","examples":[],"pages":[],"id":"ppt-0312"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"ヘッダーとフッターの挿入ボタン（PowerPoint）","summary":"すべてのスライドに共通のフッター情報を追加するボタン。","examples":[],"pages":[],"id":"ppt-0313"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"日付と時刻の挿入ボタン（PowerPoint）","summary":"現在の日付・時刻をスライドに挿入するボタン。","examples":[],"pages":[],"id":"ppt-0314"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"スライド番号の挿入ボタン","summary":"スライドに連番を表示するボタン。","examples":[],"pages":[],"id":"ppt-0315"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"記号の挿入ボタン（PowerPoint）","summary":"特殊記号を挿入するボタン。","examples":[],"pages":[],"id":"ppt-0316"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"数式の挿入ボタン（PowerPoint）","summary":"数式エディターで数式を挿入するボタン。","examples":[],"pages":[],"id":"ppt-0317"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"ビデオの挿入ボタン","summary":"動画ファイルをスライドに追加するボタン。","examples":[],"pages":[],"id":"ppt-0318"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"オーディオの挿入ボタン","summary":"音声ファイルをスライドに追加するボタン。","examples":[],"pages":[],"id":"ppt-0319"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint 挿入タブ）","term":"画面録画の挿入ボタン","summary":"画面の操作を録画してスライドに追加するボタン。","examples":[],"pages":[],"id":"ppt-0320"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"バリエーションボタン（デザインタブ）","summary":"選択したテーマの色違いパターンを選ぶボタン。","examples":[],"pages":[],"id":"ppt-0321"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"スライドのサイズボタン（デザインタブ）","summary":"4:3や16:9などの比率を選ぶボタン。","examples":[],"pages":[],"id":"ppt-0322"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"背景の書式設定ボタン","summary":"背景色や画像を設定する作業ウィンドウを開くボタン。","examples":[],"pages":[],"id":"ppt-0323"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"効果のオプションボタン（画面切り替え）","summary":"切り替え効果の方向やパターンを調整するボタン。","examples":[],"pages":[],"id":"ppt-0324"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"画面切り替えの時間設定ボタン","summary":"切り替えにかかる時間を指定するボタン。","examples":[],"pages":[],"id":"ppt-0325"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"サウンドボタン（画面切り替え）","summary":"切り替え時の効果音を設定するボタン。","examples":[],"pages":[],"id":"ppt-0326"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"すべてに適用ボタン（画面切り替え）","summary":"設定を全スライドへ一括適用するボタン。","examples":[],"pages":[],"id":"ppt-0327"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"アニメーションの追加ボタン","summary":"選択したオブジェクトにアニメーションを追加するボタン。","examples":[],"pages":[],"id":"ppt-0328"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"アニメーションウィンドウボタン","summary":"設定済みアニメーションの一覧と順序を管理するボタン。","examples":[],"pages":[],"id":"ppt-0329"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"トリガーボタン（アニメーション）","summary":"特定の操作をきっかけにアニメーションを開始する設定ボタン。","examples":[],"pages":[],"id":"ppt-0330"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"アニメーションのコピー/貼り付けボタン","summary":"設定したアニメーションを別のオブジェクトに適用するボタン。","examples":[],"pages":[],"id":"ppt-0331"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）","term":"並べ替えボタン（アニメーション順序）","summary":"アニメーションの実行順序を変更するボタン。","examples":[],"pages":[],"id":"ppt-0332"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"最初からボタン（スライドショー）","summary":"最初のスライドからショーを開始するボタン。","examples":[],"pages":[],"id":"ppt-0333"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"現在のスライドからボタン","summary":"表示中のスライドからショーを開始するボタン。","examples":[],"pages":[],"id":"ppt-0334"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"目的別スライドショーボタン","summary":"一部のスライドだけで構成したショーを作成するボタン。","examples":[],"pages":[],"id":"ppt-0335"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"スライドショーの設定ボタン","summary":"ループ再生などの詳細設定を開くボタン。","examples":[],"pages":[],"id":"ppt-0336"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"タイミングのリハーサルボタン","summary":"発表時間を計測しながら練習するボタン。","examples":[],"pages":[],"id":"ppt-0337"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"スライドショーの記録ボタン","summary":"ナレーション付きでスライドショーを録画するボタン。","examples":[],"pages":[],"id":"ppt-0338"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"字幕の設定ボタン","summary":"発表中にリアルタイム字幕を表示する設定ボタン。","examples":[],"pages":[],"id":"ppt-0339"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"発表者ツールを使用するボタン","summary":"発表者専用の画面を有効にする設定ボタン。","examples":[],"pages":[],"id":"ppt-0340"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"新しいコメントボタン（PowerPoint）","summary":"スライドにコメントを追加するボタン。","examples":[],"pages":[],"id":"ppt-0341"},{"lang":"ppt","category":"リボンの個別ボタン名（PowerPoint スライドショー・校閲）","term":"アクセシビリティチェックボタン（PowerPoint）","summary":"読み上げ対応などの問題点を検出するボタン。","examples":[],"pages":[],"id":"ppt-0342"}]}
+{
+  "version": 1,
+  "entries": [
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "スライド",
+      "summary": "プレゼンテーションの1枚の画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0001"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "プレゼンテーション",
+      "summary": "PowerPoint で作るファイル全体（.pptx）。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0002"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "サムネイルウィンドウ",
+      "summary": "左側に並ぶスライドの一覧。ドラッグで順番を入れ替えられる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0003"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "ノートペイン",
+      "summary": "スライドの下にある、発表者用のメモ欄。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0004"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "プレースホルダー",
+      "summary": "タイトルや本文を入力する枠。レイアウトで決まる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0005"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "スライドマスター",
+      "summary": "全スライドの共通デザイン（フォント・色・ロゴ）を管理する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0006"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "レイアウト",
+      "summary": "タイトルのみ・2つのコンテンツなど、スライドの配置パターン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0007"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "テーマ",
+      "summary": "デザイン、色、フォントのセット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0008"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "バリエーション",
+      "summary": "テーマの配色違い。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0009"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "表示モード",
+      "summary": "標準・スライド一覧・閲覧表示・発表者ツールなど。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0010"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "拡張子 .pptx / .ppsx / .potx",
+      "summary": "通常／スライドショー専用／テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0011"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語",
+      "term": "アウトライン表示",
+      "summary": "文字だけで構成を組み立てる画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0012"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "新しいスライド",
+      "summary": "スライドを追加する。Ctrl+M。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0013"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "スライドの複製・削除",
+      "summary": "選んだスライドをコピー／削除。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0014"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "セクション",
+      "summary": "スライドをグループに分けて整理する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0015"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "スライドの非表示",
+      "summary": "発表時に飛ばすスライドを設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0016"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "スライドのサイズ",
+      "summary": "16:9 と 4:3 など。16:9 が標準。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0017"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "レイアウトのリセット",
+      "summary": "配置が崩れたとき元に戻す。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0018"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "スライドの再利用",
+      "summary": "別のファイルのスライドを取り込む。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0019"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "背景の書式設定",
+      "summary": "背景色、画像、グラデーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0020"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作",
+      "term": "ヘッダーとフッター",
+      "summary": "スライド番号、日付、フッター文字を挿入。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0021"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "テキストボックス",
+      "summary": "自由な位置に文字を入れる枠。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0022"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "箇条書き",
+      "summary": "要点を短く並べる。レベル(階層)で整理できる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0023"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "段落番号",
+      "summary": "手順などに番号を付ける。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0024"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "フォント / フォントサイズ",
+      "summary": "読みやすい大きさにする。本文は18pt以上が目安。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0025"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "ワードアート",
+      "summary": "装飾した文字。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0026"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "テキストの配置と方向",
+      "summary": "中央揃え、縦書きなど。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0027"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "自動調整",
+      "summary": "枠に収まるよう文字サイズを自動調整。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0028"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "図形",
+      "summary": "四角・矢印・吹き出しなど。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0029"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "図形の書式",
+      "summary": "塗りつぶし、枠線、効果（影など）。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0030"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "ガイドとグリッド線",
+      "summary": "位置をそろえるための補助線。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0031"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "配置・整列",
+      "summary": "複数の図形を左揃えや均等な間隔にそろえる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0032"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "グループ化",
+      "summary": "複数の図形を1つにまとめる。Ctrl+G。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0033"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "重なり順（前面・背面）",
+      "summary": "図形が重なったときの上下。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0034"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "スポイト",
+      "summary": "画面上の色を取り出して使う。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0035"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "図形の結合",
+      "summary": "図形を合体・型抜きして新しい形を作る。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0036"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形",
+      "term": "コネクタ",
+      "summary": "図形同士をつなぐ線。図形を動かしても追従する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0037"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "画像の挿入",
+      "summary": "写真やイラストを挿入する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0038"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "トリミング",
+      "summary": "画像の不要な部分を切り取る。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0039"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "背景の削除",
+      "summary": "画像の背景を透明にする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0040"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "アート効果",
+      "summary": "画像に絵画風などの効果を付ける。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0041"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "代替テキスト",
+      "summary": "画像の内容を説明する文字。読み上げ用に設定する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0042"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "SmartArt",
+      "summary": "手順・階層・循環などを図にする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0043"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "表",
+      "summary": "行と列で情報を整理。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0044"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "グラフ",
+      "summary": "データをグラフにする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0045"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "アイコン",
+      "summary": "ベクター形式の簡単な絵。色や大きさを自由に変えられる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0046"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "ビデオ・オーディオ",
+      "summary": "動画や音声を埋め込む。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0047"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "画面録画",
+      "summary": "画面操作を録画してスライドに挿入。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0048"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "フォトアルバム",
+      "summary": "たくさんの写真を一度にスライドにする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0049"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "3Dモデル",
+      "summary": "3Dのモデルを挿入して回転表示できる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0050"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表",
+      "term": "リンクとアクション",
+      "summary": "図形に別スライドや Web ページへのリンクを設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0051"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "アニメーション",
+      "summary": "文字や図形に動きを付ける。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0052"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "開始・強調・終了・軌跡",
+      "summary": "アニメーションの4種類。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0053"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "アニメーションウィンドウ",
+      "summary": "動きの順番やタイミングを管理。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0054"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "クリック時 / 直前 / 直後",
+      "summary": "動きを始めるタイミング。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0055"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "アニメーションの軌跡",
+      "summary": "図形を指定した道筋に沿って動かす。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0056"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "トリガー",
+      "summary": "特定の図形をクリックしたときに動かす。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0057"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "画面切り替え",
+      "summary": "スライドが替わるときの動き。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0058"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "モーフ",
+      "summary": "前後のスライドの図形を滑らかに変形させる切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0059"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "ズーム",
+      "summary": "スライドや節を拡大して移動する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0060"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "アニメーションのコピー",
+      "summary": "動きの設定を他の図形にコピー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0061"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え",
+      "term": "アニメーションは控えめに",
+      "summary": "多用すると内容が伝わりにくくなる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0062"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "スライドショーの開始",
+      "summary": "F5 で最初から、Shift+F5 で現在のスライドから。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0063"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "発表者ツール",
+      "summary": "発表者だけにノートや次のスライドを表示する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0064"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "リハーサル",
+      "summary": "話す時間を記録してタイミングを設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0065"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "レーザーポインター",
+      "summary": "Ctrl を押しながらクリックで画面上に赤い点を出す。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0066"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "ペンと蛍光ペン",
+      "summary": "発表中にスライドへ書き込む。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0067"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "目的別スライドショー",
+      "summary": "必要なスライドだけを選んだ別バージョン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0068"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "自動再生",
+      "summary": "一定間隔で自動的に進む設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0069"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "ナレーションの録音",
+      "summary": "説明を録音してスライドに保存。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0070"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "字幕",
+      "summary": "話した内容を画面に字幕表示。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0071"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー",
+      "term": "ブラックアウト",
+      "summary": "B キーで画面を暗転、W で白に。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0072"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "PDF として保存",
+      "summary": "配布用に PDF にする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0073"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "ビデオの作成",
+      "summary": "スライドショーを動画(.mp4)にする。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0074"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "配布資料",
+      "summary": "1枚の紙に複数のスライドを印刷する。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0075"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "画像として保存",
+      "summary": "スライドを PNG/JPEG として保存。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0076"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "共有・共同編集",
+      "summary": "リンクで共有して複数人で編集。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0077"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "コメント",
+      "summary": "スライドに意見を残す。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0078"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "フォントの埋め込み",
+      "summary": "他のパソコンでも同じ書体で表示できるようにファイルに含める。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0079"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "ファイルサイズの削減",
+      "summary": "画像の圧縮や不要データの削除。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0080"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有",
+      "term": "スライドショー形式で保存",
+      "summary": "開くとすぐ再生されるファイル(.ppsx)。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0081"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "1スライド1メッセージ",
+      "summary": "伝えたいことを1つに絞る。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0082"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "余白を取る",
+      "summary": "要素を詰め込みすぎない。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0083"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "色は3色程度",
+      "summary": "ベースカラー・メインカラー・アクセントカラー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0084"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "コントラスト",
+      "summary": "背景と文字の色差を十分に取る。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0085"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "そろえる・近づける",
+      "summary": "位置をそろえ、関連する要素をまとめる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0086"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "図解を使う",
+      "summary": "文章より図やグラフで見せる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0087"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ",
+      "term": "デザイナー（デザインアイデア）",
+      "summary": "AI が配置のデザイン案を提案する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0088"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "F5 / Shift+F5",
+      "summary": "スライドショーを最初から／今のスライドから開始。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0089"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "Ctrl+M",
+      "summary": "新しいスライドを追加。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0090"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "Ctrl+D",
+      "summary": "選択した図形やスライドを複製。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0091"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "Ctrl+Shift+ドラッグ",
+      "summary": "図形を水平・垂直を保ってコピー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0092"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "矢印キー / Ctrl+矢印",
+      "summary": "図形を少しずつ／細かく動かす。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0093"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "Ctrl+Shift+C / V",
+      "summary": "書式のコピー／貼り付け。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0094"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカット",
+      "term": "Ctrl+Z / Y",
+      "summary": "元に戻す／やり直す。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0095"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "ホームタブ（PowerPoint）",
+      "summary": "フォントや段落、図形の書式を設定するリボンの基本タブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0096"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "挿入タブ（PowerPoint）",
+      "summary": "表・画像・動画などをスライドに挿入するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0097"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "デザインタブ（PowerPoint）",
+      "summary": "テーマやスライドのサイズを設定するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0098"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "画面切り替えタブ",
+      "summary": "スライド間のトランジション効果を設定するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0099"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "アニメーションタブ",
+      "summary": "スライド内のオブジェクトにアニメーションを設定するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0100"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "スライドショータブ",
+      "summary": "発表に関する設定やリハーサル機能を扱うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0101"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "校閲タブ（PowerPoint）",
+      "summary": "スペルチェックやコメントを扱うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0102"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "表示タブ（PowerPoint）",
+      "summary": "表示モードやマスター編集画面を扱うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0103"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "録画タブ",
+      "summary": "画面の録画やプレゼンテーションの録画を行うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0104"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "描画タブ（PowerPoint）",
+      "summary": "手書きの注釈やインク機能を扱うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0105"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "ヘルプタブ（PowerPoint）",
+      "summary": "PowerPointのヘルプにアクセスするタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0106"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "フォントグループ（PowerPoint）",
+      "summary": "文字の種類やサイズを設定する領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0107"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "段落グループ（PowerPoint）",
+      "summary": "箇条書きや配置を設定する領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0108"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "図形描画グループ",
+      "summary": "基本図形を挿入し書式設定する領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0109"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ（PowerPoint）",
+      "term": "編集グループ（PowerPoint）",
+      "summary": "検索・置換・選択を行う領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0110"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "スライドマスター表示",
+      "summary": "すべてのレイアウトの基になるデザインを編集する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0111"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "タイトルスライドレイアウト",
+      "summary": "プレゼンテーションの最初に使う専用のレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0112"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "タイトルとコンテンツレイアウト",
+      "summary": "見出しと本文を配置する最も基本的なレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0113"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "セクション見出しレイアウト",
+      "summary": "章の区切りを示すためのレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0114"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "2つのコンテンツレイアウト",
+      "summary": "画面を左右に分けて2つの内容を配置するレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0115"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "比較レイアウト",
+      "summary": "2つの項目を見出し付きで比較するレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0116"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "タイトルのみレイアウト",
+      "summary": "タイトルだけを配置し本文を自由に作れるレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0117"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "白紙レイアウト",
+      "summary": "プレースホルダーを一切含まない完全に自由なレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0118"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "コンテンツとキャプションレイアウト",
+      "summary": "画像などと短い説明文を組み合わせるレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0119"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "マスタータイトルの書式設定",
+      "summary": "すべてのスライドのタイトルに共通する書式を一括変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0120"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "レイアウトの挿入（マスター編集）",
+      "summary": "スライドマスターに新しいレイアウトを追加する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0121"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "プレースホルダーの挿入（マスター編集）",
+      "summary": "レイアウトに新しいプレースホルダー枠を追加する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0122"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細",
+      "term": "マスターの保存",
+      "summary": "カスタマイズしたスライドマスターをテンプレートとして保存する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0123"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "箇条書きの行頭文字の変更",
+      "summary": "箇条書きの記号を別の記号やアイコンに変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0124"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "段落番号の開始番号",
+      "summary": "連番の箇条書きで始まりの番号を指定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0125"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "インデントレベルの変更（Tab/Shift+Tab）",
+      "summary": "箇条書きの階層を上げ下げする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0126"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "行間の設定（PowerPoint）",
+      "summary": "箇条書きの行と行の間隔を調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0127"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "段落前後の間隔（PowerPoint）",
+      "summary": "箇条書きの項目と項目の間に空ける余白の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0128"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "テキストの均等割り付け（PowerPoint）",
+      "summary": "テキストボックス内で文字を均等に配置する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0129"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "文字の影（PowerPoint）",
+      "summary": "文字に影を付けて視認性を高める書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0130"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細",
+      "term": "文字の輪郭",
+      "summary": "文字の外枠に線を付ける書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0131"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "開始効果：フェード",
+      "summary": "対象がゆっくり現れる基本的な開始アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0132"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "開始効果：スライドイン",
+      "summary": "対象が画面の外から滑り込んでくる開始アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0133"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "開始効果：ワイプ",
+      "summary": "対象が一方向から徐々に現れる開始アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0134"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "開始効果：ズーム",
+      "summary": "対象が小さい状態から拡大しながら現れる開始アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0135"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "開始効果：バウンド",
+      "summary": "対象が弾むように現れる開始アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0136"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "強調効果：パルス",
+      "summary": "対象が一瞬拡大縮小して注意を引く強調アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0137"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "強調効果：スピン",
+      "summary": "対象がその場で回転する強調アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0138"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "強調効果：シーソー",
+      "summary": "対象が左右に揺れる強調アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0139"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "終了効果：フェードアウト",
+      "summary": "対象がゆっくり消えていく終了アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0140"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "終了効果：スライドアウト",
+      "summary": "対象が画面の外へ滑り出ていく終了アニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0141"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "軌跡：直線",
+      "summary": "指定した方向に直線的に動く動作パスの軌跡。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0142"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "軌跡：円",
+      "summary": "円を描くように動く動作パスの軌跡。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0143"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "軌跡：ユーザー設定パス",
+      "summary": "自分で自由に線を描いて指定する動作パスの軌跡。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0144"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "アニメーションの継続時間",
+      "summary": "アニメーションが完了するまでの時間の長さの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0145"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "アニメーションの遅延",
+      "summary": "アニメーションが開始されるまでの待ち時間の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0146"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "効果のオプション（方向など）",
+      "summary": "アニメーションの方向や形状を細かく調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0147"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替え：フェード（PowerPoint）",
+      "summary": "次のスライドが徐々に現れる基本的な切り替え効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0148"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替え：プッシュ",
+      "summary": "現在のスライドを押し出すように次のスライドが現れる効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0149"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替え：ワイプ（切り替え）",
+      "summary": "一方向から次のスライドが現れる切り替え効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0150"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替え：キューブ",
+      "summary": "立方体が回転するように切り替わる効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0151"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替え：ページカール",
+      "summary": "ページがめくれるように切り替わる効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0152"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替えの効果のオプション",
+      "summary": "切り替え効果の方向やパターンを調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0153"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替えのサウンド",
+      "summary": "スライド切り替え時に再生する効果音の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0154"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "画面切り替えのタイミング（クリック時/自動）",
+      "summary": "次のスライドへ進むタイミングを手動・自動で設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0155"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーション・切り替え詳細",
+      "term": "すべてに適用（画面切り替え）",
+      "summary": "設定した切り替え効果をすべてのスライドへ一括適用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0156"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "最初から（スライドショー）",
+      "summary": "プレゼンテーションの最初のスライドからショーを開始する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0157"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "現在のスライドから（スライドショー）",
+      "summary": "表示中のスライドからショーを開始する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0158"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "スライドショーの設定",
+      "summary": "ループ再生やペンの色など詳細な表示方法を設定するダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0159"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "発表者ツールの表示",
+      "summary": "発表者だけに見えるノートや次のスライドを表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0160"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "発表者ツールのタイマー",
+      "summary": "発表時間を計測するための時計表示。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0161"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "すべてのスライドを表示（発表者ツール）",
+      "summary": "発表中にスライド一覧から任意のスライドへジャンプする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0162"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "画面の切り替え（発表者ツール）",
+      "summary": "表示するモニターを切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0163"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "スライドショーの記録",
+      "summary": "ナレーションやタイミングを含めてスライドショーを録画する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0164"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "スポットライト効果（ペン）",
+      "summary": "発表中に画面の一部を強調するポインター効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0165"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "すべてのインクを消去",
+      "summary": "発表中に描いた手書きの注釈をまとめて消す機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0166"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "スライドショーの終了",
+      "summary": "Escキーなどでスライドショーを終了する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0167"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "目的別スライドショーの作成",
+      "summary": "特定の聴衆向けに一部のスライドだけを表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0168"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細",
+      "term": "非表示スライドの扱い",
+      "summary": "発表中にスキップされるよう設定されたスライド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0169"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：リスト",
+      "summary": "項目を並べて示すシンプルな構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0170"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：手順",
+      "summary": "時系列やステップを示す構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0171"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：循環",
+      "summary": "繰り返しのプロセスを示す構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0172"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：階層構造",
+      "summary": "組織図のような上下関係を示す構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0173"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：集合関係",
+      "summary": "要素同士の関連性を示す構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0174"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：マトリックス",
+      "summary": "4象限などで要素を分類する構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0175"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtの種類：ピラミッド",
+      "summary": "階層や優先順位を三角形で示す構成のSmartArt。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0176"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtへのテキスト入力ウィンドウ",
+      "summary": "図形に直接入力する代わりにテキストをまとめて編集する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0177"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtのデザインの変更",
+      "summary": "配色やスタイルをまとめて変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0178"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "SmartArtから図形への変換",
+      "summary": "SmartArtを通常の図形の集まりに変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0179"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "図形の頂点の編集",
+      "summary": "図形の形状を細かく変形させる編集機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0180"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "図形への文字の追加",
+      "summary": "図形の内部に直接文字を入力する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0181"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細（PowerPoint）",
+      "term": "既定の図形に設定",
+      "summary": "よく使う書式を新規図形の標準として登録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0182"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "近接の原則",
+      "summary": "関連する要素を近くに配置して関係性を伝えるデザインの原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0183"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "整列の原則",
+      "summary": "要素の端をそろえて整然とした印象を作るデザインの原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0184"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "反復の原則",
+      "summary": "同じデザイン要素を繰り返し使い統一感を出す原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0185"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "対比（コントラスト）の原則",
+      "summary": "大きさや色の差を付けて重要な部分を目立たせる原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0186"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "余白の活用",
+      "summary": "情報を詰め込みすぎず余白を残して見やすくする工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0187"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "フォントの統一",
+      "summary": "資料全体で使うフォントの種類を揃える工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0188"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "配色の統一（3色ルール）",
+      "summary": "使用する色数を絞り一貫した印象を与える工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0189"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "グリッドレイアウト",
+      "summary": "見えない格子線に沿って要素を配置する整理手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0190"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則",
+      "term": "視線誘導",
+      "summary": "見る人の目の動きを意識して情報を配置する手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0191"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面",
+      "term": "基本設定（PowerPointのオプション）",
+      "summary": "ユーザー名やユーザーインターフェースのオプション設定ページ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0192"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面",
+      "term": "文章校正（PowerPointのオプション）",
+      "summary": "オートコレクトやスペルチェックの設定ページ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0193"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面",
+      "term": "保存（PowerPointのオプション）",
+      "summary": "既定の保存形式や自動回復の設定ページ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0194"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面",
+      "term": "詳細設定（PowerPointのオプション）",
+      "summary": "編集・表示・印刷に関する詳細な動作設定ページ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0195"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面",
+      "term": "リボンのユーザー設定（PowerPoint）",
+      "summary": "リボンに表示するタブやコマンドを編集する設定ページ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0196"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性",
+      "term": "4:3のスライドサイズ",
+      "summary": "従来の画面比率に合わせたスライドのサイズ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0197"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性",
+      "term": "16:9のスライドサイズ",
+      "summary": "現在標準的なワイド画面向けのスライドサイズ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0198"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性",
+      "term": "コンテンツのサイズ調整（スライドサイズ変更時）",
+      "summary": "サイズ変更時に既存の内容を拡大・縮小する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0199"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性",
+      "term": "カスタムスライドサイズ",
+      "summary": "印刷物やデジタル看板など独自の比率に合わせるサイズ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0200"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性",
+      "term": "互換モード（PowerPoint）",
+      "summary": "古い形式で保存した際に一部機能が制限される状態。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0201"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ（PowerPoint）",
+      "term": "テーマの色の編集",
+      "summary": "テーマで使う色のセットを独自に作成・変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0202"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ（PowerPoint）",
+      "term": "テーマのフォントの編集",
+      "summary": "見出し・本文のフォントの組み合わせを独自に作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0203"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ（PowerPoint）",
+      "term": "配色パターンの保存",
+      "summary": "作成した配色をテーマとして他のプレゼンテーションでも使えるよう保存する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0204"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ（PowerPoint）",
+      "term": "背景のグラデーション設定",
+      "summary": "スライドの背景に段階的に変化する色を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0205"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ（PowerPoint）",
+      "term": "背景の画像塗りつぶし",
+      "summary": "スライドの背景全体に画像を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0206"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用",
+      "term": "ノートの表示/非表示",
+      "summary": "発表用のメモを画面に表示するかどうかを切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0207"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用",
+      "term": "ノートマスター",
+      "summary": "配布資料として印刷する際のノートページのレイアウトを編集する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0208"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用",
+      "term": "配布資料マスター",
+      "summary": "1枚に複数スライドを印刷する配布資料のレイアウトを編集する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0209"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用",
+      "term": "配布資料の印刷（1/4/6/9スライド）",
+      "summary": "1ページに印刷するスライド数を指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0210"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用",
+      "term": "配布資料の罫線の有無",
+      "summary": "配布資料にスライドを区切る枠線を表示するかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0211"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+N（PowerPoint）",
+      "summary": "新しいプレゼンテーションを作成するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0212"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+O（PowerPoint）",
+      "summary": "既存のプレゼンテーションを開くショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0213"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+S（PowerPoint）",
+      "summary": "プレゼンテーションを上書き保存するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0214"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+B / I / U（PowerPoint）",
+      "summary": "太字・斜体・下線を切り替えるショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0215"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+E / L / R（PowerPoint）",
+      "summary": "文字の中央揃え・左揃え・右揃えを設定するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0216"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Tab/Shift+Tab（箇条書きレベル）",
+      "summary": "箇条書きのインデントレベルを上げ下げするショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0217"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+G（グループ化）",
+      "summary": "複数の図形をグループ化するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0218"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+Shift+G（グループ化解除）",
+      "summary": "グループ化された図形を解除するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0219"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+K（PowerPoint）",
+      "summary": "ハイパーリンクを挿入するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0220"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Home/End（スライド移動）",
+      "summary": "最初・最後のスライドへ移動するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0221"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Page Up/Down（スライド切替）",
+      "summary": "前後のスライドへ移動するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0222"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Ctrl+A（PowerPoint）",
+      "summary": "スライド内のすべてのオブジェクトを選択するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0223"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "Esc（スライドショー終了）",
+      "summary": "実行中のスライドショーを終了するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0224"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "B（画面を黒くする）",
+      "summary": "スライドショー中に画面を黒くするショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0225"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "W（画面を白くする）",
+      "summary": "スライドショー中に画面を白くするショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0226"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加（PowerPoint）",
+      "term": "数字キー+Enter（スライド番号指定）",
+      "summary": "スライドショー中に番号を入力して指定スライドへジャンプする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0227"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "左揃え（図形の整列）",
+      "summary": "複数の図形の左端を揃える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0228"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "上下中央揃え（図形の整列）",
+      "summary": "複数の図形の垂直方向の中心を揃える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0229"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "左右等間隔に配置",
+      "summary": "複数の図形の水平方向の間隔を均等にする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0230"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "上下等間隔に配置",
+      "summary": "複数の図形の垂直方向の間隔を均等にする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0231"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "スライドに合わせて配置",
+      "summary": "図形をスライド全体を基準に整列させる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0232"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細",
+      "term": "選択した図形に合わせて配置",
+      "summary": "複数図形の中の1つを基準に他を整列させる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0233"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック",
+      "term": "コメントの追加（PowerPoint）",
+      "summary": "スライドの特定の位置にフィードバックを書き込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0234"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック",
+      "term": "コメントの返信（PowerPoint）",
+      "summary": "既存のコメントに返答する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0235"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック",
+      "term": "コメントの解決（PowerPoint）",
+      "summary": "対応済みのコメントを解決済みにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0236"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック",
+      "term": "比較（PowerPoint）",
+      "summary": "2つのバージョンのプレゼンテーションの違いを確認する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0237"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細",
+      "term": "文字のグラデーション塗り",
+      "summary": "文字の内部に段階的な色の変化を付ける書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0238"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細",
+      "term": "文字の面取り効果",
+      "summary": "文字に立体的な縁取りを付ける書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0239"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細",
+      "term": "文字の3-D回転",
+      "summary": "文字を立体的に回転させて見せる書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0240"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細",
+      "term": "WordArtのスタイルギャラリー",
+      "summary": "あらかじめ用意された装飾文字のデザイン一覧。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0241"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細",
+      "term": "テキストの変形（文字を曲線に沿わせる）",
+      "summary": "文字を波型や円形などの形に沿わせる書式効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0242"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "オーディオの再生オプション",
+      "summary": "自動再生・クリック時再生などの音声の再生方法設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0243"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "オーディオのトリミング",
+      "summary": "音声ファイルの不要な部分を切り取る編集機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0244"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "ビデオのトリミング",
+      "summary": "動画ファイルの不要な部分を切り取る編集機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0245"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "ビデオのブックマーク",
+      "summary": "動画内の特定の時点に印を付けジャンプできるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0246"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "ビデオのフェードイン・フェードアウト",
+      "summary": "動画の始まりと終わりを滑らかにする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0247"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "ビデオのポスターフレーム",
+      "summary": "再生前に表示される動画のサムネイル画像の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0248"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細",
+      "term": "オンラインビデオの挿入",
+      "summary": "YouTubeなど外部サービスの動画をスライドに埋め込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0249"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務（PowerPoint）",
+      "term": "プレゼンテーションパック（CD用配布）",
+      "summary": "必要なファイルをまとめてパッケージ化する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0250"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務（PowerPoint）",
+      "term": "リンクファイルの埋め込み",
+      "summary": "外部参照していた動画や音声をファイル内に埋め込む設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0251"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務（PowerPoint）",
+      "term": "配布前のファイルサイズ削減",
+      "summary": "画像の圧縮などでファイルを軽量化する実務。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0252"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務（PowerPoint）",
+      "term": "プレゼンテーションの読み取り専用配布",
+      "summary": "編集されないよう読み取り専用で配布する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0253"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識",
+      "term": "エレベーターピッチ形式のスライド構成",
+      "summary": "短時間で要点を伝えるための簡潔なスライド構成法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0254"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識",
+      "term": "ストーリーテリング型のスライド構成",
+      "summary": "起承転結を意識して聴衆を引き込む構成法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0255"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識",
+      "term": "1スライド30秒ルール",
+      "summary": "1枚あたりの説明時間を意識してスライド枚数を決める目安。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0256"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識",
+      "term": "タイトルスライドの要点",
+      "summary": "プレゼン全体の印象を決める最初のスライドの作り方。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0257"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識",
+      "term": "まとめスライドの重要性",
+      "summary": "最後に要点を再確認させるスライドの役割。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0258"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法",
+      "term": "アイコンを使った視覚化",
+      "summary": "文章よりも直感的に伝わるアイコンを活用する技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0259"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法",
+      "term": "ビフォーアフターの比較表現",
+      "summary": "変化を印象づけるための対比構成の技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0260"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法",
+      "term": "数字を大きく見せる表現",
+      "summary": "重要な数値を強調して視線を集める技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0261"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法",
+      "term": "タイムラインでの経過表現",
+      "summary": "出来事を時系列で分かりやすく示す表現技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0262"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法",
+      "term": "プロセス図での流れの表現",
+      "summary": "手順や工程を矢印でつないで示す表現技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0263"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用",
+      "term": "会社ロゴの全スライド配置",
+      "summary": "マスターにロゴを配置しすべてのスライドに反映させる方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0264"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用",
+      "term": "フッターへの機密区分表示",
+      "summary": "社外秘などの表示をマスターで一括設定する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0265"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用",
+      "term": "独自レイアウトの作成",
+      "summary": "既存のレイアウトを基に自社専用のレイアウトを作る方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0266"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用",
+      "term": "マスタースライドの保護",
+      "summary": "レイアウトが誤って変更されないようにする運用上の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0267"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術",
+      "term": "アイスブレイクの活用",
+      "summary": "本題前に聴衆の緊張を和らげる導入の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0268"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術",
+      "term": "質疑応答の時間配分",
+      "summary": "発表後の質疑応答にどれだけ時間を割くかの設計。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0269"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術",
+      "term": "リハーサルタイミングの記録確認",
+      "summary": "本番前に各スライドの所要時間を把握する準備。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0270"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術",
+      "term": "想定質問への準備スライド",
+      "summary": "本編には含めず質問が出た際だけ表示する補足スライド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0271"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術",
+      "term": "緊張時の話し方の工夫（間の取り方）",
+      "summary": "聴衆に伝わりやすくするための話す速度や間の調整。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0272"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫",
+      "term": "数値の桁区切り表示（スライド）",
+      "summary": "大きな数字を読みやすく桁区切りで表示する工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0273"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫",
+      "term": "単位の明示（万円・百万円など）",
+      "summary": "誤解を避けるため数値の単位を明記する工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0274"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫",
+      "term": "変化率の矢印表現",
+      "summary": "増加・減少を矢印の向きと色で直感的に示す工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0275"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫",
+      "term": "小数点以下の桁数統一",
+      "summary": "資料全体で小数点の桁数をそろえる体裁上の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0276"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの配布後利用",
+      "term": "配布資料のフォローアップ活用",
+      "summary": "発表後に資料を参照してもらうための工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0277"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの配布後利用",
+      "term": "アーカイブ用プレゼンテーションの整理",
+      "summary": "過去の発表資料を検索しやすく整理する実務。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0278"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの配布後利用",
+      "term": "社内ナレッジとしてのスライド共有",
+      "summary": "良い構成のスライドをテンプレートとして共有知にする実務。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0279"
+    },
+    {
+      "lang": "ppt",
+      "category": "リモート発表の実務",
+      "term": "画面共有でのプレゼンテーション",
+      "summary": "オンライン会議ツールでスライドを画面共有する発表形式。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0280"
+    },
+    {
+      "lang": "ppt",
+      "category": "リモート発表の実務",
+      "term": "発表者ビューのみ共有する設定",
+      "summary": "聴衆には見せたくない情報を隠しつつ発表する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0281"
+    },
+    {
+      "lang": "ppt",
+      "category": "リモート発表の実務",
+      "term": "リモート環境での音声・映像確認",
+      "summary": "発表前に音声と映像の映りを確認する準備作業。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0282"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細",
+      "term": "スライド内の表のスタイル変更",
+      "summary": "表全体の配色やデザインをまとめて変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0283"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細",
+      "term": "スライド内の表の行・列操作",
+      "summary": "表に行や列を追加・削除する基本操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0284"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細",
+      "term": "Excelデータの貼り付け(埋め込み/リンク)",
+      "summary": "Excelの表をそのまま編集可能な形で貼り付ける方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0285"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細",
+      "term": "グラフデータの編集(Excel起動)",
+      "summary": "スライド内のグラフの元データをExcelで編集する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0286"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細",
+      "term": "グラフの要素のアニメーション化",
+      "summary": "グラフの系列ごとに表示タイミングを分けるアニメーション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0287"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理",
+      "term": "社内標準テンプレートの配布",
+      "summary": "全社で統一したデザインのテンプレートを配布する運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0288"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理",
+      "term": "テンプレートのバージョン管理",
+      "summary": "更新されたテンプレートを周知し古い版の利用を防ぐ運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0289"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理",
+      "term": "スライドライブラリの構築",
+      "summary": "再利用可能なスライドを部門で共有する仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0290"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理",
+      "term": "ブランドガイドラインとの整合性確認",
+      "summary": "企業のデザインルールにスライドが準拠しているかの確認。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0291"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの校正記号・表記統一",
+      "term": "用語の表記統一（PowerPoint）",
+      "summary": "同じ意味の言葉の表記ゆれを防ぐルールの適用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0292"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの校正記号・表記統一",
+      "term": "数字と単位の表記ルール",
+      "summary": "半角・全角や単位の書き方を統一するルール。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0293"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの校正記号・表記統一",
+      "term": "句読点の使用ルール（スライド）",
+      "summary": "箇条書きでは句点を省略するなどのスライド特有の慣習。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0294"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用",
+      "term": "研修用スライドの構成",
+      "summary": "学習目標から演習、まとめまでの典型的な構成。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0295"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用",
+      "term": "反転授業向けスライドの作成",
+      "summary": "事前学習用に自習しやすい説明を加えたスライド作成。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0296"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用",
+      "term": "eラーニング用スライドのナレーション",
+      "summary": "受講者が自習できるよう音声解説を付ける活用法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0297"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "新しいスライドボタン",
+      "summary": "現在のスライドの後に新しいスライドを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0298"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "レイアウトボタン",
+      "summary": "選択したスライドのレイアウトを変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0299"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "リセットボタン（スライド）",
+      "summary": "プレースホルダーの位置・書式を初期状態に戻すボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0300"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "セクションボタン",
+      "summary": "スライドをグループに分けて管理するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0301"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "図形の塗りつぶしボタン",
+      "summary": "選択した図形の内部の色を変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0302"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "図形の枠線ボタン",
+      "summary": "選択した図形の輪郭の色・太さを変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0303"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "図形の効果ボタン",
+      "summary": "影や反射などの視覚効果を図形に追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0304"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "配置ボタン（ホームタブ）",
+      "summary": "複数の図形をページ内で整列させるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0305"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint ホームタブ）",
+      "term": "選択ボタン（PowerPoint）",
+      "summary": "複数のオブジェクトをまとめて選択するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0306"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "新しいフォトアルバムボタン",
+      "summary": "複数の画像からアルバム形式のスライドを作成するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0307"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "図形の挿入ボタン（PowerPoint）",
+      "summary": "基本図形を描画するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0308"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "SmartArtの挿入ボタン（PowerPoint）",
+      "summary": "図解表現のSmartArtを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0309"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "グラフの挿入ボタン（PowerPoint）",
+      "summary": "データを示すグラフを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0310"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "表の挿入ボタン（PowerPoint）",
+      "summary": "行数・列数を指定して表を追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0311"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "テキストボックスの挿入ボタン（PowerPoint）",
+      "summary": "自由な位置に文字を配置する枠を追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0312"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "ヘッダーとフッターの挿入ボタン（PowerPoint）",
+      "summary": "すべてのスライドに共通のフッター情報を追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0313"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "日付と時刻の挿入ボタン（PowerPoint）",
+      "summary": "現在の日付・時刻をスライドに挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0314"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "スライド番号の挿入ボタン",
+      "summary": "スライドに連番を表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0315"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "記号の挿入ボタン（PowerPoint）",
+      "summary": "特殊記号を挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0316"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "数式の挿入ボタン（PowerPoint）",
+      "summary": "数式エディターで数式を挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0317"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "ビデオの挿入ボタン",
+      "summary": "動画ファイルをスライドに追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0318"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "オーディオの挿入ボタン",
+      "summary": "音声ファイルをスライドに追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0319"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint 挿入タブ）",
+      "term": "画面録画の挿入ボタン",
+      "summary": "画面の操作を録画してスライドに追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0320"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "バリエーションボタン（デザインタブ）",
+      "summary": "選択したテーマの色違いパターンを選ぶボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0321"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "スライドのサイズボタン（デザインタブ）",
+      "summary": "4:3や16:9などの比率を選ぶボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0322"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "背景の書式設定ボタン",
+      "summary": "背景色や画像を設定する作業ウィンドウを開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0323"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "効果のオプションボタン（画面切り替え）",
+      "summary": "切り替え効果の方向やパターンを調整するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0324"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "画面切り替えの時間設定ボタン",
+      "summary": "切り替えにかかる時間を指定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0325"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "サウンドボタン（画面切り替え）",
+      "summary": "切り替え時の効果音を設定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0326"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "すべてに適用ボタン（画面切り替え）",
+      "summary": "設定を全スライドへ一括適用するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0327"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "アニメーションの追加ボタン",
+      "summary": "選択したオブジェクトにアニメーションを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0328"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "アニメーションウィンドウボタン",
+      "summary": "設定済みアニメーションの一覧と順序を管理するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0329"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "トリガーボタン（アニメーション）",
+      "summary": "特定の操作をきっかけにアニメーションを開始する設定ボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0330"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "アニメーションのコピー/貼り付けボタン",
+      "summary": "設定したアニメーションを別のオブジェクトに適用するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0331"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint デザイン・切り替え・アニメーション）",
+      "term": "並べ替えボタン（アニメーション順序）",
+      "summary": "アニメーションの実行順序を変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0332"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "最初からボタン（スライドショー）",
+      "summary": "最初のスライドからショーを開始するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0333"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "現在のスライドからボタン",
+      "summary": "表示中のスライドからショーを開始するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0334"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "目的別スライドショーボタン",
+      "summary": "一部のスライドだけで構成したショーを作成するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0335"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "スライドショーの設定ボタン",
+      "summary": "ループ再生などの詳細設定を開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0336"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "タイミングのリハーサルボタン",
+      "summary": "発表時間を計測しながら練習するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0337"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "スライドショーの記録ボタン",
+      "summary": "ナレーション付きでスライドショーを録画するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0338"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "字幕の設定ボタン",
+      "summary": "発表中にリアルタイム字幕を表示する設定ボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0339"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "発表者ツールを使用するボタン",
+      "summary": "発表者専用の画面を有効にする設定ボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0340"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "新しいコメントボタン（PowerPoint）",
+      "summary": "スライドにコメントを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0341"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名（PowerPoint スライドショー・校閲）",
+      "term": "アクセシビリティチェックボタン（PowerPoint）",
+      "summary": "読み上げ対応などの問題点を検出するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0342"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語2",
+      "term": "スライドペイン",
+      "summary": "画面中央に表示される、現在編集中のスライドを大きく表示する領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0343"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語2",
+      "term": "サムネイルペイン",
+      "summary": "画面左側にスライドの縮小画像を一覧表示する領域。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0344"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語2",
+      "term": "スライドレイアウト",
+      "summary": "タイトルや本文などのプレースホルダーの配置パターンを定義したテンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0345"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語2",
+      "term": "アウトラインビュー",
+      "summary": "各スライドのタイトルと本文テキストを階層的なテキストとして表示・編集するビュー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0346"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語2",
+      "term": "スライドソーター",
+      "summary": "すべてのスライドを縮小画像で一覧表示し、順序の入れ替えに使うビュー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0347"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "ホームタブ(PowerPoint)",
+      "summary": "スライドの追加、フォント、段落、図形描画など基本操作をまとめたタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0348"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "挿入タブ(PowerPoint)",
+      "summary": "表、画像、図形、グラフ、動画などをスライドに追加するコマンドをまとめたタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0349"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "描画タブ(PowerPoint)",
+      "summary": "ペンや蛍光ペンを使った手書き入力に関するコマンドをまとめたタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0350"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "デザインタブ(PowerPoint)",
+      "summary": "テーマ、配色、デザインアイデアなどスライド全体の見た目を整えるタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0351"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "画面切り替えタブ(PowerPoint)",
+      "summary": "スライド間の切り替え効果を設定するタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0352"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "アニメーションタブ(PowerPoint)",
+      "summary": "スライド内のオブジェクトに動きの効果を付けるタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0353"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "スライドショータブ(PowerPoint)",
+      "summary": "スライドショーの開始方法や発表の設定を行うタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0354"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "記録タブ(PowerPoint)",
+      "summary": "スライドに音声やカメラ映像を録画して記録するためのタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0355"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "校閲タブ(PowerPoint)",
+      "summary": "スペルチェック、コメント、比較などレビューに関するコマンドをまとめたタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0356"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンのタブとグループ3",
+      "term": "表示タブ(PowerPoint)",
+      "summary": "標準、スライドソーター、ノートなどの表示モードを切り替えるタブ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0357"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "新しいスライドの追加",
+      "summary": "現在のスライドの後に、選択したレイアウトで新規スライドを挿入する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0358"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "スライドの複製",
+      "summary": "選択したスライドと同じ内容のコピーを直後に作成する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0359"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "スライドの削除",
+      "summary": "不要なスライドをプレゼンテーションから取り除く操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0360"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "スライドの並べ替え",
+      "summary": "サムネイルペインやスライドソーターでドラッグしてスライドの順序を変更する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0361"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "セクションの追加",
+      "summary": "多数のスライドをグループ化し、見出しを付けて整理するための区切り機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0362"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "セクションの名前変更",
+      "summary": "追加したセクションに分かりやすい名前を付ける操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0363"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作2",
+      "term": "すべてのスライドをここから再開",
+      "summary": "指定したスライドからスライドショーの再生を開始する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0364"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "テキストボックスの挿入(PowerPoint)",
+      "summary": "プレースホルダー以外の自由な位置に文字を入力する枠を追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0365"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "図形の挿入(PowerPoint)",
+      "summary": "矢印、四角形、円などの基本図形をスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0366"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "図形の塗りつぶしの変更",
+      "summary": "選択した図形の内部の色やパターンを変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0367"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "図形の枠線の変更",
+      "summary": "選択した図形の輪郭線の色・太さ・種類を変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0368"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "文字の配置(図形内)",
+      "summary": "図形の中にあるテキストを上下左右に配置する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0369"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "文字列の自動調整(図形内)",
+      "summary": "図形内のテキスト量に応じて文字サイズを自動的に縮小する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0370"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "行間の調整(PowerPoint)",
+      "summary": "テキストボックス内の行と行の間隔を調整する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0371"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "箇条書きのレベル変更(PowerPoint)",
+      "summary": "Tabキーを使って箇条書きの階層を下げたり、Shift+Tabで上げたりする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0372"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形2",
+      "term": "図形の結合(PowerPoint)",
+      "summary": "複数の図形を組み合わせて新しい形状を作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0373"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "画像の挿入(このデバイス)",
+      "summary": "パソコン内に保存された画像ファイルをスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0374"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "画像のトリミング(PowerPoint)",
+      "summary": "挿入した画像の不要な部分を切り取って表示範囲を調整する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0375"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "図のスタイルギャラリー",
+      "summary": "枠線や影などが組み込まれた画像の装飾パターンを選択するギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0376"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "SmartArtの挿入(PowerPoint)",
+      "summary": "リストやプロセスなどの概念を視覚的な図として表現するグラフィックを挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0377"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "グラフの挿入(PowerPoint)",
+      "summary": "Excelと連動したデータを基に、棒グラフや円グラフなどをスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0378"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "表の挿入(PowerPoint)",
+      "summary": "行と列で構成されるデータ表をスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0379"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表2",
+      "term": "スクリーンショットの挿入",
+      "summary": "他のウィンドウの画面を撮影してそのままスライドに貼り付ける機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0380"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "アニメーションの開始タイミング(クリック時)",
+      "summary": "マウスをクリックした瞬間にアニメーションが開始する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0381"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "アニメーションの開始タイミング(直前の動作と同時)",
+      "summary": "前のアニメーションと同時に開始するよう設定するタイミング。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0382"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "アニメーションの開始タイミング(直前の動作の後)",
+      "summary": "前のアニメーションが終わった直後に自動的に開始するタイミング設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0383"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "アニメーションの軌道線",
+      "summary": "オブジェクトが移動する際の経路を自由に描いて指定するアニメーションの種類。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0384"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "アニメーションの再生順序の変更",
+      "summary": "アニメーションウィンドウ内で複数の効果の実行順序をドラッグで変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0385"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "画面切り替えの効果の種類",
+      "summary": "フェード、プッシュ、ワイプなどスライド間の切り替え時に適用できる視覚効果の選択肢。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0386"
+    },
+    {
+      "lang": "ppt",
+      "category": "アニメーションと切り替え2",
+      "term": "画面切り替えのタイミング(自動的に切り替え)",
+      "summary": "指定した時間が経過すると自動的に次のスライドへ切り替わる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0387"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー2",
+      "term": "スライドショーの開始(先頭から)",
+      "summary": "最初のスライドからプレゼンテーションの再生を開始する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0388"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー2",
+      "term": "スライドショーの開始(現在のスライドから)",
+      "summary": "編集中のスライドからプレゼンテーションの再生を開始する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0389"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー2",
+      "term": "発表者モードの切替",
+      "summary": "プロジェクターなど外部ディスプレイに接続時、発表者と聴衆で異なる画面を表示するモード。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0390"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー2",
+      "term": "ペンツール(スライドショー中)",
+      "summary": "発表中にスライド上へ手書きで線や図を描き込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0391"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー2",
+      "term": "レーザーポインターの機能",
+      "summary": "マウスカーソルを赤い点のレーザーポインターのように表示する発表支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0392"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有2",
+      "term": "ビデオの作成(PowerPoint)",
+      "summary": "プレゼンテーション全体をMP4などの動画ファイルとして書き出す機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0393"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有2",
+      "term": "CDパッケージ(配布資料パッケージ)",
+      "summary": "プレゼンテーションに必要なファイルをまとめ、他のPCでも再生できるように出力する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0394"
+    },
+    {
+      "lang": "ppt",
+      "category": "書き出しと共有2",
+      "term": "ハンドアウトの作成(Wordで配布資料作成)",
+      "summary": "PowerPointのスライド内容をWord文書として書き出し、配布資料を作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0395"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加2",
+      "term": "新しいスライド(Ctrl+M)",
+      "summary": "新しいスライドを追加するショートカットキー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0396"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加2",
+      "term": "スライドショーの開始(F5)",
+      "summary": "先頭からスライドショーを開始するファンクションキー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0397"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加2",
+      "term": "現在のスライドからスライドショー開始(Shift+F5)",
+      "summary": "編集中のスライドからスライドショーを開始するショートカット。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0398"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加2",
+      "term": "スライドショーの終了(Esc)",
+      "summary": "再生中のスライドショーを中断して編集画面に戻るキー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0399"
+    },
+    {
+      "lang": "ppt",
+      "category": "ショートカットキー追加2",
+      "term": "次のスライドへ(スペースキー)",
+      "summary": "スライドショー中にスペースキーを押して次のスライドへ進む操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0400"
+    }
+  ]
+}
