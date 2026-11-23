@@ -13626,6 +13626,456 @@
       "examples": [],
       "pages": [],
       "id": "word-1514"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "表のプロパティダイアログ",
+      "summary": "行の高さ、列の幅、セルの配置など表全体の細かい設定を行うダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1515"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "自動調整(文字列の幅に合わせる)",
+      "summary": "セル内の文字量に応じて列の幅を自動的に調整する表の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1516"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "自動調整(ウィンドウサイズに合わせる)",
+      "summary": "表の幅をページの幅いっぱいに自動調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1517"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "固定の列幅",
+      "summary": "文字量にかかわらず、指定した列幅を常に維持する表の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1518"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "見出し行の繰り返し",
+      "summary": "表が複数ページにわたる場合、各ページの先頭に見出し行を自動的に繰り返し表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1519"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "行がページをまたがるときに分割する",
+      "summary": "表の1行がページの境目にあるとき、その行をページ間で分割して表示するかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1520"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "セルの配置(文字の垂直方向)",
+      "summary": "セル内の文字を上揃え・中央揃え・下揃えのいずれかに配置する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1521"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "セルの余白(個別設定)",
+      "summary": "表全体の余白とは別に、特定のセルだけ内側の余白を調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1522"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "表のテキストの折り返し",
+      "summary": "表の周囲に文章を回り込ませるか、独立した行として配置するかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1523"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "表の文字列に変換",
+      "summary": "表のデータを、タブや段落記号で区切られた通常の文字列に変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1524"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "文字列を表に変換",
+      "summary": "タブやカンマで区切られたテキストを、自動的に表形式に変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1525"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "表の結合(隣接する表の統合)",
+      "summary": "隣接して配置された2つの表を1つの表として結合する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1526"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "セルの結合",
+      "summary": "隣接する複数のセルを1つの大きなセルにまとめる操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1527"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の詳細プロパティ設定",
+      "term": "セルの分割",
+      "summary": "1つのセルを、指定した行数・列数の複数のセルに分割する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1528"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "目次に表示する書式の指定(タブリーダー)",
+      "summary": "見出しとページ番号の間を点線や実線でつなぐ装飾の種類を指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1529"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "独自のスタイルを目次に反映",
+      "summary": "見出しスタイル以外の独自スタイルを、目次の対象として追加する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1530"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "索引のサブエントリ",
+      "summary": "メインの索引語の下に、さらに細分化した項目を追加する索引の階層機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1531"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "索引のAutoMark(用語ファイル)",
+      "summary": "あらかじめ用意した用語リストを使って、文書内の該当語を自動的に索引登録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1532"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "相互参照付き索引項目",
+      "summary": "「○○を参照」という形式で、別の索引語を指し示す索引項目の作り方。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1533"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "索引の書式(字下げ形式/連続形式)",
+      "summary": "索引項目を行ごとに分けて表示するか、横に並べて表示するかの書式選択。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1534"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "引用法令目次(Table of Authorities)",
+      "summary": "判例や法令などを種類別にまとめて一覧表示する、法律文書向けの目次機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1535"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの目次・索引の高度な設定",
+      "term": "カテゴリの指定(引用法令目次)",
+      "summary": "判例、法令、規則など、引用法令目次で分類するカテゴリを指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1536"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "元の書式を保持(貼り付けオプション)",
+      "summary": "コピー元の書式をそのまま保持して貼り付けるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1537"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "書式を結合(貼り付けオプション)",
+      "summary": "コピー元の書式の一部を貼り付け先の書式に合わせて統合するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1538"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "図として貼り付け(貼り付けオプション)",
+      "summary": "コピーした内容を編集できない画像として貼り付けるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1539"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "テキストのみ保持(貼り付けオプション)",
+      "summary": "書式をすべて取り除き、文字情報だけを貼り付けるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1540"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "貼り付け先の書式を使用(貼り付けオプション)",
+      "summary": "コピー元の書式を無視し、貼り付け先の既存の書式に合わせるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1541"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "形式を選択して貼り付け(ダイアログ)",
+      "summary": "HTML形式、書式なしテキストなど、貼り付ける形式を細かく選択できるダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1542"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "貼り付け時に既定の動作を設定",
+      "summary": "毎回オプションを選ばずに済むよう、貼り付け時の既定の挙動を事前設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1543"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの貼り付けオプションの詳細",
+      "term": "クリップボードの履歴表示",
+      "summary": "直前にコピーした複数の項目を一覧から選んで貼り付けられる履歴機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1544"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読みやすさ統計と文章分析",
+      "term": "読みやすさの統計(文字数など)",
+      "summary": "文書の単語数・文字数・段落数・行数をまとめて表示する統計情報。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1545"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読みやすさ統計と文章分析",
+      "term": "Flesch-Kincaidの読みやすさ(易しさ)",
+      "summary": "文章がどれだけ読みやすいかを0〜100の数値で示す英語向けの指標。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1546"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読みやすさ統計と文章分析",
+      "term": "Flesch-Kincaidグレードレベル",
+      "summary": "その文章を理解するために必要な学年の目安を示す英語向けの指標。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1547"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読みやすさ統計と文章分析",
+      "term": "受動態の使用割合(読みやすさ統計)",
+      "summary": "文章中で受動態がどの程度使われているかを示す割合。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1548"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの読みやすさ統計と文章分析",
+      "term": "1文あたりの平均単語数(読みやすさ統計)",
+      "summary": "文章の複雑さを測る指標の1つとなる、1文に含まれる単語数の平均。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1549"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "蛍光ペンツール(描画タブ)",
+      "summary": "手書きの線で文書上に目立つマーカーのような印をつけるツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1550"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "消しゴムツール(描画タブ)",
+      "summary": "手書きで入力したインクの線を消去するツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1551"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "インクを図形に変換",
+      "summary": "手書きで描いた線を、きれいな直線や四角形などの図形に自動変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1552"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "インクを数式に変換",
+      "summary": "手書きで書いた数式を、通常の数式表記に自動変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1553"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "投げ縄選択(描画タブ)",
+      "summary": "自由な形で囲むようにドラッグして、インクの一部を選択するツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1554"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "定規ツール(描画タブ)",
+      "summary": "画面上に表示した直線のガイドに沿って、まっすぐな線を描けるようにするツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1555"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのペン・インク機能の詳細",
+      "term": "ペンの色とスタイルの変更(描画タブ)",
+      "summary": "手書き用のペンの色、太さ、透明度を変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1556"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷バーコード・QRコード機能",
+      "term": "QRコードの挿入(フィールド)",
+      "summary": "URLなどの情報をもとにQRコードを生成し、文書に挿入するフィールド機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1557"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷バーコード・QRコード機能",
+      "term": "バーコードの挿入(フィールド)",
+      "summary": "数字や文字列をもとに、JANコードなどのバーコードを生成するフィールド機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1558"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷バーコード・QRコード機能",
+      "term": "郵便バーコードフィールド(差し込み印刷)",
+      "summary": "郵便番号をもとに、郵便区分用のバーコードを自動生成する差し込み印刷用フィールド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1559"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの共同編集・リアルタイム機能の詳細",
+      "term": "共同作業者の表示(アバター)",
+      "summary": "文書を同時に開いている他のユーザーを、アイコンで画面上に表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1560"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの共同編集・リアルタイム機能の詳細",
+      "term": "他のユーザーの編集箇所の表示",
+      "summary": "共同編集中に、他の人が今どこを編集しているかをリアルタイムで示す印。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1561"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの共同編集・リアルタイム機能の詳細",
+      "term": "自動保存の競合解決",
+      "summary": "複数人が同時に編集した際に生じる保存の競合を自動的に解決する仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1562"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの共同編集・リアルタイム機能の詳細",
+      "term": "共有時のアクセス許可(編集可能/表示のみ)",
+      "summary": "共有リンクを発行する際、相手に編集を許可するか閲覧のみにするかを選ぶ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1563"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの共同編集・リアルタイム機能の詳細",
+      "term": "リンクの有効期限の設定(共有)",
+      "summary": "発行した共有リンクに有効期限を設け、一定期間後にアクセスできなくする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1564"
     }
   ]
 }
