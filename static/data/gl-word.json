@@ -12366,6 +12366,393 @@
       "examples": [],
       "pages": [],
       "id": "word-1374"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "分数(数式構造)",
+      "summary": "分子と分母を上下に並べた分数を入力する数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1375"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "べき乗と添字(数式構造)",
+      "summary": "指数や下付き文字を伴う数式を入力する構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1376"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "根(数式構造)",
+      "summary": "平方根やn乗根を表す記号を含む数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1377"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "積分(数式構造)",
+      "summary": "定積分・不定積分などの積分記号を含む数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1378"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "大きな演算子(数式構造)",
+      "summary": "総和(Σ)や積(Π)など、複数項にわたる演算を表す記号の構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1379"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "かっこ(数式構造)",
+      "summary": "丸かっこや角かっこなど、サイズが自動調整されるかっこの構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1380"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "関数(数式構造)",
+      "summary": "sinやlogなど、よく使われる関数名をあらかじめ含んだ数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1381"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "行列(数式構造)",
+      "summary": "数値や文字を格子状に並べた行列を入力する数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1382"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "極限と対数(数式構造)",
+      "summary": "極限(lim)や対数を表す数式構造テンプレート。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1383"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "演算子(数式記号)",
+      "summary": "加減乗除や等号・不等号など、基本的な演算記号を挿入するギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1384"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "ギリシャ文字(数式記号)",
+      "summary": "α、β、πなど、数式で使用するギリシャ文字を挿入するギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1385"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "矢印(数式記号)",
+      "summary": "ベクトルや対応関係を示す矢印記号を挿入するギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1386"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "線形形式(数式オプション)",
+      "summary": "数式をテキストの1行で表現する入力方式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1387"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの数式ツールの詳細構造",
+      "term": "プロフェッショナル形式(数式オプション)",
+      "summary": "分数や指数を2次元的に表示する、通常の見た目の数式表示形式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1388"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "Excelワークシートからのデータ取得(差し込み印刷)",
+      "summary": "Excelの表形式データを宛先リストとして差し込み印刷に利用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1389"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "Outlook連絡先の利用(差し込み印刷)",
+      "summary": "Outlookに登録された連絡先を宛先データとして差し込み印刷に使用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1390"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "フィルター(差し込み印刷の宛先)",
+      "summary": "条件に合致するデータだけを宛先リストから抽出する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1391"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "並べ替え(差し込み印刷の宛先)",
+      "summary": "宛先リストを氏名や郵便番号などの項目順に並べ替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1392"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "重複の除外(差し込み印刷)",
+      "summary": "同一人物など重複するデータを宛先リストから除外する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1393"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "フィールドの照合(差し込み印刷)",
+      "summary": "宛先データの列名とWordの差し込みフィールドの対応関係を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1394"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "新しいアドレスリストの入力(差し込み印刷)",
+      "summary": "Excelなどを使わず、Word上で直接新規の宛先データを作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1395"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷のデータ連携詳細",
+      "term": "データソースの種類(差し込み印刷)",
+      "summary": "Excel、Access、CSV、Outlookなど差し込み印刷で使用できるデータ元の種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1396"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "文章校正のスタイル(文体)",
+      "summary": "「くだけた文」「標準」など、文法チェックの厳しさの基準となる文体の設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1397"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "再変換(IME機能)",
+      "summary": "一度確定した変換結果を、再度別の候補に変換し直す入力機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1398"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "学習機能のリセット(IME)",
+      "summary": "IMEが学習した変換候補の履歴を消去する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1399"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "単漢字変換",
+      "summary": "ひらがな入力から1文字ずつ漢字に変換する基本的な日本語入力操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1400"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "文字コード表からの入力",
+      "summary": "Unicodeなどの文字コードを指定して特殊な文字を入力する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1401"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルミス・入力規則の設定詳細",
+      "term": "半角/全角の自動判定(数字)",
+      "summary": "入力した数字を自動的に半角に統一する入力支援機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1402"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "見出しの前後の間隔の統一",
+      "summary": "文書全体で見出しスタイルの前後の空白を一定に保つレイアウト上の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1403"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "本文の行送りの基準統一",
+      "summary": "文書全体で読みやすい行の高さ(行送り)をスタイルとして統一する工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1404"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "余白の統一(社内規定)",
+      "summary": "社内の文書規定に従い、上下左右の余白を一定の数値に統一する運用。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1405"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "図表と本文の間隔調整",
+      "summary": "画像や表の前後に適度な空白を設け、本文との視覚的な区切りを作る工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1406"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "改ページ位置の調整(見出し前)",
+      "summary": "見出しの直前で意図せずページが分かれないよう調整するレイアウト上の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1407"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページレイアウトの実務応用2",
+      "term": "用紙サイズとマージンの企業標準",
+      "summary": "社内文書で使用する用紙サイズと余白の組み合わせを標準化した運用ルール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1408"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書の自動保存とバージョン履歴2",
+      "term": "自動保存(クラウド)のオン/オフ",
+      "summary": "OneDriveやSharePoint上のファイルで、変更を自動的に保存し続ける機能の切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1409"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書の自動保存とバージョン履歴2",
+      "term": "バージョン履歴の表示",
+      "summary": "過去に保存されたバージョンの一覧を表示し、内容を確認できる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1410"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書の自動保存とバージョン履歴2",
+      "term": "以前のバージョンの復元",
+      "summary": "バージョン履歴から過去の状態を選び、現在の文書として復元する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1411"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書の自動保存とバージョン履歴2",
+      "term": "名前の変更履歴の保持",
+      "summary": "ファイル名を変更しても、クラウド上の過去バージョンへのリンクが保たれる仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1412"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書の自動保存とバージョン履歴2",
+      "term": "自動保存と上書き保存の違い",
+      "summary": "変更を常時保存する自動保存機能と、手動で保存ポイントを作る上書き保存の役割の違い。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1413"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・コメントの表示形式2",
+      "term": "脚注の文字サイズの既定値",
+      "summary": "脚注テキストに自動的に適用される、本文より小さいフォントサイズの初期設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1414"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・コメントの表示形式2",
+      "term": "脚注の列数(複数列文書)",
+      "summary": "段組みされた文書内で、脚注欄を1列または段組みと同じ列数にする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1415"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・コメントの表示形式2",
+      "term": "コメントの表示サイズ",
+      "summary": "画面右側に表示されるコメント欄の文字サイズを調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1416"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・コメントの表示形式2",
+      "term": "コメントの吹き出し表示/一覧表示の切り替え",
+      "summary": "コメントを本文の横に吹き出しで表示するか、専用ウィンドウで一覧表示するかの切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1417"
     }
   ]
 }
