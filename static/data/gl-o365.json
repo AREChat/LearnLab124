@@ -16254,6 +16254,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1806"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Authenticatorアプリの導入時の検討事項",
+      "summary": "Microsoft Authenticatorアプリを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1807"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードレス認証の導入時の検討事項",
+      "summary": "パスワードレス認証を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1808"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "デバイス管理(Intune)の導入時の検討事項",
+      "summary": "デバイス管理(Intune)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1809"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "モバイルデバイス管理(MDM)の導入時の検討事項",
+      "summary": "モバイルデバイス管理(MDM)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1810"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アプリ保護ポリシーの導入時の検討事項",
+      "summary": "アプリ保護ポリシーを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1811"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Windows Autopilotの導入時の検討事項",
+      "summary": "Windows Autopilotを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1812"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Endpointの導入時の検討事項",
+      "summary": "Microsoft Defender for Endpointを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1813"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Office 365の導入時の検討事項",
+      "summary": "Microsoft Defender for Office 365を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1814"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Cloud Appsの導入時の検討事項",
+      "summary": "Microsoft Defender for Cloud Appsを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1815"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティスコアの導入時の検討事項",
+      "summary": "セキュリティスコアを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1816"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コンプライアンスセンターの導入時の検討事項",
+      "summary": "コンプライアンスセンターを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1817"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "情報保護(ラベル付け)の導入時の検討事項",
+      "summary": "情報保護(ラベル付け)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1818"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ損失防止ポリシーの導入時の検討事項",
+      "summary": "データ損失防止ポリシーを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1819"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ラベルの導入時の検討事項",
+      "summary": "保持ラベルを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1820"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "保持ポリシーの適用の導入時の検討事項",
+      "summary": "保持ポリシーの適用を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1821"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "電子情報開示(eDiscovery)の導入時の検討事項",
+      "summary": "電子情報開示(eDiscovery)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1822"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "法的ホールドの導入時の検討事項",
+      "summary": "法的ホールドを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1823"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの検索の導入時の検討事項",
+      "summary": "監査ログの検索を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1824"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "内部リスク管理の導入時の検討事項",
+      "summary": "内部リスク管理を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1825"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コミュニケーションコンプライアンスの導入時の検討事項",
+      "summary": "コミュニケーションコンプライアンスを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1826"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointサイトコレクションの導入時の検討事項",
+      "summary": "SharePointサイトコレクションを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1827"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointチームサイトの導入時の検討事項",
+      "summary": "SharePointチームサイトを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1828"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointコミュニケーションサイトの導入時の検討事項",
+      "summary": "SharePointコミュニケーションサイトを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1829"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointリストの導入時の検討事項",
+      "summary": "SharePointリストを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1830"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "SharePointライブラリの権限設定の導入時の検討事項",
+      "summary": "SharePointライブラリの権限設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1831"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDrive for Businessの同期設定の導入時の検討事項",
+      "summary": "OneDrive for Businessの同期設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1832"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの既知のフォルダー移動の導入時の検討事項",
+      "summary": "OneDriveの既知のフォルダー移動を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1833"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveの共有設定の導入時の検討事項",
+      "summary": "OneDriveの共有設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1834"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneDriveのリサイクルビンの導入時の検討事項",
+      "summary": "OneDriveのリサイクルビンを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1835"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部共有の設定の導入時の検討事項",
+      "summary": "外部共有の設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1836"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチームの作成の導入時の検討事項",
+      "summary": "Teamsチームの作成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1837"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsチャネルの種類の導入時の検討事項",
+      "summary": "Teamsチャネルの種類を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1838"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "プライベートチャネルの導入時の検討事項",
+      "summary": "プライベートチャネルを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1839"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有チャネルの導入時の検討事項",
+      "summary": "共有チャネルを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1840"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の設定の導入時の検討事項",
+      "summary": "Teams会議の設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1841"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議のロビー機能の導入時の検討事項",
+      "summary": "Teams会議のロビー機能を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1842"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の録画の導入時の検討事項",
+      "summary": "Teams会議の録画を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1843"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams会議の文字起こしの導入時の検討事項",
+      "summary": "Teams会議の文字起こしを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1844"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのライブイベントの導入時の検討事項",
+      "summary": "Teamsのライブイベントを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1845"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsウェビナーの導入時の検討事項",
+      "summary": "Teamsウェビナーを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1846"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams電話(Phone System)の導入時の検討事項",
+      "summary": "Teams電話(Phone System)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1847"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teams管理センターの導入時の検討事項",
+      "summary": "Teams管理センターを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1848"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの管理の導入時の検討事項",
+      "summary": "Teamsアプリの管理を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1849"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsポリシーパッケージの導入時の検討事項",
+      "summary": "Teamsポリシーパッケージを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1850"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsのバックグラウンド効果の導入時の検討事項",
+      "summary": "Teamsのバックグラウンド効果を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1851"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのルール設定の導入時の検討事項",
+      "summary": "Outlookのルール設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1852"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの予定表共有の導入時の検討事項",
+      "summary": "Outlookの予定表共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1853"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの会議室リソースの導入時の検討事項",
+      "summary": "Outlookの会議室リソースを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1854"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの連絡先グループの導入時の検討事項",
+      "summary": "Outlookの連絡先グループを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1855"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フォーカス収件箱の導入時の検討事項",
+      "summary": "フォーカス収件箱を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1856"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのクイック操作の導入時の検討事項",
+      "summary": "Outlookのクイック操作を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1857"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookの遅延送信設定の導入時の検討事項",
+      "summary": "Outlookの遅延送信設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1858"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookのカテゴリ分けの導入時の検討事項",
+      "summary": "Outlookのカテゴリ分けを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1859"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Outlookモバイルアプリの導入時の検討事項",
+      "summary": "Outlookモバイルアプリを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1860"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "予定表の委任設定の導入時の検討事項",
+      "summary": "予定表の委任設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1861"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットの導入時の検討事項",
+      "summary": "Plannerのバケットを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1862"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当ての導入時の検討事項",
+      "summary": "Plannerのタスク割り当てを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1863"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有の導入時の検討事項",
+      "summary": "To Doのタスクリスト共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1864"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成の導入時の検討事項",
+      "summary": "Microsoft Listsの作成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1865"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートの導入時の検討事項",
+      "summary": "Microsoft Listsのテンプレートを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1866"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成の導入時の検討事項",
+      "summary": "Power Automateのフロー作成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1867"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローの導入時の検討事項",
+      "summary": "Power Automateの承認フローを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1868"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタの導入時の検討事項",
+      "summary": "Power Automateのコネクタを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1869"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスの導入時の検討事項",
+      "summary": "Power Appsのキャンバスアプスを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1870"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリの導入時の検討事項",
+      "summary": "Power Appsのモデル駆動型アプリを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1871"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成の導入時の検討事項",
+      "summary": "Power BIのダッシュボード作成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1872"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有の導入時の検討事項",
+      "summary": "Power BIのレポート共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1873"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新の導入時の検討事項",
+      "summary": "Power BIデータセットの更新を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1874"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsの導入時の検討事項",
+      "summary": "Power Virtual Agentsを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1875"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターの導入時の検討事項",
+      "summary": "Power Platform管理センターを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1876"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能の導入時の検討事項",
+      "summary": "Microsoft Forms クイズ機能を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1877"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定の導入時の検討事項",
+      "summary": "Formsの分岐設定を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1878"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力の導入時の検討事項",
+      "summary": "Formsの回答のExcel出力を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1879"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートの導入時の検討事項",
+      "summary": "Microsoft Whiteboardのテンプレートを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1880"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集の導入時の検討事項",
+      "summary": "Whiteboardの共同編集を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1881"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースの導入時の検討事項",
+      "summary": "Microsoft Loopのワークスペースを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1882"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有の導入時の検討事項",
+      "summary": "Loopコンポーネントの共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1883"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有の導入時の検討事項",
+      "summary": "OneNoteのノートブック共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1884"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集の導入時の検討事項",
+      "summary": "OneNoteの共同編集を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1885"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能の導入時の検討事項",
+      "summary": "OneNoteのタグ機能を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1886"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有の導入時の検討事項",
+      "summary": "Microsoft Streamの動画共有を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1887"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしの導入時の検討事項",
+      "summary": "Streamの動画の文字起こしを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1888"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集の導入時の検討事項",
+      "summary": "Clipchampの動画編集を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1889"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成の導入時の検討事項",
+      "summary": "Microsoft Designerでの画像生成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1890"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理の導入時の検討事項",
+      "summary": "Microsoft Bookingsの予約管理を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1891"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスの導入時の検討事項",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1892"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析の導入時の検討事項",
+      "summary": "Viva Insightsの分析を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1893"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツの導入時の検討事項",
+      "summary": "Viva Learningの学習コンテンツを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1894"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティの導入時の検討事項",
+      "summary": "Viva Engageのコミュニティを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1895"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理の導入時の検討事項",
+      "summary": "Viva Goalsの目標管理を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1896"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードの導入時の検討事項",
+      "summary": "Microsoft 365管理センターのダッシュボードを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1897"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成の導入時の検討事項",
+      "summary": "ユーザーの一括作成を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1898"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当ての導入時の検討事項",
+      "summary": "ライセンスのグループベース割り当てを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1899"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認の導入時の検討事項",
+      "summary": "サービス状態の確認を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1900"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知の導入時の検討事項",
+      "summary": "メッセージセンターの通知を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1901"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの導入時の検討事項",
+      "summary": "Microsoft 365のロードマップを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1902"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての導入時の検討事項",
+      "summary": "管理者ロールの割り当てを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1903"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の導入時の検討事項",
+      "summary": "管理単位(Administrative Units)を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1904"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの導入時の検討事項",
+      "summary": "Microsoft Entra IDの条件付きアクセスを社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1905"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の導入時の検討事項",
+      "summary": "グループベースのライセンス管理を社内に導入する際に検討すべき事項。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1906"
     }
   ]
 }
