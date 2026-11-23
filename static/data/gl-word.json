@@ -13248,6 +13248,384 @@
       "examples": [],
       "pages": [],
       "id": "word-1472"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "ルーラーの表示/非表示(表示タブ)",
+      "summary": "上部と左側に表示される、インデントや余白の目安となる目盛りの表示切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1473"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "グリッド線の表示/非表示(表示タブ)",
+      "summary": "オブジェクトの位置揃えに使う方眼状の補助線の表示切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1474"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "ナビゲーションウィンドウの表示/非表示(表示タブ)",
+      "summary": "見出し一覧や検索結果を表示する左側のパネルの表示切り替え。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1475"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "ズームスライダー(表示タブ)",
+      "summary": "画面右下にある、表示倍率を直感的に変更できるスライダー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1476"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "100%ボタン(ズーム)",
+      "summary": "表示倍率を基準の100%に一発で戻すボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1477"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "1ページボタン(ズーム)",
+      "summary": "ページ全体が画面に収まるように表示倍率を自動調整するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1478"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "複数ページボタン(ズーム)",
+      "summary": "複数のページを同時に画面内へ縮小表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1479"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "ページ幅に合わせるボタン(ズーム)",
+      "summary": "用紙の横幅が画面幅にちょうど収まるように表示倍率を調整するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1480"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表示タブ全般の補足コマンド",
+      "term": "マクロの表示(表示タブ)",
+      "summary": "記録済みのマクロの一覧を表示し、実行や編集を行うダイアログを開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1481"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "封筒の印刷(差し込み印刷以外)",
+      "summary": "宛先を1件だけ指定して、封筒に直接印刷する単発の機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1482"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "宛先住所の自動検出(封筒)",
+      "summary": "文書内の住所らしきテキストを自動的に検出し、封筒の宛先欄に転記する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1483"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "差出人住所の設定(封筒)",
+      "summary": "封筒の左上などに印刷する差出人情報を事前に登録しておく設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1484"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "ラベルのメーカーと製品番号",
+      "summary": "使用する用紙に対応したラベルの規格を、メーカー名と製品番号から選択する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1485"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "ラベル全体に同じ内容を印刷",
+      "summary": "1枚のラベル用紙に並んだすべての枠へ、同一の文字列を印刷する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1486"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの封筒とラベルの詳細機能",
+      "term": "レーザー印刷用またはインクジェット用のラベル",
+      "summary": "使用するプリンターの種類に対応したラベル用紙のトレイ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1487"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベルと見出しの実務応用2",
+      "term": "見出しの表示レベルの絞り込み(アウトライン)",
+      "summary": "アウトライン表示で、見出し1までだけを表示するなど、表示する階層を限定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1488"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベルと見出しの実務応用2",
+      "term": "サブドキュメントの挿入(マスター文書)",
+      "summary": "マスター文書の中に、別の文書ファイルをサブ文書として組み込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1489"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベルと見出しの実務応用2",
+      "term": "サブドキュメントの結合(マスター文書)",
+      "summary": "複数に分かれたサブドキュメントを1つにまとめる操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1490"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベルと見出しの実務応用2",
+      "term": "マスター文書の展開/折りたたみ",
+      "summary": "マスター文書内のサブドキュメントの内容を表示したり隠したりする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1491"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアウトラインレベルと見出しの実務応用2",
+      "term": "見出しスタイルを使わない構造化(ブックマーク活用)",
+      "summary": "見出しスタイルの代わりにブックマークを使って文書内の場所を管理する手法。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1492"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "PDF/A形式での保存",
+      "summary": "長期保存に適した、アーカイブ用の標準規格に準拠したPDF形式で保存する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1493"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "PDFのしおり設定(見出しの反映)",
+      "summary": "PDFに書き出す際、見出しをしおり(ブックマーク)として自動的に付与する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1494"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "最小サイズ(発行後のサイズを最小限にする)",
+      "summary": "画質をある程度犠牲にしてでも、PDFのファイルサイズを小さくする出力オプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1495"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "PDFへの変更不可の設定",
+      "summary": "PDFに出力した文書を編集できないよう制限する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1496"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "印刷の色設定(グレースケール)",
+      "summary": "印刷時にすべての色をグレースケールに変換して出力する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1497"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷・PDF出力の運用実務2",
+      "term": "下書き印刷(印刷品質の低減)",
+      "summary": "インクやトナーを節約するため、印刷品質を落として高速に印刷するモード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1498"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "表内の数式の挿入",
+      "summary": "表のセル内で合計や平均などの簡単な計算を行うWordの数式機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1499"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "SUM関数(Wordの表)",
+      "summary": "表内の指定した範囲の数値を合計するWordの数式関数。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1500"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "AVERAGE関数(Wordの表)",
+      "summary": "表内の指定した範囲の数値の平均を求めるWordの数式関数。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1501"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "セル参照(Wordの表)",
+      "summary": "A1やB2のように、列をアルファベット、行を数字で表す表内のセルの指し示し方。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1502"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "フィールドの更新(表の数式)",
+      "summary": "表内に入力した数値を変更した後、数式フィールドの計算結果を更新する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1503"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの表の計算機能(数式)",
+      "term": "数値書式の指定(表の数式)",
+      "summary": "計算結果に桁区切りや小数点の表示形式を指定するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1504"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルセットとテンプレートデザイン2",
+      "term": "組み込みのスタイルセット一覧",
+      "summary": "既定・インフォーマル・モダンなど、Wordに用意された見出しデザインの組み合わせ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1505"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルセットとテンプレートデザイン2",
+      "term": "Word2003互換のスタイル",
+      "summary": "旧バージョンのWordで作成した文書との見た目の整合性を保つためのスタイル設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1506"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルセットとテンプレートデザイン2",
+      "term": "テンプレートの保存場所(個人用テンプレート)",
+      "summary": "自作したテンプレートファイルが標準で保存されるフォルダーの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1507"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルセットとテンプレートデザイン2",
+      "term": "Officeテーマ(既定のテーマ)",
+      "summary": "特別な指定がない場合に適用される、Word共通の標準デザインテーマ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1508"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルセットとテンプレートデザイン2",
+      "term": "テンプレートに基づく新規文書の作成",
+      "summary": "テンプレートファイルを開くと、そのコピーとして新しい文書が作成される仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1509"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書内ナビゲーションとブックマーク2",
+      "term": "ブックマークの挿入",
+      "summary": "文書内の特定の位置に名前を付けて、後から直接ジャンプできるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1510"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書内ナビゲーションとブックマーク2",
+      "term": "ブックマークの表示(かぎかっこ表示)",
+      "summary": "文書内に設定されたブックマークの位置を、画面上でかぎかっこのような記号で表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1511"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書内ナビゲーションとブックマーク2",
+      "term": "ブックマークへのハイパーリンク",
+      "summary": "ブックマークを参照先として指定し、クリックでその位置へ移動するリンクを作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1512"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書内ナビゲーションとブックマーク2",
+      "term": "ブックマークの削除",
+      "summary": "不要になったブックマークを一覧から選んで削除する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1513"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書内ナビゲーションとブックマーク2",
+      "term": "隠しブックマーク",
+      "summary": "目次や相互参照などWordが内部的に自動生成する、通常は一覧に表示されないブックマーク。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1514"
     }
   ]
 }
