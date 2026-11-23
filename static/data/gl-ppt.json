@@ -3600,6 +3600,789 @@
       "examples": [],
       "pages": [],
       "id": "ppt-0400"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "レイアウトの挿入(スライドマスター)",
+      "summary": "スライドマスター表示で新しいレイアウトパターンを追加する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0401"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "レイアウトの名前変更",
+      "summary": "追加したスライドレイアウトに独自の名前を付ける操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0402"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "プレースホルダーの挿入(スライドマスター)",
+      "summary": "レイアウトに新しい種類のプレースホルダー(テキスト、画像など)を追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0403"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "タイトルの非表示(スライドマスター)",
+      "summary": "特定のレイアウトでタイトルプレースホルダーを表示しないよう設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0404"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "フッターの非表示(スライドマスター)",
+      "summary": "特定のレイアウトでフッタープレースホルダーを表示しないよう設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0405"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの詳細2",
+      "term": "マスターの保存(スライドマスター)",
+      "summary": "複数のスライドマスターを1つのファイル内に保持し、それぞれ独立したデザインを使う機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0406"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用2",
+      "term": "全社共通テンプレートの作成",
+      "summary": "ロゴや配色を統一したスライドマスターを組織全体で共有し、デザインの一貫性を保つ実務手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0407"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用2",
+      "term": "部門別レイアウトの用意",
+      "summary": "部門ごとに異なる用途のレイアウトをスライドマスター内にあらかじめ複数用意しておく手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0408"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "ヘッダーとフッターボタン(挿入タブ)",
+      "summary": "日付、スライド番号、フッターテキストの表示設定を行うダイアログを開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0409"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "記号と特殊文字ボタン(PowerPoint)",
+      "summary": "キーボードにない特殊な記号や文字をスライドに挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0410"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "日付と時刻ボタン(挿入タブ)",
+      "summary": "現在の日付や時刻をフィールドとしてスライドに挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0411"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "オブジェクトボタン(挿入タブ)",
+      "summary": "Excelシートなど他のアプリケーションのデータをオブジェクトとして埋め込むボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0412"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "アクションボタン(挿入タブ)",
+      "summary": "クリックすると別のスライドへ移動したり音を再生したりするナビゲーション用の図形。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0413"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)2",
+      "term": "ズームボタン(挿入タブ)",
+      "summary": "複数スライドやセクションへのサムネイルリンクを作成し、発表中に自由な順序で移動できるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0414"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)2",
+      "term": "新しいスライドボタン(ホームタブ)",
+      "summary": "レイアウトの一覧から選んで新規スライドを追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0415"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)2",
+      "term": "リセットボタン(ホームタブ)",
+      "summary": "スライドのレイアウトや書式を既定のデザインに戻すボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0416"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)2",
+      "term": "セクションボタン(ホームタブ)",
+      "summary": "スライドをグループ化するセクションを追加・管理するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0417"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)2",
+      "term": "配置ボタン(ホームタブ)",
+      "summary": "選択した図形やオブジェクトの位置を揃えたり整列したりするボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0418"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)2",
+      "term": "選択ボタン(ホームタブ)",
+      "summary": "スライド内のすべてのオブジェクトを選択したり、オブジェクトの選択ウィンドウを開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0419"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)2",
+      "term": "デザイナーボタン(デザインタブ)",
+      "summary": "入力内容に基づいて複数のデザイン候補を自動提案するデザインアイデア機能のボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0420"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)2",
+      "term": "バリエーションボタン(デザインタブ)",
+      "summary": "選択中のテーマの配色やフォントのバリエーションを選べるギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0421"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)2",
+      "term": "スライドのサイズボタン(デザインタブ)",
+      "summary": "スライドの縦横比(16:9、4:3など)を変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0422"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)2",
+      "term": "効果のオプションボタン(切り替えタブ)",
+      "summary": "設定した画面切り替え効果の詳細(方向など)を調整するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0423"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)2",
+      "term": "プレビューボタン(アニメーションタブ)",
+      "summary": "設定したアニメーションの動きをその場で再生して確認するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0424"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint スライドショー・校閲)2",
+      "term": "タイミングのリハーサルボタン(スライドショータブ)",
+      "summary": "発表を実際に練習しながら各スライドの表示時間を記録する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0425"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint スライドショー・校閲)2",
+      "term": "モニターの設定ボタン(スライドショータブ)",
+      "summary": "発表者ビューを表示するモニターを指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0426"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint スライドショー・校閲)2",
+      "term": "スライドショーの設定ボタン(スライドショータブ)",
+      "summary": "ループ再生やペンの色など、スライドショー全体の挙動を細かく設定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0427"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint スライドショー・校閲)2",
+      "term": "比較ボタン(校閲タブ)",
+      "summary": "2つのプレゼンテーションファイルの差分を比較して表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0428"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細(PowerPoint)2",
+      "term": "SmartArtのレイアウト変更(PowerPoint)",
+      "summary": "既存のSmartArtを別の図表レイアウトに変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0429"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細(PowerPoint)2",
+      "term": "SmartArtの色の変更(PowerPoint)",
+      "summary": "SmartArt全体の配色パターンを選択肢から変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0430"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細(PowerPoint)2",
+      "term": "図形から変換(PowerPoint)",
+      "summary": "既存の図形やテキストをSmartArtグラフィックに変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0431"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細(PowerPoint)2",
+      "term": "図形の調整ハンドル",
+      "summary": "図形の形状を部分的に変形させるための黄色いハンドル。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0432"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形・SmartArtの詳細(PowerPoint)2",
+      "term": "図形の回転ハンドル",
+      "summary": "図形を選択した際に表示される、ドラッグして回転させるための矢印ハンドル。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0433"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細2",
+      "term": "行頭文字の変更(PowerPoint)",
+      "summary": "箇条書きの記号を別の記号や画像に変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0434"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細2",
+      "term": "段落番号の書式(PowerPoint)",
+      "summary": "箇条書きを連番形式(1.、2.など)に変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0435"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細2",
+      "term": "ワードアートの挿入(PowerPoint)",
+      "summary": "装飾効果が組み込まれた見出し用テキストをスライドに挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0436"
+    },
+    {
+      "lang": "ppt",
+      "category": "テキスト・箇条書きの詳細2",
+      "term": "テキストの縦書き(PowerPoint)",
+      "summary": "テキストボックスや図形内の文字を縦方向に表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0437"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細2",
+      "term": "グリッドとガイドの表示(PowerPoint)",
+      "summary": "オブジェクトの配置を揃えるための目安となる格子線や案内線を表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0438"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細2",
+      "term": "スマートガイドの表示",
+      "summary": "図形を移動した際に他のオブジェクトと揃う位置を示す赤い点線のガイド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0439"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細2",
+      "term": "グループ化(PowerPoint)",
+      "summary": "複数の図形をまとめて1つのオブジェクトとして操作できるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0440"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細2",
+      "term": "順序の変更(最前面・最背面)",
+      "summary": "複数の図形が重なっている場合の表示の前後関係を変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0441"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面2",
+      "term": "全般カテゴリ(PowerPointのオプション)",
+      "summary": "ユーザー名やOfficeのテーマなど、基本設定を管理するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0442"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面2",
+      "term": "文章校正カテゴリ(PowerPointのオプション)",
+      "summary": "オートコレクトやスペルチェックに関する挙動を設定するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0443"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面2",
+      "term": "保存カテゴリ(PowerPointのオプション)",
+      "summary": "既定のファイル形式や画像の解像度などの保存設定を行うカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0444"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面2",
+      "term": "詳細設定カテゴリ(PowerPointのオプション)",
+      "summary": "編集オプションや画面表示に関する細かな挙動を設定するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0445"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointのオプション画面2",
+      "term": "簡単操作カテゴリ(PowerPointのオプション)",
+      "summary": "アクセシビリティに関する既定動作を設定するカテゴリ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0446"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性2",
+      "term": "ワイド画面(16:9)",
+      "summary": "現在標準的に使われる横長の画面比率のスライドサイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0447"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性2",
+      "term": "標準(4:3)",
+      "summary": "旧式のプロジェクターなどで使われていた比率のスライドサイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0448"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのサイズと互換性2",
+      "term": "サイズに合わせて調整(スライドサイズ変更時)",
+      "summary": "スライドサイズを変更する際に、コンテンツを拡大縮小して合わせるか、最大化するかを選ぶオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0449"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ(PowerPoint)2",
+      "term": "新しいテーマの色の作成",
+      "summary": "アクセントカラーなどを個別に指定して独自の配色テーマを作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0450"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ(PowerPoint)2",
+      "term": "テーマの保存(PowerPoint)",
+      "summary": "カスタマイズしたテーマをファイルとして保存し、他のプレゼンテーションで再利用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0451"
+    },
+    {
+      "lang": "ppt",
+      "category": "ノート・配布資料の活用2",
+      "term": "ノートの表示(ノートペインの表示切替)",
+      "summary": "画面下のノートペインの表示・非表示を切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0452"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "オーディオの挿入(このデバイス)",
+      "summary": "パソコン内の音声ファイルをスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0453"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "ビデオの挿入(このデバイス)",
+      "summary": "パソコン内の動画ファイルをスライドに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0454"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "ビデオのトリミング(PowerPoint)",
+      "summary": "挿入した動画の再生開始位置と終了位置を調整する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0455"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "オーディオのトリミング(PowerPoint)",
+      "summary": "挿入した音声の再生範囲を調整する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0456"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "ブックマークの追加(メディア)",
+      "summary": "音声や動画の特定の時点に印をつけ、アニメーションのきっかけに利用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0457"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細2",
+      "term": "スライド切り替え時も再生(オーディオ)",
+      "summary": "複数のスライドをまたいでバックグラウンド音楽を継続再生する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0458"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック2",
+      "term": "コメントの挿入(PowerPoint)",
+      "summary": "スライドの特定の位置や全体に対してコメントを追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0459"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック2",
+      "term": "コメントの返信(PowerPoint)",
+      "summary": "既存のコメントに対してスレッド形式で返答する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0460"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック2",
+      "term": "コメントの解決(PowerPoint)",
+      "summary": "対応済みのコメントを解決済みとしてマークする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0461"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務(PowerPoint)2",
+      "term": "PowerPoint Showで保存(.ppsx)",
+      "summary": "開くと自動的にスライドショーが始まる形式でファイルを保存する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0462"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務(PowerPoint)2",
+      "term": "テンプレートとして保存(.potx)",
+      "summary": "デザインを雛形として再利用できるテンプレート形式でファイルを保存する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0463"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレイアウトの基本原則",
+      "term": "1スライド1メッセージの原則",
+      "summary": "1枚のスライドには伝えたい主要なメッセージを1つに絞るという資料作成の原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0464"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレイアウトの基本原則",
+      "term": "余白(ホワイトスペース)の活用",
+      "summary": "要素を詰め込みすぎず、適切な空白を保つことで視認性を高めるデザイン手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0465"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのデザイン原則2",
+      "term": "コントラストの活用(デザイン原則)",
+      "summary": "色や大きさの差を利用して重要な情報を目立たせるデザインの基本原則。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0466"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ2",
+      "term": "フォントサイズの階層付け",
+      "summary": "見出し・本文・補足で文字サイズを段階的に変え、情報の重要度を視覚的に示す手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0467"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ2",
+      "term": "配色の統一(3色ルール)",
+      "summary": "基本色・アクセントカラーなど使用する色数を絞り、見やすさを保つデザインの工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0468"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法2",
+      "term": "ビフォーアフター比較",
+      "summary": "変化や改善をわかりやすく示すために、改善前と改善後を並べて表示する表現技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0469"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法2",
+      "term": "タイムライン表現",
+      "summary": "出来事や工程を時系列に沿って図形で並べて表示する表現技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0470"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの視覚表現技法2",
+      "term": "ピラミッド図による階層表現",
+      "summary": "重要度や階層構造を三角形の積み重ねで視覚的に表す技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0471"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫2",
+      "term": "インフォグラフィック的な数値表現",
+      "summary": "数値データをアイコンや図形と組み合わせて直感的に理解しやすく表現する手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0472"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの数値表現の工夫2",
+      "term": "比較グラフの活用",
+      "summary": "複数の項目を並べて視覚的に比較しやすくするグラフ表現。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0473"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識2",
+      "term": "アジェンダスライドの作成",
+      "summary": "発表の最初に話す内容の全体像を示すためのスライド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0474"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識2",
+      "term": "サマリースライドの作成",
+      "summary": "発表の最後に要点をまとめて示すためのスライド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0475"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術2",
+      "term": "タイムマネジメント(発表時間の管理)",
+      "summary": "発表者ツールのタイマー表示などを活用して、持ち時間内に発表を収める技術。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0476"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術2",
+      "term": "質疑応答用のバックアップスライド",
+      "summary": "本編には含めず、質疑応答に備えて補足資料として用意しておくスライド。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0477"
+    },
+    {
+      "lang": "ppt",
+      "category": "リモート発表の実務2",
+      "term": "画面共有でのスライドショー",
+      "summary": "オンライン会議ツールで発表者ビューを使いながらスライドショー画面を共有する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0478"
+    },
+    {
+      "lang": "ppt",
+      "category": "リモート発表の実務2",
+      "term": "Teamsでのプレゼンター表示",
+      "summary": "Teamsの会議中に発表者ビューを使って自分だけノートを確認しながら発表する方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0479"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用2",
+      "term": "クイズスライドの作成",
+      "summary": "トリガーアニメーションなどを使って、研修用の簡易クイズをスライド上で作る手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0480"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用2",
+      "term": "ハンドアウトを使った事前配布",
+      "summary": "研修前に配布資料を印刷・配布し、参加者が事前に内容を確認できるようにする運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0481"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの校正記号・表記統一2",
+      "term": "フォントの統一チェック",
+      "summary": "資料全体で使用フォントが統一されているかを確認する校正作業。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0482"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの校正記号・表記統一2",
+      "term": "表記ゆれの統一(PowerPoint)",
+      "summary": "同じ語句の表記(全角半角や送り仮名)がスライド間で揺れていないか確認する作業。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0483"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの配布後利用2",
+      "term": "印刷用配布資料の作成(1スライド/ページ)",
+      "summary": "1ページに1枚のスライドを大きく印刷する配布資料のレイアウト設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0484"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの配布後利用2",
+      "term": "印刷用配布資料の作成(6スライド/ページ)",
+      "summary": "1ページに6枚のスライドを小さく配置して印刷する配布資料のレイアウト設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0485"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理2",
+      "term": "社内テンプレートの一元管理",
+      "summary": "組織共通のPowerPointテンプレートを共有フォルダーなどで一元管理する運用方法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0486"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテンプレート・資産管理2",
+      "term": "図形・アイコンライブラリの整備",
+      "summary": "よく使う図形やアイコンを独自のスライドにまとめて再利用しやすくする資産管理の工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0487"
     }
   ]
 }
