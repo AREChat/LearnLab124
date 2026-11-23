@@ -9540,6 +9540,816 @@
       "examples": [],
       "pages": [],
       "id": "word-1060"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "タイトル(文書プロパティ)",
+      "summary": "文書の名称を表すメタデータ項目で、目次や検索結果に表示されることがある。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1061"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "サブタイトル(文書プロパティ)",
+      "summary": "文書の副題を記録するメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1062"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "作成者(文書プロパティ)",
+      "summary": "文書を作成したユーザー名を記録するメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1063"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "会社名(文書プロパティ)",
+      "summary": "文書に関連する会社名を記録するメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1064"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "キーワード(文書プロパティ)",
+      "summary": "文書の検索性を高めるためのタグとなるメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1065"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "コメント(文書プロパティ)",
+      "summary": "文書に関する補足説明を記録する自由入力のメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1066"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "分類project(文書プロパティ)",
+      "summary": "文書をカテゴリ分けするためのメタデータ項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1067"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "作成日時(文書プロパティ)",
+      "summary": "文書が最初に作成された日時を記録する自動メタデータ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1068"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "最終更新日時(文書プロパティ)",
+      "summary": "文書が最後に保存された日時を記録する自動メタデータ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1069"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "総編集時間(文書プロパティ)",
+      "summary": "文書の編集にかかった累積時間を記録する自動メタデータ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1070"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "リビジョン番号(文書プロパティ)",
+      "summary": "文書が保存された回数を示す自動メタデータ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1071"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "詳細プロパティダイアログ",
+      "summary": "作成者やキーワードなど複数の文書プロパティをまとめて確認・編集できる画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1072"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの文書プロパティ・メタデータ",
+      "term": "ユーザー設定のプロパティ",
+      "summary": "文書に独自の名前と値を持つカスタムメタデータを追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1073"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "非表示のメタデータの削除",
+      "summary": "文書検査で検出された個人情報やコメントなどを一括削除する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1074"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "編集の制限(書式)",
+      "summary": "使用できるスタイルを制限し、書式の変更を一部に限定する保護設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1075"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "編集の制限(変更の種類)",
+      "summary": "変更履歴の記録のみ許可するなど、編集できる操作内容を限定する保護設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1076"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "パスワードを使用して暗号化",
+      "summary": "文書を開く際にパスワード入力を必須にする保護機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1077"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "最終版として保存",
+      "summary": "これ以上編集しないことを示すため、文書を読み取り専用としてマークする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1078"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "署名の行の挿入",
+      "summary": "印刷またはデジタルで署名するための欄を文書に挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1079"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "ドキュメントの保護(リボン)",
+      "summary": "校閲タブにある、編集制限や暗号化などの保護機能をまとめたボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1080"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのドキュメント検査・保護の詳細",
+      "term": "情報(ファイルタブ)",
+      "summary": "文書のプロパティ、保護設定、バージョン履歴などをまとめて確認できる画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1081"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "スペルチェックと文章校正の自動実行",
+      "summary": "入力中にリアルタイムで誤字や文法エラーを検出し、波線で示す機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1082"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "辞書に追加(スペルチェック)",
+      "summary": "未知の単語をユーザー辞書に登録し、以後エラーとして表示させなくする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1083"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "すべて無視(スペルチェック)",
+      "summary": "文書内で同じ単語の指摘をまとめて無視する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1084"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "文章校正の設定",
+      "summary": "文法チェックの厳しさや対象とする項目を調整する設定画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1085"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "エディター(チェック機能)",
+      "summary": "スペル・文法・明確さなどを総合的にチェックし、改善提案を行う機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1086"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "類義語辞典",
+      "summary": "選択した単語の類義語を調べ、言い換え候補を提示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1087"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "読みやすさの統計情報",
+      "summary": "文章の読みやすさを数値化したFlesch-Kincaidなどの指標を表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1088"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "自動要約機能",
+      "summary": "文書の内容を解析し、要点を短くまとめる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1089"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "かな入力中の変換候補表示",
+      "summary": "日本語入力時に表示される漢字変換の候補一覧。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1090"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスペルチェック・文章校正の詳細",
+      "term": "用語集(校正用)",
+      "summary": "業界特有の用語や社名などを正しいスペルとして登録しておく辞書機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1091"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "あいさつ文の挿入(差し込み印刷)",
+      "summary": "「様」などの敬称を含むあいさつ文を自動的に差し込むフィールド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1092"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "住所ブロックの挿入(差し込み印刷)",
+      "summary": "氏名・住所などをまとめて差し込む定型フォーマットのフィールド。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1093"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "規則(差し込み印刷)",
+      "summary": "条件によって表示する内容を切り替えるIf...Then...Elseなどのフィールド機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1094"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "結果のプレビュー(差し込み印刷)",
+      "summary": "差し込みフィールドに実際のデータを当てはめた状態を確認する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1095"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "宛先リストの編集(差し込み印刷)",
+      "summary": "差し込み印刷で使用するデータの並べ替えやフィルターを行う画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1096"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "個々のドキュメントの編集(差し込み印刷完了)",
+      "summary": "差し込み結果を1件ずつ別ページの文書として生成する完了操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1097"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "プリンターに差し込み印刷(完了)",
+      "summary": "差し込み結果をそのままプリンターに送って印刷する完了操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1098"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "電子メールメッセージの差し込み(完了)",
+      "summary": "差し込み結果を宛先ごとに個別の電子メールとして送信する完了操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1099"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷フィールドの詳細",
+      "term": "データファイルの選択(差し込み印刷)",
+      "summary": "差し込み印刷で使用する宛先データのファイルを指定する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1100"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "脚注の挿入位置",
+      "summary": "脚注をページ下部に配置するか、テキストの直後に配置するかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1101"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "脚注番号の書式",
+      "summary": "1,2,3や*,†など、脚注番号に使用する記号・数字の形式を指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1102"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "脚注の区切り線",
+      "summary": "本文と脚注欄を区切る横線の表示・非表示を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1103"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "文末脚注から脚注への変換",
+      "summary": "文末脚注として入力した注釈を脚注に変換する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1104"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "文献目録の挿入",
+      "summary": "登録した引用文献から参考文献一覧を自動生成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1105"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "資料文献の管理",
+      "summary": "引用文献の情報をまとめて登録・編集・削除できるダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1106"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "マスターリスト(引用文献)",
+      "summary": "複数の文書で共通して使える引用文献の保存リスト。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1107"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの脚注・文末脚注・引用文献の詳細2",
+      "term": "現在のリスト(引用文献)",
+      "summary": "現在編集中の文書だけで使用する引用文献のリスト。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1108"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "テーマの色の変更",
+      "summary": "文書全体に適用される配色パターンを、用意された候補の中から切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1109"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "テーマのフォントの変更",
+      "summary": "見出しと本文に使うフォントの組み合わせを、まとめて切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1110"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "テーマの効果の変更",
+      "summary": "図形や表に適用される質感(影・グラデーションなど)のセットを切り替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1111"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "現在のテーマを保存",
+      "summary": "カスタマイズした配色・フォント・効果の組み合わせを、新しいテーマとして保存する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1112"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "新しいテーマの色の作成",
+      "summary": "アクセント色やテキストの色を1つずつ指定して、独自の配色セットを作る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1113"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "新しいテーマのフォントの作成",
+      "summary": "見出し用と本文用のフォントを指定して、独自のフォントセットを作る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1114"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "既定のテーマに設定",
+      "summary": "作成したテーマを、新規文書作成時の標準として設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1115"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのテーマと配色のカスタマイズ",
+      "term": "デザインタブの配色ギャラリー",
+      "summary": "用意された配色パターンを一覧表示し、クリックで即座に適用できるギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1116"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "ページ罫線の種類の選択",
+      "summary": "直線、点線、二重線など、ページ全体を囲む罫線のスタイルを選ぶ機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1117"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "ページ罫線の絵柄",
+      "summary": "木の実や花などのイラストを並べたページ罫線のデザインを選ぶオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1118"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "ページ罫線の基準位置",
+      "summary": "罫線を用紙の端から測るか、本文テキストから測るかを指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1119"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "透かしの文字列の編集",
+      "summary": "「社外秘」などの任意の文字列を透かしとして挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1120"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "画像の透かし",
+      "summary": "ロゴなどの画像を薄く加工してページの背景に配置する透かし機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1121"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "透かしの削除",
+      "summary": "文書に設定された透かしをまとめて削除する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1122"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのページ罫線・透かし・ページの色の詳細",
+      "term": "塗りつへし効果(ページの色)",
+      "summary": "グラデーションや模様、テクスチャをページの背景に設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1123"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの段組みの詳細設定",
+      "term": "段組みの列数の指定",
+      "summary": "文書やセクションを2段・3段など複数の縦列に分割する数を指定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1124"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの段組みの詳細設定",
+      "term": "段の幅と間隔の指定",
+      "summary": "各段の幅と、段と段の間の空白の広さを個別に設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1125"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの段組みの詳細設定",
+      "term": "段の間に境界線を入れる",
+      "summary": "複数の段の間に縦の区切り線を表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1126"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの段組みの詳細設定",
+      "term": "1段組みに戻す",
+      "summary": "段組みを解除し、通常の1列構成のレイアウトに戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1127"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの段組みの詳細設定",
+      "term": "選択した範囲だけ段組みにする",
+      "summary": "文書全体ではなく、選択した一部分だけに段組みを適用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1128"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "文書の種類の選択(ウィザード手順1)",
+      "summary": "レター、電子メール、封筒、ラベル、カタログから作成する文書の種類を選ぶ画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1129"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "開始する文書の選択(ウィザード手順2)",
+      "summary": "現在の文書を使用するか、テンプレートから開始するかを選ぶ画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1130"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "受信者の選択(ウィザード手順3)",
+      "summary": "既存の宛先リストを使うか、Outlookの連絡先を使うか、新規に入力するかを選ぶ画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1131"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "文書の作成(ウィザード手順4)",
+      "summary": "差し込みフィールドやあいさつ文を文書のレイアウトに配置する手順画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1132"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "差し込み印刷結果のプレビュー(ウィザード手順5)",
+      "summary": "実際のデータを当てはめた文書を1件ずつ確認する手順画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1133"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの差し込み印刷ステップバイステップウィザードの画面項目",
+      "term": "差し込み印刷の完了(ウィザード手順6)",
+      "summary": "印刷・個々の文書の編集・電子メール送信など最終処理を選ぶ手順画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1134"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の頂点の編集",
+      "summary": "図形を選択して頂点を直接ドラッグし、自由な形に変形する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1135"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "フリーフォームで描画",
+      "summary": "任意の形をマウスの動きどおりに描いて図形化する描画ツール。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1136"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "コネクタで図形をつなぐ",
+      "summary": "2つの図形を線でつなぎ、図形を移動しても接続が保たれるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1137"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の変更(別の図形への置き換え)",
+      "summary": "描いた図形の種類を保持したまま、別の形に一括で変更する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1138"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の既定値に設定",
+      "summary": "選択した図形の書式を、以降新しく描く図形の標準設定として登録する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1139"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の塗りつぶし(パターン)",
+      "summary": "縞模様や格子模様などのパターンで図形の内部を塗りつぶす機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1140"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の効果(反射)",
+      "summary": "図形の下に反射したような効果を加える書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1141"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の効果(光彩)",
+      "summary": "図形の輪郭の外側にぼんやりした光の効果を加える書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1142"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "図形の効果(面取り)",
+      "summary": "図形の表面に立体的な面取りの質感を加える書式設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1143"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図形描画の詳細操作",
+      "term": "3-D回転(図形の効果)",
+      "summary": "図形を立体的に回転させたように見せる視覚効果。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1144"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "表の見出し行の指定(アクセシビリティ)",
+      "summary": "スクリーンリーダーが表の構造を正しく読み上げられるよう、見出し行を指定する項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1145"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "十分なコントラスト(アクセシビリティ)",
+      "summary": "文字色と背景色のコントラストが十分かどうかを確認する検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1146"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "リンクのわかりやすい説明文(アクセシビリティ)",
+      "summary": "「こちら」などの曖昧なリンク文字列を避けるよう促す検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1147"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "見出しの階層順序(アクセシビリティ)",
+      "summary": "見出しレベルが1から順に正しく使われているかを確認する検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1148"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "空白段落の使用(アクセシビリティ)",
+      "summary": "レイアウト調整のためだけに空白段落を多用していないかを確認する検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1149"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのアクセシビリティチェッカー詳細ルール2",
+      "term": "図表番号の設定(アクセシビリティ)",
+      "summary": "画像や表に適切な図表番号が付けられているかを確認する検査項目。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1150"
     }
   ]
 }
