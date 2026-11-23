@@ -5454,6 +5454,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-0606"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップの設定手順",
+      "summary": "Microsoft 365のロードマップを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0607"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当ての設定手順",
+      "summary": "管理者ロールの割り当てを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0608"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)の設定手順",
+      "summary": "管理単位(Administrative Units)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0609"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスの設定手順",
+      "summary": "Microsoft Entra IDの条件付きアクセスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0610"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理の設定手順",
+      "summary": "グループベースのライセンス管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0611"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)の設定手順",
+      "summary": "Azure ADとの連携(現Entra ID)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0612"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境の設定手順",
+      "summary": "ハイブリッドID環境を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0613"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期の設定手順",
+      "summary": "パスワードハッシュ同期を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0614"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証の設定手順",
+      "summary": "フェデレーション認証を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0615"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成の設定手順",
+      "summary": "シングルサインオンの構成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0616"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開の設定手順",
+      "summary": "Microsoft 365 Appsの展開を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0617"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールの設定手順",
+      "summary": "Officeデプロイメントツールを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0618"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)の設定手順",
+      "summary": "構成済みファイル(Configuration.xml)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0619"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新の設定手順",
+      "summary": "クリックツーラン形式の更新を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0620"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理の設定手順",
+      "summary": "Officeのバージョン管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0621"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーの設定手順",
+      "summary": "Microsoft 365 Appsのサポートポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0622"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)の設定手順",
+      "summary": "Office カスタマイズツール(ODT)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0623"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理の設定手順",
+      "summary": "グループポリシーによるOffice管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0624"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスの設定手順",
+      "summary": "クラウドポリシーサービスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0625"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターの設定手順",
+      "summary": "Microsoft 365 Apps管理センターを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0626"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートの設定手順",
+      "summary": "セキュリティとコンプライアンスのレポートを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0627"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreの設定手順",
+      "summary": "Microsoft Secure Scoreを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0628"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応の設定手順",
+      "summary": "データ保持要件への対応を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0629"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能の設定手順",
+      "summary": "GDPR対応機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0630"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能の設定手順",
+      "summary": "業界別コンプライアンス機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0631"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)の設定手順",
+      "summary": "Microsoft 365 バックアップ(サードパーティ連携)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0632"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーの設定手順",
+      "summary": "クラウドバックアップポリシーを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0633"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能の設定手順",
+      "summary": "ランサムウェア対策機能を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0634"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)の設定手順",
+      "summary": "ファイル復旧機能(OneDrive)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0635"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定の設定手順",
+      "summary": "監査ログの保持期間設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0636"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のサービス間連携の設定手順",
+      "summary": "Microsoft 365のサービス間連携を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0637"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platformとの統合の設定手順",
+      "summary": "Power Platformとの統合を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0638"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Dataverseとの連携の設定手順",
+      "summary": "Dataverseとの連携を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0639"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタムコネクタの作成の設定手順",
+      "summary": "カスタムコネクタの作成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0640"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Graph APIの利用の設定手順",
+      "summary": "Microsoft Graph APIの利用を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0641"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Graph APIを使ったアプリ開発の設定手順",
+      "summary": "Graph APIを使ったアプリ開発を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0642"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365開発者プログラムの設定手順",
+      "summary": "Microsoft 365開発者プログラムを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0643"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サンドボックス環境の利用の設定手順",
+      "summary": "サンドボックス環境の利用を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0644"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アドインの開発(Office Add-ins)の設定手順",
+      "summary": "アドインの開発(Office Add-ins)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0645"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの開発の設定手順",
+      "summary": "Teamsアプリの開発を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0646"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザー研修(アダプションキット)の設定手順",
+      "summary": "ユーザー研修(アダプションキット)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0647"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "変更管理(チェンジマネジメント)の設定手順",
+      "summary": "変更管理(チェンジマネジメント)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0648"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "利用状況レポートの分析の設定手順",
+      "summary": "利用状況レポートの分析を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0649"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "採用状況の可視化(Adoption Score)の設定手順",
+      "summary": "採用状況の可視化(Adoption Score)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0650"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "社内ヘルプデスクの運用の設定手順",
+      "summary": "社内ヘルプデスクの運用を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0651"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンス最適化の検討の設定手順",
+      "summary": "ライセンス最適化の検討を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0652"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コスト管理とレポートの設定手順",
+      "summary": "コスト管理とレポートを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0653"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "契約更新時の見直しの設定手順",
+      "summary": "契約更新時の見直しを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0654"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サブスクリプションの一時停止の設定手順",
+      "summary": "サブスクリプションの一時停止を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0655"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "未使用ライセンスの回収の設定手順",
+      "summary": "未使用ライセンスの回収を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0656"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シャドーITへの対応の設定手順",
+      "summary": "シャドーITへの対応を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0657"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "BYOD環境でのセキュリティの設定手順",
+      "summary": "BYOD環境でのセキュリティを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0658"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部ゲストアクセスの管理の設定手順",
+      "summary": "外部ゲストアクセスの管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0659"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ゲストユーザーの有効期限設定の設定手順",
+      "summary": "ゲストユーザーの有効期限設定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0660"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "テナント間コラボレーション(B2B)の設定手順",
+      "summary": "テナント間コラボレーション(B2B)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0661"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドID基盤の統合の設定手順",
+      "summary": "クラウドID基盤の統合を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0662"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "レガシー認証の無効化の設定手順",
+      "summary": "レガシー認証の無効化を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0663"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティ既定値群(Security Defaults)の設定手順",
+      "summary": "セキュリティ既定値群(Security Defaults)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0664"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "特権アクセス管理(PAM)の設定手順",
+      "summary": "特権アクセス管理(PAM)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0665"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Just-In-Timeアクセスの設定手順",
+      "summary": "Just-In-Timeアクセスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0666"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタマーロックボックスの設定手順",
+      "summary": "カスタマーロックボックスを導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0667"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "顧客データの地理的保存場所の設定手順",
+      "summary": "顧客データの地理的保存場所を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0668"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データレジデンシー要件の設定手順",
+      "summary": "データレジデンシー要件を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0669"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービスレベルアグリーメント(SLA)の設定手順",
+      "summary": "サービスレベルアグリーメント(SLA)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0670"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "可用性ゾーンの構成の設定手順",
+      "summary": "可用性ゾーンの構成を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0671"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)の設定手順",
+      "summary": "ネットワーク最適化(Microsoft 365ネットワーク接続性テスト)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0672"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "帯域幅の管理の設定手順",
+      "summary": "帯域幅の管理を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0673"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "QoS設定(Teams音声品質)の設定手順",
+      "summary": "QoS設定(Teams音声品質)を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0674"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "VPN経由アクセスの最適化の設定手順",
+      "summary": "VPN経由アクセスの最適化を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0675"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウド移行計画の策定の設定手順",
+      "summary": "クラウド移行計画の策定を導入・設定する際の具体的な手順。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0676"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange Onlineの管理者向け運用",
+      "summary": "管理者がExchange Onlineを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0677"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Exchange管理センターの管理者向け運用",
+      "summary": "管理者がExchange管理センターを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0678"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールボックスの移行の管理者向け運用",
+      "summary": "管理者がメールボックスの移行を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0679"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "共有メールボックスの管理者向け運用",
+      "summary": "管理者が共有メールボックスを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0680"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "配布グループの管理者向け運用",
+      "summary": "管理者が配布グループを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0681"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365グループの管理者向け運用",
+      "summary": "管理者がMicrosoft 365グループを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0682"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "動的配布グループの管理者向け運用",
+      "summary": "管理者が動的配布グループを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0683"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールフロールールの管理者向け運用",
+      "summary": "管理者がメールフロールールを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0684"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "トランスポートルールの管理者向け運用",
+      "summary": "管理者がトランスポートルールを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0685"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メールの転送設定の管理者向け運用",
+      "summary": "管理者がメールの転送設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0686"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "迷惑メール対策(EOP)の管理者向け運用",
+      "summary": "管理者が迷惑メール対策(EOP)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0687"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "添付ファイルのセキュリティ対策の管理者向け運用",
+      "summary": "管理者が添付ファイルのセキュリティ対策を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0688"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全な添付ファイル(ATP)の管理者向け運用",
+      "summary": "管理者が安全な添付ファイル(ATP)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0689"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "安全なリンク(ATP)の管理者向け運用",
+      "summary": "管理者が安全なリンク(ATP)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0690"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フィッシング対策ポリシーの管理者向け運用",
+      "summary": "管理者がフィッシング対策ポリシーを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0691"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "条件付きアクセスポリシーの管理者向け運用",
+      "summary": "管理者が条件付きアクセスポリシーを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0692"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra ID Protectionの管理者向け運用",
+      "summary": "管理者がMicrosoft Entra ID Protectionを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0693"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セルフサービスパスワードリセットの管理者向け運用",
+      "summary": "管理者がセルフサービスパスワードリセットを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0694"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオン(SSO)の管理者向け運用",
+      "summary": "管理者がシングルサインオン(SSO)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0695"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "多要素認証の設定の管理者向け運用",
+      "summary": "管理者が多要素認証の設定を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0696"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Authenticatorアプリの管理者向け運用",
+      "summary": "管理者がMicrosoft Authenticatorアプリを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0697"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードレス認証の管理者向け運用",
+      "summary": "管理者がパスワードレス認証を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0698"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "デバイス管理(Intune)の管理者向け運用",
+      "summary": "管理者がデバイス管理(Intune)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0699"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "モバイルデバイス管理(MDM)の管理者向け運用",
+      "summary": "管理者がモバイルデバイス管理(MDM)を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0700"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アプリ保護ポリシーの管理者向け運用",
+      "summary": "管理者がアプリ保護ポリシーを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0701"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Windows Autopilotの管理者向け運用",
+      "summary": "管理者がWindows Autopilotを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0702"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Endpointの管理者向け運用",
+      "summary": "管理者がMicrosoft Defender for Endpointを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0703"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Office 365の管理者向け運用",
+      "summary": "管理者がMicrosoft Defender for Office 365を運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0704"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Defender for Cloud Appsの管理者向け運用",
+      "summary": "管理者がMicrosoft Defender for Cloud Appsを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0705"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティスコアの管理者向け運用",
+      "summary": "管理者がセキュリティスコアを運用する際に押さえておくべき実務知識。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-0706"
     }
   ]
 }
