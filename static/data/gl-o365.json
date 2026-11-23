@@ -11754,6 +11754,906 @@
       "examples": [],
       "pages": [],
       "id": "o365-1306"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのバケットのトラブルシューティング",
+      "summary": "Plannerのバケットでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1307"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Plannerのタスク割り当てのトラブルシューティング",
+      "summary": "Plannerのタスク割り当てでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1308"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "To Doのタスクリスト共有のトラブルシューティング",
+      "summary": "To Doのタスクリスト共有でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1309"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsの作成のトラブルシューティング",
+      "summary": "Microsoft Listsの作成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1310"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Listsのテンプレートのトラブルシューティング",
+      "summary": "Microsoft Listsのテンプレートでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1311"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのフロー作成のトラブルシューティング",
+      "summary": "Power Automateのフロー作成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1312"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateの承認フローのトラブルシューティング",
+      "summary": "Power Automateの承認フローでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1313"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Automateのコネクタのトラブルシューティング",
+      "summary": "Power Automateのコネクタでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1314"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのキャンバスアプスのトラブルシューティング",
+      "summary": "Power Appsのキャンバスアプスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1315"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Appsのモデル駆動型アプリのトラブルシューティング",
+      "summary": "Power Appsのモデル駆動型アプリでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1316"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのダッシュボード作成のトラブルシューティング",
+      "summary": "Power BIのダッシュボード作成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1317"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIのレポート共有のトラブルシューティング",
+      "summary": "Power BIのレポート共有でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1318"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power BIデータセットの更新のトラブルシューティング",
+      "summary": "Power BIデータセットの更新でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1319"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Virtual Agentsのトラブルシューティング",
+      "summary": "Power Virtual Agentsでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1320"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platform管理センターのトラブルシューティング",
+      "summary": "Power Platform管理センターでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1321"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Forms クイズ機能のトラブルシューティング",
+      "summary": "Microsoft Forms クイズ機能でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1322"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの分岐設定のトラブルシューティング",
+      "summary": "Formsの分岐設定でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1323"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Formsの回答のExcel出力のトラブルシューティング",
+      "summary": "Formsの回答のExcel出力でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1324"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Whiteboardのテンプレートのトラブルシューティング",
+      "summary": "Microsoft Whiteboardのテンプレートでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1325"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Whiteboardの共同編集のトラブルシューティング",
+      "summary": "Whiteboardの共同編集でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1326"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Loopのワークスペースのトラブルシューティング",
+      "summary": "Microsoft Loopのワークスペースでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1327"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Loopコンポーネントの共有のトラブルシューティング",
+      "summary": "Loopコンポーネントの共有でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1328"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのノートブック共有のトラブルシューティング",
+      "summary": "OneNoteのノートブック共有でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1329"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteの共同編集のトラブルシューティング",
+      "summary": "OneNoteの共同編集でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1330"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "OneNoteのタグ機能のトラブルシューティング",
+      "summary": "OneNoteのタグ機能でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1331"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Streamの動画共有のトラブルシューティング",
+      "summary": "Microsoft Streamの動画共有でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1332"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Streamの動画の文字起こしのトラブルシューティング",
+      "summary": "Streamの動画の文字起こしでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1333"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Clipchampの動画編集のトラブルシューティング",
+      "summary": "Clipchampの動画編集でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1334"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Designerでの画像生成のトラブルシューティング",
+      "summary": "Microsoft Designerでの画像生成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1335"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Bookingsの予約管理のトラブルシューティング",
+      "summary": "Microsoft Bookingsの予約管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1336"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Vivaの従業員エクスペリエンスのトラブルシューティング",
+      "summary": "Microsoft Vivaの従業員エクスペリエンスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1337"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Insightsの分析のトラブルシューティング",
+      "summary": "Viva Insightsの分析でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1338"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Learningの学習コンテンツのトラブルシューティング",
+      "summary": "Viva Learningの学習コンテンツでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1339"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Engageのコミュニティのトラブルシューティング",
+      "summary": "Viva Engageのコミュニティでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1340"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Viva Goalsの目標管理のトラブルシューティング",
+      "summary": "Viva Goalsの目標管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1341"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365管理センターのダッシュボードのトラブルシューティング",
+      "summary": "Microsoft 365管理センターのダッシュボードでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1342"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザーの一括作成のトラブルシューティング",
+      "summary": "ユーザーの一括作成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1343"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンスのグループベース割り当てのトラブルシューティング",
+      "summary": "ライセンスのグループベース割り当てでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1344"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サービス状態の確認のトラブルシューティング",
+      "summary": "サービス状態の確認でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1345"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "メッセージセンターの通知のトラブルシューティング",
+      "summary": "メッセージセンターの通知でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1346"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のロードマップのトラブルシューティング",
+      "summary": "Microsoft 365のロードマップでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1347"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理者ロールの割り当てのトラブルシューティング",
+      "summary": "管理者ロールの割り当てでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1348"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "管理単位(Administrative Units)のトラブルシューティング",
+      "summary": "管理単位(Administrative Units)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1349"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Entra IDの条件付きアクセスのトラブルシューティング",
+      "summary": "Microsoft Entra IDの条件付きアクセスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1350"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループベースのライセンス管理のトラブルシューティング",
+      "summary": "グループベースのライセンス管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1351"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Azure ADとの連携(現Entra ID)のトラブルシューティング",
+      "summary": "Azure ADとの連携(現Entra ID)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1352"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ハイブリッドID環境のトラブルシューティング",
+      "summary": "ハイブリッドID環境でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1353"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "パスワードハッシュ同期のトラブルシューティング",
+      "summary": "パスワードハッシュ同期でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1354"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "フェデレーション認証のトラブルシューティング",
+      "summary": "フェデレーション認証でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1355"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シングルサインオンの構成のトラブルシューティング",
+      "summary": "シングルサインオンの構成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1356"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsの展開のトラブルシューティング",
+      "summary": "Microsoft 365 Appsの展開でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1357"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeデプロイメントツールのトラブルシューティング",
+      "summary": "Officeデプロイメントツールでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1358"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "構成済みファイル(Configuration.xml)のトラブルシューティング",
+      "summary": "構成済みファイル(Configuration.xml)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1359"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クリックツーラン形式の更新のトラブルシューティング",
+      "summary": "クリックツーラン形式の更新でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1360"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Officeのバージョン管理のトラブルシューティング",
+      "summary": "Officeのバージョン管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1361"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Appsのサポートポリシーのトラブルシューティング",
+      "summary": "Microsoft 365 Appsのサポートポリシーでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1362"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Office カスタマイズツール(ODT)のトラブルシューティング",
+      "summary": "Office カスタマイズツール(ODT)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1363"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "グループポリシーによるOffice管理のトラブルシューティング",
+      "summary": "グループポリシーによるOffice管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1364"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドポリシーサービスのトラブルシューティング",
+      "summary": "クラウドポリシーサービスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1365"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 Apps管理センターのトラブルシューティング",
+      "summary": "Microsoft 365 Apps管理センターでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1366"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティとコンプライアンスのレポートのトラブルシューティング",
+      "summary": "セキュリティとコンプライアンスのレポートでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1367"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Secure Scoreのトラブルシューティング",
+      "summary": "Microsoft Secure Scoreでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1368"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "データ保持要件への対応のトラブルシューティング",
+      "summary": "データ保持要件への対応でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1369"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "GDPR対応機能のトラブルシューティング",
+      "summary": "GDPR対応機能でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1370"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "業界別コンプライアンス機能のトラブルシューティング",
+      "summary": "業界別コンプライアンス機能でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1371"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365 バックアップ(サードパーティ連携)のトラブルシューティング",
+      "summary": "Microsoft 365 バックアップ(サードパーティ連携)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1372"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドバックアップポリシーのトラブルシューティング",
+      "summary": "クラウドバックアップポリシーでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1373"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ランサムウェア対策機能のトラブルシューティング",
+      "summary": "ランサムウェア対策機能でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1374"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ファイル復旧機能(OneDrive)のトラブルシューティング",
+      "summary": "ファイル復旧機能(OneDrive)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1375"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "監査ログの保持期間設定のトラブルシューティング",
+      "summary": "監査ログの保持期間設定でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1376"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365のサービス間連携のトラブルシューティング",
+      "summary": "Microsoft 365のサービス間連携でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1377"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Power Platformとの統合のトラブルシューティング",
+      "summary": "Power Platformとの統合でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1378"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Dataverseとの連携のトラブルシューティング",
+      "summary": "Dataverseとの連携でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1379"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "カスタムコネクタの作成のトラブルシューティング",
+      "summary": "カスタムコネクタの作成でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1380"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft Graph APIの利用のトラブルシューティング",
+      "summary": "Microsoft Graph APIの利用でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1381"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Graph APIを使ったアプリ開発のトラブルシューティング",
+      "summary": "Graph APIを使ったアプリ開発でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1382"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Microsoft 365開発者プログラムのトラブルシューティング",
+      "summary": "Microsoft 365開発者プログラムでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1383"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サンドボックス環境の利用のトラブルシューティング",
+      "summary": "サンドボックス環境の利用でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1384"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "アドインの開発(Office Add-ins)のトラブルシューティング",
+      "summary": "アドインの開発(Office Add-ins)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1385"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Teamsアプリの開発のトラブルシューティング",
+      "summary": "Teamsアプリの開発でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1386"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ユーザー研修(アダプションキット)のトラブルシューティング",
+      "summary": "ユーザー研修(アダプションキット)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1387"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "変更管理(チェンジマネジメント)のトラブルシューティング",
+      "summary": "変更管理(チェンジマネジメント)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1388"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "利用状況レポートの分析のトラブルシューティング",
+      "summary": "利用状況レポートの分析でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1389"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "採用状況の可視化(Adoption Score)のトラブルシューティング",
+      "summary": "採用状況の可視化(Adoption Score)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1390"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "社内ヘルプデスクの運用のトラブルシューティング",
+      "summary": "社内ヘルプデスクの運用でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1391"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ライセンス最適化の検討のトラブルシューティング",
+      "summary": "ライセンス最適化の検討でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1392"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "コスト管理とレポートのトラブルシューティング",
+      "summary": "コスト管理とレポートでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1393"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "契約更新時の見直しのトラブルシューティング",
+      "summary": "契約更新時の見直しでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1394"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "サブスクリプションの一時停止のトラブルシューティング",
+      "summary": "サブスクリプションの一時停止でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1395"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "未使用ライセンスの回収のトラブルシューティング",
+      "summary": "未使用ライセンスの回収でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1396"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "シャドーITへの対応のトラブルシューティング",
+      "summary": "シャドーITへの対応でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1397"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "BYOD環境でのセキュリティのトラブルシューティング",
+      "summary": "BYOD環境でのセキュリティでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1398"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "外部ゲストアクセスの管理のトラブルシューティング",
+      "summary": "外部ゲストアクセスの管理でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1399"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "ゲストユーザーの有効期限設定のトラブルシューティング",
+      "summary": "ゲストユーザーの有効期限設定でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1400"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "テナント間コラボレーション(B2B)のトラブルシューティング",
+      "summary": "テナント間コラボレーション(B2B)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1401"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "クラウドID基盤の統合のトラブルシューティング",
+      "summary": "クラウドID基盤の統合でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1402"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "レガシー認証の無効化のトラブルシューティング",
+      "summary": "レガシー認証の無効化でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1403"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "セキュリティ既定値群(Security Defaults)のトラブルシューティング",
+      "summary": "セキュリティ既定値群(Security Defaults)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1404"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "特権アクセス管理(PAM)のトラブルシューティング",
+      "summary": "特権アクセス管理(PAM)でよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1405"
+    },
+    {
+      "lang": "o365",
+      "category": "実務応用ナレッジ",
+      "term": "Just-In-Timeアクセスのトラブルシューティング",
+      "summary": "Just-In-Timeアクセスでよく発生する問題とその解決方法。",
+      "examples": [],
+      "pages": [],
+      "id": "o365-1406"
     }
   ]
 }
