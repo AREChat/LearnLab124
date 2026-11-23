@@ -1,7 +1,8 @@
 /**
- * ポイント管理（Neon版）
- * 増減の金額と回数制限はサーバー側（point_rules / apply_points）で決まります。
- * ここでは「どの行動をしたか」を伝えて、結果を画面に表示するだけです。
+ * ポイント管理（ローカル版）
+ * ログイン・アカウントは不要です。ブラウザの localStorage だけで完結します
+ * （アカウント機能・ログインが必要なのは別サイトの ARE チャットアプリのみ）。
+ * 金額や「1日1回」などの制限は、このファイル内の RULES で管理します。
  */
 class PointsManager {
     constructor() {
@@ -12,6 +13,21 @@ class PointsManager {
             video_watch: '動画視聴', weather_check: '天気確認', train_check: '電車確認',
             manual_view: 'マニュアル閲覧', daily_login: 'デイリーログイン', story_link_click: '物語リンク'
         };
+        // delta: 1回あたりの増減。limit: 'none'=制限なし（毎回）/ 'daily'=1日1回(JST) / 'once'=refごとに生涯1回
+        this.RULES = {
+            quiz_answer: { delta: -100, limit: 'none' },
+            chat_send: { delta: -100, limit: 'none' },
+            term_search: { delta: -50, limit: 'none' },
+            elearning_visit: { delta: 2000, limit: 'daily' },
+            survey_answer: { delta: 1000, limit: 'once' },
+            story_read: { delta: 1000, limit: 'once' },
+            video_watch: { delta: 1000, limit: 'once' },
+            daily_login: { delta: 500, limit: 'daily' },
+            weather_check: { delta: 500, limit: 'daily' },
+            train_check: { delta: 500, limit: 'daily' },
+            manual_view: { delta: 300, limit: 'daily' },
+            story_link_click: { delta: 200, limit: 'once' }
+        };
         this.updateDisplay();
     }
 
@@ -21,15 +37,61 @@ class PointsManager {
         return Number.isFinite(v) ? v : this.INITIAL_POINTS;
     }
 
-    /** サーバーに行動を伝える。付与済み・未ログインのときは何もしない */
-    async act(action, ref) {
-        if (!window.Study || !Study.profile && !(await Study.restore().catch(() => null))) return null;
+    setPoints(v) {
+        try { localStorage.setItem('userPoints', String(v)); } catch (_e) { /* 保存が使えない環境でも落とさない */ }
+    }
+
+    /** 日本時間(JST)の「今日」の日付文字列(YYYY-MM-DD)。日の区切りはJST 0時 */
+    _todayJst() {
+        try { return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Tokyo' }).format(new Date()); }
+        catch (_e) { return new Date().toISOString().slice(0, 10); }
+    }
+
+    _doneDaily(action) {
+        try { return localStorage.getItem('pt_daily_' + action) === this._todayJst(); } catch (_e) { return false; }
+    }
+    _markDaily(action) {
+        try { localStorage.setItem('pt_daily_' + action, this._todayJst()); } catch (_e) { /* ignore */ }
+    }
+
+    _onceKey(action, ref) { return 'pt_once_' + action + '|' + (ref === undefined || ref === null ? '' : String(ref)); }
+    _doneOnce(action, ref) {
+        try { return localStorage.getItem(this._onceKey(action, ref)) === '1'; } catch (_e) { return false; }
+    }
+    _markOnce(action, ref) {
+        try { localStorage.setItem(this._onceKey(action, ref), '1'); } catch (_e) { /* ignore */ }
+    }
+
+    _pushHistory(entry) {
+        let list = [];
+        try { list = JSON.parse(localStorage.getItem('pointHistory') || '[]'); } catch (_e) { list = []; }
+        if (!Array.isArray(list)) list = [];
+        list.push(entry);
+        if (list.length > 100) list = list.slice(list.length - 100);
+        try { localStorage.setItem('pointHistory', JSON.stringify(list)); } catch (_e) { /* ignore */ }
+    }
+
+    /**
+     * ポイントを行動に応じて増減させる。ログイン・通信は不要。
+     * 「1日1回」「生涯1回」の制限を超えている場合は何もせず null を返す。
+     */
+    act(action, ref) {
+        const rule = this.RULES[action];
+        if (!rule) return null;
+        if (rule.limit === 'daily') {
+            if (this._doneDaily(action)) return null;
+        } else if (rule.limit === 'once') {
+            if (this._doneOnce(action, ref)) return null;
+        }
         const before = this.getPoints();
-        let after;
-        try { after = await Study.applyPoints(action, ref); } catch (e) { return null; }
-        if (after === null || after === undefined) return null;
+        const after = before + rule.delta;
+        this.setPoints(after);
+        if (rule.limit === 'daily') this._markDaily(action);
+        else if (rule.limit === 'once') this._markOnce(action, ref);
+        const reason = this.LABELS[action] || action;
+        this._pushHistory({ timestamp: Date.now(), amount: rule.delta, reason, balanceAfter: after });
         this.updateDisplay();
-        this.showPointsNotification(after - before, this.LABELS[action] || '', after);
+        this.showPointsNotification(rule.delta, reason, after);
         return after;
     }
 
@@ -47,8 +109,11 @@ class PointsManager {
     onStoryLinkClick(url) { return this.act('story_link_click', url); }
     checkDailyBonus() { return this.act('daily_login'); }
 
-    async getHistory(limit = 100) {
-        try { return await Study.pointHistory(limit); } catch (e) { return []; }
+    getHistory(limit = 100) {
+        let list = [];
+        try { list = JSON.parse(localStorage.getItem('pointHistory') || '[]'); } catch (_e) { list = []; }
+        if (!Array.isArray(list)) list = [];
+        return list.slice(-limit).reverse();
     }
 
     updateDisplay() {
@@ -66,13 +131,13 @@ class PointsManager {
 
         const notification = document.createElement('div');
         notification.className = 'points-notification';
-        
+
         const sign = amount > 0 ? '+' : '';
         const color = amount > 0 ? '#00ff88' : '#ff4444';
         const emoji = amount > 0 ? '💰' : '💸';
-        
+
         notification.innerHTML = `
-            <div style="background: rgba(0, 0, 0, 0.9); padding: 20px; border-radius: 10px; 
+            <div style="background: rgba(0, 0, 0, 0.9); padding: 20px; border-radius: 10px;
                         border: 2px solid ${color}; box-shadow: 0 0 20px ${color};">
                 <div style="font-size: 2em;">${emoji}</div>
                 <div style="color: ${color}; font-size: 1.5em; font-weight: bold; margin: 10px 0;">
@@ -84,7 +149,7 @@ class PointsManager {
                 </div>
             </div>
         `;
-        
+
         notification.style.cssText = `
             position: fixed;
             top: 50%;
@@ -93,9 +158,9 @@ class PointsManager {
             z-index: 10000;
             animation: pointsNotificationAnim 2s ease-in-out;
         `;
-        
+
         document.body.appendChild(notification);
-        
+
         setTimeout(() => notification.remove(), 2000);
     }
 
@@ -110,7 +175,7 @@ class PointsManager {
         return { rank: 'ビギナー', color: '#888888', bonus: 1.0 };
     }
 
-    checkTimeBonus() { return 1.0; } // 倍率はサーバー側の固定ルールのため使いません
+    checkTimeBonus() { return 1.0; } // 倍率は使いません（RULESで固定）
 }
 
 const pointsManager = new PointsManager();
@@ -127,7 +192,7 @@ style.textContent = `
         90% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
         100% { opacity: 0; transform: translate(-50%, -40%) scale(0.9); }
     }
-    
+
     .rank-badge {
         display: inline-block;
         padding: 5px 12px;

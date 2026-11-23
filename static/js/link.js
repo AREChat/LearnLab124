@@ -19,12 +19,11 @@
                 try { localStorage.setItem('linkClickCounts', JSON.stringify(counts)); } catch (e) { /* storageが使えない環境でも落とさない */ }
             }
 
-            // クリック数は Neon に保存（画面表示用にローカルへキャッシュ）
+            // クリック数はローカル(localStorage)だけで管理します（ログイン不要のため）
             function recordClick(label) {
                 const counts = getClickCounts();
                 counts[label] = (counts[label] || 0) + 1;
                 saveClickCounts(counts);
-                if (typeof Study !== 'undefined') Study.incrementLinkClick(label).catch(function () {});
                 updateFrequentSites();
             }
 
@@ -90,14 +89,8 @@
             function clearHistory() {
                 if (confirm('よく見るサイトの履歴を削除しますか？')) {
                     try { localStorage.removeItem('linkClickCounts'); } catch (e) { /* storageが使えない環境でも落とさない */ }
-                    if (typeof Study !== 'undefined') Study.clearLinkClicks().catch(function () {});
                     updateFrequentSites();
                 }
-            }
-
-            // Neon に保存されたクリック数を反映
-            if (typeof Study !== 'undefined') {
-                Study.linkClicks().then(function (c) { saveClickCounts(c); updateFrequentSites(); }).catch(function () {});
             }
 
             // イベントリスナー

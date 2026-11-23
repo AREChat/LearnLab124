@@ -1,6 +1,6 @@
 # study
 
-GitHub Pages で公開する静的サイト。ユーザー管理・ポイント・チャット保存・天気/電車の自動取得は **Neon**（Postgres + Neon Auth + Data API + Functions）で動きます。サーバー（Flask 等）は不要です。DB・自動取得の設定は Neon 側に適用済みです。
+GitHub Pages で公開する静的サイト。**ログイン・ユーザー登録はありません**（ログインが必要なのは別サイトの ARE チャットアプリのみ）。ポイントは端末のブラウザ内（localStorage）だけで管理し、天気/電車の自動取得だけ **Neon**（Postgres + Data API + Functions、匿名読み取り）を使います。サーバー（Flask 等）は不要です。
 
 ## 構成
 
@@ -8,23 +8,17 @@ GitHub Pages で公開する静的サイト。ユーザー管理・ポイント�
 |------|------|
 | `*.html` | ページ（HTML のみ。CSS/JS は書かない） |
 | `static/css`, `static/js` | ページごとの CSS / JS |
-| `static/js/study-config.js` | Neon の接続先（Auth URL / Data API URL） |
+| `static/js/study-config.js` | Neon の接続先（Data API URL） |
 | `static/js/neon-client.js` | `@neon/neon-js` のブラウザ用バンドル |
-| `static/js/study-api.js` | `window.Study`（登録・ログイン・ポイント・チャット・メモ等） |
-| `static/points.js` | ポイント処理（金額はサーバー側ルールで固定） |
+| `static/js/study-api.js` | `window.Study.siteData()`（天気・電車データの匿名読み取りのみ） |
+| `static/points.js` | ポイント処理（ログイン不要、localStorageのみで完結。金額・制限は`points.js`内のRULESで固定） |
 | `static/data/glossary.json` | プログラミング用語辞典（1ファイルに統合） |
 | `tools/` | `スケジュール.py` / `毎日の日誌.py`（名前・年月を変えて誰でも作成可） |
 | `sw.js` | Service Worker（同一オリジンの GET のみキャッシュ） |
 
 ## 公開
 
-GitHub Pages を有効化（ルートを公開）。Neon Auth の **Trusted domains** に公開 URL（例 `https://<user>.github.io`）が登録されている必要があります。
-
-## ログイン
-
-- ユーザー名 + パスワード（**8文字以上**）。内部では `u<sha256(小文字ユーザー名)の先頭40桁>@study.local` のメールとして Neon Auth に登録します。
-- **管理者は1人だけ**（ユーザー名は管理画面で確認）。DB の制約で2人目はなれません。管理者はクライアントから変更できません。
-- 管理者の表記名は初期値「主人公」。管理画面の「表記名を変更」で本人だけが変更できます（チャットの発言者名に反映）。
+GitHub Pages を有効化（ルートを公開）。
 
 ## ポイント（初期 20,000）
 
@@ -38,11 +32,11 @@ GitHub Pages を有効化（ルートを公開）。Neon Auth の **Trusted doma
 | マニュアル閲覧 | +300 | 1日1回 |
 | 物語リンククリック | +200 | リンクごと1回 |
 
-金額と制限はサーバー側で固定です。クライアントからの直接更新はできません（1日の区切りは日本時間）。
+金額と制限は `static/points.js` 内の `RULES` で固定です（1日の区切りは日本時間）。ログイン不要、通信もしません。ブラウザのデータを消すとリセットされます。
 
 ## 天気・電車の自動取得
 
-Neon Function が気象庁・ウェザーニュース・Yahoo!路線情報を日本時間 0・6・12・18 時に取得して DB に保存し、`weather.html` / `train.html` はログイン後にそれを読みます。
+Neon Function が気象庁・ウェザーニュース・Yahoo!路線情報を日本時間 0・6・12・18 時に取得して DB に保存し、`weather.html` / `train.html` はログイン不要・匿名のまま読みます。
 
 ## ローカル確認
 
