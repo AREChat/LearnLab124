@@ -5121,6 +5121,735 @@
       "examples": [],
       "pages": [],
       "id": "ppt-0569"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの自動化・連携(PowerPoint)",
+      "term": "Officeアドインの挿入(PowerPoint)",
+      "summary": "Microsoft Storeなどで配布される拡張機能をPowerPointに追加する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0570"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの自動化・連携(PowerPoint)",
+      "term": "マクロの記録(PowerPoint)",
+      "summary": "操作内容をVBAコードとして記録し、後で再生できるようにする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0571"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの自動化・連携(PowerPoint)",
+      "term": "マクロ有効プレゼンテーション(.pptm)",
+      "summary": "VBAマクロを保存できる拡張子形式のPowerPointファイル。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0572"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの自動化・連携(PowerPoint)",
+      "term": "開発タブの表示(PowerPoint)",
+      "summary": "マクロやコントロールを扱う開発タブをリボンに表示するオプション設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0573"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドの自動化・連携(PowerPoint)",
+      "term": "Excelデータとのリンクグラフ(PowerPoint)",
+      "summary": "Excelファイルのデータと連動し、元データの変更がグラフに反映される仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0574"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細2",
+      "term": "表の挿入(Excelワークシートとして)",
+      "summary": "PowerPoint内にExcelの機能をそのまま使える表オブジェクトを埋め込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0575"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細2",
+      "term": "グラフの種類(組み合わせ)",
+      "summary": "異なる種類のグラフ(棒と折れ線など)を1つのグラフに組み合わせる形式。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0576"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細2",
+      "term": "グラフ要素の追加ボタン",
+      "summary": "軸ラベルやデータラベルなどグラフの構成要素を追加・削除するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0577"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細2",
+      "term": "表の行・列の挿入(PowerPoint)",
+      "summary": "既存の表に新しい行や列を追加する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0578"
+    },
+    {
+      "lang": "ppt",
+      "category": "PowerPointの表・グラフ詳細2",
+      "term": "表のセルの結合(PowerPoint)",
+      "summary": "複数のセルを1つに結合して見出しなどに利用する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0579"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細2",
+      "term": "文字の光彩効果",
+      "summary": "文字の周囲にぼんやりとした光を放つような視覚効果を付ける書式。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0580"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細2",
+      "term": "文字の反射効果",
+      "summary": "文字の下に鏡写しのような反射像を表示する視覚効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0581"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細2",
+      "term": "文字の変形(ワープ)",
+      "summary": "テキストを波型やアーチ型など特殊な形に変形させる書式効果。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0582"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのテキスト効果詳細2",
+      "term": "グラデーションの文字塗りつぶし",
+      "summary": "文字の内部を単色ではなく複数色のグラデーションで塗る書式。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0583"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ(PowerPoint)3",
+      "term": "配色パターンのリセット",
+      "summary": "カスタマイズした配色を元のテーマの既定値に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0584"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ(PowerPoint)3",
+      "term": "テーマフォントのカスタマイズ",
+      "summary": "見出し用・本文用のフォントの組み合わせを独自に設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0585"
+    },
+    {
+      "lang": "ppt",
+      "category": "テーマ・配色のカスタマイズ(PowerPoint)3",
+      "term": "背景のリセット(個別スライド)",
+      "summary": "特定のスライドだけに適用した背景の変更を取り消し、マスターの設定に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0586"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細3",
+      "term": "水平方向に整列",
+      "summary": "選択した複数のオブジェクトを水平方向の等間隔または基準線に揃える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0587"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細3",
+      "term": "垂直方向に整列",
+      "summary": "選択した複数のオブジェクトを垂直方向の等間隔または基準線に揃える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0588"
+    },
+    {
+      "lang": "ppt",
+      "category": "図形の整列・配置の詳細3",
+      "term": "選択したオブジェクトに合わせて配置",
+      "summary": "選択中のオブジェクトどうしを基準にして整列させる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0589"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "テキストの挿入ボタン(ヘッダー/フッター)",
+      "summary": "スライド番号や日付と共に表示するテキストをヘッダー・フッターダイアログで設定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0590"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "WordArtの挿入ボタン",
+      "summary": "装飾文字効果があらかじめ適用されたテキストをスライドに追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0591"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "数式の挿入ボタン(PowerPoint)",
+      "summary": "数式ツールを使って数式をスライドに挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0592"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "記号の挿入ボタン(PowerPoint)",
+      "summary": "キーボードにない特殊記号を一覧から選んで挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0593"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "アイコンの挿入ボタン(PowerPoint)",
+      "summary": "Office内蔵のベクターアイコンをスライドに追加するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0594"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "3Dモデルの挿入ボタン(PowerPoint)",
+      "summary": "3D形式のファイルを挿入し自由な角度で表示するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0595"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint 挿入タブ)3",
+      "term": "SmartArtの挿入ボタン(詳細)",
+      "summary": "リスト、手順、階層などのカテゴリからSmartArtのレイアウトを選んで挿入するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0596"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細3",
+      "term": "発表者ノートの拡大縮小",
+      "summary": "発表者ビューでノートの文字サイズを大きく・小さく調整する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0597"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細3",
+      "term": "すべて黒(ショートカットメニュー)",
+      "summary": "スライドショー再生中に右クリックメニューから画面を黒くする操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0598"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細3",
+      "term": "ポインターオプション(ショートカットメニュー)",
+      "summary": "スライドショー中にペンやレーザーポインターの種類を切り替えるメニュー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0599"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドショー・発表機能詳細3",
+      "term": "画面の拡大(ズームインツール、発表時)",
+      "summary": "スライドショー中に特定の部分を一時的に拡大して見せる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0600"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)3",
+      "term": "書式のコピー/貼り付けボタン(PowerPoint)",
+      "summary": "選択した文字や図形の書式を別の対象にコピーするブラシ機能のボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0601"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)3",
+      "term": "フォントの色ボタン(PowerPoint)",
+      "summary": "選択した文字の色を変更するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0602"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)3",
+      "term": "文字の影ボタン(PowerPoint)",
+      "summary": "選択した文字に影を付けるかどうかを切り替えるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0603"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)3",
+      "term": "文字の均等割り付けボタン(PowerPoint)",
+      "summary": "テキストの配置を均等割り付けに設定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0604"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint ホームタブ)3",
+      "term": "置換ボタン(PowerPoint)",
+      "summary": "スライド内のテキストを検索し、別の文字列に一括置換するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0605"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語4",
+      "term": "レイアウトの選択(新しいスライド挿入時)",
+      "summary": "新しいスライドを追加する際にどのレイアウトを使うか選ぶ操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0606"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語4",
+      "term": "スライド番号(PowerPoint)",
+      "summary": "各スライドに割り振られる通し番号で、フッターに表示できる。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0607"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語4",
+      "term": "スライドの縦横比",
+      "summary": "スライドの横と縦の比率。16:9や4:3などの種類がある。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0608"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語4",
+      "term": "アウトラインテキスト",
+      "summary": "タイトルや箇条書き本文など、アウトラインビューに表示される階層構造を持つテキスト。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0609"
+    },
+    {
+      "lang": "ppt",
+      "category": "基本用語4",
+      "term": "非表示スライド(表示アイコン)",
+      "summary": "サムネイルペインでスライド番号に斜線が引かれ、非表示に設定されていることを示す表示。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0610"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作4",
+      "term": "すべてのスライドを表示(ズームアウト)",
+      "summary": "表示倍率を小さくして一度に多くのスライドを確認する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0611"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作4",
+      "term": "スライドの貼り付けオプション",
+      "summary": "コピーしたスライドを貼り付ける際に、元の書式を使うか貼り付け先の書式を使うか選べるオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0612"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作4",
+      "term": "スライドの背景の書式設定",
+      "summary": "個々のスライドまたはすべてのスライドに対して背景の色や画像を設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0613"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライド操作4",
+      "term": "すべてに適用(背景の書式設定)",
+      "summary": "個別のスライドに設定した背景を、プレゼンテーション全体に反映させるボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0614"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形4",
+      "term": "図形の効果ギャラリー",
+      "summary": "影・反射・光彩・面取り・3D回転などの視覚効果をまとめて選べるギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0615"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形4",
+      "term": "図形のスタイルギャラリー(PowerPoint)",
+      "summary": "塗りつぶしと枠線、効果が組み合わされた図形のデザインパターンを選ぶギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0616"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形4",
+      "term": "文字の方向(縦書き/横書き、PowerPoint)",
+      "summary": "テキストボックスや図形内の文字の向きを切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0617"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形4",
+      "term": "テキストの自動調整なし(オーバーフロー許可)",
+      "summary": "テキスト量が多くても文字サイズを縮小せず、はみ出したまま表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0618"
+    },
+    {
+      "lang": "ppt",
+      "category": "文字と図形4",
+      "term": "テキストボックスを図形に合わせて拡大",
+      "summary": "入力した文字量に応じてテキストボックス自体のサイズを自動的に広げる設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0619"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "図の圧縮(PowerPoint)",
+      "summary": "プレゼンテーション内の画像の解像度を下げ、ファイルサイズを削減する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0620"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "図のリセット(PowerPoint)",
+      "summary": "明るさや色調などの編集を取り消し、元の画像の状態に戻す機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0621"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "図の変更(PowerPoint)",
+      "summary": "位置とサイズを保ったまま、別の画像に差し替える機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0622"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "透明色の指定(図の書式、PowerPoint)",
+      "summary": "画像内の特定の色をクリックして透明にする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0623"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "図のスタイル(枠線のみ)",
+      "summary": "画像に単純な枠線だけを付けるシンプルな画像スタイル。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0624"
+    },
+    {
+      "lang": "ppt",
+      "category": "画像・図表4",
+      "term": "図形に合わせてトリミング(PowerPoint)",
+      "summary": "画像を任意の図形の輪郭に沿ってトリミングする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0625"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用3",
+      "term": "ロゴの固定配置(スライドマスター)",
+      "summary": "会社ロゴをスライドマスターに配置し、全スライドに自動的に表示されるようにする運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0626"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用3",
+      "term": "フッターの一括統一(スライドマスター)",
+      "summary": "すべてのスライドのフッター表記をスライドマスターで一括管理し統一する運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0627"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドマスターの実務応用3",
+      "term": "見出しスタイルの統一(スライドマスター)",
+      "summary": "タイトルのフォントやサイズをスライドマスターで一括設定し、デザインを統一する運用。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0628"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)3",
+      "term": "スライドの背景の書式設定ボタン(デザインタブ)",
+      "summary": "背景の書式設定作業ウィンドウを開くデザインタブのボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0629"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)3",
+      "term": "画面切り替えの並べ替えプレビュー",
+      "summary": "設定した切り替え効果をサムネイルペインでアイコンとして確認できる表示。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0630"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)3",
+      "term": "タイミング(秒数指定)ボタン(切り替えタブ)",
+      "summary": "画面切り替えにかかる時間を秒単位で数値指定するボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0631"
+    },
+    {
+      "lang": "ppt",
+      "category": "リボンの個別ボタン名(PowerPoint デザイン・切り替え・アニメーション)3",
+      "term": "アニメーションの詳細設定ボタン",
+      "summary": "選択したアニメーション効果に関する詳細オプションを開くボタン。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0632"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細3",
+      "term": "ビデオのスタイル(PowerPoint)",
+      "summary": "動画に枠や影などの装飾を適用するスタイルギャラリー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0633"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細3",
+      "term": "ビデオの自動再生設定",
+      "summary": "スライドが表示されると同時に動画を自動的に再生するかどうかの設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0634"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細3",
+      "term": "ビデオのフルスクリーン再生",
+      "summary": "再生時にスライド画面全体に動画を拡大表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0635"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細3",
+      "term": "オーディオアイコンの非表示設定",
+      "summary": "スライドショー再生時に音声アイコンを画面に表示しないようにする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0636"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのオーディオ・ビデオ詳細3",
+      "term": "再生中のメディアコントロールバー",
+      "summary": "動画や音声の再生中に表示される、再生・停止・音量を操作するバー。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0637"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務(PowerPoint)3",
+      "term": "PowerPointオンラインプレゼンテーション",
+      "summary": "インターネット上でURLを共有し、参加者がブラウザからスライドを閲覧できる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0638"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務(PowerPoint)3",
+      "term": "共有(編集可能なリンク、PowerPoint)",
+      "summary": "閲覧者がスライドを編集できる権限付きで共有リンクを発行するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0639"
+    },
+    {
+      "lang": "ppt",
+      "category": "配布・共有の実務(PowerPoint)3",
+      "term": "共有(閲覧のみのリンク、PowerPoint)",
+      "summary": "閲覧者が内容を変更できない権限で共有リンクを発行するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0640"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック3",
+      "term": "@メンション(コメント、PowerPoint)",
+      "summary": "コメント内で特定のユーザーを指定して通知を送る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0641"
+    },
+    {
+      "lang": "ppt",
+      "category": "スライドのレビュー・フィードバック3",
+      "term": "変更履歴の比較結果の反映(PowerPoint)",
+      "summary": "比較機能で検出した変更を、元のプレゼンテーションに反映させる操作。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0642"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ3",
+      "term": "アイコンを使った視覚的な整理",
+      "summary": "文字だけでなくアイコンを添えて情報を直感的に理解しやすくするデザインの工夫。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0643"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ3",
+      "term": "グリッドレイアウトの活用(PowerPoint)",
+      "summary": "要素を格子状に整列させ、整然とした印象のスライドを作るレイアウト手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0644"
+    },
+    {
+      "lang": "ppt",
+      "category": "デザインのコツ3",
+      "term": "余白を使った視線誘導",
+      "summary": "意図的に空白を配置することで、見る人の視線を重要な要素へ誘導するデザイン技法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0645"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識3",
+      "term": "ストーリーラインの設計",
+      "summary": "発表全体の流れを起承転結のように組み立てる資料構成の考え方。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0646"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識3",
+      "term": "エレベーターピッチ形式のスライド",
+      "summary": "短時間で要点を伝えることを意識した、簡潔な構成のスライド作成手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0647"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン資料作成の実務知識3",
+      "term": "データの出典明記",
+      "summary": "グラフや数値データのスライドに出典を記載する実務上のルール。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0648"
+    },
+    {
+      "lang": "ppt",
+      "category": "プレゼン進行の実務技術2",
+      "term": "聴衆の反応を見ながらのペース調整",
+      "summary": "発表中に聴衆の様子を観察し、説明のスピードや詳しさを調整する実務技術。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0649"
+    },
+    {
+      "lang": "ppt",
+      "category": "教育・研修でのPowerPoint活用3",
+      "term": "グループワーク用のスライドテンプレート",
+      "summary": "研修のグループワークで使う記入欄付きのスライドをあらかじめ用意しておく手法。",
+      "examples": [],
+      "pages": [],
+      "id": "ppt-0650"
     }
   ]
 }
