@@ -10350,6 +10350,735 @@
       "examples": [],
       "pages": [],
       "id": "word-1150"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の表示方法(すべての変更履歴/表示)",
+      "summary": "追加・削除・書式変更をすべて画面上に表示する変更履歴の表示モード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1151"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の表示方法(シンプルな変更履歴/表示)",
+      "summary": "変更箇所に印を付けるだけで、詳細な変更内容は表示しない簡易表示モード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1152"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の表示方法(変更履歴/コメントなし)",
+      "summary": "変更履歴やコメントを一時的に隠し、確定後の文章だけを表示するモード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1153"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の表示方法(初版)",
+      "summary": "変更履歴が記録される前の、元の文章を表示するモード。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1154"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更内容を確認(校閲ウィンドウ)",
+      "summary": "文書内のすべての変更履歴とコメントを一覧表示するパネル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1155"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "前の変更箇所へ移動",
+      "summary": "カーソルより前にある、直近の変更履歴やコメントへ移動するナビゲーション機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1156"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "次の変更箇所へ移動",
+      "summary": "カーソルより後にある、直近の変更履歴やコメントへ移動するナビゲーション機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1157"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の反映(承諾)",
+      "summary": "提案された変更内容を文章に確定して反映させる操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1158"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更履歴の削除(元に戻す)",
+      "summary": "提案された変更を取り消し、変更前の状態に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1159"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "すべての変更を反映(一括承諾)",
+      "summary": "文書内のすべての変更履歴を一度にまとめて承諾する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1160"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "変更者ごとの色分け表示",
+      "summary": "変更履歴を行った人物ごとに異なる色で表示し、誰の編集か識別しやすくする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1161"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "2つの文書の比較(新しいウィンドウ)",
+      "summary": "元の文書と変更後の文書を比較し、差異だけを表示した新規文書を作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1162"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "詳細な比較の設定(比較オプション)",
+      "summary": "単語単位・文字単位など、比較の粒度や対象項目を細かく設定するオプション。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1163"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの変更履歴・比較機能の運用詳細",
+      "term": "結合(複数レビュアーの変更履歴を統合)",
+      "summary": "複数人がそれぞれ編集した文書の変更履歴を1つの文書にまとめる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1164"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "コメントへの返信",
+      "summary": "既存のコメントに対して返信を投稿し、スレッド形式で議論する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1165"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "コメントを完了にする(解決)",
+      "summary": "対応が済んだコメントに完了マークを付け、グレー表示にする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1166"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "コメントの再開(未解決に戻す)",
+      "summary": "完了マークを付けたコメントを、再び未解決の状態に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1167"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "@メンション(コメント内)",
+      "summary": "コメント内で特定の人物を指定し、メールなどで通知を送る機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1168"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "コメントの削除",
+      "summary": "不要になったコメントを個別または一括で削除する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1169"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "インクコメント",
+      "summary": "タッチペンやマウスで手書きした注釈をコメントとして挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1170"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのコメント機能の運用詳細",
+      "term": "コメントの印刷設定",
+      "summary": "文書を印刷する際にコメントを一緒に印刷するかどうかを選ぶ設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1171"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "スタイルの変更(ダイアログ)",
+      "summary": "既存のスタイルのフォントや段落設定を直接編集するダイアログ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1172"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "スタイルに基づくスタイル",
+      "summary": "あるスタイルを基礎として、一部の書式だけを変更した新しいスタイルを作る仕組み。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1173"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "スタイルの表示順序の変更",
+      "summary": "スタイルウィンドウでのスタイルの並び順(アルファベット順、使用順など)を変更する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1174"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "おすすめのスタイルの表示/非表示",
+      "summary": "スタイルギャラリーに表示するスタイルを選別する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1175"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "テンプレートの変更(スタイルの読み込み)",
+      "summary": "別のテンプレートから使用中の文書にスタイルを読み込む機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1176"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "文書間でスタイルをコピー(オルガナイザー)",
+      "summary": "別の文書やテンプレートとの間でスタイルをコピーしたり削除したりする管理画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1177"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "リンクされたスタイル",
+      "summary": "文字と段落の両方の書式を1つのスタイルとして扱う、通常のスタイル種別。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1178"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "文字スタイルのみ",
+      "summary": "フォントや文字色など、文字単位の書式だけを管理するスタイル種別。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1179"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "段落スタイルのみ",
+      "summary": "インデントや行間など、段落単位の書式だけを管理するスタイル種別。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1180"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのスタイルの詳細管理機能",
+      "term": "表スタイル",
+      "summary": "枠線や塗りつぶしなど、表全体の書式をまとめて管理するスタイル種別。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1181"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "選択範囲をクイックパーツギャラリーに保存",
+      "summary": "選択した文章や図形を再利用可能な部品として登録する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1182"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "自動文章の挿入",
+      "summary": "クイックパーツに登録した定型文を、名前を入力して呼び出す機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1183"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "フィールドの挿入(クイックパーツ)",
+      "summary": "日付や作成者名など、自動更新される情報をクイックパーツから挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1184"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "文書プロパティの挿入(クイックパーツ)",
+      "summary": "タイトルや会社名などの文書プロパティを、文中に自動表示するフィールドとして挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1185"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "ビルディングブロックオーガナイザー",
+      "summary": "表紙、ヘッダー、透かしなど、登録済みのすべての部品を一覧・管理する画面。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1186"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "ギャラリーの指定(ビルディングブロック)",
+      "summary": "登録する部品を表紙・ヘッダー・目次などどのギャラリーに分類するかを指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1187"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "カテゴリの指定(ビルディングブロック)",
+      "summary": "ギャラリー内でさらに部品を分類するためのグループ名を指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1188"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのクイックパーツ・ビルディングブロックの運用",
+      "term": "Building Blocks.dotx",
+      "summary": "ユーザーが作成したクイックパーツなどを保存しておく専用のテンプレートファイル。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1189"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "ウィンドウを分割(分割バー)",
+      "summary": "1つの文書ウィンドウを上下2つに分け、別々の場所を同時に表示・編集する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1190"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "分割の解除",
+      "summary": "分割したウィンドウを元の1つのウィンドウに戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1191"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "並べて比較(ウィンドウ)",
+      "summary": "2つの文書を左右または上下に並べて同時に表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1192"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "同時スクロール",
+      "summary": "並べて比較している2つの文書を、同じ位置までスクロール連動させる機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1193"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "ウィンドウの位置をリセット",
+      "summary": "並べて比較した2つのウィンドウのサイズと位置を初期状態に戻す操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1194"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "新しいウィンドウを開く(同じ文書)",
+      "summary": "現在編集中の文書を、別のウィンドウで同時に開く機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1195"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "ウィンドウの切り替え(表示タブ)",
+      "summary": "現在開いている複数のWord文書の間を切り替えるメニュー。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1196"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "前へ戻る/次へ進む(編集箇所)",
+      "summary": "直前にカーソルを置いていた編集箇所へ移動するショートカット機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1197"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのナビゲーションとウィンドウ操作",
+      "term": "ジャンプ(Gotoコマンド)",
+      "summary": "ページ番号やセクション番号などを指定して、指定の位置へ一気に移動する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1198"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "片面印刷と袋とじ印刷の違い",
+      "summary": "用紙の片面だけに印刷する方式と、冊子状に製本するために特殊な配置で印刷する方式の違い。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1199"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "見開きページの設定",
+      "summary": "左右のページが対になった状態で、内側と外側のマージンを個別に設定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1200"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "とじ方向の指定",
+      "summary": "冊子を綴じる方向(左/上)に応じて余白の配置を調整する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1201"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "ミラー余白",
+      "summary": "見開きページで内側と外側の余白を左右対称に設定するレイアウト。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1202"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "見開きページに setting",
+      "summary": "左右ページが向かい合う本のレイアウトを前提にページ設定をする機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1203"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "袋とじ印刷の設定",
+      "summary": "1枚の用紙に2ページ分を印刷し、折って小冊子を作る印刷方式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1204"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの用紙・印刷に関する実務知識2",
+      "term": "小冊子の作成(複数ページ印刷)",
+      "summary": "A4用紙を折ってA5サイズの小冊子にするためのページ配置印刷。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1205"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "自動文章校正(英文法)",
+      "summary": "文法ミスや受動態の多用などを検出し、改善案を提示する英語向け校正機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1206"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "スペルチェックの言語設定",
+      "summary": "文書内の一部または全体に対して、チェックする言語を指定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1207"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "自動ハイフネーション",
+      "summary": "行末で単語が切れる際に、適切な位置にハイフンを自動挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1208"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "辞書の言語の切り替え",
+      "summary": "使用するスペルチェック用辞書を日本語・英語など切り替える設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1209"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "翻訳(選択範囲)",
+      "summary": "選択したテキストを別の言語に翻訳して表示する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1210"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "翻訳(文書全体)",
+      "summary": "文書全体を翻訳し、新しい文書として生成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1211"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの英語文書作成支援機能",
+      "term": "言語の分析(翻訳ツール)",
+      "summary": "文章の言語を自動的に判定する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1212"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "B4サイズ(JIS)",
+      "summary": "257mm×364mmの日本の標準規格用紙サイズ。ポスターや大判資料に使われる。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1213"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "B5サイズ(JIS)",
+      "summary": "182mm×257mmの日本の標準規格用紙サイズ。書籍や冊子によく使われる。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1214"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "レターサイズ",
+      "summary": "216mm×279mm(8.5×11インチ)の北米で標準的に使われる用紙サイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1215"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "リーガルサイズ",
+      "summary": "216mm×356mm(8.5×14インチ)の北米で契約書などに使われる用紙サイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1216"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "往復はがきサイズ",
+      "summary": "148mm×200mmの、往復はがき作成時に指定する用紙サイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1217"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "長形3号(封筒サイズ)",
+      "summary": "120mm×235mmの、A4用紙を三つ折りで入れられる日本の標準封筒サイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1218"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの印刷用紙サイズ・規格知識2",
+      "term": "角形2号(封筒サイズ)",
+      "summary": "240mm×332mmの、A4用紙を折らずに入れられる日本の標準封筒サイズ。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1219"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "オブジェクトの挿入(ファイルから)",
+      "summary": "Excelシートなど別のアプリで作成したファイルを、文書内に挿入する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1220"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "オブジェクトの埋め込み",
+      "summary": "元のファイルとの連携を切り、挿入した時点の内容を文書内に固定する方式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1221"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "オブジェクトへのリンク",
+      "summary": "元のファイルへの参照を保持し、元ファイルの更新内容が文書にも反映される方式。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1222"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "リンク先の更新(編集メニュー)",
+      "summary": "リンクされたオブジェクトの内容を、元ファイルの最新状態に更新する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1223"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "リンク先の変更",
+      "summary": "リンクされているオブジェクトの参照先ファイルを別のファイルに差し替える操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1224"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "リンクの解除",
+      "summary": "リンクされたオブジェクトを、現在の表示内容で固定された静的なデータに変換する操作。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1225"
+    },
+    {
+      "lang": "word",
+      "category": "Wordのオブジェクトの埋め込みとリンク",
+      "term": "アイコンとして表示(オブジェクト)",
+      "summary": "埋め込んだファイルを、内容ではなくアプリケーションのアイコンとして表示する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1226"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細",
+      "term": "ラベルの新規作成(図表番号)",
+      "summary": "「写真」や「資料」など、既定以外の独自の図表番号ラベルを作成する機能。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1227"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細",
+      "term": "番号書式の指定(図表番号)",
+      "summary": "図表番号に使う数字の形式(アラビア数字、ローマ数字など)を指定する設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1228"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細",
+      "term": "章番号を含める(図表番号)",
+      "summary": "見出しの章番号と連動させ、「図1-1」のような形式で番号付けする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1229"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細",
+      "term": "相互参照の種類(参照先)",
+      "summary": "見出し、図表番号、脚注、ブックマークなど、相互参照で参照できる対象の種類。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1230"
+    },
+    {
+      "lang": "word",
+      "category": "Wordの図表番号とクロスリファレンスの詳細",
+      "term": "ハイパーリクとして挿入(相互参照)",
+      "summary": "相互参照の文字列をクリックすると、該当箇所にジャンプできるようにする設定。",
+      "examples": [],
+      "pages": [],
+      "id": "word-1231"
     }
   ]
 }
