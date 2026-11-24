@@ -1,0 +1,283 @@
+# Ruby 文字列・日時・数値・Rake・Bundler・Minitest・Rack ほか（第10回）
+文字列 || String#center || 指定の幅で中央寄せにする。 || "a".center(5, "*") # => "**a**"
+文字列 || String#ljust || 指定の幅で左寄せにする。 || "a".ljust(3, ".")
+文字列 || String#rjust || 指定の幅で右寄せにする。 || "5".rjust(3, "0") # => "005"
+文字列 || String#squeeze || 連続する同じ文字を1つにまとめる。 || "aaabb".squeeze # => "ab"
+文字列 || String#tr || 文字を別の文字に置きかえる。 || "hello".tr("el", "ip")
+文字列 || String#delete || 指定した文字を取り除く。 || "hello".delete("l")
+文字列 || String#count || 指定した文字の数を数える。 || "hello".count("l")
+文字列 || String#each_char || 1文字ずつ取り出す。 || "abc".each_char { |c| p c }
+文字列 || String#each_line || 1行ずつ取り出す。 || text.each_line { |l| puts l }
+文字列 || String#chars || 文字の配列にする。 || "abc".chars
+文字列 || String#bytes || バイトの配列にする。 || "a".bytes # => [97]
+文字列 || String#bytesize || バイト数を返す。 || "あ".bytesize # => 3
+文字列 || String#unpack || バイナリを決まった形式で読み取る。 || "abc".unpack("C*")
+文字列 || Array#pack || 値をバイナリ文字列にまとめる。 || [97, 98].pack("C*")
+文字列 || String#encode || 文字コードを変換する。 || s.encode("UTF-8", "Shift_JIS")
+文字列 || String#force_encoding || 中身を変えずに文字コードの指定だけを変える。 || s.force_encoding("UTF-8")
+文字列 || String#valid_encoding? || 文字コードとして正しいか調べる。 || s.valid_encoding?
+文字列 || String#scrub || 不正なバイトを置きかえる。 || s.scrub("?")
+文字列 || String#unicode_normalize || Unicode の正規化を行う。 || s.unicode_normalize(:nfkc)
+文字列 || String#casecmp? || 大文字小文字を区別せず等しいか調べる。 || "a".casecmp?("A")
+文字列 || String#swapcase || 大文字と小文字を入れかえる。 || "aB".swapcase
+文字列 || String#capitalize || 先頭だけ大文字にする。 || "hello".capitalize
+文字列 || String#start_with? || 先頭が指定の文字列か調べる。 || "hello".start_with?("he")
+文字列 || String#end_with? || 末尾が指定の文字列か調べる。 || "hello".end_with?("lo")
+文字列 || String#delete_prefix || 先頭の指定部分を取り除く。 || "v1.0".delete_prefix("v")
+文字列 || String#delete_suffix || 末尾の指定部分を取り除く。 || "a.rb".delete_suffix(".rb")
+文字列 || String#partition || 最初の区切りで3つに分ける。 || "a=b=c".partition("=")
+文字列 || String#rpartition || 最後の区切りで3つに分ける。 || "a=b=c".rpartition("=")
+文字列 || String#lines || 行の配列にする。 || "a\nb".lines
+文字列 || String#succ || 次の文字列を返す。 || "az".succ # => "ba"
+文字列 || String#ord || 先頭文字のコード番号を返す。 || "a".ord # => 97
+文字列 || Integer#chr || コード番号から文字を返す。 || 97.chr
+文字列 || String#hex || 16進の文字列を整数にする。 || "ff".hex # => 255
+文字列 || String#oct || 8進の文字列を整数にする。 || "17".oct # => 15
+文字列 || String#crypt || 文字列を一方向に変換する。 || "a".crypt("ab")
+文字列 || String#% || 書式を指定して文字列を作る。 || "%05.2f" % 3.14159
+文字列 || Kernel#format || 書式を指定して文字列を作る。 || format("%-5s|%3d", "ab", 7)
+文字列 || String#sub! || 最初の一致を置きかえ、元の文字列を変更する。 || s.sub!("a", "b")
+文字列 || String#gsub! || すべての一致を置きかえ、元の文字列を変更する。 || s.gsub!(/\s+/, " ")
+文字列 || String#scan || 一致する部分をすべて取り出す。 || "a1b2".scan(/\d/)
+文字列 || String#match? || 一致するかを真偽で返す。 || "abc".match?(/b/)
+文字列 || String#slice || 一部を取り出す。 || "hello".slice(1, 3)
+文字列 || String#insert || 指定の位置に文字列を差しこむ。 || "ac".insert(1, "b")
+文字列 || String#prepend || 先頭に文字列を足す。 || s.prepend("> ")
+文字列 || String#concat || 末尾に文字列を足す。 || s.concat("!")
+文字列 || String#freeze || 文字列を変更できなくする。 || s.freeze
+文字列 || String#+@ || 凍結されていれば複製した、変更できる文字列を返す。 || t = +"a"
+文字列 || String#-@ || 重複をなくして凍結した文字列を返す。 || t = -"a"
+文字列 || ヒアドキュメント || 複数行の文字列を書く構文。 || text = <<~EOS\n  hello\nEOS
+文字列 || %w と %i || 文字列またはシンボルの配列を短く書く。 || %w[a b c]
+文字列 || String#unpack1 || unpack の最初の値だけを返す。 || "abc".unpack1("a")
+文字列 || Symbol#to_proc || シンボルをブロックに変換する。 || :upcase.to_proc.call("a")
+文字列 || Symbol#<=> || シンボルどうしを比べる。 || :a <=> :b
+日時 || Time.now || 現在の日時を返す。 || Time.now
+日時 || Time.at || 秒数から時刻を作る。 || Time.at(0)
+日時 || Time.new || 年月日などを指定して時刻を作る。 || Time.new(2026, 11, 25)
+日時 || Time#strftime || 書式を指定して日時を文字列にする。 || t.strftime("%Y-%m-%d %H:%M")
+日時 || Time.parse || 文字列から時刻を作る（require "time"）。 || Time.parse("2026-11-25 10:00")
+日時 || Time.iso8601 || ISO 8601 の文字列から時刻を作る。 || Time.iso8601("2026-11-25T10:00:00+09:00")
+日時 || Time#iso8601 || ISO 8601 の形式の文字列にする。 || t.iso8601
+日時 || Time#utc || UTC（世界協定時）に変える。 || t.utc
+日時 || Time#localtime || 地域の時刻に変える。 || t.localtime
+日時 || Time#wday || 曜日を0〜6の数で返す。 || t.wday
+日時 || Time#yday || その年の何日目かを返す。 || t.yday
+日時 || Time#to_i || 秒数（エポック秒）に変える。 || t.to_i
+日時 || Time#round || 小数秒を丸める。 || t.round(3)
+日時 || Time#+ と - || 秒数を足し引きする。 || t + 3600
+日時 || Date.today || 今日の日付を返す。 || Date.today
+日時 || Date.new || 年月日を指定して日付を作る。 || Date.new(2026, 11, 25)
+日時 || Date.parse || 文字列から日付を作る。 || Date.parse("2026-11-25")
+日時 || Date.valid_date? || 存在する日付かを調べる。 || Date.valid_date?(2026, 2, 30)
+日時 || Date.leap? || うるう年かを調べる。 || Date.leap?(2028)
+日時 || Date#>> と << || 月を進める・戻す。 || d >> 1
+日時 || Date#next_day || 翌日以降の日付を返す。 || d.next_day(3)
+日時 || Date#prev_month || 前の月の同じ日を返す。 || d.prev_month
+日時 || Date#cwday || 曜日を1（月）〜7（日）で返す。 || d.cwday
+日時 || Date#cweek || 週番号を返す。 || d.cweek
+日時 || Date#end_of_month 相当 || 月末の日付を求める。 || Date.new(y, m, -1)
+日時 || DateTime || 日付と時刻を合わせて扱うクラス。 || DateTime.now
+日時 || Date#step || 日付を一定の間隔でたどる。 || d1.step(d2, 7) { |d| p d }
+日時 || Date#strftime || 日付を書式つきの文字列にする。 || d.strftime("%Y年%m月%d日")
+日時 || Time.zone || Rails で使う現在のタイムゾーン。 || Time.zone.now
+日時 || ENV["TZ"] || プロセスのタイムゾーンを決める環境変数。 || ENV["TZ"] = "Asia/Tokyo"
+数値 || Integer#times || 回数だけくり返す。 || 3.times { |i| p i }
+数値 || Integer#upto || 指定の数まで増やしながらくり返す。 || 1.upto(3) { |i| p i }
+数値 || Integer#downto || 指定の数まで減らしながらくり返す。 || 3.downto(1) { |i| p i }
+数値 || Integer#step || 一定の間隔でくり返す。 || 1.step(10, 3) { |i| p i }
+数値 || Integer#digits || 各桁の数を下の桁から配列にする。 || 123.digits # => [3, 2, 1]
+数値 || Integer#pow || べき乗を求める。割る数を渡すと余りも求める。 || 2.pow(10, 1000)
+数値 || Integer.sqrt || 整数の平方根（切り捨て）を返す。 || Integer.sqrt(17) # => 4
+数値 || Integer#gcd || 最大公約数を返す。 || 12.gcd(18)
+数値 || Integer#lcm || 最小公倍数を返す。 || 4.lcm(6)
+数値 || Integer#divmod || 商と余りを同時に返す。 || 7.divmod(2) # => [3, 1]
+数値 || Integer#fdiv || 小数の割り算をする。 || 7.fdiv(2) # => 3.5
+数値 || Integer#bit_length || 必要なビット数を返す。 || 255.bit_length # => 8
+数値 || Integer#to_s(base) || 指定した進数の文字列にする。 || 255.to_s(2)
+数値 || Integer#ceil と floor || 桁を指定して切り上げ・切り捨てする。 || 1234.ceil(-2) # => 1300
+数値 || Integer#pred と succ || 1つ前と1つ後の数を返す。 || 5.succ
+数値 || Integer#zero? || 0かどうかを調べる。 || 0.zero?
+数値 || Integer#positive? || 正の数かを調べる。 || 5.positive?
+数値 || Float#round || 小数を四捨五入する。 || 3.14159.round(2)
+数値 || Float#floor || 小数を切り捨てる。 || 3.9.floor
+数値 || Float#ceil || 小数を切り上げる。 || 3.1.ceil
+数値 || Float#truncate || 小数部分を捨てる。 || -3.9.truncate # => -3
+数値 || Float#nan? || 数ではない値かを調べる。 || (0.0 / 0.0).nan?
+数値 || Float#infinite? || 無限大かを調べる。 || (1 / 0.0).infinite?
+数値 || Float::EPSILON || 1と次の数との差の最小値。 || (a - b).abs < Float::EPSILON
+数値 || Float::INFINITY || 正の無限大。 || Float::INFINITY
+数値 || Float::MAX || 表せる最大の小数。 || Float::MAX
+数値 || Float::DIG || 誤差なく扱える十進の桁数。 || Float::DIG
+数値 || Rational || 分数を正確に扱う数。 || Rational(1, 3)
+数値 || Complex || 複素数を扱う数。 || Complex(1, 2)
+数値 || BigDecimal || 十進の小数を正確に扱う数。 || BigDecimal("0.1") + BigDecimal("0.2")
+数値 || Math.sqrt || 平方根を返す。 || Math.sqrt(16)
+数値 || Math.hypot || 直角三角形の斜辺の長さを返す。 || Math.hypot(3, 4) # => 5.0
+数値 || Math.log || 自然対数を返す。 || Math.log(Math::E)
+数値 || Math.log2 || 2を底とする対数を返す。 || Math.log2(8)
+数値 || Math.sin と cos || 三角関数を返す。 || Math.sin(Math::PI / 2)
+数値 || Math::PI || 円周率。 || Math::PI
+数値 || Random.new || 種を指定できる乱数生成器。 || r = Random.new(42); r.rand(10)
+数値 || Random.rand || 乱数を返す。 || Random.rand(1..6)
+数値 || Kernel#rand || 簡単な乱数を返す。 || rand(100)
+数値 || Kernel#srand || 乱数の種を決める。 || srand(1)
+数値 || Array#sample || 配列から無作為に選ぶ。 || [1, 2, 3].sample
+数値 || Array#shuffle || 配列をシャッフルする。 || [1, 2, 3].shuffle(random: Random.new(1))
+数値 || SecureRandom.hex || 安全な乱数の16進文字列を返す。 || SecureRandom.hex(8)
+数値 || SecureRandom.uuid || UUID を作る。 || SecureRandom.uuid
+Range || Range#step || 範囲を一定の間隔でたどる。 || (0..1).step(0.25).to_a
+Range || Range#cover? || 範囲に含まれるかを調べる。 || (1..5).cover?(3)
+Range || Range#% || step と同じ働きをする。 || ((1..10) % 3).to_a
+Range || 終わりなしの範囲 || 終点を省略した範囲。 || (1..)
+Range || 始まりなしの範囲 || 始点を省略した範囲。 || (..5)
+Range || Range#overlap? || 2つの範囲が重なるかを調べる（Ruby 3.3以降）。 || (1..3).overlap?(2..5)
+Range || Range#minmax || 範囲の最小と最大を返す。 || (1..5).minmax
+Range || Range#sum || 範囲の合計を返す。 || (1..100).sum
+Rake || Rakefile || Rake のタスクを書くファイル。 || task :default => [:test]
+Rake || Rake task || 名前をつけた処理のまとまり。 || task :hello do puts "hi" end
+Rake || Rake namespace || タスクを名前の階層でまとめる。 || namespace :db do task :seed do end end
+Rake || Rake desc || タスクの説明を書く。 || desc "データを入れる"
+Rake || Rake file task || ファイルの更新に応じて動くタスク。 || file "a.o" => "a.c" do sh "cc -c a.c" end
+Rake || Rake sh || 外部コマンドを実行する。 || sh "ls -l"
+Rake || rake -T || タスクの一覧を表示する。 || rake -T
+Rake || Rake::TestTask || テストを実行するタスクを作る。 || Rake::TestTask.new
+Bundler || Gemfile || 使う gem の一覧を書くファイル。 || gem "rails", "~> 8.0"
+Bundler || Gemfile.lock || 実際に入った gem の版を記録するファイル。 || # bundle install で更新
+Bundler || bundle install || Gemfile の gem を入れる。 || bundle install
+Bundler || bundle exec || Gemfile の版で実行する。 || bundle exec rspec
+Bundler || bundle update || gem を新しい版に更新する。 || bundle update rails
+Bundler || bundle outdated || 古くなっている gem を表示する。 || bundle outdated
+Bundler || bundle add || Gemfile に gem を追加する。 || bundle add sinatra
+Bundler || bundle config || Bundler の設定を変える。 || bundle config set path vendor/bundle
+Bundler || group :development || 開発のときだけ使う gem をまとめる。 || group :development do gem "rubocop" end
+Bundler || bundle audit || 脆弱性のある gem を調べる（bundler-audit）。 || bundle audit check --update
+Bundler || ruby バージョン指定 || Gemfile で Ruby の版を決める。 || ruby "3.3.0"
+Bundler || gemspec || 自作 gem の情報を書くファイル。 || Gem::Specification.new do |s| s.name = "mygem" end
+Bundler || gem build || gem を作る。 || gem build mygem.gemspec
+Bundler || gem push || gem を公開する。 || gem push mygem-0.1.0.gem
+Bundler || gem list || 入っている gem の一覧を表示する。 || gem list
+Minitest || Minitest::Test || Minitest のテストの基本クラス。 || class CalcTest < Minitest::Test; end
+Minitest || assert_equal || 期待値と実際の値が等しいか検証する。 || assert_equal 4, 2 + 2
+Minitest || assert_nil || nil であることを検証する。 || assert_nil obj
+Minitest || assert_raises || 例外が起きることを検証する。 || assert_raises(ArgumentError) { f }
+Minitest || assert_in_delta || 小数が誤差の範囲で等しいか検証する。 || assert_in_delta 0.3, 0.1 + 0.2, 0.001
+Minitest || refute || 条件が偽であることを検証する。 || refute x.empty?
+Minitest || setup || 各テストの前に実行される準備。 || def setup; @a = Calc.new; end
+Minitest || teardown || 各テストの後に実行される片づけ。 || def teardown; end
+Minitest || Minitest::Spec || describe と it で書くスタイル。 || describe Calc do it "adds" do end end
+Minitest || Minitest::Mock || 偽のオブジェクトを作る。 || m = Minitest::Mock.new
+Minitest || skip || テストをとばす。 || skip "あとで"
+Rack || Rack アプリ || call(env) に応答する Ruby のオブジェクト。 || ->(env) { [200, {}, ["ok"]] }
+Rack || env ハッシュ || リクエストの情報をまとめたハッシュ。 || env["REQUEST_METHOD"]
+Rack || Rack ミドルウェア || アプリの前後に処理をはさむ部品。 || use Rack::Deflater
+Rack || config.ru || Rack アプリを起動する設定ファイル。 || run MyApp.new
+Rack || Rack::Request || env を扱いやすくする。 || Rack::Request.new(env).params
+Rack || Rack::Response || 応答を組み立てる。 || Rack::Response.new("hi", 200)
+Rack || Rack::Static || 静的なファイルを配信する。 || use Rack::Static, urls: ["/css"]
+Rack || Rack::Session::Cookie || セッションを Cookie に保存する。 || use Rack::Session::Cookie, secret: ENV["SECRET"]
+Rack || Rack::Attack || 過剰なアクセスを制限する。 || Rack::Attack.throttle("req/ip", limit: 60, period: 60)
+Rack || rackup || Rack アプリを起動するコマンド。 || rackup config.ru
+Sinatra || Sinatra get || GET の道筋を定義する。 || get "/" do "hello" end
+Sinatra || Sinatra post || POST の道筋を定義する。 || post "/items" do params[:name] end
+Sinatra || Sinatra before || 各リクエストの前に実行する。 || before { content_type :json }
+Sinatra || Sinatra halt || 処理を途中で打ち切って応答する。 || halt 404, "not found"
+Sinatra || Sinatra erb || ERB のテンプレートを表示する。 || erb :index
+Sinatra || Sinatra settings || アプリの設定を保持する。 || set :port, 4567
+Sinatra || Sinatra helpers || テンプレートでも使える補助メソッド。 || helpers do def h(t) = Rack::Utils.escape_html(t) end
+Sinatra || Sinatra redirect || 別の場所へ転送する。 || redirect "/login"
+Sinatra || Sinatra session || セッションを使う。 || enable :sessions
+Sinatra || Sinatra Base || モジュール形式のアプリの基底クラス。 || class App < Sinatra::Base; end
+Kernel || Kernel#puts || 改行つきで出力する。 || puts "hi"
+Kernel || Kernel#print || 改行なしで出力する。 || print "a"
+Kernel || Kernel#p || 検査した形で出力する。 || p [1, "a"]
+Kernel || Kernel#pp || 見やすく整形して出力する。 || pp({a: {b: 1}})
+Kernel || Kernel#gets || 標準入力から1行を読む。 || line = gets
+Kernel || Kernel#sleep || 指定した秒数だけ待つ。 || sleep 0.5
+Kernel || Kernel#loop || 無限にくり返す。 || loop { break }
+Kernel || Kernel#catch と throw || 深い入れ子から一気に抜ける。 || catch(:done) { throw :done }
+Kernel || Kernel#raise || 例外を発生させる。 || raise ArgumentError, "bad"
+Kernel || Kernel#require_relative || 相対パスでファイルを読みこむ。 || require_relative "lib/util"
+Kernel || Kernel#autoload || 初めて使うときに読みこむ。 || autoload :Foo, "foo"
+Kernel || Kernel#Integer || 厳密に整数へ変換する。 || Integer("12")
+Kernel || Kernel#Float || 厳密に小数へ変換する。 || Float("1.5")
+Kernel || Kernel#Array || 配列に変換する。 || Array(nil) # => []
+Kernel || Kernel#binding || 現在の変数の状態を返す。 || binding.local_variables
+Kernel || Kernel#caller || 呼び出しの履歴を返す。 || caller.first
+Kernel || Kernel#warn || 標準エラーに警告を出す。 || warn "注意"
+Kernel || Kernel#object_id || オブジェクトの識別番号を返す。 || "a".object_id
+Kernel || Kernel#instance_of? || そのクラス自身かを調べる。 || 1.instance_of?(Integer)
+Kernel || Kernel#kind_of? || そのクラスか上位かを調べる。 || 1.kind_of?(Numeric)
+Kernel || Kernel#frozen? || 凍結されているかを調べる。 || :a.frozen?
+Kernel || Kernel#__method__ || 現在のメソッド名を返す。 || __method__
+Kernel || __FILE__ と $0 || 現在のファイルと実行されたファイルを表す。 || if __FILE__ == $0 then main end
+Kernel || Kernel#trap || シグナルの処理を登録する。 || trap("INT") { exit }
+Kernel || ARGV || コマンドラインの引数の配列。 || ARGV[0]
+Kernel || ENV || 環境変数を扱うオブジェクト。 || ENV.fetch("HOME")
+Kernel || STDIN と STDOUT || 標準入力と標準出力を表す。 || STDOUT.puts "hi"
+Kernel || $stdout.sync || 出力をすぐに流す設定。 || $stdout.sync = true
+Kernel || $PROGRAM_NAME || 実行中のプログラム名。 || $PROGRAM_NAME
+Kernel || $LOAD_PATH || ファイルを探すフォルダの一覧。 || $LOAD_PATH.unshift("lib")
+Kernel || $; と $, || 区切りに使う古いグローバル変数。 || # 現在は非推奨
+Kernel || RUBY_VERSION || Ruby の版を表す定数。 || puts RUBY_VERSION
+Kernel || RUBY_PLATFORM || 実行環境の種類を表す定数。 || RUBY_PLATFORM
+Kernel || DATA と __END__ || ファイルの末尾に書いたデータを読む。 || DATA.read
+Kernel || BEGIN と END || プログラムの最初と最後に実行するブロック。 || END { puts "bye" }
+ファイル || File.read || ファイルの中身を丸ごと読む。 || File.read("a.txt")
+ファイル || File.write || ファイルへ文字列を書きこむ。 || File.write("a.txt", "hi")
+ファイル || File.readlines || 行の配列として読む。 || File.readlines("a.txt", chomp: true)
+ファイル || File.foreach || 1行ずつ処理する。 || File.foreach("a.txt") { |l| puts l }
+ファイル || File.open || ファイルを開いてブロックの後に閉じる。 || File.open("a.txt", "a") { |f| f.puts "x" }
+ファイル || File.exist? || 存在するか調べる。 || File.exist?("a.txt")
+ファイル || File.basename || パスの最後の名前を返す。 || File.basename("/a/b.rb", ".rb")
+ファイル || File.dirname || パスの上のフォルダを返す。 || File.dirname("/a/b.rb")
+ファイル || File.extname || 拡張子を返す。 || File.extname("a.rb")
+ファイル || File.join || パスを区切り文字でつなげる。 || File.join("a", "b")
+ファイル || File.expand_path || 絶対パスにする。 || File.expand_path("../a", __FILE__)
+ファイル || File.stat || ファイルの情報を返す。 || File.stat("a.txt").size
+ファイル || File.mtime || 最終更新時刻を返す。 || File.mtime("a.txt")
+ファイル || File.rename || 名前を変える。 || File.rename("a", "b")
+ファイル || File.delete || ファイルを消す。 || File.delete("a.txt")
+ファイル || File.chmod || 権限を変える。 || File.chmod(0644, "a.txt")
+ファイル || File.flock || ファイルに鍵をかける。 || f.flock(File::LOCK_EX)
+ファイル || FileUtils.mkdir_p || 途中のフォルダも含めて作る。 || FileUtils.mkdir_p("a/b")
+ファイル || FileUtils.cp_r || フォルダを中身ごとコピーする。 || FileUtils.cp_r("a", "b")
+ファイル || FileUtils.rm_rf || フォルダを中身ごと強制的に消す。 || FileUtils.rm_rf("tmp")
+ファイル || FileUtils.touch || 空のファイルを作る、または更新時刻を変える。 || FileUtils.touch("a.txt")
+ファイル || Dir.glob || パターンに合うファイルを探す。 || Dir.glob("**/*.rb")
+ファイル || Dir.mkdir || フォルダを作る。 || Dir.mkdir("out")
+ファイル || Dir.children || フォルダ直下の名前を返す。 || Dir.children(".")
+ファイル || Dir.mktmpdir || 一時フォルダを作る。 || Dir.mktmpdir { |d| p d }
+ファイル || Tempfile || 一時ファイルを作る。 || Tempfile.create("a") { |f| f.write("x") }
+ファイル || Pathname || パスをオブジェクトとして扱う。 || Pathname.new("a") + "b"
+ファイル || IO.pipe || 読み取りと書き込みの管を作る。 || r, w = IO.pipe
+ファイル || IO#each_line || 1行ずつ読む。 || io.each_line { |l| p l }
+ファイル || IO#readpartial || 読める分だけを読む。 || io.readpartial(1024)
+ファイル || IO.select || 複数の入出力の準備ができるまで待つ。 || IO.select([io], nil, nil, 1)
+ファイル || StringIO || 文字列をファイルのように扱う。 || io = StringIO.new("a\nb")
+ファイル || CSV.parse || CSV の文字列を読み取る。 || CSV.parse("a,b\n1,2", headers: true)
+ファイル || CSV.foreach || CSV ファイルを1行ずつ読む。 || CSV.foreach("a.csv", headers: true) { |r| p r }
+ファイル || CSV.generate || CSV の文字列を作る。 || CSV.generate { |csv| csv << [1, 2] }
+ファイル || JSON.parse || JSON の文字列をハッシュにする。 || JSON.parse('{"a":1}', symbolize_names: true)
+ファイル || JSON.generate || オブジェクトを JSON の文字列にする。 || JSON.generate({a: 1})
+ファイル || JSON.pretty_generate || 見やすく整形した JSON にする。 || puts JSON.pretty_generate(h)
+ファイル || YAML.load_file || YAML ファイルを読む。 || YAML.load_file("config.yml")
+ファイル || YAML.safe_load || 安全に YAML を読む。 || YAML.safe_load(text, permitted_classes: [Date])
+ファイル || Marshal.dump || オブジェクトをバイト列にする。 || Marshal.dump(obj)
+ファイル || Marshal.load || バイト列からオブジェクトに戻す。 || Marshal.load(data)
+ファイル || Zlib::GzipWriter || gzip 形式で書き込む。 || Zlib::GzipWriter.open("a.gz") { |gz| gz.write "x" }
+ファイル || Digest::SHA256 || SHA-256 のハッシュ値を求める。 || Digest::SHA256.hexdigest("a")
+ファイル || Base64.strict_encode64 || 改行なしの Base64 にする。 || Base64.strict_encode64("hi")
+ファイル || OpenSSL::HMAC || 改ざん検知の署名を作る。 || OpenSSL::HMAC.hexdigest("SHA256", key, data)
+ファイル || Net::HTTP.get || URL の内容を取得する。 || Net::HTTP.get(URI("https://example.com"))
+ファイル || URI.parse || URL を部品に分ける。 || URI.parse("https://a.com/b").host
+ファイル || URI.encode_www_form || パラメータを URL の形式にする。 || URI.encode_www_form(q: "a b")
+ファイル || Socket || 通信の口を扱う。 || TCPSocket.new("localhost", 3000)
+ファイル || Timeout.timeout || 時間がかかりすぎたら中断する。 || Timeout.timeout(3) { work }
+ファイル || Benchmark.measure || 処理にかかった時間を測る。 || Benchmark.measure { work }
+ファイル || Logger || 記録を出力する。 || Logger.new($stdout).info("start")
+ファイル || OptionParser || コマンドラインのオプションを解析する。 || OptionParser.new { |o| o.on("-v") }.parse!
+ファイル || ERB.new || テンプレートから文字列を作る。 || ERB.new("<%= 1 + 1 %>").result
+ファイル || Forwardable || 別のオブジェクトへ処理を任せる。 || def_delegators :@items, :size, :each
+ファイル || Singleton || インスタンスを1つに限る。 || include Singleton
+ファイル || Observable || 変化を知らせる仕組み。 || include Observable

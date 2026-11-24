@@ -1,0 +1,205 @@
+# Ruby Enumerable・Comparable・Fiber・Thread・Process ほか（第9回）
+Enumerable || Enumerable#map || 各要素を変換した新しい配列を返す。 || [1, 2, 3].map { |x| x * 2 } # => [2, 4, 6]
+Enumerable || Enumerable#flat_map || 変換した結果の配列を1段平らにしてつなげる。 || [[1, 2], [3]].flat_map { |a| a } # => [1, 2, 3]
+Enumerable || Enumerable#select || 条件に合う要素だけを返す。 || (1..6).select(&:even?) # => [2, 4, 6]
+Enumerable || Enumerable#filter_map || 変換して、nil や false を取り除く。 || [1, 2, 3].filter_map { |x| x * 2 if x.odd? } # => [2, 6]
+Enumerable || Enumerable#reject || 条件に合う要素を取り除く。 || (1..6).reject(&:even?) # => [1, 3, 5]
+Enumerable || Enumerable#partition || 条件で2つの配列に分ける。 || (1..6).partition(&:even?) # => [[2, 4, 6], [1, 3, 5]]
+Enumerable || Enumerable#group_by || 条件の値ごとにハッシュへまとめる。 || %w[a bb c].group_by(&:size) # => {1=>["a", "c"], 2=>["bb"]}
+Enumerable || Enumerable#chunk_while || 隣り合う要素の関係が続く間でまとめる。 || [1, 2, 4, 5, 7].chunk_while { |a, b| b == a + 1 }.to_a
+Enumerable || Enumerable#slice_when || 隣り合う要素が条件を満たしたところで区切る。 || [1, 2, 4, 5].slice_when { |a, b| b != a + 1 }.to_a
+Enumerable || Enumerable#each_slice || n 個ずつに分けて処理する。 || (1..5).each_slice(2).to_a # => [[1, 2], [3, 4], [5]]
+Enumerable || Enumerable#each_cons || 1つずつずらしながら n 個の窓を作る。 || (1..4).each_cons(2).to_a # => [[1, 2], [2, 3], [3, 4]]
+Enumerable || Enumerable#each_with_index || 要素と添字を同時に取り出す。 || %w[a b].each_with_index { |s, i| puts "#{i}:#{s}" }
+Enumerable || Enumerable#each_with_object || 結果を入れる入れ物を持ち回りながら処理する。 || %w[a b].each_with_object({}) { |s, h| h[s] = s.upcase }
+Enumerable || Enumerable#inject || 要素を順に畳み込んで1つの値にする。 || [1, 2, 3].inject(:+) # => 6
+Enumerable || Enumerable#reduce || inject の別名。 || [1, 2, 3].reduce(1) { |a, b| a * b } # => 6
+Enumerable || Enumerable#sum || 合計を返す。 || [1, 2, 3].sum # => 6
+Enumerable || Enumerable#tally || 同じ要素の数を数えてハッシュにする。 || %w[a b a].tally # => {"a"=>2, "b"=>1}
+Enumerable || Enumerable#tally_by || ブロックの結果ごとに数える。 || [1, 2, 3].tally_by(&:odd?) # => {true=>2, false=>1}
+Enumerable || Enumerable#zip || 複数の配列を組にして並べる。 || [1, 2].zip([3, 4]) # => [[1, 3], [2, 4]]
+Enumerable || Enumerable#min_by || ブロックの値が最小の要素を返す。 || %w[aaa b cc].min_by(&:size) # => "b"
+Enumerable || Enumerable#max_by || ブロックの値が最大の要素を返す。 || %w[aaa b cc].max_by(&:size) # => "aaa"
+Enumerable || Enumerable#minmax || 最小と最大を同時に返す。 || [3, 1, 2].minmax # => [1, 3]
+Enumerable || Enumerable#sort_by || ブロックの値で並べ替える。 || %w[bb a ccc].sort_by(&:size)
+Enumerable || Enumerable#take_while || 条件が真の間、先頭から取り出す。 || [1, 2, 5, 1].take_while { |x| x < 3 } # => [1, 2]
+Enumerable || Enumerable#drop_while || 条件が真の間は読み飛ばし、残りを返す。 || [1, 2, 5, 1].drop_while { |x| x < 3 } # => [5, 1]
+Enumerable || Enumerable#find || 条件に合う最初の要素を返す。 || [1, 2, 3].find { |x| x > 1 } # => 2
+Enumerable || Enumerable#find_index || 条件に合う最初の位置を返す。 || [1, 2, 3].find_index(2) # => 1
+Enumerable || Enumerable#all? || すべての要素が条件を満たすか調べる。 || [2, 4].all?(&:even?) # => true
+Enumerable || Enumerable#any? || 条件を満たす要素が1つでもあるか調べる。 || [1, 2].any?(&:even?) # => true
+Enumerable || Enumerable#none? || 条件を満たす要素が1つもないか調べる。 || [1, 3].none?(&:even?) # => true
+Enumerable || Enumerable#one? || 条件を満たす要素がちょうど1つか調べる。 || [1, 2].one?(&:even?) # => true
+Enumerable || Enumerable#include? || 要素が含まれるか調べる。 || [1, 2].include?(2) # => true
+Enumerable || Enumerable#count || 要素の数や条件に合う数を返す。 || [1, 2, 3].count(&:odd?) # => 2
+Enumerable || Enumerable#first || 先頭の要素、または先頭 n 個を返す。 || (1..5).first(2) # => [1, 2]
+Enumerable || Enumerable#lazy || 必要になるまで計算しない遅延評価の列にする。 || (1..Float::INFINITY).lazy.map { |x| x * 2 }.first(3)
+Enumerable || Enumerable#each_entry || 複数の値を yield する要素を1つにまとめて取り出す。 || obj.each_entry { |e| p e }
+Enumerable || Enumerable#cycle || 要素をくり返し無限に取り出す。 || [1, 2].cycle.first(5)
+Enumerable || Enumerable#uniq || 重複を取り除く。 || [1, 1, 2].uniq # => [1, 2]
+Enumerable || Enumerable#to_set || Set に変換する。 || [1, 1, 2].to_set
+Enumerable || Enumerable#to_h || 組の列からハッシュを作る。 || [[:a, 1]].to_h # => {a: 1}
+Enumerable || Enumerable#sum の小数誤差補正 || 浮動小数点の合計を誤差少なく計算する。 || [0.1, 0.2, 0.3].sum # => 0.6
+Enumerable || Enumerable#compact || nil を取り除く（Ruby 3.1以降）。 || [1, nil].each_entry.to_a.compact
+Enumerable || Enumerable#step || 一定の間隔で値を取り出す（Range など）。 || (1..10).step(3).to_a # => [1, 4, 7, 10]
+Enumerable || Enumerator || 値を順に取り出す仕組みを表すオブジェクト。 || e = [1, 2, 3].each; e.next
+Enumerable || Enumerator::Lazy || 遅延評価する列を表すクラス。 || (1..3).lazy.select(&:odd?)
+Enumerable || Enumerator::Yielder || Enumerator.new のブロックで値を渡す相手。 || Enumerator.new { |y| y << 1 << 2 }
+Enumerable || Enumerator#next || 次の値を取り出す。 || e.next
+Enumerable || Enumerator#peek || 次の値を取り出さずに見る。 || e.peek
+Enumerable || Enumerator#rewind || 最初に巻き戻す。 || e.rewind
+Enumerable || Enumerator#with_index || 添字つきで繰り返す。 || %w[a b].each.with_index(1) { |s, i| p [i, s] }
+Enumerable || Enumerator#size || 要素数を返す（わかる場合）。 || [1, 2, 3].each.size # => 3
+Enumerable || Enumerator::Chain || 複数の列をつなげた列を表す。 || ([1, 2].each + [3]).to_a
+Enumerable || Enumerator.produce || 前の値から次の値を作り続ける列を作る。 || Enumerator.produce(1) { |x| x * 2 }.take(4)
+Enumerable || StopIteration || next で次の値がないときの例外。 || begin e.next rescue StopIteration end
+Comparable || Comparable || <=> を元に比較演算子を使えるようにするモジュール。 || class V; include Comparable; def <=>(o) = n <=> o.n; end
+Comparable || <=> 演算子 || 大小を -1・0・1 で返す比較演算子。 || 1 <=> 2 # => -1
+Comparable || Comparable#between? || 範囲内かを調べる。 || 5.between?(1, 10) # => true
+Comparable || Comparable#clamp || 値を上下限の範囲に収める。 || 15.clamp(1, 10) # => 10
+Comparable || Comparable#== || <=> が 0 なら等しいとみなす。 || a == b
+Fiber || Fiber || 途中で止めて再開できる軽い実行の流れ。 || f = Fiber.new { Fiber.yield 1; 2 }
+Fiber || Fiber.yield || 値を渡して一時停止する。 || Fiber.yield x
+Fiber || Fiber#resume || 一時停止中の Fiber を再開する。 || f.resume
+Fiber || Fiber#alive? || まだ終わっていないかを返す。 || f.alive?
+Fiber || Fiber.scheduler || 待ち時間に他の処理へ切りかえる仕組み（非同期処理）。 || Fiber.set_scheduler(MyScheduler.new)
+Fiber || Fiber[] || Fiber 単位で保存できる値（Ruby 3.2以降）。 || Fiber[:user] = "a"
+Fiber || Fiber#raise || 一時停止中の Fiber に例外を送りこむ。 || f.raise(StandardError, "stop")
+Thread || Thread.new || 新しいスレッドを作って実行する。 || t = Thread.new { 1 + 1 }
+Thread || Thread#join || スレッドの終了を待つ。 || t.join
+Thread || Thread#value || スレッドの結果を待って受け取る。 || t.value
+Thread || Thread#alive? || スレッドが動いているかを返す。 || t.alive?
+Thread || Thread#kill || スレッドを終了させる。 || t.kill
+Thread || Thread#[] || スレッド固有の値を取り出す。 || Thread.current[:id]
+Thread || Thread.current || いま動いているスレッドを返す。 || Thread.current
+Thread || Thread#status || スレッドの状態を返す。 || t.status
+Thread || Thread#report_on_exception || スレッド内の例外を表示するかを決める。 || Thread.report_on_exception = false
+Thread || Thread#abort_on_exception || スレッドの例外で全体を止めるかを決める。 || Thread.abort_on_exception = true
+Thread || Thread.pass || 他のスレッドに実行をゆずる。 || Thread.pass
+Thread || Thread::Queue || スレッド間で安全に受け渡す待ち行列。 || q = Queue.new; q << 1; q.pop
+Thread || Thread::SizedQueue || 上限つきの待ち行列。 || q = SizedQueue.new(10)
+Thread || Thread::ConditionVariable || 条件が整うまで待つための仕組み。 || cv.wait(mutex)
+Thread || Thread::Mutex || 同時に1つのスレッドだけが入れる鍵。 || m = Mutex.new; m.synchronize { x += 1 }
+Thread || Mutex#synchronize || 鍵をかけてブロックを実行する。 || m.synchronize { puts "safe" }
+Thread || Mutex#try_lock || 鍵をかけられれば真を返し、待たない。 || m.try_lock
+Thread || Monitor || 同じスレッドが何度も鍵をかけられる排他制御。 || mon = Monitor.new; mon.synchronize { }
+Thread || GVL（グローバル VM ロック） || 一度に1つのスレッドしか Ruby コードを動かさない仕組み。 || # CPU 計算は並列にならない
+Thread || ThreadGroup || スレッドをグループにまとめる。 || ThreadGroup.new.add(t)
+Thread || Thread::Backtrace::Location || スタックの1行の位置情報を表す。 || caller_locations(1, 1).first.lineno
+Process || Process.pid || 現在のプロセス番号を返す。 || Process.pid
+Process || Process.ppid || 親プロセスの番号を返す。 || Process.ppid
+Process || Process.clock_gettime || 高精度の時計の値を返す。 || Process.clock_gettime(Process::CLOCK_MONOTONIC)
+Process || Process.spawn || 別のプログラムを子プロセスとして起動する。 || pid = Process.spawn("ls")
+Process || Process.wait || 子プロセスの終了を待つ。 || Process.wait(pid)
+Process || Process.kill || プロセスへシグナルを送る。 || Process.kill("TERM", pid)
+Process || Process.fork || 現在のプロセスを複製する。 || fork { puts "child" }
+Process || Process::Status || 終了した子プロセスの結果を表す。 || $?.exitstatus
+Process || Process.daemon || バックグラウンドの常駐プロセスにする。 || Process.daemon
+Process || Process.times || CPU 時間を返す。 || Process.times.utime
+Process || Process.getrlimit || 資源の上限を調べる。 || Process.getrlimit(:NOFILE)
+Process || Signal.trap || シグナルを受けたときの処理を登録する。 || Signal.trap("INT") { puts "bye"; exit }
+Process || Signal.list || 使えるシグナルの一覧を返す。 || Signal.list["TERM"]
+Process || at_exit || プログラム終了時に実行する処理を登録する。 || at_exit { puts "bye" }
+Process || exit! || 終了処理を実行せずにすぐ終わる。 || exit!(1)
+Process || abort || メッセージを出して異常終了する。 || abort("error")
+Process || Kernel#system || 外部コマンドを実行して成功かを返す。 || system("echo hi")
+Process || Kernel#` (バッククォート) || 外部コマンドの出力を文字列で返す。 || out = `date`
+Process || Open3.capture3 || 外部コマンドの標準出力・標準エラー・結果を受け取る。 || out, err, st = Open3.capture3("ls")
+Process || Open3.popen3 || 外部コマンドと入出力をやりとりする。 || Open3.popen3("cat") { |i, o, e, t| }
+Ractor || Ractor.new || 並列に動く独立した実行単位を作る（実験機能）。 || r = Ractor.new { 1 + 1 }
+Ractor || Ractor#take || Ractor の結果を受け取る。 || r.take
+Ractor || Ractor.yield || 外へ値を渡す。 || Ractor.yield 1
+Ractor || Ractor.receive || 外から送られた値を受け取る。 || msg = Ractor.receive
+Ractor || Ractor#send || Ractor へ値を送る。 || r.send(1)
+Ractor || Ractor.make_shareable || オブジェクトを共有できる不変の形にする。 || Ractor.make_shareable(config)
+Ractor || Ractor.shareable? || 共有できるオブジェクトかを調べる。 || Ractor.shareable?("a".freeze)
+Ractor || 共有しない設計 || Ractor 間でデータをほぼ共有せず、安全に並列実行する考え方。 || # 送るときにコピーまたは移動
+パターンマッチ || case/in || 値の形に合わせて分岐する構文（Ruby 3）。 || case [1, 2] in [a, b] then a + b end
+パターンマッチ || 配列パターン || 配列の形で値を取り出す。 || in [first, *rest]
+パターンマッチ || ハッシュパターン || ハッシュのキーで値を取り出す。 || in {name: String => name, age:}
+パターンマッチ || find パターン || 配列の中から条件に合う部分を探す。 || in [*, 3 => x, *]
+パターンマッチ || ピン演算子 ^ || すでにある変数の値と照合する。 || in ^expected
+パターンマッチ || ガード節 || パターンに追加の条件を付ける。 || in [x, y] if x > y
+パターンマッチ || 代替パターン | || どれかに合えばよいとする。 || in 0 | 1 | 2
+パターンマッチ || deconstruct || 配列パターンで取り出すときに呼ばれるメソッド。 || def deconstruct = [x, y]
+パターンマッチ || deconstruct_keys || ハッシュパターンで取り出すときに呼ばれるメソッド。 || def deconstruct_keys(keys) = {x:, y:}
+パターンマッチ || NoMatchingPatternError || どのパターンにも合わなかったときの例外。 || case 5 in String then 1 end
+パターンマッチ || in 演算子 || 値がパターンに合うかを真偽で返す。 || {name: "a"} in {name: String}
+パターンマッチ || => 右代入 || パターンで取り出して変数に入れる。 || {a: 1} => {a:}
+Ruby3 || Data.define || 値が変わらない軽い値オブジェクトを作る（Ruby 3.2以降）。 || Point = Data.define(:x, :y)
+Ruby3 || Data#with || 一部を変えた新しい値オブジェクトを返す。 || p2 = p.with(x: 5)
+Ruby3 || Data#to_h || ハッシュに変換する。 || p.to_h
+Ruby3 || エンドレスメソッド || 1行でメソッドを定義する書き方（Ruby 3.0以降）。 || def square(x) = x * x
+Ruby3 || ハッシュの省略記法 || キーと同名の変数を {x:} と書ける（Ruby 3.1以降）。 || h = {x:, y:}
+Ruby3 || 無名ブロック引数 & || ブロックをそのまま転送する（Ruby 3.1以降）。 || def a(&) = b(&)
+Ruby3 || 無名引数 * と ** || 引数をそのまま転送する（Ruby 3.2以降）。 || def a(*, **) = b(*, **)
+Ruby3 || ... による引数転送 || すべての引数を別のメソッドへ渡す。 || def a(...) = b(...)
+Ruby3 || Hash#except || 指定したキーを除いたハッシュを返す。 || {a: 1, b: 2}.except(:a)
+Ruby3 || Array#intersect? || 2つの配列に共通の要素があるかを調べる。 || [1, 2].intersect?([2, 3])
+Ruby3 || Array#take と drop || 先頭 n 個を取る、または捨てる。 || [1, 2, 3].take(2)
+Ruby3 || Refinements || 範囲を限って既存のクラスを拡張する仕組み。 || refine String do def shout = upcase end
+Ruby3 || using || refine した拡張を有効にする。 || using StringExt
+Ruby3 || Warning[:deprecated] || 非推奨の機能の警告を出すかを決める。 || Warning[:deprecated] = true
+Ruby3 || RBS || Ruby のコードの型を書くための言語。 || def add: (Integer, Integer) -> Integer
+Ruby3 || Steep || RBS を使って型を検査する道具。 || bundle exec steep check
+Ruby3 || TypeProf || 型の情報を推論して RBS を作る道具。 || typeprof app.rb
+Ruby3 || YJIT || 実行を速くするための即時コンパイラ。 || ruby --yjit app.rb
+Ruby3 || MJIT || 以前に使われていた JIT コンパイラ。 || # Ruby 3.3 で廃止
+Ruby3 || ObjectSpace::WeakMap || 弱い参照でオブジェクトを結びつける表。 || m = ObjectSpace::WeakMap.new
+Ruby3 || GC.stat || ごみ集め（GC）の統計を返す。 || GC.stat[:count]
+Ruby3 || GC.compact || メモリの空きを詰める。 || GC.compact
+Ruby3 || Object#frozen? || 変更できない状態かを調べる。 || "a".frozen?
+Ruby3 || # frozen_string_literal: true || 文字列リテラルを自動で凍結するマジックコメント。 || # frozen_string_literal: true
+Ruby3 || Object#dup || 浅いコピーを作る。 || b = a.dup
+Ruby3 || Object#clone || 凍結状態なども引き継ぐコピーを作る。 || b = a.clone
+Ruby3 || Object#tap || 値を取り出してブロックを実行し、元の値を返す。 || User.new.tap { |u| u.name = "a" }
+Ruby3 || Object#then || 値をブロックに渡して結果を返す。 || 5.then { |x| x + 1 }
+Ruby3 || Object#itself || 自分自身を返す。 || [1, 1].group_by(&:itself)
+Ruby3 || Object#instance_variable_get || 名前から変数の値を取り出す。 || obj.instance_variable_get(:@name)
+Ruby3 || Object#instance_variable_set || 名前から変数に値を入れる。 || obj.instance_variable_set(:@name, "a")
+Ruby3 || Object#public_send || 公開メソッドを名前で呼ぶ。 || obj.public_send(:name)
+Ruby3 || Object#respond_to? || そのメソッドに応答できるか調べる。 || obj.respond_to?(:each)
+Ruby3 || Object#method || メソッドをオブジェクトとして取り出す。 || m = 5.method(:+)
+Ruby3 || Method#curry || 引数を少しずつ渡せる関数にする。 || add.curry[1][2]
+Ruby3 || Method#to_proc || メソッドをブロックとして渡せる形に変える。 || [1, 2].each(&method(:puts))
+Ruby3 || Proc#curry || Proc を部分適用できるようにする。 || ->(a, b) { a + b }.curry[1][2]
+Ruby3 || Proc#>> と << || 関数を合成する。 || f = double >> inc
+Ruby3 || lambda と Proc の違い || lambda は引数の数に厳しく、return の動きも異なる。 || ->(x) { x }.lambda? # => true
+Ruby3 || Symbol#to_proc || シンボルをブロックの代わりに使う。 || %w[a b].map(&:upcase)
+Ruby3 || ObjectSpace.each_object || 生きているオブジェクトを数え上げる。 || ObjectSpace.each_object(Class).count
+Ruby3 || Module#prepend || モジュールをクラスより先に呼ばれるようにする。 || prepend Logging
+Ruby3 || Module#define_method || メソッドを実行時に定義する。 || define_method(:hi) { "hi" }
+Ruby3 || Module#module_function || モジュールのメソッドを関数として使えるようにする。 || module_function def helper; end
+Ruby3 || Module#const_missing || 未定義の定数が参照されたときに呼ばれる。 || def self.const_missing(name); end
+Ruby3 || Module#method_added || メソッドが追加されたときに呼ばれる。 || def self.method_added(name); end
+Ruby3 || BasicObject#method_missing || 未定義のメソッドが呼ばれたときに呼ばれる。 || def method_missing(name, *args); end
+Ruby3 || respond_to_missing? || method_missing と合わせて応答可否を返す。 || def respond_to_missing?(name, priv = false) = true
+Ruby3 || ObjectSpace.garbage_collect || ごみ集めを実行する。 || ObjectSpace.garbage_collect
+Ruby3 || TracePoint || 実行中の出来事を監視する仕組み。 || TracePoint.new(:call) { |tp| p tp.method_id }.enable
+Ruby3 || binding || その場の変数の状態をまとめたオブジェクト。 || b = binding; b.local_variable_get(:x)
+Ruby3 || eval || 文字列を Ruby のコードとして実行する。 || eval("1 + 2")
+Ruby3 || instance_eval || オブジェクトの中として文字列やブロックを実行する。 || obj.instance_eval { @x }
+Ruby3 || class_eval || クラスの中として文字列やブロックを実行する。 || String.class_eval { def hi = "hi" }
+Ruby3 || ObjectSpace::WeakKeyMap || 弱いキーを持つ表（Ruby 3.3以降）。 || ObjectSpace::WeakKeyMap.new
+Set || Set#add || 要素を追加する。 || s << 1
+Set || Set#include? || 要素が含まれるか調べる。 || s.include?(1)
+Set || Set#| || 和集合を返す。 || Set[1, 2] | Set[2, 3]
+Set || Set#& || 共通部分を返す。 || Set[1, 2] & Set[2, 3]
+Set || Set#- || 差集合を返す。 || Set[1, 2] - Set[2]
+Set || Set#^ || どちらか一方だけに含まれる要素を返す。 || Set[1, 2] ^ Set[2, 3]
+Set || Set#subset? || 部分集合かを調べる。 || Set[1].subset?(Set[1, 2])
+Set || Set#superset? || 上位集合かを調べる。 || Set[1, 2].superset?(Set[1])
+Set || Set#disjoint? || 共通の要素がないかを調べる。 || Set[1].disjoint?(Set[2])
+Set || Set#intersect? || 共通の要素があるかを調べる。 || Set[1].intersect?(Set[1, 2])
+Set || Set#delete || 要素を取り除く。 || s.delete(1)
+Set || Set#merge || ほかの集まりの要素を加える。 || s.merge([1, 2])
+Set || Set#group_by || ブロックの値ごとに分ける。 || s.group_by(&:odd?)
+Set || Set#add? || 追加できたら自分を、すでにあれば nil を返す。 || s.add?(1)
+Set || SortedSet || 並び順を保つ集合（外部 gem に移動）。 || # sorted_set gem
+Struct || Struct.new || 名前つきの値の入れ物クラスを作る。 || P = Struct.new(:x, :y)
+Struct || Struct keyword_init || キーワード引数で初期化できるようにする。 || P = Struct.new(:x, :y, keyword_init: true)
+Struct || Struct#to_a || 値を配列にする。 || P.new(1, 2).to_a
+Struct || Struct#members || メンバ名の配列を返す。 || P.members
+Struct || Struct#each_pair || 名前と値の組を順に取り出す。 || p.each_pair { |k, v| puts "#{k}=#{v}" }
+Struct || OpenStruct || 後から自由に属性を足せる入れ物。 || o = OpenStruct.new(a: 1); o.b = 2
+Struct || Struct#dig || 入れ子の値を安全に取り出す。 || s.dig(:a, :b)

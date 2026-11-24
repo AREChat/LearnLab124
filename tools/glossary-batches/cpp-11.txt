@@ -1,0 +1,244 @@
+# C++20/23 ranges・concepts・コルーチン・モジュール ほか（第11回）
+ranges || std::views::filter || 条件に合う要素だけを遅延評価で取り出すビュー。 || auto ev = v | std::views::filter([](int x){ return x % 2 == 0; });
+ranges || std::views::transform || 各要素に関数を適用した結果を遅延評価で返すビュー。 || auto sq = v | std::views::transform([](int x){ return x * x; });
+ranges || std::views::take || 先頭から n 個だけを取り出すビュー。 || auto t = v | std::views::take(3);
+ranges || std::views::drop || 先頭 n 個を飛ばした残りを返すビュー。 || auto d = v | std::views::drop(2);
+ranges || std::views::take_while || 条件が真の間だけ先頭から取り出すビュー。 || auto t = v | std::views::take_while([](int x){ return x < 10; });
+ranges || std::views::drop_while || 条件が真の間は読み飛ばし、そこから先を返すビュー。 || auto d = v | std::views::drop_while([](int x){ return x < 0; });
+ranges || std::views::iota || 連続した整数を無限または範囲で生成するビュー。 || for (int i : std::views::iota(1, 6)) std::cout << i;
+ranges || std::views::reverse || 要素を逆順にたどるビュー。 || for (int x : v | std::views::reverse) std::cout << x;
+ranges || std::views::keys || pair や map の最初の要素（キー）だけを取り出すビュー。 || for (auto k : m | std::views::keys) std::cout << k;
+ranges || std::views::values || pair や map の2番目の要素（値）だけを取り出すビュー。 || for (auto v : m | std::views::values) std::cout << v;
+ranges || std::views::elements || タプル状の要素から N 番目だけを取り出すビュー。 || auto e = vp | std::views::elements<1>;
+ranges || std::views::split || 区切りの値で範囲を分割するビュー。 || auto parts = s | std::views::split(',');
+ranges || std::views::join || 範囲の範囲を1本につなげるビュー。 || auto flat = vv | std::views::join;
+ranges || std::views::common || begin と end の型をそろえて従来のアルゴリズムに渡せるようにするビュー。 || auto c = v | std::views::take(3) | std::views::common;
+ranges || std::views::all || 範囲全体を参照するビューに変換する。 || auto a = std::views::all(v);
+ranges || std::views::counted || 先頭イテレータと個数からビューを作る。 || auto c = std::views::counted(v.begin(), 4);
+ranges || std::views::empty || 常に空のビュー。 || auto e = std::views::empty<int>;
+ranges || std::views::single || 1つの要素だけを持つビュー。 || auto s = std::views::single(42);
+ranges || std::views::repeat || 同じ値を繰り返すビュー（C++23）。 || auto r = std::views::repeat(0, 5);
+ranges || std::views::zip || 複数の範囲を組にして同時にたどるビュー（C++23）。 || for (auto [a, b] : std::views::zip(x, y)) {}
+ranges || std::views::enumerate || 添字と要素の組を返すビュー（C++23）。 || for (auto [i, v] : std::views::enumerate(vec)) {}
+ranges || std::views::chunk || 範囲を一定個数ずつのかたまりに分けるビュー（C++23）。 || auto ch = v | std::views::chunk(3);
+ranges || std::views::slide || 窓をずらしながら一定長の部分範囲を返すビュー（C++23）。 || auto w = v | std::views::slide(3);
+ranges || std::views::adjacent || 隣り合う N 個を組にして返すビュー（C++23）。 || auto p = v | std::views::adjacent<2>;
+ranges || std::views::stride || 一定間隔で要素を取り出すビュー（C++23）。 || auto s = v | std::views::stride(2);
+ranges || std::views::cartesian_product || 複数の範囲の直積を返すビュー（C++23）。 || auto cp = std::views::cartesian_product(a, b);
+ranges || std::views::as_rvalue || 要素を右辺値として扱うビュー（C++23）。 || auto r = v | std::views::as_rvalue;
+ranges || std::views::lazy_split || 入力範囲向けの遅延評価する分割ビュー。 || auto parts = s | std::views::lazy_split(' ');
+ranges || std::ranges::to || 範囲を標準コンテナに変換する（C++23）。 || auto v = r | std::ranges::to<std::vector>();
+ranges || std::ranges::begin || 範囲の先頭イテレータを返すカスタマイゼーションポイント。 || auto it = std::ranges::begin(v);
+ranges || std::ranges::end || 範囲の末尾を表す番兵を返す。 || auto e = std::ranges::end(v);
+ranges || std::ranges::size || 範囲の要素数を返す。 || auto n = std::ranges::size(v);
+ranges || std::ranges::empty || 範囲が空かどうかを返す。 || bool e = std::ranges::empty(v);
+ranges || std::ranges::data || 連続領域の先頭ポインタを返す。 || auto p = std::ranges::data(v);
+ranges || std::ranges::sort || 範囲全体を並べ替える。 || std::ranges::sort(v);
+ranges || std::ranges::find || 範囲から値を探す。 || auto it = std::ranges::find(v, 3);
+ranges || std::ranges::find_if || 条件に合う最初の要素を探す。 || auto it = std::ranges::find_if(v, [](int x){ return x > 5; });
+ranges || std::ranges::count || 範囲内の指定値の個数を数える。 || auto n = std::ranges::count(v, 0);
+ranges || std::ranges::count_if || 条件に合う要素の個数を数える。 || auto n = std::ranges::count_if(v, [](int x){ return x < 0; });
+ranges || std::ranges::copy || 範囲を別の場所へコピーする。 || std::ranges::copy(src, std::back_inserter(dst));
+ranges || std::ranges::for_each || 各要素に関数を適用する。 || std::ranges::for_each(v, [](int x){ std::cout << x; });
+ranges || std::ranges::min_element || 最小要素へのイテレータを返す。 || auto it = std::ranges::min_element(v);
+ranges || std::ranges::max_element || 最大要素へのイテレータを返す。 || auto it = std::ranges::max_element(v);
+ranges || std::ranges::minmax || 最小値と最大値を同時に返す。 || auto [lo, hi] = std::ranges::minmax(v);
+ranges || std::ranges::reverse || 範囲の並びをその場で逆にする。 || std::ranges::reverse(v);
+ranges || std::ranges::unique || 連続する重複要素を取り除く（末尾へ寄せる）。 || auto r = std::ranges::unique(v);
+ranges || std::ranges::binary_search || 整列済みの範囲を二分探索で調べる。 || bool ok = std::ranges::binary_search(v, 7);
+ranges || std::ranges::lower_bound || 指定値以上の最初の位置を返す。 || auto it = std::ranges::lower_bound(v, 7);
+ranges || std::ranges::upper_bound || 指定値より大きい最初の位置を返す。 || auto it = std::ranges::upper_bound(v, 7);
+ranges || std::ranges::equal || 2つの範囲が等しいか比べる。 || bool same = std::ranges::equal(a, b);
+ranges || std::ranges::all_of || すべての要素が条件を満たすか調べる。 || bool ok = std::ranges::all_of(v, [](int x){ return x > 0; });
+ranges || std::ranges::any_of || 条件を満たす要素が1つでもあるか調べる。 || bool ok = std::ranges::any_of(v, [](int x){ return x == 0; });
+ranges || std::ranges::none_of || 条件を満たす要素が1つもないか調べる。 || bool ok = std::ranges::none_of(v, [](int x){ return x < 0; });
+ranges || std::ranges::fill || 範囲を同じ値で埋める。 || std::ranges::fill(v, 0);
+ranges || std::ranges::iota || 範囲を連続した値で埋める（C++23）。 || std::ranges::iota(v, 1);
+ranges || std::ranges::contains || 範囲に値が含まれるか調べる（C++23）。 || bool b = std::ranges::contains(v, 5);
+ranges || std::ranges::fold_left || 左から畳み込む（C++23）。 || auto s = std::ranges::fold_left(v, 0, std::plus{});
+ranges || std::ranges::fold_right || 右から畳み込む（C++23）。 || auto s = std::ranges::fold_right(v, 0, std::plus{});
+ranges || std::ranges::range || 範囲として扱える型を表すコンセプト。 || template<std::ranges::range R> void f(R&& r);
+ranges || std::ranges::view || ビューとして扱える型を表すコンセプト。 || template<std::ranges::view V> void g(V v);
+ranges || std::ranges::input_range || 入力範囲（1回だけ読める）を表すコンセプト。 || template<std::ranges::input_range R> void f(R&&);
+ranges || std::ranges::forward_range || 何度でも前へたどれる範囲のコンセプト。 || template<std::ranges::forward_range R> void f(R&&);
+ranges || std::ranges::random_access_range || 添字で自由に位置へ飛べる範囲のコンセプト。 || template<std::ranges::random_access_range R> void f(R&&);
+ranges || std::ranges::contiguous_range || 連続したメモリに並ぶ範囲のコンセプト。 || template<std::ranges::contiguous_range R> void f(R&&);
+ranges || std::ranges::sized_range || 要素数を定数時間で取れる範囲のコンセプト。 || template<std::ranges::sized_range R> void f(R&&);
+ranges || std::ranges::range_value_t || 範囲の要素型を得るエイリアス。 || using T = std::ranges::range_value_t<std::vector<int>>;
+ranges || std::ranges::iterator_t || 範囲のイテレータ型を得るエイリアス。 || using It = std::ranges::iterator_t<std::vector<int>>;
+ranges || std::ranges::subrange || イテレータと番兵の組を1つの範囲として扱う型。 || std::ranges::subrange sr(v.begin(), v.begin() + 3);
+ranges || std::ranges::view_interface || 自作ビューに共通の便利な関数を与える基底クラス。 || struct MyView : std::ranges::view_interface<MyView> {};
+ranges || std::ranges::enable_borrowed_range || 一時オブジェクトでもイテレータが安全に使えると宣言する変数テンプレート。 || template<> inline constexpr bool std::ranges::enable_borrowed_range<MyView> = true;
+ranges || borrowed_range || 範囲が破棄されても得たイテレータが無効にならない範囲。 || auto it = std::ranges::find(std::views::iota(1, 5), 3);
+ranges || ranges::dangling || 一時範囲から得たイテレータを使おうとしたときに返る目印の型。 || auto it = std::ranges::find(make_vec(), 3);
+ranges || 射影（projection） || アルゴリズムが比較の前に要素へ適用する変換。 || std::ranges::sort(people, {}, &Person::age);
+ranges || 範囲アダプタクロージャ || パイプ演算子でつなげられる部品。 || auto f = std::views::filter(pred) | std::views::take(3);
+ranges || パイプ演算子 | || 範囲を左から右へ流して加工をつなげる書き方。 || auto r = v | std::views::reverse | std::views::take(2);
+ranges || 遅延評価 || 結果が必要になるまで計算を先延ばしにする仕組み。 || auto r = v | std::views::transform(f); // ここでは計算しない
+concepts || concept キーワード || テンプレート引数に求める条件に名前を付ける宣言。 || template<class T> concept Small = sizeof(T) <= 8;
+concepts || requires 式 || 型や式が成り立つかを調べる式。 || requires(T a) { a.size(); }
+concepts || requires 節 || テンプレートに制約を付ける条件。 || template<class T> requires std::integral<T> T f(T x);
+concepts || 末尾 requires 節 || 関数宣言の最後に付ける制約。 || template<class T> T f(T x) requires std::integral<T>;
+concepts || 型要件（type requirement） || requires 内で型名が存在することを求める記法。 || requires { typename T::value_type; }
+concepts || 複合要件（compound requirement） || 式の値型まで検査できる要件。 || requires(T a) { { a + a } -> std::same_as<T>; }
+concepts || 入れ子要件（nested requirement） || requires 内で追加の条件式を評価する要件。 || requires(T) { requires sizeof(T) > 4; }
+concepts || std::integral || 整数型であるコンセプト。 || template<std::integral T> T add(T a, T b);
+concepts || std::signed_integral || 符号付き整数型であるコンセプト。 || template<std::signed_integral T> T neg(T x);
+concepts || std::unsigned_integral || 符号なし整数型であるコンセプト。 || template<std::unsigned_integral T> T f(T x);
+concepts || std::floating_point || 浮動小数点型であるコンセプト。 || template<std::floating_point T> T half(T x);
+concepts || std::same_as || 2つの型が同じであるコンセプト。 || template<class T> requires std::same_as<T, int> void f();
+concepts || std::derived_from || 継承関係にあるコンセプト。 || template<std::derived_from<Base> D> void f(D&);
+concepts || std::convertible_to || 暗黙に変換できるコンセプト。 || template<std::convertible_to<int> T> int g(T x);
+concepts || std::common_with || 共通の型を持つコンセプト。 || template<class A, std::common_with<A> B> void f(A, B);
+concepts || std::assignable_from || 代入できるコンセプト。 || static_assert(std::assignable_from<int&, int>);
+concepts || std::swappable || swap できるコンセプト。 || static_assert(std::swappable<int>);
+concepts || std::destructible || 安全に破棄できるコンセプト。 || static_assert(std::destructible<std::string>);
+concepts || std::constructible_from || 指定の引数で構築できるコンセプト。 || static_assert(std::constructible_from<std::string, const char*>);
+concepts || std::default_initializable || 既定の初期化ができるコンセプト。 || static_assert(std::default_initializable<int>);
+concepts || std::move_constructible || ムーブ構築できるコンセプト。 || static_assert(std::move_constructible<std::string>);
+concepts || std::copy_constructible || コピー構築できるコンセプト。 || static_assert(std::copy_constructible<std::string>);
+concepts || std::movable || ムーブと swap ができるコンセプト。 || static_assert(std::movable<std::unique_ptr<int>>);
+concepts || std::copyable || コピーとムーブができるコンセプト。 || static_assert(std::copyable<int>);
+concepts || std::semiregular || コピー可能で既定構築もできるコンセプト。 || static_assert(std::semiregular<int>);
+concepts || std::regular || 等値比較もできる、整数のように振る舞う型のコンセプト。 || static_assert(std::regular<int>);
+concepts || std::equality_comparable || == で比較できるコンセプト。 || template<std::equality_comparable T> bool eq(T a, T b);
+concepts || std::totally_ordered || 大小比較（< など）ができるコンセプト。 || template<std::totally_ordered T> T mx(T a, T b);
+concepts || std::invocable || 指定の引数で呼び出せるコンセプト。 || template<std::invocable<int> F> void run(F f);
+concepts || std::regular_invocable || 何度呼んでも同じ結果になる呼び出し可能性のコンセプト。 || template<std::regular_invocable<int> F> void run(F f);
+concepts || std::predicate || bool に変換できる結果を返す呼び出し可能性のコンセプト。 || template<std::predicate<int> P> bool test(P p);
+concepts || std::relation || 2つの引数で真偽を返す関係を表すコンセプト。 || template<std::relation<int, int> R> void f(R r);
+concepts || std::input_iterator || 入力イテレータのコンセプト。 || template<std::input_iterator It> void f(It);
+concepts || std::forward_iterator || 前進イテレータのコンセプト。 || template<std::forward_iterator It> void f(It);
+concepts || std::bidirectional_iterator || 双方向イテレータのコンセプト。 || template<std::bidirectional_iterator It> void f(It);
+concepts || std::random_access_iterator || ランダムアクセスイテレータのコンセプト。 || template<std::random_access_iterator It> void f(It);
+concepts || std::sortable || 並べ替えに使えるイテレータのコンセプト。 || template<std::sortable It> void sort2(It, It);
+concepts || 制約付きテンプレート引数 || 型名の代わりにコンセプト名を書く簡潔な書き方。 || template<std::integral T> T f(T x);
+concepts || auto への制約 || 引数に付けた auto にコンセプトで条件を付ける書き方。 || void f(std::integral auto x);
+concepts || 制約の包摂（subsumption） || より厳しい制約が優先して選ばれる規則。 || template<std::integral T> void f(T); template<std::signed_integral T> void f(T);
+concepts || 制約の原子式 || 制約を分解したときの最小の条件。 || requires (sizeof(T) > 4)
+concepts || 制約の論理積 && || 2つの制約を両方満たすことを求める。 || template<class T> requires std::integral<T> && (sizeof(T) > 2) void f();
+concepts || 制約の論理和 || || 2つの制約のどちらかを満たせばよいとする。 || template<class T> requires std::integral<T> || std::floating_point<T> void f();
+concepts || requires requires || requires 節の中で requires 式を使う書き方。 || template<class T> requires requires(T a) { a.size(); } void f();
+coroutine || コルーチン || 途中で中断して、あとで再開できる関数。 || Task f() { co_await step(); co_return; }
+coroutine || co_await || 結果が出るまで中断し、準備ができたら再開する演算子。 || int v = co_await async_read();
+coroutine || co_yield || 値を呼び出し側へ渡して一時停止する。 || co_yield i;
+coroutine || co_return || コルーチンを終了して結果を返す。 || co_return 42;
+coroutine || std::coroutine_handle || コルーチンの再開や破棄を操作する軽いハンドル。 || std::coroutine_handle<> h = ...; h.resume();
+coroutine || std::coroutine_traits || コルーチンの戻り値型から promise_type を決める仕組み。 || using P = std::coroutine_traits<Task>::promise_type;
+coroutine || promise_type || コルーチンの結果や中断の動きを決める入れ子の型。 || struct promise_type { Task get_return_object(); };
+coroutine || get_return_object || 呼び出し側へ返すオブジェクトを作る promise の関数。 || Task get_return_object() { return Task{handle::from_promise(*this)}; }
+coroutine || initial_suspend || コルーチン開始時に止まるかを決める promise の関数。 || std::suspend_always initial_suspend() { return {}; }
+coroutine || final_suspend || コルーチン終了時の動きを決める promise の関数。 || std::suspend_always final_suspend() noexcept { return {}; }
+coroutine || return_value || co_return の値を受け取る promise の関数。 || void return_value(int v) { result = v; }
+coroutine || return_void || 値なしの終了を受け取る promise の関数。 || void return_void() {}
+coroutine || yield_value || co_yield の値を受け取る promise の関数。 || std::suspend_always yield_value(int v) { cur = v; return {}; }
+coroutine || unhandled_exception || コルーチン内の例外を受け取る promise の関数。 || void unhandled_exception() { ex = std::current_exception(); }
+coroutine || await_ready || 待たずに続行できるかを返す awaiter の関数。 || bool await_ready() const noexcept { return false; }
+coroutine || await_suspend || 中断する直前に呼ばれる awaiter の関数。 || void await_suspend(std::coroutine_handle<> h) {}
+coroutine || await_resume || 再開したときに値を返す awaiter の関数。 || int await_resume() { return value; }
+coroutine || std::suspend_always || 必ず中断する awaiter。 || co_await std::suspend_always{};
+coroutine || std::suspend_never || 中断しない awaiter。 || co_await std::suspend_never{};
+coroutine || awaiter || co_await の対象になる、3つの await 関数を持つ型。 || struct Sleep { bool await_ready(); void await_suspend(...); void await_resume(); };
+coroutine || awaitable || co_await で待つことができる式。 || co_await sleep_for(100ms);
+coroutine || ジェネレータ || 値を1つずつ遅延生成するコルーチン。 || Generator<int> count() { for (int i = 0;; ++i) co_yield i; }
+coroutine || std::generator || 標準のジェネレータ型（C++23）。 || std::generator<int> g() { co_yield 1; }
+coroutine || コルーチンフレーム || 中断中の変数を保存しておく領域。 || // 通常はヒープに確保される
+coroutine || 対称転送 || 再開先のコルーチンへ、スタックを積まずに制御を渡す方法。 || std::coroutine_handle<> await_suspend(std::coroutine_handle<>) { return next; }
+coroutine || coroutine_handle::done || コルーチンが終了済みかを返す。 || while (!h.done()) h.resume();
+coroutine || coroutine_handle::destroy || コルーチンのフレームを破棄する。 || h.destroy();
+coroutine || coroutine_handle::promise || 紐付いた promise への参照を返す。 || auto& p = h.promise();
+coroutine || coroutine_handle::from_promise || promise からハンドルを作る。 || auto h = std::coroutine_handle<promise_type>::from_promise(*this);
+module || モジュール || ヘッダの代わりに、宣言をまとめて取り込める C++20 の仕組み。 || import std;
+module || export module || モジュールの名前を宣言する。 || export module math;
+module || export || モジュール外から使える名前にする指定。 || export int add(int a, int b);
+module || import 宣言 || モジュールを取り込む。 || import math;
+module || モジュールパーティション || 1つのモジュールを複数のファイルに分ける仕組み。 || export module app:core;
+module || プライベートモジュールフラグメント || 公開しない実装を同じファイルに書く区画。 || module :private;
+module || グローバルモジュールフラグメント || 従来のヘッダを取り込むための区画。 || module; #include <cstdio>
+module || ヘッダユニット || 既存のヘッダをモジュールのように取り込む形。 || import <vector>;
+module || import std || 標準ライブラリ全体をモジュールとして取り込む（C++23）。 || import std;
+module || モジュールインターフェース単位 || 外へ公開する宣言を書くファイル。 || export module m;
+module || モジュール実装単位 || 公開しない定義を書くファイル。 || module m;
+module || BMI（バイナリモジュールインターフェース） || コンパイラが作るモジュールの中間ファイル。 || // .pcm や .ifc など
+C++20 || 三方比較演算子 <=> || 比較結果を1つの演算子で表し、他の比較演算子も自動で作れる。 || auto operator<=>(const P&) const = default;
+C++20 || std::strong_ordering || 等しいものは区別できない全順序を表す型。 || std::strong_ordering r = a <=> b;
+C++20 || std::weak_ordering || 等しいが区別できる場合がある順序を表す型。 || std::weak_ordering r = a <=> b;
+C++20 || std::partial_ordering || 比較できない場合もある順序を表す型。 || std::partial_ordering r = 1.0 <=> 2.0;
+C++20 || 指示付き初期化 || メンバ名を指定して構造体を初期化する書き方。 || Point p{.x = 1, .y = 2};
+C++20 || consteval || 必ずコンパイル時に評価される関数。 || consteval int sq(int x) { return x * x; }
+C++20 || constinit || 静的変数がコンパイル時に初期化されることを保証する指定。 || constinit int g = 10;
+C++20 || using enum || 列挙型の名前をスコープに取り込む宣言。 || using enum Color; auto c = Red;
+C++20 || [[likely]] || 分岐が起こりやすいことを示す属性。 || if (x > 0) [[likely]] { f(); }
+C++20 || [[unlikely]] || 分岐が起こりにくいことを示す属性。 || if (err) [[unlikely]] { handle(); }
+C++20 || [[no_unique_address]] || 空のメンバがほかのメンバと領域を共有してよいと示す属性。 || [[no_unique_address]] Empty e;
+C++20 || ラムダ式のテンプレート引数 || ラムダに明示的なテンプレート引数を書ける。 || auto f = []<class T>(T x) { return x; };
+C++20 || ラムダの初期化キャプチャでパック展開 || 可変引数をキャプチャして使える。 || auto f = [...xs = std::move(xs)] { return (xs + ...); };
+C++20 || std::span || 連続領域を所有せずに指す軽いビュー。 || void f(std::span<int> s) { for (int x : s) {} }
+C++20 || std::bit_cast || ビット列をそのまま別の型として解釈する。 || auto u = std::bit_cast<std::uint32_t>(1.0f);
+C++20 || std::source_location || 呼び出し元のファイル名・行番号などを得る。 || auto loc = std::source_location::current();
+C++20 || std::format || 書式文字列で文字列を作る。 || std::string s = std::format("{} + {} = {}", 1, 2, 3);
+C++20 || std::format_to || 書式化した結果を出力先へ書き込む。 || std::format_to(std::back_inserter(s), "{}", 42);
+C++20 || std::formatter || 自作の型を std::format で書式化できるようにする特殊化。 || template<> struct std::formatter<Point> { /* ... */ };
+C++20 || std::bit_ceil || 引数以上の最小の2のべき乗を返す。 || auto n = std::bit_ceil(100u);
+C++20 || std::popcount || 立っているビットの数を数える。 || int c = std::popcount(0b1011u);
+C++20 || std::countl_zero || 上位から数えた連続する0のビット数を返す。 || int z = std::countl_zero(1u);
+C++20 || std::midpoint || 2つの値の中間を、あふれずに求める。 || auto m = std::midpoint(a, b);
+C++20 || std::lerp || 2つの値の間を割合で補間する。 || double v = std::lerp(0.0, 10.0, 0.25);
+C++20 || std::ssize || 要素数を符号付きで返す。 || for (std::ptrdiff_t i = 0; i < std::ssize(v); ++i) {}
+C++20 || std::to_array || 配列リテラルから std::array を作る。 || auto a = std::to_array({1, 2, 3});
+C++20 || std::erase_if || 条件に合う要素をコンテナから取り除く。 || std::erase_if(v, [](int x){ return x < 0; });
+C++20 || std::string::starts_with || 先頭が指定の文字列かを調べる。 || bool b = s.starts_with("http");
+C++20 || std::string::ends_with || 末尾が指定の文字列かを調べる。 || bool b = s.ends_with(".txt");
+C++20 || std::map::contains || キーが含まれるかを調べる。 || if (m.contains(key)) {}
+C++20 || std::remove_cvref_t || const・volatile・参照をはずした型を得る。 || using T = std::remove_cvref_t<const int&>;
+C++20 || std::type_identity || 型推論の対象から外すための恒等変換。 || template<class T> void f(T, std::type_identity_t<T>);
+C++20 || std::is_constant_evaluated || コンパイル時評価中かを調べる。 || if (std::is_constant_evaluated()) {}
+C++20 || std::is_bounded_array || 要素数が決まった配列型かを調べる。 || static_assert(std::is_bounded_array_v<int[3]>);
+C++20 || std::atomic_ref || 既存の変数に対して原子操作を行う参照ラッパ。 || std::atomic_ref<int> r(counter); r++;
+C++20 || std::atomic::wait || 値が変わるまでスレッドを待たせる。 || flag.wait(false);
+C++20 || std::atomic::notify_one || 待っているスレッドを1つ起こす。 || flag.notify_one();
+C++20 || std::jthread || 破棄時に自動で join し、停止要求も扱えるスレッド。 || std::jthread t([](std::stop_token st){ while (!st.stop_requested()) {} });
+C++20 || std::stop_token || 停止要求が出たかを調べるための印。 || if (st.stop_requested()) return;
+C++20 || std::stop_source || 停止要求を出す側のオブジェクト。 || std::stop_source src; src.request_stop();
+C++20 || std::stop_callback || 停止要求が出たときに呼ぶ関数を登録する。 || std::stop_callback cb(st, []{ cleanup(); });
+C++20 || std::latch || 指定回数のカウントダウンで一斉に待ちを解く仕組み。 || std::latch done(3); done.count_down(); done.wait();
+C++20 || std::barrier || 全スレッドがそろうまで待つ、くり返し使える同期点。 || std::barrier sync(4);
+C++20 || std::counting_semaphore || 同時に入れる数を制限するセマフォ。 || std::counting_semaphore<4> sem(4); sem.acquire();
+C++20 || std::binary_semaphore || 0か1の値を持つセマフォ。 || std::binary_semaphore s(0); s.release();
+C++20 || std::osyncstream || 複数スレッドからの出力が混ざらないようにする。 || std::osyncstream(std::cout) << "log\n";
+C++20 || std::chrono::year_month_day || 年月日を表す型。 || std::chrono::year_month_day d{2026y, std::chrono::March, 5d};
+C++20 || std::chrono::sys_days || 日単位の時刻点。 || std::chrono::sys_days d = std::chrono::floor<std::chrono::days>(now);
+C++20 || std::chrono::weekday || 曜日を表す型。 || std::chrono::weekday w{std::chrono::sys_days{d}};
+C++20 || std::chrono::zoned_time || タイムゾーンつきの時刻。 || std::chrono::zoned_time zt{"Asia/Tokyo", now};
+C++20 || std::chrono::duration_cast || 時間の単位を変換する。 || auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(d);
+C++20 || std::chrono::clock_cast || 時計の種類をまたいで時刻点を変換する。 || auto st = std::chrono::clock_cast<std::chrono::system_clock>(tp);
+C++23 || std::expected || 成功の値かエラーの値のどちらかを持つ型。 || std::expected<int, std::string> r = 42;
+C++23 || std::unexpected || std::expected にエラー値を渡すための型。 || return std::unexpected("failed");
+C++23 || std::expected::and_then || 成功のときだけ次の処理をつなぐ。 || auto r2 = r.and_then(parse);
+C++23 || std::expected::transform || 成功の値を変換する。 || auto r2 = r.transform([](int x){ return x + 1; });
+C++23 || std::expected::or_else || 失敗のときに代わりの処理をつなぐ。 || auto r2 = r.or_else(recover);
+C++23 || std::print || 書式化して標準出力へ直接書き出す。 || std::print("x={}\n", x);
+C++23 || std::println || 書式化して改行つきで書き出す。 || std::println("hello {}", name);
+C++23 || std::mdspan || 連続領域を多次元の配列として見るビュー。 || std::mdspan m(data, 3, 4);
+C++23 || std::flat_map || 並べた配列で作る、連想コンテナ。 || std::flat_map<int, std::string> m;
+C++23 || std::flat_set || 並べた配列で作る、集合コンテナ。 || std::flat_set<int> s;
+C++23 || std::optional::and_then || 値があるときだけ次の処理をつなぐ。 || auto r = o.and_then(f);
+C++23 || std::optional::transform || 値があるときに変換する。 || auto r = o.transform([](int x){ return x * 2; });
+C++23 || std::optional::or_else || 値がないときに代わりを返す。 || auto r = o.or_else([]{ return std::optional<int>{0}; });
+C++23 || std::to_underlying || 列挙型の基礎となる整数型の値を得る。 || auto n = std::to_underlying(Color::Red);
+C++23 || std::unreachable || ここへは到達しないことを最適化に伝える。 || default: std::unreachable();
+C++23 || std::byteswap || バイト順を入れかえる。 || auto b = std::byteswap(0x1234u);
+C++23 || std::is_scoped_enum || スコープ付き列挙型かを調べる。 || static_assert(std::is_scoped_enum_v<Color>);
+C++23 || std::move_only_function || ムーブだけできる関数オブジェクトのラッパ。 || std::move_only_function<void()> f = [p = std::move(ptr)]{ };
+C++23 || deducing this || メンバ関数の暗黙のオブジェクト引数を明示して書く機能。 || auto& get(this auto&& self) { return self.v; }
+C++23 || if consteval || コンパイル時評価のときだけ実行する分岐。 || if consteval { /* 定数式用 */ } else { /* 実行時用 */ }
+C++23 || 多次元添字演算子 || operator[] に複数の引数を渡せる。 || int& operator[](int i, int j);
+C++23 || static operator() || 状態を持たない呼び出し演算子を static にできる。 || struct F { static int operator()(int x) { return x; } };
+C++23 || auto(x) || 式から値を取り出して一時オブジェクトを作る書き方。 || f(auto(v));
+C++23 || size_t のリテラル uz || size_t 型の整数リテラル。 || for (auto i = 0uz; i < n; ++i) {}
+C++23 || std::string::contains || 部分文字列が含まれるかを調べる。 || if (s.contains("abc")) {}
+C++23 || std::string::resize_and_overwrite || 長さを決めて中身を直接書き込む。 || s.resize_and_overwrite(n, [](char* p, size_t n){ return n; });
+C++23 || std::stacktrace || 呼び出しの履歴を取得する。 || auto st = std::stacktrace::current();
+C++23 || std::spanstream || 固定の領域を入出力ストリームのように使う。 || std::ospanstream os(std::span<char>(buf));
+C++23 || std::bind_back || 後ろの引数を束縛した関数を作る。 || auto f = std::bind_back(g, 2);
+C++23 || std::invoke_r || 呼び出し結果を指定の型で返す。 || auto r = std::invoke_r<double>(f, 1);

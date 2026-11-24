@@ -1,0 +1,145 @@
+# C++ filesystem・regex・random・スマートポインタ・競技プログラミング ほか（第12回）
+filesystem || std::filesystem::path || ファイルやフォルダの場所を表す型。 || std::filesystem::path p = "data/a.txt";
+filesystem || path::filename || パスの最後のファイル名の部分を返す。 || auto n = p.filename();
+filesystem || path::stem || 拡張子を除いたファイル名を返す。 || auto s = p.stem();
+filesystem || path::extension || 拡張子（ドット付き）を返す。 || auto e = p.extension();
+filesystem || path::parent_path || 1つ上のフォルダのパスを返す。 || auto d = p.parent_path();
+filesystem || path::replace_extension || 拡張子を置きかえる。 || p.replace_extension(".bak");
+filesystem || path::is_absolute || 絶対パスかどうかを調べる。 || bool a = p.is_absolute();
+filesystem || path の / 演算子 || パスを区切り文字つきでつなげる。 || auto q = dir / "a.txt";
+filesystem || fs::exists || ファイルやフォルダが存在するか調べる。 || if (fs::exists(p)) {}
+filesystem || fs::is_directory || フォルダかどうかを調べる。 || bool d = fs::is_directory(p);
+filesystem || fs::is_regular_file || 通常のファイルかどうかを調べる。 || bool f = fs::is_regular_file(p);
+filesystem || fs::file_size || ファイルの大きさ（バイト）を返す。 || auto n = fs::file_size(p);
+filesystem || fs::create_directory || フォルダを1つ作る。 || fs::create_directory("out");
+filesystem || fs::create_directories || 途中のフォルダもまとめて作る。 || fs::create_directories("a/b/c");
+filesystem || fs::remove || ファイルまたは空のフォルダを消す。 || fs::remove("tmp.txt");
+filesystem || fs::remove_all || フォルダを中身ごと消す。 || fs::remove_all("tmp");
+filesystem || fs::copy_file || ファイルをコピーする。 || fs::copy_file("a.txt", "b.txt", fs::copy_options::overwrite_existing);
+filesystem || fs::rename || 名前や場所を変える。 || fs::rename("a.txt", "b.txt");
+filesystem || fs::directory_iterator || フォルダ直下の項目を順に調べる。 || for (auto& e : fs::directory_iterator(".")) {}
+filesystem || fs::recursive_directory_iterator || サブフォルダの中まで順にたどる。 || for (auto& e : fs::recursive_directory_iterator(".")) {}
+filesystem || fs::current_path || いま作業しているフォルダを返す、または変える。 || auto cwd = fs::current_path();
+filesystem || fs::absolute || 絶対パスに変換する。 || auto a = fs::absolute("a.txt");
+filesystem || fs::canonical || 「..」などを解決した正規のパスを返す。 || auto c = fs::canonical(p);
+filesystem || fs::temp_directory_path || 一時ファイル用のフォルダを返す。 || auto t = fs::temp_directory_path();
+filesystem || fs::last_write_time || 最後に更新された時刻を返す。 || auto t = fs::last_write_time(p);
+filesystem || fs::space || ディスクの空き容量などを調べる。 || auto info = fs::space(".");
+filesystem || fs::filesystem_error || ファイル操作の失敗を表す例外。 || catch (const fs::filesystem_error& e) {}
+filesystem || fs::copy_options || コピーのときの動作を決める指定。 || fs::copy_options::recursive
+filesystem || fs::permissions || ファイルの権限を変える。 || fs::permissions(p, fs::perms::owner_read);
+filesystem || fs::relative || 基準からの相対パスを求める。 || auto r = fs::relative(p, base);
+regex || std::regex || 正規表現を表す型。 || std::regex re(R"(\d+)");
+regex || std::regex_match || 文字列全体が正規表現に合うか調べる。 || bool ok = std::regex_match(s, re);
+regex || std::regex_search || 文字列の一部が合うか探す。 || bool ok = std::regex_search(s, m, re);
+regex || std::regex_replace || 合った部分を別の文字列に置きかえる。 || auto r = std::regex_replace(s, re, "#");
+regex || std::smatch || 文字列に対する検索結果を保持する型。 || std::smatch m;
+regex || std::sregex_iterator || 合った部分を順にたどるイテレータ。 || for (std::sregex_iterator it(s.begin(), s.end(), re), e; it != e; ++it) {}
+regex || std::regex::icase || 大文字小文字を区別しない指定。 || std::regex re("abc", std::regex::icase);
+regex || キャプチャグループ || 丸かっこで囲んで取り出す部分。 || std::regex re(R"((\d+)-(\d+))");
+regex || match_results::str || 合った部分の文字列を取り出す。 || std::string a = m.str(1);
+regex || match_results::prefix || 合った部分より前の文字列を返す。 || auto pre = m.prefix().str();
+regex || match_results::suffix || 合った部分より後ろの文字列を返す。 || auto suf = m.suffix().str();
+regex || std::regex_error || 正規表現の書き方が間違っているときの例外。 || catch (const std::regex_error& e) {}
+regex || std::regex_token_iterator || 区切りで分けた各部分をたどる。 || std::sregex_token_iterator it(s.begin(), s.end(), re, -1);
+random || std::random_device || 非決定的な乱数の種を得る。 || std::random_device rd;
+random || std::mt19937 || 高品質な擬似乱数生成器（メルセンヌ・ツイスタ）。 || std::mt19937 gen(rd());
+random || std::mt19937_64 || 64ビット版のメルセンヌ・ツイスタ。 || std::mt19937_64 gen(42);
+random || std::minstd_rand || 軽くて速い線形合同法の乱数生成器。 || std::minstd_rand g(1);
+random || std::uniform_int_distribution || 整数を同じ確率で出す分布。 || std::uniform_int_distribution<int> d(1, 6);
+random || std::uniform_real_distribution || 実数を同じ確率で出す分布。 || std::uniform_real_distribution<double> d(0.0, 1.0);
+random || std::normal_distribution || 正規分布（ベル型）の乱数。 || std::normal_distribution<double> d(0.0, 1.0);
+random || std::bernoulli_distribution || 真か偽かを確率で出す分布。 || std::bernoulli_distribution d(0.3);
+random || std::binomial_distribution || n 回のうち成功する回数の分布。 || std::binomial_distribution<int> d(10, 0.5);
+random || std::poisson_distribution || 一定時間に起こる回数の分布。 || std::poisson_distribution<int> d(4.0);
+random || std::exponential_distribution || 次に起こるまでの時間の分布。 || std::exponential_distribution<double> d(1.0);
+random || std::discrete_distribution || 重みに応じて番号を選ぶ分布。 || std::discrete_distribution<int> d({1, 2, 7});
+random || std::shuffle || 乱数生成器を使って要素をシャッフルする。 || std::shuffle(v.begin(), v.end(), gen);
+random || std::seed_seq || 複数の値から乱数の種を作る。 || std::seed_seq seq{1, 2, 3};
+random || std::generate_canonical || 0以上1未満の実数を作る。 || double x = std::generate_canonical<double, 53>(gen);
+smart-ptr || std::unique_ptr || 1か所だけが所有するスマートポインタ。 || auto p = std::make_unique<int>(5);
+smart-ptr || std::make_unique || unique_ptr を安全に作る。 || auto p = std::make_unique<Foo>(1, 2);
+smart-ptr || std::shared_ptr || 参照数を数えて共有するスマートポインタ。 || auto p = std::make_shared<int>(5);
+smart-ptr || std::make_shared || shared_ptr を1回の確保で作る。 || auto p = std::make_shared<Foo>();
+smart-ptr || std::weak_ptr || 所有せずに shared_ptr を見守る弱い参照。 || std::weak_ptr<Foo> w = sp;
+smart-ptr || weak_ptr::lock || まだ生きていれば shared_ptr を得る。 || if (auto sp = w.lock()) {}
+smart-ptr || use_count || 共有している数を返す。 || long n = sp.use_count();
+smart-ptr || unique_ptr::release || 所有権を手放して生のポインタを返す。 || int* raw = p.release();
+smart-ptr || unique_ptr::reset || 管理している対象を差しかえる。 || p.reset(new int(1));
+smart-ptr || unique_ptr::get || 管理している生のポインタを返す。 || int* raw = p.get();
+smart-ptr || カスタムデリータ || 解放の方法を自分で決める。 || std::unique_ptr<FILE, decltype(&fclose)> f(fopen("a", "r"), &fclose);
+smart-ptr || std::enable_shared_from_this || 自分自身の shared_ptr を安全に得られるようにする基底クラス。 || struct A : std::enable_shared_from_this<A> {};
+smart-ptr || shared_from_this || 自分を指す shared_ptr を返す。 || auto self = shared_from_this();
+smart-ptr || 循環参照 || shared_ptr どうしが互いを持って解放されなくなる問題。 || // 片方を weak_ptr にして防ぐ
+smart-ptr || std::static_pointer_cast || shared_ptr の型を static_cast で変える。 || auto d = std::static_pointer_cast<Derived>(b);
+smart-ptr || std::dynamic_pointer_cast || shared_ptr の型を実行時に確認して変える。 || auto d = std::dynamic_pointer_cast<Derived>(b);
+smart-ptr || std::allocate_shared || 指定の確保器で shared_ptr を作る。 || auto p = std::allocate_shared<int>(alloc, 5);
+smart-ptr || std::owner_less || スマートポインタを所有者で並べる比較関数。 || std::set<std::weak_ptr<int>, std::owner_less<>> s;
+競技プログラミング || ios::sync_with_stdio(false) || C の入出力との同期を切って高速にする。 || std::ios::sync_with_stdio(false);
+競技プログラミング || cin.tie(nullptr) || cin と cout の結びつきを切る。 || std::cin.tie(nullptr);
+競技プログラミング || 累積和 || 区間の合計を一瞬で求めるための前処理。 || s[i+1] = s[i] + a[i];
+競技プログラミング || 二分探索 || 整列済みの範囲を半分ずつ絞って探す。 || auto it = std::lower_bound(v.begin(), v.end(), x);
+競技プログラミング || しゃくとり法 || 区間の左右を動かして条件を満たす範囲を求める。 || while (r < n && sum + a[r] <= k) sum += a[r++];
+競技プログラミング || ダイクストラ法 || 重みつきグラフの最短経路を求める。 || std::priority_queue<P, std::vector<P>, std::greater<P>> pq;
+競技プログラミング || ワーシャル・フロイド法 || すべての頂点間の最短距離を求める。 || d[i][j] = std::min(d[i][j], d[i][k] + d[k][j]);
+競技プログラミング || ベルマン・フォード法 || 負の辺がある場合の最短経路を求める。 || for (int i = 0; i < n; ++i) for (auto e : edges) relax(e);
+競技プログラミング || 幅優先探索（BFS） || 近い所から順に探索する。 || std::queue<int> q; q.push(s);
+競技プログラミング || 深さ優先探索（DFS） || 行けるところまで進んでから戻る探索。 || void dfs(int v) { seen[v] = true; for (int u : g[v]) if (!seen[u]) dfs(u); }
+競技プログラミング || Union-Find || 仲間分けを高速に管理するデータ構造。 || int find(int x) { return p[x] == x ? x : p[x] = find(p[x]); }
+競技プログラミング || ダブリング || 2のべき乗ずつ先を表に持ち、遠くを高速に求める。 || up[k+1][v] = up[k][up[k][v]];
+競技プログラミング || ビット全探索 || 部分集合をビットで列挙して調べる。 || for (int mask = 0; mask < (1 << n); ++mask) {}
+競技プログラミング || 動的計画法（DP） || 小さな問題の答えを使って大きな問題を解く。 || dp[i] = std::max(dp[i-1], dp[i-2] + a[i]);
+競技プログラミング || ナップサック問題 || 容量内で価値が最大になる選び方を求める。 || dp[w] = std::max(dp[w], dp[w - wt] + val);
+競技プログラミング || 最長増加部分列（LIS） || 増えていく部分列の最長の長さを求める。 || auto it = std::lower_bound(d.begin(), d.end(), x);
+競技プログラミング || 最大公約数 gcd || 2つの数の最大の共通の約数。 || auto g = std::gcd(12, 18);
+競技プログラミング || 最小公倍数 lcm || 2つの数の最小の共通の倍数。 || auto l = std::lcm(4, 6);
+競技プログラミング || 繰り返し二乗法 || べき乗を高速に計算する。 || while (e) { if (e & 1) r = r * b % M; b = b * b % M; e >>= 1; }
+競技プログラミング || 法 mod の計算 || 大きな数を割った余りで扱う。 || const long long MOD = 1000000007;
+競技プログラミング || 逆元 || 余りの世界での割り算に使う数。 || long long inv = power(a, MOD - 2);
+競技プログラミング || エラトステネスの篩 || 素数をまとめて見つける方法。 || for (int j = i * i; j <= n; j += i) comp[j] = true;
+競技プログラミング || 座標圧縮 || 大きな値を小さな順位に置きかえる。 || v.erase(std::unique(v.begin(), v.end()), v.end());
+競技プログラミング || セグメント木 || 区間の集計と更新を高速に行う木。 || tree[i] = tree[2*i] + tree[2*i+1];
+競技プログラミング || BIT（フェニック木） || 区間和をコンパクトに管理する構造。 || for (; i <= n; i += i & -i) bit[i] += x;
+競技プログラミング || 尺取りの二重ループ || 2本の指を動かして区間を扱う方法。 || for (int l = 0, r = 0; l < n; ++l) {}
+競技プログラミング || トポロジカルソート || 依存関係を満たす順に並べる。 || std::queue<int> q; // 入次数が0のものから
+競技プログラミング || 最小全域木 || すべての頂点を最小の重みでつなぐ木。 || std::sort(edges.begin(), edges.end());
+競技プログラミング || クラスカル法 || 軽い辺から順に選ぶ最小全域木の求め方。 || if (uf.unite(a, b)) cost += w;
+競技プログラミング || 約数列挙 || 数の約数をすべて求める。 || for (long long i = 1; i * i <= n; ++i) if (n % i == 0) {}
+競技プログラミング || 素因数分解 || 数を素数のかけ算に分ける。 || for (long long p = 2; p * p <= n; ++p) while (n % p == 0) n /= p;
+競技プログラミング || 組合せの前計算 || 階乗と逆元の表から組合せを求める。 || long long c = fact[n] * inv[k] % MOD * inv[n-k] % MOD;
+競技プログラミング || __int128 || 128ビットの整数型（GCC の拡張）。 || __int128 x = 1;
+競技プログラミング || long long || 64ビットの整数型。 || long long x = 1LL << 40;
+競技プログラミング || INF の置き方 || 十分大きな値を無限大として使う。 || const long long INF = 1e18;
+競技プログラミング || 全探索の枝刈り || 無駄な分岐を早めに打ち切る。 || if (cur >= best) return;
+競技プログラミング || メモ化再帰 || 計算結果を覚えて同じ計算を省く。 || if (memo[n] != -1) return memo[n];
+競技プログラミング || 半分全列挙 || 半分ずつ列挙して組み合わせる高速化。 || std::sort(left.begin(), left.end());
+競技プログラミング || 重心分解 || 木を重心で分けて再帰的に扱う技法。 || int centroid(int v, int p, int n);
+競技プログラミング || 最小コストフロー || 費用を最小にして流量を流す問題。 || // 最短路を繰り返し流す
+競技プログラミング || 二部マッチング || 2つの集合の対応づけを最大にする問題。 || bool dfs(int v) { /* 増加路 */ }
+ゲーム・組込み || ゲームループ || 入力・更新・描画をくり返す中心の処理。 || while (running) { input(); update(dt); draw(); }
+ゲーム・組込み || デルタタイム || 前のフレームからの経過時間。 || pos += speed * dt;
+ゲーム・組込み || 固定タイムステップ || 一定間隔で物理計算を進める方法。 || while (acc >= step) { update(step); acc -= step; }
+ゲーム・組込み || ECS（エンティティ・コンポーネント・システム） || データと処理を分けて組み立てる設計。 || registry.emplace<Position>(e, 0.f, 0.f);
+ゲーム・組込み || オブジェクトプール || 使いまわす部品をあらかじめ用意する方法。 || Bullet* b = pool.acquire();
+ゲーム・組込み || 空間分割 || 近くのものだけを調べて当たり判定を速くする。 || grid[cell].push_back(obj);
+ゲーム・組込み || AABB 当たり判定 || 軸に沿った四角どうしの重なりを調べる。 || bool hit = a.x < b.x + b.w && a.x + a.w > b.x;
+ゲーム・組込み || ステートマシン || 状態と遷移で動きを表す仕組み。 || enum class State { Idle, Walk, Jump };
+ゲーム・組込み || 行列とベクトル || 位置や回転をまとめて計算する数学の道具。 || Vec3 v = m * Vec3(1, 0, 0);
+ゲーム・組込み || クォータニオン || 回転を表す4つの数。 || Quat q = Quat::fromAxisAngle(axis, angle);
+ゲーム・組込み || Emscripten || C++ を WebAssembly に変換する道具。 || emcc main.cpp -o index.html
+ゲーム・組込み || WebAssembly || ブラウザで高速に動く機械語に近い形式。 || // .wasm ファイル
+ゲーム・組込み || SDL || ウィンドウ・入力・音を扱う軽量ライブラリ。 || SDL_Init(SDL_INIT_VIDEO);
+ゲーム・組込み || SFML || 2D ゲーム向けの使いやすいライブラリ。 || sf::RenderWindow win(sf::VideoMode(800, 600), "Game");
+ゲーム・組込み || OpenGL || 画面に図形を描く標準的な API。 || glDrawArrays(GL_TRIANGLES, 0, 3);
+ゲーム・組込み || シェーダー || 描画の計算を行う小さなプログラム。 || // 頂点シェーダーとフラグメントシェーダー
+ゲーム・組込み || ファイルから設定を読む || ゲームの数値を外に出して調整しやすくする。 || std::ifstream f("config.txt");
+ゲーム・組込み || セーブデータの書き出し || 状態をバイナリやテキストに保存する。 || out.write(reinterpret_cast<const char*>(&save), sizeof(save));
+ゲーム・組込み || 乱数のシード固定 || 再現できる動きにするために種を固定する。 || std::mt19937 gen(12345);
+ゲーム・組込み || フレームレート制限 || 一定の速さで画面を更新するために待つ。 || std::this_thread::sleep_for(std::chrono::milliseconds(16));
+ゲーム・組込み || 固定小数点数 || 小数を整数で扱う方法。 || int fixed = static_cast<int>(x * 256);
+ゲーム・組込み || volatile || 値が勝手に変わるかもしれないと伝える指定。 || volatile int* reg = reinterpret_cast<volatile int*>(0x40000000);
+ゲーム・組込み || ビットフィールド || 構造体の中でビット単位に幅を決める。 || struct Flags { unsigned a : 1; unsigned b : 3; };
+ゲーム・組込み || 割り込み処理 || 特別な出来事で一時的に別の処理へ移る仕組み。 || void isr() { flag = true; }
+ゲーム・組込み || メモリマップドI/O || 機器の制御を特定のアドレスの読み書きで行う方式。 || *reg = 0x01;
+ゲーム・組込み || スタック使用量の見積もり || 組込みで再帰や大きな配列を避ける目安。 || // 大きな配列は static にする
+ゲーム・組込み || リンカスクリプト || メモリの配置を決める設定ファイル。 || MEMORY { FLASH : ORIGIN = 0x08000000, LENGTH = 256K }

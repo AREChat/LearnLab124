@@ -1,0 +1,83 @@
+# C++ 型特性・メモリ順序・入出力操作子 ほか（第13回）
+type_traits || std::is_same_v || 2つの型が同じかを調べる。 || static_assert(std::is_same_v<int, int>);
+type_traits || std::is_integral_v || 整数型かを調べる。 || static_assert(std::is_integral_v<long>);
+type_traits || std::is_floating_point_v || 浮動小数点型かを調べる。 || static_assert(std::is_floating_point_v<double>);
+type_traits || std::is_pointer_v || ポインタ型かを調べる。 || static_assert(std::is_pointer_v<int*>);
+type_traits || std::is_reference_v || 参照型かを調べる。 || static_assert(std::is_reference_v<int&>);
+type_traits || std::is_const_v || const が付いた型かを調べる。 || static_assert(std::is_const_v<const int>);
+type_traits || std::is_class_v || クラス型かを調べる。 || static_assert(std::is_class_v<std::string>);
+type_traits || std::is_enum_v || 列挙型かを調べる。 || static_assert(std::is_enum_v<Color>);
+type_traits || std::is_base_of_v || 継承関係があるかを調べる。 || static_assert(std::is_base_of_v<Base, Derived>);
+type_traits || std::is_convertible_v || ある型から別の型へ変換できるかを調べる。 || static_assert(std::is_convertible_v<int, double>);
+type_traits || std::is_trivially_copyable_v || memcpy で安全にコピーできる型かを調べる。 || static_assert(std::is_trivially_copyable_v<int>);
+type_traits || std::is_nothrow_move_constructible_v || 例外を投げずにムーブできるかを調べる。 || static_assert(std::is_nothrow_move_constructible_v<std::string>);
+type_traits || std::is_default_constructible_v || 引数なしで作れるかを調べる。 || static_assert(std::is_default_constructible_v<int>);
+type_traits || std::is_abstract_v || 抽象クラスかを調べる。 || static_assert(std::is_abstract_v<Shape>);
+type_traits || std::is_polymorphic_v || 仮想関数を持つクラスかを調べる。 || static_assert(std::is_polymorphic_v<Base>);
+type_traits || std::is_final_v || final なクラスかを調べる。 || static_assert(std::is_final_v<Leaf>);
+type_traits || std::is_aggregate_v || 集成体（波かっこで初期化できる型）かを調べる。 || static_assert(std::is_aggregate_v<Point>);
+type_traits || std::is_invocable_v || 指定の引数で呼び出せるかを調べる。 || static_assert(std::is_invocable_v<F, int>);
+type_traits || std::invoke_result_t || 呼び出した結果の型を得る。 || using R = std::invoke_result_t<F, int>;
+type_traits || std::remove_reference_t || 参照をはずした型を得る。 || using T = std::remove_reference_t<int&>;
+type_traits || std::remove_const_t || const をはずした型を得る。 || using T = std::remove_const_t<const int>;
+type_traits || std::remove_pointer_t || ポインタをはずした型を得る。 || using T = std::remove_pointer_t<int*>;
+type_traits || std::add_pointer_t || ポインタ型にした型を得る。 || using P = std::add_pointer_t<int>;
+type_traits || std::add_const_t || const を付けた型を得る。 || using C = std::add_const_t<int>;
+type_traits || std::decay_t || 値渡しされたときの型に変換する。 || using D = std::decay_t<const int&>;
+type_traits || std::conditional_t || 条件によって2つの型から選ぶ。 || using T = std::conditional_t<(sizeof(int) > 2), int, short>;
+type_traits || std::enable_if_t || 条件が真のときだけ型を有効にする。 || template<class T, std::enable_if_t<std::is_integral_v<T>, int> = 0> void f(T);
+type_traits || std::void_t || 型の有無を調べる技法に使う補助。 || template<class, class = void> struct has_x : std::false_type {};
+type_traits || std::integral_constant || 型として定数を持つ基本の部品。 || using Three = std::integral_constant<int, 3>;
+type_traits || std::true_type || 常に真を表す型。 || struct A : std::true_type {};
+type_traits || std::false_type || 常に偽を表す型。 || struct B : std::false_type {};
+type_traits || std::conjunction || 複数の条件がすべて真かを調べる。 || std::conjunction_v<std::is_integral<A>, std::is_signed<A>>
+type_traits || std::disjunction || 複数の条件のどれかが真かを調べる。 || std::disjunction_v<std::is_integral<A>, std::is_floating_point<A>>
+type_traits || std::negation || 条件の真偽を反転する。 || std::negation_v<std::is_pointer<A>>
+type_traits || std::underlying_type_t || 列挙型の基礎の整数型を得る。 || using U = std::underlying_type_t<Color>;
+type_traits || std::make_signed_t || 符号付きの同じ大きさの型を得る。 || using S = std::make_signed_t<unsigned>;
+type_traits || std::make_unsigned_t || 符号なしの同じ大きさの型を得る。 || using U = std::make_unsigned_t<int>;
+type_traits || std::alignment_of_v || 型の配置の境界を得る。 || constexpr auto a = std::alignment_of_v<double>;
+type_traits || std::extent_v || 配列の大きさを得る。 || constexpr auto n = std::extent_v<int[5]>;
+type_traits || std::rank_v || 配列の次元数を得る。 || constexpr auto r = std::rank_v<int[2][3]>;
+メモリ順序 || memory_order_relaxed || 順序を保証せず、原子性だけを保つ。 || cnt.fetch_add(1, std::memory_order_relaxed);
+メモリ順序 || memory_order_acquire || この読み出し以降の処理が前へ動かないようにする。 || flag.load(std::memory_order_acquire);
+メモリ順序 || memory_order_release || この書き込みより前の処理が後ろへ動かないようにする。 || flag.store(true, std::memory_order_release);
+メモリ順序 || memory_order_acq_rel || 読み書きの両方に acquire と release を効かせる。 || x.fetch_add(1, std::memory_order_acq_rel);
+メモリ順序 || memory_order_seq_cst || すべてのスレッドで同じ順序に見える最も強い順序。 || x.store(1);
+メモリ順序 || compare_exchange_strong || 期待値と同じときだけ新しい値に入れかえる。 || x.compare_exchange_strong(expected, desired);
+メモリ順序 || compare_exchange_weak || 失敗することがある軽い版。ループと組み合わせて使う。 || while (!x.compare_exchange_weak(e, d)) {}
+メモリ順序 || atomic_thread_fence || メモリの順序づけだけを行う壁。 || std::atomic_thread_fence(std::memory_order_seq_cst);
+メモリ順序 || std::atomic_flag || 最も単純な真偽の原子型。 || std::atomic_flag f = ATOMIC_FLAG_INIT;
+メモリ順序 || スピンロック || 空いていなければ待ちながら繰り返し調べる鍵。 || while (f.test_and_set(std::memory_order_acquire)) {}
+メモリ順序 || データ競合 || 同期なしで複数スレッドが同じ場所を書き換える問題。 || // 未定義動作になる
+メモリ順序 || ABA 問題 || 値が元に戻って変化に気づけない問題。 || // ポインタにカウンタを付けて防ぐ
+入出力操作子 || std::setw || 次の出力の幅を指定する。 || std::cout << std::setw(8) << 42;
+入出力操作子 || std::setfill || 幅の余白を埋める文字を指定する。 || std::cout << std::setfill('0') << std::setw(5) << 42;
+入出力操作子 || std::setprecision || 小数の桁数を指定する。 || std::cout << std::setprecision(3) << 3.14159;
+入出力操作子 || std::fixed || 小数を固定小数点の形で出力する。 || std::cout << std::fixed << 2.5;
+入出力操作子 || std::scientific || 小数を指数の形で出力する。 || std::cout << std::scientific << 12345.6;
+入出力操作子 || std::hex || 整数を16進で出力・入力する。 || std::cout << std::hex << 255;
+入出力操作子 || std::oct || 整数を8進で出力・入力する。 || std::cout << std::oct << 8;
+入出力操作子 || std::dec || 整数を10進にもどす。 || std::cout << std::dec << 255;
+入出力操作子 || std::boolalpha || 真偽を true・false の文字で出力する。 || std::cout << std::boolalpha << true;
+入出力操作子 || std::showpos || 正の数にも + を付けて出力する。 || std::cout << std::showpos << 5;
+入出力操作子 || std::left || 左寄せで出力する。 || std::cout << std::left << std::setw(6) << "ab";
+入出力操作子 || std::right || 右寄せで出力する。 || std::cout << std::right << std::setw(6) << "ab";
+入出力操作子 || std::endl || 改行して出力を流す。 || std::cout << "end" << std::endl;
+入出力操作子 || std::flush || 出力をすぐに流す。 || std::cout << "wait" << std::flush;
+入出力操作子 || std::ws || 先頭の空白を読み飛ばす。 || std::getline(std::cin >> std::ws, line);
+入出力操作子 || std::quoted || 引用符つきの文字列を入出力する。 || std::cout << std::quoted("a b");
+入出力操作子 || std::put_time || 日時を書式つきで出力する。 || std::cout << std::put_time(&tm, "%Y-%m-%d");
+入出力操作子 || std::get_time || 書式に従って日時を読み取る。 || ss >> std::get_time(&tm, "%Y-%m-%d");
+入出力操作子 || istringstream || 文字列から読み取るストリーム。 || std::istringstream is("1 2 3");
+入出力操作子 || ostringstream || 文字列へ書き込むストリーム。 || std::ostringstream os; os << 42;
+入出力操作子 || stringstream::str || ストリームの文字列を取得または設定する。 || std::string s = os.str();
+入出力操作子 || ifstream::seekg || 読み取り位置を移動する。 || f.seekg(0, std::ios::end);
+入出力操作子 || ifstream::tellg || 読み取り位置を返す。 || auto size = f.tellg();
+入出力操作子 || std::ios::binary || バイナリ形式で開くことを指定する。 || std::ifstream f("a.bin", std::ios::binary);
+入出力操作子 || std::getline || 1行を読み取る。 || std::getline(std::cin, line);
+入出力操作子 || cin.ignore || 指定した数の文字を読み飛ばす。 || std::cin.ignore(1000, '\n');
+入出力操作子 || cin.fail || 読み取りに失敗したかを調べる。 || if (std::cin.fail()) {}
+入出力操作子 || cin.clear || ストリームのエラー状態をなおす。 || std::cin.clear();
+入出力操作子 || std::cerr || 標準エラー出力へ書き込む。 || std::cerr << "error\n";
+入出力操作子 || std::clog || ログ用の標準エラー出力。 || std::clog << "log\n";
