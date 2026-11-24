@@ -1,0 +1,286 @@
+# VBA 第1回：Range・Worksheet・Workbook・Application・文字列・日付・ファイル
+Rangeの操作 || Range.Value || セルの値を読み書きする。 || Range("A1").Value = 10
+Rangeの操作 || Range.Value2 || 日付や通貨の型を使わず、値をそのまま読み書きする（少し速い）。 || x = Range("A1").Value2
+Rangeの操作 || Range.Formula || セルの数式を読み書きする。 || Range("B1").Formula = "=SUM(A1:A10)"
+Rangeの操作 || Range.FormulaR1C1 || 行列の相対位置で数式を読み書きする。 || Range("B1").FormulaR1C1 = "=RC[-1]*2"
+Rangeの操作 || Range.Formula2 || 動的配列の数式を読み書きする。 || Range("B1").Formula2 = "=SORT(A1:A10)"
+Rangeの操作 || Range.Text || 画面に表示されている文字列を読み取る（読み取り専用）。 || s = Range("A1").Text
+Rangeの操作 || Range.Cells || 範囲の中の行・列の位置でセルを指定する。 || Cells(2, 3).Value = "x"
+Rangeの操作 || Range.Offset || 基準のセルから行・列をずらしたセルを返す。 || Range("A1").Offset(1, 2).Value = 5
+Rangeの操作 || Range.Resize || 範囲の大きさを変えた範囲を返す。 || Range("A1").Resize(3, 2).Select
+Rangeの操作 || Range.End || 連続したデータの端のセルを返す。 || Range("A1").End(xlDown).Row
+Rangeの操作 || Range.CurrentRegion || 空白行・空白列で囲まれたデータのかたまりを返す。 || Range("A1").CurrentRegion.Rows.Count
+Rangeの操作 || Range.UsedRange || ワークシートで使われている範囲を返す。 || ActiveSheet.UsedRange.Address
+Rangeの操作 || Range.SpecialCells || 空白・数式・エラーなど条件に合うセルだけを返す。 || Range("A:A").SpecialCells(xlCellTypeBlanks)
+Rangeの操作 || Range.Find || 範囲の中から値を探す。 || Set r = Range("A:A").Find("りんご")
+Rangeの操作 || Range.FindNext || 次の一致するセルを探す。 || Set r = Range("A:A").FindNext(r)
+Rangeの操作 || Range.Replace || 範囲の中の文字列を置換する。 || Range("A:A").Replace "旧", "新"
+Rangeの操作 || Range.Copy || 範囲をコピーする（貼り付け先を指定できる）。 || Range("A1").Copy Range("B1")
+Rangeの操作 || Range.PasteSpecial || 値や書式だけなどを指定して貼り付ける。 || Range("B1").PasteSpecial xlPasteValues
+Rangeの操作 || Range.Cut || 範囲を切り取る。 || Range("A1").Cut Range("C1")
+Rangeの操作 || Range.Clear || 値・書式などすべてを消す。 || Range("A1:C5").Clear
+Rangeの操作 || Range.ClearContents || 値だけを消す。 || Range("A1:C5").ClearContents
+Rangeの操作 || Range.ClearFormats || 書式だけを消す。 || Range("A1:C5").ClearFormats
+Rangeの操作 || Range.Delete || セルを削除して詰める。 || Range("A1:A3").Delete Shift:=xlUp
+Rangeの操作 || Range.Insert || セルを挿入する。 || Range("A1").EntireRow.Insert
+Rangeの操作 || Range.EntireRow || その行全体を返す。 || Range("A5").EntireRow.Delete
+Rangeの操作 || Range.EntireColumn || その列全体を返す。 || Range("B1").EntireColumn.AutoFit
+Rangeの操作 || Range.Merge || セルを結合する。 || Range("A1:C1").Merge
+Rangeの操作 || Range.UnMerge || セルの結合を解除する。 || Range("A1:C1").UnMerge
+Rangeの操作 || Range.MergeCells || 結合セルかどうかを調べる。 || If Range("A1").MergeCells Then
+Rangeの操作 || Range.AutoFit || 内容に合わせて幅や高さを調整する。 || Columns("A:C").AutoFit
+Rangeの操作 || Range.ColumnWidth || 列の幅を設定する。 || Columns("A").ColumnWidth = 20
+Rangeの操作 || Range.RowHeight || 行の高さを設定する。 || Rows(1).RowHeight = 30
+Rangeの操作 || Range.Hidden || 行や列の表示・非表示を設定する。 || Rows("2:5").Hidden = True
+Rangeの操作 || Range.Sort || 範囲を並べ替える。 || Range("A1:C10").Sort Key1:=Range("A1"), Order1:=xlAscending, Header:=xlYes
+Rangeの操作 || Range.AutoFilter || オートフィルターを設定する。 || Range("A1").AutoFilter Field:=2, Criteria1:="東京"
+Rangeの操作 || Range.RemoveDuplicates || 重複した行を削除する。 || Range("A1:C10").RemoveDuplicates Columns:=1, Header:=xlYes
+Rangeの操作 || Range.Group || 行や列をグループ化する。 || Rows("2:5").Group
+Rangeの操作 || Range.AddComment || セルにコメント（メモ）を付ける。 || Range("A1").AddComment "確認済み"
+Rangeの操作 || Range.NumberFormat || 表示形式を設定する。 || Range("A1").NumberFormat = "#,##0"
+Rangeの操作 || Range.HorizontalAlignment || 横方向の配置を設定する。 || Range("A1").HorizontalAlignment = xlCenter
+Rangeの操作 || Range.VerticalAlignment || 縦方向の配置を設定する。 || Range("A1").VerticalAlignment = xlTop
+Rangeの操作 || Range.WrapText || セル内で折り返して表示するか設定する。 || Range("A1").WrapText = True
+Rangeの操作 || Range.Interior.Color || セルの背景色を設定する。 || Range("A1").Interior.Color = RGB(255, 255, 0)
+Rangeの操作 || Range.Font.Bold || 文字を太字にする。 || Range("A1").Font.Bold = True
+Rangeの操作 || Range.Font.Size || 文字の大きさを設定する。 || Range("A1").Font.Size = 14
+Rangeの操作 || Range.Font.Color || 文字の色を設定する。 || Range("A1").Font.Color = vbRed
+Rangeの操作 || Range.Borders || 罫線を設定する。 || Range("A1:C3").Borders.LineStyle = xlContinuous
+Rangeの操作 || Range.Address || セル範囲のアドレスを文字列で返す。 || MsgBox Range("A1:B2").Address
+Rangeの操作 || Range.Row と Column || 行番号と列番号を返す。 || r = Range("C5").Row
+Rangeの操作 || Range.Count || 範囲のセルの数を返す。 || n = Range("A1:C3").Count
+Rangeの操作 || Range.Areas || 複数に分かれた範囲の各部分を返す。 || Range("A1,C1").Areas.Count
+Rangeの操作 || Range.Union と Intersect || 範囲の結合と共通部分を求める。 || Set r = Union(Range("A1"), Range("C1"))
+Rangeの操作 || Range.Select || セルを選択する。 || Range("A1").Select
+Rangeの操作 || Range.Activate || セルをアクティブにする。 || Range("A1").Activate
+Rangeの操作 || Range.Name || セルや範囲に付けた名前を扱う。 || Range("A1").Name = "合計"
+Rangeの操作 || Range.Validation || 入力規則を設定する。 || Range("A1").Validation.Add xlValidateList, , , "はい,いいえ"
+Rangeの操作 || Range.FormatConditions || 条件付き書式を設定する。 || Range("A1:A10").FormatConditions.Add xlCellValue, xlGreater, "=10"
+Rangeの操作 || Range.Hyperlinks || セルのハイパーリンクを扱う。 || Range("A1").Hyperlinks.Add Range("A1"), "https://example.com"
+Rangeの操作 || Range.Locked || セルを保護の対象にするか設定する。 || Range("A1").Locked = False
+Rangeの操作 || Range.FillDown || 上のセルの内容を下へコピーする。 || Range("A1:A10").FillDown
+Rangeの操作 || Range.AutoFill || 連続データとして自動で埋める。 || Range("A1:A2").AutoFill Range("A1:A10")
+Rangeの操作 || Range.TextToColumns || 区切り文字などでセルを列に分割する。 || Range("A:A").TextToColumns Comma:=True
+Rangeの操作 || Range.Subtotal || 小計を自動で挿入する。 || Range("A1:C20").Subtotal 1, xlSum, Array(3)
+Rangeの操作 || Range.CreateNames || 見出しから名前を作る。 || Range("A1:B5").CreateNames Top:=True
+Rangeの操作 || Range.Calculate || 範囲だけを再計算する。 || Range("A1:A10").Calculate
+Ws操作 || Worksheets.Add || ワークシートを追加する。 || Worksheets.Add After:=Worksheets(Worksheets.Count)
+Ws操作 || Worksheet.Name || ワークシートの名前を読み書きする。 || ActiveSheet.Name = "集計"
+Ws操作 || Worksheet.Delete || ワークシートを削除する。 || Worksheets("一時").Delete
+Ws操作 || Worksheet.Copy || ワークシートをコピーする。 || Worksheets("原本").Copy After:=Worksheets(1)
+Ws操作 || Worksheet.Move || ワークシートを移動する。 || Worksheets("集計").Move Before:=Worksheets(1)
+Ws操作 || Worksheet.Visible || 表示・非表示・完全非表示を設定する。 || Worksheets("設定").Visible = xlSheetVeryHidden
+Ws操作 || Worksheet.Protect || ワークシートを保護する。 || ActiveSheet.Protect Password:="pw"
+Ws操作 || Worksheet.Unprotect || ワークシートの保護を解除する。 || ActiveSheet.Unprotect "pw"
+Ws操作 || Worksheet.UsedRange || 使われている範囲を返す。 || ws.UsedRange.Rows.Count
+Ws操作 || Worksheet.Cells || シート全体のセルを行列で指定する。 || ws.Cells(1, 1).Value = "題"
+Ws操作 || Worksheet.Range || シート上の範囲を指定する。 || ws.Range("A1:C3")
+Ws操作 || Worksheet.Rows と Columns || 行や列を指定する。 || ws.Rows(1).Font.Bold = True
+Ws操作 || Worksheet.Activate || そのシートを表示する。 || Worksheets("集計").Activate
+Ws操作 || Worksheet.CodeName || VBA から見たシートの内部名。 || Sheet1.Range("A1")
+Ws操作 || Worksheet.ChartObjects || シート上のグラフを扱う。 || ws.ChartObjects(1).Chart.ChartType
+Ws操作 || Worksheet.Shapes || シート上の図形や画像を扱う。 || ws.Shapes.AddShape msoShapeRectangle, 10, 10, 100, 50
+Ws操作 || Worksheet.ListObjects || シート上のテーブルを扱う。 || ws.ListObjects(1).DataBodyRange
+Ws操作 || Worksheet.PivotTables || シート上のピボットテーブルを扱う。 || ws.PivotTables(1).RefreshTable
+Ws操作 || Worksheet.PageSetup || 印刷の設定を扱う。 || ws.PageSetup.Orientation = xlLandscape
+Ws操作 || Worksheet.PrintOut || ワークシートを印刷する。 || ws.PrintOut Copies:=1
+Ws操作 || Worksheet.ExportAsFixedFormat || PDFなどに書き出す。 || ws.ExportAsFixedFormat xlTypePDF, "C:\a.pdf"
+Ws操作 || Worksheet.AutoFilterMode || オートフィルターが有効か調べる。 || If ws.AutoFilterMode Then ws.AutoFilterMode = False
+Ws操作 || Worksheet.EnableCalculation || このシートの自動計算を切り替える。 || ws.EnableCalculation = False
+Ws操作 || Worksheet.Calculate || シートを再計算する。 || ws.Calculate
+Ws操作 || Worksheet.ScrollArea || スクロールできる範囲を制限する。 || ws.ScrollArea = "A1:J30"
+Ws操作 || Worksheet.StandardWidth || 標準の列幅を設定する。 || ws.StandardWidth = 12
+Ws操作 || Worksheet.Tab.Color || シート見出しの色を設定する。 || ws.Tab.Color = RGB(0, 128, 0)
+Ws操作 || Sheets と Worksheets の違い || Sheets はグラフシートも含み、Worksheets はワークシートだけ。 || Sheets("グラフ1").Activate
+Wb操作 || Workbooks.Open || ブックを開く。 || Set wb = Workbooks.Open("C:\a.xlsx")
+Wb操作 || Workbooks.Add || 新しいブックを作る。 || Set wb = Workbooks.Add
+Wb操作 || Workbook.Save || ブックを上書き保存する。 || ThisWorkbook.Save
+Wb操作 || Workbook.SaveAs || 名前を付けて保存する。 || wb.SaveAs "C:\b.xlsx", xlOpenXMLWorkbook
+Wb操作 || Workbook.SaveCopyAs || 開いたまま、コピーを保存する。 || ThisWorkbook.SaveCopyAs "C:\backup.xlsx"
+Wb操作 || Workbook.Close || ブックを閉じる。 || wb.Close SaveChanges:=False
+Wb操作 || Workbook.Saved || 変更が保存済みかを読み書きする。 || ThisWorkbook.Saved = True
+Wb操作 || Workbook.FullName || ブックのフルパスを返す。 || MsgBox ThisWorkbook.FullName
+Wb操作 || Workbook.Path || ブックがあるフォルダを返す。 || p = ThisWorkbook.Path
+Wb操作 || Workbook.Name || ブックの名前を返す。 || n = ThisWorkbook.Name
+Wb操作 || Workbook.Names || ブックの名前の定義を扱う。 || ThisWorkbook.Names.Add "税率", "=0.1"
+Wb操作 || Workbook.Protect || ブックの構成を保護する。 || ThisWorkbook.Protect "pw"
+Wb操作 || Workbook.RefreshAll || データ接続をすべて更新する。 || ThisWorkbook.RefreshAll
+Wb操作 || Workbook.Connections || データ接続を扱う。 || ThisWorkbook.Connections.Count
+Wb操作 || Workbook.Styles || セルのスタイルを扱う。 || ThisWorkbook.Styles("標準")
+Wb操作 || Workbook.VBProject || VBA プロジェクトを扱う。 || ThisWorkbook.VBProject.VBComponents.Count
+Wb操作 || Workbook.CustomDocumentProperties || 独自のブック情報を扱う。 || ThisWorkbook.CustomDocumentProperties("版").Value
+Wb操作 || Workbook.BuiltinDocumentProperties || 作成者などの標準の情報を扱う。 || ThisWorkbook.BuiltinDocumentProperties("Author")
+Wb操作 || Workbook.ReadOnly || 読み取り専用かを調べる。 || If wb.ReadOnly Then
+Wb操作 || Workbook.Windows || ブックのウィンドウを扱う。 || ThisWorkbook.Windows(1).Zoom = 90
+Wb操作 || ThisWorkbook || マクロが書かれているブック。 || ThisWorkbook.Worksheets(1).Name
+Wb操作 || ActiveWorkbook || 現在アクティブなブック。 || ActiveWorkbook.Name
+Wb操作 || ActiveSheet || 現在アクティブなシート。 || ActiveSheet.Name
+Wb操作 || ActiveCell || 現在アクティブなセル。 || ActiveCell.Value
+Wb操作 || Selection || 現在選択されているもの。 || Selection.Font.Bold = True
+Wb操作 || Workbook.LinkSources || 外部ブックへのリンクを取得する。 || ThisWorkbook.LinkSources(xlExcelLinks)
+Wb操作 || Workbook.BreakLink || 外部へのリンクを切って値にする。 || ThisWorkbook.BreakLink "C:\a.xlsx", xlLinkTypeExcelLinks
+Wb操作 || Workbook.ChangeFileAccess || 読み取り専用などの開き方を変える。 || wb.ChangeFileAccess xlReadOnly
+Wb操作 || Workbook.CheckCompatibility || 古い形式との互換性を確認するか設定する。 || ThisWorkbook.CheckCompatibility = False
+Wb操作 || Workbook.HasVBProject || マクロ入りか調べる。 || If wb.HasVBProject Then
+Application || Application.ScreenUpdating || 画面の更新を止めて速くする。 || Application.ScreenUpdating = False
+Application || Application.Calculation || 計算を手動・自動に切り替える。 || Application.Calculation = xlCalculationManual
+Application || Application.EnableEvents || イベントの発生を止める。 || Application.EnableEvents = False
+Application || Application.DisplayAlerts || 確認メッセージを出すか設定する。 || Application.DisplayAlerts = False
+Application || Application.StatusBar || 画面下の状態表示に文字を出す。 || Application.StatusBar = "処理中..."
+Application || Application.Cursor || マウスポインタの形を変える。 || Application.Cursor = xlWait
+Application || Application.WorksheetFunction || ワークシート関数を VBA から使う。 || n = Application.WorksheetFunction.Sum(Range("A1:A10"))
+Application || Application.Evaluate || 文字列の式を計算する。 || x = Application.Evaluate("SUM(A1:A10)")
+Application || Application.InputBox || 型を指定できる入力ダイアログを出す。 || r = Application.InputBox("範囲を選択", Type:=8)
+Application || Application.GetOpenFilename || ファイルを選ぶダイアログを出す。 || f = Application.GetOpenFilename("Excel,*.xlsx")
+Application || Application.GetSaveAsFilename || 保存先を選ぶダイアログを出す。 || f = Application.GetSaveAsFilename("a.xlsx")
+Application || Application.FileDialog || ファイルやフォルダを選ぶ標準のダイアログ。 || With Application.FileDialog(msoFileDialogFolderPicker)
+Application || Application.OnTime || 指定の時刻にマクロを実行する。 || Application.OnTime Now + TimeValue("00:00:10"), "Tick"
+Application || Application.OnKey || キーにマクロを割り当てる。 || Application.OnKey "^+m", "MyMacro"
+Application || Application.Wait || 指定の時刻まで待つ。 || Application.Wait Now + TimeValue("00:00:02")
+Application || Application.Run || 名前を指定してマクロを実行する。 || Application.Run "Book1.xlsm!Main"
+Application || Application.Version || Excel の版を返す。 || v = Application.Version
+Application || Application.OperatingSystem || 動作している OS を返す。 || os = Application.OperatingSystem
+Application || Application.UserName || ユーザー名を返す。 || u = Application.UserName
+Application || Application.International || 地域の設定を返す。 || Application.International(xlDecimalSeparator)
+Application || Application.Volatile || 再計算のたびに実行される関数にする。 || Application.Volatile
+Application || Application.Caller || 呼び出し元のセルを返す。 || Set c = Application.Caller
+Application || Application.Quit || Excel を終了する。 || Application.Quit
+Application || Application.Visible || Excel の画面を表示するか設定する。 || Application.Visible = False
+Application || Application.WindowState || ウィンドウの状態（最大化など）を設定する。 || Application.WindowState = xlMaximized
+Application || Application.Dialogs || Excel の標準ダイアログを表示する。 || Application.Dialogs(xlDialogPrint).Show
+Application || Application.CutCopyMode || コピー中の点線枠を解除する。 || Application.CutCopyMode = False
+Application || Application.MoveAfterReturn || Enter で選択を動かすか設定する。 || Application.MoveAfterReturn = False
+Application || Application.AutoCorrect || 自動修正の設定を扱う。 || Application.AutoCorrect.AddReplacement "(c)", "©"
+Application || Application.Hwnd || 画面のウィンドウ番号を返す。 || h = Application.Hwnd
+Application || Application.Union || 複数の範囲を結合する。 || Set r = Application.Union(a, b)
+Application || Application.Match || 値を探して位置を返す（エラーを値で受け取れる）。 || p = Application.Match("a", Range("A:A"), 0)
+Application || Application.VLookup || 縦方向に検索する（エラーを値で受け取れる）。 || v = Application.VLookup("a", Range("A:B"), 2, False)
+Application || Application.CountIf || 条件に合うセルの数を数える。 || n = Application.CountIf(Range("A:A"), ">0")
+Application || Application.Transpose || 行と列を入れ替える。 || Range("A1:A3").Value = Application.Transpose(arr)
+Application || Application.Max と Min || 最大値・最小値を求める。 || m = Application.Max(Range("A1:A10"))
+文字列 || Left || 文字列の左から指定の長さを取り出す。 || Left("abcdef", 3) ' abc
+文字列 || Right || 文字列の右から指定の長さを取り出す。 || Right("abcdef", 2) ' ef
+文字列 || Mid || 文字列の途中から取り出す。 || Mid("abcdef", 2, 3) ' bcd
+文字列 || Len || 文字数を返す。 || Len("あいう") ' 3
+文字列 || LenB || バイト数を返す。 || LenB("abc")
+文字列 || InStr || 文字列の中の位置を探す。 || InStr("abcabc", "c") ' 3
+文字列 || InStrRev || 後ろから文字列を探す。 || InStrRev("abcabc", "c") ' 6
+文字列 || Replace || 文字列の一部を置き換える。 || Replace("a-b-c", "-", "")
+文字列 || Split || 区切り文字で配列に分ける。 || arr = Split("a,b,c", ",")
+文字列 || Join || 配列を区切り文字でつなぐ。 || s = Join(arr, "/")
+文字列 || Trim || 前後の空白を取り除く。 || Trim("  a  ")
+文字列 || LTrim と RTrim || 左側・右側の空白を取り除く。 || LTrim("  a")
+文字列 || UCase と LCase || 大文字・小文字にする。 || UCase("abc")
+文字列 || StrConv || 全角・半角・ひらがななどに変換する。 || StrConv("ABC", vbWide)
+文字列 || StrReverse || 文字列を逆順にする。 || StrReverse("abc")
+文字列 || String || 同じ文字をくり返した文字列を作る。 || String(3, "*")
+文字列 || Space || 空白をくり返した文字列を作る。 || Space(4)
+文字列 || Format || 書式を指定して文字列にする。 || Format(1234.5, "#,##0.00")
+文字列 || FormatNumber || 数を桁区切りなどの書式にする。 || FormatNumber(1234.567, 2)
+文字列 || FormatCurrency || 通貨の書式にする。 || FormatCurrency(1500)
+文字列 || FormatPercent || パーセントの書式にする。 || FormatPercent(0.25)
+文字列 || FormatDateTime || 日付や時刻を書式にする。 || FormatDateTime(Date, vbLongDate)
+文字列 || Chr と Asc || 文字コードと文字を変換する。 || Chr(65) ' A
+文字列 || ChrW と AscW || Unicode の文字コードと文字を変換する。 || ChrW(&H3042) ' あ
+文字列 || StrComp || 2つの文字列を比べる。 || StrComp("a", "A", vbTextCompare)
+文字列 || Like 演算子 || ワイルドカードで文字列が合うか調べる。 || If s Like "A*" Then
+文字列 || vbCrLf || 改行（CR+LF）を表す定数。 || MsgBox "1行目" & vbCrLf & "2行目"
+文字列 || vbTab || タブ文字を表す定数。 || s = "a" & vbTab & "b"
+文字列 || Option Compare Text || 文字列の比較で大文字小文字を区別しない。 || Option Compare Text
+文字列 || Filter || 配列から文字列を含む要素だけを取り出す。 || r = Filter(arr, "a")
+文字列 || Val || 文字列の先頭から数値を読み取る。 || Val("12abc") ' 12
+文字列 || CStr || 値を文字列にする。 || CStr(123)
+文字列 || WorksheetFunction.Text || ワークシートの TEXT 関数で書式にする。 || WorksheetFunction.Text(5, "000")
+文字列 || RegExp（VBScript.RegExp） || 正規表現を使う。 || Set re = CreateObject("VBScript.RegExp")
+文字列 || RegExp.Pattern || 正規表現の書き方を設定する。 || re.Pattern = "\d+"
+文字列 || RegExp.Global || すべての一致を探すか設定する。 || re.Global = True
+文字列 || RegExp.Execute || 正規表現で検索して結果を返す。 || Set m = re.Execute(s)
+文字列 || RegExp.Replace || 正規表現で置換する。 || s = re.Replace(s, "#")
+日付 || Date || 今日の日付を返す。 || d = Date
+日付 || Now || 現在の日付と時刻を返す。 || t = Now
+日付 || Time || 現在の時刻を返す。 || t = Time
+日付 || Timer || 午前0時からの経過秒を返す（処理時間の計測に使う）。 || t0 = Timer
+日付 || DateAdd || 日付に期間を足す。 || DateAdd("m", 1, Date)
+日付 || DateDiff || 2つの日付の差を求める。 || DateDiff("d", d1, d2)
+日付 || DatePart || 日付の一部（年・月など）を返す。 || DatePart("q", Date)
+日付 || DateSerial || 年月日から日付を作る。 || DateSerial(2026, 12, 0) ' 11月末
+日付 || TimeSerial || 時分秒から時刻を作る。 || TimeSerial(9, 30, 0)
+日付 || DateValue と TimeValue || 文字列から日付・時刻を作る。 || DateValue("2026/11/25")
+日付 || Year と Month と Day || 日付から年・月・日を取り出す。 || Year(Date)
+日付 || Hour と Minute と Second || 時刻から時・分・秒を取り出す。 || Hour(Now)
+日付 || Weekday || 曜日を数で返す。 || Weekday(Date, vbMonday)
+日付 || WeekdayName || 曜日の名前を返す。 || WeekdayName(Weekday(Date))
+日付 || MonthName || 月の名前を返す。 || MonthName(11)
+日付 || IsDate || 日付として扱える値か調べる。 || IsDate("2026/02/30") ' False
+日付 || CDate || 値を日付型にする。 || CDate("2026/11/25")
+日付 || EOMONTH（ワークシート関数） || 月末の日付を求める。 || WorksheetFunction.EoMonth(Date, 0)
+日付 || WorksheetFunction.WorkDay || 営業日を足した日付を求める。 || WorksheetFunction.WorkDay(Date, 5)
+日付 || WorksheetFunction.NetworkDays || 2つの日付の営業日数を求める。 || WorksheetFunction.NetworkDays(d1, d2)
+日付 || VBA.Calendar || 暦の種類を扱う。 || Calendar = vbCalGreg
+日付 || Application.International(xlDateOrder) || 日付の並び順の設定を返す。 || Application.International(xlDateOrder)
+数値 || Int と Fix || 小数部分を切り捨てる（負の数の扱いが違う）。 || Int(-2.5) ' -3、Fix(-2.5) ' -2
+数値 || Round || 偶数丸め（銀行丸め）で丸める。 || Round(2.5) ' 2
+数値 || WorksheetFunction.Round || 四捨五入で丸める。 || WorksheetFunction.Round(2.5, 0) ' 3
+数値 || Abs || 絶対値を返す。 || Abs(-5)
+数値 || Sgn || 符号を返す。 || Sgn(-3) ' -1
+数値 || Sqr || 平方根を返す。 || Sqr(16)
+数値 || Exp と Log || 指数と自然対数を返す。 || Log(10)
+数値 || Rnd || 0以上1未満の乱数を返す。 || Rnd
+数値 || Randomize || 乱数の種を初期化する。 || Randomize
+数値 || Mod 演算子 || 割り算の余りを返す。 || 7 Mod 3 ' 1
+数値 || 円記号 \ 演算子 || 整数の割り算の商を返す。 || 7 \ 2 ' 3
+数値 || ^ 演算子 || べき乗を求める。 || 2 ^ 10
+数値 || CInt と CLng || 整数・長整数に変換する。 || CLng("123")
+数値 || CDbl と CSng || 倍精度・単精度の小数に変換する。 || CDbl("1.5")
+数値 || CCur と CDec || 通貨型・10進数型に変換する。 || CDec("0.1")
+数値 || Hex と Oct || 16進・8進の文字列にする。 || Hex(255) ' FF
+数値 || IsNumeric || 数値として扱える値か調べる。 || IsNumeric("12")
+数値 || Application.Sum || 合計を求める。 || Application.Sum(arr)
+数値 || Application.Average || 平均を求める。 || Application.Average(Range("A:A"))
+数値 || Application.Large と Small || 大きい順・小さい順の n 番目を返す。 || Application.Large(rng, 1)
+数値 || Application.Rank || 順位を求める。 || Application.Rank(5, rng)
+数値 || Application.Round || 四捨五入する（ワークシート関数）。 || Application.Round(3.456, 2)
+ファイル || Dir || ファイルやフォルダを探す。 || f = Dir("C:\data\*.xlsx")
+ファイル || FileLen || ファイルの大きさを返す。 || n = FileLen("C:\a.txt")
+ファイル || FileDateTime || ファイルの更新日時を返す。 || d = FileDateTime("C:\a.txt")
+ファイル || FileCopy || ファイルをコピーする。 || FileCopy "a.txt", "b.txt"
+ファイル || Kill || ファイルを削除する。 || Kill "C:\tmp\a.txt"
+ファイル || Name As || ファイルの名前を変える、または移動する。 || Name "a.txt" As "b.txt"
+ファイル || MkDir || フォルダを作る。 || MkDir "C:\out"
+ファイル || RmDir || 空のフォルダを削除する。 || RmDir "C:\out"
+ファイル || ChDir と ChDrive || 現在のフォルダやドライブを変える。 || ChDir "C:\data"
+ファイル || CurDir || 現在のフォルダを返す。 || p = CurDir
+ファイル || GetAttr と SetAttr || ファイルの属性を調べる・設定する。 || GetAttr("a.txt") And vbReadOnly
+ファイル || Open For Input || ファイルを読み取りで開く。 || Open "a.txt" For Input As #1
+ファイル || Open For Output || ファイルを書き込みで開く（上書き）。 || Open "a.txt" For Output As #1
+ファイル || Open For Append || ファイルの末尾に追記で開く。 || Open "a.txt" For Append As #1
+ファイル || Line Input || ファイルから1行を読み取る。 || Line Input #1, s
+ファイル || Print # || ファイルへ書き込む。 || Print #1, "text"
+ファイル || Write # || 区切り文字つきでファイルへ書き込む。 || Write #1, "a", 1
+ファイル || Input # || 区切られた値を読み取る。 || Input #1, a, b
+ファイル || Close || 開いたファイルを閉じる。 || Close #1
+ファイル || FreeFile || 使われていないファイル番号を返す。 || n = FreeFile
+ファイル || EOF || ファイルの終わりかを調べる。 || Do Until EOF(1)
+ファイル || LOF || 開いたファイルの大きさを返す。 || n = LOF(1)
+ファイル || Seek || ファイル内の位置を取得・移動する。 || Seek #1, 1
+ファイル || Get と Put || バイナリファイルや固定長レコードを読み書きする。 || Get #1, , rec
+ファイル || Shell || 外部のプログラムを実行する。 || Shell "notepad.exe", vbNormalFocus
+ファイル || Environ || 環境変数の値を返す。 || Environ("USERPROFILE")
+ファイル || CreateObject("Scripting.FileSystemObject") || ファイル操作に便利な部品を使う。 || Set fso = CreateObject("Scripting.FileSystemObject")
+ファイル || FileSystemObject.FileExists || ファイルがあるか調べる。 || fso.FileExists("a.txt")
+ファイル || FileSystemObject.FolderExists || フォルダがあるか調べる。 || fso.FolderExists("C:\out")
+ファイル || FileSystemObject.GetFileName || パスからファイル名を取り出す。 || fso.GetFileName("C:\a\b.txt")
+ファイル || FileSystemObject.GetExtensionName || 拡張子を取り出す。 || fso.GetExtensionName("b.txt")
+ファイル || FileSystemObject.BuildPath || パスを安全につなぐ。 || fso.BuildPath("C:\a", "b.txt")
+ファイル || FileSystemObject.OpenTextFile || テキストファイルを開く。 || Set ts = fso.OpenTextFile("a.txt", 1)
+ファイル || FileSystemObject.CreateFolder || フォルダを作る。 || fso.CreateFolder "C:\out"
+ファイル || FileSystemObject.DeleteFile || ファイルを削除する。 || fso.DeleteFile "a.txt"
+ファイル || FileSystemObject.GetFolder || フォルダの情報を取得する。 || fso.GetFolder("C:\data").Files.Count
+ファイル || ADODB.Stream || 文字コードを指定してファイルを読み書きする。 || Set st = CreateObject("ADODB.Stream")
+ファイル || Scripting.Dictionary || 連想配列（キーと値の組）を扱う。 || Set d = CreateObject("Scripting.Dictionary")
+ファイル || Dictionary.Add || キーと値を追加する。 || d.Add "a", 1
+ファイル || Dictionary.Exists || キーがあるか調べる。 || d.Exists("a")
+ファイル || Dictionary.Keys と Items || キー・値の配列を返す。 || k = d.Keys
+ファイル || Collection || 順に並んだ項目の入れ物。 || Dim c As New Collection: c.Add "a", "key"
+ファイル || WScript.Shell || Windows のシェルの機能を使う。 || Set sh = CreateObject("WScript.Shell")
+ファイル || MSXML2.XMLHTTP || Web のデータを取得する。 || Set http = CreateObject("MSXML2.XMLHTTP")
