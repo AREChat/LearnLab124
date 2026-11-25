@@ -218,3 +218,24 @@
     }
   } catch (_e) {}
 })();
+
+/* ── モード選択カードの「問題数」を、実際のデータの数に合わせて書き換える（数字が古くならないように） ── */
+(function () {
+  function n(name) { try { var d = window[name]; return Array.isArray(d) ? d.length : 0; } catch (_e) { return 0; } }
+  function sum(list) { var t = 0; for (var i = 0; i < list.length; i++) t += n(list[i]); return t; }
+  var PY = ['Python_easy', 'Python_Basic', 'Python_hard', 'Python'];
+  var SQ = ['SQL_easy', 'SQL_Basic', 'SQL_hard', 'SQL'];
+  var WB = ['WEB_easy', 'WEB_Basic', 'WEB_hard', 'WEB'];
+  function paint() {
+    try {
+      var v = { python: sum(PY), sql: sum(SQ), html_css: sum(WB) };
+      v.all = v.python + v.sql + v.html_css;
+      var els = document.querySelectorAll('[data-qcnt]');
+      for (var i = 0; i < els.length; i++) {
+        var k = els[i].getAttribute('data-qcnt');
+        if (v[k] > 0) els[i].textContent = v[k].toLocaleString('en-US');
+      }
+    } catch (_e) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint); else paint();
+})();
