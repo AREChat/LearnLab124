@@ -1,0 +1,3 @@
+# VBA 追加：時刻に合わせて動かす
+日時 || Application.OnTime || 指定した時刻に、マクロを自動で実行する。予約実行に使う。 || Application.OnTime TimeValue("09:00:00"), "朝の処理"
+日時 || Format関数（日時） || 日付や時刻を決まった書式の文字にする。 || Format(Now, "yyyy/mm/dd hh:nn")
