@@ -6,6 +6,14 @@ function insertPointsTab() {
     const pointsButton = document.createElement('button');
     pointsButton.id = 'points-menu-btn';
     pointsButton.className = 'points-menu-btn';
+    // 右上に固定の 💰 が、上のメニュー（.responsive-nav）の右はしのリンクに重ならないよう、PC幅ではメニューの左右に余白をとる（左右対称）
+    try {
+        if (!document.getElementById('points-nav-pad')) {
+            const st = document.createElement('style'); st.id = 'points-nav-pad';
+            st.textContent = '@media screen and (min-width: 769px){.responsive-nav{padding-left:84px!important;padding-right:84px!important}}';
+            document.head.appendChild(st);
+        }
+    } catch (_e) {}
     pointsButton.innerHTML = '💰';
     pointsButton.addEventListener('click', (e) => {
         e.stopPropagation();
