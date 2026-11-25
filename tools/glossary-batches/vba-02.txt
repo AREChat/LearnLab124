@@ -1,0 +1,94 @@
+# VBA 第2回：文・関数・エラー処理・コレクション・フォーム・イベント
+文と制御 || If...Then...ElseIf...Else || 条件によって処理を分ける。 || If x > 0 Then MsgBox "正" Else MsgBox "0以下"
+文と制御 || Select Case || 1つの値に応じて、たくさんの分かれ道を作る。 || Select Case n: Case 1: MsgBox "1": Case Else: MsgBox "他": End Select
+文と制御 || For...Next || 回数を決めて繰り返す。 || For i = 1 To 10: s = s + i: Next i
+文と制御 || For Each...Next || 集まり（範囲・コレクション）の要素を1つずつ処理する。 || For Each c In Range("A1:A5"): c.Value = 0: Next c
+文と制御 || Do While...Loop || 条件が成り立つあいだ繰り返す（先に判定）。 || Do While i < 5: i = i + 1: Loop
+文と制御 || Do...Loop Until || 条件が成り立つまで繰り返す（後で判定）。 || Do: i = i + 1: Loop Until i >= 5
+文と制御 || Exit For / Exit Do || 繰り返しを途中で抜ける。 || If c.Value = "" Then Exit For
+文と制御 || GoTo || 指定したラベルへ飛ぶ（エラー処理以外では、なるべく使わない）。 || GoTo Fin
+文と制御 || With...End With || 同じオブジェクトへの操作をまとめて書く。 || With Range("A1"): .Value = 1: .Font.Bold = True: End With
+文と制御 || Call || プロシージャを呼び出す（省略できる）。 || Call Hello
+文と制御 || Exit Sub / Exit Function || プロシージャを途中で終わらせる。 || If x = 0 Then Exit Sub
+宣言 || Dim || 変数を宣言する。 || Dim n As Long
+宣言 || Const || 変更できない定数を宣言する。 || Const TAX As Double = 0.1
+宣言 || Public / Private || 変数やプロシージャを使える範囲を決める。 || Private Sub Helper()
+宣言 || Static || 呼び出しが終わっても値を覚えておく変数。 || Static cnt As Long: cnt = cnt + 1
+宣言 || ReDim / ReDim Preserve || 動的配列の大きさを変える（Preserveで中身を残す）。 || ReDim Preserve a(1 To 20)
+宣言 || Option Explicit || 変数の宣言を必須にする（打ち間違い防止）。 || Option Explicit
+宣言 || Option Base 1 || 配列の添字の始まりを1にする。 || Option Base 1
+宣言 || Enum || 名前つきの定数の組をまとめる。 || Enum Color: Red = 1: Blue = 2: End Enum
+宣言 || Type...End Type || 複数の項目を1つにまとめた型（ユーザー定義型）を作る。 || Type Person: Name As String: Age As Long: End Type
+データ型 || Long || 整数（約±21億）。行番号などに使う。 || Dim r As Long
+データ型 || Integer || 整数（±32767）。小さい数向け。 || Dim i As Integer
+データ型 || Double || 小数を扱う倍精度の浮動小数点数。 || Dim x As Double
+データ型 || String || 文字列。 || Dim s As String
+データ型 || Boolean || True / False の真偽値。 || Dim ok As Boolean
+データ型 || Date || 日付と時刻。 || Dim d As Date
+データ型 || Variant || どんな値でも入る型（宣言しないとこれになる）。 || Dim v As Variant
+データ型 || Object || オブジェクトを入れる汎用の型。 || Dim o As Object
+データ型 || Currency || 小数4桁まで正確な通貨向けの型。 || Dim price As Currency
+文字列関数 || Len || 文字数を返す。 || n = Len("あいう")
+文字列関数 || Left / Right / Mid || 文字列の左・右・途中を取り出す。 || s = Mid("ABCDE", 2, 3)
+文字列関数 || InStr / InStrRev || 文字が最初に（最後に）出る位置を返す。 || p = InStr("abc", "b")
+文字列関数 || Replace || 文字列の一部を置き換える。 || s = Replace("a-b", "-", "_")
+文字列関数 || Trim / LTrim / RTrim || 前後（左・右）の空白を取り除く。 || s = Trim("  a ")
+文字列関数 || Split || 区切り文字で分けて配列にする。 || a = Split("a,b,c", ",")
+文字列関数 || Join || 配列を区切り文字でつなげる。 || s = Join(a, "/")
+文字列関数 || UCase / LCase || 大文字・小文字にそろえる。 || s = UCase("abc")
+文字列関数 || StrConv || 全角・半角、ひらがな・カタカナなどに変換する。 || s = StrConv("ｱｲｳ", vbWide)
+文字列関数 || Format || 数値・日付を書式つき文字列にする。 || s = Format(Now, "yyyy/mm/dd")
+文字列関数 || StrComp || 2つの文字列を比べる。 || r = StrComp("a", "b", vbTextCompare)
+文字列関数 || Chr / Asc || 文字コードと文字を相互に変換する。 || c = Chr(65)
+文字列関数 || String / Space || 同じ文字（空白）を指定回数ならべる。 || s = String(3, "*")
+文字列関数 || StrReverse || 文字列を逆順にする。 || s = StrReverse("abc")
+数値関数 || Int / Fix || 小数点以下を切り捨てる（Intは負の数で小さい方へ）。 || n = Int(-2.5)
+数値関数 || Round || 四捨五入ではなく「銀行丸め」で丸める。 || n = Round(2.5)
+数値関数 || Abs / Sgn || 絶対値、符号（-1・0・1）を返す。 || n = Abs(-3)
+数値関数 || Rnd / Randomize || 乱数を作る（Randomizeで毎回変わる）。 || Randomize: n = Int(Rnd * 6) + 1
+数値関数 || Sqr || 平方根を返す。 || x = Sqr(16)
+数値関数 || Mod / ¥ || 割った余り、割った商（整数）を返す演算子。 || r = 7 Mod 3
+変換関数 || CLng / CInt / CDbl / CStr || 指定した型に変換する。 || n = CLng("12")
+変換関数 || CDate || 日付型に変換する。 || d = CDate("2026/11/25")
+変換関数 || Val || 文字列の先頭の数字を数値にする。 || n = Val("12abc")
+変換関数 || IsNumeric / IsDate / IsEmpty / IsNull || 値の種類を調べる。 || If IsNumeric(s) Then
+変換関数 || TypeName / VarType || 値の型の名前（番号）を返す。 || t = TypeName(x)
+日付関数 || Now / Date / Time || 現在の日時・日付・時刻を返す。 || d = Date
+日付関数 || DateAdd || 日付に期間を足す。 || d = DateAdd("m", 1, Date)
+日付関数 || DateDiff || 2つの日付の差を返す。 || n = DateDiff("d", d1, d2)
+日付関数 || DateSerial / TimeSerial || 年月日（時分秒）から日付（時刻）を作る。 || d = DateSerial(2026, 11, 25)
+日付関数 || Year / Month / Day / Weekday || 日付の一部を取り出す。 || w = Weekday(Date)
+日付関数 || Timer || 午前0時からの経過秒数（処理時間の計測に使う）。 || t = Timer
+エラー処理 || On Error Resume Next || エラーを無視して次の行へ進む。 || On Error Resume Next
+エラー処理 || On Error GoTo ラベル || エラーが起きたらラベルへ飛ぶ。 || On Error GoTo ErrH
+エラー処理 || On Error GoTo 0 || エラー処理を解除する。 || On Error GoTo 0
+エラー処理 || Err.Number / Err.Description || 直前のエラーの番号・説明。 || MsgBox Err.Description
+エラー処理 || Err.Raise || 自分でエラーを発生させる。 || Err.Raise 1000, , "入力が不正です"
+エラー処理 || Err.Clear || エラー情報を消す。 || Err.Clear
+エラー処理 || Resume / Resume Next || エラー処理のあと、同じ行（次の行）から再開する。 || Resume Next
+コレクション || Collection || 要素を追加・取り出せる集まり。 || Set c = New Collection: c.Add "A"
+コレクション || Dictionary || キーと値の組を扱う（Scripting.Dictionary）。 || Set d = CreateObject("Scripting.Dictionary")
+コレクション || Dictionary.Exists || キーがあるか調べる。 || If d.Exists("a") Then
+コレクション || Dictionary.Keys / Items || キー・値の一覧を配列で返す。 || k = d.Keys
+コレクション || Array || 値をならべて配列を作る。 || a = Array(1, 2, 3)
+コレクション || LBound / UBound || 配列の添字の最小・最大。 || n = UBound(a)
+コレクション || Erase || 配列を空にする。 || Erase a
+ダイアログ || MsgBox || メッセージを表示し、ボタンの結果を受け取る。 || r = MsgBox("よろしいですか", vbYesNo)
+ダイアログ || InputBox || 文字を入力してもらう。 || s = InputBox("名前は？")
+ダイアログ || Application.InputBox || 型（数値・範囲）を指定して入力してもらう。 || r = Application.InputBox("範囲", Type:=8)
+ダイアログ || Application.GetOpenFilename || ファイルを選ぶ画面を出す。 || f = Application.GetOpenFilename("Excel,*.xlsx")
+ダイアログ || Application.FileDialog || フォルダ・ファイルの選択画面を出す。 || With Application.FileDialog(msoFileDialogFolderPicker)
+ユーザーフォーム || UserForm.Show || ユーザーフォームを表示する。 || UserForm1.Show
+ユーザーフォーム || UserForm_Initialize || フォームが開くときに動くイベント。 || Private Sub UserForm_Initialize()
+ユーザーフォーム || TextBox.Value / Text || テキストボックスの入力内容。 || s = TextBox1.Value
+ユーザーフォーム || ComboBox.AddItem || コンボボックスに項目を追加する。 || ComboBox1.AddItem "東京"
+ユーザーフォーム || ListBox.List || リストボックスの項目を配列で設定する。 || ListBox1.List = a
+ユーザーフォーム || CommandButton_Click || ボタンが押されたときのイベント。 || Private Sub CommandButton1_Click()
+ユーザーフォーム || Unload Me / Me.Hide || フォームを閉じる（Hideは隠すだけ）。 || Unload Me
+イベント || Workbook_Open || ブックを開いたときに動く。 || Private Sub Workbook_Open()
+イベント || Workbook_BeforeClose || ブックを閉じる前に動く。 || Private Sub Workbook_BeforeClose(Cancel As Boolean)
+イベント || Worksheet_Change || セルの値が変わったときに動く。 || Private Sub Worksheet_Change(ByVal Target As Range)
+イベント || Worksheet_SelectionChange || 選択セルが変わったときに動く。 || Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+イベント || Application.EnableEvents || イベントの発生を止める／戻す。 || Application.EnableEvents = False
+イベント || Application.OnTime || 指定した時刻にマクロを動かす。 || Application.OnTime Now + TimeValue("00:01:00"), "Run"
+イベント || Application.OnKey || キーにマクロを割り当てる。 || Application.OnKey "^q", "Run"
