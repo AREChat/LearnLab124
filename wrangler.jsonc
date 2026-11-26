@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers Static Assets: 開発用（*-dev）。運用（本番）は GitHub Pages のまま。
+  // main への push で Workers Builds が自動デプロイ（ビルド工程なし）。
+  // name は Cloudflare ダッシュボード上の Worker 名と一致させる（不一致だとビルドが失敗する）。
+  "name": "learnlab124-dev",
+  "compatibility_date": "2026-11-18",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  },
+  // 非本番ブランチのプレビュー（npx wrangler preview）に必要。空のままでよい。
+  "previews": {}
+}
